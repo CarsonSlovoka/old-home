@@ -1,16 +1,16 @@
-title: John Smith
+title: Carson Slovoka
 description: My Personal Blog
-author: John Smith
-logo: /hcz-jekyll-blog/static/img/avatar.png
-github: https://github.com/codeasashu
-about: Freelance developer
+author: Carson Slovoka
+logo: /static/img/avatar.png
+github: https://github.com/CarsonSlovoka
+about: ...
 
 baseurl: ""
 url: ""
 
 allowsearch: true
 
-disqus_shortname: aboutashu
+disqus_shortname: about Carson
 google_analytics: UA-72862926-1
 
 share:
