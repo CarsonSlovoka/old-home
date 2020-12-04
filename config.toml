@@ -1,3 +1,4 @@
 baseURL = "http://example.org/"
-languageCode = "en-us"
+languageCode = "en-us"  # en-us, zh-tw
 title = "Carson Home"
+theme="ananke"
