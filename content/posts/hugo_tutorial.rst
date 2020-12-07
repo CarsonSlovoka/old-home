@@ -1,19 +1,20 @@
 ---
 title: "Hugo教學"
 date: 2020-12-04T10:29:18+08:00
+menu: "blog"
 draft: false
 ---
 
-================================
+==========================================
 Hugo教學
-================================
+==========================================
 
 .. contents::
 
 ----
 
 Hugo簡介
-********************************
+******************************************
 
 它就是一個靜態的網頁生成器:\ **Site Generators**\
 
@@ -27,7 +28,7 @@ Pelican是用Python開發，預設也是用rst，且樣板是Jinja2，說實在�
 
 
 Install Hugo
-********************************
+******************************************
 
 :方法1: 使用brew或post指令
 
@@ -45,9 +46,11 @@ Install Hugo
 如果安裝成功，打上\ ``hugo version``\會有版本資訊
 
 Getting Started
-********************************
+******************************************
 
-請參考hugo的官方教學: https://gohugo.io/getting-started/quick-start/#step-2-create-a-new-site
+步驟一: ``hugo new site your_site_name``
+
+再來請參考hugo的官方教學: https://gohugo.io/getting-started/quick-start/#step-2-create-a-new-site
 
 我這邊只做補充說明:
 
@@ -102,7 +105,7 @@ Getting Started
     .. note:: 如果您對這些都不滿意，也不妨參考: `hugo其他主題 <https://themes.gohugo.io/>`_
 
 寫文章
-================================
+==========================================
 
 :hugo new file_path: 會建立文件在content之中
 
@@ -115,7 +118,7 @@ Getting Started
     通常在content中，我們會再用資料夾對文章做分類，\ ``posts``\一般有最近公布的項目的意味，總之名稱看您心情，爽就好！
 
 Hugo的內文接受哪些格式?
-********************************
+******************************************
 
 .. csv-table:: `List of content formats <https://gohugo.io/content-management/formats/#list-of-content-formats>`_
     :header:  Name, Comment
@@ -129,7 +132,22 @@ Hugo的內文接受哪些格式?
 
 
 Hugo 配置
-********************************
+******************************************
+
+`Hugo的設定檔案格式 <https://gohugo.io/hugo-modules/theme-components/>`_\目前支持三種格式:
+
+1. toml
+#. yaml
+#. json
+
+我個人是推薦: ``toml`` 因為純粹作為配置文件，這種格式確實比較容易給人讀
+
+toml (\ **Tom's Obvious, Minimal Language**\) 很像ini檔案，但是它可以嵌套很多層，更多可以參考 `-> <https://www.bookstack.cn/read/GoFrame-1.13/os-gcfg-toml.md>`_
+
+不過toml不支持 ``anchor`` 以及 ``reference`` 這些在yaml中其實很好用，可以不用重複寫，
+
+但是如果配置沒有很複雜就算重覆寫一點來換取可讀性免強還是能接受。
+
 
 :config.toml:
 
@@ -145,7 +163,7 @@ Hugo 配置
 
 
 Hugo指令
-********************************
+******************************************
 
 :hugo help: 查看幫助
 :hugo server --buildDrafts --buildExpired --buildFuture --theme ananke: 啟動Server，主題使用ananke (注意如果這邊有設定主題它會覆蓋掉 config.toml中的theme設定)
@@ -153,10 +171,178 @@ Hugo指令
 
 
 疑難排解
-********************************
+******************************************
 
 :為什麼我的資源已經更新，網頁上的內容卻沒有改變呢?: 請用\ ``Ctrl+F5``\來更新頁面
 
     原因是因為，網頁會把一些靜態資源做緩存，減少每次都渲染，可以`參考 <https://stackoverflow.com/questions/30717443/flask-does-not-load-css-file/44830012>`_
 
     像flask也有選項: SEND_FILE_MAX_AGE_DEFAULT 去針對這個議題去做設定
+
+
+==========================================
+config.toml 設定
+==========================================
+
+:permalinks: `參考 <https://gohugo.io/content-management/urls/#permalinks-configuration-example>`_
+
+    ::
+
+        [permalinks]
+          posts = "/:year/:month/:title/"
+          other_subject = ""  # 同理您可以也仿照posts的方式去更改其他資料夾的位置
+
+    .. note::
+
+        date的格式為: ``2020-12-06T19:18:00-08:00``
+
+    這個參數主要是對靜態生成( ``hugo -D`` (通常您沒有更改資料夾時他的位置是 ``public`` )時的檔案結構的影響
+
+    按照以上的設定，我們以 ``content/posts/my_doc.md`` 為例，
+
+    他將變為 ``public/2020/12/my_doc/index.html``  (原本是的位置是: ``public/posts/my_doc/index.html``)
+
+    而您在網址上對應的位置為: ``https::/example.com/2020/12/my_doc``
+
+==========================================
+Introduction to Hugo Templating
+==========================================
+
+它是使用\ `go template <https://golang.org/pkg/text/template/>`_\來實現
+
+Access a Predefined Variable::
+
+    <title>{{ .Title }}</title>
+
+
+The custom variables need to be prefixed with ``$``::
+
+    {{ $address := "123 Main St." }}
+    {{ $address }}
+
+Function::
+
+    {{ FUNCTION ARG1 ARG2 .. }}
+    {{ add 1 2 }}
+    <!-- prints 3 -->
+
+    {{ lt 1 2 }}
+    <!-- prints true (i.e., since 1 is less than 2) -->
+
+Methods and Fields are Accessed via dot Notation::
+
+    {{ .Params.bar }}
+
+Parentheses Can be Used to Group Items Together::
+
+    {{ if or (isset .Params "alt") (isset .Params "caption") }} Caption {{ end }}
+
+For Hugo v0.48 and newer,
+
+variables can be re-defined using the new ``=`` operator (new in Go 1.11).::
+
+    {{ $var := "Hugo Page" }}
+    {{ if .IsHome }}
+        {{ $var = "Hugo Home" }}
+    {{ end }}
+    Var is {{ $var }}
+
+載入其他模板
+******************************************
+
+
+The templates location will always be starting at the ``layouts/`` directory within Hugo.
+
+您要載入的其他其他樣本，都是從\ ``layouts/``\這一個資料夾開始，
+
+
+- `Partial <https://gohugo.io/templates/introduction/#partial>`_: ``{{ partial "<PATH>/<PARTIAL>.<EXTENSION>" . }}``
+
+    Example of including a ``layouts/partials/header.html`` partial::
+
+        {{ partial "header.html" . }}
+
+    所以\ ``layouts/partial``\資料夾的內容就是專門給\ ``partial``\函數所使用的
+
+- `Template <https://gohugo.io/templates/introduction/#template>`_: 內嵌樣本
+
+    Hugo提供了一些內嵌樣本(\ `internal templates <https://gohugo.io/templates/internal/>`_)，例如:
+
+        - Google Analytics:
+
+            - ``_internal/google_analytics.html``
+            - ``_internal/google_analytics_async.html``
+
+        - Google News: ``_internal/google_news.html``
+        - Disqus: ``_internal/disqus.html``
+
+        - Open Graph: ``_internal/opengraph.html``
+
+            目的在於透過定義網站性質、Title、縮圖網址等等屬性，幫助社群平台爬蟲更輕鬆得梳理並找出你網站的重點
+
+            - `教學1 <https://medium.com/@JasonCK/%E5%A6%82%E4%BD%95%E4%B8%8D%E8%AE%93%E7%B8%AE%E5%9C%96%E6%AF%80%E6%8E%89%E4%BD%A0%E7%9A%84%E8%A8%AD%E8%A8%88-a6edd290981d>`_
+
+        - pagination: ``_internal/pagination.html``
+        - schema: ``_internal/schema.html``
+        - twitter cards: ``_internal/twitter_cards.html``
+
+==========================================
+Variables and Params
+==========================================
+
+`官方介紹 <https://gohugo.io/variables/>`_
+
+這很重要，他們可以在HTML中運用
+
+Site Variables
+******************************************
+
+Shortcode Variables
+******************************************
+
+Page Variables
+******************************************
+
+Pages Methods
+******************************************
+
+Taxonomy Variables
+******************************************
+
+File Variables
+******************************************
+
+Menu Entry Properties
+******************************************
+
+Hugo-specific Variables
+******************************************
+
+
+Git Info Variables
+******************************************
+
+Sitemap Variables
+******************************************
+
+
+`The .Site.Params Variable`_
+==========================================
+
+
+::
+
+    # config.toml
+
+    [params]
+      description = "Tesla's Awesome Hugo Site"
+
+::
+
+    <p>{{ $.Site.Params.description }}</p>
+
+
+
+
+.. _`The .Site.Params Variable`: https://gohugo.io/variables/site/#the-siteparams-variable
+.. _`Introduction to Hugo Templating`: https://gohugo.io/templates/introduction/

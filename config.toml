@@ -1,4 +1,21 @@
-baseURL = "http://example.org/"
-languageCode = "en-us"  # en-us, zh-tw
+baseURL = "/"  # "http://example.org/"
 title = "Carson Home"
+# themesDir = "themes"
 theme="ananke"
+
+# https://gohugo.io/getting-started/configuration/#all-configuration-settings
+# languageCode = "en-us"  # en-us, zh-tw  # It is used in the default RSS template and can be useful for multi-lingual sites.
+# defaultContentLanguage="zh-tw"  # en: read more  zh-tw 繼續閱讀  # 這些資料夾必須要在config/_default/menus.zh-tw 存在
+# defaultContentLanguageInSubdir = false  # 如果設定為true他會把其他語言都統一丟到這個資料夾去
+# languageCode = "en"
+
+hasCJKLanguage = true # 自動檢測 使用者的語言 中日韓  This will make .Summary and .WordCount behave correctly for CJK languages.
+summaryLength = 50 # 描述內容 長度
+# contentDir = "content"
+enableEmoji = true  # 預設關閉，打開了話，只要打上特定語法即可顯示該表情符號 語法可直接來這個網站複製即可: https://www.webfx.com/tools/emoji-cheat-sheet/
+paginate = 10  # Default number of elements per page
+# timeout = 10000  # 預設10秒，即每頁加載的時間最多不超過10秒
+
+# hugo --environment dev
+# configDir = "config"  # 預設就是這個  很多config的設定都可以在 hugo help中找到
+# config/dev
