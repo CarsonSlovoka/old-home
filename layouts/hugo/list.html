@@ -1,0 +1,8 @@
+{{ define "main" }}  {{/* themes/ananke/layouts/_default/baseof.html 已經有 block 這個 main 了。 */}}
+  {{/* <h1>Hugo</h1> */}}
+  {{ range .Paginator.Pages }}
+    <article>
+      {{ .Render "summary" }}  {{/* 指的是這個檔案 /layouts/_default/summary.html  當然如果你已經在layouts有這個section了話，他就會已該section中的summary.html為主。 另外如果跟目錄資料夾沒有這個檔案，他就會去找themes/layouts/_default/summary.html */}}
+    </article>
+  {{ end }}
+{{ end }}

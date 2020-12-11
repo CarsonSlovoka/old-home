@@ -1,0 +1,18 @@
+<div class="mb3 pa4 mid-gray overflow-hidden">
+  {{ if .Date }}
+    <div class="f6">
+      {{/* .Date.Format 後面可以自己打上假的時間，系統會自己轉換為正確的時間，並直接以此格是套用 */}}
+      {{ .Date.Format "2006, Jan 2, Mon " }} - {{ .FuzzyWordCount }} Words
+    </div>
+  {{ end }}
+  <h1 class="f3 near-black">
+    {{/* .Permalink是我們可以點連結連到該篇文章的原因 */}}
+    <a href="{{ .Permalink }}" class="link black dim">
+      {{ .Title }}
+    </a>
+  </h1>
+  <div class="nested-links f5 lh-copy nested-copy-line-height">
+    {{/* .Summary  這一個變數會自動做出總結，我會建議用 .Description */}}
+    {{ .Description }}
+  </div>
+</div>
