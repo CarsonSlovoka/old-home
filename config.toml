@@ -5,7 +5,7 @@ theme="ananke"
 
 # https://gohugo.io/getting-started/configuration/#all-configuration-settings
 # languageCode = "en-us"  # en-us, zh-tw  # It is used in the default RSS template and can be useful for multi-lingual sites.
-# defaultContentLanguage="zh-tw"  # en: read more  zh-tw 繼續閱讀  # 這些資料夾必須要在config/_default/menus.zh-tw 存在
+defaultContentLanguage="zh-tw"  # 這個會對應i18n資料夾內的語系  # en: read more  zh-tw 繼續閱讀  # 這些資料夾必須要在config/_default/menus.zh-tw 存在
 # defaultContentLanguageInSubdir = false  # 如果設定為true他會把其他語言都統一丟到這個資料夾去
 # languageCode = "en"
 
@@ -19,3 +19,26 @@ paginate = 10  # Default number of elements per page
 # hugo --environment dev
 # configDir = "config"  # 預設就是這個  很多config的設定都可以在 hugo help中找到
 # config/dev
+
+[params]
+  # 仔細去看 themes/ananke/layouts/index.html 他有使用到 .Site.Params.mainSections
+  # .Site只的就是config這個東西， Params 就是我們前面定義的 [params] ，所以我們在這邊還要定義 mainSections
+  mainSections = [  # 這個東西才可以讓index知道我們有那些主題，才可以用滑鼠點的到，也才能夠連結到 baseURL/xxx
+    "posts",  # baseURL/posts
+    "hugo"  # baseURL/hugo
+  ]
+
+  # 加入自定義或者來自於主題內的css文件(他們都位於static資料夾下)
+  custom_css = ["css/github_icon.css",
+    "css/navbar.css"  # 這是在ananke中的css
+  ]
+
+[markup]  # 這是針對markdown要怎麼處理的配置
+  # Hugo Markdown Support: https://www.markdownguide.org/tools/hugo/#hugo-markdown-support
+  # 完整的配置請參考: https://gohugo.io/getting-started/configuration-markup/
+  defaultMarkdownHandler = "goldmark"  # 如果您要換回blackFriday可以改這個，當然除了這些還有很多其他的配置，但是建議就用goldmark就好
+  [markup.blackFriday]
+    # [blackfriday] hugo目前預設是使用 Goldmark
+    plainIDAnchors = false
+  [markup.goldmark]
+    footnote = true
