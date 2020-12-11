@@ -1,6 +1,7 @@
 ---
 title: "Hugo教學"
 date: 2020-12-04T10:29:18+08:00
+description: 但您快速的完整Hugo的Hello world
 menu: "blog"
 draft: false
 ---
@@ -87,8 +88,8 @@ Getting Started
        :header: 名稱, 初始日期, 星星數, fork數
        :widths: 50, 32, 8, 30
 
-        `ananke <https://github.com/budparr/gohugo-theme-ananke.git>`_, 17 Jun 2018, 542, 554 (統計時間2020/12/4)
-        `hugo-theme-cleanwhite <https://github.com/zhaohuabing/hugo-theme-cleanwhite.git>`_, 11 Apr 2017, 270, 130 (統計時間2020/12/4)
+        `ananke <https://github.com/budparr/gohugo-theme-ananke.git>`_, 17 Jun 2018, |gohugo-theme-ananke-stars|, |gohugo-theme-ananke-forks|
+        `hugo-theme-cleanwhite <https://github.com/zhaohuabing/hugo-theme-cleanwhite.git>`_, 11 Apr 2017, |hugo-theme-cleanwhite-stars|, |hugo-theme-cleanwhite-forks|
 
     cleanwhite在官網的範例是用它當作例子，
 
@@ -346,3 +347,9 @@ Sitemap Variables
 
 .. _`The .Site.Params Variable`: https://gohugo.io/variables/site/#the-siteparams-variable
 .. _`Introduction to Hugo Templating`: https://gohugo.io/templates/introduction/
+
+.. _hugoDocs: https://github.com/gohugoio/hugoDocs
+.. |gohugo-theme-ananke-stars| image:: https://img.shields.io/github/stars/budparr/gohugo-theme-ananke?style=social
+.. |gohugo-theme-ananke-forks| image:: https://img.shields.io/github/forks/budparr/gohugo-theme-ananke?style=social
+.. |hugo-theme-cleanwhite-stars| image:: https://img.shields.io/github/stars/zhaohuabing/hugo-theme-cleanwhite?style=social
+.. |hugo-theme-cleanwhite-forks| image:: https://img.shields.io/github/forks/zhaohuabing/hugo-theme-cleanwhite?style=social
