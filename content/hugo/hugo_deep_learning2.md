@@ -2,7 +2,7 @@
 title = "深入研究Hugo 2"
 date = 2020-12-08T18:29:00+08:00
 description = "正式開始教您如何近乎白手起家來打造專屬於您的Hugo網站！"
-tags = ["hugo", "Static"]
+tags = ["hugo"]
 draft = false
 toc = true
 bootstrap = true
@@ -457,26 +457,90 @@ layouts/_default/single.html
 > 其實整個的概念就是利用，RelPermalink或者TableOfContents因為他們幫我們收集到了各個h的連結，
 > 剩下的利用以前的觀念就可以實現了。
 
-當您是使用別人的主題，不妨先搜尋一下: RelPermalink, TableOfContents, .Params.toc 也許就能知道該主題的導覽是怎麼實現的
+當您是使用別人的主題，不妨先搜尋一下:
 
-L
+- RelPermalink
+- TableOfContents
+- .Params.toc
+
+也許就能知道該主題的導覽是怎麼實現的
+
+
 ### global navigation
 就是menu
 
 
 
+## 函數使用方法參考
 
-## Footnote
+將文字轉為一般文本
 
-[^i18n]: 指的是: internationalization 這個單字，i + 中間 18個單字 + n = i18n。也有些人會用 [^L10n]。 您可以參考[wiki](https://en.wikipedia.org/wiki/Internationalization_and_localization)
-[^L10n]: localization. L + 中間 10個單字 + n = L10n
+    plainify: <p>hello</p> => hello
+    htmlEscape: & => &amp;
+    {{ $anchorId := ($header | plainify | htmlEscape | urlize) }}
 
+    anchorize: my book => my-book
+    {{ $anchorId := ($header | plainify | htmlUnescape | anchorize) }}
+
+list (slice)
+
+    {{ $slice := (findRE `id=\"(.*)\">` $header 1) }}
+    {{ $anchorId := index $slice 0 }}
+    {{ $anchorId := replace $anchorId "id=" "" 1 }}
+
+
+刪除開頭的"和結尾的"
+
+    找出開頭為" 或者 結尾"
+    {{ $anchorId := replaceRE `(^\"*)|(\"*$)` "" $anchorId }}
+
+    排除開頭和結尾
+    {{ $anchorId := substr $anchorId 1 -1 }}
+
+
+變數轉換
+
+    {{ $href := (printf `href=#%s` $anchorId ) | string }}
+    {{ $max_heading := (int .) }}
+
+字串處理
+
+    slice 將元素合併成一個新的list
+    delimit 再將此slice展開，並使用#符號連結成為一個新的字串
+    {{ $href := delimit (slice $base $anchorId) "#" | string }}
+
+    使用printf也能合併字串
+    {{ $href := (printf `href=#%s` $anchorId ) | string }}
+
+### regex 表示法
+
+by order
+
+    {{ $my_var := `id="demo"` }}
+    {{ $result := replaceRE `id=\"(.*)\"` "$1" $my_var }}
+    {{ $result }} → "demo"
+
+name group
+
+    {{ $my_var := `<h2 id="#demo+1-3%./2\"><a href="https://www.google.com/"></a></h2>` }}
+    {{ $id := replaceRE `.*id=\"(?P<my_id>([:#a-z0-9+\-%./\\])*)\">(<a href=\"(?P<my_href>[:#a-z0-9+\-%./\\]*)\">.*)?` "$my_id" $my_var }}
+    {{ $id }}  → #demo+1-3%./2\
+    {{ $href := replaceRE `.*id=\"(?P<my_id>([:#a-z0-9+\-%./\\])*)\">(<a href=\"(?P<my_href>[:#a-z0-9+\-%./\\]*)\">.*)?` "$my_href" $my_var }}
+    {{ $href }}  → https://www.google.com/
 
 ## 參考資料
 
 - [Create navigation from page anchors? 文章大綱](https://discourse.gohugo.io/t/create-navigation-from-page-anchors/12112)
 - [Shields IO 取得github PyPI等等的icon](https://shields.io/category)
 - [Hugo Function大全](https://bwaycer.github.io/hugo_tutorial.hugo/templates/functions/)
+- [regex線上模擬](https://regex101.com/)
+
+
+## Footnote
+
+[^i18n]: **_i18n_**: 指的是: internationalization 這個單字，i + 中間 18個單字 + n = i18n。也有些人會用 [^L10n]。 您可以參考[wiki](https://en.wikipedia.org/wiki/Internationalization_and_localization)
+[^L10n]: **_L10n_**: localization. L + 中間 10個單字 + n = L10n
+
 
 
 [Python]: https://www.python.org/
