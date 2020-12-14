@@ -26,7 +26,7 @@ Hugo 深度學習
 
 :為什麼要學Hugo?:
 
-    Hugo本身就是個 ``Static Site Generator`` 后面简称为 ``SSG``
+    Hugo本身就是個 ``Static Site Generator`` 后面简称为 `SSG <https://jamstack.org/generators/>`_
 
     并不是每一个网站都需要一个 Server 来动态生成内容，也不是每一个网站都需要数据库。博客系统，文档系统，企业官网等等，都是静态网站的好用例。
 
