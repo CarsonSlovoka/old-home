@@ -44,3 +44,17 @@ paginate = 10  # Default number of elements per page
     plainIDAnchors = false
   [markup.goldmark]
     footnote = true
+
+
+[related]
+  includeNewer = false  # 預設為false不會列出比目前該文章還新的主題
+  threshold = 80
+  toLower = false
+
+  [[related.indices]]
+    name = "tags"  # .Site.RegularPages.RelatedIndices "[name]" 這邊的和這裡的名稱是一樣的
+    weight = 100
+
+  [[related.indices]]
+    name = "date"
+    weight = 10

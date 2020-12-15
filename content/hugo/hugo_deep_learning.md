@@ -2,10 +2,11 @@
 title = "深入學習Hugo 1"
 date = 2020-12-07T09:43:12+08:00
 description = "本篇是在對Hugo懵懵懂懂時邊學邊做記錄下來的東西"
+tags = ["hugo"]
 draft = false
-featured_image = ''
 toc = true
 bootstrap = true
+featured_image = ''
 +++
 
 

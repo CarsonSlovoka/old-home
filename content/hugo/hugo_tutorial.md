@@ -2,7 +2,7 @@
 title = "Hugo教學"
 date = 2020-12-04T10:29:18+08:00
 description = "帶您快速的完成Hugo的Hello world"
-menu = "blog"
+tags = ["hugo"]
 draft = false
 toc = true
 bootstrap = true
