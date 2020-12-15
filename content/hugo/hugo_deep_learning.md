@@ -1,73 +1,63 @@
----
-title: "深入學習Hugo 1"
-date: 2020-12-07T09:43:12+08:00
-description: 本篇是在對Hugo懵懵懂懂時邊學邊做記錄下來的東西
-draft: false
-featured_image: ''
----
-
-.. |ss| raw:: html
-
-    <strike>
-
-.. |se| raw:: html
-
-    </strike>
-
-==========================================
-Hugo 深度學習
-==========================================
-
-.. contents::
++++
+title = "深入學習Hugo 1"
+date = 2020-12-07T09:43:12+08:00
+description = "本篇是在對Hugo懵懵懂懂時邊學邊做記錄下來的東西"
+draft = false
+featured_image = ''
+toc = true
+bootstrap = true
++++
 
 
-前言
-******************************************
+## 前言
 
-:為什麼要學Hugo?:
+Hugo本身就是個: **Static Site Generator** 后面简称为 [SSG](https://jamstack.org/generators/)
 
-    Hugo本身就是個 ``Static Site Generator`` 后面简称为 `SSG <https://jamstack.org/generators/>`_
+為什麼要學Hugo?:
+> 因為快！
 
-    并不是每一个网站都需要一个 Server 来动态生成内容，也不是每一个网站都需要数据库。博客系统，文档系统，企业官网等等，都是静态网站的好用例。
+次因:
+- 使用Go所開發
+- 模板也算好學
 
-    hugo除了是SSG以外，它還是SSG中最快速的！
+
+并不是每一个网站都需要一个 Server 来动态生成内容，也不是每一个网站都需要数据库。博客系统，文档系统，企业官网等等，都是静态网站的好用例。
+
+hugo除了是SSG以外，它還是SSG中最快速的！
 
 
-您可能會看到\ *spf13* 而不曉得這到底是甚麼意思？ 他是Hugo的作者名稱\ **Steve Francia**\(13我覺得是因為他的名子加上空白共有13個字)
+您可能會看到*spf13*而不曉得這到底是甚麼意思？
 
-Hugo 是一個用 Go 編寫的靜態網站生成器，2013由 `Steve Francia <https://github.com/spf13>`_ 原創
+> 他是Hugo的作者名稱**Steve Francia**(13我覺得是因為他的名子加上空白共有13個字)
+
+Hugo 是一個用 Go 編寫的靜態網站生成器，2013由 [Steve Francia](https://github.com/spf13) 原創
 
 ----
 
-|ss| 網路上很多的教學，都只講皮毛，包含看官方的文件，也很難找到入門點(我指的是自己刻製化) |se|
+~~網路上很多的教學，都只講皮毛，包含看官方的文件，也很難找到入門點(我指的是自己刻製化)~~
 
-官方文件不好看，但是官方影片(\ **Mike Dane**\))拍的，我覺得非常有用，您可以先看影片，然後再回頭看文檔補足剩下部分即可。
+官方文件不好看，但是官方影片(**Mike Dane**))拍的，我覺得非常有用，您可以先看影片，然後再回頭看文檔補足剩下部分即可。
 
-.. note:: 如果您覺得影片有幫助，請給個讚，以鼓勵這些願意奉獻的人們，一個讚用不了您多少時間，但是卻能給作者帶來許多正能量！
+> :+1:  如果您覺得影片有幫助，請給個讚，以鼓勵這些願意奉獻的人們，一個讚用不了您多少時間，但是卻能給作者帶來許多正能量！
 
-.. warning:: 影片有些東西已經是舊的了，看完影片請務必回來再看官方文檔，官方文檔講得更多也更細，而且內容都是新的不會有過時的語法！
+> :collision: 影片有些東西已經很舊了，看完影片請務必回來再看官方文檔，官方文檔講得更多也更細，而且內容都是新的不會有過時的語法！
 
-因此我決定自己從\ hugoDocs_\來看起，並分享這些成果，希望能幫助到有需要的人。
+我自己再讀完[Getting Started]({{< ref "/hugo/hugo_tutorial#getting-started" >}})後找了[hugoDocs]的專案來看，以下是一些心得，希望能幫助到有需要的人。
 
-第一課
-******************************************
+## 第一課
 
-hugoDocs是什麼?
-==========================================
+
+### hugoDocs是什麼?
 
 就是您逛Hugo官方文件所看到的官方網站，就是用那一個主題所生成，
 
-.. csv-table:: 推薦主題
-   :header: 名稱, 初始日期, 星星數, fork數
-   :widths: 50, 32, 30, 30
 
-    hugoDocs_, 2013-07-04, |hugoDocsStars|, |hugoDocsForks|
+| Themes | 專案初始日期  |  |   |
+| ------ | ----- | ----- |  ----- |
+| [hugoDocs] | 2013-07-04 | {{< github/get_info_img gohugoio hugoDocs stars >}} | {{< github/get_info_img gohugoio hugoDocs forks >}} |
 
 
-hugo的目錄結構
-==========================================
-
-.. code-block::
+### hugo的目錄結構
 
     content
     ├── posts  # 您的分類資料夾
@@ -85,34 +75,34 @@ hugo的目錄結構
         └── single.html  # ★用來渲染文件整體
 
 
-.. warning:: template其實有經過改版，在後續的版本中，建議使用 ``partial`` 來代替 template
+> :collision: template其實有經過改版，在後續的版本中，建議使用 ``partial`` 來代替 template
 
 
-:doc/single.html:
+- doc/single.html:
 
-    ::
-
-        {{ template "chrome/header.html" . }}  # 載入header: 包含 {include {css, js}, menu}
-                  <h1>{{ .Title }}</h1>
-                  {{ .Content }}
-        {{ template "chrome/footer.html" . }}  # 載入footer
-
-
-
-:demo.md:
-
-    ::
-
-        ---
-        title: "..."
-        date: 2020-12-07T09:43:12+08:00
-        draft: false
-        ---
-
-    這些開頭的變數都會 ``.Params`` 的變數中， 讓 ``templates`` 可以使用
+    ```
+    {{ template "chrome/header.html" . }}  # 載入header: 包含 {include {css, js}, menu}
+              <h1>{{ .Title }}</h1>
+              {{ .Content }}
+    {{ template "chrome/footer.html" . }}  # 載入footer
+    ```
 
 
-hugo張貼出來的文章架構(Organization) ::
+
+- demo.md:
+
+    ```
+    ---
+    title: "..."
+    date: 2020-12-07T09:43:12+08:00
+    draft: false
+    ---
+    ```
+
+    這些開頭的變數都會保存在``.Params``的變數中，讓``templates``可以使用
+
+
+hugo張貼出來的文章架構(Organization):
 
     .
     └── content
@@ -136,17 +126,21 @@ hugo張貼出來的文章架構(Organization) ::
 * Proper YAML support for front matter
 * Support for other formats
 
-樣板render
-==========================================
+### 樣板render (shortcode)
 
-很像jinja，而 ``{{ }}`` 他們稱之為: 「\ ``shortcode``\」
 
-example youtube
-------------------------------------------
+很像jinja，而 ``{{ }}`` 他們稱之為: 「``shortcode``」
 
-    {{ % youtube 09jf3ow9jfw %}}
+----
 
-    {{< youtube youtube-id >}}
+#### example youtube
+
+    {{</* youtube youtube-id */>}}
+    {{</* youtube id="youtube-id" autoplay="true" */>}}
+
+    {{< youtube 2xkNJL4gJ9E >}}
+
+很酷吧，直接就能在您的靜態網站撥放youtube的影片
 
 This would be rendered as::
 
@@ -158,13 +152,11 @@ This would be rendered as::
     </iframe>
     </div>
 
+----
 
-example: image with caption
-------------------------------------------
+#### example: image with caption
 
-::
-
-    {{ % img src="/media/spf13.jpg" title="Steve Francia" %}}
+    {{%/* figure src="/media/spf13.jpg" title="Steve Francia" */%}}
 
 Would be rendered as::
 
@@ -175,16 +167,22 @@ Would be rendered as::
         </figcaption>
     </figure>
 
+實際範例:
 
+{{< figure src="../../images/tab_icon.jpg" title="神氣的媽媽熊" >}}
+> {{</* figure src="../../images/tab_icon.jpg" title="神氣的媽媽熊" */>}}  :sunglasses:
 
-第二課
-******************************************
+> **_NOTE_**: figure src是相對路徑，也就是以您文章所在的資料夾為主，所以如果您要取根路徑下的``static``資料夾，您可以用``..``幫您回到前一層，最後注意，回到baseURL之後您**不用**再加上static資料夾，預設您的圖片資源就會在static資料夾中找尋
 
-關於您各個文件的內容，都必須是\ **小寫**\ (推測後面還是有更動，因為以目前來說，並非總是小寫)
+> 圖片實際路徑: ./static/images/tab_icon_.jpg
 
-請參考: `Now support for config files as yaml, json or toml sha:a54e04e6fd0084224cad5b` ``configuration.md``
+## 第二課
 
-例如::
+關於您各個文件的內容，都必須是**小寫**(推測後面還是有更動，因為以目前來說，並非總是小寫)
+
+> 請參考: `Now support for config files as yaml, json or toml sha:a54e04e6fd0084224cad5b` ``configuration.md``
+
+例如:
 
     sourcedir = "content"  # 於sha: 3db18bca9c37280e9 改名就做 contentdir
     layoutdir = "layouts"
@@ -201,15 +199,14 @@ Would be rendered as::
     新版:      <li> <a href="/doc/configuration">Configuration</a> </li>
 
 
-在早期的版本，一些static的檔案是存放在\ ``public``\資料夾，於 ``sha: 37eb9bae7ad49f6d744e0c`` 才將其改放置 ``static`` 資料夾
+在早期的版本，一些static的檔案是存放在``public``資料夾，於 ``sha: 37eb9bae7ad49f6d744e0c`` 才將其改放置 ``static`` 資料夾
 
 
-★★★補充教材
-==========================================
+## ★★★補充教材
 
-您會發現hugoDocs早期的代碼中(\ ``sha1 id:3db18bca9c37280``\以前)，只有範例，沒有真實的文件運用，因此還是很難搞懂一些原理
+您會發現hugoDocs早期的代碼中(``sha1 id:3db18bca9c37280``以前)，只有範例，沒有真實的文件運用，因此還是很難搞懂一些原理
 
-例如 indexes.md 中，提及::
+例如 indexes.md 中，提及:
 
     ---
     indexes:
@@ -221,14 +218,13 @@ Would be rendered as::
 
 這邊光這樣寫實在不知道在幹甚麼...
 
-甚麼是section? 甚麼是Page?
-------------------------------------------
+### 甚麼是section? 甚麼是Page?
 
-.. _section是什麼:
+section是什麼？
 
-在Hugo/content中，每一個目錄稱為一個 ``section`` !!!
+> 在Hugo/content中，每一個目錄稱為一個 ``section`` !
 
-Hugo世界中，所有的東西都是 Page，
+Hugo世界中，[所有的東西都是 **Page**](https://bwaycer.github.io/hugo_tutorial.hugo/content/using-index-md#index-md-and-everything-is-a-page)
 
 每一個Page都會對應一個 ``原文件``， 例如::
 
@@ -238,24 +234,25 @@ Hugo世界中，所有的東西都是 Page，
     content/c1/_index.md
     content/c1/p1.md
 
-他我們訪問 ``/c1/`` 時，他的原文件是\ ``content/_index.md``
-當我們訪問 ``c1/p1`` 原文件對應 ``content/c1/p1.md``
+他我們訪問:
 
-★用哪一個樣版來render
-------------------------------------------
+- ``/c1/`` 時，他的原文件是``content/_index.md``
+- ``c1/p1`` => ``content/c1/p1.md``
+
+### ★用哪一個樣版來render
 
 Hugo模板系統主要分為3大類:
 
 1. 首頁: 使用 ``index.html`` 或者 ``baseof.html``
-#. 列表行頁面 使用 ``_default/list.html`` 來渲染 : 對應的文件為某個 ``_index.md`` ，例如我們剛才提及的::
+2. 列表行頁面 使用 ``_default/list.html`` 來渲染 : 對應的文件為某個 ``_index.md`` ，例如我們剛才提及的::
 
     他我們訪問 ``/c1/`` 時，他的原文件是\ ``content/_index.md``
 
-#. 一般頁面 使用 ``_default/single.html``\，例如::
+3. 一般頁面 使用 ``_default/single.html``\，例如::
 
     當我們訪問 ``c1/p1`` 原文件對應 ``content/c1/p1.md``
 
-.. warning:: 我們這邊所說的不管是 list.html 還是 single.html 都是只在 ``./layouts`` 底下模板用的html
+> :collision: 我們這邊所說的不管是 list.html 還是 single.html 都是只在 ``./layouts`` 底下模板用的html
 
 
 所有的模板都在 ``./layouts`` 中可以找到
@@ -264,9 +261,11 @@ Hugo模板系統主要分為3大類:
 
 而既然是默認，就代表您還可以客製更多的樣板，並且能夠選擇您想使用哪一個樣版
 
-關於: 選擇要使用哪個樣板，可以在 `FrontMatter <https://gohugo.io/content-management/front-matter/>`_\指定，
+關於: 選擇要使用哪個樣板，可以在 [FrontMatter] 指定，
 
-所謂的 ``FrontMatter`` 就是在文章開頭一開始的那些東西，例如::
+> **_NOTE_** 我說的是樣版而不是主題喔！
+
+所謂的``FrontMatter`` 就是在文章開頭一開始的那些東西，例如::
 
     categories = ["Development", "VIM"]
     date = "2012-04-06"
@@ -275,10 +274,9 @@ Hugo模板系統主要分為3大類:
     tags = [".vimrc", "plugins", "spf13-vim", "vim"]
     title = "spf13-vim 3.0 release and new website"
 
-而要選樣版，則是要設定 `layout <https://gohugo.io/templates/lookup-order/>`_ 這個參數
+而要選樣版，則是要設定 [layout](https://gohugo.io/templates/lookup-order/) 這個參數
 
 範例
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 假設您的文件為::
 
@@ -286,7 +284,7 @@ Hugo模板系統主要分為3大類:
 
 也就是我們建立一個名稱為doc的section
 
-那麼要統一將這一個section中樣式都套用某一個layouts時，我們可以在layouts這樣說明::
+那麼要統一將這一個section中樣式都套用某一個layouts時，我們可以在layouts這樣說明:
 
     ./layouts/doc/single.html
 
@@ -303,7 +301,8 @@ Hugo模板系統主要分為3大類:
 
 在.layouts之中，還有一個很強大的角色， ``baseof.html``
 
-像是我們可以於\ ``layouts/_default/baseof.html``\定義 (您也可以直接參考 `這邊 <https://gohugo.io/templates/base/>`_::
+像是我們可以於``layouts/_default/baseof.html``定義
+(您也可以直接參考[base](https://gohugo.io/templates/base)) :
 
     <!DOCTYPE html>
     <html>
@@ -323,9 +322,9 @@ Hugo模板系統主要分為3大類:
 
 可以利用 {{ block }} 來讓子樣版來決定其真正的內容
 
-As a default template, it is the shell from which **all your pages** will be rendered *unless you specify another* \*baseof.html closer to the beginning of the lookup order.
+As a default template, it is the shell from which **all your pages** will be rendered *unless you specify another* *baseof.html closer to the beginning of the lookup order.
 
-這是list的寫法 ``layouts/_default/list.html`` ::
+這是list的寫法 ``layouts/_default/list.html`` :
 
     {{ define "main" }}
       <h1>Posts</h1>
@@ -357,25 +356,24 @@ As a default template, it is the shell from which **all your pages** will be ren
 
 在block中您也可以加上預設的內容，如果子樣版沒有重載它(即少了該define)，那麼就會以預設的內容為主(類似 jinja的 super)
 
-總整理
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+### 總整理
 
 Hugo編譯我們的站點時，發現 ``content/_index.md`` (如果您缺少了這個文件，完整的內容就是 ``layouts/index.html`` )
 
 會使用 ``layouts/index.html`` + ``layouts/_defaulte/baseof.html``
 
-:content/_index.md: ``layouts/index.html`` + ``layouts/_defaulte/baseof.html``
-:content/doc:  ``layouts/_defaulte/baseof.html`` + ``layouts/_defaulte/list.html``
-:content/doc/my_site.md:  ``layouts/_defaulte/baseof.html`` + ``layouts/_defaulte/single.html``
+| 文件 | 對應 |
+| ---- | ---- |
+| content/_index.md  | ``layouts/index.html`` + ``layouts/_defaulte/baseof.html`` |
+| content/doc |  ``layouts/_defaulte/baseof.html`` + ``layouts/_defaulte/list.html`` |
+| content/doc/my_site.md | ``layouts/_defaulte/baseof.html`` + ``layouts/_defaulte/single.html`` |
 
 
-第三課
-******************************************
+## 第三課
 
-aliases
-==========================================
+### aliases
 
-``xxx.md`` ::
+``xxx.md`` :
 
     ---
     title: "Aliases"
@@ -391,19 +389,15 @@ aliases
 
 也因為有了alias的出現，所以在 ``sha: 66c87441bd70cc003bd`` 把 ``content/doc/example.md`` 改成了 ``content/content/example.md``
 
-至於內容還是維持原樣，所以他用alias來表示::
+至於內容還是維持原樣，所以他用alias來表示:
 
     ---
     aliases: ["/doc/example/"]
     ---
 
-URL的路徑詳解
-==========================================
+### URL的路徑詳解
 
-Content
-------------------------------------------
-
-::
+#### Content
 
     .             path           slug
     .       ⊢-------^----⊣ ⊢------^-------⊣
@@ -419,15 +413,12 @@ Content
     .       ⊢--^--⊣⊢--^--⊣
     content/extras/indexes/index.html
 
-跟我們之前講過的一樣 `section是什麼`_
+跟我們之前講過的一樣 [section是什麼]({{< ref "#甚麼是section-甚麼是page" >}})
 
-:section: 就是content緊接著的那一個資料夾就是 section
-:slug: 主文件 **前面一個** 的資料夾名稱
+- section: 就是content緊接著的那一個資料夾就是 section
+- slug: 主文件 **前面一個** 的資料夾名稱
 
-Destination
-------------------------------------------
-
-::
+#### Destination
 
                permalink
     ⊢--------------^-------------⊣
@@ -459,16 +450,15 @@ Destination
     http://spf13.com/extras/indexes/example
 
 
-:baseUrl: config.toml 設定的東西
-:section: 緊鄰baseUrl後的一個即為之
-:slug: url後的最後一項
-:path: 等於baseUrl和slug之間的就是path
-:url: baseUrl後面的所有東西都是
+- baseUrl: config.toml 設定的東西
+- section: 緊鄰baseUrl後的一個即為之
+- slug: url後的最後一項
+- path: 等於baseUrl和slug之間的就是path
+- url: baseUrl後面的所有東西都是
 
-category
-==========================================
+### category
 
-config.toml::
+config.toml:
 
     ---
     indexes:
@@ -477,7 +467,7 @@ config.toml::
     title: "Steve Francia is spf13.com"
     ---
 
-/layouts/indexes/category.html``:
+``/layouts/indexes/category.html``:
 
     For each index type a template needs to be provided to render the index page.
     In the case of categories, this will render the content for ``/categories/CATEGORYNAME/``\. ::
@@ -497,7 +487,7 @@ config.toml::
         {{ template "chrome/footer.html" }}
 
 
-假設我們的文件內容如下::
+假設我們的文件內容如下:
 
     {
         "title": "Hugo: A fast and flexible static site generator",
@@ -510,8 +500,7 @@ config.toml::
     }
 
 
-如何制定Menu
-==========================================
+### 如何制定Menu
 
 https://gohugo.io/templates/menu-templates/#section-menu-for-lazy-bloggers
 
@@ -519,67 +508,54 @@ https://cjting.me/2017/06/04/migrate-to-hugo-from-jekyll/
 
 
 
-Mike Dane Youtube
-******************************************
+## Mike Dane Youtube
 
-archetypes
-==========================================
-
-https://www.youtube.com/watch?v=bcme8AzVh6o
+### [archetypes](https://www.youtube.com/watch?v=bcme8AzVh6o)
 
 幫助您建立文件的模型，例如，我建立了以下檔案
 
 ``./archetypes/defaulte.md``
 
-    ::
+    ---
+    title: "{{ replace .TranslationBaseName "-" " " | title }}"
+    date: {{ .Date }}
+    draft: false
+    author: "Carson"
+    ---
 
-        ---
-        title: "{{ replace .TranslationBaseName "-" " " | title }}"
-        date: {{ .Date }}
-        draft: false
-        author: "Carson"
-        ---
-
-    那麼所有的文件在建立的時候都會，就會產生以上內容
+那麼所有的文件在建立的時候都會，就會產生以上內容
 
 當然您也可以只針對section做處理，例如
 
 ``.archetypes/post.md``: 這樣他影響的內容，只有是 ``hugo new post/xxx.md``  也就是section為post的才會影響
 
-shortcode_
-==========================================
+### [shortcode]
 
-官方提供的shortcode
-------------------------------------------
+#### 官方提供的shortcode
 
-.. csv-table:: 官方提供的shortcode
-    :header: Name, 描述, 語法
+| Name | 描述 | 語法
+| ---- | ---- | ----
+| <img width=200/> | <img width=400/> | <img width=400/>
+| figure, 圖片加上描述| ``{{</* figure src="/media/spf13.jpg" title="Steve Francia" */>}}`` |
+| gist| github使用者的連結| "``{{</* gist spf13 7896402 >}`` (等同: https://gist.github.com/spf13/7896402 |
+| highlight | highlight| "``{{</* highlight html >} ... {< /highlight html */>}}``" |
+| instagram | instagram| ``{{</* instagram instagram-id */>}}`` |
+| tweet| twitter| ``{{</* tweet 877500564405444608 */>}}`` |
+| vimeo| vimeo 一個影片的播放媒體| ``{{</* vimeo 146022717 */>}}`` |
+| param| 如果Page's有此值就回傳他，沒有了話log中會記錄ERROR| ``{{</* param testparam */>}}`` |
+| ``ref`` and ``relref`` | 連結到其他的文件 | ``{{</* ref "/my_section/my_doc#inside_link" */>}}`` |
+| youtube| youtube| ``{{</* youtube youtube-id */>}}`` |
 
-    figure, 圖片加上描述, ``{< figure src="/media/spf13.jpg" title="Steve Francia" >}``
-    gist, github使用者的連結, "``{< gist spf13 7896402 >}`` (等同: https://gist.github.com/spf13/7896402)"
-    highlight, highlight, "``{< highlight html >} ... {< /highlight html >}``"
-    instagram, instagram, ``{ instagram instagram-id }``
-    tweet, twitter, ``{< tweet 877500564405444608 >}``
-    vimeo, vimeo 一個影片的播放媒體, ``{< vimeo 146022717 >}``
-    param, 如果Page's有此值就回傳他，沒有了話log中會記錄ERROR, ``{< param testparam >}``
-    "\ ``ref`` and ``relref`` ",
-    youtube, youtube, ``{< youtube youtube-id >}``
+>  ``{% 表示代碼中間的內容要渲染``
 
-
-
-``{{< youtube youtube-id >}}``
-
-.. note::
-
-    ``{% 表示代碼中間的內容要渲染``
-    ``{< 表示代碼中間的內容不用渲染``
+>  ``{< 表示代碼中間的內容不用渲染``
 
 
-Create Custom Shortcodes
-------------------------------------------
+#### Create Custom Shortcodes
 
-1. 創建 shortcode資料夾: ``./layouts/shortcodes/``  ::
+1. 創建 shortcode資料夾: ``./layouts/shortcodes/``
 
+    ```
     # ./layouts/shortcodes/my_shortcodes.html
 
     <p> This is my shortcodes</p>
@@ -594,9 +570,11 @@ Create Custom Shortcodes
     {{.Inner}}  # 這樣他就會把tag中間的東西全部都給渲染出來
 
     <p style="background-color:yellow">{{.Inner}}</p>
+    ```
 
-#. xxx.md::
+2. xxx.md:
 
+    ```
     {< my_shortcodes color="blue" >}
 
     {< my_shortcodes2 blue }
@@ -613,18 +591,16 @@ Create Custom Shortcodes
     {< doubly_tagged_shortcodes >}  # 用 {< 中間的文字「不會」渲染
         **it not bold text**
     {< /doubly_tagged_shortcodes >}
+   ```
 
 
-`Taxonomies Tutorial 10`_
-==========================================
+### [Taxonomies Tutorial 10]
 
-`官方文件 taxonomies <https://gohugo.io/content-management/taxonomies/>`_
+官方文件: [taxonomies](https://gohugo.io/content-management/taxonomies)
 
-這些分類您只要設定完之後就能在 ``list.html``\所渲染的頁面中，看到這些標籤，
+這些分類您只要設定完之後就能在 ``list.html``所渲染的頁面中，看到這些標籤，
 
-並且當您點擊這些標籤時，他會跳到 ``baseUrl/[categories, tags, ..., define_by_you]/`` 的頁面，讓您知道有哪些文章也是標記這些標籤
-
-::
+並且當您點擊這些標籤時，他會跳到 ``baseUrl/[categories, tags, ..., define_by_you]`` 的頁面，讓您知道有哪些文章也是標記這些標籤
 
     ---
     title: "A"
@@ -635,51 +611,50 @@ Create Custom Shortcodes
     moods: ["happy", "Upbeat"]  # 這是一個不存在hugo的分類
     ---
 
-tags: 會生成在: ``baseUrl/tags/you_tag_name`` 然後 可以被 ``layouts/_default/list.html`` 所管理
-categories: 會生成在: ``baseUrl/categories/you_cat_name`` 然後 可以被 ``layouts/_default/list.html`` 所管理
+- tags: 會生成在: ``baseUrl/tags/YOU_TAG_NAME`` 然後 可以被 ``layouts/_default/list.html`` 所管理
+- categories: 會生成在: ``baseUrl/categories/YOU_TAG_NAME`` 然後 可以被 ``layouts/_default/list.html`` 所管理
 
-當我們想要自己建立出一個 ``Taxonomies`` 則需要再\ ``config.toml``\中 新增以下內容::
+當我們想要自己建立出一個 ``Taxonomies`` 則需要再``config.toml``中 新增以下內容:
 
     [taxonomies]
         tag = "tag"  # 這是預設hugo會給的，但是一旦您重新更動了taxonomies就要附加上去，不然等同失效
         category = "categories"  # 這是預設hugo會給的，但是一旦您重新更動了taxonomies就要附加上去，不然等同失效
         mood = "moods"
 
-.. note:: 如果您不想要hugo創建這些分類標籤，則要做這些設定 ``disableKinds = ["taxonomy", "term"]``
+> **_NOTE_**: 如果您不想要hugo創建這些分類標籤，則要做這些設定 ``disableKinds = ["taxonomy", "term"]``
 
 
-`Data Files Tutorial 20`_
-==========================================
+### [Data Files Tutorial 20]
 
-`官方文件: Data templates <https://gohugo.io/templates/data-templates/>`_
+官方文件: [Data templates](https://gohugo.io/templates/data-templates/)
 
-Hugo的Data files是什麼?
-------------------------------------------
+#### Hugo的Data files是什麼?
 
-    它可以讀取\ **靜態的**\yaml, toml, json之類的檔案，並且可以用很簡單的語法就能運用他在您的文章之中
+> 它可以讀取**靜態的**yaml, toml, json之類的檔案，並且可以用很簡單的語法就能運用他在您的文章之中
 
-注意我說的是\ *靜態的*\，也就是這些檔案您必須先準備好！
+> :collision: 我說的是*靜態的*，也就是這些檔案您必須先準備好！
 
-如何進行
-------------------------------------------
+#### 如何進行
 
-1. 首先您要準備一個資料夾----data
+1. 首先您要準備一個資料夾----**data**
 
     ``./data/[your_dir]/[your.{json, yaml, toml}]``
 
-    假設我們的文件為 ``.data/info/states_A.json`` 如下所示::
+    假設我們的文件為 ``.data/info/states_A.json`` 如下所示:
 
-        {
-            "AL": {
-                "name": "Alabama",
-                "capital": "Montgomery"
-            }
-
-            "AK": {
-                "name": "Alaska",
-                "capital": "Juneau"
-            }
+    ```
+    {
+        "AL": {
+            "name": "Alabama",
+            "capital": "Montgomery"
         }
+
+        "AK": {
+            "name": "Alaska",
+            "capital": "Juneau"
+        }
+    }
+    ```
 
     假設我們的文件為 ``.data/info/states_B.json`` 如下所示::
 
@@ -695,10 +670,9 @@ Hugo的Data files是什麼?
             }
         }
 
+2. 於``layouts``資料夾開始寫語法即可，舉例來說我們寫在``layouts/_default/single.html``:
 
-
-#. 於\ ``layouts``\資料夾開始寫語法即可，舉例來說我們寫在\ ``layouts/_default/single.html`` ::
-
+    ```
     <!-- single.html-->
     <h1>Single Template</h1>
 
@@ -719,60 +693,63 @@ Hugo的Data files是什麼?
     {{ range . }}
         {{ .name }} <br> {{ .captial }}
     {{ end }}
+    ```
 
+> :collision: 我們是準備data資料夾，而Hugo會把這些東西轉成一個 ``map`` 存放到 ``.Site.Data`` 變數中 (是大寫的Data)
 
-
-注意喔，我們是準備data資料夾，而Hugo會把這些東西轉成一個 ``map`` 存放到 ``.Site.Data`` 變數中 (是大寫的Data)
-
-getJSON, getCSV
-------------------------------------------
+#### getJSON, getCSV
 
 您的資料夾檔案可以來自:
 
 1. 網路上
-#. 本機端: 附檔名是什麼都無所謂，只要內容是符合該格式即可 (The file extension does not matter, but the content does.)
+2. 本機端: 附檔名是什麼都無所謂，只要內容是符合該格式即可 (The file extension does not matter, but the content does.)
 
     本的端的檔案需存在於data資料夾:
 
-        1. ``./data/*``
-        #. ``./themes/<THEME>/data/*``
+    1. ``./data/*``
+    2. ``./themes/<THEME>/data/*``
 
     可以來自於您自己主題內的data資料夾或者是您引用的主題中的data資料夾
 
 以下的範例都是以網路當作範例
 
-:getJSON:
+- **getJSON**
 
-    語法::
+    語法:
 
-        {{ $dataJ := getJSON "url prefix" "arg1" "arg2" "arg n" }}
+        {{ $dataJ := getJSON "url_prefix" "arg1" "arg2" "arg n" }}
 
-    範例::
+    > 其實他就是可以餵一個完整的url，該url的回傳是一個json檔案，參數arg可以和url_prefix串接起來
+
+    範例:
 
         {{ $urlPre := "https://api.github.com" }}
         {{ $gistJ := getJSON $urlPre "/users/GITHUB_USERNAME/gists" }}
 
-    等同以下::
+    等同以下:
 
+        ```
         {{ $gistJ := getJSON "https://api.github.com/users/GITHUB_USERNAME/gists" }}
+        ```
 
-    .. note:: ``https://api.github.com/users/GITHUB_USERNAME/gists`` 這一個網址本身就是json，您可以把GITHUB_USERNAME換成您自己的就可以看到消息了
+    > **_NOTE_**: ``https://api.github.com/users/GITHUB_USERNAME/gists`` 這一個網址本身就是json，您可以把GITHUB_USERNAME換成您自己的就可以看到消息了
+
+    實際運用，抓取使用者前5個gists的項目:
+
+    ```
+    <ul>
+      {{ $urlPre := "https://api.github.com" }}
+      {{ $gistJ := getJSON $urlPre "/users/GITHUB_USERNAME/gists" }}
+      {{ range first 5 $gistJ }}  # 因為gists.json他是以list開頭當作物件，所以這個gistJ就是一個陣列
+        {{ if .public }}  # 要取變數一律都要加上 "." 號 public 也是 gists中的其中一個欄位，且這個欄位剛好是 boolean的數值，所以可以用if來判別
+          <li><a href="{{ .html_url }}" target="_blank">{{ .description }}</a></li>
+        {{ end }}
+      {{ end }}
+    </ul>
+    ```
 
 
-    實際運用，抓取使用者前5個gists的項目::
-
-        <ul>
-          {{ $urlPre := "https://api.github.com" }}
-          {{ $gistJ := getJSON $urlPre "/users/GITHUB_USERNAME/gists" }}
-          {{ range first 5 $gistJ }}  # 因為gists.json他是以list開頭當作物件，所以這個gistJ就是一個陣列
-            {{ if .public }}  # 要取變數一律都要加上 "." 號 public 也是 gists中的其中一個欄位，且這個欄位剛好是 boolean的數值，所以可以用if來判別
-              <li><a href="{{ .html_url }}" target="_blank">{{ .description }}</a></li>
-            {{ end }}
-          {{ end }}
-        </ul>
-
-
-:getCSV:
+- **getCSV**
 
     語法::
 
@@ -801,18 +778,17 @@ getJSON, getCSV
             </tbody>
           </table>
 
-Cache URLs
-------------------------------------------
+#### Cache URLs
+
 如果您的資料來至於URL，他會把資料載下來，會載到 ``$TMPDIR/hugo_cache`` 其中 ``$TMPDIR`` 仰賴於您本身的系統的暫存資料夾
 
 如果您不喜歡這樣的安排，您可以親自設定 ``--cacheDir`` 變數
 
 而如果您壓根就不想要什麼cache，可以直接把緩存給取消掉: ``--ignoreCache``
 
-.. warning:: 我們強烈不建議把 ``--ignoreCache`` 加上去，因為如果沒有緩存文件，那就意味著每次的載入都必須再查詢一次，這樣的流量很驚人！
+> :collision: 我們強烈不建議把 ``--ignoreCache`` 加上去，因為如果沒有緩存文件，那就意味著每次的載入都必須再查詢一次，這樣的流量很驚人！
 
-`LiveReload with Data Files`_
-------------------------------------------
+#### [LiveReload with Data Files]
 
 如果您的頁面本身有用到Data Files
 
@@ -820,8 +796,7 @@ Cache URLs
 
 至於本機端的文件，只要有更動，就會自動觸發LiveReload
 
-LiveReload是什麼？_
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+##### [LiveReload是什麼？]
 
 當您使用: ``hugo server`` 除了啟動server以外，它還會持續的監看文件是否被改便，以重新渲染。
 
@@ -852,11 +827,10 @@ LiveReload是什麼？_
     disableLiveReload = true
 
 
-.. _hugoDocs: https://github.com/gohugoio/hugoDocs
-.. |hugoDocsStars| image:: https://img.shields.io/github/stars/gohugoio/hugoDocs?style=social
-.. |hugoDocsForks| image:: https://img.shields.io/github/forks/gohugoio/hugoDocs?style=social
-.. _shortcode: https://gohugo.io/content-management/shortcodes/#readout
-.. _Taxonomies Tutorial 10: https://www.youtube.com/watch?v=pCPCQgqC8RA&list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3&index=10
-.. _Data Files Tutorial 20: https://www.youtube.com/watch?v=FyPgSuwIMWQ&feature=youtu.be
-.. _LiveReload with Data Files: https://gohugo.io/templates/data-templates/#livereload-with-data-files
-.. _LiveReload是什麼？: https://gohugo.io/getting-started/usage/#livereload
+[hugoDocs]: https://github.com/gohugoio/hugoDocs.git
+[shortcode]: https://gohugo.io/content-management/shortcodes/#readout
+[Taxonomies Tutorial 10]: https://www.youtube.com/watch?v=pCPCQgqC8RA&list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3&index=10
+[Data Files Tutorial 20]: https://www.youtube.com/watch?v=FyPgSuwIMWQ&feature=youtu.be
+[LiveReload with Data Files]: https://gohugo.io/templates/data-templates/#livereload-with-data-files
+[LiveReload是什麼？]: https://gohugo.io/getting-started/usage/#livereload
+[FrontMatter]: https://gohugo.io/content-management/front-matter/

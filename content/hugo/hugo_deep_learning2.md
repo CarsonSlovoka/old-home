@@ -68,11 +68,11 @@ Lorem ipsum[^foo] dolor sit amet[^bar], consectetur adipiscing elit[^3].
 > **_NOTE:_** 如果您運氣不好可能會正好挑到還沒支援的表情符號，請在換換其他的試試看！
 
 
-### 推薦主題: ananke
+### 推薦主題:ananke
 
 | Themes |  |  |
 | ------ | ----- | ----- |
-| [ananke](https://github.com/budparr/gohugo-theme-ananke.git) | {{< github/get_info_img stars >}} | {{< github/get_info_img forks "https://www.google.com/" >}} |
+| [ananke](https://github.com/budparr/gohugo-theme-ananke.git) | {{< github/get_info_img budparr gohugo-theme-ananke stars >}} | {{< github/get_info_img budparr gohugo-theme-ananke forks "https://www.google.com/" >}} |
 
 
 為什麼用這個主題?
