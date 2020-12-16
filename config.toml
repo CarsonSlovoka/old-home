@@ -21,6 +21,8 @@ paginate = 10  # Default number of elements per page
 # config/dev
 
 [params]
+  is_release = false
+
   # 仔細去看 themes/ananke/layouts/index.html 他有使用到 .Site.Params.mainSections
   # .Site只的就是config這個東西， Params 就是我們前面定義的 [params] ，所以我們在這邊還要定義 mainSections
   mainSections = [  # 這個東西才可以讓index知道我們有那些主題，才可以用滑鼠點的到，也才能夠連結到 baseURL/xxx
