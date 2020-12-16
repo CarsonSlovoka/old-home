@@ -355,7 +355,17 @@ As a default template, it is the shell from which **all your pages** will be ren
     {{ end }}
 
 
-在block中您也可以加上預設的內容，如果子樣版沒有重載它(即少了該define)，那麼就會以預設的內容為主(類似 jinja的 super)
+在block中您也可以加上預設的內容。
+
+> :collision: 以下兩種方式都會以主樣版的內容為主 (類似jinja的super)
+>
+> - 子樣版沒有define
+> - 子樣板有define，但是沒有實作
+>   ```
+>   {{ define "xxx" }}
+>   {{ end }}
+>   ```
+也就是當您設定了block預設就會帶入，如果您不想要帶入沒有辦法，只能重新define他並塞一下空資料進去
 
 ### 總整理
 

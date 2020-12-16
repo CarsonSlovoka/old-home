@@ -1,0 +1,33 @@
+{{/*
+  https://kids.nationalgeographic.com/animals/
+*/}}
+
+{{/*
+  <h1>.Site.GetPage</h1>
+  {{ with .Site.GetPage "/animal/mammals" }}
+    <h2>mammals</h2>
+    {{ .File }}
+    <article>
+      {{ .Render "summary" }}
+    </article>
+  {{ end }}
+*/}}
+
+{{ with .CurrentSection }}
+    {{/*
+      {{ .CurrentSection }}  Page (/animal/mammals/_index.md)  表明這個是一個Page的物件
+      我們可以利用此，把這個section往下傳遞而避免使用.Site.GetPage (因為page基本上都是動態的，除非您真的要指定某一個頁面才用這個函數)
+      section可以用的屬性參考: https://gohugo.io/content-management/sections/
+      Page物件可以用的屬性參考: https://gohugo.io/variables/page/#page-variables
+      .Dir
+    */}}
+    {{ if eq "animal\\" (.Dir) }}
+      {{ .Render "home_list" }}
+    {{ else }}
+      {{ .Render "animal_list" }}
+    {{ end }}
+{{ end }}
+
+
+
+

@@ -1,0 +1,14 @@
+{{ define "main" }}
+  {{ if eq (len .Sections) 0 }}
+    {{ range .Paginator.Pages }}
+      <article>
+        {{ .Render "summary" }}
+      </article>
+    {{ end }}
+  {{ else }}
+    {{/* <div>{{ .File }}</div> */}}
+    {{ range .Sections }}
+      <a class="link black dim" href="{{ .Permalink }}"><h2 class="f3 near-black">{{.Title}}</h2></a>
+    {{ end }}
+  {{ end }}
+{{ end }}
