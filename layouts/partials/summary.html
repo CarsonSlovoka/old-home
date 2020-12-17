@@ -1,0 +1,25 @@
+{{/*
+USAGE:
+    {{ partial "summary" (slice .  ) }}
+    {{ partial "summary" (slice "show_word_count" .  ) }}
+*/}}
+
+{{/* $page_info := index . 1 */}}
+{{ $page_info := index (last 1 .) 0 }}
+{{ $title_notation := (cond (in . "show_word_count") ( printf ` - %d Words` $page_info.FuzzyWordCount ) "")  }}
+{{ $page_info.Params.last_update }}
+<div class="mb3 pa4 mid-gray overflow-hidden">
+  {{ if $page_info.Date }}
+    <div class="f6">
+      {{ $page_info.Date.Format "2006-01-02 Mon" }} {{ $title_notation }}
+    </div>
+  {{ end }}
+  <h1 class="f3 near-black">
+    <a href="{{ $page_info.Permalink }}" class="link black dim">
+      {{ $page_info.Title }}
+    </a>
+  </h1>
+  <div class="nested-links f5 lh-copy nested-copy-line-height">
+    {{ $page_info.Description }}
+  </div>
+</div>

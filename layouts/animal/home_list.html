@@ -26,7 +26,7 @@
       .File
     */}}
     <article>
-      {{ .Render "summary" }}
+      {{ partial "summary" (slice .  ) }}
     </article>
   {{ end }}
 

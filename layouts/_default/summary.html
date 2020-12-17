@@ -1,7 +1,7 @@
 <div class="mb3 pa4 mid-gray overflow-hidden">
   {{ if .Date }}
     <div class="f6">
-      {{/* .Date.Format 後面可以自己打上假的時間，系統會自己轉換為正確的時間，並直接以此格是套用 */}}
+      {{/* .Date.Format 時間不能亂打，請參考: https://gohugo.io/functions/format/ */}}
       {{ .Date.Format "2006, Jan 2, Mon " }} - {{ .FuzzyWordCount }} Words
     </div>
   {{ end }}
