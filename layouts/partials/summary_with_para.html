@@ -1,10 +1,8 @@
 {{/*
 USAGE:
-    {{ partial "summary" (slice .  ) }}
-    {{ partial "summary" (slice "show_word_count" .  ) }}
+    {{ partial "summary_with_para" (slice .  ) }}
+    {{ partial "summary_with_para" (slice "show_word_count" .  ) }}
 */}}
-
-{{/* $page_info := index . 1 */}}
 {{ $page_info := index (last 1 .) 0 }}
 {{ $title_notation := (cond (in . "show_word_count") ( printf ` - %d Words` $page_info.FuzzyWordCount ) "")  }}
 {{ $page_info.Params.last_update }}

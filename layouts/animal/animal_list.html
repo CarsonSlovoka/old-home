@@ -2,7 +2,7 @@
   {{ if eq (len .Sections) 0 }}
     {{ range .Paginator.Pages }}
       <article>
-        {{ partial "summary" (slice .  ) }}
+        {{ .Render "summary_with_para (slice . )" }}
       </article>
     {{ end }}
   {{ else }}
