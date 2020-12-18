@@ -34,7 +34,11 @@
   {{ range where .Paginator.Pages "File.Dir" "eq" "animal\\"  }}
     {{ partial "summary_with_para" (slice "do_not_show_date" .  ) }}
   {{ end }}
+
+  <h2>主題</h2>
   {{ range .Sections }}
-    <a class="link black dim" href="{{ .Permalink }}"><h2 class="f3 near-black">{{.Title}}</h2></a>
+    <ul>
+      <li><a class="link black dim" href="{{ .Permalink }}"><h2 class="f3 near-black">{{.Title}}</h2></a></li>
+    </ul>
   {{ end }}
 {{ end }}
