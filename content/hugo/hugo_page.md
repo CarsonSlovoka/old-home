@@ -201,6 +201,8 @@ animal/list.html
         <article>{{ .Summary }}</article>
     {{ end }}
 
+``GetPage``取得到的是一個Page的物件，然後它的``.Params``是根據該**_index.md**
+
 #### .Paginator.Pages
 
 當您已經到達list.html，預設他抓您該``content/該section/``該層下的所有md檔案

@@ -20,16 +20,20 @@
 
 {{ define "main" }}
   <h2>NEWS</h2>
-  {{ range .Paginator.Pages }}
+  {{ range where .Paginator.Pages "File.Dir" "eq" "animal\\news\\"  }}
+  {{/* range  .Paginator.Pages   */}}
     {{/*
       這裡面是一個Page的變數，可以用這些屬性: https://gohugo.io/variables/page/#page-variables
-      .File
     */}}
     <article>
       {{ partial "summary_with_para" (slice .  ) }}
     </article>
   {{ end }}
 
+  <h2>{{- i18n "introduction" -}}</h2>
+  {{ range where .Paginator.Pages "File.Dir" "eq" "animal\\"  }}
+    {{ partial "summary_with_para" (slice .  ) }}
+  {{ end }}
   {{ range .Sections }}
     <a class="link black dim" href="{{ .Permalink }}"><h2 class="f3 near-black">{{.Title}}</h2></a>
   {{ end }}
