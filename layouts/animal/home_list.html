@@ -32,7 +32,7 @@
 
   <h2>{{- i18n "introduction" -}}</h2>
   {{ range where .Paginator.Pages "File.Dir" "eq" "animal\\"  }}
-    {{ partial "summary_with_para" (slice .  ) }}
+    {{ partial "summary_with_para" (slice "do_not_show_date" .  ) }}
   {{ end }}
   {{ range .Sections }}
     <a class="link black dim" href="{{ .Permalink }}"><h2 class="f3 near-black">{{.Title}}</h2></a>

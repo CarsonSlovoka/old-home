@@ -2,12 +2,14 @@
 USAGE:
     {{ partial "summary_with_para" (slice .  ) }}
     {{ partial "summary_with_para" (slice "show_word_count" .  ) }}
+    {{ partial "summary_with_para" (slice "show_word_count" "do_not_show_date" .  ) }}
 */}}
 {{ $page_info := index (last 1 .) 0 }}
+{{ $show_date := not (in . "do_not_show_date") }}
 {{ $title_notation := (cond (in . "show_word_count") ( printf ` - %d Words` $page_info.FuzzyWordCount ) "")  }}
 {{ $page_info.Params.last_update }}
 <div class="mb3 pa4 mid-gray overflow-hidden">
-  {{ if $page_info.Date }}
+  {{ if (and $page_info.Date $show_date) }}
     <div class="f6">
       {{ $page_info.Date.Format "2006-01-02 Mon" }} {{ $title_notation }}
     </div>
