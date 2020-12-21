@@ -15,30 +15,40 @@
 
   {{ $video_options := cond .Site.Params.is_release "autoplay loop" "controls" }}
   {{ $video_options := printf "%s %s" $video_options "muted" }}
-  {{ partial "video/html_video" ( dict "src" "https://pmdvod.nationalgeographic.com/NG_Video/836/399/1507335747709_1556205445844_1507694147930_mp4_video_1024x576_1728000_3.mp4" "options" $video_options ) }}
+  <div class="row">
+    {{ partial "video/html_video" ( dict "src" "https://pmdvod.nationalgeographic.com/NG_Video/836/399/1507335747709_1556205445844_1507694147930_mp4_video_1024x576_1728000_3.mp4" "options" $video_options ) }}
+  </div>
 {{ end }}
 
 {{ define "main" }}
-  <h2>NEWS</h2>
+  <h2 style="text-align: center">NEWS</h2>
+  <article class="row">  {{/* row-eq-height */}}
   {{ range where .Paginator.Pages "File.Dir" "eq" "animal\\news\\"  }}
   {{/* range  .Paginator.Pages   */}}
     {{/*
       這裡面是一個Page的變數，可以用這些屬性: https://gohugo.io/variables/page/#page-variables
     */}}
-    <article>
-      {{ partial "summary_with_para" (slice .  ) }}
-    </article>
-  {{ end }}
 
-  <h2>{{- i18n "introduction" -}}</h2>
+      <div class="relative col-sm-4" style="margin-top:0;">
+          {{/* partial "summary-with-image.html" . */}}
+          {{ partial "description-with-image.html" . }}
+      </div>
+  {{ end }}
+  </article>
+
+  <section>
+  <h2 style="text-align: center">{{- i18n "introduction" -}}</h2>
   {{ range where .Paginator.Pages "File.Dir" "eq" "animal\\"  }}
     {{ partial "summary_with_para" (slice "do_not_show_date" .  ) }}
   {{ end }}
+  </section>
 
-  <h2>主題</h2>
+  <section>
+  <h2 style="text-align: center">主題</h2>
   {{ range .Sections }}
     <ul>
       <li><a class="link black dim" href="{{ .Permalink }}"><h2 class="f3 near-black">{{.Title}}</h2></a></li>
     </ul>
   {{ end }}
+  </section>
 {{ end }}

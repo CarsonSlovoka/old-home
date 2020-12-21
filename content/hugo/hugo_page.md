@@ -234,11 +234,39 @@ animal/list.html
 
 partial還有一個好處是可以傳參數，.Render就只有layout一個參數而已
 
+### 在markdown中使用front matter的變數
+
+``` toml
++++
+title = ""
+last_update = "2020-12-21T11:54:00+08:00"
+[article_image]
+    src = "images/animal/news/2020-12-18_good_news.jpg"
++++
+```
+
+> *最後更新日期: {{< param last_update  >}}*
+
+輸出
+``*最後更新日期: 2020-12-21T11:54:00+08:00*``
+
+### [Hugo Function大全]
+
+您可以直接點標頭去查看官方的連結，這邊我介紹一些很常用的函數:
+
+- ``index COLLECTION INDEXES``: 其中COLLECTION必須要存在，而INDEXES可以不存在，如果INDEXES不存在相當於nil
+- ``default DEFAULT value``:
+  > default "black" (index .Params.article_image "color")
+-
+
+
+
 ## REFERENCE
 
 - [List pages of sub-sub-folders](https://discourse.gohugo.io/t/list-pages-of-sub-sub-folders/9436)
 - [section可以用的屬性參考]
 - [Page物件可以用的屬性參考]
+- [twitter-card-code](https://github.com/gohugoio/hugo/blob/25a6b33693992e8c6d9c35bc1e781ce3e2bca4be/tpl/tplimpl/embedded/templates/twitter_cards.html#L22-L24)
 
 [Index Pages]: https://gohugo.io/content-management/organization/#index-pages-_indexmd
 [Hugo's Lookup Order]: https://gohugo.io/templates/lookup-order/#examples-layout-lookup-for-regular-pages
@@ -252,6 +280,7 @@ partial還有一個好處是可以傳參數，.Render就只有layout一個參數
 [Nested Sections]: https://gohugo.io/content-management/sections/#nested-sections
 [section可以用的屬性參考]: https://gohugo.io/content-management/sections/
 [Page物件可以用的屬性參考]: https://gohugo.io/variables/page/#page-variables
+[Hugo Function大全]: https://bwaycer.github.io/hugo_tutorial.hugo/templates/functions/
 []:
 []:
 []:
