@@ -26,7 +26,7 @@ bootstrap = true
 建議您就還是用markdown。
 
 
-### Hugo中使用markdown怎麼產生注腳？
+### Hugo中使用markdown怎麼產生註腳？
 
 這是我在Hugo中使用markdown遇到的第一個問題，
 
