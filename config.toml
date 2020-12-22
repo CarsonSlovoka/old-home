@@ -66,3 +66,14 @@ paginate = 10  # Default number of elements per page
   tag = "tags"
   language = "t_lang"
   test_language = "test_lang"
+
+
+[menus]
+  [[menus.main]]
+    name = "Hugo教學"
+    url = "/Hugo/"
+    weight = 30  # 權重小的list取出時會優先，也就是最小的等同list[0]的位置，而無關寫的順序
+  [[menus.main]]
+    name = "動物"
+    url = "/animal/"
+    weight = 99
