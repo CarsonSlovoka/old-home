@@ -1,0 +1,20 @@
+<h2>info</h2>
+
+<p>純taxonomy教學用</p>
+<p>file: {{ .File }}</p>
+<p>title: {{ .Title }}</p>
+<p>description: {{ .Description }}</p>
+<p>current section: {{ .CurrentSection }}</p>
+
+<h2>body</h2>
+
+{{ if eq .File.Dir "t_lang\\" }}
+  {{/*
+    可以發現{{ .CurrentSection }}這個在http://localhost:1313/t_lang/時是顯示Page("Carson Home")
+    所以.Params.layouts會取不到東西，他並不是我們所期望的_index.md.layouts
+  */}}
+  {{ .Render "home_list" }}
+{{ else }}
+  {{ $target := (printf "%s" .Params.layouts) | string }} {{/* 一定要加上string不然 .Render不能出來 */}}
+  {{ .Render $target }}
+{{ end }}

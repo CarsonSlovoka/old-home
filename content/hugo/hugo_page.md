@@ -257,8 +257,16 @@ last_update = "2020-12-21T11:54:00+08:00"
 - ``index COLLECTION INDEXES``: 其中COLLECTION必須要存在，而INDEXES可以不存在，如果INDEXES不存在相當於nil
 - ``default DEFAULT value``:
   > default "black" (index .Params.article_image "color")
--
+- ``range and where``
 
+      {{ range $index, $val := where .Site.RegularPages "Section" "features" }}
+
+    類似於python的:
+
+    ```
+    for idx, val in enumerate(my_list):
+        ...
+    ```
 
 
 ## REFERENCE

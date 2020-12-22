@@ -3,6 +3,8 @@ title = "深入學習Hugo 1"
 date = 2020-12-07T09:43:12+08:00
 description = "本篇是在對Hugo懵懵懂懂時邊學邊做記錄下來的東西"
 tags = ["hugo"]
+t_lang = ["Go"]
+test_lang = ["Go"]
 draft = false
 toc = true
 bootstrap = true
@@ -632,7 +634,42 @@ https://cjting.me/2017/06/04/migrate-to-hugo-from-jekyll/
         category = "categories"  # 這是預設hugo會給的，但是一旦您重新更動了taxonomies就要附加上去，不然等同失效
         mood = "moods"
 
+> ``mood = "moods"`` 後面的名稱是在md中所使用的也就是您在front matter中要打上mood**s**: ["happy", "Upbeat"]。
+>
+> 搜尋上也是用後面的名稱，例如: ``baseURL/categories``
+
+如果您中途有新增taxonomies(config.toml)最好重新啟動server，否則看到的可能是錯誤的
+
 > **_NOTE_**: 如果您不想要hugo創建這些分類標籤，則要做這些設定 ``disableKinds = ["taxonomy", "term"]``
+
+#### 客製化
+
+- [Taxonomy Templates](https://gohugo.io/templates/taxonomy-templates/#taxonomy-terms-templates)
+- [single page template](https://gohugo.io/templates/single-page-templates/)
+- [taxonomy list template](https://gohugo.io/templates/taxonomy-templates/#taxonomy-list-template)
+- [Taxonomies](https://www.mikedane.com/static-site-generators/hugo/taxonomies/)
+- [layout-lookup-for-taxonomy-pages](https://gohugo.io/templates/lookup-order/#examples-layout-lookup-for-taxonomy-pages)
+
+其實客製化Taxonomy就跟一般的list和single page是一模一樣的，它根本就沒為Taxonomy額外在分類
+
+所以您要想好您的Taxonomy新增的名稱免得和一班的文章重複，避免被誤解
+
+你還可以附於每一個分類權重，例如:
+
+```toml
+categories = ["d"]
+categories_weight = 44
+```
+
+其中如果您沒有改權重，預設為**沒有權重**
+
+> :collision: 沒有權重不代表0權重，就是加權的時候不特別考慮權重
+
+關於0權重:
+
+> 如果您指定了0權重，那麼這個分類標籤永遠會排在最後一個(即便您也有使用負權重)
+> 0權重會比負權重還要後面
+
 
 
 ### [Data Files Tutorial 20]

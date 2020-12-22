@@ -1,0 +1,13 @@
+{{ define "header" }}
+<div></div>
+{{ end }}
+
+{{ define "main" }}
+  {{ range .Paginator.Pages }}
+    <a href="{{ .Permalink }}" class="link black dim">{{ .Title }}</a>
+  {{ end }}
+{{ end }}
+
+{{ define "footer" }}
+<div></div>
+{{ end }}
