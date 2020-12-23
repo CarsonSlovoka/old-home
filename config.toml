@@ -1,5 +1,6 @@
 baseURL = "/"  # "http://example.org/"
 title = "Carson Blog"
+copyright = "Carson 2020-"
 # themesDir = "themes"
 theme="ananke"
 
