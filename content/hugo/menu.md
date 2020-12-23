@@ -74,7 +74,7 @@ bootstrap = true
 baseof.html
 
     {{ block "header" . }}
-      {{/* 主題頁的導欄設定(含主題圖片等等) */}}
+      {{/* 包含頁面上方的featured_image、左上角的.Site.Params.site_logo、Menu清單 */}}
       {{ partial "site-header.html" .}}
     {{ end }}
 
@@ -82,7 +82,15 @@ site-header.html
 
     {{ partial "site-navigation.html" .}}
 
-> 這裡面其實分兩段，一個是有圖片一個是沒圖片的處理，但不管怎麼樣menu都是在``site-navigation``中搞定
+這個區塊分為兩個部份，一個是如果你有給予featured_image那麼它就會在頁面上方呈現該內容，
+
+如果沒有給，頁面上方的就以文字來取代
+
+featured_image可以在front matter中加入
+
+p.s. *如果您的主頁也想要加入，請建立一個content/_index.md，並在此_index.md中加入featured_image*
+
+但不管怎麼樣menu都是在``site-navigation``中搞定
 
 
 site-navigation.html
@@ -95,7 +103,7 @@ site-navigation.html
       {{ range .Site.Menus.main }}  {{/* <---- 此為menu的主要動作 */}}
       <li>
         <a href="{{ .URL }}" title="{{ .Name }} page">
-          {{ .Name }}
+          {{ .Name }}  {{/*  雖然您的設定檔名稱是小寫，但是用的時候字母開頭一定是大寫 */}}
         </a>
       </li>
       {{ end }}
@@ -104,6 +112,8 @@ site-navigation.html
   {{ partialCached "social-follow.html" . }}
 </div>
 ```
+
+p.s. 這個頁面其實也是管控: ``.Site.Params.site_logo``的地方
 
 經由上面的代碼您會發現，menu的建立，在官方只是給予建議，他建議您在config中可以設定一些變數來幫忙，
 
