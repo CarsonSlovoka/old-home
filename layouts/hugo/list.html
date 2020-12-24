@@ -10,12 +10,8 @@
     */}}
     <section class="flex-wrap flex-ns justify-around mt5">
       {{ range .Paginator.Pages }} {{/* config.toml paginate可以設定這個list一次可以取得到多少元素 */}}
-        <div class="relative w-30-l">
-          {{ if index .Params "article_image" }}
-            {{ partial "description-with-image" . }}
-          {{ else }}
-            {{ .Render "summary" }}  {{/* 指的是這個檔案 /layouts/_default/summary.html  當然如果你已經在layouts有這個section了話，他就會已該section中的summary.html為主。 另外如果跟目錄資料夾沒有這個檔案，他就會去找themes/layouts/_default/summary.html  */}}
-          {{ end }}
+        <div class="w-30-l">
+            {{ partial "card-post-bs" . }}
         </div>
       {{ end }}
     </section>

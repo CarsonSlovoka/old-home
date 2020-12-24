@@ -48,7 +48,10 @@ paginate = 10  # Default number of elements per page
     # [blackfriday] hugo目前預設是使用 Goldmark
     plainIDAnchors = false
   [markup.goldmark]
-    footnote = true
+     [markup.goldmark.extensions]
+        footnote = true
+     [markup.goldmark.renderer]
+        unsafe= true  # fix that hugo raw html omitted
 
 
 [related]

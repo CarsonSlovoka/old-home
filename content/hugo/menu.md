@@ -8,6 +8,9 @@ toc = true
 bootstrap = true
 [article_image]
     src = "images/hugo/gohugoio-card.jpg"
+    bg-color = "success"
+    btn-color = "danger"
+    text-muted_color = "white"
 +++
 
 ## [設定檔](https://gohugo.io/content-management/menus/#add-non-content-entries-to-a-menu)
