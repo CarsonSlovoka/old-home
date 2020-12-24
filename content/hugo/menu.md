@@ -6,6 +6,8 @@ tags = ["hugo"]
 draft = false
 toc = true
 bootstrap = true
+[article_image]
+    src = "images/hugo/gohugoio-card.jpg"
 +++
 
 ## [設定檔](https://gohugo.io/content-management/menus/#add-non-content-entries-to-a-menu)

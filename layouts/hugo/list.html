@@ -1,8 +1,24 @@
 {{ define "main" }}  {{/* themes/ananke/layouts/_default/baseof.html 已經有 block 這個 main 了。 */}}
   {{/* <h1>Hugo</h1> */}}
-  {{ range .Paginator.Pages }}
-    <article>
-      {{ .Render "summary" }}  {{/* 指的是這個檔案 /layouts/_default/summary.html  當然如果你已經在layouts有這個section了話，他就會已該section中的summary.html為主。 另外如果跟目錄資料夾沒有這個檔案，他就會去找themes/layouts/_default/summary.html */}}
-    </article>
-  {{ end }}
+  <article>
+    {{/*
+    flex-wrap: 可以把一整個拆分開來(當div已經超過範圍的時候) https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap
+    flex-ns: 其實就是 display: flex; (只是他還有: media screen and (min-width: 30em))
+    p.s. flex-wrap一定要搭配display: flex才會有效果！
+    justify-around其實就是: justify-content: space-around; 它可以讓元素保持在中間，然後彼此之間(左和右，沒有上下)有一個空白區域
+    因為justify-content: space-around;沒有考慮上下，所以加上了mt5 margin-top一定的距離來看起來比較美觀
+    */}}
+    <section class="flex-wrap flex-ns justify-around mt5">
+      {{ range .Paginator.Pages }} {{/* config.toml paginate可以設定這個list一次可以取得到多少元素 */}}
+        <div class="relative w-30-l">
+          {{ if index .Params "article_image" }}
+            {{ partial "description-with-image" . }}
+          {{ else }}
+            {{ .Render "summary" }}  {{/* 指的是這個檔案 /layouts/_default/summary.html  當然如果你已經在layouts有這個section了話，他就會已該section中的summary.html為主。 另外如果跟目錄資料夾沒有這個檔案，他就會去找themes/layouts/_default/summary.html  */}}
+          {{ end }}
+        </div>
+      {{ end }}
+    </section>
+  {{- template "_internal/pagination.html" . -}}  {{/* 有了這個才有換頁標籤，他會自動的把剩下的paginate傳入 */}}
+  </article>
 {{ end }}
