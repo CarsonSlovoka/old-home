@@ -10,7 +10,7 @@ bootstrap = true
 
 ## px, em, rem
 
-| <div style="width:64px">名稱</div> | 說明 |
+| {{<raw_html>}}<div style="width:64px">名稱</div>{{</raw_html>}} | 說明 |
 | ---- | ---- |
 | px | 絕對大小, 12px等於12像素，**不會受到外圍文字的影響**，表示螢幕中每個「點」 (pixel)
 | em| 相對大小，每個``子元素``透過「倍數」乘以``父元素``的 px 值。
@@ -23,17 +23,19 @@ bootstrap = true
 
 px and em:
 
+{{<raw_html>}}
 <section>
     <div style="font-size: 18px; border: #cccccc solid 1px;">測試:18px
     <div style="font-size: 1em; border: #cccccc solid 1px;">測試:1em</div>
     </div>
 </section>
+{{</raw_html>}}
 
 可以發現外層如果是18px內層的1em就等同18px
 
 ## html大小屬性
 
-| <div style="width:120px">名稱</div> | 定義 |
+| {{<raw_html>}}<div style="width:120px">名稱</div>{{</raw_html>}} | 定義 |
 | ---- | ---- |
 | medium | 預設值，等於16px(h4預設值)
 | xx-small | 0.6 * medium (h6預設值)
@@ -60,6 +62,7 @@ px and em:
 
 範例:
 
+{{< raw_html >}}
 <a name="bs5_color"></a>
 <p class="p-3 mb-2 bg-primary text-white">.bg-primary</p>
 <p class="p-3 mb-2 bg-secondary text-white">.bg-secondary</p>
@@ -71,14 +74,18 @@ px and em:
 <p class="p-3 mb-2 bg-dark text-white">.bg-dark</p>
 <p class="p-3 mb-2 bg-white text-dark">.bg-white</p>
 <p class="p-3 mb-2 bg-transparent text-dark">.bg-transparent</p>
+{{< /raw_html >}}
 
 按鍵:
 
 語法:
 > btn btn-xxx
+
+{{<raw_html>}}
 <p class="btn btn-primary">primary</p>
 <p class="btn btn-danger">danger</p>
 <p class="btn btn-dark">dark</p>
+{{</raw_html>}}
 
 基本上顏色的名稱都是固定，所以按鍵上我只列了一些，如果要全部[顏色](#bs5_color)請參考
 
@@ -91,18 +98,24 @@ px and em:
 
 通常卡片都是一個區塊一個區塊排列再一起，
 
-所以您要先了解: [CSS justify-content Property]
+所以您要先了解:
+
+- [CSS justify-content Property]
 
 ```css
 justify-content {
   display: flex;
-  justify-content: space-around;
+  /* justify-content: space-around; 你可以設定一些間距之間的填充方式*/
+  justify-content: flex-start; /* 預設就是靠左邊對齊，基本上不要去動它 */
 }
 ```
 
 > :collision: 這兩個屬性一定要一起搭配才會有效果
 
-其中``space-around``沒有考慮上下，所以您可能要考慮使用margin-top(如果是使用bootstrap，可以用``mt``來幫忙)
+其中``justify-content``沒有考慮上下，所以您可能要考慮使用margin-top(如果是使用bootstrap，可以用``mt``來幫忙)
+
+好啦，講了那麼多這邊的重點就是:
+> display: flex;
 
 #### [flex-wrap](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap)
 
@@ -121,12 +134,24 @@ justify-content {
 
 #### 範例
 
-```html
-<section class="justify-around flex-wrap mt5">
+```go-html-template
+<section class="flex-wrap mt5" style="display:flex;">
     <div class="w-30">
         {{ partial "description-with-image" . }}
     </div>
 </section>
+```
+
+如果您想要把物件放在中間，可以考慮用margin-left的方式，例如
+
+```go-html-template
+<article style="margin-left:10%;">
+<section class="flex-wrap mt5" style="display:flex;">
+    <div class="w-30">
+        {{ partial "description-with-image" . }}
+    </div>
+</section>
+</article>
 ```
 
 #### 附加裝飾
@@ -147,7 +172,7 @@ justify-content {
 
 您還可以加上zoom-in
 
-```html
+```go-html-template
 <section class="zoom-in card" style="width: 20rem;">  {{/* 20rem來控制卡片的寬度 */}}
   <a href=""><img class="card-img-top" src="" alt=""></a>
   <div class="card-body">
@@ -170,6 +195,7 @@ justify-content {
 }
 ```
 
+{{<raw_html>}}
 <section class="zoom-in card" style="width: 20rem;">
   <a href=""><img class="card-img-top" src="" alt=""></a>
   <div class="card-body">
@@ -180,6 +206,7 @@ justify-content {
   </div>
 </section>
 <br><br>
+{{</raw_html>}}
 
 ## 參考資料
 
