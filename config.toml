@@ -1,4 +1,91 @@
-baseURL = "http://example.org/"
-languageCode = "en-us"  # en-us, zh-tw
-title = "Carson Home"
+baseURL = "/"  # "http://example.org/"
+title = "Carson Blog"
+copyright = "Carson 2020-"
+# themesDir = "themes"
 theme="ananke"
+
+# https://gohugo.io/getting-started/configuration/#all-configuration-settings
+# languageCode = "en-us"  # en-us, zh-tw  # It is used in the default RSS template and can be useful for multi-lingual sites.
+defaultContentLanguage="zh-tw"  # 這個會對應i18n資料夾內的語系  # en: read more  zh-tw 繼續閱讀  # 這些資料夾必須要在config/_default/menus.zh-tw 存在
+# defaultContentLanguageInSubdir = false  # 如果設定為true他會把其他語言都統一丟到這個資料夾去
+# languageCode = "en"
+
+hasCJKLanguage = true # 自動檢測 使用者的語言 中日韓  This will make .Summary and .WordCount behave correctly for CJK languages.
+summaryLength = 50 # 描述內容 長度
+# contentDir = "content"
+enableEmoji = true  # 預設關閉，打開了話，只要打上特定語法即可顯示該表情符號 語法可直接來這個網站複製即可: https://www.webfx.com/tools/emoji-cheat-sheet/
+paginate = 10  # Default number of elements per page
+# timeout = 10000  # 預設10秒，即每頁加載的時間最多不超過10秒
+
+# hugo --environment dev
+# configDir = "config"  # 預設就是這個  很多config的設定都可以在 hugo help中找到
+# config/dev
+
+[params]
+  # 這裡的變數是 .Site.Params.xxx
+  is_release = false
+  font-awesome = true  # 讓所有網站都啟用fontawesome
+  enable_search_fuse = true  # 這個是我自己補的，可能您的網站用的搜尋不一樣，所以才搞了這個方便調整。
+
+  # 仔細去看 themes/ananke/layouts/index.html 他有使用到 .Site.Params.mainSections
+  # .Site只的就是config這個東西， Params 就是我們前面定義的 [params] ，所以我們在這邊還要定義 mainSections
+  mainSections = [  # 這個東西才可以讓index知道我們有那些主題，才可以用滑鼠點的到，也才能夠連結到 baseURL/xxx
+    "posts",  # baseURL/posts
+    "hugo"  # baseURL/hugo
+  ]
+
+  # 加入自定義或者來自於主題內的css文件(他們都位於static資料夾下)
+  custom_css = [
+    "css/github_icon.css",
+  ]
+  favicon = "/images/tab_icon.jpg"  # 要放在static/資料夾之下
+  site_logo = "<i class='zoom-in fas fa-home fa-3x' style='color: #ffc34d'></i>"  # "/images/site_logo.jpg"  # 不管是favicon或者site_logo通常都是放href或者<img src所以他們都是指static資料夾下的檔案
+
+[markup]  # 這是針對markdown要怎麼處理的配置
+  # Hugo Markdown Support: https://www.markdownguide.org/tools/hugo/#hugo-markdown-support
+  # 完整的配置請參考: https://gohugo.io/getting-started/configuration-markup/
+  defaultMarkdownHandler = "goldmark"  # 如果您要換回blackFriday可以改這個，當然除了這些還有很多其他的配置，但是建議就用goldmark就好
+  [markup.blackFriday]
+    # [blackfriday] hugo目前預設是使用 Goldmark
+    plainIDAnchors = false
+  [markup.goldmark]
+     [markup.goldmark.extensions]
+        footnote = true
+     [markup.goldmark.renderer]
+        unsafe= false  # true: cancel "hugo raw html omitted"
+
+
+[related]
+  includeNewer = false  # 預設為false不會列出比目前該文章還新的主題
+  threshold = 80
+  toLower = false
+
+  [[related.indices]]
+    name = "tags"  # .Site.RegularPages.RelatedIndices "[name]" 這邊的和這裡的名稱是一樣的
+    weight = 100
+
+  [[related.indices]]
+    name = "date"
+    weight = 10
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  language = "t_lang"
+  test_language = "test_lang"
+
+
+[menus]
+  [[menus.main]]
+    name = "教學"
+    url = "/Hugo/"
+    pre = "<img src='/images/home/hugo.png'/ style='vertical-align: middle;'>"
+    weight = 30  # 權重小的list取出時會優先，也就是最小的等同list[0]的位置，而無關寫的順序
+  [[menus.main]]
+    name = "動物"
+    url = "/animal/"
+    pre = "<i class='fas fa-dragon' style='color: #FF0000'></i>"  # fa-2x
+    weight = 99
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]  # 我們指定首頁可以支持的格式為這幾種(也就是layout/index.{html, rss, json}) 如果這些不在會再查看layout/default/index.{html, rss, json}

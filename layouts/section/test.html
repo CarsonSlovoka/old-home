@@ -1,0 +1,12 @@
+{{/*
+section底下的資料夾，是拿來渲染list.html所使用，
+但是它似乎沒有辦法取得到baseof.html的資料，也就是 define在這邊會失去作用
+{{ define "main" }}
+{{ end }}
+*/}}
+
+{{ range .Paginator.Pages }}
+  <article>
+    {{ .Render "summary" }}
+  </article>
+{{ end }}

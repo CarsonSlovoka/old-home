@@ -1,0 +1,15 @@
+{{/*
+USAGE:
+  {{ partial "video/html_video" ( dict "src" "https://xxx.mp4" "options" "controls loop autoplay muted" "width" "300" "height" "200" ) }}
+  {{ partial "video/html_video" ( dict "src" "https://xxx.mp4" "options" "controls loop autoplay muted" ) }}
+*/}}
+
+{{ $src :=  ( .src )  }}
+{{ $options := (.options) | safeHTMLAttr  }}  {{/* controls loop autoplay muted */}}
+{{ $width := default "auto" ( .width ) }}
+{{ $height := default "auto" ( .height ) }}
+
+<video width="{{ $width }}" height="{{ $height }}" {{ $options -}}>
+  <source src="{{ $src }}" type="video/mp4">
+  {{ i18n "videoNotSupport" }}
+</video>
