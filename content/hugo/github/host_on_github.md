@@ -57,7 +57,7 @@ github page顯示的東西就只有docs這個資料夾而已
 也就是新增一個額外的分支(獨立分支)
 
     # 前置動作先在.gitignore忽略掉public資料夾
-    git checkout --orphan gh-pages  # 切換到一個獨立分支，分支名稱為gh-pages  # 注意您剛建立一個orphan如果沒有提交任何東西，這時候您再用gitk是看不到您之前的分支，但別擔心其實他們都還在，您用git branch還是可以發現他們
+    git checkout --orphan gh-pages  # 切換到一個獨立分支，分支名稱為gh-pages
     git reset --hard  # 通常我們在建立此分支之後，因為以前提交過的東西，都還會存在，所以--hard可以消除那些東西
     git commit --allow-empty -m "Initializing gh-pages branch"  # 預設commit一定要有異動才可以提交，但是我們只是要記錄這個新的分支，所以使用--allow-empty來幫助我們
     git push upstream gh-pages  # 其實就是push到gh-pages，upstream只是方便您這定而已，個人不建議加上upstream
@@ -67,11 +67,23 @@ github page顯示的東西就只有docs這個資料夾而已
 
 補述:
 
+- ``git checkout --orphan gh-pages``:
+
+  注意您剛建立一個orphan如果沒有提交任何東西，這時候您再用gitk是看不到您之前的分支，
+
+  > :pushpin: 如果您當前的HEAD追蹤不到，就沒辦法用``gitk``來查看，他會顯示: ``Error parsing revisionis: unknown revision HEAD``
+
+  但別擔心其實他們都還在，您用git branch還是可以發現您所有的分支
+
 - ``git reset --hard``:
 
   如果我們真的希望建立完全空的的資料夾，也說不過去，所以在做這動作之前應該先編輯您的``.gitignore``然後把要發布出去的資料夾名稱填上去
 
-  也就是``public``資料夾 (``gh-pages``預設是使用public資料夾的內容當作站點，有點像我們之前說過的[使用docs當作網頁](#使用docs當作網頁)
+  ~~也就是``public``資料夾 (``gh-pages``預設是使用public資料夾的內容當作站點，有點像我們之前說過的[使用docs當作網頁](#使用docs當作網頁)~~
+
+  現在github的gh-pages也像一般的branch一樣可以選擇是要root還是docs，
+
+  建議和俗成一樣使用``docs``就好了。
 
 - ``git push upstream gh-pages``
 
