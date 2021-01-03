@@ -4,11 +4,13 @@ date = 2020-12-30T16:14:00+08:00
 description = "教您如何在自己的網站使用markmap"
 tags = ["hugo"]
 t_lang = ["Go"]
-draft = false
 featured_image = ""
+toc = true
+bootstrap = true
+markmap = true
 +++
 
-## 前言:
+## 前言
 
 這篇文章到底要講什麼?
 
@@ -165,9 +167,73 @@ featured_image = ""
 );
 ```
 
-[markmap線上生成器]: https://markmap.js.org/repl
-[D3.js_official_site]: https://d3js.org/
+## markmap測試
+
+> :exclamation: js有先後順序front matter的markmap不能放在article_image之後！
+
+語法:
+```json
+{
+    "t": "",
+    "d": 0,
+    "v": "",
+    "p": {},
+    "c": []
+}
+```
+
+- t: title的名稱，只是一個名稱，隨便你要打上什麼都可以，例如:heading或者root等等都行
+- d: 只能放數字，代表樹層的意思，最低為0，表示根結點。
+- v: 心智圖上此根結點的名稱，你也可以放上HTML的語法例如``"<a href=\"https://markmap.js.org/repl/\">Hugo</a>"``
+- p: 功能未知，推測可能與parent有關
+- c: 容器，底下可以再放其子元素
+
+
+基本範例
+```markmap
+{"t":"h1","d":1,"v":"教學", "c":[
+        {"t":"header_name","d":2,"v":"Lesson1"}
+    ]
+}
+```
+
+
+範例一:
+```markmap
+{"t":"heading","d":1,"p":{},"v":"教學", "c":[
+  {"t":"heading","d":2,"p":{},"v":"<a href=\"https://markmap.js.org/repl/\">Hugo</a>"},
+  {"t":"heading","d":2,"p":{},"v":"JS", "c":[
+      {"t": "heading", "d":3, "p":{}, "v":"jquery"},
+      {"t": "heading", "d":3, "p":{}, "v":"bootstrap"}
+    ]
+  }
+]}
+```
+
+範例二:
+
+可以利用: ``"t":"root","d":0,"v":"Root","c":`` 來創造出根節點
+
+```markmap
+{
+"t":"root","d":0,"v":"Root","c":
+    [
+      {"t":"heading","d":1,"v":"Lang", "c":[
+        {"t":"heading","d":2,"v":"<a href=\"https://www.python.org/\">Python</a>"},
+        {"t":"heading","d":2,"v":"JS", "c":[
+          {"t": "heading", "d":3, "v":"jquery"},
+          {"t": "heading", "d":3, "v":"d3js"}
+        ]
+        }
+      ]},
+      {"t":"heading","d":1,"v":"News", "c":[]}
+    ]
+}
+```
 
 ## 註腳
-
 [^D3.js]: 簡單來說也是一種javascript的封裝，詳請可參考官網: [D3.js_official_site]
+
+
+[markmap線上生成器]: https://markmap.js.org/repl
+[D3.js_official_site]: https://d3js.org/
