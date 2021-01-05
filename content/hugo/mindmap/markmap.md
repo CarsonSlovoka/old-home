@@ -5,9 +5,7 @@ description = "教您如何在自己的網站使用markmap"
 tags = ["hugo"]
 t_lang = ["Go"]
 featured_image = ""
-toc = true
-bootstrap = true
-markmap = true
+toc_bootstrap = true
 +++
 
 ## 前言
