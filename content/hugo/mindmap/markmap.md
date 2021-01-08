@@ -84,7 +84,7 @@ toc_bootstrap = true
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Markmap</title>
-  <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/markmap-view@0.2.0"></script>
     <style>
         * {

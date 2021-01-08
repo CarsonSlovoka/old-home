@@ -4,8 +4,10 @@ date = 2020-12-08T18:29:00+08:00
 description = "正式開始教您如何近乎白手起家來打造專屬於您的Hugo網站！"
 tags = ["hugo"]
 draft = false
-toc = true
 bootstrap = true
+markmap = true
+toc_markmap = true
+toc_bootstrap = true
 +++
 
 在您看這篇文章的時候請您還是去看看我前兩篇文章(這兩篇是用[reST]寫的，有寫排版其實不是我的預期)

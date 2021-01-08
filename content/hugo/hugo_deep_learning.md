@@ -7,8 +7,10 @@ t_lang = ["Go"]
 test_lang = ["Go"]
 draft = false
 toc = true
+markmap = true
+toc_markmap = true
 bootstrap = true
-featured_image = ''
+featured_image = 'images/animal/news/2020-12-18_good_news.jpg'
 +++
 
 
