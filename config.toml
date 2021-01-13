@@ -4,6 +4,7 @@ copyright = "Carson 2020-"
 # themesDir = "themes"
 theme="ananke"
 publishDir="docs"  # default is "public"
+# assetDir="assets"
 
 # https://gohugo.io/getting-started/configuration/#all-configuration-settings
 # languageCode = "en-us"  # en-us, zh-tw  # It is used in the default RSS template and can be useful for multi-lingual sites.
