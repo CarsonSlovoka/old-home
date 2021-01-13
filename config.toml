@@ -1,4 +1,4 @@
-baseURL = "https://carsonslovoka.github.io/"  # "http://example.org/"  "/"
+baseURL = "https://carsonslovoka.github.io/"  # "http://example.org/"  "/"  "http://localhost:8000/"  <-- 如果要放到本機可以用localhost配合python http.server即可
 title = "Carson Blog"
 copyright = "Carson 2020-"
 # themesDir = "themes"
