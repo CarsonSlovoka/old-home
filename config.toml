@@ -23,12 +23,16 @@ paginate = 10  # Default number of elements per page
 # configDir = "config"  # 預設就是這個  很多config的設定都可以在 hugo help中找到
 # config/dev
 
+# pygmentsCodeFences = true
+# pygmentsUseClasses = true  # 請在params中也加入，才可以導入syntax.css
+
 [params]
   # 這裡的變數是 .Site.Params.xxx
   is_release = false
   font-awesome = true  # 讓所有網站都啟用fontawesome
   bootstrap = true  # 讓所有網站都啟用bootstrap
   enable_search_fuse = true  # 這個是我自己補的，可能您的網站用的搜尋不一樣，所以才搞了這個方便調整。
+  # pygmentsUseClasses = true
 
   # 仔細去看 themes/ananke/layouts/index.html 他有使用到 .Site.Params.mainSections
   # .Site只的就是config這個東西， Params 就是我們前面定義的 [params] ，所以我們在這邊還要定義 mainSections
@@ -80,7 +84,6 @@ paginate = 10  # Default number of elements per page
   tag = "tags"
   language = "t_lang"
   test_language = "test_lang"
-
 
 [menus]
   [[menus.main]]

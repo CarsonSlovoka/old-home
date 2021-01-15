@@ -473,7 +473,7 @@ layouts/_default/single.html
 
 ## 函數使用方法參考
 
-將文字轉為一般文本
+### 將文字轉為一般文本
 
 ```go-html-template
 plainify: <p>hello</p> => hello
@@ -484,7 +484,7 @@ anchorize: my book => my-book
 {{ $anchorId := ($header | plainify | htmlUnescape | anchorize) }}
 ```
 
-list (slice)
+### list (slice)
 
 ```go-html-template
 {{ $slice := (findRE `id=\"(.*)\">` $header 1) }}
@@ -492,8 +492,16 @@ list (slice)
 {{ $anchorId := replace $anchorId "id=" "" 1 }}
 ```
 
+### dict
 
-刪除開頭的"和結尾的"
+```go-html-template
+{{ dict_xxx := dict }}
+{{ range $key, $val := $dict_xxx }}
+    {{ $key }} : {{ $val }}
+{{ end }}
+```
+
+### 刪除開頭的"和結尾的"
 
 ```go-html-template
 找出開頭為" 或者 結尾"
@@ -504,14 +512,14 @@ list (slice)
 ```
 
 
-變數轉換
+### 變數轉換
 
 ```go-html-template
 {{ $href := (printf `href=#%s` $anchorId ) | string }}
 {{ $max_heading := (int .) }}
 ```
 
-字串處理
+### 字串處理
 
 ```go-html-template
 slice 將元素合併成一個新的list
@@ -559,6 +567,9 @@ delimit 再將此slice展開，並使用#符號連結成為一個新的字串
 - [Hugo Function大全](https://bwaycer.github.io/hugo_tutorial.hugo/templates/functions/)
 - [regex線上模擬](https://regex101.com/)
 
+----
+
+{{< next-and-previous previous_link="/hugo/hugo_deep_learning" next_link="/hugo/menu" >}}
 
 ## Footnote
 
