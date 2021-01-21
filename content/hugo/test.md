@@ -5,7 +5,6 @@ draft = true
 toc = true
 bootstrap = true
 plantuml = true
-markmap = true
 
 [article_image]
     src = "images/hugo/gohugoio-card.jpg"
@@ -53,22 +52,4 @@ ddd
 *** <s>Raspmbc</s> => OSMC
 *** <s>Raspyfi</s> => Volumio
 @endmindmap
-```
-
-## markmap測試
-
-目前這個項目還沒有完成，
-
-> :collision: js有先後順序front matter的markmap不能放在article_image之後！
-
-```markmap
-{"t":"heading","d":1,"p":{},"v":"教學", "c":[
-  {"t":"heading","d":2,"p":{},"v":"<a href=\"https://markmap.js.org/repl/\">Hugo</a>"},
-  {"t":"heading","d":2,"p":{},"v":"JS", "c":[
-      {"t": "heading", "d":3, "p":{}, "v":"jquery"},
-      {"t": "heading", "d":3, "p":{}, "v":"bootstrap"}
-    ]
-  }
-]},
-{"t":"heading","d":1,"p":{},"v":"科技", "c":[]}
 ```

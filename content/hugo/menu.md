@@ -4,7 +4,8 @@ date = 2020-12-22T11:49:00+08:00
 description = "教您如何產生Menu"
 tags = ["hugo"]
 draft = false
-toc = true
+markmap = true
+toc_bootstrap = true
 bootstrap = true
 [article_image]
     src = "images/hugo/gohugoio-card.jpg"

@@ -2,6 +2,7 @@ venv
 *.pyc
 *.*~
 public/
+docs/
 
 # 這是像執行: ($image.Fill "1440x642").Permalink 所產生出來的圖片
 # resources/_gen/*/*.jpg

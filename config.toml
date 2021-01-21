@@ -1,8 +1,10 @@
-baseURL = "/"  # "http://example.org/"
+baseURL = "https://carsonslovoka.github.io/"  # "http://example.org/"  "/"  "http://localhost:8000/"  <-- 如果要放到本機可以用localhost配合python http.server即可
 title = "Carson Blog"
 copyright = "Carson 2020-"
 # themesDir = "themes"
 theme="ananke"
+publishDir="docs"  # default is "public"
+# assetDir="assets"
 
 # https://gohugo.io/getting-started/configuration/#all-configuration-settings
 # languageCode = "en-us"  # en-us, zh-tw  # It is used in the default RSS template and can be useful for multi-lingual sites.
@@ -21,11 +23,16 @@ paginate = 10  # Default number of elements per page
 # configDir = "config"  # 預設就是這個  很多config的設定都可以在 hugo help中找到
 # config/dev
 
+# pygmentsCodeFences = true
+# pygmentsUseClasses = true  # 請在params中也加入，才可以導入syntax.css
+
 [params]
   # 這裡的變數是 .Site.Params.xxx
   is_release = false
   font-awesome = true  # 讓所有網站都啟用fontawesome
+  bootstrap = true  # 讓所有網站都啟用bootstrap
   enable_search_fuse = true  # 這個是我自己補的，可能您的網站用的搜尋不一樣，所以才搞了這個方便調整。
+  # pygmentsUseClasses = true
 
   # 仔細去看 themes/ananke/layouts/index.html 他有使用到 .Site.Params.mainSections
   # .Site只的就是config這個東西， Params 就是我們前面定義的 [params] ，所以我們在這邊還要定義 mainSections
@@ -45,6 +52,10 @@ paginate = 10  # Default number of elements per page
   # Hugo Markdown Support: https://www.markdownguide.org/tools/hugo/#hugo-markdown-support
   # 完整的配置請參考: https://gohugo.io/getting-started/configuration-markup/
   defaultMarkdownHandler = "goldmark"  # 如果您要換回blackFriday可以改這個，當然除了這些還有很多其他的配置，但是建議就用goldmark就好
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4
+
   [markup.blackFriday]
     # [blackfriday] hugo目前預設是使用 Goldmark
     plainIDAnchors = false
@@ -74,12 +85,17 @@ paginate = 10  # Default number of elements per page
   language = "t_lang"
   test_language = "test_lang"
 
-
 [menus]
+  [[menus.main]]
+    name = "地圖"
+    url = "/site-markmap/"
+    pre = "<i class='fas fa-sitemap' style='color: #b1e844'></i>"
+    weight = 30  # 權重小的list取出時會優先，也就是最小的等同list[0]的位置，而無關寫的順序
   [[menus.main]]
     name = "教學"
     url = "/Hugo/"
-    pre = "<img src='/images/home/hugo.png'/ style='vertical-align: middle;'>"
+    # pre = "<img src='/images/home/hugo.png'/ style='vertical-align: middle;'>"
+    pre = "<i class='fas fa-h-square' style='color: #e844a8'></i>"
     weight = 30  # 權重小的list取出時會優先，也就是最小的等同list[0]的位置，而無關寫的順序
   [[menus.main]]
     name = "動物"

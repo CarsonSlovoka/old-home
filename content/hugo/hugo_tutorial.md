@@ -107,6 +107,8 @@ Pelican是用Python開發，預設也是用rst，且樣板是Jinja2，說實在�
 
   通常在content中，我們會再用資料夾對文章做分類，``posts``一般有最近公布的項目的意味，總之名稱看您心情，爽就好！
 
+> :orange_book: 實際上他是用``archetypes/posts.rst``的樣板去渲染的！
+
 ## Hugo的內文接受哪些格式?
 
 [List of content formats](https://gohugo.io/content-management/formats/#list-of-content-formats)

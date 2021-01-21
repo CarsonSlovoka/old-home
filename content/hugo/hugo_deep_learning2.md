@@ -4,8 +4,11 @@ date = 2020-12-08T18:29:00+08:00
 description = "正式開始教您如何近乎白手起家來打造專屬於您的Hugo網站！"
 tags = ["hugo"]
 draft = false
-toc = true
 bootstrap = true
+markmap = true
+toc_markmap = true
+toc_bootstrap = true
+weight=1
 +++
 
 在您看這篇文章的時候請您還是去看看我前兩篇文章(這兩篇是用[reST]寫的，有寫排版其實不是我的預期)
@@ -400,7 +403,7 @@ other = "繼續閱讀"
 
 官方的教學教我們在single.html建立 .TableOfContents 因為它會蒐集所有<h>的連結
 
-```html
+```go-html-template
 # layout/_default/single.html
 
 {{ define "main" }}
@@ -422,7 +425,7 @@ other = "繼續閱讀"
 
 官方是用toc.html當作shortcode，即:
 
-```html
+```go-html-template
 # layout/partials/toc.html
 
 {{ if and (gt .WordCount 400 ) (.Params.toc) }}
@@ -469,64 +472,94 @@ layouts/_default/single.html
 ### global navigation
 就是menu
 
-
-
 ## 函數使用方法參考
 
-將文字轉為一般文本
+### 將文字轉為一般文本
 
-    plainify: <p>hello</p> => hello
-    htmlEscape: & => &amp;
-    {{ $anchorId := ($header | plainify | htmlEscape | urlize) }}
+```go-html-template
+plainify: <p>hello</p> => hello
+htmlEscape: & => &amp;
+{{ $anchorId := ($header | plainify | htmlEscape | urlize) }}
 
-    anchorize: my book => my-book
-    {{ $anchorId := ($header | plainify | htmlUnescape | anchorize) }}
+anchorize: my book => my-book
+{{ $anchorId := ($header | plainify | htmlUnescape | anchorize) }}
+```
 
-list (slice)
+### list (slice)
 
-    {{ $slice := (findRE `id=\"(.*)\">` $header 1) }}
-    {{ $anchorId := index $slice 0 }}
-    {{ $anchorId := replace $anchorId "id=" "" 1 }}
+```go-html-template
+{{ $slice := (findRE `id=\"(.*)\">` $header 1) }}
+{{ $anchorId := index $slice 0 }}
+{{ $anchorId := replace $anchorId "id=" "" 1 }}
+```
+
+### dict
+
+```go-html-template
+{{ dict_xxx := dict }}
+{{ range $key, $val := $dict_xxx }}
+    {{ $key }} : {{ $val }}
+{{ end }}
+```
+
+### 刪除開頭的"和結尾的"
+
+```go-html-template
+找出開頭為" 或者 結尾"
+{{ $anchorId := replaceRE `(^\"*)|(\"*$)` "" $anchorId }}
+
+排除開頭和結尾
+{{ $anchorId := substr $anchorId 1 -1 }}
+```
 
 
-刪除開頭的"和結尾的"
+### 變數轉換
 
-    找出開頭為" 或者 結尾"
-    {{ $anchorId := replaceRE `(^\"*)|(\"*$)` "" $anchorId }}
+```go-html-template
+{{ $href := (printf `href=#%s` $anchorId ) | string }}
+{{ $max_heading := (int .) }}
+```
 
-    排除開頭和結尾
-    {{ $anchorId := substr $anchorId 1 -1 }}
+### 字串處理
 
+```go-html-template
+slice 將元素合併成一個新的list
+delimit 再將此slice展開，並使用#符號連結成為一個新的字串
+{{ $href := delimit (slice $base $anchorId) "#" | string }}
 
-變數轉換
-
-    {{ $href := (printf `href=#%s` $anchorId ) | string }}
-    {{ $max_heading := (int .) }}
-
-字串處理
-
-    slice 將元素合併成一個新的list
-    delimit 再將此slice展開，並使用#符號連結成為一個新的字串
-    {{ $href := delimit (slice $base $anchorId) "#" | string }}
-
-    使用printf也能合併字串
-    {{ $href := (printf `href=#%s` $anchorId ) | string }}
+使用printf也能合併字串
+{{ $href := (printf `href=#%s` $anchorId ) | string }}
+```
 
 ### regex 表示法
 
-by order
+#### by order
 
-    {{ $my_var := `id="demo"` }}
-    {{ $result := replaceRE `id=\"(.*)\"` "$1" $my_var }}
-    {{ $result }} → "demo"
+```go-html-template
+{{ $my_var := `id="demo"` }}
+{{ $result := replaceRE `id=\"(.*)\"` "$1" $my_var }}
+{{ $result }} → "demo"
+```
 
-name group
+#### name group
 
-    {{ $my_var := `<h2 id="#demo+1-3%./2\"><a href="https://www.google.com/"></a></h2>` }}
-    {{ $id := replaceRE `.*id=\"(?P<my_id>([:#a-z0-9+\-%./\\])*)\">(<a href=\"(?P<my_href>[:#a-z0-9+\-%./\\]*)\">.*)?` "$my_id" $my_var }}
-    {{ $id }}  → #demo+1-3%./2\
-    {{ $href := replaceRE `.*id=\"(?P<my_id>([:#a-z0-9+\-%./\\])*)\">(<a href=\"(?P<my_href>[:#a-z0-9+\-%./\\]*)\">.*)?` "$my_href" $my_var }}
-    {{ $href }}  → https://www.google.com/
+基本範例:
+
+```go-html-template
+{{ $my_var := `id="demo2"` }}
+{{ $result := replaceRE `id=\"(?P<my_id>.*)\"` "$my_id" $my_var }}  # my_id是對應?P<>裡面的名稱，一定要一模一樣才可以！
+{{ $result }} → "demo2"
+```
+
+進階範例:
+
+```go-html-template
+{{ $my_var := `<h2 id="#demo+1-3%./2\"><a href="https://www.google.com/"></a></h2>` }}
+{{ $id := replaceRE `.*id=\"(?P<my_id>([:#a-z0-9+\-%./\\])*)\">(<a href=\"(?P<my_href>[:#a-z0-9+\-%./\\]*)\">.*)?` "$my_id" $my_var }}
+{{ $id }}  → #demo+1-3%./2\
+{{ $href := replaceRE `.*id=\"(?P<my_id>([:#a-z0-9+\-%./\\])*)\">(<a href=\"(?P<my_href>[:#a-z0-9+\-%./\\]*)\">.*)?` "$my_href" $my_var }}
+{{ $href }}  → https://www.google.com/
+```
 
 ## 參考資料
 
@@ -535,6 +568,8 @@ name group
 - [Hugo Function大全](https://bwaycer.github.io/hugo_tutorial.hugo/templates/functions/)
 - [regex線上模擬](https://regex101.com/)
 
+
+{{< next-and-previous previous_page_link="/hugo/hugo_deep_learning" next_page_link="/hugo/menu" >}}
 
 ## Footnote
 
