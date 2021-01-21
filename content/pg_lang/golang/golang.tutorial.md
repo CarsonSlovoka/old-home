@@ -1,6 +1,6 @@
 +++
 title = "golang基礎教學"
-date = 2020-01-14T10:39:00+08:00
+date = 2021-01-14T10:39:00+08:00
 description = "golang安裝以及基礎教學"
 tags = ["golang"]
 bootstrap = true

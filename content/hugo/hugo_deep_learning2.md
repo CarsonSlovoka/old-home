@@ -8,6 +8,7 @@ bootstrap = true
 markmap = true
 toc_markmap = true
 toc_bootstrap = true
+weight=1
 +++
 
 在您看這篇文章的時候請您還是去看看我前兩篇文章(這兩篇是用[reST]寫的，有寫排版其實不是我的預期)
@@ -567,9 +568,8 @@ delimit 再將此slice展開，並使用#符號連結成為一個新的字串
 - [Hugo Function大全](https://bwaycer.github.io/hugo_tutorial.hugo/templates/functions/)
 - [regex線上模擬](https://regex101.com/)
 
-----
 
-{{< next-and-previous previous_link="/hugo/hugo_deep_learning" next_link="/hugo/menu" >}}
+{{< next-and-previous previous_page_link="/hugo/hugo_deep_learning" next_page_link="/hugo/menu" >}}
 
 ## Footnote
 

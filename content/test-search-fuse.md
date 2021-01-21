@@ -2,6 +2,7 @@
 title = "搜尋"
 type = "custom_layout"
 layout = "search/fuse/search-fuse"
+draft = true
 +++
 
 如果要指定特別的layout，則type要給，

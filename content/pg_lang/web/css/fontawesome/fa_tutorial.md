@@ -1,12 +1,15 @@
 +++
 title = "font-awesome基礎教學"
-date = 2020-01-14T10:39:00+08:00
+date = 2021-01-14T10:39:00+08:00
 description = "一些常用的項目"
 tags = ["fontawesome"]
 bootstrap = true
 markmap = true
 toc_markmap = true
 toc_bootstrap = true
+
+[next_and_previous.link]
+    next_section="/pg_lang/web/css/bootstrap/bs_tutorial"
 +++
 
 ## 取得線上的CSS, JS
@@ -24,7 +27,7 @@ Generate Subresource Integrity (SRI) attributes
 > https://www.srihash.org/ 可以幫助您產生，把資源的連結貼上去即可
 
 
-## 免費版本常用的icon
+## [免費版本常用的icon](https://fontawesome.com/icons/)
 
 - 下載: {{<raw_html>}}<a href=""><i class="fas fa-download fa-2x"></i></a>{{</raw_html>}}
 
@@ -44,4 +47,30 @@ Generate Subresource Integrity (SRI) attributes
 
   ```html
   <i class='fas fa-dragon' style='color: #FF0000'></i>
+  ```
+
+- book: {{<raw_html>}}<i class="fas fa-book-open fa-2x" style="color:#fd7e14;"></i>{{</raw_html>}}
+
+  ```html
+  <i class="fas fa-book-open fa-2x" style="color:#fd7e14;"></i>
+  ```
+
+- link: {{<raw_html>}}<a href=""><i class="fas fa-link fa-2x" style="color:#1a73e8;"></i><br>my_link</a>{{</raw_html>}}
+
+  ```html
+  <a href="#"><i class="fas fa-link fa-2x" style="color:#fd7e14;"></i><br>my_link</a>
+  ```
+
+### 搭配bootstrap
+
+#### button
+
+- link: {{<raw_html>}}<button class="btn btn-primary" onclick="location.href='https://www.google.com/'" type="button"><i class="fas fa-link fa-2x"></i><br>Google</button>{{</raw_html>}}
+
+  ```go-html-template
+  <button class="btn btn-primary" type="button"
+    onclick="location.href='https://www.google.com/'"  {{/* 按鍵也可以變成連結，不建議用a來取代按鈕，有些樣式會跑掉 */}}
+  ><i fas fa-link fa-2x></i>  {{/* fontawesome的圖標放這邊 */}}
+  <br>Google  {{/* 利用br來換行，模擬文字在按鍵下方 */}}
+  </button>
   ```

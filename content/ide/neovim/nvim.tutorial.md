@@ -1,6 +1,6 @@
 +++
 title = "neovim基礎教學"
-date = 2020-01-14T14:26:00+08:00
+date = 2021-01-14T14:26:00+08:00
 description = "neovim教學"
 tags = ["neovim"]
 bootstrap = true
