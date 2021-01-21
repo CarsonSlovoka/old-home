@@ -58,7 +58,7 @@ asmfmt | ``github.com/klauspost/asmfmt@master`` | ``%userprofile%\go\bin``
 
 ### [安裝 Go]
 
-這是另外的參考資料有興趣可以看看(如果您不是windows的在看，是windows的造我上面的弄就好了)
+:point_up_2: 這是另外的參考資料有興趣可以看看(如果您不是windows的在看，是windows的造我上面的弄就好了)
 
 ## [教學]
 

@@ -85,7 +85,7 @@ choco安裝的套件如果是安裝的檔案也能在``新增移除``找到，�
 | hugo     | ● ``choco install hugo -y``\n● ``choco install hugo-extended -confirm``\n(裝``hugo-extended``才可以進行Sass/SCSS的操作) | ● ``%programdata%\chocolatey\lib\hugo\tools``\n● ``%programdata%\chocolatey\lib\hugo-extended\tools`` | 這可以做靜態網頁，類似[Jekyll]
 | git      | ``choco install git -y`` | ``%programfiles%\Git`` | 執行檔位置：\n ``%programfiles%\Git\bit\git.exe``\n您也可以在新增移除中找到 | 版本管理工具 (:exclamation: 當您的版本不是最新的，有可能您在執行git等等相關的操作會出現錯誤(可能說你帳密不正確等等)
 | [sass]   | ``choco install sass -y`` | ● ``C:\tools\dart-sdk``\n● ``%programdata%\chocolatey\lib\sass\bin\sass.exe``\n他需要用到dart-sdk還有sass所以需要裝兩個東西 | 使用方法:\n● ``sass input.scss:output.css``\n● ``sass --watch input.scss:output.css --style compressed``\n加上 ``watch`` 可以監測使得檔案異動就自動更新 ``compressed`` 可以壓縮，以一行解決\n● ``sass input.scss:output.css --style compressed --no-source-map``\n不產生``.css.map``檔案\n● ``sass --help``
-| golang   | ``choco install golang -y``| ``C:\Go\bin\go.exe`` | 安裝完之後: ``go version`` 確認有無安裝成功
+| golang   | ``choco install golang -y``| ● ``C:\Go\bin\go.exe``\n● ``C:\Go\bin\gofmt.exe`` | 安裝完之後:\n● ``go version`` 確認有無安裝成功\n● ``gofmt``是用來統一程式碼格式用的東西
 
 [protobuf_google]: https://developers.google.com/protocol-buffers/docs/overview
 [protobuf_github]: https://github.com/protocolbuffers/protobuf
@@ -96,11 +96,14 @@ choco安裝的套件如果是安裝的檔案也能在``新增移除``找到，�
 ## 如何查找執行檔位置 (Where)
 
 > :orange_book: 有些的安裝可能不會跟你說安裝到哪裡去(像``golang``就沒說)，這時候您可以用powershell，然後使用: ``gcm [your_exe]`` 來幫助您
+>
+> What is [gcm]?
 
-[gcm](https://superuser.com/a/1605156/1093221)
+
 
 
 [protobuf_google]: https://developers.google.com/protocol-buffers/docs/overview
 [protobuf_github]: https://github.com/protocolbuffers/protobuf
 [Jekyll]: https://jekyllrb.com/
 [ctags]: https://en.wikipedia.org/wiki/Ctags#:~:text=Ctags%20is%20a%20programming%20tool,so%20on%20may%20be%20indexed.
+[gcm]: https://superuser.com/a/1605156/1093221
