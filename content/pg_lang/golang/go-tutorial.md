@@ -7,6 +7,11 @@ bootstrap = true
 markmap = true
 toc_markmap = true
 toc_bootstrap = true
+[next_and_previous.link]
+    previous_page = ""
+    next_page = "pg_lang/golang/golang-oop"
+    previous_section = ""
+    next_section = ""
 +++
 
 ## 下載
@@ -119,6 +124,38 @@ indent_style = tab
 
 所以，要不就是您自己需要手動設置一次之後就一勞永逸(JetBrains出版的[Goland.fmt](https://stackoverflow.com/a/33776710/9935654) )，不然就是他已經幫您設定好了，連動都不用
 
+
+### 程式相關
+
+#### 運行
+
+- go run xxx.go  // 可以直接運行
+- go run **--work** xxx.go
+  > 加上--work會把他生成出來的東西(含執行檔)的資料夾告訴您，例如:
+
+      WORK=C:\Users\xxx\AppData\Local\Temp\go-build284910950
+
+#### 編譯
+
+編譯並產生執行檔，此執行檔位於當前的工作目錄中
+- go build  // compile packages and dependencies
+  > go build xxx.go
+
+#### 正式的方式
+
+- gosetup-root: ``GOROOT=C:\Go``
+- gosetup-gopath: ``GOPATH=%userprofile%\go``
+- build: ```%GOROOT%\bin\go.exe build -o %userprofile%\AppData\Local\Temp\___1go_build_hello_world_go.exe %userprofile%\go\src\tutorial\hello_world.go```
+- run exe: ```%userprofile%\AppData\Local\Temp\___1go_build_hello_world_go.exe``
+
+小節:
+
+1. ``GOROOT``\: go.exe的路徑
+2. ``GOPATH``\
+3. ``go.exe -o output_exe_path  src_go_path``
+
+    > 此步驟完成會把執行檔放到``output_exe_path``中
+4. 執行打包出來的執行檔 (``output_exe_path``)
 
 [vim-plug]: https://github.com/junegunn/vim-plug
 [fatih/vim-go]: https://github.com/fatih/vim-go

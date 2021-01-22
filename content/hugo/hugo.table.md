@@ -16,7 +16,7 @@ toc_bootstrap = true
 
 我們這邊要談的主要就是利用bootstrap提供的css去讓table的外觀變得好看
 
-## shortcode
+## shortcodes
 
 我們想要的概念很簡單，語法如下:
 ```
@@ -105,6 +105,23 @@ layouts/partials/func/get_table.html:
 | Python | Hello world
 
 {{< /table/bootstrap-table >}}
+
+----
+
+### :exclamation: 注意事項
+
+  當您config.toml的unsafe設置為false時
+
+  ```toml
+  [markup.goldmark.renderer]
+    unsafe= false  # true: cancel "hugo raw html omitted"
+  ```
+
+  假設您的短代碼中有使用到HTML，則要避免使用``{%``。
+
+  用``%``會跑正常流程，而您的unsafe為false，所以結果還是會出現``hugo raw html omitted``
+
+  因此我們建議您改用角括號代替``<``，至於您的文本如果需要markdown的支持，可以透過``{{ .Inner | markdownify }}``來幫忙
 
 ## 參考資料
 - [regex-capturing-group-in-hugo](https://stackoverflow.com/questions/65267977/regex-capturing-group-in-hugo)
