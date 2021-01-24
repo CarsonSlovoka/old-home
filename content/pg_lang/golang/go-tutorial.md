@@ -9,7 +9,7 @@ toc_markmap = true
 toc_bootstrap = true
 [next_and_previous.link]
     previous_page = ""
-    next_page = "pg_lang/golang/golang-oop"
+    next_page = "pg_lang/golang/go-oop"
     previous_section = ""
     next_section = ""
 +++
@@ -156,6 +156,22 @@ indent_style = tab
 
     > 此步驟完成會把執行檔放到``output_exe_path``中
 4. 執行打包出來的執行檔 (``output_exe_path``)
+
+## golang中的簡單函數介紹
+
+### fmt.Print, Println, Printf 差異
+
+{{< table/bootstrap-table >}}
+
+他們全部都是輸出結果
+
+| @@w=10em@@名稱 | 細節 |
+| -------- | ---- |
+Print | 沒有換行
+Println | 會換行 (等同 Print(xxx\n)
+Printf | 可以格式化字串
+
+{{< /table/bootstrap-table >}}
 
 [vim-plug]: https://github.com/junegunn/vim-plug
 [fatih/vim-go]: https://github.com/fatih/vim-go

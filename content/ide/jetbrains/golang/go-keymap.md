@@ -24,7 +24,8 @@ toc_bootstrap = true
 | Split Down  | {{< hotkey "Ctrl+W, S" >}}
 | Split and Move Down  | {{< hotkey "Ctrl+W, Down" >}}
 | Split and Move Right |  {{< hotkey "Ctrl+W, Right" >}}
-
+| Close | {{< hotkey "Ctrl+W, C" >}}
+| UnSplit | {{< hotkey "Ctrl+W, U" >}}
 
 
 ## 使用滑鼠滾輪來改變font-size

@@ -11,7 +11,7 @@ markmap = true
 toc_markmap = true
 toc_bootstrap = true
 [next_and_previous.link]
-  previous_page = "pg_lang/golang/golang-tutorial"
+  previous_page = "pg_lang/golang/go-tutorial"
   next_page = ""
   previous_section = ""
   next_section = ""
@@ -22,6 +22,7 @@ toc_bootstrap = true
 在開始前有兩個重要的環境變數要知道:
 
 1. ``GOROOT``\: *C:\Go*
+   > 或者說Go SDK [version] 如 Go SDK 1.15.7
 2. ``GOPATH``\: *%userprofile%\go*
 
 
@@ -38,6 +39,8 @@ import (
 那麼就是抓以下這份檔案:
 
 > ```%GOPATH%/src```/my_pgk_dir/sub/main_file.go
+
+:orange_book: 您可以有多個GOPATH，他會去抓您每一個GOPATH底下的src檔案
 
 > :orange_book: 當然您要放在:
 >  > ``%GOROOT%/src``/my_pgk_dir/sub/main_file.go
@@ -69,3 +72,18 @@ func main() {
     myf.Sqrt(5)  // 所以這裡可以用myf就可以抓到該檔案了
 }
 ```
+
+## 如何取得第三方套件
+
+
+> go get "github.com/user-name/repository-name/"
+
+您也可以
+
+> ``go get -t`` "github.com/user-name/repository-name/package-name"
+
+-t: 指令還會幫您測試，然後會把相依的套件(如其他用到的第三方套件)，一併下載
+
+完成之後您的src底下會多出您下載的套件資料夾，例如:``github.com/user-name/repository-name/```
+
+同時```%GOPATH%/bin``也會有東西跑出來
