@@ -26,7 +26,22 @@ toc_bootstrap = true
 | Split and Move Right |  {{< hotkey "Ctrl+W, Right" >}}
 | Close | {{< hotkey "Ctrl+W, C" >}}
 | UnSplit | {{< hotkey "Ctrl+W, U" >}}
+Goto Previous Splitter | {{< hotkey "Ctrl+W, H" >}}
+Goto Next Splitter | {{< hotkey "Ctrl+W, L" >}}
+Undo | {{< hotkey "Ctrl + U" >}}
+Redo | {{< hotkey "Ctrl + R" >}}
 
+
+{{< table/bootstrap-table >}}
+
+| @@w=12em@@name | @@w=5em@@checked\n(☐☑) | Description |
+| ---- | :----: | ---- |
+Add leading space to comments | ☑ | 可以在打完註解``//``自動多一個空白
+Insert Paired brackets\n(), [], {}, <> | ☐  | 我是不喜歡這種設定，很愚蠢，每次打完還要再用方向鍵不能連著打
+Insert pair quote | ☐  | 同上
+Change font size with\n``Ctrl+Mouse Wheel`` | ☑ | 可以用滾輪來改變font-size
+
+{{< /table/bootstrap-table >}}
 
 ## 使用滑鼠滾輪來改變font-size
 

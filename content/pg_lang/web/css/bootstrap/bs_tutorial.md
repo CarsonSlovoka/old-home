@@ -30,6 +30,8 @@ toc_bootstrap = true
 
 > {{<raw_html>}}<p>This is some <small class="text-muted">smaller</small> text.</p>{{</raw_html>}}
 
+> :orange_book: 也可以藉由 ``style="color:gray; opacity: 0.5;`` 達成類似text-muted的效果
+
 運用small可以讓字變小，text-muted是bootstrap的CSS中的樣式之一，主要就是讓顏色變成灰色(``#6c757d!important``)
 
 > :orange_book: ``!important``表示如果有多個css重複的時候他會優先使用這個屬性，當然如果大家都是``!important``那就看誰最後才加入就用該屬性(同一般狀況)

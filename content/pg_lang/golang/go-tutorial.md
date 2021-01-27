@@ -127,7 +127,11 @@ indent_style = tab
 
 ### 程式相關
 
-#### 運行
+#### go run, go install
+
+> go run: 「編譯」+ 「執行」(本身需要是可執行的package才行)
+
+> go install: 編譯成二進位執行檔 或 包存檔([.a]({{< ref "#``.a``" >}}))
 
 - go run xxx.go  // 可以直接運行
 - go run **--work** xxx.go
@@ -139,9 +143,15 @@ indent_style = tab
 
 編譯並產生執行檔，此執行檔位於當前的工作目錄中
 - go build  // compile packages and dependencies
+- go build -o bin/main.exe src/main/main.go
+
+  > :orange_book: 所有的路徑都是``相對於您的工作路徑``，如果目錄資料夾不存在會新增。
+
+  > :orange_book: 忽略-o會直接在當前的路徑下產生與.go同名的執行檔
+
   > go build xxx.go
 
-#### 正式的方式
+#### 正式的流程
 
 - gosetup-root: ``GOROOT=C:\Go``
 - gosetup-gopath: ``GOPATH=%userprofile%\go``
@@ -156,6 +166,20 @@ indent_style = tab
 
     > 此步驟完成會把執行檔放到``output_exe_path``中
 4. 執行打包出來的執行檔 (``output_exe_path``)
+
+## Go程式執行順序
+
+    go run *.go
+    ├── 被執行的主包
+    ├── 初始化所有被匯入的包 (執行init函數，init函數在一個檔案裡面可以有多個，但是會按造順序來執行)
+    |  ├── 初始化所有被匯入的包 ( 遞迴定義 )
+    |  ├── 初始化所有全域性變數
+    |  └── INIt 函式以字母序被呼叫
+    └── 初始化主包
+    ├── 初始化所有全域性變數
+    └── INIt 函式以字母序被呼叫
+
+> :exclamation: 最需要記住的是， 每個包只初始化一次被匯入的包
 
 ## golang中的簡單函數介紹
 
@@ -173,7 +197,118 @@ Printf | 可以格式化字串
 
 {{< /table/bootstrap-table >}}
 
+## go packages
+
+官方的文檔其實不錯，可以直接到官方文檔查看: [go packages]
+
+## Go的關鍵字
+
+總共有25個
+
+    break    default      func    interface    select
+    case     defer        go      map          struct
+    chan     else         goto    package      switch
+    const    fallthrough  if      range        type
+    continue for          import  return       var
+
+- fallthrough\: 用來在switch case中繼續向下執行
+
+
+## 附檔名介紹
+
+- {{< auto-id "``.a``" >}}(package **a**rchive):
+
+  在您的package中只要不是``main``，
+
+  在執行完``go install <Package(專案資料夾(相對於gopath)路徑)>``
+
+  > :orange_book: 所謂的 package就是``%gopath%/src``下的第一層子目錄
+
+  他會生成在``%GOPATH%/pkg/<OS_Arch>`` (例如: ``%GOPATH%/pkg/windows_amd64``)
+
+  > :exclamation: 要打包到``%GOPATH%/pkg/<OS_Arch>``須滿足兩點
+  >
+  > 1. 有其他檔案他不是``package main``
+  > 2. 在此package中**沒有任何一個**檔案中有main的宣告
+
+  這種package我們稱之為「應用包」。主要用來讓執行包來導入，節省再編譯的時間
+
+- ``.exe``: 可執行包(package)
+
+
+## 安裝godoc
+
+go doc和godoc是不同的東西
+
+``go doc``把東西印在console上，很醜，大概也沒幾個人願意這樣看
+
+``godoc``可以向網頁一樣顯示文件資訊
+
+但從go 1.12之後godoc移除不再是您安裝完go就自帶的執行檔，
+
+但是您還是可以套過
+
+> go get -u -v golang.org/x/tools/cmd/godoc
+
+- ``-u`` 更新 連同 相依套件也會一併更新  (一般的go get只會抓取遺失的檔案並不會去更新，所以要更新就用-u)
+- ``-v`` 會顯示詳細資料(安裝下載的過程，會在console告訴您，我個人是建議加上)
+
+來獲取。
+
+接下來
+
+> godoc -http=127.0.0.1:6060 -play
+>
+> *(play是可以利用它當作編輯器也能運行，測試用的)*
+
+或
+
+> godoc -http=:6060 -play
+>
+> *(埠號不一定要6060看您高興)*
+
+或更省，直接
+
+> godoc
+>
+> *預設埠號是6060*
+
+您就可以直接看官方的文檔的離線版本，但看官方文件除非沒網路，不然直接去官網看就好了:laughing:
+
+
+我們有興趣的其實是看自己的文件
+
+> godoc -goroot=C:\Users\xxx\go\
+>
+> *(放您gopath的路徑)*
+
+然後您就可以上
+
+> http://127.0.0.1:6060/
+
+看到自己的文檔了
+
+> :exclamation: 他產生的文檔不包含``package main``的檔案
+
+> :orange_book: godoc還可以對外公佈，所以不是只有自爽而已，有時間我會再補
+
+## go get & go clean
+
+- ``go get -u -v`` golang.org/x/tools/cmd/godoc
+  - ``-u`` 更新 連同 相依套件也會一併更新  (一般的go get只會抓取遺失的檔案並不會去更新，所以要更新就用-u)
+  - ``-v`` 顯示詳細資訊
+
+- ``go clean -i -n``  golang.org/x/tools/cmd/godoc
+    - ``-i`` 移除二進位的執行檔
+    - ``-n`` 不會真的移除讓您知道有那些東西會被移除
+
+
+## 參考資料
+
+- https://www.mdeditor.tw/pl/2J1M/zh-tw
+
 [vim-plug]: https://github.com/junegunn/vim-plug
 [fatih/vim-go]: https://github.com/fatih/vim-go
 [安裝 Go]: https://github.com/astaxie/build-web-application-with-golang/blob/master/zh-tw/01.1.md
 [教學]: https://github.com/astaxie/build-web-application-with-golang/blob/master/zh-tw/preface.md
+[go packages]: https://golang.org/pkg/

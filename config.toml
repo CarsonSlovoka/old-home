@@ -54,7 +54,7 @@ paginate = 10  # Default number of elements per page
   defaultMarkdownHandler = "goldmark"  # 如果您要換回blackFriday可以改這個，當然除了這些還有很多其他的配置，但是建議就用goldmark就好
   [markup.tableOfContents]
     startLevel = 2
-    endLevel = 4
+    endLevel = 5
 
   [markup.blackFriday]
     # [blackfriday] hugo目前預設是使用 Goldmark
