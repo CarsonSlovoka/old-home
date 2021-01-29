@@ -14,7 +14,6 @@ toc_bootstrap = true
 
 ## Visual studio Keymap
 
-
 | name | hotkey |
 | ---- | ---- |
 | Open in terminal | {{< hotkey "Alt + C" >}}
@@ -30,7 +29,11 @@ Goto Previous Splitter | {{< hotkey "Ctrl+W, H" >}}
 Goto Next Splitter | {{< hotkey "Ctrl+W, L" >}}
 Undo | {{< hotkey "Ctrl + U" >}}
 Redo | {{< hotkey "Ctrl + R" >}}
-
+{{<raw_html>}}Move Caret Backward<br>a Paragraph{{</raw_html>}} | {{< hotkey F1 >}}
+{{<raw_html>}}Move Caret Forward<br>a Paragraph{{</raw_html>}} | {{< hotkey F2 >}}
+Add to Watches | {{< hotkey "`" >}}
+Move Right | {{< hotkey "Alt+Right" >}} (default)
+Move Left | {{< hotkey "Alt+Left" >}} (default)
 
 {{< table/bootstrap-table >}}
 

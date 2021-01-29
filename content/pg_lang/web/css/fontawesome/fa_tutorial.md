@@ -74,3 +74,28 @@ Generate Subresource Integrity (SRI) attributes
   <br>Google  {{/* 利用br來換行，模擬文字在按鍵下方 */}}
   </button>
   ```
+
+## [Emoji of Unicode](https://apps.timwhitlock.info/unicode/inspect?s=%F0%9F%93%9D)
+
+{{< table/bootstrap-table table-info >}}
+
+| @@w=10%@@name | @@w=30%@@Desc | @@w=10%@@Code |  　 |
+| :----: | :---- | :----: | ---- |
+| 📝 | Memo | 1F4DD
+| 🧾 | Receipt | 1F9FE
+| 🐬 | Dolphin | 1F42C
+| 📙 | Orange book | 1F4D9
+| 📓 | Notebook
+🔖 | Bookmark
+🕮 | Book
+📚 | Books
+🌱 | Earth Day
+🌎 | World Emoji Day
+📅 | Calendar | 1F4C5
+🕷️ | Spider
+
+
+[Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
+
+{{< /table/bootstrap-table >}}
+

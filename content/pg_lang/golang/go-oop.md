@@ -5,7 +5,7 @@ lastmod = 2021-01-22
 featured_image = ""
 draft = false
 weight = 0
-tags = []
+tags = ["golang"]
 markmap = true
 toc_markmap = true
 toc_bootstrap = true
@@ -134,7 +134,7 @@ func main() {
 
 1. go mod init ``github.com/username/my_project_name``
 2. cd 到含有go.mod的資料夾中
-3. go install | test | build | download 四選一
+3. ``go {install, test, build, mod download}`` 四選一
 
    完成之後會產生相對應的require文件，例如
 

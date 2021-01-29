@@ -298,6 +298,11 @@ go doc和godoc是不同的東西
   - ``-u`` 更新 連同 相依套件也會一併更新  (一般的go get只會抓取遺失的檔案並不會去更新，所以要更新就用-u)
   - ``-v`` 顯示詳細資訊
 
+  範例:
+    > require github.com/stretchr/testify v1.7.0
+    指定版本
+    > go get github.com/stretchr/testify@v1.7.0
+
 - ``go clean -i -n``  golang.org/x/tools/cmd/godoc
     - ``-i`` 移除二進位的執行檔
     - ``-n`` 不會真的移除讓您知道有那些東西會被移除
