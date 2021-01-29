@@ -41,7 +41,13 @@ Pelican是用Python開發，預設也是用rst，且樣板是Jinja2，說實在�
 
 ## Getting Started
 
-步驟一: ``hugo new site your_site_name``
+1. ``hugo new site your_site_name``
+2. ``git init``
+3. > ``git submodule add`` *https://github.com/budparr/gohugo-theme-ananke.git* **themes/ananke**
+
+     粗體的部分是指這個submodule的位置會丟到``themes/ananke``此資料夾之中
+
+----
 
 再來請參考hugo: [官方教學](https://gohugo.io/getting-started/quick-start/#step-2-create-a-new-site)
 
