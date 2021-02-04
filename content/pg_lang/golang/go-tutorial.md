@@ -63,7 +63,7 @@ asmfmt | ``github.com/klauspost/asmfmt@master`` | ``%userprofile%\go\bin``
 
 ### [安裝 Go]
 
-:point_up_2: 這是另外的參考資料有興趣可以看看(如果您不是windows的在看，是windows的造我上面的弄就好了)
+:point_up_2: 這是另外的參考資料有興趣可以看看(如果您不是windows的在看，是windows的照我上面的弄就好了)
 
 ## [教學]
 
@@ -307,6 +307,29 @@ go doc和godoc是不同的東西
     - ``-i`` 移除二進位的執行檔
     - ``-n`` 不會真的移除讓您知道有那些東西會被移除
 
+## go mod why -m
+
+> ``go mod why -m`` github.com/yofu/dxf
+
+可以知道為什麼mod會需要這個套件，
+
+假設您從別人的專案自己fork一份到您的github之中，
+
+但是如果人家裡頭有寫
+
+```go
+import (
+	"github.com/yofu/dxf"
+)
+```
+
+那麼即便您fork了，當下不可能把原本的code中的名稱也跟著更改，
+
+您馬上fork完只能在[pkg.go.dev](https://pkg.go.dev/) 看到您複製的項目。(搜尋您自己的名稱)
+
+因此正常來說不能只接用fork就想佔為己用，這也是不道德的，當然如果您是考量到該專案有可能被作者刪除，是可以複製一份，
+
+萬一作者真的刪除再從source code把各項名稱("github.com/``yofu``/dxf")改成自己的名稱即可再用。
 
 ## 參考資料
 

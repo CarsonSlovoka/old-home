@@ -22,7 +22,10 @@ toc_bootstrap = true
 
 2. 至官網按造步驟下載: https://chocolatey.org/install
 3. 打開powershell(用系統管理員身分開啟):
-4. ``Set-ExecutionPolicy AllSigned -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1')) -Force``:
+
+4. ```
+   Set-ExecutionPolicy AllSigned -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+   ```
 
    > 打完指令按下Enter之後就開始下載
    >

@@ -79,8 +79,8 @@ Generate Subresource Integrity (SRI) attributes
 
 {{< table/bootstrap-table table-info >}}
 
-| @@w=10%@@name | @@w=30%@@Desc | @@w=10%@@Code |  　 |
-| :----: | :---- | :----: | ---- |
+| @@w=10%@@name | @@w=30%@@Icon Desc | @@w=10%@@Code | @@w=30%@@Comment |　|
+| :----: | :---- | :----: | ---- | ---- |
 | 📝 | Memo | 1F4DD
 | 🧾 | Receipt | 1F9FE
 | 🐬 | Dolphin | 1F42C
@@ -93,9 +93,19 @@ Generate Subresource Integrity (SRI) attributes
 🌎 | World Emoji Day
 📅 | Calendar | 1F4C5
 🕷️ | Spider
-
+✍ | WRITING HAND、總結 | 270D
+📰 | NEWSPAPER、歷史文章 | 1F4F0
+👩‍💻 | ● 👩:Woman\n●💻: Personal computer | ●1F469\n●1F4BB | 這比較特別，他是兩個碼位組合而成的圖案
+👨‍💻 | ● 👨:Man\n●💻: Personal computer | ●1F468\n●1F4BB | 組合圖案
+🎮 | Video game | 1F3A3
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 
 {{< /table/bootstrap-table >}}
 
+### 相關連結
+
+- [emojipedia]
+- [How can I create a text box for a note in markdown?](https://stackoverflow.com/a/65930459/9935654)
+
+[emojipedia]: https://emojipedia.org/

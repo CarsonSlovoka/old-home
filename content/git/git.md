@@ -11,3 +11,9 @@ bootstrap = true
 ## 如何取得某一個版本的文件
 
     git checkout [sha-1-id] -- html/temp/xxx.html
+
+
+## git submodule
+
+遞迴更新
+> git submodule update --init --recursive

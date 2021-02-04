@@ -17,6 +17,7 @@ toc_bootstrap = true
 | name | hotkey |
 | ---- | ---- |
 | Open in terminal | {{< hotkey "Alt + C" >}}
+| Show in Explorer | {{< hotkey "Alt + W" >}}
 | Go to Declaration or Usages | {{< hotkey "Shift + F12" >}}
 | {{< auto-id "Reformat Code" >}} | {{< hotkey "Ctrl + Alt + Enter" >}}
 | Split Right |  {{< hotkey "Ctrl+W, V" >}}
