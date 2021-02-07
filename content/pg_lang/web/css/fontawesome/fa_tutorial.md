@@ -100,7 +100,18 @@ Generate Subresource Integrity (SRI) attributes
 🎮 | Video game | 1F3A3
 🥴 | Drunk Face\nWoozy Face\nFace with Uneven Eyes and Wavy Mouth | 1F974
 😵 | DIZZY FACE | 1F635
-
+✨ | SPARKLES\nFeatures | 2728
+📦 | PACKAGE\nInstallation Guide | 1F4E6
+🌈 | RAINBOW\nOnline Examples | 1F308
+💿 | OPTICAL DISC | 1F4BF
+🎨 | ARTIST PALETTE\nDesign Specification | 1F3A8
+🖥 | DESKTOP COMPUTER | 1F5A5
+⌨ | KEYBOARD | 2328
+🔗 | LINK SYMBOL\nLinks | 1F517
+🗺 | WORLD MAP\nRoadmap | 1F5FA
+🤝 | Contributing | 1F91D
+💕 | TWO HEARTS\nDonation | 1F495
+❓ | QUESTION MARK\nCommunity Support | 2753
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 
