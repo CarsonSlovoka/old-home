@@ -44,6 +44,35 @@ toc_bootstrap = true
 
 - ``//``: 單行註解，不會被render
 
+## The & character
+
+The ``&`` character in Sass is unique in that it represents the **current selector**
+
+{{< table/code-by-example "SASS" "CSS" >}}
+
+```sass
+.error
+    border: 1px #f00
+    background-color: #fdd
+    &--serious  // .error--serious
+    border-width: 3px
+```
+
+@@NEW-COL@@
+
+```css
+.error {
+  border: 1px #f00;
+  background-color: #fdd;
+}
+.error--serious {
+  border-width: 3px;
+}
+```
+
+{{< /table/code-by-example >}}
+
+
 ## [At-Rules]
 
 關於一些開頭為``@``保留字的用法都可以在這邊找到
@@ -80,6 +109,33 @@ toc_bootstrap = true
   ```
   ``#{}``的意思可以把引號"給移除，例如: ``h#{$i}`` 我們就需要h1, h2...而不是h"1"這種東西
 
+### @extend
+
+讓當前的selector也具備有怎樣的屬性
+
+{{< table/code-by-example >}}
+
+```sass
+.error
+  border: 1px #f00
+  background-color: #fdd
+  &--serious  // .error--serious
+    @extend .error  // 讓當前的selector也具備有怎樣的屬性 // 這邊只是用錨點所以有縮排
+    border-width: 3px
+```
+
+@@NEW-COL@@
+
+```css
+.error, .error--serious  {
+  border: 1px #f00;
+  background-color: #fdd;
+}
+.error--serious {
+  border-width: 3px;
+}
+```
+{{< /table/code-by-example >}}
 
 ## 物件的類型 (Values)
 

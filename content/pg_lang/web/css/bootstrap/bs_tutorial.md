@@ -14,13 +14,122 @@ toc_bootstrap = true
 
 ## 取得線上的CSS, JS
 
-{{<fa-btn-link "/pg_lang/web/css/fontawesome/fa_tutorial#取得線上的css-js">}}get CSS, JS{{</fa-btn-link>}}
+你可以用官方提供的，或者由第三方的資源來獲取
+1. 官方: [quick-start](https://getbootstrap.com/docs/5.0/getting-started/introduction/#quick-start)
+2. 第三方: {{<fa-btn-link "/pg_lang/web/css/fontawesome/fa_tutorial#取得線上的css-js">}}cdnjs.com{{</fa-btn-link>}}
 
 
 ## SRI Hash
 
 {{<fa-btn-link "/pg_lang/web/css/fontawesome/fa_tutorial#sri-hash" >}}SRI Hash{{</fa-btn-link>}}
 
+## Components
+
+### [Grid System](https://getbootstrap.com/docs/5.0/layout/grid/#grid-options)
+
+{{< table/code-by-example >}}
+
+``only screen``: here is used to prevent older browsers that do not support media
+
+``max-width: 1248px``:
+- max-width當您的螢幕寬度小於等於定義值就設定為定義值，
+- 而當寬度已經大於定義值，就會設定為新的數值
+
+因此如果您的螢幕width<=1248px此項就會為true
+
+`12`列可以當作測試，調整瀏覽器的大小，過小可以隱藏住item這個選項，放大後此選項又會出來
+
+@@NEW-COL@@
+
+```html {linenos=inline,hl_lines=[12,"3-7"]}
+<header>
+  <style>
+    @media only screen and (max-width: 1248px) {
+        #navbar {
+            display: none;
+        }
+    }
+  </style>
+</header>
+
+<p>normal</p>
+<p id="navbar">item</p>
+```
+
+{{< /table/code-by-example >}}
+
+{{< table/bootstrap-table>}}
+
+| @@w=10%@@　| @@w=10%@@xs\n<576px | @@w=10%@@sm\n>=576px | @@w=10%@@md\n>=768 | @@w=10%@@lg\n>=992 | @@w=10%@@xl\n>=1200px | @@w=10%@@xxl\n>=1400px |
+| :---- | :----: | :----: | :----: | :----: | :----: | :----: |
+Container\n``max-width``| None (auto) | 540px | 720px | 960px | 1140px | 1320px
+Class prefix | ``.col-`` | ``.col-sm-`` | ``.col-md-`` | ``.col-lg-`` | ``.col-xl-`` | ``.col-xxl-``
+
+{{< /table/bootstrap-table>}}
+
+### Jumbotron
+
+{{< table/code-by-example "CSS講解|40%" "HTML" >}}
+
+```css
+.bg-light {
+    background-color: #f8f9fa!important;  // 偏白色
+}
+
+.p-5{
+    padding: 3rem!important;
+}
+
+.rounded {
+    border-radius: .25rem!important;
+}
+
+.m-3{  // 四周都有一定的留白
+    margin: 1rem!important;
+}
+
+.display-4 {
+    font-size: calc(1.475rem + 2.7vw);
+    font-weight: 300; // 粗細
+    line-height: 1.2;
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+.my-4 {
+    margin-top: 1.5rem!important;
+    margin-bottom: 1.5rem!important;
+}
+```
+
+
+@@NEW-COL@@
+
+```html
+<div class="bg-light p-5 rounded m-3">
+  <h1 class="display-4">主題名稱</h1>
+  <p class="lead">摘要</p>
+  <hr class="my-4">
+  <p>內文</p>
+  <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+</div>
+```
+
+{{< /table/code-by-example >}}
+
+{{{< raw_html >}}
+<h2>成品</h2>
+<div class="bg-light p-5 rounded m-3">
+<h1 class="display-4">主題名稱</h1>
+<p class="lead">摘要</p>
+<hr class="my-4">
+<p>內文</p>
+<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+</div>
+{{< /raw_html >}}
 
 ## span顏色, p.s.顏色
 
