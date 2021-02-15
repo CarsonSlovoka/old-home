@@ -18,6 +18,7 @@ toc_bootstrap = true
 | ---- | ---- |
 | Open in terminal | {{< hotkey "Alt + C" >}}
 | Show in Explorer | {{< hotkey "Alt + W" >}}
+| Recent Files | {{< hotkey "Ctrl + E" >}}
 | Go to Declaration or Usages | {{< hotkey "Shift + F12" >}}
 | {{< auto-id "Reformat Code" >}} | {{< hotkey "Ctrl + Alt + Enter" >}}
 | Split Right |  {{< hotkey "Ctrl+W, V" >}}
@@ -30,6 +31,7 @@ Goto Previous Splitter | {{< hotkey "Ctrl+W, H" >}}
 Goto Next Splitter | {{< hotkey "Ctrl+W, L" >}}
 Undo | {{< hotkey "Ctrl + U" >}}
 Redo | {{< hotkey "Ctrl + R" >}}
+Add to Watches | {{< hotkey "`" >}}
 {{<raw_html>}}Move Caret Backward<br>a Paragraph{{</raw_html>}} | {{< hotkey F1 >}}
 {{<raw_html>}}Move Caret Forward<br>a Paragraph{{</raw_html>}} | {{< hotkey F2 >}}
 Add to Watches | {{< hotkey "`" >}}
