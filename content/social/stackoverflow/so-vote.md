@@ -40,6 +40,7 @@ next_section = ""
 [Why does z-index not work?] |
 [How to create jumbotron in Bootstrap 5?] |
 [I want to align the text in a <td> to the top] |
+[Does Sass have a switch function?] |
 
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/
@@ -60,6 +61,8 @@ next_section = ""
 [Why does z-index not work?]: https://stackoverflow.com/a/9191845
 [How to create jumbotron in Bootstrap 5?]: https://stackoverflow.com/a/63142090
 [I want to align the text in a <td> to the top]: https://stackoverflow.com/q/5671687/9935654
+[Does Sass have a switch function?]: https://stackoverflow.com/a/33207817
+[CSS - Equal Height Columns?]: https://stackoverflow.com/q/2114757
 
 {{< /table/bootstrap-table >}}
 

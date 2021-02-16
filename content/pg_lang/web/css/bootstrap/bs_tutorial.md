@@ -105,7 +105,6 @@ Class prefix | ``.col-`` | ``.col-sm-`` | ``.col-md-`` | ``.col-lg-`` | ``.col-x
 }
 ```
 
-
 @@NEW-COL@@
 
 ```html
@@ -120,14 +119,14 @@ Class prefix | ``.col-`` | ``.col-sm-`` | ``.col-md-`` | ``.col-lg-`` | ``.col-x
 
 {{< /table/code-by-example >}}
 
-{{{< raw_html >}}
-<h2>成品</h2>
+成品如下:
+{{< raw_html >}}
 <div class="bg-light p-5 rounded m-3">
-<h1 class="display-4">主題名稱</h1>
-<p class="lead">摘要</p>
-<hr class="my-4">
-<p>內文</p>
-<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+  <h1 class="display-4">主題名稱</h1>
+  <p class="lead">摘要</p>
+  <hr class="my-4">
+  <p>內文</p>
+  <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
 </div>
 {{< /raw_html >}}
 

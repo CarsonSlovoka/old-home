@@ -77,43 +77,59 @@ The ``&`` character in Sass is unique in that it represents the **current select
 
 關於一些開頭為``@``保留字的用法都可以在這邊找到
 
-個人覺得很有用的像是
+這裡介紹我自己覺得比較有用的項目
 
-- [@use]
+### [@use]
 
     > :exclamation: 不要再使用[@import]它已經棄用，不再支持了！
 
-- ``@mixin`` and ``@incluce``: mixin本身有點像宣告的意思，而被mixin的東西都可以被include，所以這兩者相互搭配
-- [@function]\: 和一般我們熟悉的function差不多
+### ``@mixin`` and ``@incluce``
 
-  - 預設值:
-    - ``@function($size: null)``
-    - ```
-      $-my_size: 12px
-      @function($size: $-my_size)
-      ```
-      [私有變數](https://sass-lang.com/documentation/at-rules/use#private-members) 可以用``_``或者``-``來開頭，官方的文檔都是用``-``
-  - 區域變數:
-    在 @if或者@function所宣告的變數都是``區域變數``
+mixin本身有點像宣告的意思，而被mixin的東西都可以被include，所以這兩者相互搭配
 
-- [@debug]\: 很常用到像，如同Python的print一樣可以把結果顯示出來，例如:
-  ```sass
-  @debug 4px * 6px
+### [@function]
+
+和一般我們熟悉的function差不多
+
+- 預設值:
+- ``@function($size: null)``
+- ```
+  $-my_size: 12px
+  @function($size: $-my_size)
   ```
+  [私有變數](https://sass-lang.com/documentation/at-rules/use#private-members) 可以用``_``或者``-``來開頭，官方的文檔都是用``-``
+- 區域變數:
+在 @if或者@function所宣告的變數都是``區域變數``
 
-  > ``your.sass:10 Debug: 24px*px``
-  它會跟你說，在哪一個``檔案``中的哪一``行``，的``數值``結果
+### [@debug]
 
-  ```sass
-  @debug "divider offset: #{$divider-offset}"
-  ```
-  ``#{}``的意思可以把引號"給移除，例如: ``h#{$i}`` 我們就需要h1, h2...而不是h"1"這種東西
+很常用到，如同Python的print一樣可以把結果顯示出來，例如:
+
+```sass
+@debug 4px * 6px
+```
+
+> ``your.sass:10 Debug: 24px*px``
+它會跟你說，在哪一個``檔案``中的哪一``行``，的``數值``結果
+
+{{< table/code-by-example "|40%">}}
+
+``#{}``的意思可以把引號"給移除，例如: ``h#{$i}`` 我們就需要h1, h2...而不是h"1"這種東西
+
+@@NEW-COL@@
+
+```sass
+@debug "divider offset: #{$divider-offset}"
+```
+
+{{< /table/code-by-example >}}
+
 
 ### @extend
 
 讓當前的selector也具備有怎樣的屬性
 
-{{< table/code-by-example >}}
+{{< table/code-by-example "SASS" "CSS">}}
 
 ```sass
 .error
