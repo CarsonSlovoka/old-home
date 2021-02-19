@@ -41,6 +41,10 @@ next_section = ""
 [How to create jumbotron in Bootstrap 5?] |
 [I want to align the text in a <td> to the top] |
 [Does Sass have a switch function?] |
+[CSS - Equal Height Columns?] |
+[How to 'add watch' in Chrome developer tools?] | Ctrl+Shift+A
+[How to render/show images in HTML created on the fly with Golang and gin-gonic] |
+[How to check whether a file or directory exists?] |
 
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/
@@ -60,9 +64,12 @@ next_section = ""
 [go-template error calling eq: invalid type for comparison in Go template]: https://stackoverflow.com/a/51923491
 [Why does z-index not work?]: https://stackoverflow.com/a/9191845
 [How to create jumbotron in Bootstrap 5?]: https://stackoverflow.com/a/63142090
-[I want to align the text in a <td> to the top]: https://stackoverflow.com/q/5671687/9935654
+[I want to align the text in a <td> to the top]: https://stackoverflow.com/q/5671687
 [Does Sass have a switch function?]: https://stackoverflow.com/a/33207817
 [CSS - Equal Height Columns?]: https://stackoverflow.com/q/2114757
+[How to 'add watch' in Chrome developer tools?]: https://stackoverflow.com/a/27247584
+[How to render/show images in HTML created on the fly with Golang and gin-gonic]: https://stackoverflow.com/a/57020723
+[How to check whether a file or directory exists?]: https://stackoverflow.com/a/51077254
 
 {{< /table/bootstrap-table >}}
 

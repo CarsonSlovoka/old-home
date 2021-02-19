@@ -1,6 +1,8 @@
 +++
 title = "font-awesome基礎教學"
 date = 2021-01-14T10:39:00+08:00
+lastmod = 2021-02-19
+featured_image = ""
 description = "一些常用的項目"
 tags = ["fontawesome"]
 bootstrap = true
@@ -83,6 +85,10 @@ Generate Subresource Integrity (SRI) attributes
 | :----: | :---- | :----: | ---- | ---- |
 | 📝 | Memo | 1F4DD
 | 🧾 | Receipt | 1F9FE
+📂 | Open File Folder
+📁 | FILE FOLDER | 1F4C1
+🗂️ | Card Index Dividers
+🖿 | Black Folder
 | 🐬 | Dolphin | 1F42C
 | 📙 | Orange book | 1F4D9
 | 📓 | Notebook
@@ -112,6 +118,7 @@ Generate Subresource Integrity (SRI) attributes
 🤝 | Contributing | 1F91D
 💕 | TWO HEARTS\nDonation | 1F495
 ❓ | QUESTION MARK\nCommunity Support | 2753
+👍 | 讚
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 

@@ -49,6 +49,8 @@ toc_bootstrap = true
 
     例如:[ctags]也可以從中安裝
 
+    其他範例: ``choco list --localonly go`` 只列出go相關的套件
+
 - ``choco list [name]``: 他就只會列出該項名稱，名稱可以是模糊的
 
 - ``choco upgrade chocolatey``: [更新chocolate](https://chocolatey.org/docs/commandsupgrade)的應用程序

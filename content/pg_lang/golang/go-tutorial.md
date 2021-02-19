@@ -67,6 +67,34 @@ asmfmt | ``github.com/klauspost/asmfmt@master`` | ``%userprofile%\go\bin``
 
 ## [教學]
 
+### 環境變數
+
+{{< table/code-by-example  >}}
+
+一個要新增三個環境變數
+
+1. GOPATH
+2. GOROOT
+3. GO111MODULE
+
+   他用來管理如何找尋go module。我們用auto。
+
+   即當您有``go.mod``的檔案，他會去查看``%GOPATH%\pkg\mod``
+
+   若沒有``go.mod``就依照正常的方式運作。
+
+@@NEW-COL@@
+
+```
+GO111MODULE=auto
+GOPATH=C:\Users\your-name\go
+GOROOT=C:\Go\
+Path=...;%GOPATH%\bin
+```
+
+{{< /table/code-by-example >}}
+
+
 ### GOPATH
 
 從 go 1.8 開始，GOPATH 環境變數現在有一個預設值，如果它沒有被設定，他的預設值在這些系統分別是這樣設定:
