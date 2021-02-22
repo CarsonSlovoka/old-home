@@ -87,6 +87,12 @@ paginate = 10  # Default number of elements per page
 
 [menus]
   [[menus.main]]
+    name = "<i class='fas fa-search'></i>"
+    url = "/site-search/"
+    pre = ""  # {{- .Pre -}}
+    weight = 30
+
+  [[menus.main]]
     name = "地圖"
     url = "/site-markmap/"
     pre = "<i class='fas fa-sitemap' style='color: #b1e844'></i>"
@@ -97,11 +103,6 @@ paginate = 10  # Default number of elements per page
     # pre = "<img src='/images/home/hugo.png'/ style='vertical-align: middle;'>"
     pre = "<i class='fas fa-h-square' style='color: #e844a8'></i>"
     weight = 30  # 權重小的list取出時會優先，也就是最小的等同list[0]的位置，而無關寫的順序
-  [[menus.main]]
-    name = "動物"
-    url = "/animal/"
-    pre = "<i class='fas fa-dragon' style='color: #FF0000'></i>"  # fa-2x
-    weight = 99
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]  # 我們指定首頁可以支持的格式為這幾種(也就是layout/index.{html, rss, json}) 如果這些不在會再查看layout/default/index.{html, rss, json}
