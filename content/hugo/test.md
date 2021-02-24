@@ -5,9 +5,7 @@ draft = true
 toc = true
 bootstrap = true
 plantuml = true
-
-[article_image]
-    src = "images/hugo/gohugoio-card.jpg"
+featured_image = "images/hugo/gohugoio-card.jpg"
 +++
 
 ## Shortcodes-Details

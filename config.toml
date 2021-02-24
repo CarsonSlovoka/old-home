@@ -28,7 +28,7 @@ paginate = 10  # Default number of elements per page
 
 [params]
   # 這裡的變數是 .Site.Params.xxx
-  is_release = false
+  env = "production"  # is_release = false
   font-awesome = true  # 讓所有網站都啟用fontawesome
   bootstrap = true  # 讓所有網站都啟用bootstrap
   enable_search_fuse = true  # 這個是我自己補的，可能您的網站用的搜尋不一樣，所以才搞了這個方便調整。
@@ -106,3 +106,28 @@ paginate = 10  # Default number of elements per page
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]  # 我們指定首頁可以支持的格式為這幾種(也就是layout/index.{html, rss, json}) 如果這些不在會再查看layout/default/index.{html, rss, json}
+
+googleAnalytics = "UA-98900980-4"  # 參考一下此處:https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/google_analytics_async.html 就能瞭解為什麼加了這個就能開始使用google analytics
+[privacy]  # https://gohugo.io/about/hugo-and-gdpr/
+  # 可以視個人情況看是否禁用，預設都是開啟的
+  [privacy.disqus]
+    disable = false
+  [privacy.googleAnalytics]  # https://github.com/gohugoio/hugo/tree/master/tpl/tplimpl/embedded/templates
+    disable = false
+    anonymizeIP = false
+    respectDoNotTrack = false
+    useSessionStorage = false
+  [privacy.instagram]
+    disable = false
+    simple = false
+  [privacy.twitter]
+    disable = false
+    enableDNT = false
+    simple = false
+  [privacy.vimeo]
+    disable = false
+    enableDNT = false
+    simple = false
+  [privacy.youtube]
+    disable = false
+    privacyEnhanced = false
