@@ -45,6 +45,10 @@ next_section = ""
 [How to 'add watch' in Chrome developer tools?] | Ctrl+Shift+A
 [How to render/show images in HTML created on the fly with Golang and gin-gonic] |
 [How to check whether a file or directory exists?] |
+[Repository size limits for GitHub.com] | 2021年，每個庫5GB以上開始有警告(建議最好在1GB下)，最多不可超過100GB，單個檔案不可超過100MB
+[How to fix curl: (60) SSL certificate: Invalid certificate chain] | curl -k\n-k or --insecure Allow insecure server connections when using SSL
+[Seeking a way to clone the issues for github projects] | It is **not** possible to clone issues of GitHub repositories.
+[How can I delete my posted issue on GitHub?] | [Deleting an issue](https://docs.github.com/en/github/managing-your-work-on-github/deleting-an-issue)
 
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/
@@ -70,6 +74,10 @@ next_section = ""
 [How to 'add watch' in Chrome developer tools?]: https://stackoverflow.com/a/27247584
 [How to render/show images in HTML created on the fly with Golang and gin-gonic]: https://stackoverflow.com/a/57020723
 [How to check whether a file or directory exists?]: https://stackoverflow.com/a/51077254
+[Repository size limits for GitHub.com]: https://stackoverflow.com/a/59479166
+[How to fix curl: (60) SSL certificate: Invalid certificate chain]: https://stackoverflow.com/a/22170951
+[Seeking a way to clone the issues for github projects]: https://stackoverflow.com/q/56437562
+[How can I delete my posted issue on GitHub?]: https://webapps.stackexchange.com/a/124784
 
 {{< /table/bootstrap-table >}}
 

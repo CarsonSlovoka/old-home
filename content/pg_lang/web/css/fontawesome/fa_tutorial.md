@@ -95,10 +95,14 @@ Generate Subresource Integrity (SRI) attributes
 🔖 | Bookmark
 🕮 | Book
 📚 | Books
+❗  | exclamation
 🌱 | Earth Day
 🌎 | World Emoji Day
 📅 | Calendar | 1F4C5
 🕷️ | Spider
+🐛  | Bug
+󠁴🀄 | 中文
+💪 | enhancement
 ✍ | WRITING HAND、總結 | 270D
 📰 | NEWSPAPER、歷史文章 | 1F4F0
 👩‍💻 | ● 👩:Woman\n●💻: Personal computer | ●1F469\n●1F4BB | 這比較特別，他是兩個碼位組合而成的圖案
@@ -119,6 +123,7 @@ Generate Subresource Integrity (SRI) attributes
 💕 | TWO HEARTS\nDonation | 1F495
 ❓ | QUESTION MARK\nCommunity Support | 2753
 👍 | 讚
+👉 | Pointing Right
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 
@@ -128,5 +133,36 @@ Generate Subresource Integrity (SRI) attributes
 
 - [emojipedia]
 - [How can I create a text box for a note in markdown?](https://stackoverflow.com/a/65930459/9935654)
+
+## 在.github文件夾中可能有用的圖標
+
+
+| Unicode字元 | Desc | 建議bg顏色  |
+| ---- | ---- | ---- |
+{{<raw_html>}}<span style="color:white;background-color:#d73a4a;">🐛bug</span>{{</raw_html>}} | Something isn't working | #d73a4a
+{{<raw_html>}}<span style="color:white;background-color:#0075ca;">📰documentation</span>{{</raw_html>}} |  Improvements or additions to documentation | #0075ca
+{{<raw_html>}}<span style="color:white;background-color:#ff99e6;">💬discussion</span>{{</raw_html>}} | discussion some topics |  #ff99e6
+{{<raw_html>}}<span style="color:white;background-color:#7057FF;">👍good first issue</span>{{</raw_html>}} | Good for newcomers | #7057FF
+{{<raw_html>}}<span style="color:black;background-color:#faf47d;">💪enhancement</span>{{</raw_html>}} | New feature or request | #faf47d
+{{<raw_html>}}<span style="color:black;background-color:#0088672;">🙏help wanted</span>{{</raw_html>}} | Extra attention is needed | #0088672
+{{<raw_html>}}<span style="">🔧fix</span>{{</raw_html>}} | fix the problem
+{{<raw_html>}}<span style="color:white;background-color:#000000;">❓question</span>{{</raw_html>}} | Further information is requested | #000000
+{{<raw_html>}}<span style="color:black;background-color:#44fcf9;">📝todo</span>{{</raw_html>}} | 代辦事項 | #44fcf9
+{{<raw_html>}}<span style="color:white;background-color:#0052cc;">💡proposal</span>{{</raw_html>}} | 提案 | #0052cc
+{{<raw_html>}}<span style="color:black;background-color:#cfcfcf;">🚧pending</span>{{</raw_html>}} | 待辦 | #cfcfcf
+{{<raw_html>}}<span style="color:black;background-color:#e8e8e3;">🀄zh</span>{{</raw_html>}} | lang: 中文 | #e8e8e3
+{{<raw_html>}}<span style="color:black;background-color:#e8e8e3;">en</span>{{</raw_html>}} | english | #e8e8e3
+
+
+## github中README可能可以用到的圖標
+
+- 🔭 I’m currently working on ...
+- 🌱 I’m currently learning ...
+- 👯 I’m looking to collaborate on ...
+- 🤔 I’m looking for help with ...
+- 💬 Ask me about ...
+- 📫 How to reach me: ...
+- 😄 Pronouns: ...
+- ⚡ Fun fact: ...
 
 [emojipedia]: https://emojipedia.org/
