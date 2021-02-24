@@ -88,7 +88,7 @@ paginate = 10  # Default number of elements per page
 [menus]
   [[menus.main]]
     name = "<i class='fas fa-search'></i>"
-    url = "/site-search/"
+    url = "/site-search-simple/"
     pre = ""  # {{- .Pre -}}
     weight = 30
 
