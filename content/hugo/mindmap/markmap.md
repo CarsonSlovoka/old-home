@@ -22,6 +22,7 @@ toc_bootstrap = true
 
 ## 核心
 
+
 他的實現主要靠兩個:
 
 1. 運用D3.js[^D3.js]語法: ``<script src="https://cdn.jsdelivr.net/npm/d3@6.3.0"></script>``

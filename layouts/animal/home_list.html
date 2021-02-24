@@ -13,7 +13,8 @@
     muted 靜音，chrome更改了隱私政策，不允許帶聲音的視頻自動播放。(非首section可能可以，總之為了萬一，就加上它比較保險！)
   */}}
 
-  {{ $video_options := cond .Site.Params.is_release "autoplay loop" "controls" }}
+  {{/* $video_options := cond .Site.Params.is_release "autoplay loop" "controls" */}}
+  {{ $video_options := cond (eq .Site.Params.env "production") "autoplay loop" "controls" }}
   {{ $video_options := printf "%s %s" $video_options "muted" }}
   <div class="row">
     {{ partial "video/html_video" ( dict "src" "https://pmdvod.nationalgeographic.com/NG_Video/836/399/1507335747709_1556205445844_1507694147930_mp4_video_1024x576_1728000_3.mp4" "options" $video_options ) }}

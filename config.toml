@@ -28,7 +28,7 @@ paginate = 10  # Default number of elements per page
 
 [params]
   # 這裡的變數是 .Site.Params.xxx
-  is_release = false
+  env = "production"  # is_release = false
   font-awesome = true  # 讓所有網站都啟用fontawesome
   bootstrap = true  # 讓所有網站都啟用bootstrap
   enable_search_fuse = true  # 這個是我自己補的，可能您的網站用的搜尋不一樣，所以才搞了這個方便調整。
@@ -54,7 +54,7 @@ paginate = 10  # Default number of elements per page
   defaultMarkdownHandler = "goldmark"  # 如果您要換回blackFriday可以改這個，當然除了這些還有很多其他的配置，但是建議就用goldmark就好
   [markup.tableOfContents]
     startLevel = 2
-    endLevel = 4
+    endLevel = 5
 
   [markup.blackFriday]
     # [blackfriday] hugo目前預設是使用 Goldmark
@@ -87,6 +87,12 @@ paginate = 10  # Default number of elements per page
 
 [menus]
   [[menus.main]]
+    name = "<i class='fas fa-search'></i>"
+    url = "/site-search-simple/"
+    pre = ""  # {{- .Pre -}}
+    weight = 30
+
+  [[menus.main]]
     name = "地圖"
     url = "/site-markmap/"
     pre = "<i class='fas fa-sitemap' style='color: #b1e844'></i>"
@@ -97,11 +103,31 @@ paginate = 10  # Default number of elements per page
     # pre = "<img src='/images/home/hugo.png'/ style='vertical-align: middle;'>"
     pre = "<i class='fas fa-h-square' style='color: #e844a8'></i>"
     weight = 30  # 權重小的list取出時會優先，也就是最小的等同list[0]的位置，而無關寫的順序
-  [[menus.main]]
-    name = "動物"
-    url = "/animal/"
-    pre = "<i class='fas fa-dragon' style='color: #FF0000'></i>"  # fa-2x
-    weight = 99
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]  # 我們指定首頁可以支持的格式為這幾種(也就是layout/index.{html, rss, json}) 如果這些不在會再查看layout/default/index.{html, rss, json}
+
+googleAnalytics = "UA-98900980-4"  # 參考一下此處:https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/google_analytics_async.html 就能瞭解為什麼加了這個就能開始使用google analytics
+[privacy]  # https://gohugo.io/about/hugo-and-gdpr/
+  # 可以視個人情況看是否禁用，預設都是開啟的
+  [privacy.disqus]
+    disable = false
+  [privacy.googleAnalytics]  # https://github.com/gohugoio/hugo/tree/master/tpl/tplimpl/embedded/templates
+    disable = false
+    anonymizeIP = false
+    respectDoNotTrack = false
+    useSessionStorage = false
+  [privacy.instagram]
+    disable = false
+    simple = false
+  [privacy.twitter]
+    disable = false
+    enableDNT = false
+    simple = false
+  [privacy.vimeo]
+    disable = false
+    enableDNT = false
+    simple = false
+  [privacy.youtube]
+    disable = false
+    privacyEnhanced = false

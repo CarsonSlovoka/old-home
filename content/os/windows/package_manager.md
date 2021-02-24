@@ -22,7 +22,10 @@ toc_bootstrap = true
 
 2. 至官網按造步驟下載: https://chocolatey.org/install
 3. 打開powershell(用系統管理員身分開啟):
-4. ``Set-ExecutionPolicy AllSigned -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1')) -Force``:
+
+4. ```
+   Set-ExecutionPolicy AllSigned -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+   ```
 
    > 打完指令按下Enter之後就開始下載
    >
@@ -45,6 +48,8 @@ toc_bootstrap = true
     可以列出當前local端裝了哪些東西，基本上這些套件都安裝在: ``%programdata%\chocolatey\lib`` 或者 ``%programdata%\chocolatey\lib-bad`` 中
 
     例如:[ctags]也可以從中安裝
+
+    其他範例: ``choco list --localonly go`` 只列出go相關的套件
 
 - ``choco list [name]``: 他就只會列出該項名稱，名稱可以是模糊的
 

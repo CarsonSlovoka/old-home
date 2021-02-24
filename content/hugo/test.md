@@ -5,14 +5,26 @@ draft = true
 toc = true
 bootstrap = true
 plantuml = true
-
-[article_image]
-    src = "images/hugo/gohugoio-card.jpg"
+featured_image = "images/hugo/gohugoio-card.jpg"
 +++
 
-## h2
+## Shortcodes-Details
 
-h2
+### 普通文本
+
+{{< details "Details test">}}
+
+> 我是隱藏的區塊內容
+
+{{< /details >}}
+
+### 表格
+
+| Name | Desc |
+| ---- | ---- |
+| {{< details "Fruit">}} Apple, **banana** {{< /details >}} | Ya |
+
+## h2
 
 ### h21
 

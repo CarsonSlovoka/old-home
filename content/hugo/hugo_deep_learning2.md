@@ -43,11 +43,7 @@ Lorem ipsum[^foo] dolor sit amet[^bar], consectetur adipiscing elit[^3].
 [^foo]: first footnote
 ```
 
-這是我在Stackoverflow上找到的答案，我不得不說，Hugo的論談有點差(我比較客氣，所以我說有點差...)
-
-講一狗票東西沒有一個講到重點，要不就是貼Github的issue叫你連過去看...
-
-結論是當您在Hugo中的論壇找不到答案，不妨在Stackoverflow上搜尋一下。(您在google的搜尋引擎搜，先跑出來的通常都是Hugo官方資料，要不就是Hugo的討論區)
+當您在Hugo中的論壇找不到答案，不妨在Stackoverflow上搜尋一下。(您在google的搜尋引擎搜，先跑出來的通常都是Hugo官方資料，要不就是Hugo的討論區)
 
 更多Markdown的[特殊語法](https://www.markdownguide.org/extended-syntax/)
 

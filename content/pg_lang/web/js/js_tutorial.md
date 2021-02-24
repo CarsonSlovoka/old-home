@@ -2,7 +2,7 @@
 title = "JS tutorial"
 description="JS基礎教學"
 date = 2021-01-19T19:16:26+08:00
-lastmod = 2021-01-19
+lastmod = 2021-02-21
 featured_image = ""
 draft = false
 weight=0
@@ -12,7 +12,7 @@ toc_markmap = true
 toc_bootstrap = true
 [next_and_previous.link]
   previous_page = ""
-  next_page = ""
+  next_page = "pg_lang/web/js/js_web_api"
   previous_section = ""
   next_section = ""
 +++
@@ -24,6 +24,16 @@ toc_bootstrap = true
 ## Docs
 
 - [MDN Web Docs-JavaScript]
+
+## if else
+
+### === v.s. ==
+{{< table/bootstrap-table >}}
+| @@w=10%@@name | desc |
+| ---- | ---- |
+ == | in JavaScript is used for comparing two variables, but it **ignores** the datatype of variable.\n表面上等於
+=== | is used for comparing two variables, but this operator **also checks datatype** and compares two values.\n完全等於
+{{< /table/bootstrap-table >}}
 
 ## Variable
 
@@ -46,7 +56,26 @@ toc_bootstrap = true
   JSON.stringify(my_dict, null, 2)  // 也可以格式化字串(2個空白)
   ```
 
+### list
+
+[destructuring assignment syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+
+```js
+let a, b, rest;
+[a, b, ...rest] = [10, 20, 30, 40, 50];
+// a = 10, b = 20
+console.log(rest);
+// expected output: Array [30,40,50]
+```
+
 ### dict
+
+當變數名稱和key名稱相同的時候，可以直接放入該變數即可
+
+```js
+const [key, v] = ["Name", 123]
+const myDict = {key, v}  //  等價於 {"key": key, "v": v}
+```
 
 #### Set
 
