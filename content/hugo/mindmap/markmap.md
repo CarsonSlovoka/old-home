@@ -168,7 +168,7 @@ toc_bootstrap = true
 
 ## markmap測試
 
-> :exclamation: js有先後順序front matter的markmap不能放在article_image之後！
+> :exclamation: 如果您用toml，front matter[應該要先寫個別的元素，之後才是寫object]({{<ref "hugo_front_matter#object-dict">}})
 
 語法:
 ```json

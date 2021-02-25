@@ -72,15 +72,15 @@ weight=10
 {{< /table/bootstrap-table>}}
 
 
-### Dict
+## Object (Dict)
 
 如果您要使用dict，請把dict分一「塊」，一般變數分一「塊」。
 
 例如:
 
-正確的範例:
+{{< table/code-by-example "正確的範例" "錯誤範例" >}}
 
-```toml
+```toml {linenos=inline,hl_lines=[2]}
 title="..."
 description = "..."
 [my_dict_1]
@@ -89,19 +89,21 @@ description = "..."
     item = "..."
 ```
 
-錯誤範例:
+@@NEW-COL@@
 
-```toml
+```toml {linenos=inline,hl_lines=[2,4,7]}
 title="..."
 [my_dict_1]
     item = "..."
-description = "..."
+description = "..."  # 這個元素之前有一個[my_dict_1]object(dict)，所以這個元素會沒有作用
 [my_dict_2]
     item = "..."
 description2 = "..."
 ```
 
 description和description2都將無法顯示
+
+{{< /table/code-by-example >}}
 
 
 ## Toml設定方式

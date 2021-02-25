@@ -1,3 +1,5 @@
+# 注意！ toml有順序性，要先寫個別的元素之後才能寫object(dict)的內容，如果把個別的元素安插在object(dict)之中會沒有作用
+
 baseURL = "https://carsonslovoka.github.io/"  # "http://example.org/"  "/"  "http://localhost:8000/"  <-- 如果要放到本機可以用localhost配合python http.server即可
 title = "Carson Blog"
 copyright = "Carson 2020-"
@@ -25,6 +27,8 @@ paginate = 10  # Default number of elements per page
 
 # pygmentsCodeFences = true
 # pygmentsUseClasses = true  # 請在params中也加入，才可以導入syntax.css
+
+googleAnalytics = "UA-98900980-4"  # 參考一下此處:https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/google_analytics_async.html 就能瞭解為什麼加了這個就能開始使用google analytics
 
 [params]
   # 這裡的變數是 .Site.Params.xxx
@@ -107,7 +111,6 @@ paginate = 10  # Default number of elements per page
 [outputs]
   home = ["HTML", "RSS", "JSON"]  # 我們指定首頁可以支持的格式為這幾種(也就是layout/index.{html, rss, json}) 如果這些不在會再查看layout/default/index.{html, rss, json}
 
-googleAnalytics = "UA-98900980-4"  # 參考一下此處:https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/google_analytics_async.html 就能瞭解為什麼加了這個就能開始使用google analytics
 [privacy]  # https://gohugo.io/about/hugo-and-gdpr/
   # 可以視個人情況看是否禁用，預設都是開啟的
   [privacy.disqus]

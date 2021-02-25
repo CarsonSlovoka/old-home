@@ -96,6 +96,8 @@ toc_bootstrap = true
 
 所以我們知道還要在config.toml中提供一個GoogleAnalytics才可行，
 
+> 如果是toml，``googleAnalytics``必須設定在object之前，詳請參考:[front-matter-object]({{< ref "hugo_front_matter#object-dict" >}})
+
 接下來的東西就回到google analytics本身了(總之GA就是把那段script貼到您要的網頁上即可，只是hugo幫您包裝好這件事罷了)
 
 @@NEW-COL@@
