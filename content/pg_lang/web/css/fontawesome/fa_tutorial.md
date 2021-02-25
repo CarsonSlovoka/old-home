@@ -1,7 +1,7 @@
 +++
 title = "font-awesome基礎教學"
 date = 2021-01-14T10:39:00+08:00
-lastmod = 2021-02-19
+lastmod = 2021-02-25
 featured_image = ""
 description = "一些常用的項目"
 tags = ["fontawesome"]
@@ -124,6 +124,7 @@ Generate Subresource Integrity (SRI) attributes
 ❓ | QUESTION MARK\nCommunity Support | 2753
 👍 | 讚
 👉 | Pointing Right
+👆 | Pointing Up
 😂 | Laughing
 🤣 | Rolling on the Floor Laughing,
 

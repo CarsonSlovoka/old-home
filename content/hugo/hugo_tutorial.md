@@ -1,10 +1,13 @@
 +++
 title = "Hugo教學"
 date = 2020-12-04T10:29:18+08:00
+lastmod = 2021-02-25
 description = "帶您快速的完成Hugo的Hello world"
 tags = ["hugo"]
 draft = false
-toc = true
+markmap = true
+toc_markmap = true
+toc_bootstrap = true
 bootstrap = true
 +++
 
@@ -157,10 +160,60 @@ toml(**Tom's Obvious, Minimal Language**) 很像ini檔案，但是它可以嵌�
 
 ## Hugo指令
 
+共有flags和command可以運用，其中command之後可以再用flags
+
+    Usage:
+        hugo [flags]
+        hugo [command]
+
+### 推薦Command
 - ``hugo help``: 查看幫助
 - ``hugo server --buildDrafts --buildExpired --buildFuture --theme ananke``: 啟動Server，主題使用ananke (注意如果這邊有設定主題它會覆蓋掉 config.toml中的theme設定)
-- ``hugo -D``: 將資源檔打包，形成一個靜態包，預設放在``public``資料夾中
 
+### 推薦flags
+
+{{< table/bootstrap-table >}}
+| @@w=15%@@name | desc | Example |
+| ----| ----| ---- |
+``--buildDrafts``\n``-D``| 會渲染draft的項目
+``--minify`` | minify any supported output format (HTML, XML etc.) 非常有用的東西，不管您要運行還是打包都可以用，就能最小化打包檔 | ``hugo -D --minify``: 將資源檔打包，形成一個靜態包，預設放在``public``資料夾中
+{{< /table/bootstrap-table >}}
+
+#### [minify](https://gohugo.io/getting-started/configuration/#configure-minify)
+
+如果您對預設提供出來的minify項目還是不滿意，Hugo也提供您自定義
+
+```toml
+[minify]
+  disableCSS = false
+  disableHTML = false
+  disableJS = false
+  disableJSON = false
+  disableSVG = false
+  disableXML = false
+  minifyOutput = false
+  [minify.tdewolff]
+    [minify.tdewolff.css]
+      keepCSS2 = true
+      precision = 0
+    [minify.tdewolff.html]
+      keepComments = false
+      keepConditionalComments = true
+      keepDefaultAttrVals = true
+      keepDocumentTags = true
+      keepEndTags = true
+      keepQuotes = false
+      keepWhitespace = false
+    [minify.tdewolff.js]
+      keepVarNames = false
+      precision = 0
+    [minify.tdewolff.json]
+      precision = 0
+    [minify.tdewolff.svg]
+      precision = 0
+    [minify.tdewolff.xml]
+      keepWhitespace = false
+```
 
 ## 疑難排解
 
