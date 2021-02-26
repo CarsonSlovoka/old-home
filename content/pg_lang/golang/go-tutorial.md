@@ -1,6 +1,7 @@
 +++
 title = "golang基礎教學"
 date = 2021-01-14T10:39:00+08:00
+lastmod = 2021-02-26
 description = "golang安裝以及基礎教學"
 tags = ["golang"]
 bootstrap = true
@@ -359,6 +360,111 @@ import (
 
 萬一作者真的刪除再從source code把各項名稱("github.com/``yofu``/dxf")改成自己的名稱即可再用。
 
+## go env指令
+
+你可能會覺得很煩一下要設定GO111MODULE, GOROOT, GOPATH, GOPROXY, GOPRIVATE, GOTMPDIR...各種環境變數很煩
+
+好的！你可以在系統上加這些環境變數，那他會以系統的為主。
+
+而如果妳希望用一個簡單的命令就能更改這些變數，``go env``誕生了！
+
+> go env
+
+當您執行完之後可以看到現在go上的所有環境變數的設定，你就會了解這些變數目前您用的是什麼
+
+接下來如果你想要寫入，可以這麼做
+
+| OS | cmd |
+| ---- | ---- |
+Windows | ``go env -w GOPROXY="https://goproxy.io,direct"``
+Mac/Linux | ``export GOPROXY=https://goproxy.io,direct``
+
+這麼一來就能直接寫入到GOPROXY中去了
+
+您可能會好奇，``go env -w``如果不是直接改系統變數，那他這些數值是保存在哪邊？ (可以參考👉[Where are the golang environment variables stored?])
+
+> go env GOENV
+
+其實你用``go env``看也是可以，只是go env會全部都列出來，你要慢慢找...
+
+go env後面接上您想要看到的環境變數即可列出該變數！
+
+⚠ 最後提醒您！
+> 如果您的系統變數已經有設定了，他會以系統變數為主。
+>
+> 即go env先看系統變數有系統變數就用它，沒有了話才去看env的檔案內容。
+
+### GOPROXY是什麼？
+
+在go的世界，當我們要導入其他模塊，可以很方便的從知名的VCS[^VCS]中導入
+
+舉例一些VCS的提供方:
+
+- Github
+- Bitbucket
+- SVN (Subversion)
+- [Bazaar](https://bazaar.canonical.com/en/)
+- [Fossil](https://fossil-scm.org/home/doc/trunk/www/index.wiki)
+- [Mercurial](https://www.mercurial-scm.org/)
+
+↑[參考資料](https://golang.org/ref/mod#vcs)
+
+考慮一種情況，如果作者對當前版本做修改，或者直接把專案刪除，那麼您的專案又該怎麼辦?
+
+也許你會說當你一開始做這件事時已經會下載一份到``%GOPATH%\pkg\mod``，了不起再把那個資料夾複製到您要的電腦就好了...
+
+這很麻煩，而且也不適用在你以外的其他人身上。
+
+因此在[Go 1.13]開始，Go Module成為了Golang的標準包管理器，在安裝的時候會自動作用，並且有一個環境變數GOPROXY，可以對它影響。
+
+那GOPROXY就是一個代理，所有的VCS都能送一份副本至GOPROXY，那麼即便最後作者在自己的VCS中把該專案刪除，GOPROXY還是能抓的到不受影響，
+
+也就是說GOPROXY可以簡單的理解成，一個共用庫統一管理大家的程式碼。
+
+而GOPROXY也有很多，例如:
+
+- https://gocenter.io
+- https://goproxy.cn
+  > 中國大陸沒有辦法訪問: https://proxy.golang.org ，所以https://goproxy.cn對中國很有用。
+  >
+  > - 👉 [參考資料一: 干货满满的 Go Modules 和 goproxy.cn](https://juejin.cn/post/6844903954879348750)
+  > - 👉 [參考資料二](https://www.mdeditor.tw/pl/pN6v/zh-tw)
+
+而當然如果您有一些私有的項目，不能丟到gocenter，可以在設置GOPRIVATE，例如
+
+> ``GOPRIVATE=*.internal.mycompany.com``
+>
+>  ``go env -w GOPRIVATE=*.corp.example.com,github.com/org_private``
+
+讓一些項目可以從Private VCS Repos中來下載，有興趣請在自己去研究GOPRIVATE...以下我們還是把精力放在GOPROXY
+
+----
+
+官方提供考靠的GOPROXY
+
+- proxy.golang.org
+    > ❗ ``proxy.golang.org does`` not save all modules forever. 在一些特殊情況下模塊可能不會被永久保存
+- sum.golang.org
+- index.golang.org
+
+如果你不想要用GOPROXY想要直接從VCS導入，那您可以設定:
+
+> ``GOPROXY=direct``
+
+表明您要直接的從VCS來下載
+
+當然GOPROXY可以同時設定很多個，用「``,``」隔開就好了，例如:
+
+> ``GOPROXY=https://proxy.golang.org,direct``
+
+
+以上的詳細資訊，如果有興趣深入研究再請[參考](https://proxy.golang.org/)
+
+GOPROXY下載通常速度都比直接從VCS要快得多！
+
+
+[^VCS]: [version control syste](https://zh.wikipedia.org/wiki/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6)
+
 ## 參考資料
 
 - https://www.mdeditor.tw/pl/2J1M/zh-tw
@@ -368,3 +474,5 @@ import (
 [安裝 Go]: https://github.com/astaxie/build-web-application-with-golang/blob/master/zh-tw/01.1.md
 [教學]: https://github.com/astaxie/build-web-application-with-golang/blob/master/zh-tw/preface.md
 [go packages]: https://golang.org/pkg/
+[Go 1.13]: https://golang.org/doc/go1.13
+[Where are the golang environment variables stored?]: https://stackoverflow.com/questions/40825613/where-are-the-golang-environment-variables-stored

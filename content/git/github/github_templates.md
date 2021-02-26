@@ -397,6 +397,22 @@ Github也像[shields.io]有提供一些圖片讓使用者顯示一些統計資�
 </a>
 {{</raw_html>}}
 
+----
+
+以下是另一種風格:
+
+{{< table/code-by-example "Output" "代碼" >}}
+
+[![CarsonSlovoka's github stats](https://github-readme-stats.vercel.app/api?username=CarsonSlovoka)](https://github.com/CarsonSlovoka/vue-admin-beautiful)
+
+@@NEW-COL@@
+
+```markdown
+[![CarsonSlovoka's github stats](https://github-readme-stats.vercel.app/api?username=CarsonSlovoka)](https://github.com/CarsonSlovoka/vue-admin-beautiful)
+```
+
+{{< /table/code-by-example >}}
+
 
 [configuring-the-template-chooser]: https://docs.github.com/en/github/building-a-strong-community/configuring-issue-templates-for-your-repository#configuring-the-template-chooser
 [configuration-options-for-dependabotyml]: https://docs.github.com/en/github/administering-a-repository/configuration-options-for-dependency-updates#configuration-options-for-dependabotyml

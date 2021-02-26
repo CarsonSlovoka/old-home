@@ -1,7 +1,7 @@
 +++
 title = "font-awesome基礎教學"
 date = 2021-01-14T10:39:00+08:00
-lastmod = 2021-02-25
+lastmod = 2021-02-27
 featured_image = ""
 description = "一些常用的項目"
 tags = ["fontawesome"]
@@ -13,6 +13,21 @@ toc_bootstrap = true
 [next_and_previous.link]
     next_section="/pg_lang/web/css/bootstrap/bs_tutorial"
 +++
+
+## Icons
+
+fontawesome主要就是用來取得一些漂亮的圖標的，
+
+以下這些是常用的前端圖標庫:
+
+1. [fontawesome]
+2. [fontello]
+3. [livicons]
+4. [ionicons]
+5. [material]
+6. [iconfont] (阿里巴巴)
+
+每一種都有提供CSS, JS等等幫助您快速應用，而本篇只講fontawesome
 
 ## 取得線上的CSS, JS
 
@@ -95,7 +110,7 @@ Generate Subresource Integrity (SRI) attributes
 🔖 | Bookmark
 🕮 | Book
 📚 | Books
-❗  | exclamation
+❗  | exclamation | 2757
 ⚠  | Warning sign | 26A0
 🌱 | Earth Day
 🌎 | World Emoji Day
@@ -125,7 +140,7 @@ Generate Subresource Integrity (SRI) attributes
 💕 | TWO HEARTS\nDonation | 1F495
 ❓ | QUESTION MARK\nCommunity Support | 2753
 👍 | 讚
-👉 | Pointing Right
+👉 | Pointing Right | 1F449
 👆 | Pointing Up
 😂 | Laughing
 🤣 | Rolling on the Floor Laughing,
@@ -188,6 +203,13 @@ Generate Subresource Integrity (SRI) attributes
 
 {{< /table/bootstrap >}}
 
+
+[fontawesome]: https://fontawesome.com/
+[fontello]: https://fontello.com/
+[livicons]: https://livicons.com/
+[ionicons]: https://ionicons.com/
+[material]: https://material.io/resources/icons
+[iconfont]: https://www.iconfont.cn/
 
 [emojipedia]: https://emojipedia.org/
 [Shields.io]: https://shields.io/category/social
