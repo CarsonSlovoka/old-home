@@ -96,6 +96,7 @@ Generate Subresource Integrity (SRI) attributes
 🕮 | Book
 📚 | Books
 ❗  | exclamation
+⚠  | Warning sign | 26A0
 🌱 | Earth Day
 🌎 | World Emoji Day
 📅 | Calendar | 1F4C5
@@ -111,6 +112,7 @@ Generate Subresource Integrity (SRI) attributes
 🥴 | Drunk Face\nWoozy Face\nFace with Uneven Eyes and Wavy Mouth | 1F974
 😵 | DIZZY FACE | 1F635
 ✨ | SPARKLES\nFeatures | 2728
+⭐ | WHITE MEDIUM STAR | 2B50
 📦 | PACKAGE\nInstallation Guide | 1F4E6
 🌈 | RAINBOW\nOnline Examples | 1F308
 💿 | OPTICAL DISC | 1F4BF
@@ -127,6 +129,8 @@ Generate Subresource Integrity (SRI) attributes
 👆 | Pointing Up
 😂 | Laughing
 🤣 | Rolling on the Floor Laughing,
+🗑 | deprecated
+🚮 | deprecated
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 
@@ -153,8 +157,12 @@ Generate Subresource Integrity (SRI) attributes
 {{<raw_html>}}<span style="color:black;background-color:#44fcf9;">📝todo</span>{{</raw_html>}} | 代辦事項 | #44fcf9 {{< show-color "#44fcf9" >}}
 {{<raw_html>}}<span style="color:white;background-color:#0052cc;">💡proposal</span>{{</raw_html>}} | 提案 | #0052cc {{< show-color "#0052cc" >}}
 {{<raw_html>}}<span style="color:black;background-color:#cfcfcf;">🚧pending</span>{{</raw_html>}} | 待辦 | #cfcfcf {{< show-color "#cfcfcf" >}}
+{{<raw_html>}}<span style="color:red;background-color:black;">🚮deprecated</span>{{</raw_html>}} | deprecated (將來會廢棄的項目) | #000000 {{< show-color "#000000" >}}
 {{<raw_html>}}<span style="color:black;background-color:#e8e8e3;">🀄zh</span>{{</raw_html>}} | lang: 中文 | #e8e8e3 {{< show-color "#e8e8e3" >}}
 {{<raw_html>}}<span style="color:black;background-color:#e8e8e3;">en</span>{{</raw_html>}} | english | #e8e8e3 {{< show-color "#e8e8e3" >}}
+-- |
+{{<raw_html>}}<span style="color:black;background-color:#e8e8e3;">⏩shortcode</span>{{</raw_html>}} | Shortcode | #e8e8e3 {{< show-color "#e8e8e3" >}}
+{{<raw_html>}}<span style="color:black;background-color:#e8e8e3;">🔎search</span>{{</raw_html>}} | about search | #e8e8e3 {{< show-color "#e8e8e3" >}}
 
 
 ## github中README可能可以用到的圖標
@@ -168,4 +176,19 @@ Generate Subresource Integrity (SRI) attributes
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 
+## [Shields.io]
+
+蒐集一些我認為比較有用到的圖例
+
+{{< table/bootstrap >}}
+
+| @@w=15%@@成品 | 說明 | 代碼 |
+| ---- | ---- | ---- |
+[![Go Playground](https://img.shields.io/badge/Go-Playground-5593c7.svg?labelColor=41c3f3&style=for-the-badge)](https://play.golang.org/p/eqjvu-vO8sr) | 可以用圖片+連結的方式來呈現\n | ``[![Go Playground](https://img.shields.io/badge/Go-Playground-5593c7.svg?labelColor=41c3f3&style=for-the-badge)](https://play.golang.org/p/eqjvu-vO8sr)``
+
+{{< /table/bootstrap >}}
+
+
 [emojipedia]: https://emojipedia.org/
+[Shields.io]: https://shields.io/category/social
+

@@ -365,6 +365,14 @@ contact_links:
 - [About default labels](https://docs.github.com/en/github/managing-your-work-on-github/managing-labels#about-default-labels)
 - [搜尋標籤](https://docs.github.com/cn/github/managing-your-work-on-github/using-search-to-filter-issues-and-pull-requests)
 
+### [Search by the title, body, or comments](https://docs.github.com/en/github/searching-for-information-on-github/searching-issues-and-pull-requests#search-by-the-title-body-or-comments)
+
+| Qualifier | Example |
+| ---- | ---- |
+``in:title`` | ``warning in:title`` matches issues with "warning" in their title.
+``in:body`` | ``error in:title,body`` matches issues with "error" in their title or body.
+``in:comments`` | ``shipit in:comments`` matches issues mentioning "shipit" in their comments.
+
 
 ## [Github主頁上的README.md](https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/managing-your-profile-readme)
 

@@ -49,6 +49,7 @@ next_section = ""
 [How to fix curl: (60) SSL certificate: Invalid certificate chain] | curl -k\n-k or --insecure Allow insecure server connections when using SSL
 [Seeking a way to clone the issues for github projects] | It is **not** possible to clone issues of GitHub repositories.
 [How can I delete my posted issue on GitHub?] | [Deleting an issue](https://docs.github.com/en/github/managing-your-work-on-github/deleting-an-issue)
+[Removing input background colour for Chrome autocomplete?] | 更改autocomplete的顏色
 
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/
@@ -78,6 +79,7 @@ next_section = ""
 [How to fix curl: (60) SSL certificate: Invalid certificate chain]: https://stackoverflow.com/a/22170951
 [Seeking a way to clone the issues for github projects]: https://stackoverflow.com/q/56437562
 [How can I delete my posted issue on GitHub?]: https://webapps.stackexchange.com/a/124784
+[Removing input background colour for Chrome autocomplete?]: https://stackoverflow.com/a/46829178
 
 {{< /table/bootstrap-table >}}
 
