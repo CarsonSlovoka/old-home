@@ -31,7 +31,7 @@ paginate = 10  # Default number of elements per page
 googleAnalytics = "UA-98900980-4"  # 參考一下此處:https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/google_analytics_async.html 就能瞭解為什麼加了這個就能開始使用google analytics
 
 [params]
-  # 這裡的變數是 .Site.Params.xxx
+  # 這裡的變數是 .Site.Params.xxx  可以套用在baseof.html身上，也就是變相的增加該front matter
   env = "production"  # is_release = false
   font-awesome = true  # 讓所有網站都啟用fontawesome
   bootstrap = true  # 讓所有網站都啟用bootstrap

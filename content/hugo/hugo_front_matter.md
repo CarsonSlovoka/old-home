@@ -1,6 +1,7 @@
 +++
 title = "Front Matter"
 date = 2021-01-18T17:36:00+08:00
+lastmod = 2021-03-05
 description = "Front Matter注意事項"
 tags = ["hugo"]
 markmap = true
@@ -14,6 +15,120 @@ weight=10
 我這篇文章主要是以toml的立場去寫的，因為我自己就是用這個格式，然後把一些坑記錄下來
 
 ## Front Matter
+
+### 設定
+
+這個主題談論您想要用front matter做什麼事情？
+
+當您在 single.html 或 list.html 時，您想讓front matter怎麼幫你
+
+首先，我們要知道，你在這些頁面，都可以有辦法獲取這三個front matter
+
+1. config.toml.params
+2. 該檔案的front matter
+3. sections
+
+
+#### config.toml.params
+
+```toml
+[params]
+  show_reading_time = true  # 這個只是舉例
+  ...
+```
+
+寫在config.toml中的params，
+
+當您切換到該頁面的時候，這些front matter**等於也直接寫在該頁面front matter**
+
+也就是頁面下的``.Param``可以抓到的變數有
+
+1. ``config.toml.params``
+2. 該頁面自己的front matter
+
+而如果您只想要取得config.toml.params中的而已，要用:
+
+> ``.Site.``Param "xxx"
+
+{{< table/bootstrap >}}
+
+| @@w=20%@@語法 | 包含 |
+| ---- | ---- |
+``.Site.Param``    | ● 只有config.toml.params
+``.Param "xxx"`` | ● config.toml.params\n● 自己的front matter
+
+{{< /table/bootstrap >}}
+
+寫在config.toml來控制的東西就是這些控制是比較全面的，
+
+你不想要在每一個頁面都決定，想要統一管理的時候可以考慮加在這邊
+
+#### 該檔案的front matter
+
+不是那麼常態需要決定，很常要更動的項目可以考慮加在這邊
+
+#### sections
+
+您在頁面下，如果要取得該頁面是位於哪一個section
+
+可以用
+
+"[0.45](https://gohugo.io/functions/getpage/) 以前的做法" {{< details >}}
+
+> ``{{- $section := .Site.GetPage "section" .Section -}}``
+
+{{< /details >}}
+
+現在的做法:
+
+> ``{{- $section := .Site.GetPage .Section -}}``
+
+當您希望某一個Section下都套用此設定時，就加在這邊。
+
+好處是該section底下都會套用，又不像config中的那麼霸道，全域套用。
+
+> 🔔: section是跟目錄下第一層的內容，裡頭再多的子資料夾的section也都是看第一層的而已
+
+
+#### 小節
+
+最後用一個範例來結束
+
+{{< table/code-by-example "|35%" "" >}}
+
+- 1: 取得該頁面的section
+- 9: 由於.Param包含了:
+    - global.params
+    - page.front matter
+
+  也就是能當作 1) 和 3) 條件的判斷
+
+至於2) 就利用
+
+> $section.Param
+
+即可完成
+
+本例子用來判別是否顯示「字數」和「閱讀時間」
+
+@@NEW-COL@@
+
+```go-html-template {linenos=inline, hl_lines=[1,"5-7",9]}
+{{- $section := .Site.GetPage .Section -}}
+
+{{/*
+  Show "reading time" and "word count" but only if one of the following are true:
+  1) A global config `params` value is set `show_reading_time = true`
+  2) A section front matter value is set `show_reading_time = true`
+  3) A page front matter value is set `show_reading_time = true`
+*/}}
+{{ if (or (eq (.Param "show_reading_time") true) (eq $section.Params.show_reading_time true) )}}
+    <span class="f6 mv4 dib tracked"> - 🕒 {{ .ReadingTime}} minutes read</span>
+    <span class="f6 mv4 dib tracked"> - {{ .WordCount}} words</span>
+{{ end }}
+```
+
+{{< /table/code-by-example >}}
 
 ### [屬性介紹](https://gohugo.io/content-management/front-matter/#front-matter-variables)
 
@@ -103,7 +218,33 @@ description2 = "..."
 
 description和description2都將無法顯示
 
+實際上toml並沒有縮排的概念！
+
+也就是
+```toml
+[my_dict_1]
+    item = "..."
+description = "..."
+```
+
+完全等價於
+
+```toml
+[my_dict_1]
+    item = "..."
+    description = "..."
+```
+
+並非我們預期的
+
+```toml
+description = "..."
+[my_dict_1]
+    item = "..."
+```
+
 {{< /table/code-by-example >}}
+
 
 
 ## Toml設定方式

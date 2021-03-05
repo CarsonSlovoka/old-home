@@ -10,6 +10,46 @@ toc_markmap = true
 toc_bootstrap = true
 +++
 
+## 套件管理系統
+
+{{< table/bootstrap-table >}}
+
+套件管理      | choco        | dpkg             | aptitude        | apt-get         | apt-cache       | rpm             | yum            | [pacman](https://wiki.archlinux.org/index.php/Pacman_%28%E6%AD%A3%E9%AB%94%E4%B8%AD%E6%96%87%29)
+-----------  | ----------- | ---------------- | --------------- | --------------- | --------------- | --------------- | --------------- | ---------------
+OS           | Windows     | Debian/Ubuntu    | Debian/Ubuntu   | Debian/Ubuntu   | Debian/Ubuntu   | CentOS/RHEL     | CentOS/RHEL     | ArchLinux
+列出所有的套件 | list        | -l              |                 |                 |                  | -qa             | list           |
+搜尋          | list        | -l grep          | search         |                 | search           | -qa grep        | search         | --search
+查看詳細資訊   |             | -l               | show           |                 | show             | -qi             | info           |
+安裝          | install     | -i               | install         | install         |                  | -ivh           | install         | -S
+更新套件       | upgrade     |                 | update          | update          |                  |                 |                |
+升級           | upgrade     |                 | upgrade         | upgrade         |                  |  -Uvh           | update        |
+移除           | uninstall   | -r              | remove          | remove          |                  |  -e             | remove        | -R
+移除(含設定檔)  |             | -P              | purge           | purge           |                  |                 |
+清除已下載套件  |             | clean           | clean           |                 |                  |                 | clean
+
+{{< /table/bootstrap-table >}}
+
+## 程式語言的套件管理系統
+
+{{< table/bootstrap-table >}}
+Lang              | Python       | golang     | ruby        | node js |
+----------------- | -----------  | ------     | ------      | ------- |
+管理工具名稱       | pip          | go         | gem         | npm     |
+查看管理工具版號    | --version    | version   | --version    | --version
+取得套件           | install       | get       | install     | install
+{{< /table/bootstrap-table >}}
+
+## [GCC](https://github.com/orlp/dev-on-windows/wiki/Installing-GCC--&-MSYS2)
+
+GCC is a very good compiler collection, and is fully free.
+
+## [pacman](https://zh.wikipedia.org/wiki/Pacman)
+
+Pacman是一個**軟體包管理器**，作為Arch Linux發行版的一部分。它最早由Arch Linux的Judd Vinet開發。Pacman可以解決安裝過程中的依賴問題，自動下載並且安裝所有需要的軟體包。
+
+Pacman也被移植到Windows，作為基礎系統的一部分隨MSYS2分發。
+
+
 ## choco
 
 ### 安裝
@@ -76,7 +116,7 @@ choco安裝的套件如果是安裝的檔案也能在``新增移除``找到，�
 但不管是哪一種，都能透過choco來管理。
 
 
-## 一些常用的安裝項目
+### 一些常用的安裝項目
 
 {{< table/bootstrap-table scrollable=true >}}
 
@@ -91,6 +131,8 @@ choco安裝的套件如果是安裝的檔案也能在``新增移除``找到，�
 | git      | ``choco install git -y`` | ``%programfiles%\Git`` | 執行檔位置：\n ``%programfiles%\Git\bit\git.exe``\n您也可以在新增移除中找到 | 版本管理工具 (:exclamation: 當您的版本不是最新的，有可能您在執行git等等相關的操作會出現錯誤(可能說你帳密不正確等等)
 | [sass]   | ``choco install sass -y`` | ● ``C:\tools\dart-sdk``\n● ``%programdata%\chocolatey\lib\sass\bin\sass.exe``\n他需要用到dart-sdk還有sass所以需要裝兩個東西 | 使用方法:\n● ``sass input.scss:output.css``\n● ``sass --watch input.scss:output.css --style compressed``\n加上 ``watch`` 可以監測使得檔案異動就自動更新 ``compressed`` 可以壓縮，以一行解決\n● ``sass input.scss:output.css --style compressed --no-source-map``\n不產生``.css.map``檔案\n● ``sass --help``
 | golang   | ``choco install golang -y``| ● ``C:\Go\bin\go.exe``\n● ``C:\Go\bin\gofmt.exe`` | 安裝完之後:\n● ``go version`` 確認有無安裝成功\n● ``gofmt``是用來統一程式碼格式用的東西
+[msys2](https://stackoverflow.com/a/50078531) | ``choco install msys2`` | ``C:\tools\msys64`` | 安裝go-admin可能會要求要安裝gcc所以要先安裝這個東西\n執行:\n > ``C:\tools\msys64\mysys2.exe``\n在mysys2的console中輸入:\n$ ``pacman -S gcc``\n完成之後可以在mysys2中的console\n>``gcc -v``\n但是一般的console沒用，所以不推薦！
+gcc | ``choco install mingw -y`` | ``C:\ProgramData\chocolatey\lib\mingw\tools\install``\n``C:\ProgramData\chocolatey\bin\gcc.exe`` | 完成之後可以查看版本確認有無裝成功\n>``gcc -v``
 
 [protobuf_google]: https://developers.google.com/protocol-buffers/docs/overview
 [protobuf_github]: https://github.com/protocolbuffers/protobuf
@@ -103,9 +145,6 @@ choco安裝的套件如果是安裝的檔案也能在``新增移除``找到，�
 > :orange_book: 有些的安裝可能不會跟你說安裝到哪裡去(像``golang``就沒說)，這時候您可以用powershell，然後使用: ``gcm [your_exe]`` 來幫助您
 >
 > What is [gcm]?
-
-
-
 
 [protobuf_google]: https://developers.google.com/protocol-buffers/docs/overview
 [protobuf_github]: https://github.com/protocolbuffers/protobuf

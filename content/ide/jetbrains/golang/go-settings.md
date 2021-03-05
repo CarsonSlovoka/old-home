@@ -1,8 +1,8 @@
 +++
-title = "Go-Keymap"
-description=""
+title = "Golang Settings"
+description="Keymap, Editor,..."
 date = 2021-01-22T13:25:01+08:00
-lastmod = 2021-01-22
+lastmod = 2021-03-02
 featured_image = ""
 draft = false
 weight = 0
@@ -55,6 +55,14 @@ Change font size with\n``Ctrl+Mouse Wheel`` | ☑ | 可以用滾輪來改變font
 
   ☑ Change font size with ``Ctrl+Mouse Wheel``
 
+## Editor
+
+### Font
+
+- Font: ``JetBrains Mono`` (或 ``Fira Code Retina``
+- Size: 18
+
+☑ Enable font ligatures: 這個選項勾起來之後，可以啟用連字，可以把``!=``做成像「``≠``」的效果！
 
 ## 關於go fmt
 

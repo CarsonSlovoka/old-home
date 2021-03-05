@@ -112,6 +112,7 @@ Generate Subresource Integrity (SRI) attributes
 📚 | Books
 ❗  | exclamation | 2757
 ⚠  | Warning sign | 26A0
+🔔 | BELL\n叮嚀 | 1F514
 🌱 | Earth Day
 🌎 | World Emoji Day
 📅 | Calendar | 1F4C5
@@ -141,7 +142,7 @@ Generate Subresource Integrity (SRI) attributes
 ❓ | QUESTION MARK\nCommunity Support | 2753
 👍 | 讚
 👉 | Pointing Right | 1F449
-👆 | Pointing Up
+👆 | Pointing Up | 1F446
 😂 | Laughing
 🤣 | Rolling on the Floor Laughing,
 🗑 | deprecated

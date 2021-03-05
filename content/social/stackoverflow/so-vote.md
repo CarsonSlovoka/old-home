@@ -51,6 +51,10 @@ next_section = ""
 [How can I delete my posted issue on GitHub?] | [Deleting an issue](https://docs.github.com/en/github/managing-your-work-on-github/deleting-an-issue)
 [Removing input background colour for Chrome autocomplete?] | 更改autocomplete的顏色
 [Where are the golang environment variables stored?] | [go env GOENV](https://stackoverflow.com/a/64021609)
+[How do I add Add text below font awesome icon Links?] |
+[Access struct property by name] |
+★[Using reflect, how do you set the value of a struct field?] |
+
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/
@@ -81,6 +85,9 @@ next_section = ""
 [How can I delete my posted issue on GitHub?]: https://webapps.stackexchange.com/a/124784
 [Removing input background colour for Chrome autocomplete?]: https://stackoverflow.com/a/46829178
 [Where are the golang environment variables stored?]: https://stackoverflow.com/q/40825613
+[How do I add Add text below font awesome icon Links?]: https://stackoverflow.com/a/41285702
+[Access struct property by name]: https://stackoverflow.com/q/18930910
+[Using reflect, how do you set the value of a struct field?]: https://stackoverflow.com/a/6396678
 
 {{< /table/bootstrap-table >}}
 
