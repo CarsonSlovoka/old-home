@@ -143,7 +143,9 @@ Generate Subresource Integrity (SRI) attributes
 👍 | 讚
 👉 | Pointing Right | 1F449
 👆 | Pointing Up | 1F446
-😂 | Laughing
+👇 | Pointing Down | 1F447
+😂 | Laughing |
+😅 | Grinning Face with Sweat | 1F605
 🤣 | Rolling on the Floor Laughing,
 🗑 | deprecated
 🚮 | deprecated

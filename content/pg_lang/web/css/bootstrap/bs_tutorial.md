@@ -148,5 +148,20 @@ Class prefix | ``.col-`` | ``.col-sm-`` | ``.col-md-`` | ``.col-lg-`` | ``.col-x
 
 > :orange_book: 還可參考CSS屬性的[font-size]
 
+## 範例區
+
+### [snippets](https://bootsnipp.com/)
+
+這裡面有相當多的範例，而且相當有水準，稍微修改一下就能很貼合自己的主題！
+
+在搜尋區塊打上關鍵字，就會出現相符的很多樣版供您選擇
+
+舉例搜尋用的關鍵字:
+
+- [timeline](https://bootsnipp.com/search?q=timeline):
+    - [我覺得不錯的主題](https://bootsnipp.com/snippets/QMrM5)
+
+- [Shopping](https://bootsnipp.com/search?q=shopping)
+    - [Shopping Demo](https://bootsnipp.com/snippets/xrXp9)
 
 [font-size]: https://www.w3schools.com/cssref/pr_font_font-size.asp

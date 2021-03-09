@@ -32,7 +32,7 @@ googleAnalytics = "UA-98900980-4"  # 參考一下此處:https://github.com/gohug
 
 [params]
   # 這裡的變數是 .Site.Params.xxx  可以套用在baseof.html身上，也就是變相的增加該front matter
-  env = "production"  # is_release = false
+  env = "production"  # production, none  # is_release = false
   font-awesome = true  # 讓所有網站都啟用fontawesome
   bootstrap = true  # 讓所有網站都啟用bootstrap
   enable_search_fuse = true  # 這個是我自己補的，可能您的網站用的搜尋不一樣，所以才搞了這個方便調整。
@@ -47,10 +47,17 @@ googleAnalytics = "UA-98900980-4"  # 參考一下此處:https://github.com/gohug
 
   # 加入自定義或者來自於主題內的css文件(他們都位於static資料夾下)
   custom_css = [
-    "css/github_icon.css",
+    "css/google-fonts.css",
   ]
   favicon = "/images/tab_icon.jpg"  # 要放在static/資料夾之下
   site_logo = "<i class='zoom-in fas fa-home fa-3x' style='color: #ffc34d'></i>"  # "/images/site_logo.jpg"  # 不管是favicon或者site_logo通常都是放href或者<img src所以他們都是指static資料夾下的檔案
+
+  [params.fonts]
+    [params.fonts.class]
+      # 如果您的fonts需要用到其他的class，可以利用custom_css把您的css放入再指定class的名稱即可
+      h1 = "google-noto-sans-tc"
+      body = "google-noto-sans-tc"
+      content = "google-noto-sans-tc"  # 文章內容
 
 [markup]  # 這是針對markdown要怎麼處理的配置
   # Hugo Markdown Support: https://www.markdownguide.org/tools/hugo/#hugo-markdown-support
@@ -94,13 +101,19 @@ googleAnalytics = "UA-98900980-4"  # 參考一下此處:https://github.com/gohug
     name = "<i class='fas fa-search'></i>"
     url = "/site-search-simple/"
     pre = ""  # {{- .Pre -}}
-    weight = 30
+    weight = 10  # 權重小的list取出時會優先，也就是最小的等同list[0]的位置，而無關寫的順序
+
+  [[menus.main]]
+    name = "<i class='fas fa-code-branch'></i>"
+    url = "/pages-timeline/"
+    pre = ""
+    weight = 20
 
   [[menus.main]]
     name = "地圖"
     url = "/site-markmap/"
     pre = "<i class='fas fa-sitemap' style='color: #b1e844'></i>"
-    weight = 30  # 權重小的list取出時會優先，也就是最小的等同list[0]的位置，而無關寫的順序
+    weight = 30
   [[menus.main]]
     name = "教學"
     url = "/Hugo/"

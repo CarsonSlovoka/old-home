@@ -54,6 +54,9 @@ next_section = ""
 [How do I add Add text below font awesome icon Links?] |
 [Access struct property by name] |
 ★[Using reflect, how do you set the value of a struct field?] |
+[Can I target all <H> tags with a single selector?] |
+[How to make <details> drop down on mouse hover] |
+
 
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/
@@ -88,6 +91,8 @@ next_section = ""
 [How do I add Add text below font awesome icon Links?]: https://stackoverflow.com/a/41285702
 [Access struct property by name]: https://stackoverflow.com/q/18930910
 [Using reflect, how do you set the value of a struct field?]: https://stackoverflow.com/a/6396678
+[Can I target all <H> tags with a single selector?]: https://stackoverflow.com/q/7539125
+[How to make <details> drop down on mouse hover]: https://stackoverflow.com/q/15193606
 
 {{< /table/bootstrap-table >}}
 
