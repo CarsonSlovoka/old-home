@@ -2,7 +2,7 @@
 title = "Templates"
 description="教您如何在github上刻製化樣板"
 date = 2021-02-19T16:38:10+08:00
-lastmod = 2021-02-19
+lastmod = 2021-03-12
 featured_image = ""
 draft = false
 weight = 0
@@ -350,7 +350,7 @@ contact_links:
 {{< insert-figure "images/git/github/config.yml.png" "" "100%" "25%">}}
 
 
-#### 🔗 參考
+#### 參考資料
 
 - [configuring-the-template-chooser]
 - [configuration-options-for-dependabotyml]
@@ -376,23 +376,30 @@ contact_links:
 
 ## [Github主頁上的README.md](https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/managing-your-profile-readme)
 
+您可能會想，Github上有沒有像是[shields.io]提供一些圖片讓使用者顯示一些統計資料呢？
 
-Github也像[shields.io]有提供一些圖片讓使用者顯示一些統計資料，以下是我覺得比較酷的資訊
+答案是有的，可以利用:
+
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=anuraghazra&repo=github-readme-stats)](https://github.com/anuraghazra/github-readme-stats#themes)
+
+這邊先丟出一些結果以及語法給您參考:
 
 ```html
 <a href="https://github.com/CarsonSlovoka">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=CarsonSlovoka&show_icons=true&theme=merko&count_private=true" alt="CarsonSlovoka's github stats" />
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=CarsonSlovoka&theme=merko&layout=compact" alt="CarsonSlovoka's github top languages" />
+  <img src="https://github-readme-stats.vercel.app/api?username=CarsonSlovoka&show_icons=true&count_private=true&theme=highcontrast" alt="CarsonSlovoka's github stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=CarsonSlovoka&amp;theme=highcontrast&amp;layout=compact" alt="CarsonSlovoka's github top languages">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=CarsonSlovoka&amp;langs_count=8&amp;theme=highcontrast" alt="TOP Langs">
 </a>
 ```
 
-複製下來接著把CarsonSlovoka改成您自己的名稱即可呈現出您的Github資訊，類似下圖
+👆複製下來接著把``CarsonSlovoka``改成您自己的名稱即可呈現出您的Github資訊，類似下圖
 
 {{<raw_html>}}
 <a href="https://github.com/CarsonSlovoka">
   <div class="row">
-    <div class="col-md-6"><img height="180em" src="https://github-readme-stats.vercel.app/api?username=CarsonSlovoka&show_icons=true&theme=merko&count_private=true" alt="CarsonSlovoka's github stats" /></div>
-    <div class="col-md-6"><img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=CarsonSlovoka&theme=merko&layout=compact" alt="CarsonSlovoka's github top languages" /></div>
+    <div class="col-md-4"><img src="https://github-readme-stats.vercel.app/api?username=CarsonSlovoka&show_icons=true&theme=highcontrast&count_private=true" alt="CarsonSlovoka's github stats" /></div>
+    <div class="col-md-4"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=CarsonSlovoka&theme=highcontrast&layout=compact" alt="CarsonSlovoka's github top languages" /></div>
+    <div class="col-md-4"><img src="https://github-readme-stats.vercel.app/api/top-langs?username=CarsonSlovoka&amp;langs_count=8&amp;theme=highcontrast" alt="TOP Langs"></div>
   </div>
 </a>
 {{</raw_html>}}
@@ -403,15 +410,86 @@ Github也像[shields.io]有提供一些圖片讓使用者顯示一些統計資�
 
 {{< table/code-by-example "Output" "代碼" >}}
 
-[![CarsonSlovoka's github stats](https://github-readme-stats.vercel.app/api?username=CarsonSlovoka)](https://github.com/CarsonSlovoka/vue-admin-beautiful)
+[![CarsonSlovoka's github stats](https://github-readme-stats.vercel.app/api?username=CarsonSlovoka)](https://github.com/CarsonSlovoka)
 
 @@NEW-COL@@
 
 ```markdown
-[![CarsonSlovoka's github stats](https://github-readme-stats.vercel.app/api?username=CarsonSlovoka)](https://github.com/CarsonSlovoka/vue-admin-beautiful)
+[![CarsonSlovoka's github stats](https://github-readme-stats.vercel.app/api?username=CarsonSlovoka)](https://github.com/CarsonSlovoka)
 ```
 
 {{< /table/code-by-example >}}
+
+👇接下來我們就來深入探討github-readme-stats的更多用法
+
+### [github-readme-stats]
+
+萬變不如其宗:
+
+> https://github-readme-stats.vercel.app/api
+
+以上連結有提供api，讓您直接調用連結就能顯示一些統計數據
+
+如果您想探索更多請自行點擊👉 [anuraghazra/github-readme-stats] 去探索
+
+我把我覺得實用的整理如下
+
+#### API介紹
+
+{{< table/bootstrap-table >}}
+
+| @@w=15%@@API名稱 | @@w=15%@@描述 | @@w=30%@@endpoint | 範例 | demo |
+| ---- | ---- | ---- | ---- | ---- |
+| stats card\n(預設) | 統計表  | api? | https://github-readme-stats.vercel.app/api/?username=anuraghazra&repo=github-readme-stats | ![demo](https://github-readme-stats.vercel.app/api/?username=anuraghazra&repo=github-readme-stats)
+| pins | 釘選小卡片 | api/pin? | https://github-readme-stats.vercel.app/api/pin?username=anuraghazra&repo=github-readme-stats | ![demo](https://github-readme-stats.vercel.app/api/pin?username=anuraghazra&repo=github-readme-stats)
+| top lang | 正常版本 | api/top-langs? | https://github-readme-stats.vercel.app/api/top-langs?username=anuraghazra&repo=github-readme-stats | ![demo](https://github-readme-stats.vercel.app/api/top-langs?username=anuraghazra&repo=github-readme-stats)
+| top lang | compress版本 | api/top-langs?...&layout=compact | https://github-readme-stats.vercel.app/api/top-langs?username=anuraghazra&repo=github-readme-stats&layout=compact | ![demo](https://github-readme-stats.vercel.app/api/top-langs?username=anuraghazra&repo=github-readme-stats&layout=compact)
+wakatime | | api/wakatime? | https://github-readme-stats.vercel.app/api/wakatime?username=willianrod | [![demo](https://github-readme-stats.vercel.app/api/wakatime?username=willianrod)](https://github.com/anuraghazra/github-readme-stats)
+
+{{< /table/bootstrap-table >}}
+
+#### 可選項
+
+此外它有提供一些可選項，這些可選項可以搭配API來使用
+
+{{< table/bootstrap-table "table-primary" >}}
+
+| @@w=15%@@名稱 | @@w=10%@@型別  | 說明 |
+| ---- | ---- | ---- |
+[themes] | string | 目前一共有8類可以選擇，如下:\ndark, radical, merko, gruvbox, tokyonight, onedark, cobalt, synthwave, highcontrast, dracula
+username | string | 您的github使用者名稱
+repo | string | 您的專案名
+show_icons | bool |
+locale |  | 可以設定語言:  cn, de, es, etc.
+border_radius |  | 卡片border的圓滑度
+bg_color |
+icon_color |
+text_color |
+title_color |
+hide_border | bool
+★ count_private | bool | 這個很有用，可以把private的專案也考量近來
+
+[themes]: https://github.com/anuraghazra/github-readme-stats#all-inbuilt-themes--
+
+{{< /table/bootstrap-table >}}
+
+##### 適用於Top Languages Card的可選項
+
+{{< table/bootstrap-table >}}
+
+| 功能 | @@w=15%@@語法 | @@w=10%@@型別 | 範例 | 附註 |
+| ---- | ---- | ---- | ---- | ---- |
+Exclude individual repositories | exclude_repo | []string | &exclude_repo=proj1,proj2,proj3.github.io
+Hide individual languages | hide | []string | &hide=javascript,html
+Show more languages | langs_count | int | &langs_count=8 | 1~10(預設5)
+Compact Language Card Layout | layout | string | &layout=compact | 擠壓在一塊呈現\n
+
+{{< /table/bootstrap-table >}}
+
+
+
+[👉點我](https://github.com/anuraghazra/github-readme-stats#customization) 參考更多內容！
+
 
 
 [configuring-the-template-chooser]: https://docs.github.com/en/github/building-a-strong-community/configuring-issue-templates-for-your-repository#configuring-the-template-chooser
@@ -421,3 +499,5 @@ Github也像[shields.io]有提供一些圖片讓使用者顯示一些統計資�
 [workflows]: https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions
 [hugo.workflows.test.yml]: https://github.com/gohugoio/hugo/blob/master/.github/workflows/test.yml
 [shields.io]: https://shields.io/category/social
+[anuraghazra/github-readme-stats]: https://github.com/anuraghazra/github-readme-stats#themes
+[github-readme-stats]: https://github.com/anuraghazra/github-readme-stats#themes
