@@ -94,6 +94,8 @@ Generate Subresource Integrity (SRI) attributes
 
 ## [Emoji of Unicode](https://apps.timwhitlock.info/unicode/inspect?s=%F0%9F%93%9D)
 
+[getemoji.com](https://getemoji.com/)
+
 {{< table/bootstrap-table table-info >}}
 
 | @@w=10%@@name | @@w=40%@@Icon Desc | @@w=10%@@Code | @@w=30%@@Comment |　|
@@ -121,12 +123,10 @@ Generate Subresource Integrity (SRI) attributes
 󠁴🀄 | 中文
 💪 | enhancement
 ✍ | WRITING HAND、總結 | 270D
-📰 | NEWSPAPER、歷史文章 | 1F4F0
+📰 | NEWSPAPER、歷史文章、資料來源 | 1F4F0
 👩‍💻 | ● 👩:Woman\n●💻: Personal computer | ●1F469\n●1F4BB | 這比較特別，他是兩個碼位組合而成的圖案
 👨‍💻 | ● 👨:Man\n●💻: Personal computer | ●1F468\n●1F4BB | 組合圖案
 🎮 | Video game | 1F3A3
-🥴 | Drunk Face\nWoozy Face\nFace with Uneven Eyes and Wavy Mouth | 1F974
-😵 | DIZZY FACE | 1F635
 ✨ | SPARKLES\nFeatures | 2728
 ⭐ | WHITE MEDIUM STAR | 2B50
 📦 | PACKAGE\nInstallation Guide | 1F4E6
@@ -146,6 +146,11 @@ Generate Subresource Integrity (SRI) attributes
 👇 | Pointing Down | 1F447
 😂 | Laughing |
 😅 | Grinning Face with Sweat | 1F605
+🥴 | Drunk Face\nWoozy Face\nFace with Uneven Eyes and Wavy Mouth | 1F974
+😵 | DIZZY FACE | 1F635
+😎 | SMILING FACE WITH SUNGLASSES | 1F60E
+😁 | GRINNING FACE WITH SMILING EYES | 1F60E
+😆 | SMILING FACE WITH OPEN MOUTH AND TIGHTLY-CLOSED EYES | 1F606
 🤣 | Rolling on the Floor Laughing,
 🗑 | deprecated
 🚮 | deprecated

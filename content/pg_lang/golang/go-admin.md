@@ -1617,8 +1617,8 @@ var Generators = map[string]table.Generator{
 
 ## 參考資料
 
-- ★[使用GoAdmin极速搭建golang应用管理后台]
+- ★[使用GoAdmin极速搭建golang應用管理后台]
 
 
 [go-admin]: https://github.com/GoAdminGroup/go-admin
-[使用GoAdmin极速搭建golang应用管理后台]: https://segmentfault.com/a/1190000022215579
+[使用GoAdmin极速搭建golang應用管理后台]: https://segmentfault.com/a/1190000022215579

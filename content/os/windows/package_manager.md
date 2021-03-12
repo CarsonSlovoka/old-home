@@ -29,6 +29,10 @@ OS           | Windows     | Debian/Ubuntu    | Debian/Ubuntu   | Debian/Ubuntu 
 
 {{< /table/bootstrap-table >}}
 
+如果您是macOS或者Linux也可以透過Homebrew來安裝套件，例如:
+
+> $brew install wget
+
 ## 程式語言的套件管理系統
 
 {{< table/bootstrap-table >}}
@@ -118,12 +122,25 @@ choco安裝的套件如果是安裝的檔案也能在``新增移除``找到，�
 
 ### 一些常用的安裝項目
 
+> ⚠ 您可以先上 [chocolatey.org](https://chocolatey.org/) 搜尋您的套件名稱，就會出現安裝指令
+>
+> 值得一提的是，有些套件會註記``deprecated``(不推薦使用) 像是:
+>
+> [docker](https://chocolatey.org/packages?q=docker)
+>
+> 他就會告訴你:
+>
+> [Deprecated] Docker CLI 99.0.0
+> This package is replaced by `docker-cli` to make it more obvious what's getting installed.
+
+建議都用powershell來裝並且使用管理員身分
+
 {{< table/bootstrap-table scrollable=true >}}
 
-| @@w=5em@@名稱 | 安裝指令 | 安裝到哪裡去 | 描述 |
+| @@w=6em@@名稱 | 安裝指令 | 安裝到哪裡去 | 描述 |
 | -------- | ---- | ---- | ---- |
 | curl     |  ``choco install curl`` |  ``%programdata%\chocolatey\lib\curl\tools`` |  驗證: curl --version\n它可以透過cmd來做一些``Get``, ``Post``等等的操作，作為測試這個工具很棒
-| neovim   | ``choco install neovim --pre``\n(意思是(pre-release) | ``C:\tools\neovim\Neovim\bin`` | 注意neovim裡面也有一個``curl``要用的時候要自己區分一下！
+| neovim   | ``choco install neovim --pre``\n(意思是(pre-release) | ``C:\tools/neovim\Neovim\bin`` | 注意neovim裡面也有一個``curl``要用的時候要自己區分一下！
 | ~~pdftk~~| ``choco install pdftk`` | ``%PROGRAMFILES(X86)%\PDFtk\``\n這個不建議安裝!
 | jre      | ``choco install javaruntime`` | ● ``%PROGRAMFILES%\Java\jre1.8.0_271``\n● ``%PROGRAMFILES(X86)%\Java\jre1.8.0_271`` | 他會裝兩個版本
 | protoc   | ``choco install protoc --pre -y``\n(y會確認執行，不會再問你)| ``%programdata%\chocolatey\lib\protoc\tools`` | [protobuf_google] [protobuf_github]
@@ -132,13 +149,20 @@ choco安裝的套件如果是安裝的檔案也能在``新增移除``找到，�
 | [sass]   | ``choco install sass -y`` | ● ``C:\tools\dart-sdk``\n● ``%programdata%\chocolatey\lib\sass\bin\sass.exe``\n他需要用到dart-sdk還有sass所以需要裝兩個東西 | 使用方法:\n● ``sass input.scss:output.css``\n● ``sass --watch input.scss:output.css --style compressed``\n加上 ``watch`` 可以監測使得檔案異動就自動更新 ``compressed`` 可以壓縮，以一行解決\n● ``sass input.scss:output.css --style compressed --no-source-map``\n不產生``.css.map``檔案\n● ``sass --help``
 | golang   | ``choco install golang -y``| ● ``C:\Go\bin\go.exe``\n● ``C:\Go\bin\gofmt.exe`` | 安裝完之後:\n● ``go version`` 確認有無安裝成功\n● ``gofmt``是用來統一程式碼格式用的東西
 [msys2](https://stackoverflow.com/a/50078531) | ``choco install msys2`` | ``C:\tools\msys64`` | 安裝go-admin可能會要求要安裝gcc所以要先安裝這個東西\n執行:\n > ``C:\tools\msys64\mysys2.exe``\n在mysys2的console中輸入:\n$ ``pacman -S gcc``\n完成之後可以在mysys2中的console\n>``gcc -v``\n但是一般的console沒用，所以不推薦！
-gcc | ``choco install mingw -y`` | ``C:\ProgramData\chocolatey\lib\mingw\tools\install``\n``C:\ProgramData\chocolatey\bin\gcc.exe`` | 完成之後可以查看版本確認有無裝成功\n>``gcc -v``
+gcc | ``choco install mingw -y`` | ● ``C:\ProgramData\chocolatey\lib\mingw\tools\install``\n● ``C:\ProgramData\chocolatey\bin\gcc.exe`` | 完成之後可以查看版本確認有無裝成功\n>``gcc -v``
+[docker-cli] | ``choco install docker-cli`` | ● ``%programdata%\chocolatey\lib\docker-cli\tools\docker.exe``\n● ``%programdata%\chocolatey\bin\docker.exe`` (這一個是主要的) | ● ``docker --help``\n● ``docker -v``\np.s. ❗ **不要**裝docker這個是``deprecated``的項目
 
 [protobuf_google]: https://developers.google.com/protocol-buffers/docs/overview
 [protobuf_github]: https://github.com/protocolbuffers/protobuf
 [Jekyll]: https://jekyllrb.com/
 [sass]: https://chocolatey.org/packages/sass#install
+[docker-cli]: https://chocolatey.org/packages/docker-cli
+
 {{< /table/bootstrap-table >}}
+
+### 創建屬於您的choco套件
+
+可以參考:[create-packages](https://docs.chocolatey.org/en-us/create/create-packages)
 
 ## 如何查找執行檔位置 (Where)
 
@@ -151,3 +175,4 @@ gcc | ``choco install mingw -y`` | ``C:\ProgramData\chocolatey\lib\mingw\tools\i
 [Jekyll]: https://jekyllrb.com/
 [ctags]: https://en.wikipedia.org/wiki/Ctags#:~:text=Ctags%20is%20a%20programming%20tool,so%20on%20may%20be%20indexed.
 [gcm]: https://superuser.com/a/1605156/1093221
+[Homebrew]: https://brew.sh/
