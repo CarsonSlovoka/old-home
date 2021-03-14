@@ -65,9 +65,9 @@ Settings → (往下滑) → Features
 [結構](https://github.com/gohugoio/hugo/tree/master/.github)，如下
 
 ```
-SECURITY.md
+SECURITY.md  # Security中會看到的東西
 .github 📂
-    - SUPPORT.md  # Security中會看到的東西
+    - SUPPORT.md  # 發問issue時會提醒使用者
     - dependabot.yml
     - 📂 workflows  (裡面放的就是自己建立的yml，看你有多少workflows就建立多少個，高興就好！)
         - stale.yml  # 這是一個人家寫好的bot，可以自動地把一些issues做歸類，而不靠人工處理
@@ -105,6 +105,16 @@ Also see [Hugo's Security Model](https://gohugo.io/about/security-model/).
 {{< /table/code-by-example >}}
 
 {{< insert-figure "images/git/github/security_position.png" >}}
+
+如果您第一次在該站發問issues，security也會出現在右邊來提醒
+
+{{< insert-figure "images/git/github/issues_new_open_security.png" >}}
+
+#### SUPPORT.md
+
+發問issue時會提醒使用者
+
+{{< insert-figure "images/git/github/issues_support.png" >}}
 
 #### [dependabot.yml](https://dependabot.com/docs/config-file/)
 

@@ -135,6 +135,7 @@ Generate Subresource Integrity (SRI) attributes
 🎨 | ARTIST PALETTE\nDesign Specification | 1F3A8
 🖥 | DESKTOP COMPUTER | 1F5A5
 ⌨ | KEYBOARD | 2328
+🕒 | Time
 🔗 | LINK SYMBOL\nLinks | 1F517
 🗺 | WORLD MAP\nRoadmap | 1F5FA
 🤝 | Contributing | 1F91D
