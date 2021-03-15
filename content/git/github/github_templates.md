@@ -120,7 +120,7 @@ Also see [Hugo's Security Model](https://gohugo.io/about/security-model/).
 
 👉 [github Docs文件](https://docs.github.com/cn/github/administering-a-repository/keeping-your-dependencies-updated-automatically)
 
-Dependabot 可以自动维护您的仓库的依赖项。
+Dependabot 可以自动維护您的倉庫的依賴項。
 
 {{< table/code-by-example "　"  "dependabot.yml" >}}
 
@@ -320,7 +320,7 @@ assignees: "Carson"
 
 ### 期望结果 <!--描述你原本期望看到的结果-->
 
-### 复现代码 <!--提供可复现的代码，仓库，或线上示例-->
+### 复现代码 <!--提供可复现的代码，倉庫，或线上示例-->
 
 ### 版本信息:
 

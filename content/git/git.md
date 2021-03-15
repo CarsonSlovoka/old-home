@@ -2,7 +2,7 @@
 title = "Git教學"
 description = "一些git好用的東西"
 date = 2020-12-14T18:13:00+08:00
-lastmod = 2021-03-12
+lastmod = 2021-03-14
 featured_image = ""
 tags = ["git"]
 draft = false
@@ -33,7 +33,7 @@ toc_bootstrap = true
 
 如果您需要更詳細的資訊可以參考[atlassian.com git config](https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-config#:~:text=The%20system%20level%20configuration%20file,on%20Windows%20Vista%20and%20newer.)
 
-以下這個是我的設定(使用者設定檔: --global):
+以下這個是我的設定(使用者設定檔: ``--global``):
 
 ```toml
 [user]
@@ -148,6 +148,9 @@ toc_bootstrap = true
 	    git checkout $2; \
 	}; f"
 
+    k = "!f() { \
+		gitk --all; \
+	}; f"
 
 [core]
 	quotepath = false  # 中文可能會在status中看到亂碼，設置成false就不會了
@@ -166,12 +169,15 @@ toc_bootstrap = true
 
 👆``.gitconfig``檔案，您可以直接打開編輯它，或者在終端機使用
 
-> git config --global <attr> <value>
+> ``git config --global <attr> <value>``
 
+----
 
-**設定**core.autocrlf為true的指令: ``git config --global core.autocrlf true``
+- 設定:core.autocrlf為true的指令:
+  > ``git config --global core.autocrlf true``
 
-**查看**core.autocrlf的設定值: ``git config --global core.autocrlf``
+- 查看:core.autocrlf的設定值:
+  > ``git config --global core.autocrlf``
 
 當然也可以套用在系統設定檔(``--system``)
 
@@ -180,6 +186,32 @@ toc_bootstrap = true
 也可以不用指定類別，他會抓當前您適用的項目
 
 > ``git config core.autocrlf``
+
+### local
+
+很少會用到這個，但是像您remote的項目就會在這邊，一般您看到的東西應該會類似這個
+
+> ``git config --local --edit``
+
+(*如果您已經在含有``.git``的資料夾內，可以省略掉``--local``*)
+
+```toml
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+	worktree = ../../my-proj
+[remote "Github"]  # <-- 您可以在這邊直接更改
+	url = https://github.com/username/repository-name.git
+	fetch = +refs/heads/*:refs/remotes/Github/*
+[remote "Online"]
+	url = https://username@bitbucket.org/proj-name/repository.git
+	fetch = +refs/heads/*:refs/remotes/Online/*
+
+```
 
 ## autocrlf
 
@@ -244,11 +276,11 @@ git config --global core.safecrlf warn
 
 ## git merge
 
-- git merge --squash:
+- ``git merge --squash``:
 
   會把分支所有的commite的東西都抓起來，然後您會看到一個未完成的提交，您需要commit它來完成。(也就是把分支的所有提交，整合到一個commit之中)
 
-- git merge --abort:
+- ``git merge --abort``:
 
   如果您後悔了，可以用此指令取消merge
 
@@ -280,9 +312,15 @@ git config --global core.safecrlf warn
 
 rebase我常用在整個搬移，當然rebase很強大也可以修改過去的commit紀錄，但不建議！
 
-rebase比較常用在搬移，當您不想要``git cherry-pick [sha1-xxx]``一個一個pick，就用rebase，
+rebase比較常用在搬移，當您不想要
 
-它的用法是，假設我要把dev的內容全部搬到master去，可以用
+> ``git cherry-pick [sha1-xxx]``
+
+一個一個pick，就用rebase，
+
+它的用法:
+
+假設我要把dev的內容全部搬到master去
 
     git checkout dev
     git rebase master
