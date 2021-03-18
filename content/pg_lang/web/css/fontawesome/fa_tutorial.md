@@ -187,7 +187,7 @@ Generate Subresource Integrity (SRI) attributes
 -- |
 {{<raw_html>}}<span style="color:black;background-color:#e8e8e3;">⏩shortcode</span>{{</raw_html>}} | Shortcode | #e8e8e3 {{< show-color "#e8e8e3" >}}
 {{<raw_html>}}<span style="color:black;background-color:#e8e8e3;">🔎search</span>{{</raw_html>}} | about search | #e8e8e3 {{< show-color "#e8e8e3" >}}
-
+{{<raw_html>}}<span style="color:black;background-color:#e8e8e3;">🧙tutorial</span>{{</raw_html>}} | tutorial | #e8e8e3 {{< show-color "#e8e8e3" >}}
 
 ## github中README可能可以用到的圖標
 

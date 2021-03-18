@@ -122,6 +122,59 @@ GOPATH可以允許多個目錄，用分隔號隔開即可(LINUX是冒號)
 
 ``go help xxx`` 查看幫助
 
+### go-build.bat
+
+打包所選資料夾中所有的go檔案成執行檔
+
+```bat
+@echo off
+echo Input the directory where your source file(xxx.go) exists
+set /P "inputGoPath=:"
+cd %inputGoPath%
+REM echo %cd%
+
+for %%A in (*.go,) do (
+    REM go build -o output.exe input.go
+    go build %%A
+)
+REM cd %~dp0  REM 在CD回來是個好習慣
+echo done! && pause > nul
+EXIT /B
+```
+
+以下這個也是打包go，但是不用任何輸入，
+
+我會把以下這個.bat檔案放到``%GOPATH%/bin``底下
+
+其實只要任何PATH包含在內的資料夾在內都可以，
+
+這樣當我們呼叫go-build.bat就能執行，
+
+```bat
+@echo off
+REM cd %cd% 不需要，預設就是用工作路徑而不是%~dp0
+
+for %%A in (*.go,) do (
+    go build %%A
+    echo done: %%A
+)
+```
+
+| code | desc |
+| ---- | ---- |
+%~dp0 | 是該bat檔案所在的路徑
+%cd% | 是當前您的工作路徑
+
+其實以上的bat檔案也不一定要寫，``go build --help``:
+
+>  go build [-o output] [build flags] [packages]
+
+其實所有的選項都是可選項，這表示您可以直接``go build``即可，
+
+預設他會抓取您當前工作路徑的main包進行打包。
+
+[batch color參考](https://stackoverflow.com/questions/2048509/how-to-echo-with-different-colors-in-the-windows-command-line)
+
 ### gofmt and go fmt
 
 如果您本身是使用[fatih/vim-go]在保存文件的時候他就會把go的代碼給代碼自動格式化，所以基本上不用管他。

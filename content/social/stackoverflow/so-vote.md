@@ -60,8 +60,10 @@ next_section = ""
 [How do you serve a static html file using a go web server?] |
 [How can I commit with no fast forward option (--no-ff) in SourceTree?] |
 [How can I handle http requests of different methods to / in Go?] |
-
-
+[In Go's http package, how do I get the query string on a POST request?] | ```http.Request.URL.Query()["param1"]```
+[Make a line break when requesting user input (/P) in batch?] | 可以在 /p 之前或之後使用echo
+[How to unmarshall viper config to struct with dash character] | ``mapstructure``
+[Unmarshaling nested JSON objects] |
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/
@@ -101,6 +103,10 @@ next_section = ""
 [How do you serve a static html file using a go web server?]: https://stackoverflow.com/a/26563418
 [How can I commit with no fast forward option (--no-ff) in SourceTree?]: https://stackoverflow.com/q/23587750
 [How can I handle http requests of different methods to / in Go?]: https://stackoverflow.com/a/15253422/
+[In Go's http package, how do I get the query string on a POST request?]: https://stackoverflow.com/a/29237567
+[Make a line break when requesting user input (/P) in batch?]: https://stackoverflow.com/a/16536823
+[How to unmarshall viper config to struct with dash character]: https://stackoverflow.com/a/51228490
+[Unmarshaling nested JSON objects]: https://stackoverflow.com/a/48651916
 
 {{< /table/bootstrap-table >}}
 
