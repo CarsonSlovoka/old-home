@@ -64,6 +64,8 @@ next_section = ""
 [Make a line break when requesting user input (/P) in batch?] | 可以在 /p 之前或之後使用echo
 [How to unmarshall viper config to struct with dash character] | ``mapstructure``
 [Unmarshaling nested JSON objects] |
+[Split long commands in multiple lines through Windows batch file] |
+
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/
@@ -107,6 +109,7 @@ next_section = ""
 [Make a line break when requesting user input (/P) in batch?]: https://stackoverflow.com/a/16536823
 [How to unmarshall viper config to struct with dash character]: https://stackoverflow.com/a/51228490
 [Unmarshaling nested JSON objects]: https://stackoverflow.com/a/48651916
+[Split long commands in multiple lines through Windows batch file]: https://stackoverflow.com/a/69079
 
 {{< /table/bootstrap-table >}}
 
