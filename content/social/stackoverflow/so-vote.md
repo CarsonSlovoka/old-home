@@ -43,7 +43,7 @@ next_section = ""
 [Does Sass have a switch function?] |
 [CSS - Equal Height Columns?] |
 [How to 'add watch' in Chrome developer tools?] | Ctrl+Shift+A
-[How to render/show images in HTML created on the fly with Golang and gin-gonic] |
+[How to render/show images in HTML created on the fly with Golang and gin-gonic] | ``data:image/png;base64,{{.}}``
 [How to check whether a file or directory exists?] |
 [Repository size limits for GitHub.com] | 2021年，每個庫5GB以上開始有警告(建議最好在1GB下)，最多不可超過100GB，單個檔案不可超過100MB
 [How to fix curl: (60) SSL certificate: Invalid certificate chain] | curl -k\n-k or --insecure Allow insecure server connections when using SSL
