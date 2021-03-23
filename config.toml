@@ -48,6 +48,7 @@ googleAnalytics = "UA-98900980-4"  # 參考一下此處:https://github.com/gohug
   # 加入自定義或者來自於主題內的css文件(他們都位於static資料夾下)
   custom_css = [
     "css/google-fonts.css",
+    "css/embed-bk-img.css"
   ]
   favicon = "/images/tab_icon.jpg"  # 要放在static/資料夾之下
   site_logo = "<i class='zoom-in fas fa-home fa-3x' style='color: #ffc34d'></i>"  # "/images/site_logo.jpg"  # 不管是favicon或者site_logo通常都是放href或者<img src所以他們都是指static資料夾下的檔案
@@ -65,7 +66,7 @@ googleAnalytics = "UA-98900980-4"  # 參考一下此處:https://github.com/gohug
   defaultMarkdownHandler = "goldmark"  # 如果您要換回blackFriday可以改這個，當然除了這些還有很多其他的配置，但是建議就用goldmark就好
   [markup.tableOfContents]
     startLevel = 2
-    endLevel = 5
+    endLevel = 6
 
   [markup.blackFriday]
     # [blackfriday] hugo目前預設是使用 Goldmark
