@@ -78,7 +78,7 @@ GOROOT可以在golang的IDE設置go SDK用的
 | [go-admin] | {{< github/get_info_img GoAdminGroup go-admin stars >}} | {{< github/get_info_img GoAdminGroup go-admin forks "https://www.google.com/" >}} |
 
 - 🚀 高生产效率: 10分钟内做一个好看的管理后台
-- 🎨 主题: 默认为adminlte，更多好看的主题正在制作中，欢迎给我们留言
+- 🎨 主题: 默认為adminlte，更多好看的主题正在制作中，欢迎給我们留言
 - 🔢 插件化: 提供插件使用，真正实现一个插件解决不了问题，那就两个
 - ✅ 认证: 开箱即用的[rbac认证系统](https://en.wikipedia.org/wiki/Role-based_access_control)
  -⚙ 框架支持: 支持大部分框架接入，让你更容易去上手和扩展

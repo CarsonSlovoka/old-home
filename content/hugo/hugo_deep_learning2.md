@@ -224,7 +224,7 @@ Which then outputs:
 
 ## [Static Files](https://gohugo.io/content-management/static-files/)
 
-## [Hugo如何處理多國語?](https://gohugo.io/functions/i18n/)
+## [Hugo如何處理多國語? (i18n)](https://gohugo.io/functions/i18n/)
 
 您可以在i18n[^i18n]資料夾放至屬於您的語系的語言，
 
@@ -242,7 +242,17 @@ other = "繼續閱讀"
     or
     {{ i18n "readMore" }}
 
-有 「**.**」 沒 「**.**」 都一樣
+
+> ⚠ 一般情況有沒有 ``.`` 都無所謂
+>
+> 但有一種情形例外
+>
+> ```
+> [whatsInThis]
+> other = "What's in this {{ .Type }}"
+> ```
+>
+> 當您需要用到變數的時候， ``.`` 就可以傳遞進去，他可以知道 ``.`` 的內容
 
 更簡單的語法,使用**T**ranslation
 

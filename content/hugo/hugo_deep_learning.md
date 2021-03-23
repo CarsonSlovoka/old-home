@@ -16,7 +16,7 @@ featured_image = 'images/animal/news/2020-12-18_good_news.jpg'
 
 ## 前言
 
-Hugo本身就是個: **Static Site Generator** 后面简称为 [SSG](https://jamstack.org/generators/)
+Hugo本身就是個: **Static Site Generator** 后面简称為 [SSG](https://jamstack.org/generators/)
 
 為什麼要學Hugo?:
 > 因為快！

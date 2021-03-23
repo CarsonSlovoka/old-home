@@ -1,7 +1,7 @@
 +++
 title = "Hugo教學"
 date = 2020-12-04T10:29:18+08:00
-lastmod = 2021-02-25
+lastmod = 2021-03-20
 description = "帶您快速的完成Hugo的Hello world"
 tags = ["hugo"]
 draft = false
@@ -177,6 +177,8 @@ toml(**Tom's Obvious, Minimal Language**) 很像ini檔案，但是它可以嵌�
 | ----| ----| ---- |
 ``--buildDrafts``\n``-D``| 會渲染draft的項目
 ``--minify`` | minify any supported output format (HTML, XML etc.) 非常有用的東西，不管您要運行還是打包都可以用，就能最小化打包檔 | ``hugo -D --minify``: 將資源檔打包，形成一個靜態包，預設放在``public``資料夾中
+``--gc`` |  enable to run some cleanup tasks (remove unused cache files) after the build
+``--quiet`` | build in quiet mode
 {{< /table/bootstrap-table >}}
 
 #### [minify](https://gohugo.io/getting-started/configuration/#configure-minify)
