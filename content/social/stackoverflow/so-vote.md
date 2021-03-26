@@ -65,6 +65,13 @@ next_section = ""
 [How to unmarshall viper config to struct with dash character] | ``mapstructure``
 [Unmarshaling nested JSON objects] |
 [Split long commands in multiple lines through Windows batch file] |
+[How to format current time using a yyyyMMddHHmmss format?] | ``fmt.Println(t.Format("20060102150405"))``
+[How to set default values in Go structs] |
+[How to gracefully shutting down a golang server?] | [go1.8 http.Shutdown](https://golang.org/pkg/net/http/#Server.Shutdown)
+[How to change the current directory in Go] |
+[Bcrypt password hashing in Golang (compatible with Node.js)?] | [![golang/crypto](https://github-readme-stats.vercel.app/api/pin/?username=golang&repo=crypto)](https://github.com/golang/crypto)
+[Adding a favicon to a static HTML page] | ```<link href="data:image/x-icon;base64,YourBase64StringHere" rel="icon" type="image/x-icon" />```
+[Range over string slice in golang template] | https://golang.org/pkg/text/template/
 
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/
@@ -110,6 +117,13 @@ next_section = ""
 [How to unmarshall viper config to struct with dash character]: https://stackoverflow.com/a/51228490
 [Unmarshaling nested JSON objects]: https://stackoverflow.com/a/48651916
 [Split long commands in multiple lines through Windows batch file]: https://stackoverflow.com/a/69079
+[How to format current time using a yyyyMMddHHmmss format?]: https://stackoverflow.com/a/20234207
+[How to set default values in Go structs]: https://stackoverflow.com/a/37135458
+[How to gracefully shutting down a golang server?]: https://stackoverflow.com/a/54978843
+[How to change the current directory in Go]: https://stackoverflow.com/a/46028772
+[Bcrypt password hashing in Golang (compatible with Node.js)?]: https://stackoverflow.com/a/23259804
+[Adding a favicon to a static HTML page]: https://stackoverflow.com/a/34699173
+[Range over string slice in golang template]: https://stackoverflow.com/a/54163753
 
 {{< /table/bootstrap-table >}}
 

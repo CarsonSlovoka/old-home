@@ -152,6 +152,7 @@ choco安裝的套件如果是安裝的檔案也能在``新增移除``找到，�
 gcc | ``choco install mingw -y`` | ● ``C:\ProgramData\chocolatey\lib\mingw\tools\install``\n● ``C:\ProgramData\chocolatey\bin\gcc.exe`` | 完成之後可以查看版本確認有無裝成功\n>``gcc -v``
 [docker-cli] | ``choco install docker-cli`` | ● ``%programdata%\chocolatey\lib\docker-cli\tools\docker.exe``\n● ``%programdata%\chocolatey\bin\docker.exe`` (這一個是主要的) | ● ``docker --help``\n● ``docker -v``\np.s. ❗ **不要**裝docker這個是``deprecated``的項目
 [reshack] | ``choco install reshack -y`` | ``%PROGRAMFILES(X86)%\Resource Hacker\`` | ❗安裝完畢之後請執行\n``refreshenv``\n~~來刷新環境變數~~\n結果也是沒用，自己加吧...
+[graphviz] | choco install graphviz -y | ``%programfiles%\Graphviz``\n``%programfiles%\Graphviz\bin\dot.exe``\ngraphviz may be able to be automatically uninstalled.\n安裝完之後有出現以上訊息，其表示也能夠透過「新增/移除」的程式來移除 | plantuml渲染的時候需要用到的東西: dot\n另外還需要下載[plantuml.jar](https://plantuml.com/en/download)
 
 [protobuf_google]: https://developers.google.com/protocol-buffers/docs/overview
 [protobuf_github]: https://github.com/protocolbuffers/protobuf
@@ -159,6 +160,7 @@ gcc | ``choco install mingw -y`` | ● ``C:\ProgramData\chocolatey\lib\mingw\too
 [sass]: https://chocolatey.org/packages/sass#install
 [docker-cli]: https://chocolatey.org/packages/docker-cli
 [reshack]: http://www.angusj.com/resourcehacker/
+[graphviz]: https://graphviz.org/download/
 
 {{< /table/bootstrap-table >}}
 
