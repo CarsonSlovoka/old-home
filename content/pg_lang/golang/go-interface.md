@@ -2,7 +2,7 @@
 title = "Go Interface"
 description=""
 date = 2021-03-15T10:03:39+08:00
-lastmod = 2021-03-15
+lastmod = 2021-03-29
 featured_image = ""
 draft = false
 weight = 0
@@ -19,6 +19,60 @@ toc_bootstrap = true
 
 
 ## Interface的範例
+
+### http.Handler & http.HandlerFunc
+
+以下的代碼都是在 ``net.http.server.go``
+
+{{< table/code-by-example >}}
+
+```go
+func StripPrefix(prefix string, h Handler) Handler {
+	// ...
+	return HandlerFunc(func(w ResponseWriter, r *Request) {
+		// ...
+	})
+}
+```
+
+可以看到StripPrefix需要的是一個 ``Handler``
+
+但是他的回傳值直接來看，得到的應該是 ``HandlerFunc``
+
+換句話說 ``HandlerFunc`` 是可以當作 ``Handler`` 來使用的
+
+因為 ``HandlerFunc`` 確實有實作``ServeHTTP``所以確實可以這樣用
+
+@@NEW-COL@@
+
+```go
+type Handler interface {
+	ServeHTTP(ResponseWriter, *Request)
+}
+
+type HandlerFunc func(ResponseWriter, *Request)
+
+// ServeHTTP calls f(w, r).
+func (f HandlerFunc) ServeHTTP(w ResponseWriter, r *Request) {
+    f(w, r)
+}
+```
+
+HandlerFunc到底在幹嘛，我們發現它就是在執行一次 ``f(w, r)``
+
+那因為這個f本身又是一個 ``HandlerFunc`` 所以其實就是一直``巢狀``的跑完所有``HandlerFunc``的內容
+也就是
+
+> ServeHTTP
+
+所以當您要生成``HandlerFunc``，
+
+除了可以把實作寫在本身的函數之中， 也能把內容寫在「``ServeHTTP``」。
+
+{{< /table/code-by-example >}}
+
+
+### http.Fileserver
 
 這一個是我們在http很常用到的東西，
 
