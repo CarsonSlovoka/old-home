@@ -72,6 +72,13 @@ next_section = ""
 [Bcrypt password hashing in Golang (compatible with Node.js)?] | [![golang/crypto](https://github-readme-stats.vercel.app/api/pin/?username=golang&repo=crypto)](https://github.com/golang/crypto)
 [Adding a favicon to a static HTML page] | ```<link href="data:image/x-icon;base64,YourBase64StringHere" rel="icon" type="image/x-icon" />```
 [Range over string slice in golang template] | https://golang.org/pkg/text/template/
+[Embed javascript as base64] |
+[[How can I read a whole file into a string variable]] | ``io.ReadAll``
+[Include js file in Go template] |
+[Correct way of getting Client's IP Addresses from http.Request] |
+[Enable CORS in Golang] |
+[Difference between id and name attributes in HTML] |
+[Gorilla mux custom middleware] |
 
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/
@@ -124,6 +131,14 @@ next_section = ""
 [Bcrypt password hashing in Golang (compatible with Node.js)?]: https://stackoverflow.com/a/23259804
 [Adding a favicon to a static HTML page]: https://stackoverflow.com/a/34699173
 [Range over string slice in golang template]: https://stackoverflow.com/a/54163753
+[Embed javascript as base64]: https://stackoverflow.com/a/383442
+[How can I read a whole file into a string variable]: https://stackoverflow.com/a/66804541
+[Include js file in Go template]: https://stackoverflow.com/a/28899786
+[Correct way of getting Client's IP Addresses from http.Request]: https://stackoverflow.com/a/55738279
+[Enable CORS in Golang]: https://stackoverflow.com/a/48302768
+[In Go, how can I reuse a ReadCloser?]: https://stackoverflow.com/q/33532374
+[Difference between id and name attributes in HTML]: https://stackoverflow.com/q/1397592
+[Gorilla mux custom middleware]: https://stackoverflow.com/q/26204485
 
 {{< /table/bootstrap-table >}}
 

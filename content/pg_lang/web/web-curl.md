@@ -33,7 +33,10 @@ toc_bootstrap = true
 | @@w=20%@@選項 | 語法範例 |
 | ---- | ---- |
 -v, --verbose | 可以顯示更多詳細內容\nMake the operation more talkative
--H, --header | <header/@file> Pass custom header(s) to server
+-H, --header  | <header/@file> Pass custom header(s) to server
+-i, --include | 把回應請求的header也顯示到輸出的結果之中\nInclude protocol response headers in the output
+-X, --request | <command> Specify request command to use\n例如``-XGET``, ``-XPOST``
+-d, --data    | <data>   HTTP POST data\n用在post之中，表示post的內容
 
 {{< /table/bootstrap >}}
 
@@ -43,7 +46,16 @@ toc_bootstrap = true
 
 | @@w=20%@@描述 | 語法範例 |
 | ---- | ---- |
-傳入帳號和密碼 | ``curl -v foo:bar@localhost:8080/admin/secrets``
+傳入帳號和密碼 | ``curl -v username:psw@localhost:8080/admin/secrets``
 加上標頭 | ``curl -v -H 'Authorization: Basic YXVzdGluOjEyMzQ=' localhost:8080/admin/secrets``
+送出一個post資料為json的格式 | ``curl --header "Content-Type: application/json" -d "{\"value\":\"node JS\"}" http://localhost:3000/test``
+夾帶cookie來訪問 | ``curl --cookie "my-cookie-filed=M^IT123..." http://localhost:8080/user/secret``
+帶有CSRF TOKEN和COOKIE | ``curl http://google.com -H "Cookie: 0f8c5bS8673ESS69b" -H "X-CSRF-Token: T12lKP3JKO678JsB3p3kLbjQ45O96bQWvGJAE1APUZM" -X POST``
+gorilla的post測試 | ``curl --cookie "_gorilla_csrf=MTYxNzI0MjQxM3xJbVZLUlZsR00xTjBaa29yTVZkd1UwZFFlbEY1Y25wQmMyeFpaWGN6UW1JeVltVktRMFpPWWpKMGFIYzlJZ289fP9akZ53K4q_HawmqU3FF3IKwIClo5CHK71tQeTcu0m1" -XPOST  -d "{\"value\":\"node JS\"}"  http://localhost:8000/signup/post  -H "X-CSRF-Token: lW4wczUowPMdSBpBLvcVEq+8XIhf4hQ5aO37w3NXKQTt/yhkQYW8bKgSjscRwye9n5DJD+8+As8FD7nXpaGfGA=="``
 
 {{< /table/bootstrap >}}
+
+
+## 參考資料
+
+- [How to Easily use cURL for HTTP Requests](https://adityasridhar.com/posts/how-to-easily-use-curl-for-http-requests)

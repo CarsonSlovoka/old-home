@@ -40,11 +40,11 @@ Move Left | {{< hotkey "Alt+Left" >}} (default)
 
 {{< table/bootstrap-table >}}
 
-| @@w=12em@@name | @@w=5em@@checked\n(☐☑) | Description |
-| ---- | :----: | ---- |
+| @@w=12em@@name | @@w=5em@@checked\n(☐☑) | Description | 設定位置 |
+| ---- | :----: | ---- | ---- |
 Add leading space to comments | ☑ | 可以在打完註解``//``自動多一個空白
-Insert Paired brackets\n(), [], {}, <> | ☐  | 我是不喜歡這種設定，很愚蠢，每次打完還要再用方向鍵不能連著打
-Insert pair quote | ☐  | 同上
+Insert Paired brackets\n(), [], {}, <> | ☐  | 我是不喜歡這種設定，很愚蠢，每次打完還要再用方向鍵不能連著打 | Editor > General > Smart Keys
+Insert pair quote | ☐  | 同上 | Editor > General > Smart Keys
 Change font size with\n``Ctrl+Mouse Wheel`` | ☑ | 可以用滾輪來改變font-size
 
 {{< /table/bootstrap-table >}}
@@ -71,3 +71,17 @@ Change font size with\n``Ctrl+Mouse Wheel`` | ☑ | 可以用滾輪來改變font
 可以運用預設的[Reformat Code]({{< ref "#reformat-code" >}})
 
 比較快，而且兩個的結果是一樣的
+
+## [打開多個專案](https://www.jetbrains.com/help/webstorm/opening-reopening-and-closing-projects.html#ws_opening_multiple_projects)
+
+造理說 [Open資料夾](https://www.jetbrains.com/help/webstorm/opening-reopening-and-closing-projects.html#ws_multiple_project_select_opening_policy) 預設會問你的附加方式是什麼
+
+選擇Attach可以把資料夾附加到當前的專案下，但如果一直沒辦法成功
+
+可以在
+
+```
+Settings > Project Structure
+
+            + Add Content Root  (點選這個新增上去，也可以達到相同的效果
+```

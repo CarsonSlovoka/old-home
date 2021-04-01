@@ -19,15 +19,15 @@ toc_bootstrap = true
 
 | 設定檔 | 位置  | 說明 |
 | ---- | ---- | ---- |
-| --system  | windows:``%programdata%/Git/config``\nUnix:``$(prefix)/etc/gitconfig``
-| --global | windows:``%userprofile%/.gitconfig``\nUnix:``~ /.gitconfig``
-| --local | ``.git/config`` (這個只的就是您git init出來的那個.git資料夾，一般不會在這邊設定)
+| -\-system  | windows:``%programdata%/Git/config``\nUnix:``$(prefix)/etc/gitconfig``
+| -\-global | windows:``%userprofile%/.gitconfig``\nUnix:``~ /.gitconfig``
+| -\-local | ``.git/config`` (這個只的就是您git init出來的那個.git資料夾，一般不會在這邊設定)
 
 {{< /table/bootstrap-table >}}
 
 如果您懶得找文件位置，想要直接開起來編輯，可以用``--edit``
 
-> git config --global --edit
+> git config -\-global -\-edit
 
 通常編輯器會告訴您檔案的位置，您就知道在哪裡了
 
@@ -271,7 +271,7 @@ git config --global core.safecrlf warn
 ## git submodule
 
 遞迴更新
-> git submodule update --init --recursive
+> git submodule update -\-init -\-recursive
 
 
 ## git merge
