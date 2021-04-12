@@ -2,7 +2,7 @@
 title = "Golang Settings"
 description="Keymap, Editor,..."
 date = 2021-01-22T13:25:01+08:00
-lastmod = 2021-03-02
+lastmod = 2021-04-06
 featured_image = ""
 draft = false
 weight = 0
@@ -72,6 +72,8 @@ Change font size with\n``Ctrl+Mouse Wheel`` | ☑ | 可以用滾輪來改變font
 
 比較快，而且兩個的結果是一樣的
 
+### FAQ
+
 ## [打開多個專案](https://www.jetbrains.com/help/webstorm/opening-reopening-and-closing-projects.html#ws_opening_multiple_projects)
 
 造理說 [Open資料夾](https://www.jetbrains.com/help/webstorm/opening-reopening-and-closing-projects.html#ws_multiple_project_select_opening_policy) 預設會問你的附加方式是什麼
@@ -85,3 +87,21 @@ Settings > Project Structure
 
             + Add Content Root  (點選這個新增上去，也可以達到相同的效果
 ```
+
+
+### IDE一直沒辦法讀取到正確的Module
+
+```
+Settings > Go > Go Modules
+
+☑ Enable Go Modules Integration 這一項記得打勾
+```
+
+Enable Go Modules Integration : 這個東西指的就是go.mod
+
+在舊版的go沒有go.mod這種東西(在go1.11前沒有(GO111MODULE的3個1就是指這個))，所以這項設定要自己去打開
+
+其實我覺得要自動開啟了，新人我想都對go.mod略知一二，預設不開啟只是給人添麻煩而已。
+
+
+

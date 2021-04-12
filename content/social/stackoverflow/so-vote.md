@@ -79,6 +79,9 @@ next_section = ""
 [Enable CORS in Golang] |
 [Difference between id and name attributes in HTML] |
 [Gorilla mux custom middleware] |
+[How to redirect to a url] | ``http.Redirect(w, r, "/login/", http.StatusSeeOther)`` http.StatusSeeOther 303 這個是關鍵！
+[Golang Gorilla mux with http.FileServer returning 404] |
+[How can I get the user's AppData folder path] |
 
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/
@@ -139,6 +142,9 @@ next_section = ""
 [In Go, how can I reuse a ReadCloser?]: https://stackoverflow.com/q/33532374
 [Difference between id and name attributes in HTML]: https://stackoverflow.com/q/1397592
 [Gorilla mux custom middleware]: https://stackoverflow.com/q/26204485
+[How to redirect to a url]: https://stackoverflow.com/a/35934496
+[Golang Gorilla mux with http.FileServer returning 404]: https://stackoverflow.com/q/21234639
+[How can I get the user's AppData folder path]: https://stackoverflow.com/a/66189296
 
 {{< /table/bootstrap-table >}}
 

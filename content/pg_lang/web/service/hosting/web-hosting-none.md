@@ -208,6 +208,17 @@ Containers as a service
 
 第三張圖: NoOps的概念，將需要人力進行開發、部屬和維護的作業都交由自動化來取代，如此就能專注於主要的業務之中。
 
+## Host檔案
+
+hosts檔案位子:
+
+> %windir%\system32\drivers\etc
+
+```
+127.0.0.1 www.xxx.net
+0.0.0.0 https://account.xxx.com:443
+```
+
 ## 參考資料
 
 - [Serverless & FaaS](https://medium.com/@jinghua.shih/serverless-faas-3b607f0158fe)

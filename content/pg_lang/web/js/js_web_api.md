@@ -67,3 +67,10 @@ end = new Date().getTime();
 ```
 
 {{< /table/code-by-example >}}
+
+
+## [video speed](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
+
+```
+document.querySelector('video').playbackRate = 4;
+```
