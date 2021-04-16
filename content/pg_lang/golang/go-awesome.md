@@ -35,7 +35,11 @@ toc_bootstrap = true
 
 但一旦您熟練之後，其實會發現使用原生套件 [net/http](https://golang.org/pkg/net/http/) + [gorilla/mux](https://github.com/gorilla/mux)
 
-就可以做很多事情了，而且寫出來都是自己能懂得，框架還要看別人是怎麼設計的，還且其實核心都會回到原始套件
+就可以做很多事情了，而且寫出來都是自己能懂，框架還要看別人是怎麼設計，核心也還是回到原始套件。
+
+如果您是團隊那就用框架(方便交接)
+
+個人工作者，我會推自己寫，畢竟框架因為要包山包海，適用性要很強，但不是所有專案都必須用到那麼多東西，另外能加強對底層的印象以及因為是原作者後續如果要異動也比較好改。
 
 | Name | Desc |
 | ---- | ---- |
@@ -59,3 +63,10 @@ toc_bootstrap = true
 | Name | Desc |
 | ---- | ---- |
 [![gin-gonic/gin](https://github-readme-stats.vercel.app/api/pin?username=gin-gonic&repo=gin)](https://github.com/gin-gonic/gin) | 神級別的框架，新手可以先用這個框架，之後再回頭用原生框架
+
+
+### 爬蟲
+
+| Name | Desc |
+| ---- | ---- |
+[![colly](https://github-readme-stats.vercel.app/api/pin?username=gocolly&repo=colly)](https://github.com/gocolly/colly) |

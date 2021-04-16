@@ -2,7 +2,7 @@
 title = "Git教學"
 description = "一些git好用的東西"
 date = 2020-12-14T18:13:00+08:00
-lastmod = 2021-03-14
+lastmod = 2021-04-14
 featured_image = ""
 tags = ["git"]
 draft = false
@@ -335,6 +335,22 @@ rebase比較常用在搬移，當您不想要
 排除public資料夾，
 
 但是不包含``!tool/FileServer/public``
+
+## [git tag](https://git-scm.com/docs/git-tag)
+
+| Options | Desc. | Example |
+| ---- | ---- | ---- |
+-f -\-force | Replace an existing tag with the given name (instead of failing) |
+-l -\-list  | List tags | ``git tag -l 'v1.4.2.*'``
+-d -\-delete | Delete existing tags with the given names. | ``git tag -d "v1.4.2"``
+
+### remote tag
+
+- 新增
+    > git push origin -\-tags
+
+- 刪除
+    > git push -\-delete origin tagname
 
 
 ## 👍不錯的文章推薦

@@ -2,7 +2,7 @@
 title = "Go Web Tutorial"
 description=""
 date = 2021-03-19T16:30:56+08:00
-lastmod = 2021-03-19
+lastmod = 2021-04-15
 featured_image = ""
 draft = false
 weight = 0
@@ -50,9 +50,9 @@ gin的框架範例很多，上網搜一下不難發現好文章。
 
 - text/template: 當作文字檔，所以**不會**進行任何的轉譯
 
-### http.template
+### html.template
 
-原始套件生成HTML文件，就是用 ``http.template``
+原始套件生成HTML文件，就是用 ``html.template``
 
 而從golang1.16開始推出了embed，
 
@@ -210,3 +210,84 @@ func main() {
 
 
 [html.template: Actions]: https://golang.org/pkg/text/template/#hdr-Actions
+
+
+## ★template內容能怎麼寫
+
+這一段很重要，如果您首次接觸go的template，一定要去看一下官方文檔，我這邊抓出我覺得比較重要的，
+
+如果您想看原始說明，可以隨時點標題連結就可以連過去了
+
+### [Actions](https://golang.org/pkg/text/template/#hdr-Actions)
+
+{{< table/bootstrap >}}
+
+| Syntax | Desc. |
+| ----   | ----  |
+``{{/* a comment */}}`` | 註解
+``{{- /* a comment */ -}}`` | 也是註解但是會移除前後的換行(我會推薦用這種方式)
+``{{ pipeline }}`` | 變數
+``{{if pipeline}} T1 {{end}}`` | If表示式
+``{{if pipeline}} T1 {{else}} T0 {{end}}`` | If else
+``{{if pipeline}} T1 {{else if pipeline}} T0 {{end}}`` | if elif else
+``{{range pipeline}} T1 {{end}}`` | pipeline必須是``array``, ``slice``, ``map``, ``channel``其中之一, 如果該物件的length為0**不**執行T1的描述
+``{{range pipeline}} T1 {{else}} T0 {{end}}`` | 同上
+``{{template "name"}}`` | 不帶任何資料的render某樣板
+``{{template "name" pipeline}}`` | 以pipeline的資料render某樣板 (通常我們都用這種方式，並且pipeline通常用「``.``」去給，把所有東西都丟進去
+``{{block "name" pipeline}} T1 {{end}}`` | 當您在``{{template "xxx" pipeline}}``中該xxx的樣板內有``{{define "name"}} T1 {{end}}``，這裡的define的實作其實就是這邊block的內容
+``{{with pipeline}} T1 {{end}}`` | 如果pipeline為空則不執行T1，另外您也可以放入dot(``.``)他也會執行T1
+``{{with pipeline}} T1 {{else}} T0 {{end}}`` |
+
+{{< /table/bootstrap >}}
+
+### [Arguments](https://golang.org/pkg/text/template/#hdr-Arguments)
+
+
+| Name | Desc. |
+| ----   | ----  |
+. |
+nil | 同Go的nil
+$myVar | 變數
+.Field | 取得Field(go中render此樣板必須含有Field才行
+.Field.Filed | 支持嵌套 嵌套的內容幾乎甚麼都可以像是變數、Map,Method等等
+
+### [Variables](https://golang.org/pkg/text/template/#hdr-Variables)
+
+宣告某變數
+> $variable := pipeline
+
+重新設定某變數
+>$variable = pipeline
+
+range用法
+> range $index, $element := pipeline
+
+### [Functions](https://golang.org/pkg/text/template/#hdr-Functions)
+
+| Name | example |
+| ---- | ---- |
+and | ``and x y`` if x then y else x
+call | ``call .X.Y 1 2`` Go notation, **dot.X,Y(1, 2)**
+index | ``index x 1 2 3`` x[1][2][3]
+slice | ``slice x`` x[:], ``slice x 1`` x[1:], ``slice x 1 2 3`` x[1:2:3]
+html | Returns the escaped HTML equivalent of the textual representation of its arguments
+js | Returns the escaped JavaScript equivalent of the textual representation of its arguments.
+len |
+not |
+or |
+print | An alias for fmt.Sprint
+printf | An alias for fmt.Sprintf
+println | An alias for fmt.Sprintln
+urlquery |
+
+
+#### binary comparison operators
+
+| Name | Desc |
+| ---- | ---- |
+eq | Returns the boolean truth of arg1 == arg2
+ne | Returns the boolean truth of arg1 != arg2
+lt | Returns the boolean truth of arg1 < arg2
+le | Returns the boolean truth of arg1 <= arg2
+gt | Returns the boolean truth of arg1 > arg2
+ge | Returns the boolean truth of arg1 >= arg2

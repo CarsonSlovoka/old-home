@@ -97,7 +97,7 @@ nginx:alpine[^alpine]這個就是IMAGE，
 - [Docker的歷史](https://www.ithome.com.tw/news/113899)
 
 
-[^alpine]: alpine: 指的是Alpine Linux内核(5 MB左右)，比ubuntu内核要小很多。更多請詳:[Alpine Linux，一个只有 5M 的 Docker 鏡像](https://www.infoq.cn/news/2016/01/Alpine-Linux-5M-Docker/])
+[^alpine]: alpine: 指的是Alpine Linux內核(5 MB左右)，比ubuntu內核要小很多。更多請詳:[Alpine Linux，一个只有 5M 的 Docker 鏡像](https://www.infoq.cn/news/2016/01/Alpine-Linux-5M-Docker/])
 
 
 

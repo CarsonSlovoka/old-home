@@ -140,7 +140,7 @@ Class prefix | ``.col-`` | ``.col-sm-`` | ``.col-md-`` | ``.col-lg-`` | ``.col-x
 - ``text-center``: 把文字在該區塊內置中
 - ``justify-content-center``: to center the children **horizontally**
 - ``align-items-center``: to center the children **vertically**
-- ``col-md-offset-5``: set an offset equal to half of the remaining size of the row. 以這個例子就是兩邊個留白5的範圍
+- ``col-md-offset-3``: set an offset equal to half of the remaining size of the row. 以這個例子就是兩邊各留白3單位
 - ``mx-auto``: margin-right: auto!important; margin-left: auto!important;
 
 

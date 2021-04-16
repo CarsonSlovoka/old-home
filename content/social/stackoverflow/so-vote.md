@@ -54,7 +54,7 @@ next_section = ""
 [How do I add Add text below font awesome icon Links?] |
 [Access struct property by name] |
 ★[Using reflect, how do you set the value of a struct field?] |
-[Can I target all <H> tags with a single selector?] |
+[Can I target all <H> tags with a single selector?] | ``:is(h1, h2, h3, h4, h5, h6) {color: red;}`` [is](https://developer.mozilla.org/en-US/docs/Web/CSS/:is)
 [How to make <details> drop down on mouse hover] |
 [SASS (not SCSS) syntax for css3 keyframe animation] |
 [How do you serve a static html file using a go web server?] |
@@ -82,6 +82,15 @@ next_section = ""
 [How to redirect to a url] | ``http.Redirect(w, r, "/login/", http.StatusSeeOther)`` http.StatusSeeOther 303 這個是關鍵！
 [Golang Gorilla mux with http.FileServer returning 404] |
 [How can I get the user's AppData folder path] |
+[Golang FileServer with custom css] |
+[Is there any way to access private fields of a struct from another package?] | ``reflect.ValueOf(*f).FieldByName("y")``
+[How to serve up a JSON response using Go?] | ``json.NewEncoder(w).Encode(goObj)``
+[Static Data Grid - 10K records with search, pagination, export options]
+[How to insert and update data in Bootstrap table?]
+[What is the difference between jQuery's mouseout() and mouseleave()?]
+[How to bind an event listener only once in pure JavaScript?]
+[How can I add an event for a one time click to a function?] | ``EventTarget.addEventListener("click", function() { }, {once : true});``
+
 
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/
@@ -145,6 +154,15 @@ next_section = ""
 [How to redirect to a url]: https://stackoverflow.com/a/35934496
 [Golang Gorilla mux with http.FileServer returning 404]: https://stackoverflow.com/q/21234639
 [How can I get the user's AppData folder path]: https://stackoverflow.com/a/66189296
+[Golang FileServer with custom css]: https://stackoverflow.com/q/51881361
+[Is there any way to access private fields of a struct from another package?]: https://stackoverflow.com/a/17982725
+[How to serve up a JSON response using Go?]: https://stackoverflow.com/a/31622112
+[Static Data Grid - 10K records with search, pagination, export options]: https://stackoverflow.com/a/45938210
+[How to insert and update data in Bootstrap table?]: https://stackoverflow.com/a/31289326
+[What is the difference between jQuery's mouseout() and mouseleave()?]: https://stackoverflow.com/a/53408794
+[How to bind an event listener only once in pure JavaScript?]: https://stackoverflow.com/q/60498051
+[How can I add an event for a one time click to a function?]: https://stackoverflow.com/a/46291530
+
 
 {{< /table/bootstrap-table >}}
 
