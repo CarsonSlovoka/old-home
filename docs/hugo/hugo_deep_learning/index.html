@@ -1,0 +1,340 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge,chrome=1"><title>深入學習Hugo 1 | Carson Blog</title><meta name=viewport content="width=device-width,minimum-scale=1"><meta name=description content="本篇是在對Hugo懵懵懂懂時邊學邊做記錄下來的東西"><meta name=generator content="Hugo 0.81.0"><meta name=ROBOTS content="INDEX, FOLLOW"><link href=/css/markmap.css rel=stylesheet><script src=https://d3js.org/d3.v6.min.js></script><script src=/js/uml/markmap-view@0.2.0.js></script><script defer src=/js/uml/markmap.js></script><link href=/dist/css/search-fuse.css rel=stylesheet><link rel=stylesheet type=text/css href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin=anonymous><script defer src=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/js/all.min.js integrity="sha512-UwcC/iaz5ziHX7V6LjSKaXgCuRRqbTp1QHpbOJ4l1nw2/boCfZ2KlFIqBUA/uRVF0onbREnY9do8rM/uT/ilqw==" crossorigin=anonymous></script><link rel=stylesheet href=/css/google-fonts.css><link rel=stylesheet href=/css/embed-bk-img.css><link href=/dist/css/app.4fc0b62e4b82c997bb0041217cd6b979.css rel=stylesheet><link href=/dist/css/navbar.css rel=stylesheet><link href=/dist/css/card_post.css rel=stylesheet><link href=/dist/css/utils.css rel=stylesheet><link href=/dist/sass/main_sass.css rel=stylesheet><link href=https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css rel=stylesheet integrity=sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1 crossorigin=anonymous><script src=https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js integrity=sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW crossorigin=anonymous></script><link rel="shortcut icon" href=/images/tab_icon.jpg type=image/x-icon><meta property="og:title" content="深入學習Hugo 1"><meta property="og:description" content="本篇是在對Hugo懵懵懂懂時邊學邊做記錄下來的東西"><meta property="og:type" content="article"><meta property="og:url" content="https://carsonslovoka.github.io/hugo/hugo_deep_learning/"><meta property="article:section" content="hugo"><meta property="article:published_time" content="2020-12-07T09:43:12+08:00"><meta property="article:modified_time" content="2020-12-07T09:43:12+08:00"><meta itemprop=name content="深入學習Hugo 1"><meta itemprop=description content="本篇是在對Hugo懵懵懂懂時邊學邊做記錄下來的東西"><meta itemprop=datePublished content="2020-12-07T09:43:12+08:00"><meta itemprop=dateModified content="2020-12-07T09:43:12+08:00"><meta itemprop=wordCount content="6241"><meta itemprop=keywords content="hugo,"><meta name=twitter:card content="summary"><meta name=twitter:title content="深入學習Hugo 1"><meta name=twitter:description content="本篇是在對Hugo懵懵懂懂時邊學邊做記錄下來的東西"><script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-98900980-4','auto'),ga('send','pageview'))</script><script async src=https://www.google-analytics.com/analytics.js></script></head><body data-bs-spy=scroll data-bs-target=#navbar class="ma0 bg-near-white google-noto-sans-tc"><header class="cover bg-top" style=background-image:url(https://carsonslovoka.github.io/images/animal/news/2020-12-18_good_news.jpg)><div class="pb3-m pb6-l bg-black-60"><nav class="pv3 ph3 ph4-ns" role=navigation><div class="flex-l justify-between items-center center"><a href=/ class="f3 fw2 hover-white no-underline white-90 dib"><i class="zoom-in fas fa-home fa-3x" style=color:#ffc34d></i></a><div class="flex-l items-center"><ul class="pl0 mr3"><li class="zoom-in list f5 f4-ns fw4 dib pr3"><a class="hover-white no-underline white-90" href=/site-search-simple/ title><i class="fas fa-search"></i></a></li><li class="zoom-in list f5 f4-ns fw4 dib pr3"><a class="hover-white no-underline white-90" href=/pages-timeline/ title><i class="fas fa-code-branch"></i></a></li><li class="zoom-in list f5 f4-ns fw4 dib pr3"><i class="fas fa-sitemap" style=color:#b1e844></i><a class="hover-white no-underline white-90" href=/site-markmap/ title=地圖>地圖</a></li><li class="zoom-in list f5 f4-ns fw4 dib pr3"><i class="fas fa-h-square" style=color:#e844a8></i><a class="hover-white no-underline white-90" href=/hugo/ title=教學>教學</a></li></ul></div></div></nav><div class="tc-l pv6 ph3 ph4-ns"><h1 class="f2 f1-l white-90 mb0 lh-title">深入學習Hugo 1</h1><h2 class="f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4" style=background-color:initial>本篇是在對Hugo懵懵懂懂時邊學邊做記錄下來的東西</h2></div></div></header><main class=pb7 role=main><article class="flex-l flex-wrap justify-between mw8 center ph3"><header class="mt4 w-100"><aside class="instapaper_ignoref b helvetica tracked">HUGO教學</aside><div id=sharing class=mt3><a href="https://www.facebook.com/sharer.php?u=https://carsonslovoka.github.io/hugo/hugo_deep_learning/" class="facebook no-underline" aria-label="share on Facebook"><svg height="32" style="enable-background:new 0 0 67 67" viewBox="0 0 67 67" width="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M28.765 50.32h6.744V33.998h4.499l.596-5.624h-5.095l.007-2.816c0-1.466.14-2.253 2.244-2.253h2.812V17.68h-4.5c-5.405.0-7.307 2.729-7.307 7.317v3.377h-3.369v5.625h3.369V50.32zM33 64C16.432 64 3 50.569 3 34S16.432 4 33 4s30 13.431 30 30S49.568 64 33 64z" style="fill-rule:evenodd;clip-rule:evenodd"/></svg></a><a href="https://twitter.com/share?url=https://carsonslovoka.github.io/hugo/hugo_deep_learning/&text=%e6%b7%b1%e5%85%a5%e5%ad%b8%e7%bf%92Hugo%201" class="twitter no-underline" aria-label="share on Twitter"><svg height="32" style="enable-background:new 0 0 67 67" viewBox="0 0 67 67" width="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167 22.283c-2.619.953-4.274 3.411-4.086 6.101l.063 1.038-1.048-.127c-3.813-.487-7.145-2.139-9.974-4.915l-1.383-1.377-.356 1.017c-.754 2.267-.272 4.661 1.299 6.271.838.89.649 1.017-.796.487-.503-.169-.943-.296-.985-.233-.146.149.356 2.076.754 2.839.545 1.06 1.655 2.097 2.871 2.712l1.027.487-1.215.021c-1.173.0-1.215.021-1.089.467.419 1.377 2.074 2.839 3.918 3.475l1.299.444-1.131.678c-1.676.976-3.646 1.526-5.616 1.568C19.775 43.256 19 43.341 19 43.405c0 .211 2.557 1.397 4.044 1.864 4.463 1.377 9.765.783 13.746-1.568 2.829-1.673 5.657-5 6.978-8.221.713-1.716 1.425-4.851 1.425-6.354.0-.975.063-1.102 1.236-2.267.692-.678 1.341-1.419 1.467-1.631.21-.403.188-.403-.88-.043-1.781.636-2.033.551-1.152-.402.649-.678 1.425-1.907 1.425-2.267.0-.063-.314.042-.671.233-.377.212-1.215.53-1.844.72l-1.131.361-1.027-.7c-.566-.381-1.361-.805-1.781-.932C39.766 21.902 38.131 21.944 37.167 22.283zM33 64C16.432 64 3 50.569 3 34S16.432 4 33 4s30 13.431 30 30S49.568 64 33 64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:"/></svg></a><a href="https://www.linkedin.com/shareArticle?mini=true&url=https://carsonslovoka.github.io/hugo/hugo_deep_learning/&title=%e6%b7%b1%e5%85%a5%e5%ad%b8%e7%bf%92Hugo%201" class="linkedin no-underline" aria-label="share on LinkedIn"><svg height="32" style="enable-background:new 0 0 65 65" viewBox="0 0 65 65" width="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M50.837 48.137V36.425c0-6.275-3.35-9.195-7.816-9.195-3.604.0-5.219 1.983-6.119 3.374V27.71h-6.79c.09 1.917.0 20.427.0 20.427h6.79V36.729c0-.609.044-1.219.224-1.655.49-1.22 1.607-2.483 3.482-2.483 2.458.0 3.44 1.873 3.44 4.618v10.929H50.837zM22.959 24.922c2.367.0 3.842-1.57 3.842-3.531-.044-2.003-1.475-3.528-3.797-3.528s-3.841 1.524-3.841 3.528c0 1.961 1.474 3.531 3.753 3.531H22.959zM34 64C17.432 64 4 50.568 4 34 4 17.431 17.432 4 34 4s30 13.431 30 30c0 16.568-13.432 30-30 30zM26.354 48.137V27.71h-6.789v20.427h6.789z" style="fill-rule:evenodd;clip-rule:evenodd;fill:"/></svg></a></div><h1 class="f1 athelas mt3 mb1">深入學習Hugo 1</h1><time class="f6 mv4 dib tracked" datetime=2020-12-07T09:43:12+08:00>December 7, 2020</time></header><div class="nested-copy-line-height lh-copy google-noto-sans-tc f4 nested-links nested-img mid-gray
+w-80-l"><h2 id=前言>前言</h2><p>Hugo本身就是個: <strong>Static Site Generator</strong> 后面简称為 <a href=https://jamstack.org/generators/>SSG</a></p><p>為什麼要學Hugo?:</p><blockquote><p>因為快！</p></blockquote><p>次因:</p><ul><li>使用Go所開發</li><li>模板也算好學</li></ul><p>并不是每一个网站都需要一个 Server 来动态生成内容，也不是每一个网站都需要数据库。博客系统，文档系统，企业官网等等，都是静态网站的好用例。</p><p>hugo除了是SSG以外，它還是SSG中最快速的！</p><p>您可能會看到<em>spf13</em>而不曉得這到底是甚麼意思？</p><blockquote><p>他是Hugo的作者名稱<strong>Steve Francia</strong>(13我覺得是因為他的名子加上空白共有13個字)</p></blockquote><p>Hugo 是一個用 Go 編寫的靜態網站生成器，2013由 <a href=https://github.com/spf13>Steve Francia</a> 原創</p><hr><p><del>網路上很多的教學，都只講皮毛，包含看官方的文件，也很難找到入門點(我指的是自己刻製化)</del></p><p>官方文件不好看，但是官方影片(<strong>Mike Dane</strong>))拍的，我覺得非常有用，您可以先看影片，然後再回頭看文檔補足剩下部分即可。</p><blockquote><p>👍 如果您覺得影片有幫助，請給個讚，以鼓勵這些願意奉獻的人們，一個讚用不了您多少時間，但是卻能給作者帶來許多正能量！</p></blockquote><blockquote><p>💥 影片有些東西已經很舊了，看完影片請務必回來再看官方文檔，官方文檔講得更多也更細，而且內容都是新的不會有過時的語法！</p></blockquote><p>我自己再讀完<a href=https://carsonslovoka.github.io/hugo/hugo_tutorial/#getting-started>Getting Started</a>後找了<a href=https://github.com/gohugoio/hugoDocs.git>hugoDocs</a>的專案來看，以下是一些心得，希望能幫助到有需要的人。</p><h2 id=第一課>第一課</h2><h3 id=hugodocs是什麼>hugoDocs是什麼?</h3><p>就是您逛Hugo官方文件所看到的官方網站，就是用那一個主題所生成，</p><table><thead><tr><th>Themes</th><th>專案初始日期</th><th></th><th></th></tr></thead><tbody><tr><td><a href=https://github.com/gohugoio/hugoDocs.git>hugoDocs</a></td><td>2013-07-04</td><td><img src="https://img.shields.io/github/stars/gohugoio/hugoDocs?style=social" alt=stars </td><td><img src="https://img.shields.io/github/forks/gohugoio/hugoDocs?style=social" alt=forks </td></tr></tbody></table><h3 id=hugo的目錄結構>hugo的目錄結構</h3><pre><code>content
+├── posts  # 您的分類資料夾
+│   ├── demo.md  # 張貼的檔案內容
+layouts
+├── index.html  # 載入 include.html, menu.html,  footer.html
+├── LICENCE.txt
+├── chrome
+│   ├── header.html  # 載入 &lt;title&gt;{{ .Title }}&lt;/title&gt;(&lt;-- 這一個是tab上的頁籤名稱)  {{ template &quot;chrome/includes.html&quot; . }}  {{ template &quot;chrome/menu.html&quot; . }}
+│   ├── footer.html  # 一個純寫html footer的檔案
+│   ├── include.html  # 載入 css  # &lt;link rel=&quot;stylesheet&quot; href=&quot;/static/css/bootstrap.min.css&quot;&gt;
+│   └── menu.html  # 利用li連結各個檔案，以當作menu項目  # &lt;li&gt; &lt;a href=&quot;/doc/source-directory.html&quot;&gt;Input Directory Layout&lt;/a&gt; &lt;/li&gt;
+|
+├── doc
+    └── single.html  # ★用來渲染文件整體
+</code></pre><blockquote><p>💥 template其實有經過改版，在後續的版本中，建議使用 <code>partial</code> 來代替 template</p></blockquote><ul><li><p>doc/single.html:</p><pre><code>{{ template &quot;chrome/header.html&quot; . }}  # 載入header: 包含 {include {css, js}, menu}
+          &lt;h1&gt;{{ .Title }}&lt;/h1&gt;
+          {{ .Content }}
+{{ template &quot;chrome/footer.html&quot; . }}  # 載入footer
+</code></pre></li><li><p>demo.md:</p><pre><code>---
+title: &quot;...&quot;
+date: 2020-12-07T09:43:12+08:00
+draft: false
+---
+</code></pre><p>這些開頭的變數都會保存在<code>.Params</code>的變數中，讓<code>templates</code>可以使用</p></li></ul><p>hugo張貼出來的文章架構(Organization):</p><pre><code>.
+└── content
+    ├── post
+    |   ├── firstpost.md   // &lt;- http://site.com/post/firstpost.html
+    |   └── secondpost.md  // &lt;- http://site.com/post/secondpost.html
+    └── quote
+        ├── first.md       // &lt;- http://site.com/quote/first.html
+        └── second.md      // &lt;- http://site.com/quote/second.html
+</code></pre><p>以下這是最初版時作者希望做到的事情:</p><ul><li>Pagination</li><li>Support for top level pages (other than homepage)</li><li>Series support</li><li>Syntax highlighting</li><li>Previous & Next</li><li>Related Posts</li><li>Support for TOML front matter</li><li>Proper YAML support for front matter</li><li>Support for other formats</li></ul><h3 id=樣板render-shortcode>樣板render (shortcode)</h3><p>很像jinja，而 <code>{{ }}</code> 他們稱之為: 「<code>shortcode</code>」</p><hr><h4 id=example-youtube>example youtube</h4><pre><code>{{&lt; youtube youtube-id &gt;}}
+{{&lt; youtube id=&quot;youtube-id&quot; autoplay=&quot;true&quot; &gt;}}
+
+
+<div style=position:relative;padding-bottom:56.25%;height:0;overflow:hidden>
+  <iframe src=https://www.youtube.com/embed/2xkNJL4gJ9E style=position:absolute;top:0;left:0;width:100%;height:100%;border:0 allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+</code></pre><p>很酷吧，直接就能在您的靜態網站撥放youtube的影片</p><p>This would be rendered as::</p><pre><code>&lt;div class=&quot;embed video-player&quot;&gt;
+&lt;iframe class=&quot;youtube-player&quot; type=&quot;text/html&quot;
+    width=&quot;640&quot; height=&quot;385&quot;
+    src=&quot;http://www.youtube.com/embed/09jf3ow9jfw&quot;
+    allowfullscreen frameborder=&quot;0&quot;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+</code></pre><hr><h4 id=example-image-with-caption>example: image with caption</h4><pre><code>{{% figure src=&quot;/media/spf13.jpg&quot; title=&quot;Steve Francia&quot; %}}
+</code></pre><p>Would be rendered as::</p><pre><code>&lt;figure &gt;
+    &lt;img src=&quot;/media/spf13.jpg&quot;  /&gt;
+    &lt;figcaption&gt;
+        &lt;h4&gt;Steve Francia&lt;/h4&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre><p>實際範例:</p><figure><img src=../../images/tab_icon.jpg><figcaption><h4>神氣的媽媽熊</h4></figcaption></figure><blockquote><p>{{&lt; figure src="../../images/tab_icon.jpg" title=&ldquo;神氣的媽媽熊&rdquo; >}} 😎</p></blockquote><blockquote><p><strong><em>NOTE</em></strong>: figure src是相對路徑，也就是以您文章所在的資料夾為主，所以如果您要取根路徑下的<code>static</code>資料夾，您可以用<code>..</code>幫您回到前一層，最後注意，回到baseURL之後您<strong>不用</strong>再加上static資料夾，預設您的圖片資源就會在static資料夾中找尋</p></blockquote><blockquote><p>圖片實際路徑: ./static/images/tab_icon_.jpg</p></blockquote><h2 id=第二課>第二課</h2><p>關於您各個文件的內容，都必須是<strong>小寫</strong>(推測後面還是有更動，因為以目前來說，並非總是小寫)</p><blockquote><p>請參考: <code>Now support for config files as yaml, json or toml sha:a54e04e6fd0084224cad5b</code> <code>configuration.md</code></p></blockquote><p>例如:</p><pre><code>sourcedir = &quot;content&quot;  # 於sha: 3db18bca9c37280e9 改名就做 contentdir
+layoutdir = &quot;layouts&quot;
+publishdir = &quot;public&quot;
+builddrafts = false
+baseurl = &quot;http://yoursite.com/&quot;
+[indexes]
+   category = &quot;categories&quot;
+   tag = &quot;tags&quot;
+</code></pre><p><code>Default is now pretty urls (without .html) sha: af5e4d1a56e4dfe94c</code> 更改了 內部連結，不在需要加上 <code>.html</code> 例如::</p><pre><code>原來的版本: &lt;li&gt; &lt;a href=&quot;/doc/configuration.html&quot;&gt;Configuration&lt;/a&gt; &lt;/li&gt;
+新版:      &lt;li&gt; &lt;a href=&quot;/doc/configuration&quot;&gt;Configuration&lt;/a&gt; &lt;/li&gt;
+</code></pre><p>在早期的版本，一些static的檔案是存放在<code>public</code>資料夾，於 <code>sha: 37eb9bae7ad49f6d744e0c</code> 才將其改放置 <code>static</code> 資料夾</p><h2 id=補充教材>★★★補充教材</h2><p>您會發現hugoDocs早期的代碼中(<code>sha1 id:3db18bca9c37280</code>以前)，只有範例，沒有真實的文件運用，因此還是很難搞懂一些原理</p><p>例如 indexes.md 中，提及:</p><pre><code>---
+indexes:
+    tag: &quot;tags&quot;       &lt;--- 這是什麼東東?
+    topic: &quot;topics&quot;   &lt;--- 這是什麼東東?
+baseurl: &quot;http://spf13.com/&quot;
+title: &quot;Steve Francia is spf13.com&quot;
+---
+</code></pre><p>這邊光這樣寫實在不知道在幹甚麼&mldr;</p><h3 id=甚麼是section-甚麼是page>甚麼是section? 甚麼是Page?</h3><p>section是什麼？</p><blockquote><p>在Hugo/content中，每一個目錄稱為一個 <code>section</code> !</p></blockquote><p>Hugo世界中，<a href=https://bwaycer.github.io/hugo_tutorial.hugo/content/using-index-md#index-md-and-everything-is-a-page>所有的東西都是 <strong>Page</strong></a></p><p>每一個Page都會對應一個 <code>原文件</code>， 例如::</p><pre><code>hugo new c1/_index.md
+hugo new c1/p1.md
+
+content/c1/_index.md
+content/c1/p1.md
+</code></pre><p>他我們訪問:</p><ul><li><code>/c1/</code> 時，他的原文件是<code>content/_index.md</code></li><li><code>c1/p1</code> => <code>content/c1/p1.md</code></li></ul><h3 id=用哪一個樣版來render>★用哪一個樣版來render</h3><p>Hugo模板系統主要分為3大類:</p><ol><li><p>首頁: 使用 <code>index.html</code> 或者 <code>baseof.html</code></p></li><li><p>列表行頁面 使用 <code>_default/list.html</code> 來渲染 : 對應的文件為某個 <code>_index.md</code> ，例如我們剛才提及的::</p><p>他我們訪問 <code>/c1/</code> 時，他的原文件是\ <code>content/_index.md</code></p></li><li><p>一般頁面 使用 <code>_default/single.html</code>\，例如::</p><p>當我們訪問 <code>c1/p1</code> 原文件對應 <code>content/c1/p1.md</code></p></li></ol><blockquote><p>💥 我們這邊所說的不管是 list.html 還是 single.html 都是只在 <code>./layouts</code> 底下模板用的html</p></blockquote><p>所有的模板都在 <code>./layouts</code> 中可以找到</p><p>默認的樣板會放在 <code>./layouts/_default</code>\之中，</p><p>而既然是默認，就代表您還可以客製更多的樣板，並且能夠選擇您想使用哪一個樣版</p><p>關於: 選擇要使用哪個樣板，可以在 <a href=https://gohugo.io/content-management/front-matter/>FrontMatter</a> 指定，</p><blockquote><p><strong><em>NOTE</em></strong> 我說的是樣版而不是主題喔！</p></blockquote><p>所謂的<code>FrontMatter</code> 就是在文章開頭一開始的那些東西，例如::</p><pre><code>categories = [&quot;Development&quot;, &quot;VIM&quot;]
+date = &quot;2012-04-06&quot;
+description = &quot;spf13-vim is a cross platform distribution of vim plugins and resources for Vim.&quot;
+slug = &quot;spf13-vim-3-0-release-and-new-website&quot;
+tags = [&quot;.vimrc&quot;, &quot;plugins&quot;, &quot;spf13-vim&quot;, &quot;vim&quot;]
+title = &quot;spf13-vim 3.0 release and new website&quot;
+</code></pre><p>而要選樣版，則是要設定 <a href=https://gohugo.io/templates/lookup-order/>layout</a> 這個參數</p><p>範例</p><p>假設您的文件為::</p><pre><code>content/doc/xxx.md
+</code></pre><p>也就是我們建立一個名稱為doc的section</p><p>那麼要統一將這一個section中樣式都套用某一個layouts時，我們可以在layouts這樣說明:</p><pre><code>./layouts/doc/single.html
+</code></pre><p>也就是layout中也建立一個doc和我們的section名稱一樣即可</p><p>至於我們的首頁的內容，則是要自己新建一個index.html在layouts底下，</p><p>附上完整的layouts結構如下::</p><pre><code>./layouts/index.html  # 這是主頁的內容， 可以使用: {{ template &quot;chrome/includes.html&quot; . }}  {{ template &quot;chrome/menu.html&quot; . }}  {{ template &quot;chrome/footer.html&quot; }}
+./layouts/doc/single.html  # 這是負責處理content/doc/*.md 的樣板  可以使用 {{ template &quot;chrome/header.html&quot; . }}
+./layouts/chrome/{footer, header, includes, menu}.html  # 您可以在設定其他樣版，這些樣版可以讓樣版中再做嵌套
+</code></pre><p>在.layouts之中，還有一個很強大的角色， <code>baseof.html</code></p><p>像是我們可以於<code>layouts/_default/baseof.html</code>定義
+(您也可以直接參考<a href=https://gohugo.io/templates/base>base</a>) :</p><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;{{ block &quot;title&quot; . }}
+      {{ .Site.Title }}
+    {{ end }}&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    {{ block &quot;main&quot; . }}
+    {{ end }}
+    {{ block &quot;footer&quot; . }}
+    {{ end }}
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>可以利用 {{ block }} 來讓子樣版來決定其真正的內容</p><p>As a default template, it is the shell from which <strong>all your pages</strong> will be rendered <em>unless you specify another</em> *baseof.html closer to the beginning of the lookup order.</p><p>這是list的寫法 <code>layouts/_default/list.html</code> :</p><pre><code>{{ define &quot;main&quot; }}
+  &lt;h1&gt;Posts&lt;/h1&gt;
+  {{ range .Pages }}
+    &lt;article&gt;
+      &lt;h2&gt;{{ .Title }}&lt;/h2&gt;
+      {{ .Content }}
+    &lt;/article&gt;
+  {{ end }}
+{{ end }}
+
+&lt;!-- 你也可以用 Paginator 在 homePage, 或者 listPage --&gt;
+{{ range .Paginator.Pages }}
+    {{ .Title }}
+{{ end }}
+</code></pre><p>以上我們重新修改了 {{ block main }} 的內容，也就是block定義完之後，我們要用的時候就使用 <code>define</code> 即可來實作他的定義</p><p>這是single的寫法 <code>layouts/_default/single.html</code> ::</p><pre><code>{{ define &quot;title&quot; }}
+  {{ .Title }} &amp;ndash; {{ .Site.Title }}
+{{ end }}
+{{ define &quot;main&quot; }}
+  &lt;h1&gt;{{ .Title }}&lt;/h1&gt;
+  {{ .Content }}
+{{ end }}
+</code></pre><p>在block中您也可以加上預設的內容。</p><blockquote><p>💥 以下兩種方式都會以主樣版的內容為主 (類似jinja的super)</p><ul><li>子樣版沒有define</li><li>子樣板有define，但是沒有實作<pre><code>{{ define &quot;xxx&quot; }}
+{{ end }}
+</code></pre></li></ul></blockquote><p>也就是當您設定了block預設就會帶入，如果您不想要帶入沒有辦法，只能重新define他並塞一下空資料進去</p><h3 id=總整理>總整理</h3><p>Hugo編譯我們的站點時，發現 <code>content/_index.md</code> (如果您缺少了這個文件，完整的內容就是 <code>layouts/index.html</code> )</p><p>會使用 <code>layouts/index.html</code> + <code>layouts/_defaulte/baseof.html</code></p><table><thead><tr><th>文件</th><th>對應</th></tr></thead><tbody><tr><td>content/_index.md</td><td><code>layouts/index.html</code> + <code>layouts/_defaulte/baseof.html</code></td></tr><tr><td>content/doc</td><td><code>layouts/_defaulte/baseof.html</code> + <code>layouts/_defaulte/list.html</code></td></tr><tr><td>content/doc/my_site.md</td><td><code>layouts/_defaulte/baseof.html</code> + <code>layouts/_defaulte/single.html</code></td></tr></tbody></table><h2 id=第三課>第三課</h2><h3 id=aliases>aliases</h3><p><code>xxx.md</code> :</p><pre><code>---
+title: &quot;Aliases&quot;
+Pubdate: &quot;2013-07-09&quot;
+Aliases:
+    - /doc/redirects/
+    - /doc/alias/
+---
+</code></pre><p>也就是說我url中使用 <code>/doc/redirects</code> 或者 <code>/doc/alias/</code> 都會連到 <code>xxx.md</code></p><p>可參考: <code>sha: f37e425e32eb769473b6</code> (一開始這個不叫 aliases而是redirects 這是由 Ross Lawley所提交)</p><p>也因為有了alias的出現，所以在 <code>sha: 66c87441bd70cc003bd</code> 把 <code>content/doc/example.md</code> 改成了 <code>content/content/example.md</code></p><p>至於內容還是維持原樣，所以他用alias來表示:</p><pre><code>---
+aliases: [&quot;/doc/example/&quot;]
+---
+</code></pre><h3 id=url的路徑詳解>URL的路徑詳解</h3><h4 id=content>Content</h4><pre><code>.             path           slug
+.       ⊢-------^----⊣ ⊢------^-------⊣
+content/extras/indexes/category-example/index.html
+
+
+.       section              slug
+.       ⊢--^--⊣        ⊢------^-------⊣
+content/extras/indexes/category-example/index.html
+
+
+.       section  slug
+.       ⊢--^--⊣⊢--^--⊣
+content/extras/indexes/index.html
+</code></pre><p>跟我們之前講過的一樣 <a href=#甚麼是section-甚麼是page>section是什麼</a></p><ul><li>section: 就是content緊接著的那一個資料夾就是 section</li><li>slug: 主文件 <strong>前面一個</strong> 的資料夾名稱</li></ul><h4 id=destination>Destination</h4><pre><code>           permalink
+⊢--------------^-------------⊣
+http://spf13.com/projects/hugo
+
+
+   baseUrl       section  slug
+⊢-----^--------⊣ ⊢--^---⊣ ⊢-^⊣
+http://spf13.com/projects/hugo
+
+
+   baseUrl       section          slug
+⊢-----^--------⊣ ⊢--^--⊣        ⊢--^--⊣
+http://spf13.com/extras/indexes/example
+
+
+   baseUrl            path       slug
+⊢-----^--------⊣ ⊢------^-----⊣ ⊢--^--⊣
+http://spf13.com/extras/indexes/example
+
+
+   baseUrl            url
+⊢-----^--------⊣ ⊢-----^-----⊣
+http://spf13.com/projects/hugo
+
+
+   baseUrl               url
+⊢-----^--------⊣ ⊢--------^-----------⊣
+http://spf13.com/extras/indexes/example
+</code></pre><ul><li>baseUrl: config.toml 設定的東西</li><li>section: 緊鄰baseUrl後的一個即為之</li><li>slug: url後的最後一項</li><li>path: 等於baseUrl和slug之間的就是path</li><li>url: baseUrl後面的所有東西都是</li></ul><h3 id=category>category</h3><p>config.toml:</p><pre><code>---
+indexes:
+    category: &quot;categories&quot;  # 我們就要在layouts/indexes
+baseurl: &quot;http://spf13.com/&quot;
+title: &quot;Steve Francia is spf13.com&quot;
+---
+</code></pre><p><code>/layouts/indexes/category.html</code>:</p><pre><code>For each index type a template needs to be provided to render the index page.
+In the case of categories, this will render the content for ``/categories/CATEGORYNAME/``\. ::
+
+    {{ template &quot;chrome/header.html&quot; . }}
+    {{ template &quot;chrome/subheader.html&quot; . }}
+
+    &lt;section id=&quot;main&quot;&gt;
+      &lt;div&gt;
+       &lt;h1 id=&quot;title&quot;&gt;{{ .Title }}&lt;/h1&gt;
+        {{ range .Data.Pages }}
+            {{ .Render &quot;summary&quot;}}
+        {{ end }}
+      &lt;/div&gt;
+    &lt;/section&gt;
+
+    {{ template &quot;chrome/footer.html&quot; }}
+</code></pre><p>假設我們的文件內容如下:</p><pre><code>{
+    &quot;title&quot;: &quot;Hugo: A fast and flexible static site generator&quot;,
+    &quot;categories&quot;: [
+        &quot;Development&quot;,
+        &quot;golang&quot;,
+        &quot;Blogging&quot;
+    ],
+    &quot;slug&quot;: &quot;hugo&quot;
+}
+</code></pre><h3 id=如何制定menu>如何制定Menu</h3><p><a href=https://gohugo.io/templates/menu-templates/#section-menu-for-lazy-bloggers>https://gohugo.io/templates/menu-templates/#section-menu-for-lazy-bloggers</a></p><p><a href=https://cjting.me/2017/06/04/migrate-to-hugo-from-jekyll/>https://cjting.me/2017/06/04/migrate-to-hugo-from-jekyll/</a></p><h2 id=mike-dane-youtube>Mike Dane Youtube</h2><h3 id=archetypeshttpswwwyoutubecomwatchvbcme8azvh6o><a href="https://www.youtube.com/watch?v=bcme8AzVh6o">archetypes</a></h3><p>幫助您建立文件的模型，例如，我建立了以下檔案</p><p><code>./archetypes/defaulte.md</code></p><pre><code>---
+title: &quot;{{ replace .TranslationBaseName &quot;-&quot; &quot; &quot; | title }}&quot;
+date: {{ .Date }}
+draft: false
+author: &quot;Carson&quot;
+---
+</code></pre><p>那麼所有的文件在建立的時候都會，就會產生以上內容</p><p>當然您也可以只針對section做處理，例如</p><p><code>.archetypes/post.md</code>: 這樣他影響的內容，只有是 <code>hugo new post/xxx.md</code> 也就是section為post的才會影響</p><h3 id=shortcode><a href=https://gohugo.io/content-management/shortcodes/#readout>shortcode</a></h3><h4 id=官方提供的shortcode>官方提供的shortcode</h4><table><thead><tr><th>Name</th><th>描述</th><th>語法</th></tr></thead><tbody><tr><td></td><td></td><td></td></tr><tr><td>figure, 圖片加上描述</td><td><code>{{&lt; figure src="/media/spf13.jpg" title="Steve Francia" >}}</code></td><td></td></tr><tr><td>gist</td><td>github使用者的連結</td><td>&ldquo;<code>{{&lt; gist spf13 7896402 >}</code> (等同: <a href=https://gist.github.com/spf13/7896402>https://gist.github.com/spf13/7896402</a></td></tr><tr><td>highlight</td><td>highlight</td><td>&ldquo;<code>{{&lt;/* highlight html >} ... {&lt; /highlight html >}}</code>&rdquo;</td></tr><tr><td>instagram</td><td>instagram</td><td><code>{{&lt; instagram instagram-id >}}</code></td></tr><tr><td>tweet</td><td>twitter</td><td><code>{{&lt; tweet 877500564405444608 >}}</code></td></tr><tr><td>vimeo</td><td>vimeo 一個影片的播放媒體</td><td><code>{{&lt; vimeo 146022717 >}}</code></td></tr><tr><td>param</td><td>如果Page&rsquo;s有此值就回傳他，沒有了話log中會記錄ERROR</td><td><code>{{&lt; param testparam >}}</code></td></tr><tr><td><code>ref</code> and <code>relref</code></td><td>連結到其他的文件</td><td><code>{{&lt; ref "/my_section/my_doc#inside_link" >}}</code></td></tr><tr><td>youtube</td><td>youtube</td><td><code>{{&lt; youtube youtube-id >}}</code></td></tr></tbody></table><blockquote><p><code>{% 表示代碼中間的內容要渲染</code></p></blockquote><blockquote><p><code>{&lt; 表示代碼中間的內容不用渲染</code></p></blockquote><h4 id=create-custom-shortcodes>Create Custom Shortcodes</h4><ol><li><p>創建 shortcode資料夾: <code>./layouts/shortcodes/</code></p><pre><code># ./layouts/shortcodes/my_shortcodes.html
+
+&lt;p&gt; This is my shortcodes&lt;/p&gt;
+&lt;p&gt; {{ .Get &quot;color&quot; }} &lt;/p&gt;  # color是我們自己定義的傳入參數
+&lt;p style=&quot;color:{{ .Get &quot;color&quot; }}&quot;&lt;/p&gt;  # 這是錯誤的用法，因為&quot;在外層也有，所以會混淆，要使用`來幫忙
+&lt;p style=&quot;color:{{ .Get `color` }}&quot;&lt;/p&gt;
+
+# ./layouts/shortcodes/my_shortcodes2.html
+&lt;p style=&quot;color:{{ .Get 0 }}&quot;&lt;/p&gt;  # .Get 0 表示我們抓第一個參數，這樣我們就可以省略掉參數的名稱變得更簡短
+
+# ./layouts/shortcodes/doubly_tagged_shortcodes.html
+{{.Inner}}  # 這樣他就會把tag中間的東西全部都給渲染出來
+
+&lt;p style=&quot;background-color:yellow&quot;&gt;{{.Inner}}&lt;/p&gt;
+</code></pre></li><li><p>xxx.md:</p><pre><code>{&lt; my_shortcodes color=&quot;blue&quot; &gt;}
+
+{&lt; my_shortcodes2 blue }
+
+{&lt; doubly_tagged_shortcodes &gt;}
+    This is the text inside the shortcode tags
+{&lt; /doubly_tagged_shortcodes &gt;}
+
+
+{% doubly_tagged_shortcodes %}  # 用 {% 中間的文字會渲染
+    **is bold text**
+{% /doubly_tagged_shortcodes %}
+
+{&lt; doubly_tagged_shortcodes &gt;}  # 用 {&lt; 中間的文字「不會」渲染
+    **it not bold text**
+{&lt; /doubly_tagged_shortcodes &gt;}
+</code></pre></li></ol><h3 id=taxonomies-tutorial-10><a href="https://www.youtube.com/watch?v=pCPCQgqC8RA&list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3&index=10">Taxonomies Tutorial 10</a></h3><p>官方文件: <a href=https://gohugo.io/content-management/taxonomies>taxonomies</a></p><p>這些分類您只要設定完之後就能在 <code>list.html</code>所渲染的頁面中，看到這些標籤，</p><p>並且當您點擊這些標籤時，他會跳到 <code>baseUrl/[categories, tags, ..., define_by_you]</code> 的頁面，讓您知道有哪些文章也是標記這些標籤</p><pre><code>---
+title: &quot;A&quot;
+date: 2020-12-07T19:13:00-08:00
+draft: true
+tags: [&quot;tag1&quot;, &quot;tag2&quot;, &quot;tag3&quot;]
+categories: [&quot;cat1&quot;]
+moods: [&quot;happy&quot;, &quot;Upbeat&quot;]  # 這是一個不存在hugo的分類
+---
+</code></pre><ul><li>tags: 會生成在: <code>baseUrl/tags/YOU_TAG_NAME</code> 然後 可以被 <code>layouts/_default/list.html</code> 所管理</li><li>categories: 會生成在: <code>baseUrl/categories/YOU_TAG_NAME</code> 然後 可以被 <code>layouts/_default/list.html</code> 所管理</li></ul><p>當我們想要自己建立出一個 <code>Taxonomies</code> 則需要再<code>config.toml</code>中 新增以下內容:</p><pre><code>[taxonomies]
+    tag = &quot;tag&quot;  # 這是預設hugo會給的，但是一旦您重新更動了taxonomies就要附加上去，不然等同失效
+    category = &quot;categories&quot;  # 這是預設hugo會給的，但是一旦您重新更動了taxonomies就要附加上去，不然等同失效
+    mood = &quot;moods&quot;
+</code></pre><blockquote><p><code>mood = "moods"</code> 後面的名稱是在md中所使用的也就是您在front matter中要打上mood<strong>s</strong>: [&ldquo;happy&rdquo;, &ldquo;Upbeat&rdquo;]。</p><p>搜尋上也是用後面的名稱，例如: <code>baseURL/categories</code></p></blockquote><p>如果您中途有新增taxonomies(config.toml)最好重新啟動server，否則看到的可能是錯誤的</p><blockquote><p><strong><em>NOTE</em></strong>: 如果您不想要hugo創建這些分類標籤，則要做這些設定 <code>disableKinds = ["taxonomy", "term"]</code></p></blockquote><h4 id=客製化>客製化</h4><ul><li><a href=https://gohugo.io/templates/taxonomy-templates/#taxonomy-terms-templates>Taxonomy Templates</a></li><li><a href=https://gohugo.io/templates/single-page-templates/>single page template</a></li><li><a href=https://gohugo.io/templates/taxonomy-templates/#taxonomy-list-template>taxonomy list template</a></li><li><a href=https://www.mikedane.com/static-site-generators/hugo/taxonomies/>Taxonomies</a></li><li><a href=https://gohugo.io/templates/lookup-order/#examples-layout-lookup-for-taxonomy-pages>layout-lookup-for-taxonomy-pages</a></li></ul><p>其實客製化Taxonomy就跟一般的list和single page是一模一樣的，它根本就沒為Taxonomy額外在分類</p><p>所以您要想好您的Taxonomy新增的名稱免得和一班的文章重複，避免被誤解</p><p>你還可以附於每一個分類權重，例如:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=color:#a6e22e>categories</span> = [<span style=color:#e6db74>&#34;d&#34;</span>]
+<span style=color:#a6e22e>categories_weight</span> = <span style=color:#ae81ff>44</span>
+</code></pre></div><p>其中如果您沒有改權重，預設為<strong>沒有權重</strong></p><blockquote><p>💥 沒有權重不代表0權重，就是加權的時候不特別考慮權重</p></blockquote><p>關於0權重:</p><blockquote><p>如果您指定了0權重，那麼這個分類標籤永遠會排在最後一個(即便您也有使用負權重)
+0權重會比負權重還要後面</p></blockquote><h3 id=data-files-tutorial-20><a href="https://www.youtube.com/watch?v=FyPgSuwIMWQ&feature=youtu.be">Data Files Tutorial 20</a></h3><p>官方文件: <a href=https://gohugo.io/templates/data-templates/>Data templates</a></p><h4 id=hugo的data-files是什麼>Hugo的Data files是什麼?</h4><blockquote><p>它可以讀取<strong>靜態的</strong>yaml, toml, json之類的檔案，並且可以用很簡單的語法就能運用他在您的文章之中</p></blockquote><blockquote><p>💥 我說的是<em>靜態的</em>，也就是這些檔案您必須先準備好！</p></blockquote><h4 id=如何進行>如何進行</h4><ol><li><p>首先您要準備一個資料夾&mdash;-<strong>data</strong></p><p><code>./data/[your_dir]/[your.{json, yaml, toml}]</code></p><p>假設我們的文件為 <code>.data/info/states_A.json</code> 如下所示:</p><pre><code>{
+    &quot;AL&quot;: {
+        &quot;name&quot;: &quot;Alabama&quot;,
+        &quot;capital&quot;: &quot;Montgomery&quot;
+    }
+
+    &quot;AK&quot;: {
+        &quot;name&quot;: &quot;Alaska&quot;,
+        &quot;capital&quot;: &quot;Juneau&quot;
+    }
+}
+</code></pre><p>假設我們的文件為 <code>.data/info/states_B.json</code> 如下所示::</p><pre><code> {
+     &quot;BL&quot;: {
+         &quot;name&quot;: &quot;Bl...&quot;,
+         &quot;capital&quot;: &quot;...&quot;
+     }
+
+     &quot;BK&quot;: {
+         &quot;name&quot;: &quot;BK...&quot;,
+         &quot;capital&quot;: &quot;...&quot;
+     }
+ }
+</code></pre></li><li><p>於<code>layouts</code>資料夾開始寫語法即可，舉例來說我們寫在<code>layouts/_default/single.html</code>:</p><pre><code>&lt;!-- single.html--&gt;
+&lt;h1&gt;Single Template&lt;/h1&gt;
+
+{{ range .Site.Data.info.states_A }}
+    {{ .name }} &lt;br&gt; {{ .capital }} &lt;br&gt;
+{{ end }}
+
+&lt;p&gt; {{ .Site.Data.info.states_A.AK.name }} &lt;/p&gt;
+
+
+{{ range $.Site.Data.info }}  # 我們遍歷每一個於info之下的資料夾
+    {{ partial &quot;my_view.html&quot; . }}  # . 指的就是info資料夾當中的一個元素
+{{ end }}
+
+
+&lt;!-- my_view.html --&gt;
+&lt;ul&gt;
+{{ range . }}
+    {{ .name }} &lt;br&gt; {{ .captial }}
+{{ end }}
+</code></pre></li></ol><blockquote><p>💥 我們是準備data資料夾，而Hugo會把這些東西轉成一個 <code>map</code> 存放到 <code>.Site.Data</code> 變數中 (是大寫的Data)</p></blockquote><h4 id=getjson-getcsv>getJSON, getCSV</h4><p>您的資料夾檔案可以來自:</p><ol><li><p>網路上</p></li><li><p>本機端: 附檔名是什麼都無所謂，只要內容是符合該格式即可 (The file extension does not matter, but the content does.)</p><p>本的端的檔案需存在於data資料夾:</p><ol><li><code>./data/*</code></li><li><code>./themes/&lt;THEME>/data/*</code></li></ol><p>可以來自於您自己主題內的data資料夾或者是您引用的主題中的data資料夾</p></li></ol><p>以下的範例都是以網路當作範例</p><ul><li><p><strong>getJSON</strong></p><p>語法:</p><pre><code>  {{ $dataJ := getJSON &quot;url_prefix&quot; &quot;arg1&quot; &quot;arg2&quot; &quot;arg n&quot; }}
+</code></pre><blockquote><p>其實他就是可以餵一個完整的url，該url的回傳是一個json檔案，參數arg可以和url_prefix串接起來</p></blockquote><p>範例:</p><pre><code>  {{ $urlPre := &quot;https://api.github.com&quot; }}
+  {{ $gistJ := getJSON $urlPre &quot;/users/GITHUB_USERNAME/gists&quot; }}
+</code></pre><p>等同以下:</p><pre><code>  ```
+  {{ $gistJ := getJSON &quot;https://api.github.com/users/GITHUB_USERNAME/gists&quot; }}
+  ```
+</code></pre><blockquote><p><strong><em>NOTE</em></strong>: <code>https://api.github.com/users/GITHUB_USERNAME/gists</code> 這一個網址本身就是json，您可以把GITHUB_USERNAME換成您自己的就可以看到消息了</p></blockquote><p>實際運用，抓取使用者前5個gists的項目:</p><pre><code>&lt;ul&gt;
+  {{ $urlPre := &quot;https://api.github.com&quot; }}
+  {{ $gistJ := getJSON $urlPre &quot;/users/GITHUB_USERNAME/gists&quot; }}
+  {{ range first 5 $gistJ }}  # 因為gists.json他是以list開頭當作物件，所以這個gistJ就是一個陣列
+    {{ if .public }}  # 要取變數一律都要加上 &quot;.&quot; 號 public 也是 gists中的其中一個欄位，且這個欄位剛好是 boolean的數值，所以可以用if來判別
+      &lt;li&gt;&lt;a href=&quot;{{ .html_url }}&quot; target=&quot;_blank&quot;&gt;{{ .description }}&lt;/a&gt;&lt;/li&gt;
+    {{ end }}
+  {{ end }}
+&lt;/ul&gt;
+</code></pre></li><li><p><strong>getCSV</strong></p><p>語法::</p><pre><code>  {{ $dataC := getCSV  &quot;separator&quot; &quot;url prefix&quot; &quot;arg1&quot; &quot;arg2&quot; &quot;arg n&quot; }}
+</code></pre><p>範例::</p><pre><code>  &lt;table&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+        &lt;th&gt;Name&lt;/th&gt;
+        &lt;th&gt;Position&lt;/th&gt;
+        &lt;th&gt;Salary&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+      {{ $url := &quot;https://example.com/finance/employee-salaries.csv&quot; }}
+      {{ $sep := &quot;,&quot; }}
+      {{ range $i, $r := getCSV $sep $url }}  # r只的就是當前的row
+        &lt;tr&gt;
+          &lt;td&gt;{{ index $r 0 }}&lt;/td&gt;  # 取得當前 r 中 首個 欄的內容
+          &lt;td&gt;{{ index $r 1 }}&lt;/td&gt;
+          &lt;td&gt;{{ index $r 2 }}&lt;/td&gt;
+        &lt;/tr&gt;
+      {{ end }}
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+</code></pre></li></ul><h4 id=cache-urls>Cache URLs</h4><p>如果您的資料來至於URL，他會把資料載下來，會載到 <code>$TMPDIR/hugo_cache</code> 其中 <code>$TMPDIR</code> 仰賴於您本身的系統的暫存資料夾</p><p>如果您不喜歡這樣的安排，您可以親自設定 <code>--cacheDir</code> 變數</p><p>而如果您壓根就不想要什麼cache，可以直接把緩存給取消掉: <code>--ignoreCache</code></p><blockquote><p>💥 我們強烈不建議把 <code>--ignoreCache</code> 加上去，因為如果沒有緩存文件，那就意味著每次的載入都必須再查詢一次，這樣的流量很驚人！</p></blockquote><h4 id=livereload-with-data-files><a href=https://gohugo.io/templates/data-templates/#livereload-with-data-files>LiveReload with Data Files</a></h4><p>如果您的頁面本身有用到Data Files</p><p>如果這些資源來至於 網路上，那麼他不會觸發 (所以您要更新網上的資源可能要把Cache清除掉)</p><p>至於本機端的文件，只要有更動，就會自動觸發LiveReload</p><h5 id=livereload是什麼><a href=https://gohugo.io/getting-started/usage/#livereload>LiveReload是什麼？</a></h5><p>當您使用: <code>hugo server</code> 除了啟動server以外，它還會持續的監看文件是否被改便，以重新渲染。</p><p>其中監看的資料夾有以下位子:</p><ul><li>/static/*</li><li>/content/*</li><li>/data/*</li><li>/i18n/*</li><li>/layouts/*</li><li>/themes//*</li><li>config</li></ul><p>只要有異動(新增、刪除、修改) Hugo會執行重建的任務(但是網頁上的服務還是會進行，並不會中斷)，</p><p>等到重建完成，LiveReload會告訴瀏覽器要重新加載頁面達成更新。</p><p>如果您不希望使用\ <code>LiveReload</code>\例如作為正式發佈，那麼您可已使用</p><ul><li><code>hugo server --watch=false</code></li><li><code>hugo server --disableLiveReload</code></li></ul><p>這樣兩者都能關閉</p><p>這些設定也能在 config.toml 中新增，例如::</p><pre><code># config.toml
+disableLiveReload = true
+</code></pre><div class=mt4><ul class=pa0><li class=list><a href=/tags/hugo class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">hugo</a></li></ul></div><div class="mt6 instapaper_ignoref"></div></div><aside class="w-30-l mt6-l navbar-right large-screen-only"><nav id=TableOfContents><ul><li><a href=#前言>前言</a></li><li><a href=#第一課>第一課</a><ul><li><a href=#hugodocs是什麼>hugoDocs是什麼?</a></li><li><a href=#hugo的目錄結構>hugo的目錄結構</a></li><li><a href=#樣板render-shortcode>樣板render (shortcode)</a><ul><li><a href=#example-youtube>example youtube</a></li><li><a href=#example-image-with-caption>example: image with caption</a></li></ul></li></ul></li><li><a href=#第二課>第二課</a></li><li><a href=#補充教材>★★★補充教材</a><ul><li><a href=#甚麼是section-甚麼是page>甚麼是section? 甚麼是Page?</a></li><li><a href=#用哪一個樣版來render>★用哪一個樣版來render</a></li><li><a href=#總整理>總整理</a></li></ul></li><li><a href=#第三課>第三課</a><ul><li><a href=#aliases>aliases</a></li><li><a href=#url的路徑詳解>URL的路徑詳解</a><ul><li><a href=#content>Content</a></li><li><a href=#destination>Destination</a></li></ul></li><li><a href=#category>category</a></li><li><a href=#如何制定menu>如何制定Menu</a></li></ul></li><li><a href=#mike-dane-youtube>Mike Dane Youtube</a><ul><li><a href=#archetypeshttpswwwyoutubecomwatchvbcme8azvh6o><a href="https://www.youtube.com/watch?v=bcme8AzVh6o">archetypes</a></a></li><li><a href=#shortcode><a href=https://gohugo.io/content-management/shortcodes/#readout>shortcode</a></a><ul><li><a href=#官方提供的shortcode>官方提供的shortcode</a></li><li><a href=#create-custom-shortcodes>Create Custom Shortcodes</a></li></ul></li><li><a href=#taxonomies-tutorial-10><a href="https://www.youtube.com/watch?v=pCPCQgqC8RA&list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3&index=10">Taxonomies Tutorial 10</a></a><ul><li><a href=#客製化>客製化</a></li></ul></li><li><a href=#data-files-tutorial-20><a href="https://www.youtube.com/watch?v=FyPgSuwIMWQ&feature=youtu.be">Data Files Tutorial 20</a></a><ul><li><a href=#hugo的data-files是什麼>Hugo的Data files是什麼?</a></li><li><a href=#如何進行>如何進行</a></li><li><a href=#getjson-getcsv>getJSON, getCSV</a></li><li><a href=#cache-urls>Cache URLs</a></li><li><a href=#livereload-with-data-files><a href=https://gohugo.io/templates/data-templates/#livereload-with-data-files>LiveReload with Data Files</a></a><ul><li><a href=#livereload是什麼><a href=https://gohugo.io/getting-started/usage/#livereload>LiveReload是什麼？</a></a></li></ul></li></ul></li></ul></li></ul></nav><script defer src=/js/uml/toc_markmap.js></script><div id=toc><nav id=TableOfContents><ul><li><a href=#前言>前言</a></li><li><a href=#第一課>第一課</a><ul><li><a href=#hugodocs是什麼>hugoDocs是什麼?</a></li><li><a href=#hugo的目錄結構>hugo的目錄結構</a></li><li><a href=#樣板render-shortcode>樣板render (shortcode)</a><ul><li><a href=#example-youtube>example youtube</a></li><li><a href=#example-image-with-caption>example: image with caption</a></li></ul></li></ul></li><li><a href=#第二課>第二課</a></li><li><a href=#補充教材>★★★補充教材</a><ul><li><a href=#甚麼是section-甚麼是page>甚麼是section? 甚麼是Page?</a></li><li><a href=#用哪一個樣版來render>★用哪一個樣版來render</a></li><li><a href=#總整理>總整理</a></li></ul></li><li><a href=#第三課>第三課</a><ul><li><a href=#aliases>aliases</a></li><li><a href=#url的路徑詳解>URL的路徑詳解</a><ul><li><a href=#content>Content</a></li><li><a href=#destination>Destination</a></li></ul></li><li><a href=#category>category</a></li><li><a href=#如何制定menu>如何制定Menu</a></li></ul></li><li><a href=#mike-dane-youtube>Mike Dane Youtube</a><ul><li><a href=#archetypeshttpswwwyoutubecomwatchvbcme8azvh6o><a href="https://www.youtube.com/watch?v=bcme8AzVh6o">archetypes</a></a></li><li><a href=#shortcode><a href=https://gohugo.io/content-management/shortcodes/#readout>shortcode</a></a><ul><li><a href=#官方提供的shortcode>官方提供的shortcode</a></li><li><a href=#create-custom-shortcodes>Create Custom Shortcodes</a></li></ul></li><li><a href=#taxonomies-tutorial-10><a href="https://www.youtube.com/watch?v=pCPCQgqC8RA&list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3&index=10">Taxonomies Tutorial 10</a></a><ul><li><a href=#客製化>客製化</a></li></ul></li><li><a href=#data-files-tutorial-20><a href="https://www.youtube.com/watch?v=FyPgSuwIMWQ&feature=youtu.be">Data Files Tutorial 20</a></a><ul><li><a href=#hugo的data-files是什麼>Hugo的Data files是什麼?</a></li><li><a href=#如何進行>如何進行</a></li><li><a href=#getjson-getcsv>getJSON, getCSV</a></li><li><a href=#cache-urls>Cache URLs</a></li><li><a href=#livereload-with-data-files><a href=https://gohugo.io/templates/data-templates/#livereload-with-data-files>LiveReload with Data Files</a></a><ul><li><a href=#livereload是什麼><a href=https://gohugo.io/getting-started/usage/#livereload>LiveReload是什麼？</a></a></li></ul></li></ul></li></ul></li></ul></nav><div class="pa3 nested-list-reset nested-copy-line-height nested-links"><p class="f5 b mb3 ms-2">相關內容</p><ul class="pa0 list"><li class="mb2 ms-2"><a href=/hugo/hugo_tutorial/>Hugo教學</a></li></ul></div></div></aside></article></main><div id=fastSearch><input id=searchInput tabindex=0><ul id=searchResults></ul></div><script src=/js/search/fuse/fuse.js></script><script src=/js/search/fuse/fastsearch.js></script><footer class="bg-black bottom-0 w-100 pa3" role=contentinfo><div class="flex justify-between"><a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href=https://carsonslovoka.github.io/>&copy; Carson 2020-2021</a><div></div></div></footer><script src=/dist/js/app.3fc0f988d21662902933.js></script><script src=/dist/js/utils.js></script><script src=/js/clipboard/copy-code-block.js></script></body></html>

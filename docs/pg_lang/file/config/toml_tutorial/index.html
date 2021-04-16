@@ -1,0 +1,208 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge,chrome=1"><title>TOML教學 | Carson Blog</title><meta name=viewport content="width=device-width,minimum-scale=1"><meta name=description content="TOML介紹 一種檔案格式，容易閱讀以及編寫， 以閱讀和編寫來談，目前能和TOML匹敵的應該只有YAML"><meta name=generator content="Hugo 0.81.0"><meta name=ROBOTS content="INDEX, FOLLOW"><link href=/css/markmap.css rel=stylesheet><script src=https://d3js.org/d3.v6.min.js></script><script src=/js/uml/markmap-view@0.2.0.js></script><script defer src=/js/uml/markmap.js></script><link href=/dist/css/search-fuse.css rel=stylesheet><link rel=stylesheet type=text/css href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin=anonymous><script defer src=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/js/all.min.js integrity="sha512-UwcC/iaz5ziHX7V6LjSKaXgCuRRqbTp1QHpbOJ4l1nw2/boCfZ2KlFIqBUA/uRVF0onbREnY9do8rM/uT/ilqw==" crossorigin=anonymous></script><link rel=stylesheet href=/css/google-fonts.css><link rel=stylesheet href=/css/embed-bk-img.css><link href=/dist/css/app.4fc0b62e4b82c997bb0041217cd6b979.css rel=stylesheet><link href=/dist/css/navbar.css rel=stylesheet><link href=/dist/css/card_post.css rel=stylesheet><link href=/dist/css/utils.css rel=stylesheet><link href=/dist/sass/main_sass.css rel=stylesheet><link href=https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css rel=stylesheet integrity=sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1 crossorigin=anonymous><script src=https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js integrity=sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW crossorigin=anonymous></script><link rel="shortcut icon" href=/images/tab_icon.jpg type=image/x-icon><meta property="og:title" content="TOML教學"><meta property="og:description" content="TOML介紹 一種檔案格式，容易閱讀以及編寫， 以閱讀和編寫來談，目前能和TOML匹敵的應該只有YAML"><meta property="og:type" content="article"><meta property="og:url" content="https://carsonslovoka.github.io/pg_lang/file/config/toml_tutorial/"><meta property="article:section" content="pg_lang"><meta property="article:published_time" content="2021-03-08T13:21:40+08:00"><meta property="article:modified_time" content="2021-03-08T00:00:00+08:00"><meta itemprop=name content="TOML教學"><meta itemprop=description content="TOML介紹 一種檔案格式，容易閱讀以及編寫， 以閱讀和編寫來談，目前能和TOML匹敵的應該只有YAML"><meta itemprop=datePublished content="2021-03-08T13:21:40+08:00"><meta itemprop=dateModified content="2021-03-08T00:00:00+08:00"><meta itemprop=wordCount content="2181"><meta itemprop=keywords content><meta name=twitter:card content="summary"><meta name=twitter:title content="TOML教學"><meta name=twitter:description content="TOML介紹 一種檔案格式，容易閱讀以及編寫， 以閱讀和編寫來談，目前能和TOML匹敵的應該只有YAML"><script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-98900980-4','auto'),ga('send','pageview'))</script><script async src=https://www.google-analytics.com/analytics.js></script></head><body data-bs-spy=scroll data-bs-target=#navbar class="ma0 bg-near-white google-noto-sans-tc"><header><div class=bg-black><nav class="pv3 ph3 ph4-ns" role=navigation><div class="flex-l justify-between items-center center"><a href=/ class="f3 fw2 hover-white no-underline white-90 dib"><i class="zoom-in fas fa-home fa-3x" style=color:#ffc34d></i></a><div class="flex-l items-center"><ul class="pl0 mr3"><li class="zoom-in list f5 f4-ns fw4 dib pr3"><a class="hover-white no-underline white-90" href=/site-search-simple/ title><i class="fas fa-search"></i></a></li><li class="zoom-in list f5 f4-ns fw4 dib pr3"><a class="hover-white no-underline white-90" href=/pages-timeline/ title><i class="fas fa-code-branch"></i></a></li><li class="zoom-in list f5 f4-ns fw4 dib pr3"><i class="fas fa-sitemap" style=color:#b1e844></i><a class="hover-white no-underline white-90" href=/site-markmap/ title=地圖>地圖</a></li><li class="zoom-in list f5 f4-ns fw4 dib pr3"><i class="fas fa-h-square" style=color:#e844a8></i><a class="hover-white no-underline white-90" href=/hugo/ title=教學>教學</a></li></ul></div></div></nav></div></header><main class=pb7 role=main><article class="flex-l flex-wrap justify-between mw8 center ph3"><header class="mt4 w-100"><aside class="instapaper_ignoref b helvetica tracked">CONFIG</aside><div id=sharing class=mt3><a href="https://www.facebook.com/sharer.php?u=https://carsonslovoka.github.io/pg_lang/file/config/toml_tutorial/" class="facebook no-underline" aria-label="share on Facebook"><svg height="32" style="enable-background:new 0 0 67 67" viewBox="0 0 67 67" width="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M28.765 50.32h6.744V33.998h4.499l.596-5.624h-5.095l.007-2.816c0-1.466.14-2.253 2.244-2.253h2.812V17.68h-4.5c-5.405.0-7.307 2.729-7.307 7.317v3.377h-3.369v5.625h3.369V50.32zM33 64C16.432 64 3 50.569 3 34S16.432 4 33 4s30 13.431 30 30S49.568 64 33 64z" style="fill-rule:evenodd;clip-rule:evenodd"/></svg></a><a href="https://twitter.com/share?url=https://carsonslovoka.github.io/pg_lang/file/config/toml_tutorial/&text=TOML%e6%95%99%e5%ad%b8" class="twitter no-underline" aria-label="share on Twitter"><svg height="32" style="enable-background:new 0 0 67 67" viewBox="0 0 67 67" width="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167 22.283c-2.619.953-4.274 3.411-4.086 6.101l.063 1.038-1.048-.127c-3.813-.487-7.145-2.139-9.974-4.915l-1.383-1.377-.356 1.017c-.754 2.267-.272 4.661 1.299 6.271.838.89.649 1.017-.796.487-.503-.169-.943-.296-.985-.233-.146.149.356 2.076.754 2.839.545 1.06 1.655 2.097 2.871 2.712l1.027.487-1.215.021c-1.173.0-1.215.021-1.089.467.419 1.377 2.074 2.839 3.918 3.475l1.299.444-1.131.678c-1.676.976-3.646 1.526-5.616 1.568C19.775 43.256 19 43.341 19 43.405c0 .211 2.557 1.397 4.044 1.864 4.463 1.377 9.765.783 13.746-1.568 2.829-1.673 5.657-5 6.978-8.221.713-1.716 1.425-4.851 1.425-6.354.0-.975.063-1.102 1.236-2.267.692-.678 1.341-1.419 1.467-1.631.21-.403.188-.403-.88-.043-1.781.636-2.033.551-1.152-.402.649-.678 1.425-1.907 1.425-2.267.0-.063-.314.042-.671.233-.377.212-1.215.53-1.844.72l-1.131.361-1.027-.7c-.566-.381-1.361-.805-1.781-.932C39.766 21.902 38.131 21.944 37.167 22.283zM33 64C16.432 64 3 50.569 3 34S16.432 4 33 4s30 13.431 30 30S49.568 64 33 64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:"/></svg></a><a href="https://www.linkedin.com/shareArticle?mini=true&url=https://carsonslovoka.github.io/pg_lang/file/config/toml_tutorial/&title=TOML%e6%95%99%e5%ad%b8" class="linkedin no-underline" aria-label="share on LinkedIn"><svg height="32" style="enable-background:new 0 0 65 65" viewBox="0 0 65 65" width="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M50.837 48.137V36.425c0-6.275-3.35-9.195-7.816-9.195-3.604.0-5.219 1.983-6.119 3.374V27.71h-6.79c.09 1.917.0 20.427.0 20.427h6.79V36.729c0-.609.044-1.219.224-1.655.49-1.22 1.607-2.483 3.482-2.483 2.458.0 3.44 1.873 3.44 4.618v10.929H50.837zM22.959 24.922c2.367.0 3.842-1.57 3.842-3.531-.044-2.003-1.475-3.528-3.797-3.528s-3.841 1.524-3.841 3.528c0 1.961 1.474 3.531 3.753 3.531H22.959zM34 64C17.432 64 4 50.568 4 34 4 17.431 17.432 4 34 4s30 13.431 30 30c0 16.568-13.432 30-30 30zM26.354 48.137V27.71h-6.789v20.427h6.789z" style="fill-rule:evenodd;clip-rule:evenodd;fill:"/></svg></a></div><h1 class="f1 athelas mt3 mb1">TOML教學</h1><time class="f6 mv4 dib tracked" datetime=2021-03-08T13:21:40+08:00>March 8, 2021</time></header><div class="nested-copy-line-height lh-copy google-noto-sans-tc f4 nested-links nested-img mid-gray
+w-80-l"><h2 id=toml介紹>TOML介紹</h2><p>一種檔案格式，容易閱讀以及編寫，</p><p>以閱讀和編寫來談，目前能和TOML匹敵的應該只有YAML (INI不討論，INI寫不了複雜的東西)</p><p>如果不考慮「引用」的問題，那麼TOML確實是比較優的</p><h2 id=注意事項>注意事項</h2><ul><li>TOML有區分大小寫</li><li>TOML文件必須是UTF-8編碼</li></ul><h2 id=註解>註解</h2><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=color:#75715e># 全行註解</span>
+<span style=color:#a6e22e>key</span> = <span style=color:#e6db74>&#34;value&#34;</span>  <span style=color:#75715e># 行末註釋</span>
+<span style=color:#a6e22e>other</span> = <span style=color:#e6db74>&#34;# 這不是一個註釋&#34;</span>
+</code></pre></div><blockquote><p>⚠ 除Tab以外的控制字符（U+0000 至 U+0008，U+000A 至 U+001F，U+007F）<strong>不可出現</strong> 在註解中。</p></blockquote><h2 id=鍵名>鍵名</h2><p>命名規則可以是</p><ul><li>引號鍵: 用「引號」{<code>"</code>, <code>'</code>}把鍵名包起來</li><li>裸鍵: 裸鍵只能是ASCII字符所構成，其中<code>1234</code>，這種純數字的鍵名會被當作字串。</li><li>點分格鍵: 一系列通過「<code>點</code>」(<code>.</code>)相連在一起的「裸鍵」或「引號鍵」。</li></ul><h3 id=引號鍵>引號鍵</h3><p>除非必要，不然不建議用這種方式來為鍵名命名</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=color:#e6db74>&#34;我是鍵名&#34;</span> = <span style=color:#e6db74>&#34;中文&#34;</span>
+<span style=color:#e6db74>&#34;127.0.0.1&#34;</span> = <span style=color:#e6db74>&#34;...&#34;</span>
+<span style=color:#e6db74>&#34;system   version&#34;</span> = <span style=color:#e6db74>&#34;...&#34;</span>
+<span style=color:#e6db74>&#39;quoted &#34;value&#34;&#39;</span> = <span style=color:#e6db74>&#34;...&#34;</span>
+<span style=color:#e6db74>&#34;&#34;</span> = <span style=color:#e6db74>&#34;空&#34;</span>     <span style=color:#75715e># 正確，但不鼓勵</span>
+<span style=color:#e6db74>&#39;&#39;</span> = <span style=color:#e6db74>&#39;空&#39;</span>     <span style=color:#75715e># 正確，但不鼓勵</span>
+</code></pre></div><h3 id=裸鍵>裸鍵</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=color:#a6e22e>key</span> = <span style=color:#e6db74>&#34;value&#34;</span>
+<span style=color:#a6e22e>bare_key</span> = <span style=color:#e6db74>&#34;value&#34;</span>
+<span style=color:#a6e22e>bare</span><span style=color:#960050;background-color:#1e0010>-</span><span style=color:#a6e22e>key</span> = <span style=color:#e6db74>&#34;value&#34;</span>
+<span style=color:#ae81ff>1234</span> = <span style=color:#e6db74>&#34;value&#34;</span>  <span style=color:#75715e># 會被當作鍵名會當作字串</span>
+</code></pre></div><h3 id=點分格鍵>點分格鍵</h3><div class="as_fixed_table-container set_highlight-pre_mh40"><div class=as_table-container-col><h2 style=color:initial;text-shadow:none>TOML</h2><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=color:#a6e22e>name</span> = <span style=color:#e6db74>&#34;橙子&#34;</span>
+<span style=color:#a6e22e>physical</span>.<span style=color:#a6e22e>color</span> = <span style=color:#e6db74>&#34;橙色&#34;</span>
+<span style=color:#a6e22e>physical</span>.<span style=color:#a6e22e>shape</span> = <span style=color:#e6db74>&#34;圆形&#34;</span>
+<span style=color:#a6e22e>site</span>.<span style=color:#e6db74>&#34;google.com&#34;</span> = <span style=color:#66d9ef>true</span>
+<span style=color:#e6db74>&#39;3.14159&#39;</span> = <span style=color:#e6db74>&#34;pi&#34;</span>  <span style=color:#75715e># 不建議</span>
+<span style=color:#75715e># 👇 空白會被忽略</span>
+<span style=color:#a6e22e>fruit</span> . <span style=color:#a6e22e>name</span> = <span style=color:#e6db74>&#34;香蕉&#34;</span>  <span style=color:#75715e># 等同 fruit.name</span>
+<span style=color:#a6e22e>fruit</span>. <span style=color:#a6e22e>color</span> = <span style=color:#e6db74>&#34;黄色&#34;</span>  <span style=color:#75715e># 等同 fruit.color</span>
+</code></pre></div></div><div class=as_table-container-col><h2 style=color:initial;text-shadow:none>YAML</h2><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#f92672>name</span>: <span style=color:#ae81ff>橙子</span>
+<span style=color:#f92672>physical</span>:
+    <span style=color:#f92672>color</span>: <span style=color:#ae81ff>橙色</span>
+    <span style=color:#f92672>shape</span>: <span style=color:#ae81ff>圆形</span>
+<span style=color:#f92672>site</span>:
+    <span style=color:#f92672>google.com</span>: <span style=color:#66d9ef>true</span>
+<span style=color:#f92672>&#39;3&#39;</span>:
+<span style=color:#f92672>&#39;14159&#39;</span>: <span style=color:#ae81ff>pi</span>
+<span style=color:#f92672>fruit</span>:
+    <span style=color:#f92672>name</span>: <span style=color:#ae81ff>香蕉</span>
+    <span style=color:#f92672>color</span>: <span style=color:#ae81ff>黃色</span>
+</code></pre></div></div></div><h2 id=字串>字串</h2><h3 id=多行字串>多行字串</h3><ul><li>換行: 使用<code>"""</code>開頭和結尾，其中<strong>緊鄰開頭的的換行會被去除</strong>，其他的空白和換行全部保留！</li><li><code>\</code>: 使用<code>\</code>會把它後面的所有空白和換行一併刪除</li></ul><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=color:#a6e22e>str</span>=<span style=color:#e6db74>&#34;&#34;&#34;
+</span><span style=color:#e6db74>輕輕的我走了
+</span><span style=color:#e6db74>正如我輕輕的來&#34;&#34;&#34;</span>
+
+<span style=color:#a6e22e>strWindows</span> = <span style=color:#e6db74>&#34;&#34;&#34;輕輕的我走了\r\n正如我輕輕的來&#34;&#34;&#34;</span>
+<span style=color:#a6e22e>strUnix</span> = <span style=color:#e6db74>&#34;&#34;&#34;輕輕的我走了\n正如我輕輕的來&#34;&#34;&#34;</span>
+
+<span style=color:#a6e22e>str2</span> = <span style=color:#e6db74>&#34;&#34;&#34;\
+</span><span style=color:#e6db74>    我輕輕的招手\
+</span><span style=color:#e6db74>    作別西天的雲彩&#34;&#34;&#34;</span>
+
+<span style=color:#a6e22e>str2</span><span style=color:#ae81ff>-1</span> = <span style=color:#e6db74>&#34;&#34;&#34;\
+</span><span style=color:#e6db74>    我輕輕的招手\
+</span><span style=color:#e6db74>
+</span><span style=color:#e6db74>
+</span><span style=color:#e6db74>    作別西天的雲彩&#34;&#34;&#34;</span>
+
+<span style=color:#a6e22e>str2result</span>= <span style=color:#e6db74>&#34;&#34;&#34;我輕輕的招手作別西天的雲彩&#34;&#34;&#34;</span>
+
+
+</code></pre></div><h2 id=數字>數字</h2><h3 id=整數>整數</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=color:#a6e22e>int1</span> = <span style=color:#ae81ff>+99</span>
+<span style=color:#a6e22e>int2</span> = <span style=color:#ae81ff>42</span>
+<span style=color:#a6e22e>int3</span> = <span style=color:#ae81ff>0</span>
+<span style=color:#a6e22e>int4</span> = <span style=color:#ae81ff>-17</span>
+
+<span style=color:#a6e22e>int5</span> = <span style=color:#ae81ff>1_000</span>  <span style=color:#75715e># 1000</span>
+<span style=color:#a6e22e>int6</span> = <span style=color:#ae81ff>5_349_221</span>  <span style=color:#75715e># 5349221</span>
+<span style=color:#a6e22e>int7</span> = <span style=color:#ae81ff>53_49_221</span>  <span style=color:#75715e># 印度记數体系分组</span>
+<span style=color:#a6e22e>int8</span> = <span style=color:#ae81ff>1_2_3_4_5</span>  <span style=color:#75715e># 无误但不鼓励</span>
+</code></pre></div><h3 id=進制>進制</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=color:#75715e># 带有 `0x` 前缀的十六进制</span>
+<span style=color:#a6e22e>hex1</span> = <span style=color:#ae81ff>0</span><span style=color:#a6e22e>xDEADBEEF</span>
+<span style=color:#a6e22e>hex2</span> = <span style=color:#ae81ff>0</span><span style=color:#a6e22e>xdeadbeef</span>
+<span style=color:#a6e22e>hex3</span> = <span style=color:#ae81ff>0</span><span style=color:#a6e22e>xdead_beef</span>
+
+<span style=color:#75715e># 带有 `0o` 前缀的八进制</span>
+<span style=color:#a6e22e>oct1</span> = <span style=color:#ae81ff>0</span><span style=color:#a6e22e>o01234567</span>
+<span style=color:#a6e22e>oct2</span> = <span style=color:#ae81ff>0</span><span style=color:#a6e22e>o755</span> <span style=color:#75715e># 对于表示 Unix 文件权限很有用</span>
+
+<span style=color:#75715e># 带有 `0b` 前缀的二进制</span>
+<span style=color:#a6e22e>bin1</span> = <span style=color:#ae81ff>0</span><span style=color:#a6e22e>b11010110</span>
+</code></pre></div><p>任何 64 位有符号整數（从 −2^63 到 2^63−1）都應當被接受并无損处理。
+如果无法无損表現某个整數，則必須拋出錯誤。</p><h3 id=浮點數>浮點數</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=color:#75715e># 小數</span>
+<span style=color:#a6e22e>flt1</span> = <span style=color:#ae81ff>+1.0</span>
+<span style=color:#a6e22e>flt2</span> = <span style=color:#ae81ff>3.1415</span>
+<span style=color:#a6e22e>flt3</span> = <span style=color:#ae81ff>-0.01</span>
+
+<span style=color:#75715e># 指數</span>
+<span style=color:#a6e22e>flt4</span> = <span style=color:#ae81ff>5</span><span style=color:#a6e22e>e</span><span style=color:#ae81ff>+22</span>
+<span style=color:#a6e22e>flt5</span> = <span style=color:#ae81ff>1</span><span style=color:#a6e22e>e06</span>
+<span style=color:#a6e22e>flt6</span> = <span style=color:#ae81ff>-2</span><span style=color:#a6e22e>E</span><span style=color:#ae81ff>-2</span>
+
+<span style=color:#75715e># 都有</span>
+<span style=color:#a6e22e>flt7</span> = <span style=color:#ae81ff>6.626</span><span style=color:#a6e22e>e</span><span style=color:#ae81ff>-34</span>
+</code></pre></div><h4 id=無窮>無窮</h4><pre><code># 无穷
+sf1 = inf  # 正无穷
+sf2 = +inf # 正无穷
+sf3 = -inf # 负无穷
+
+# 非數
+sf4 = nan  # 实际上对應信号非數码还是静默非數码，取决于实現
+sf5 = +nan # 等同于 `nan`
+sf6 = -nan # 正确，实际码取决于实現
+</code></pre><h2 id=時區>時區</h2><p>可以使用 <a href=https://tools.ietf.org/html/rfc3339>rfc3339</a> 的格式</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=color:#a6e22e>datetime1</span> = <span style=color:#e6db74>2021-03-08T13:21:40Z</span>  <span style=color:#75715e># Z表示UTC offset of 00:00</span>
+<span style=color:#a6e22e>datetime2</span> = <span style=color:#e6db74>2021-03-08T13:21:40+08:00</span>  <span style=color:#75715e># UTC+8</span>
+<span style=color:#a6e22e>datetime3</span> = <span style=color:#ae81ff>2021-03-08</span><span style=color:#a6e22e>T13</span><span style=color:#960050;background-color:#1e0010>:</span><span style=color:#ae81ff>21</span><span style=color:#960050;background-color:#1e0010>:</span><span style=color:#ae81ff>40</span>  <span style=color:#75715e># 捨棄時區偏移</span>
+<span style=color:#a6e22e>date</span> = <span style=color:#ae81ff>2021-03-08</span>  <span style=color:#75715e># 表示該天，不涉及時區以及其偏移</span>
+<span style=color:#a6e22e>time</span> = <span style=color:#ae81ff>07</span><span style=color:#960050;background-color:#1e0010>:</span><span style=color:#ae81ff>32</span><span style=color:#960050;background-color:#1e0010>:</span><span style=color:#ae81ff>00</span>  <span style=color:#75715e># 時刻，與日期無關</span>
+</code></pre></div><h2 id=數組>數組</h2><ul><li>空白會被忽略</li><li>用方括號包起來<code>[</code>, <code>]</code></li><li>子元素用<code>,</code>分開</li><li>可以混合不同的類型的值</li><li>可以換行</li><li>可以有尾逗號</li><li>註釋可以存在於其中</li><li>數組值和逗號之間的「Tab」被當作空白而忽略！</li></ul><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=color:#a6e22e>integers</span> = [ <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>2</span>, <span style=color:#ae81ff>3</span> ]
+<span style=color:#a6e22e>colors</span> = [ <span style=color:#e6db74>&#34;红&#34;</span>, <span style=color:#e6db74>&#34;黄&#34;</span>, <span style=color:#e6db74>&#34;绿&#34;</span> ]
+<span style=color:#a6e22e>nested_array_of_ints</span> = [ [ <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>2</span> ], [<span style=color:#ae81ff>3</span>, <span style=color:#ae81ff>4</span>, <span style=color:#ae81ff>5</span>] ]
+<span style=color:#a6e22e>nested_mixed_array</span> = [ [ <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>2</span> ], [<span style=color:#e6db74>&#34;a&#34;</span>, <span style=color:#e6db74>&#34;b&#34;</span>, <span style=color:#e6db74>&#34;c&#34;</span>] ]
+<span style=color:#a6e22e>string_array</span> = [ <span style=color:#e6db74>&#34;所有的&#34;</span>, <span style=color:#e6db74>&#39;字符串&#39;</span>, <span style=color:#e6db74>&#34;&#34;&#34;是相同的&#34;&#34;&#34;</span>, <span style=color:#e6db74>&#39;&#39;&#39;类型&#39;&#39;&#39;</span> ]
+
+<span style=color:#75715e># 允许混合类型的數组</span>
+<span style=color:#a6e22e>numbers</span> = [ <span style=color:#ae81ff>0.1</span>, <span style=color:#ae81ff>0.2</span>, <span style=color:#ae81ff>0.5</span>, <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>2</span>, <span style=color:#ae81ff>5</span> ]
+<span style=color:#a6e22e>contributors</span> = [
+  <span style=color:#e6db74>&#34;Foo Bar &lt;foo@example.com&gt;&#34;</span>,
+  { <span style=color:#a6e22e>name</span> = <span style=color:#e6db74>&#34;Baz Qux&#34;</span>, <span style=color:#a6e22e>email</span> = <span style=color:#e6db74>&#34;bazqux@example.com&#34;</span>, <span style=color:#a6e22e>url</span> = <span style=color:#e6db74>&#34;https://example.com/bazqux&#34;</span> }
+]
+</code></pre></div><h2 id=table>Table</h2><p>表內的元素縮進不是必須的</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml>[<span style=color:#a6e22e>table</span>]
+  <span style=color:#a6e22e>name</span> = <span style=color:#e6db74>&#34;...&#34;</span>
+
+<span style=color:#75715e># 等價於</span>
+[<span style=color:#a6e22e>table</span>]
+<span style=color:#a6e22e>name</span> = <span style=color:#e6db74>&#34;...&#34;</span>
+</code></pre></div><div class="as_fixed_table-container set_highlight-pre_mh40"><div class=as_table-container-col><h2 style=color:initial;text-shadow:none>TOML</h2><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml>[<span style=color:#a6e22e>dog</span>.<span style=color:#e6db74>&#34;tater.man&#34;</span>]
+  <span style=color:#a6e22e>type</span>.<span style=color:#a6e22e>name</span> = <span style=color:#e6db74>&#34;哈巴狗&#34;</span>
+</code></pre></div></div><div class=as_table-container-col><h2 style=color:initial;text-shadow:none>YAML</h2><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#f92672>dog</span>:
+  <span style=color:#f92672>tater.man</span>:
+    <span style=color:#f92672>type</span>:
+      <span style=color:#f92672>name</span>: <span style=color:#ae81ff>哈巴狗</span>
+</code></pre></div></div></div><p>鍵名旁的空格會被忽略</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml>[<span style=color:#a6e22e>a</span>.<span style=color:#a6e22e>b</span>.<span style=color:#a6e22e>c</span>]            <span style=color:#75715e># 這是最佳实践</span>
+[ <span style=color:#a6e22e>d</span>.<span style=color:#a6e22e>e</span>.<span style=color:#a6e22e>f</span> ]          <span style=color:#75715e># 等同于 [d.e.f]</span>
+[ <span style=color:#a6e22e>g</span> .  <span style=color:#a6e22e>h</span>  . <span style=color:#a6e22e>i</span> ]    <span style=color:#75715e># 等同于 [g.h.i]</span>
+[ <span style=color:#a6e22e>j</span> . <span style=color:#e6db74>&#34;ʞ&#34;</span> . <span style=color:#e6db74>&#39;l&#39;</span> ]  <span style=color:#75715e># 等同于 [j.&#34;ʞ&#34;.&#39;l&#39;]</span>
+</code></pre></div><p>🐬 您不必講究地寫出所有途徑，例如:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=color:#75715e># [x] 你</span>
+<span style=color:#75715e># [x.y] 不</span>
+<span style=color:#75715e># [x.y.z] 需要這些</span>
+[<span style=color:#a6e22e>x</span>.<span style=color:#a6e22e>y</span>.<span style=color:#a6e22e>z</span>.<span style=color:#a6e22e>w</span>] <span style=color:#75715e># 来让這生效</span>
+
+[<span style=color:#a6e22e>x</span>] <span style=color:#75715e># 后置父表定义是可以的</span>
+</code></pre></div><p>类似于键名，你不能重复定义一个表。
+這样做是錯誤的。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=color:#75715e># 不要這样做</span>
+
+[<span style=color:#a6e22e>fruit</span>]
+<span style=color:#a6e22e>apple</span> = <span style=color:#e6db74>&#34;红色&#34;</span>
+
+[<span style=color:#a6e22e>fruit</span>]
+<span style=color:#a6e22e>orange</span> = <span style=color:#e6db74>&#34;橙色&#34;</span>
+
+<span style=color:#75715e># 也不要這样做</span>
+
+[<span style=color:#a6e22e>fruit</span>]
+<span style=color:#a6e22e>apple</span> = <span style=color:#e6db74>&#34;红色&#34;</span>
+
+[<span style=color:#a6e22e>fruit</span>.<span style=color:#a6e22e>apple</span>]
+<span style=color:#a6e22e>texture</span> = <span style=color:#e6db74>&#34;光滑&#34;</span>
+</code></pre></div><h3 id=頂層表>頂層表</h3><p>頂層表，又被稱為根表，于文檔開始处開始并在第一个表头（或文件結束处）前結束。
+不同于其它表，它沒有名字且无法后置。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=color:#75715e># 頂層表開始。</span>
+<span style=color:#a6e22e>name</span> = <span style=color:#e6db74>&#34;Fido&#34;</span>
+<span style=color:#a6e22e>breed</span> = <span style=color:#e6db74>&#34;哈巴狗&#34;</span>
+
+<span style=color:#75715e># 頂層表結束。</span>
+[<span style=color:#a6e22e>owner</span>]
+<span style=color:#a6e22e>name</span> = <span style=color:#e6db74>&#34;Regina Dogman&#34;</span>
+<span style=color:#a6e22e>member_since</span> = <span style=color:#ae81ff>1999-08-04</span>
+</code></pre></div><h3 id=表數組>表數組</h3><div class="as_fixed_table-container set_highlight-pre_mh40"><div class=as_table-container-col><h2 style=color:initial;text-shadow:none>TOML</h2><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml>[[<span style=color:#a6e22e>products</span>]]
+<span style=color:#a6e22e>name</span> = <span style=color:#e6db74>&#34;锤子&#34;</span>
+<span style=color:#a6e22e>sku</span> = <span style=color:#ae81ff>738594937</span>
+
+[[<span style=color:#a6e22e>products</span>]]  <span style=color:#75715e># 數组里的空表</span>
+
+[[<span style=color:#a6e22e>products</span>]]
+<span style=color:#a6e22e>name</span> = <span style=color:#e6db74>&#34;钉子&#34;</span>
+<span style=color:#a6e22e>sku</span> = <span style=color:#ae81ff>284758393</span>
+
+<span style=color:#a6e22e>color</span> = <span style=color:#e6db74>&#34;灰色&#34;</span>
+</code></pre></div></div><div class=as_table-container-col><h2 style=color:initial;text-shadow:none>YAML</h2><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#f92672>products</span>:
+- <span style=color:#f92672>name</span>: <span style=color:#ae81ff>锤子</span>
+  <span style=color:#f92672>sku</span>: <span style=color:#ae81ff>738594937</span>
+- {}
+- <span style=color:#f92672>name</span>: <span style=color:#ae81ff>钉子</span>
+  <span style=color:#f92672>sku</span>: <span style=color:#ae81ff>284758393</span>
+  <span style=color:#f92672>color</span>: <span style=color:#ae81ff>gray</span>
+
+</code></pre></div></div></div><p>🐬 <strong>任何对表數组的引用都指向该數组里最近定义的表元素</strong></p><div class="as_fixed_table-container set_highlight-pre_mh40"><div class=as_table-container-col><h2 style=color:initial;text-shadow:none>TOML</h2><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml>[[<span style=color:#a6e22e>fruits</span>]]
+<span style=color:#a6e22e>name</span> = <span style=color:#e6db74>&#34;苹果&#34;</span>
+
+[<span style=color:#a6e22e>fruits</span>.<span style=color:#a6e22e>physical</span>]  <span style=color:#75715e># 子表</span>
+<span style=color:#a6e22e>color</span> = <span style=color:#e6db74>&#34;红色&#34;</span>
+<span style=color:#a6e22e>shape</span> = <span style=color:#e6db74>&#34;圆形&#34;</span>
+
+[[<span style=color:#a6e22e>fruits</span>.<span style=color:#a6e22e>varieties</span>]]  <span style=color:#75715e># 嵌套表數组</span>
+<span style=color:#a6e22e>name</span> = <span style=color:#e6db74>&#34;蛇果&#34;</span>
+
+[[<span style=color:#a6e22e>fruits</span>.<span style=color:#a6e22e>varieties</span>]]
+<span style=color:#a6e22e>name</span> = <span style=color:#e6db74>&#34;澳洲青苹&#34;</span>
+
+[[<span style=color:#a6e22e>fruits</span>]]
+<span style=color:#a6e22e>name</span> = <span style=color:#e6db74>&#34;香蕉&#34;</span>
+
+[[<span style=color:#a6e22e>fruits</span>.<span style=color:#a6e22e>varieties</span>]]
+<span style=color:#a6e22e>name</span> = <span style=color:#e6db74>&#34;车前草&#34;</span>
+</code></pre></div></div><div class=as_table-container-col><h2 style=color:initial;text-shadow:none>YAML</h2><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#f92672>fruits</span>:
+- <span style=color:#f92672>name</span>: <span style=color:#ae81ff>苹果</span>
+  <span style=color:#f92672>physical</span>:
+    <span style=color:#f92672>color</span>: <span style=color:#ae81ff>红色</span>
+    <span style=color:#f92672>shape</span>: <span style=color:#ae81ff>圆形</span>
+  <span style=color:#f92672>varieties</span>:
+  - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>蛇果</span>
+  - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>澳洲青苹</span>
+- <span style=color:#f92672>name</span>: <span style=color:#ae81ff>香蕉</span>
+  <span style=color:#f92672>varieties</span>:
+  - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>车前草</span>
+</code></pre></div></div></div><h2 id=mime類型>MIME類型</h2><p><code>application/toml</code></p><h2 id=參考資料>參考資料</h2><ul><li><a href=https://github.com/LongTengDao/TOML/tree/%E9%BE%99%E8%85%BE%E9%81%93-%E8%AF%91>龙腾道-译TOML</a></li><li><a href=https://toml.io/cn/v1.0.0>toml.io/cn/v1.0.0</a></li><li><a href=https://www.json2yaml.com/>json2yaml</a></li></ul><div class=mt3><hr></div><div class="mt6 instapaper_ignoref"></div></div><aside class="w-30-l mt6-l navbar-right large-screen-only"><nav id=TableOfContents><ul><li><a href=#toml介紹>TOML介紹</a></li><li><a href=#注意事項>注意事項</a></li><li><a href=#註解>註解</a></li><li><a href=#鍵名>鍵名</a><ul><li><a href=#引號鍵>引號鍵</a></li><li><a href=#裸鍵>裸鍵</a></li><li><a href=#點分格鍵>點分格鍵</a></li></ul></li><li><a href=#字串>字串</a><ul><li><a href=#多行字串>多行字串</a></li></ul></li><li><a href=#數字>數字</a><ul><li><a href=#整數>整數</a></li><li><a href=#進制>進制</a></li><li><a href=#浮點數>浮點數</a><ul><li><a href=#無窮>無窮</a></li></ul></li></ul></li><li><a href=#時區>時區</a></li><li><a href=#數組>數組</a></li><li><a href=#table>Table</a><ul><li><a href=#頂層表>頂層表</a></li><li><a href=#表數組>表數組</a></li></ul></li><li><a href=#mime類型>MIME類型</a></li><li><a href=#參考資料>參考資料</a></li></ul></nav><script defer src=/js/uml/toc_markmap.js></script><div id=toc><div id=navbar class="pa3 nested-list-reset nested-copy-line-height nested-links"><a class="navbar-brand ms-2" href=# style=color:#212529>TOML教學</a><nav class="navbar navbar-light"><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><a class="nav-link ms-0" href=#toml介紹>TOML介紹</a></nav></nav><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><a class="nav-link ms-0" href=#注意事項>注意事項</a></nav></nav><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><a class="nav-link ms-0" href=#註解>註解</a></nav></nav><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><a class="nav-link ms-0" href=#鍵名>鍵名</a></nav></nav><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><a class="nav-link ms-2" href=#引號鍵>引號鍵</a></nav></nav></nav><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><a class="nav-link ms-2" href=#裸鍵>裸鍵</a></nav></nav></nav><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><a class="nav-link ms-2" href=#點分格鍵>點分格鍵</a></nav></nav></nav><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><a class="nav-link ms-0" href=#字串>字串</a></nav></nav><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><a class="nav-link ms-2" href=#多行字串>多行字串</a></nav></nav></nav><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><a class="nav-link ms-0" href=#數字>數字</a></nav></nav><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><a class="nav-link ms-2" href=#整數>整數</a></nav></nav></nav><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><a class="nav-link ms-2" href=#進制>進制</a></nav></nav></nav><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><a class="nav-link ms-2" href=#浮點數>浮點數</a></nav></nav></nav><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><a class="nav-link ms-4" href=#無窮>無窮</a></nav></nav></nav></nav><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><a class="nav-link ms-0" href=#時區>時區</a></nav></nav><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><a class="nav-link ms-0" href=#數組>數組</a></nav></nav><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><a class="nav-link ms-0" href=#table>Table</a></nav></nav><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><a class="nav-link ms-2" href=#頂層表>頂層表</a></nav></nav></nav><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><a class="nav-link ms-2" href=#表數組>表數組</a></nav></nav></nav><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><a class="nav-link ms-0" href=#mime類型>MIME類型</a></nav></nav><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><a class="nav-link ms-0" href=#參考資料>參考資料</a></nav></nav></nav></nav></div></div></aside></article></main><div id=fastSearch><input id=searchInput tabindex=0><ul id=searchResults></ul></div><script src=/js/search/fuse/fuse.js></script><script src=/js/search/fuse/fastsearch.js></script><footer class="bg-black bottom-0 w-100 pa3" role=contentinfo><div class="flex justify-between"><a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href=https://carsonslovoka.github.io/>&copy; Carson 2020-2021</a><div></div></div></footer><script src=/dist/js/app.3fc0f988d21662902933.js></script><script src=/dist/js/utils.js></script><script src=/js/clipboard/copy-code-block.js></script></body></html>

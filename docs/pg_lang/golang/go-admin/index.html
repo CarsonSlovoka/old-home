@@ -1,0 +1,1328 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge,chrome=1"><title>go-admin | Carson Blog</title><meta name=viewport content="width=device-width,minimum-scale=1"><meta name=description content="前言 前言之前寫了一個舊內容主要是在談go的版本比較新會裝不起來， 但後來我又用新的版本再從裝，就沒發現"><meta name=generator content="Hugo 0.81.0"><meta name=ROBOTS content="INDEX, FOLLOW"><link href=/css/markmap.css rel=stylesheet><script src=https://d3js.org/d3.v6.min.js></script><script src=/js/uml/markmap-view@0.2.0.js></script><script defer src=/js/uml/markmap.js></script><link href=/dist/css/search-fuse.css rel=stylesheet><link rel=stylesheet type=text/css href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin=anonymous><script defer src=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/js/all.min.js integrity="sha512-UwcC/iaz5ziHX7V6LjSKaXgCuRRqbTp1QHpbOJ4l1nw2/boCfZ2KlFIqBUA/uRVF0onbREnY9do8rM/uT/ilqw==" crossorigin=anonymous></script><link rel=stylesheet href=/css/google-fonts.css><link rel=stylesheet href=/css/embed-bk-img.css><link href=/dist/css/app.4fc0b62e4b82c997bb0041217cd6b979.css rel=stylesheet><link href=/dist/css/navbar.css rel=stylesheet><link href=/dist/css/card_post.css rel=stylesheet><link href=/dist/css/utils.css rel=stylesheet><link href=/dist/sass/main_sass.css rel=stylesheet><link href=https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css rel=stylesheet integrity=sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1 crossorigin=anonymous><script src=https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js integrity=sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW crossorigin=anonymous></script><link rel="shortcut icon" href=/images/tab_icon.jpg type=image/x-icon><meta property="og:title" content="go-admin"><meta property="og:description" content="前言 前言之前寫了一個舊內容主要是在談go的版本比較新會裝不起來， 但後來我又用新的版本再從裝，就沒發現"><meta property="og:type" content="article"><meta property="og:url" content="https://carsonslovoka.github.io/pg_lang/golang/go-admin/"><meta property="article:section" content="pg_lang"><meta property="article:published_time" content="2021-02-26T18:45:47+08:00"><meta property="article:modified_time" content="2021-02-26T00:00:00+08:00"><meta itemprop=name content="go-admin"><meta itemprop=description content="前言 前言之前寫了一個舊內容主要是在談go的版本比較新會裝不起來， 但後來我又用新的版本再從裝，就沒發現"><meta itemprop=datePublished content="2021-02-26T18:45:47+08:00"><meta itemprop=dateModified content="2021-02-26T00:00:00+08:00"><meta itemprop=wordCount content="6571"><meta itemprop=keywords content><meta name=twitter:card content="summary"><meta name=twitter:title content="go-admin"><meta name=twitter:description content="前言 前言之前寫了一個舊內容主要是在談go的版本比較新會裝不起來， 但後來我又用新的版本再從裝，就沒發現"><script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-98900980-4','auto'),ga('send','pageview'))</script><script async src=https://www.google-analytics.com/analytics.js></script></head><body data-bs-spy=scroll data-bs-target=#navbar class="ma0 bg-near-white google-noto-sans-tc"><header><div class=bg-black><nav class="pv3 ph3 ph4-ns" role=navigation><div class="flex-l justify-between items-center center"><a href=/ class="f3 fw2 hover-white no-underline white-90 dib"><i class="zoom-in fas fa-home fa-3x" style=color:#ffc34d></i></a><div class="flex-l items-center"><ul class="pl0 mr3"><li class="zoom-in list f5 f4-ns fw4 dib pr3"><a class="hover-white no-underline white-90" href=/site-search-simple/ title><i class="fas fa-search"></i></a></li><li class="zoom-in list f5 f4-ns fw4 dib pr3"><a class="hover-white no-underline white-90" href=/pages-timeline/ title><i class="fas fa-code-branch"></i></a></li><li class="zoom-in list f5 f4-ns fw4 dib pr3"><i class="fas fa-sitemap" style=color:#b1e844></i><a class="hover-white no-underline white-90" href=/site-markmap/ title=地圖>地圖</a></li><li class="zoom-in list f5 f4-ns fw4 dib pr3"><i class="fas fa-h-square" style=color:#e844a8></i><a class="hover-white no-underline white-90" href=/hugo/ title=教學>教學</a></li></ul></div></div></nav></div></header><main class=pb7 role=main><article class="flex-l flex-wrap justify-between mw8 center ph3"><header class="mt4 w-100"><aside class="instapaper_ignoref b helvetica tracked">GOLANG</aside><div id=sharing class=mt3><a href="https://www.facebook.com/sharer.php?u=https://carsonslovoka.github.io/pg_lang/golang/go-admin/" class="facebook no-underline" aria-label="share on Facebook"><svg height="32" style="enable-background:new 0 0 67 67" viewBox="0 0 67 67" width="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M28.765 50.32h6.744V33.998h4.499l.596-5.624h-5.095l.007-2.816c0-1.466.14-2.253 2.244-2.253h2.812V17.68h-4.5c-5.405.0-7.307 2.729-7.307 7.317v3.377h-3.369v5.625h3.369V50.32zM33 64C16.432 64 3 50.569 3 34S16.432 4 33 4s30 13.431 30 30S49.568 64 33 64z" style="fill-rule:evenodd;clip-rule:evenodd"/></svg></a><a href="https://twitter.com/share?url=https://carsonslovoka.github.io/pg_lang/golang/go-admin/&text=go-admin" class="twitter no-underline" aria-label="share on Twitter"><svg height="32" style="enable-background:new 0 0 67 67" viewBox="0 0 67 67" width="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167 22.283c-2.619.953-4.274 3.411-4.086 6.101l.063 1.038-1.048-.127c-3.813-.487-7.145-2.139-9.974-4.915l-1.383-1.377-.356 1.017c-.754 2.267-.272 4.661 1.299 6.271.838.89.649 1.017-.796.487-.503-.169-.943-.296-.985-.233-.146.149.356 2.076.754 2.839.545 1.06 1.655 2.097 2.871 2.712l1.027.487-1.215.021c-1.173.0-1.215.021-1.089.467.419 1.377 2.074 2.839 3.918 3.475l1.299.444-1.131.678c-1.676.976-3.646 1.526-5.616 1.568C19.775 43.256 19 43.341 19 43.405c0 .211 2.557 1.397 4.044 1.864 4.463 1.377 9.765.783 13.746-1.568 2.829-1.673 5.657-5 6.978-8.221.713-1.716 1.425-4.851 1.425-6.354.0-.975.063-1.102 1.236-2.267.692-.678 1.341-1.419 1.467-1.631.21-.403.188-.403-.88-.043-1.781.636-2.033.551-1.152-.402.649-.678 1.425-1.907 1.425-2.267.0-.063-.314.042-.671.233-.377.212-1.215.53-1.844.72l-1.131.361-1.027-.7c-.566-.381-1.361-.805-1.781-.932C39.766 21.902 38.131 21.944 37.167 22.283zM33 64C16.432 64 3 50.569 3 34S16.432 4 33 4s30 13.431 30 30S49.568 64 33 64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:"/></svg></a><a href="https://www.linkedin.com/shareArticle?mini=true&url=https://carsonslovoka.github.io/pg_lang/golang/go-admin/&title=go-admin" class="linkedin no-underline" aria-label="share on LinkedIn"><svg height="32" style="enable-background:new 0 0 65 65" viewBox="0 0 65 65" width="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M50.837 48.137V36.425c0-6.275-3.35-9.195-7.816-9.195-3.604.0-5.219 1.983-6.119 3.374V27.71h-6.79c.09 1.917.0 20.427.0 20.427h6.79V36.729c0-.609.044-1.219.224-1.655.49-1.22 1.607-2.483 3.482-2.483 2.458.0 3.44 1.873 3.44 4.618v10.929H50.837zM22.959 24.922c2.367.0 3.842-1.57 3.842-3.531-.044-2.003-1.475-3.528-3.797-3.528s-3.841 1.524-3.841 3.528c0 1.961 1.474 3.531 3.753 3.531H22.959zM34 64C17.432 64 4 50.568 4 34 4 17.431 17.432 4 34 4s30 13.431 30 30c0 16.568-13.432 30-30 30zM26.354 48.137V27.71h-6.789v20.427h6.789z" style="fill-rule:evenodd;clip-rule:evenodd;fill:"/></svg></a></div><h1 class="f1 athelas mt3 mb1">go-admin</h1><time class="f6 mv4 dib tracked" datetime=2021-02-26T18:45:47+08:00>February 26, 2021</time></header><div class="nested-copy-line-height lh-copy google-noto-sans-tc f4 nested-links nested-img mid-gray
+w-80-l"><h2 id=前言>前言</h2><p>前言之前寫了一個舊內容主要是在談go的版本比較新會裝不起來，</p><p>但後來我又用新的版本再從裝，就沒發現問題了，確實可以用golang 1.6去跑go-admin</p><h3 id=已棄用請忽略-go版本>(已棄用，請忽略) <del>go版本</del></h3><p>請先確定您裝的go版本是什麼</p><blockquote><p>go version</p></blockquote><p>接著請考慮跟著套件的版本走，而不是盲目的追尋潮流(要潮就要解一堆奇奇怪怪的問題，然後解完，這個版本只有你自己在用&mldr;)</p><details><summary>我自己遇到的問題</summary><p>我一開始是用golang 1.16，但後來遇到<a href=https://github.com/GoAdminGroup/go-admin/issues/93#issuecomment-550296588>multiple-value uuid.NewV4() in single-value context</a></p><p>後來改用和 <a href=https://github.com/GoAdminGroup/go-admin/blob/master/go.mod#L3>go-admin相同的版本</a> 就沒問題了</p></details><hr><ul><li><a href=https://github.com/gin-gonic/gin/blob/master/go.mod>gin-gonic/gin/go.mod</a></li><li><a href=https://github.com/GoAdminGroup/go-admin/blob/master/go.mod>GoAdminGroup/go-admin/go.mod</a></li></ul><p>go-admin也就算了，但是gin應該就很多人在用了，所以如果你用的版本不是和它一樣，就建議改掉！</p><p>下載相對應的golang版本，<a href=https://golang.org/dl/>golang download</a></p><p>下載zip檔案就好了，msi檔案主要給比較毫無頭緒的玩家使用(如果你抓多個golang版本，他一開始就問你，你已經抓了golang要解除安裝還是要離開&mldr;)</p><h4 id=多個golang安裝>多個golang安裝</h4><p>以下是我的結構(您可以隨意不一定要照我的方式)</p><p>以下兩個環境變數要設定:</p><ul><li><p>GOPATH: <code>%USERPROFILE%\go\1.13.15</code> (您可以加在使用者的環境變數中</p><ul><li>📁 bin</li><li>📁 pkg</li><li>📁 src</li></ul><blockquote><p>GOPATH要有這三個資料夾才可以！</p></blockquote></li><li><p>PATH: <code>%ProgramFiles%\Go\1.13.15\bin</code></p><ul><li><code>go env</code> 其實就已經知道GOROOT在哪了，但是IDE不知道</li></ul></li></ul><p>GOROOT可以在golang的IDE設置go SDK用的</p><ul><li>GOROOT: <code>%ProgramFiles%\Go\1.13.15</code></li></ul><h2 id=go-admin是什麼>go-admin是什麼？</h2><table><thead><tr><th>repository</th><th></th><th></th></tr></thead><tbody><tr><td><a href=https://github.com/GoAdminGroup/go-admin>go-admin</a></td><td><img src="https://img.shields.io/github/stars/GoAdminGroup/go-admin?style=social" alt=stars </td><td><a href=https://www.google.com/ target=_blank><img src="https://img.shields.io/github/forks/GoAdminGroup/go-admin?style=social" alt=forks </a></td></tr></tbody></table><ul><li>🚀 高生产效率: 10分钟内做一个好看的管理后台</li><li>🎨 主题: 默认為adminlte，更多好看的主题正在制作中，欢迎給我们留言</li><li>🔢 插件化: 提供插件使用，真正实现一个插件解决不了问题，那就两个</li><li>✅ 认证: 开箱即用的<a href=https://en.wikipedia.org/wiki/Role-based_access_control>rbac认证系统</a>
+-⚙ 框架支持: 支持大部分框架接入，让你更容易去上手和扩展</li></ul><p>好，總之就各種好棒棒&mldr;讓我們繼續往下看要怎麼弄</p><h2 id=getting-started>Getting Started</h2><h3 id=為您的資料庫新增一些資料表和欄位>為您的資料庫新增一些資料表和欄位</h3><p>你可能自己已經在一些網站爬過文，那麼人家一開就叫你匯入SQL&mldr;</p><p>他會要求導入sql，是因為go-admin可以讓您客製化面板，那麼您總不希望成功運行之後什麼東西都沒看到對吧，</p><ul><li><a href=https://github.com/eddycjy/go-gin-example/blob/master/docs/sql/blog.sql>SQL</a></li><li>這是從上面的SQL改來的postgreSQL版本
+<details><summary>postgreSQL</summary><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#66d9ef>SET</span> search_path <span style=color:#f92672>=</span> carsonsite;  <span style=color:#75715e>-- USE DatabaseName;
+</span><span style=color:#75715e></span>
+<span style=color:#75715e>-- ----------------------------
+</span><span style=color:#75715e>-- Table structure for blog_article
+</span><span style=color:#75715e>-- ----------------------------
+</span><span style=color:#75715e></span><span style=color:#66d9ef>DROP</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>IF</span> <span style=color:#66d9ef>EXISTS</span> <span style=color:#66d9ef>public</span>.blog_article;  <span style=color:#75715e>-- public是schema的名稱，如果您的schema名稱是別的就要改掉
+</span><span style=color:#75715e></span><span style=color:#66d9ef>CREATE</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.blog_article (  <span style=color:#75715e>-- https://www.postgresqltutorial.com/postgresql-create-table/
+</span><span style=color:#75715e></span>  id SERIAL <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,  <span style=color:#75715e>-- https://www.postgresqltutorial.com/postgresql-serial/
+</span><span style=color:#75715e></span>  tag_id SERIAL,
+  title varchar(<span style=color:#ae81ff>100</span>) <span style=color:#66d9ef>DEFAULT</span> <span style=color:#e6db74>&#39;&#39;</span>,
+  <span style=color:#e6db74>&#34;desc&#34;</span> varchar(<span style=color:#ae81ff>255</span>) <span style=color:#66d9ef>DEFAULT</span> <span style=color:#e6db74>&#39;&#39;</span>,
+  content text,
+  cover_image_url varchar(<span style=color:#ae81ff>255</span>) <span style=color:#66d9ef>DEFAULT</span> <span style=color:#e6db74>&#39;&#39;</span>,
+  created_on int <span style=color:#66d9ef>DEFAULT</span> <span style=color:#e6db74>&#39;0&#39;</span>,
+  created_by varchar(<span style=color:#ae81ff>100</span>) <span style=color:#66d9ef>DEFAULT</span> <span style=color:#e6db74>&#39;&#39;</span>,
+  modified_on int <span style=color:#66d9ef>DEFAULT</span> <span style=color:#e6db74>&#39;0&#39;</span>,
+  modified_by varchar(<span style=color:#ae81ff>255</span>) <span style=color:#66d9ef>DEFAULT</span> <span style=color:#e6db74>&#39;&#39;</span>,
+  deleted_on int <span style=color:#66d9ef>DEFAULT</span> <span style=color:#e6db74>&#39;0&#39;</span>,
+  <span style=color:#66d9ef>state</span> smallint <span style=color:#66d9ef>DEFAULT</span> <span style=color:#e6db74>&#39;1&#39;</span>,  <span style=color:#75715e>-- https://www.postgresqltutorial.com/postgresql-data-types/
+</span><span style=color:#75715e></span>  <span style=color:#66d9ef>PRIMARY</span> <span style=color:#66d9ef>KEY</span> (id)
+);
+
+<span style=color:#75715e>-- https://www.postgresql.org/docs/9.1/sql-comment.html
+</span><span style=color:#75715e></span><span style=color:#66d9ef>COMMENT</span> <span style=color:#66d9ef>ON</span> <span style=color:#66d9ef>COLUMN</span> <span style=color:#66d9ef>public</span>.blog_article.tag_id <span style=color:#66d9ef>IS</span> <span style=color:#e6db74>&#39;標籤ID&#39;</span>;
+<span style=color:#66d9ef>COMMENT</span> <span style=color:#66d9ef>ON</span> <span style=color:#66d9ef>COLUMN</span> <span style=color:#66d9ef>public</span>.blog_article.title <span style=color:#66d9ef>IS</span> <span style=color:#e6db74>&#39;文章标题&#39;</span>;
+<span style=color:#66d9ef>COMMENT</span> <span style=color:#66d9ef>ON</span> <span style=color:#66d9ef>COLUMN</span> <span style=color:#66d9ef>public</span>.blog_article.<span style=color:#66d9ef>desc</span> <span style=color:#66d9ef>IS</span> <span style=color:#e6db74>&#39;简述&#39;</span>;
+<span style=color:#66d9ef>COMMENT</span> <span style=color:#66d9ef>ON</span> <span style=color:#66d9ef>COLUMN</span> <span style=color:#66d9ef>public</span>.blog_article.content <span style=color:#66d9ef>IS</span> <span style=color:#e6db74>&#39;内容&#39;</span>;
+<span style=color:#66d9ef>COMMENT</span> <span style=color:#66d9ef>ON</span> <span style=color:#66d9ef>COLUMN</span> <span style=color:#66d9ef>public</span>.blog_article.cover_image_url <span style=color:#66d9ef>IS</span> <span style=color:#e6db74>&#39;封面图片地址&#39;</span>;
+<span style=color:#66d9ef>COMMENT</span> <span style=color:#66d9ef>ON</span> <span style=color:#66d9ef>COLUMN</span> <span style=color:#66d9ef>public</span>.blog_article.created_on <span style=color:#66d9ef>IS</span> <span style=color:#e6db74>&#39;新建时间&#39;</span>;
+<span style=color:#66d9ef>COMMENT</span> <span style=color:#66d9ef>ON</span> <span style=color:#66d9ef>COLUMN</span> <span style=color:#66d9ef>public</span>.blog_article.created_by <span style=color:#66d9ef>IS</span> <span style=color:#e6db74>&#39;创建人&#39;</span>;
+<span style=color:#66d9ef>COMMENT</span> <span style=color:#66d9ef>ON</span> <span style=color:#66d9ef>COLUMN</span> <span style=color:#66d9ef>public</span>.blog_article.modified_on <span style=color:#66d9ef>IS</span> <span style=color:#e6db74>&#39;修改时间&#39;</span>;
+<span style=color:#66d9ef>COMMENT</span> <span style=color:#66d9ef>ON</span> <span style=color:#66d9ef>COLUMN</span> <span style=color:#66d9ef>public</span>.blog_article.modified_by <span style=color:#66d9ef>IS</span> <span style=color:#e6db74>&#39;修改人&#39;</span>;
+<span style=color:#66d9ef>COMMENT</span> <span style=color:#66d9ef>ON</span> <span style=color:#66d9ef>COLUMN</span> <span style=color:#66d9ef>public</span>.blog_article.deleted_on <span style=color:#66d9ef>IS</span> <span style=color:#e6db74>&#39;删除时间&#39;</span>;
+<span style=color:#66d9ef>COMMENT</span> <span style=color:#66d9ef>ON</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.blog_article <span style=color:#66d9ef>IS</span> <span style=color:#e6db74>&#39;文章管理&#39;</span>;
+
+<span style=color:#75715e>-- ----------------------------
+</span><span style=color:#75715e>-- Table structure for blog_auth
+</span><span style=color:#75715e>-- ----------------------------
+</span><span style=color:#75715e></span><span style=color:#66d9ef>DROP</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>IF</span> <span style=color:#66d9ef>EXISTS</span> <span style=color:#66d9ef>public</span>.blog_auth;
+<span style=color:#66d9ef>CREATE</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.blog_auth (
+  id SERIAL <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+  username varchar(<span style=color:#ae81ff>50</span>) <span style=color:#66d9ef>DEFAULT</span> <span style=color:#e6db74>&#39;&#39;</span>,
+  password varchar(<span style=color:#ae81ff>50</span>) <span style=color:#66d9ef>DEFAULT</span> <span style=color:#e6db74>&#39;&#39;</span>,
+  <span style=color:#66d9ef>PRIMARY</span> <span style=color:#66d9ef>KEY</span> (id)
+);
+
+<span style=color:#66d9ef>COMMENT</span> <span style=color:#66d9ef>ON</span> <span style=color:#66d9ef>COLUMN</span> <span style=color:#66d9ef>public</span>.blog_auth.username <span style=color:#66d9ef>IS</span> <span style=color:#e6db74>&#39;账号&#39;</span>;
+<span style=color:#66d9ef>COMMENT</span> <span style=color:#66d9ef>ON</span> <span style=color:#66d9ef>COLUMN</span> <span style=color:#66d9ef>public</span>.blog_auth.password <span style=color:#66d9ef>IS</span> <span style=color:#e6db74>&#39;密码&#39;</span>;
+
+<span style=color:#66d9ef>INSERT</span> <span style=color:#66d9ef>INTO</span> <span style=color:#66d9ef>public</span>.blog_auth (id, username, password) <span style=color:#66d9ef>VALUES</span> (<span style=color:#e6db74>&#39;1&#39;</span>, <span style=color:#e6db74>&#39;test&#39;</span>, <span style=color:#e6db74>&#39;test123&#39;</span>);
+
+<span style=color:#75715e>-- ----------------------------
+</span><span style=color:#75715e>-- Table structure for blog_tag
+</span><span style=color:#75715e>-- ----------------------------
+</span><span style=color:#75715e></span><span style=color:#66d9ef>DROP</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>IF</span> <span style=color:#66d9ef>EXISTS</span> <span style=color:#66d9ef>public</span>.blog_tag;
+<span style=color:#66d9ef>CREATE</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.blog_tag (
+  id SERIAL <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+  name varchar(<span style=color:#ae81ff>100</span>) <span style=color:#66d9ef>DEFAULT</span> <span style=color:#e6db74>&#39;&#39;</span>,
+  created_on int <span style=color:#66d9ef>DEFAULT</span> <span style=color:#e6db74>&#39;0&#39;</span>,
+  created_by varchar(<span style=color:#ae81ff>100</span>) <span style=color:#66d9ef>DEFAULT</span> <span style=color:#e6db74>&#39;&#39;</span>,
+  modified_on int <span style=color:#66d9ef>DEFAULT</span> <span style=color:#e6db74>&#39;0&#39;</span>,
+  modified_by varchar(<span style=color:#ae81ff>100</span>) <span style=color:#66d9ef>DEFAULT</span> <span style=color:#e6db74>&#39;&#39;</span>,
+  deleted_on int <span style=color:#66d9ef>DEFAULT</span> <span style=color:#e6db74>&#39;0&#39;</span>,
+  <span style=color:#66d9ef>state</span> smallint <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span> <span style=color:#66d9ef>DEFAULT</span> <span style=color:#e6db74>&#39;1&#39;</span>,
+  <span style=color:#66d9ef>PRIMARY</span> <span style=color:#66d9ef>KEY</span> (id)
+);
+
+<span style=color:#66d9ef>COMMENT</span> <span style=color:#66d9ef>ON</span> <span style=color:#66d9ef>COLUMN</span> <span style=color:#66d9ef>public</span>.blog_tag.name <span style=color:#66d9ef>IS</span> <span style=color:#e6db74>&#39;标签名称&#39;</span>;
+<span style=color:#66d9ef>COMMENT</span> <span style=color:#66d9ef>ON</span> <span style=color:#66d9ef>COLUMN</span> <span style=color:#66d9ef>public</span>.blog_tag.created_on <span style=color:#66d9ef>IS</span> <span style=color:#e6db74>&#39;创建时间&#39;</span>;
+<span style=color:#66d9ef>COMMENT</span> <span style=color:#66d9ef>ON</span> <span style=color:#66d9ef>COLUMN</span> <span style=color:#66d9ef>public</span>.blog_tag.created_by <span style=color:#66d9ef>IS</span> <span style=color:#e6db74>&#39;创建人&#39;</span>;
+<span style=color:#66d9ef>COMMENT</span> <span style=color:#66d9ef>ON</span> <span style=color:#66d9ef>COLUMN</span> <span style=color:#66d9ef>public</span>.blog_tag.modified_on <span style=color:#66d9ef>IS</span> <span style=color:#e6db74>&#39;修改时间&#39;</span>;
+<span style=color:#66d9ef>COMMENT</span> <span style=color:#66d9ef>ON</span> <span style=color:#66d9ef>COLUMN</span> <span style=color:#66d9ef>public</span>.blog_tag.modified_by <span style=color:#66d9ef>IS</span> <span style=color:#e6db74>&#39;修改人&#39;</span>;
+<span style=color:#66d9ef>COMMENT</span> <span style=color:#66d9ef>ON</span> <span style=color:#66d9ef>COLUMN</span> <span style=color:#66d9ef>public</span>.blog_tag.deleted_on <span style=color:#66d9ef>IS</span> <span style=color:#e6db74>&#39;删除时间&#39;</span>;
+<span style=color:#66d9ef>COMMENT</span> <span style=color:#66d9ef>ON</span> <span style=color:#66d9ef>COLUMN</span> <span style=color:#66d9ef>public</span>.blog_tag.<span style=color:#66d9ef>state</span> <span style=color:#66d9ef>IS</span> <span style=color:#e6db74>&#39;状态 0为禁用、1为启用&#39;</span>;
+<span style=color:#66d9ef>COMMENT</span> <span style=color:#66d9ef>ON</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.blog_tag <span style=color:#66d9ef>IS</span> <span style=color:#e6db74>&#39;文章标签管理&#39;</span>;
+</code></pre></div></details></li></ul><span id=三個資料表>他要這三個資料表</span><pre><code>- blog_article
+- blog_auth
+- blog_tag
+</code></pre><h3 id=安裝gcchttpsenwikipediaorgwikignu_compiler_collection><a href=https://en.wikipedia.org/wiki/GNU_Compiler_Collection>安裝gcc</a></h3><p>如果沒有裝gcc等一下裝goAdmin可能會失敗！</p><p>參考<a href=https://carsonslovoka.github.io/os/windows/package_manager/#一些常用的安裝項目>gcc安裝</a></p><p>大致上就是先裝choco，然後</p><blockquote><p>choco install mingw -y</p></blockquote><p>就裝完gcc了，檢查:</p><blockquote><p>gcc -V</p></blockquote><p>要查看gcc裝在哪邊可以用 <a href=https://superuser.com/a/1605156>gcm</a> 去檢查</p><h3 id=安裝goadmin的工具>安裝GoAdmin的工具</h3><pre><code>GO111MODULE=on  (go env -w GO111MODULE=on)
+GOPROXY=https://goproxy.cn
+go install github.com/GoAdminGroup/go-admin/adm  (如果失敗就改用go get)
+</code></pre><ul><li>GOPROXY一定要用cn的那個嗎？<blockquote><p>不一定。 go-admin就是中國人設計的，中國沒辦法用<code>https://proxy.golang.org</code>所以才用那個。</p></blockquote></li></ul><hr><p>完成以後您就可以下指令:</p><blockquote><p>adm -V</p><p>輸出: GoAdmin CLI v1.2.7</p></blockquote><p>如果沒有成功請檢查<code>$GOPATH/bin</code>這個路徑是不是有在您的環境變數之中，因為adm.exe就放在這邊。</p><h3 id=再匯入goadmin需要用到的資料表>再匯入goadmin需要用到的資料表</h3><p>導入GoAdmin所需的sql文件進數據庫中</p><h4 id=生成資料表>生成資料表</h4><p>可以直接在<a href=https://github.com/GoAdminGroup/go-admin/tree/master/data>go-admin/data</a> 找尋適用於您資料庫的sql</p><p>我是用postgresql，所以以下只特別講這個</p><ul><li><p><a href=https://raw.githubusercontent.com/GoAdminGroup/go-admin/master/data/admin.pgsql>postgresql</a></p><blockquote><p>如果您使用上面的腳本，必須在psql中運行而不是pgAdmin，因為stdin沒有辦法在pgAdmin中運行<a href=https://dba.stackexchange.com/a/41040>詳</a></p></blockquote><p><del>這個是我的版本</del>:<details><summary><del>postgreSQL純資料表無內容</del></summary><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#75715e>--
+</span><span style=color:#75715e>-- PostgreSQL database dump
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#75715e>-- Dumped from database version 9.5.14
+</span><span style=color:#75715e>-- Dumped by pg_dump version 10.5
+</span><span style=color:#75715e></span>
+<span style=color:#75715e>-- ALTER DATABASE name OWNER TO new_owner;  -- 如果遇到rule的錯誤 請嘗試這個
+</span><span style=color:#75715e>-- CREATE ROLE Carson superuser;
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>SET</span> search_path <span style=color:#f92672>=</span> carsonsite;  <span style=color:#75715e>-- USE DatabaseName;
+</span><span style=color:#75715e></span><span style=color:#66d9ef>SET</span> statement_timeout <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
+<span style=color:#66d9ef>SET</span> lock_timeout <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
+<span style=color:#66d9ef>SET</span> idle_in_transaction_session_timeout <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
+<span style=color:#66d9ef>SET</span> client_encoding <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;UTF8&#39;</span>;
+<span style=color:#66d9ef>SET</span> standard_conforming_strings <span style=color:#f92672>=</span> <span style=color:#66d9ef>on</span>;
+<span style=color:#66d9ef>SELECT</span> pg_catalog.set_config(<span style=color:#e6db74>&#39;search_path&#39;</span>, <span style=color:#e6db74>&#39;&#39;</span>, <span style=color:#66d9ef>false</span>);
+<span style=color:#66d9ef>SET</span> check_function_bodies <span style=color:#f92672>=</span> <span style=color:#66d9ef>false</span>;
+<span style=color:#66d9ef>SET</span> client_min_messages <span style=color:#f92672>=</span> warning;
+<span style=color:#66d9ef>SET</span> row_security <span style=color:#f92672>=</span> <span style=color:#66d9ef>off</span>;
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner:
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>CREATE</span> EXTENSION <span style=color:#66d9ef>IF</span> <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>EXISTS</span> plpgsql <span style=color:#66d9ef>WITH</span> <span style=color:#66d9ef>SCHEMA</span> pg_catalog;
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner:
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>COMMENT</span> <span style=color:#66d9ef>ON</span> EXTENSION plpgsql <span style=color:#66d9ef>IS</span> <span style=color:#e6db74>&#39;PL/pgSQL procedural language&#39;</span>;
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_menu_myid_seq; Type: SEQUENCE; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>CREATE</span> SEQUENCE <span style=color:#66d9ef>public</span>.goadmin_menu_myid_seq
+<span style=color:#66d9ef>START</span> <span style=color:#66d9ef>WITH</span> <span style=color:#ae81ff>1</span>
+<span style=color:#66d9ef>INCREMENT</span> <span style=color:#66d9ef>BY</span> <span style=color:#ae81ff>1</span>
+<span style=color:#66d9ef>NO</span> <span style=color:#66d9ef>MINVALUE</span>
+<span style=color:#66d9ef>MAXVALUE</span> <span style=color:#ae81ff>99999999</span>
+<span style=color:#66d9ef>CACHE</span> <span style=color:#ae81ff>1</span>;
+
+
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_menu_myid_seq <span style=color:#66d9ef>OWNER</span> <span style=color:#66d9ef>TO</span> Carson;
+
+<span style=color:#66d9ef>SET</span> default_tablespace <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;&#39;</span>;
+
+<span style=color:#66d9ef>SET</span> default_with_oids <span style=color:#f92672>=</span> <span style=color:#66d9ef>false</span>;
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_menu; Type: TABLE; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>CREATE</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_menu (
+id integer <span style=color:#66d9ef>DEFAULT</span> nextval(<span style=color:#e6db74>&#39;public.goadmin_menu_myid_seq&#39;</span>::regclass) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+parent_id integer <span style=color:#66d9ef>DEFAULT</span> <span style=color:#ae81ff>0</span> <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+<span style=color:#66d9ef>type</span> integer <span style=color:#66d9ef>DEFAULT</span> <span style=color:#ae81ff>0</span>,
+<span style=color:#e6db74>&#34;order&#34;</span> integer <span style=color:#66d9ef>DEFAULT</span> <span style=color:#ae81ff>0</span> <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+title character varying(<span style=color:#ae81ff>50</span>) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+header character varying(<span style=color:#ae81ff>100</span>),
+plugin_name character varying(<span style=color:#ae81ff>100</span>) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+icon character varying(<span style=color:#ae81ff>50</span>) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+uri character varying(<span style=color:#ae81ff>3000</span>) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+uuid character varying(<span style=color:#ae81ff>100</span>),
+created_at <span style=color:#66d9ef>timestamp</span> <span style=color:#66d9ef>without</span> time <span style=color:#66d9ef>zone</span> <span style=color:#66d9ef>DEFAULT</span> now(),
+updated_at <span style=color:#66d9ef>timestamp</span> <span style=color:#66d9ef>without</span> time <span style=color:#66d9ef>zone</span> <span style=color:#66d9ef>DEFAULT</span> now()
+);
+
+
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_menu <span style=color:#66d9ef>OWNER</span> <span style=color:#66d9ef>TO</span> Carson;
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_operation_log_myid_seq; Type: SEQUENCE; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>CREATE</span> SEQUENCE <span style=color:#66d9ef>public</span>.goadmin_operation_log_myid_seq
+<span style=color:#66d9ef>START</span> <span style=color:#66d9ef>WITH</span> <span style=color:#ae81ff>1</span>
+<span style=color:#66d9ef>INCREMENT</span> <span style=color:#66d9ef>BY</span> <span style=color:#ae81ff>1</span>
+<span style=color:#66d9ef>NO</span> <span style=color:#66d9ef>MINVALUE</span>
+<span style=color:#66d9ef>MAXVALUE</span> <span style=color:#ae81ff>99999999</span>
+<span style=color:#66d9ef>CACHE</span> <span style=color:#ae81ff>1</span>;
+
+
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_operation_log_myid_seq <span style=color:#66d9ef>OWNER</span> <span style=color:#66d9ef>TO</span> Carson;
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_operation_log; Type: TABLE; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>CREATE</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_operation_log (
+id integer <span style=color:#66d9ef>DEFAULT</span> nextval(<span style=color:#e6db74>&#39;public.goadmin_operation_log_myid_seq&#39;</span>::regclass) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+user_id integer <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+path character varying(<span style=color:#ae81ff>255</span>) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+<span style=color:#66d9ef>method</span> character varying(<span style=color:#ae81ff>10</span>) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+ip character varying(<span style=color:#ae81ff>15</span>) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+<span style=color:#66d9ef>input</span> text <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+created_at <span style=color:#66d9ef>timestamp</span> <span style=color:#66d9ef>without</span> time <span style=color:#66d9ef>zone</span> <span style=color:#66d9ef>DEFAULT</span> now(),
+updated_at <span style=color:#66d9ef>timestamp</span> <span style=color:#66d9ef>without</span> time <span style=color:#66d9ef>zone</span> <span style=color:#66d9ef>DEFAULT</span> now()
+);
+
+
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_operation_log <span style=color:#66d9ef>OWNER</span> <span style=color:#66d9ef>TO</span> Carson;
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_site_myid_seq; Type: SEQUENCE; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>CREATE</span> SEQUENCE <span style=color:#66d9ef>public</span>.goadmin_site_myid_seq
+<span style=color:#66d9ef>START</span> <span style=color:#66d9ef>WITH</span> <span style=color:#ae81ff>1</span>
+<span style=color:#66d9ef>INCREMENT</span> <span style=color:#66d9ef>BY</span> <span style=color:#ae81ff>1</span>
+<span style=color:#66d9ef>NO</span> <span style=color:#66d9ef>MINVALUE</span>
+<span style=color:#66d9ef>MAXVALUE</span> <span style=color:#ae81ff>99999999</span>
+<span style=color:#66d9ef>CACHE</span> <span style=color:#ae81ff>1</span>;
+
+
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_site_myid_seq <span style=color:#66d9ef>OWNER</span> <span style=color:#66d9ef>TO</span> Carson;
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_site; Type: TABLE; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>CREATE</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_site (
+id integer <span style=color:#66d9ef>DEFAULT</span> nextval(<span style=color:#e6db74>&#39;public.goadmin_site_myid_seq&#39;</span>::regclass) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+<span style=color:#66d9ef>key</span> character varying(<span style=color:#ae81ff>100</span>) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+value text <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+<span style=color:#66d9ef>type</span> integer <span style=color:#66d9ef>DEFAULT</span> <span style=color:#ae81ff>0</span>,
+description character varying(<span style=color:#ae81ff>3000</span>),
+<span style=color:#66d9ef>state</span> integer <span style=color:#66d9ef>DEFAULT</span> <span style=color:#ae81ff>0</span>,
+created_at <span style=color:#66d9ef>timestamp</span> <span style=color:#66d9ef>without</span> time <span style=color:#66d9ef>zone</span> <span style=color:#66d9ef>DEFAULT</span> now(),
+updated_at <span style=color:#66d9ef>timestamp</span> <span style=color:#66d9ef>without</span> time <span style=color:#66d9ef>zone</span> <span style=color:#66d9ef>DEFAULT</span> now()
+);
+
+
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_site <span style=color:#66d9ef>OWNER</span> <span style=color:#66d9ef>TO</span> Carson;
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_permissions_myid_seq; Type: SEQUENCE; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>CREATE</span> SEQUENCE <span style=color:#66d9ef>public</span>.goadmin_permissions_myid_seq
+<span style=color:#66d9ef>START</span> <span style=color:#66d9ef>WITH</span> <span style=color:#ae81ff>1</span>
+<span style=color:#66d9ef>INCREMENT</span> <span style=color:#66d9ef>BY</span> <span style=color:#ae81ff>1</span>
+<span style=color:#66d9ef>NO</span> <span style=color:#66d9ef>MINVALUE</span>
+<span style=color:#66d9ef>MAXVALUE</span> <span style=color:#ae81ff>99999999</span>
+<span style=color:#66d9ef>CACHE</span> <span style=color:#ae81ff>1</span>;
+
+
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_permissions_myid_seq <span style=color:#66d9ef>OWNER</span> <span style=color:#66d9ef>TO</span> Carson;
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_permissions; Type: TABLE; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>CREATE</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_permissions (
+id integer <span style=color:#66d9ef>DEFAULT</span> nextval(<span style=color:#e6db74>&#39;public.goadmin_permissions_myid_seq&#39;</span>::regclass) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+name character varying(<span style=color:#ae81ff>50</span>) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+slug character varying(<span style=color:#ae81ff>50</span>) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+http_method character varying(<span style=color:#ae81ff>255</span>),
+http_path text <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+created_at <span style=color:#66d9ef>timestamp</span> <span style=color:#66d9ef>without</span> time <span style=color:#66d9ef>zone</span> <span style=color:#66d9ef>DEFAULT</span> now(),
+updated_at <span style=color:#66d9ef>timestamp</span> <span style=color:#66d9ef>without</span> time <span style=color:#66d9ef>zone</span> <span style=color:#66d9ef>DEFAULT</span> now()
+);
+
+
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_permissions <span style=color:#66d9ef>OWNER</span> <span style=color:#66d9ef>TO</span> Carson;
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_role_menu; Type: TABLE; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>CREATE</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_role_menu (
+role_id integer <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+menu_id integer <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+created_at <span style=color:#66d9ef>timestamp</span> <span style=color:#66d9ef>without</span> time <span style=color:#66d9ef>zone</span> <span style=color:#66d9ef>DEFAULT</span> now(),
+updated_at <span style=color:#66d9ef>timestamp</span> <span style=color:#66d9ef>without</span> time <span style=color:#66d9ef>zone</span> <span style=color:#66d9ef>DEFAULT</span> now()
+);
+
+
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_role_menu <span style=color:#66d9ef>OWNER</span> <span style=color:#66d9ef>TO</span> Carson;
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_role_permissions; Type: TABLE; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>CREATE</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_role_permissions (
+role_id integer <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+permission_id integer <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+created_at <span style=color:#66d9ef>timestamp</span> <span style=color:#66d9ef>without</span> time <span style=color:#66d9ef>zone</span> <span style=color:#66d9ef>DEFAULT</span> now(),
+updated_at <span style=color:#66d9ef>timestamp</span> <span style=color:#66d9ef>without</span> time <span style=color:#66d9ef>zone</span> <span style=color:#66d9ef>DEFAULT</span> now()
+);
+
+
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_role_permissions <span style=color:#66d9ef>OWNER</span> <span style=color:#66d9ef>TO</span> Carson;
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_role_users; Type: TABLE; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>CREATE</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_role_users (
+role_id integer <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+user_id integer <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+created_at <span style=color:#66d9ef>timestamp</span> <span style=color:#66d9ef>without</span> time <span style=color:#66d9ef>zone</span> <span style=color:#66d9ef>DEFAULT</span> now(),
+updated_at <span style=color:#66d9ef>timestamp</span> <span style=color:#66d9ef>without</span> time <span style=color:#66d9ef>zone</span> <span style=color:#66d9ef>DEFAULT</span> now()
+);
+
+
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_role_users <span style=color:#66d9ef>OWNER</span> <span style=color:#66d9ef>TO</span> Carson;
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_roles_myid_seq; Type: SEQUENCE; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>CREATE</span> SEQUENCE <span style=color:#66d9ef>public</span>.goadmin_roles_myid_seq
+<span style=color:#66d9ef>START</span> <span style=color:#66d9ef>WITH</span> <span style=color:#ae81ff>1</span>
+<span style=color:#66d9ef>INCREMENT</span> <span style=color:#66d9ef>BY</span> <span style=color:#ae81ff>1</span>
+<span style=color:#66d9ef>NO</span> <span style=color:#66d9ef>MINVALUE</span>
+<span style=color:#66d9ef>MAXVALUE</span> <span style=color:#ae81ff>99999999</span>
+<span style=color:#66d9ef>CACHE</span> <span style=color:#ae81ff>1</span>;
+
+
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_roles_myid_seq <span style=color:#66d9ef>OWNER</span> <span style=color:#66d9ef>TO</span> Carson;
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_roles; Type: TABLE; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>CREATE</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_roles (
+id integer <span style=color:#66d9ef>DEFAULT</span> nextval(<span style=color:#e6db74>&#39;public.goadmin_roles_myid_seq&#39;</span>::regclass) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+name character varying <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+slug character varying <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+created_at <span style=color:#66d9ef>timestamp</span> <span style=color:#66d9ef>without</span> time <span style=color:#66d9ef>zone</span> <span style=color:#66d9ef>DEFAULT</span> now(),
+updated_at <span style=color:#66d9ef>timestamp</span> <span style=color:#66d9ef>without</span> time <span style=color:#66d9ef>zone</span> <span style=color:#66d9ef>DEFAULT</span> now()
+);
+
+
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_roles <span style=color:#66d9ef>OWNER</span> <span style=color:#66d9ef>TO</span> Carson;
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_session_myid_seq; Type: SEQUENCE; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>CREATE</span> SEQUENCE <span style=color:#66d9ef>public</span>.goadmin_session_myid_seq
+<span style=color:#66d9ef>START</span> <span style=color:#66d9ef>WITH</span> <span style=color:#ae81ff>1</span>
+<span style=color:#66d9ef>INCREMENT</span> <span style=color:#66d9ef>BY</span> <span style=color:#ae81ff>1</span>
+<span style=color:#66d9ef>NO</span> <span style=color:#66d9ef>MINVALUE</span>
+<span style=color:#66d9ef>MAXVALUE</span> <span style=color:#ae81ff>99999999</span>
+<span style=color:#66d9ef>CACHE</span> <span style=color:#ae81ff>1</span>;
+
+
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_session_myid_seq <span style=color:#66d9ef>OWNER</span> <span style=color:#66d9ef>TO</span> Carson;
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_session; Type: TABLE; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>CREATE</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_session (
+id integer <span style=color:#66d9ef>DEFAULT</span> nextval(<span style=color:#e6db74>&#39;public.goadmin_session_myid_seq&#39;</span>::regclass) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+sid character varying(<span style=color:#ae81ff>50</span>) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+<span style=color:#e6db74>&#34;values&#34;</span> character varying(<span style=color:#ae81ff>3000</span>) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+created_at <span style=color:#66d9ef>timestamp</span> <span style=color:#66d9ef>without</span> time <span style=color:#66d9ef>zone</span> <span style=color:#66d9ef>DEFAULT</span> now(),
+updated_at <span style=color:#66d9ef>timestamp</span> <span style=color:#66d9ef>without</span> time <span style=color:#66d9ef>zone</span> <span style=color:#66d9ef>DEFAULT</span> now()
+);
+
+
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_session <span style=color:#66d9ef>OWNER</span> <span style=color:#66d9ef>TO</span> Carson;
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_user_permissions; Type: TABLE; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>CREATE</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_user_permissions (
+user_id integer <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+permission_id integer <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+created_at <span style=color:#66d9ef>timestamp</span> <span style=color:#66d9ef>without</span> time <span style=color:#66d9ef>zone</span> <span style=color:#66d9ef>DEFAULT</span> now(),
+updated_at <span style=color:#66d9ef>timestamp</span> <span style=color:#66d9ef>without</span> time <span style=color:#66d9ef>zone</span> <span style=color:#66d9ef>DEFAULT</span> now()
+);
+
+
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_user_permissions <span style=color:#66d9ef>OWNER</span> <span style=color:#66d9ef>TO</span> Carson;
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_users_myid_seq; Type: SEQUENCE; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>CREATE</span> SEQUENCE <span style=color:#66d9ef>public</span>.goadmin_users_myid_seq
+<span style=color:#66d9ef>START</span> <span style=color:#66d9ef>WITH</span> <span style=color:#ae81ff>1</span>
+<span style=color:#66d9ef>INCREMENT</span> <span style=color:#66d9ef>BY</span> <span style=color:#ae81ff>1</span>
+<span style=color:#66d9ef>NO</span> <span style=color:#66d9ef>MINVALUE</span>
+<span style=color:#66d9ef>MAXVALUE</span> <span style=color:#ae81ff>99999999</span>
+<span style=color:#66d9ef>CACHE</span> <span style=color:#ae81ff>1</span>;
+
+
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_users_myid_seq <span style=color:#66d9ef>OWNER</span> <span style=color:#66d9ef>TO</span> Carson;
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_users; Type: TABLE; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>CREATE</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_users (
+id integer <span style=color:#66d9ef>DEFAULT</span> nextval(<span style=color:#e6db74>&#39;public.goadmin_users_myid_seq&#39;</span>::regclass) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+username character varying(<span style=color:#ae81ff>100</span>) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+password character varying(<span style=color:#ae81ff>100</span>) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+name character varying(<span style=color:#ae81ff>100</span>) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+avatar character varying(<span style=color:#ae81ff>255</span>),
+remember_token character varying(<span style=color:#ae81ff>100</span>),
+created_at <span style=color:#66d9ef>timestamp</span> <span style=color:#66d9ef>without</span> time <span style=color:#66d9ef>zone</span> <span style=color:#66d9ef>DEFAULT</span> now(),
+updated_at <span style=color:#66d9ef>timestamp</span> <span style=color:#66d9ef>without</span> time <span style=color:#66d9ef>zone</span> <span style=color:#66d9ef>DEFAULT</span> now()
+);
+
+
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_users <span style=color:#66d9ef>OWNER</span> <span style=color:#66d9ef>TO</span> Carson;
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Data for Name: goadmin_menu; Type: TABLE DATA; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+
+
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Data for Name: goadmin_operation_log; Type: TABLE DATA; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Data for Name: goadmin_site; Type: TABLE DATA; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+
+
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Data for Name: goadmin_permissions; Type: TABLE DATA; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Data for Name: goadmin_role_menu; Type: TABLE DATA; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+
+
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Data for Name: goadmin_role_permissions; Type: TABLE DATA; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Data for Name: goadmin_role_users; Type: TABLE DATA; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Data for Name: goadmin_roles; Type: TABLE DATA; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Data for Name: goadmin_session; Type: TABLE DATA; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+
+
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Data for Name: goadmin_user_permissions; Type: TABLE DATA; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Data for Name: goadmin_users; Type: TABLE DATA; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_menu_myid_seq; Type: SEQUENCE SET; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>SELECT</span> pg_catalog.setval(<span style=color:#e6db74>&#39;public.goadmin_menu_myid_seq&#39;</span>, <span style=color:#ae81ff>7</span>, <span style=color:#66d9ef>true</span>);
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_operation_log_myid_seq; Type: SEQUENCE SET; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>SELECT</span> pg_catalog.setval(<span style=color:#e6db74>&#39;public.goadmin_operation_log_myid_seq&#39;</span>, <span style=color:#ae81ff>1</span>, <span style=color:#66d9ef>true</span>);
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_permissions_myid_seq; Type: SEQUENCE SET; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>SELECT</span> pg_catalog.setval(<span style=color:#e6db74>&#39;public.goadmin_permissions_myid_seq&#39;</span>, <span style=color:#ae81ff>2</span>, <span style=color:#66d9ef>true</span>);
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_roles_myid_seq; Type: SEQUENCE SET; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>SELECT</span> pg_catalog.setval(<span style=color:#e6db74>&#39;public.goadmin_roles_myid_seq&#39;</span>, <span style=color:#ae81ff>2</span>, <span style=color:#66d9ef>true</span>);
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_site_myid_seq; Type: SEQUENCE SET; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>SELECT</span> pg_catalog.setval(<span style=color:#e6db74>&#39;public.goadmin_site_myid_seq&#39;</span>, <span style=color:#ae81ff>1</span>, <span style=color:#66d9ef>true</span>);
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_session_myid_seq; Type: SEQUENCE SET; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>SELECT</span> pg_catalog.setval(<span style=color:#e6db74>&#39;public.goadmin_session_myid_seq&#39;</span>, <span style=color:#ae81ff>1</span>, <span style=color:#66d9ef>true</span>);
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_users_myid_seq; Type: SEQUENCE SET; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>SELECT</span> pg_catalog.setval(<span style=color:#e6db74>&#39;public.goadmin_users_myid_seq&#39;</span>, <span style=color:#ae81ff>2</span>, <span style=color:#66d9ef>true</span>);
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_menu goadmin_menu_pkey; Type: CONSTRAINT; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>ONLY</span> <span style=color:#66d9ef>public</span>.goadmin_menu
+<span style=color:#66d9ef>ADD</span> <span style=color:#66d9ef>CONSTRAINT</span> goadmin_menu_pkey <span style=color:#66d9ef>PRIMARY</span> <span style=color:#66d9ef>KEY</span> (id);
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_operation_log goadmin_operation_log_pkey; Type: CONSTRAINT; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>ONLY</span> <span style=color:#66d9ef>public</span>.goadmin_operation_log
+<span style=color:#66d9ef>ADD</span> <span style=color:#66d9ef>CONSTRAINT</span> goadmin_operation_log_pkey <span style=color:#66d9ef>PRIMARY</span> <span style=color:#66d9ef>KEY</span> (id);
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_permissions goadmin_permissions_pkey; Type: CONSTRAINT; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>ONLY</span> <span style=color:#66d9ef>public</span>.goadmin_permissions
+<span style=color:#66d9ef>ADD</span> <span style=color:#66d9ef>CONSTRAINT</span> goadmin_permissions_pkey <span style=color:#66d9ef>PRIMARY</span> <span style=color:#66d9ef>KEY</span> (id);
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_roles goadmin_roles_pkey; Type: CONSTRAINT; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>ONLY</span> <span style=color:#66d9ef>public</span>.goadmin_roles
+<span style=color:#66d9ef>ADD</span> <span style=color:#66d9ef>CONSTRAINT</span> goadmin_roles_pkey <span style=color:#66d9ef>PRIMARY</span> <span style=color:#66d9ef>KEY</span> (id);
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_site goadmin_site_pkey; Type: CONSTRAINT; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>ONLY</span> <span style=color:#66d9ef>public</span>.goadmin_site
+<span style=color:#66d9ef>ADD</span> <span style=color:#66d9ef>CONSTRAINT</span> goadmin_site_pkey <span style=color:#66d9ef>PRIMARY</span> <span style=color:#66d9ef>KEY</span> (id);
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_session goadmin_session_pkey; Type: CONSTRAINT; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>ONLY</span> <span style=color:#66d9ef>public</span>.goadmin_session
+<span style=color:#66d9ef>ADD</span> <span style=color:#66d9ef>CONSTRAINT</span> goadmin_session_pkey <span style=color:#66d9ef>PRIMARY</span> <span style=color:#66d9ef>KEY</span> (id);
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_users goadmin_users_pkey; Type: CONSTRAINT; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>ONLY</span> <span style=color:#66d9ef>public</span>.goadmin_users
+<span style=color:#66d9ef>ADD</span> <span style=color:#66d9ef>CONSTRAINT</span> goadmin_users_pkey <span style=color:#66d9ef>PRIMARY</span> <span style=color:#66d9ef>KEY</span> (id);
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: SCHEMA public; Type: ACL; Schema: -; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>REVOKE</span> <span style=color:#66d9ef>ALL</span> <span style=color:#66d9ef>ON</span> <span style=color:#66d9ef>SCHEMA</span> <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>FROM</span> <span style=color:#66d9ef>PUBLIC</span>;
+<span style=color:#66d9ef>REVOKE</span> <span style=color:#66d9ef>ALL</span> <span style=color:#66d9ef>ON</span> <span style=color:#66d9ef>SCHEMA</span> <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>FROM</span> Carson;
+<span style=color:#66d9ef>GRANT</span> <span style=color:#66d9ef>ALL</span> <span style=color:#66d9ef>ON</span> <span style=color:#66d9ef>SCHEMA</span> <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>TO</span> Carson;
+<span style=color:#66d9ef>GRANT</span> <span style=color:#66d9ef>ALL</span> <span style=color:#66d9ef>ON</span> <span style=color:#66d9ef>SCHEMA</span> <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>TO</span> <span style=color:#66d9ef>PUBLIC</span>;
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- PostgreSQL database dump complete
+</span><span style=color:#75715e>--
+</span></code></pre></div></details></p></li></ul><h4 id=已棄用請忽略-插入內容>(已棄用，請忽略) <del>插入內容</del></h4><p>不行只有空的資料表，他的一些內容在啟動的時候需要用到，舉例來說</p><p>goadmin_users資料表掌控登入的資訊，所以如果裡面是空的，那就永遠沒辦法登入進去(詳:<a href=https://github.com/GoAdminGroup/go-admin/issues/155#issuecomment-595522308>#155</a>)</p><h5 id=已棄用請忽略-新建使用者>(已棄用，請忽略) <del>新建使用者</del></h5><p>以下請自行斟酌修改</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#66d9ef>INSERT</span> <span style=color:#66d9ef>INTO</span> <span style=color:#66d9ef>public</span>.goadmin_users(
+id, username, password, name)
+<span style=color:#66d9ef>VALUES</span> (<span style=color:#ae81ff>1</span>, <span style=color:#e6db74>&#39;admin&#39;</span>, <span style=color:#e6db74>&#39;admin&#39;</span>, <span style=color:#e6db74>&#39;carson&#39;</span>);
+</code></pre></div><h4 id=使用psql來生成資料表和內容>使用psql來生成資料表和內容</h4><p>我發現如果要先插入資料表再插入內容，會很麻煩，所以還是psql來解決<a href=https://stackoverflow.com/a/47088848>詳</a></p><p>打開psql的console，他會問以下東西:</p><pre><code>Server [localhost]:
+Database [postgres]:
+Port [5432]:
+Username [postgres]:
+Password for user postgres:**********
+</code></pre><p>完成之後，使用<code>\c</code>來連接資料庫 (如果已經是您的資料庫，就可以忽略這個步驟)</p><pre><code>postgres=# \c yourdatabase;
+</code></pre><p>然後用<code>\i</code>把sql檔案丟給它即可</p><pre><code>carsonsite=# \i 'c:/path/path/data/data.sql'
+</code></pre><blockquote><p>注意！ 是用<code>/</code>而不是<code>\</code>，此外用<code>'</code>把路徑包起來，不然可能會遇到permission denied <a href=https://dba.stackexchange.com/a/29773>詳</a></p></blockquote><p>最後附上我的data.sql
+<details><summary>data.sql</summary><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sql data-lang=sql><span style=color:#75715e>--
+</span><span style=color:#75715e>-- PostgreSQL database dump
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#75715e>-- Dumped from database version 9.5.14
+</span><span style=color:#75715e>-- Dumped by pg_dump version 10.5
+</span><span style=color:#75715e></span>
+<span style=color:#75715e>-- ALTER DATABASE name OWNER TO new_owner;  -- 如果遇到rule的錯誤 請嘗試這個
+</span><span style=color:#75715e>-- CREATE ROLE Carson superuser;
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>SET</span> search_path <span style=color:#f92672>=</span> carsonsite;  <span style=color:#75715e>-- USE DatabaseName;
+</span><span style=color:#75715e></span><span style=color:#66d9ef>SET</span> statement_timeout <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
+<span style=color:#66d9ef>SET</span> lock_timeout <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
+<span style=color:#66d9ef>SET</span> idle_in_transaction_session_timeout <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
+<span style=color:#66d9ef>SET</span> client_encoding <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;UTF8&#39;</span>;
+<span style=color:#66d9ef>SET</span> standard_conforming_strings <span style=color:#f92672>=</span> <span style=color:#66d9ef>on</span>;
+<span style=color:#66d9ef>SELECT</span> pg_catalog.set_config(<span style=color:#e6db74>&#39;search_path&#39;</span>, <span style=color:#e6db74>&#39;&#39;</span>, <span style=color:#66d9ef>false</span>);
+<span style=color:#66d9ef>SET</span> check_function_bodies <span style=color:#f92672>=</span> <span style=color:#66d9ef>false</span>;
+<span style=color:#66d9ef>SET</span> client_min_messages <span style=color:#f92672>=</span> warning;
+<span style=color:#66d9ef>SET</span> row_security <span style=color:#f92672>=</span> <span style=color:#66d9ef>off</span>;
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner:
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>CREATE</span> EXTENSION <span style=color:#66d9ef>IF</span> <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>EXISTS</span> plpgsql <span style=color:#66d9ef>WITH</span> <span style=color:#66d9ef>SCHEMA</span> pg_catalog;
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner:
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>COMMENT</span> <span style=color:#66d9ef>ON</span> EXTENSION plpgsql <span style=color:#66d9ef>IS</span> <span style=color:#e6db74>&#39;PL/pgSQL procedural language&#39;</span>;
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_menu_myid_seq; Type: SEQUENCE; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>CREATE</span> SEQUENCE <span style=color:#66d9ef>public</span>.goadmin_menu_myid_seq
+    <span style=color:#66d9ef>START</span> <span style=color:#66d9ef>WITH</span> <span style=color:#ae81ff>1</span>
+    <span style=color:#66d9ef>INCREMENT</span> <span style=color:#66d9ef>BY</span> <span style=color:#ae81ff>1</span>
+    <span style=color:#66d9ef>NO</span> <span style=color:#66d9ef>MINVALUE</span>
+    <span style=color:#66d9ef>MAXVALUE</span> <span style=color:#ae81ff>99999999</span>
+    <span style=color:#66d9ef>CACHE</span> <span style=color:#ae81ff>1</span>;
+
+
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_menu_myid_seq <span style=color:#66d9ef>OWNER</span> <span style=color:#66d9ef>TO</span> Carson;
+
+<span style=color:#66d9ef>SET</span> default_tablespace <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;&#39;</span>;
+
+<span style=color:#66d9ef>SET</span> default_with_oids <span style=color:#f92672>=</span> <span style=color:#66d9ef>false</span>;
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_menu; Type: TABLE; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>CREATE</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_menu (
+                                     id integer <span style=color:#66d9ef>DEFAULT</span> nextval(<span style=color:#e6db74>&#39;public.goadmin_menu_myid_seq&#39;</span>::regclass) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+                                     parent_id integer <span style=color:#66d9ef>DEFAULT</span> <span style=color:#ae81ff>0</span> <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+                                     <span style=color:#66d9ef>type</span> integer <span style=color:#66d9ef>DEFAULT</span> <span style=color:#ae81ff>0</span>,
+                                     <span style=color:#e6db74>&#34;order&#34;</span> integer <span style=color:#66d9ef>DEFAULT</span> <span style=color:#ae81ff>0</span> <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+                                     title character varying(<span style=color:#ae81ff>50</span>) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+                                     header character varying(<span style=color:#ae81ff>100</span>),
+                                     plugin_name character varying(<span style=color:#ae81ff>100</span>) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+                                     icon character varying(<span style=color:#ae81ff>50</span>) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+                                     uri character varying(<span style=color:#ae81ff>3000</span>) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+                                     uuid character varying(<span style=color:#ae81ff>100</span>),
+                                     created_at <span style=color:#66d9ef>timestamp</span> <span style=color:#66d9ef>without</span> time <span style=color:#66d9ef>zone</span> <span style=color:#66d9ef>DEFAULT</span> now(),
+                                     updated_at <span style=color:#66d9ef>timestamp</span> <span style=color:#66d9ef>without</span> time <span style=color:#66d9ef>zone</span> <span style=color:#66d9ef>DEFAULT</span> now()
+);
+
+
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_menu <span style=color:#66d9ef>OWNER</span> <span style=color:#66d9ef>TO</span> Carson;
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_operation_log_myid_seq; Type: SEQUENCE; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>CREATE</span> SEQUENCE <span style=color:#66d9ef>public</span>.goadmin_operation_log_myid_seq
+    <span style=color:#66d9ef>START</span> <span style=color:#66d9ef>WITH</span> <span style=color:#ae81ff>1</span>
+    <span style=color:#66d9ef>INCREMENT</span> <span style=color:#66d9ef>BY</span> <span style=color:#ae81ff>1</span>
+    <span style=color:#66d9ef>NO</span> <span style=color:#66d9ef>MINVALUE</span>
+    <span style=color:#66d9ef>MAXVALUE</span> <span style=color:#ae81ff>99999999</span>
+    <span style=color:#66d9ef>CACHE</span> <span style=color:#ae81ff>1</span>;
+
+
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_operation_log_myid_seq <span style=color:#66d9ef>OWNER</span> <span style=color:#66d9ef>TO</span> Carson;
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_operation_log; Type: TABLE; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>CREATE</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_operation_log (
+                                              id integer <span style=color:#66d9ef>DEFAULT</span> nextval(<span style=color:#e6db74>&#39;public.goadmin_operation_log_myid_seq&#39;</span>::regclass) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+                                              user_id integer <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+                                              path character varying(<span style=color:#ae81ff>255</span>) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+                                              <span style=color:#66d9ef>method</span> character varying(<span style=color:#ae81ff>10</span>) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+                                              ip character varying(<span style=color:#ae81ff>15</span>) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+                                              <span style=color:#66d9ef>input</span> text <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+                                              created_at <span style=color:#66d9ef>timestamp</span> <span style=color:#66d9ef>without</span> time <span style=color:#66d9ef>zone</span> <span style=color:#66d9ef>DEFAULT</span> now(),
+                                              updated_at <span style=color:#66d9ef>timestamp</span> <span style=color:#66d9ef>without</span> time <span style=color:#66d9ef>zone</span> <span style=color:#66d9ef>DEFAULT</span> now()
+);
+
+
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_operation_log <span style=color:#66d9ef>OWNER</span> <span style=color:#66d9ef>TO</span> Carson;
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_site_myid_seq; Type: SEQUENCE; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>CREATE</span> SEQUENCE <span style=color:#66d9ef>public</span>.goadmin_site_myid_seq
+    <span style=color:#66d9ef>START</span> <span style=color:#66d9ef>WITH</span> <span style=color:#ae81ff>1</span>
+    <span style=color:#66d9ef>INCREMENT</span> <span style=color:#66d9ef>BY</span> <span style=color:#ae81ff>1</span>
+    <span style=color:#66d9ef>NO</span> <span style=color:#66d9ef>MINVALUE</span>
+    <span style=color:#66d9ef>MAXVALUE</span> <span style=color:#ae81ff>99999999</span>
+    <span style=color:#66d9ef>CACHE</span> <span style=color:#ae81ff>1</span>;
+
+
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_site_myid_seq <span style=color:#66d9ef>OWNER</span> <span style=color:#66d9ef>TO</span> Carson;
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_site; Type: TABLE; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>CREATE</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_site (
+                                     id integer <span style=color:#66d9ef>DEFAULT</span> nextval(<span style=color:#e6db74>&#39;public.goadmin_site_myid_seq&#39;</span>::regclass) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+                                     <span style=color:#66d9ef>key</span> character varying(<span style=color:#ae81ff>100</span>) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+                                     value text <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+                                     <span style=color:#66d9ef>type</span> integer <span style=color:#66d9ef>DEFAULT</span> <span style=color:#ae81ff>0</span>,
+                                     description character varying(<span style=color:#ae81ff>3000</span>),
+                                     <span style=color:#66d9ef>state</span> integer <span style=color:#66d9ef>DEFAULT</span> <span style=color:#ae81ff>0</span>,
+                                     created_at <span style=color:#66d9ef>timestamp</span> <span style=color:#66d9ef>without</span> time <span style=color:#66d9ef>zone</span> <span style=color:#66d9ef>DEFAULT</span> now(),
+                                     updated_at <span style=color:#66d9ef>timestamp</span> <span style=color:#66d9ef>without</span> time <span style=color:#66d9ef>zone</span> <span style=color:#66d9ef>DEFAULT</span> now()
+);
+
+
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_site <span style=color:#66d9ef>OWNER</span> <span style=color:#66d9ef>TO</span> Carson;
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_permissions_myid_seq; Type: SEQUENCE; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>CREATE</span> SEQUENCE <span style=color:#66d9ef>public</span>.goadmin_permissions_myid_seq
+    <span style=color:#66d9ef>START</span> <span style=color:#66d9ef>WITH</span> <span style=color:#ae81ff>1</span>
+    <span style=color:#66d9ef>INCREMENT</span> <span style=color:#66d9ef>BY</span> <span style=color:#ae81ff>1</span>
+    <span style=color:#66d9ef>NO</span> <span style=color:#66d9ef>MINVALUE</span>
+    <span style=color:#66d9ef>MAXVALUE</span> <span style=color:#ae81ff>99999999</span>
+    <span style=color:#66d9ef>CACHE</span> <span style=color:#ae81ff>1</span>;
+
+
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_permissions_myid_seq <span style=color:#66d9ef>OWNER</span> <span style=color:#66d9ef>TO</span> Carson;
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_permissions; Type: TABLE; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>CREATE</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_permissions (
+                                            id integer <span style=color:#66d9ef>DEFAULT</span> nextval(<span style=color:#e6db74>&#39;public.goadmin_permissions_myid_seq&#39;</span>::regclass) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+                                            name character varying(<span style=color:#ae81ff>50</span>) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+                                            slug character varying(<span style=color:#ae81ff>50</span>) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+                                            http_method character varying(<span style=color:#ae81ff>255</span>),
+                                            http_path text <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+                                            created_at <span style=color:#66d9ef>timestamp</span> <span style=color:#66d9ef>without</span> time <span style=color:#66d9ef>zone</span> <span style=color:#66d9ef>DEFAULT</span> now(),
+                                            updated_at <span style=color:#66d9ef>timestamp</span> <span style=color:#66d9ef>without</span> time <span style=color:#66d9ef>zone</span> <span style=color:#66d9ef>DEFAULT</span> now()
+);
+
+
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_permissions <span style=color:#66d9ef>OWNER</span> <span style=color:#66d9ef>TO</span> Carson;
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_role_menu; Type: TABLE; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>CREATE</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_role_menu (
+                                          role_id integer <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+                                          menu_id integer <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+                                          created_at <span style=color:#66d9ef>timestamp</span> <span style=color:#66d9ef>without</span> time <span style=color:#66d9ef>zone</span> <span style=color:#66d9ef>DEFAULT</span> now(),
+                                          updated_at <span style=color:#66d9ef>timestamp</span> <span style=color:#66d9ef>without</span> time <span style=color:#66d9ef>zone</span> <span style=color:#66d9ef>DEFAULT</span> now()
+);
+
+
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_role_menu <span style=color:#66d9ef>OWNER</span> <span style=color:#66d9ef>TO</span> Carson;
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_role_permissions; Type: TABLE; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>CREATE</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_role_permissions (
+                                                 role_id integer <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+                                                 permission_id integer <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+                                                 created_at <span style=color:#66d9ef>timestamp</span> <span style=color:#66d9ef>without</span> time <span style=color:#66d9ef>zone</span> <span style=color:#66d9ef>DEFAULT</span> now(),
+                                                 updated_at <span style=color:#66d9ef>timestamp</span> <span style=color:#66d9ef>without</span> time <span style=color:#66d9ef>zone</span> <span style=color:#66d9ef>DEFAULT</span> now()
+);
+
+
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_role_permissions <span style=color:#66d9ef>OWNER</span> <span style=color:#66d9ef>TO</span> Carson;
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_role_users; Type: TABLE; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>CREATE</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_role_users (
+                                           role_id integer <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+                                           user_id integer <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+                                           created_at <span style=color:#66d9ef>timestamp</span> <span style=color:#66d9ef>without</span> time <span style=color:#66d9ef>zone</span> <span style=color:#66d9ef>DEFAULT</span> now(),
+                                           updated_at <span style=color:#66d9ef>timestamp</span> <span style=color:#66d9ef>without</span> time <span style=color:#66d9ef>zone</span> <span style=color:#66d9ef>DEFAULT</span> now()
+);
+
+
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_role_users <span style=color:#66d9ef>OWNER</span> <span style=color:#66d9ef>TO</span> Carson;
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_roles_myid_seq; Type: SEQUENCE; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>CREATE</span> SEQUENCE <span style=color:#66d9ef>public</span>.goadmin_roles_myid_seq
+    <span style=color:#66d9ef>START</span> <span style=color:#66d9ef>WITH</span> <span style=color:#ae81ff>1</span>
+    <span style=color:#66d9ef>INCREMENT</span> <span style=color:#66d9ef>BY</span> <span style=color:#ae81ff>1</span>
+    <span style=color:#66d9ef>NO</span> <span style=color:#66d9ef>MINVALUE</span>
+    <span style=color:#66d9ef>MAXVALUE</span> <span style=color:#ae81ff>99999999</span>
+    <span style=color:#66d9ef>CACHE</span> <span style=color:#ae81ff>1</span>;
+
+
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_roles_myid_seq <span style=color:#66d9ef>OWNER</span> <span style=color:#66d9ef>TO</span> Carson;
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_roles; Type: TABLE; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>CREATE</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_roles (
+                                      id integer <span style=color:#66d9ef>DEFAULT</span> nextval(<span style=color:#e6db74>&#39;public.goadmin_roles_myid_seq&#39;</span>::regclass) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+                                      name character varying <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+                                      slug character varying <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+                                      created_at <span style=color:#66d9ef>timestamp</span> <span style=color:#66d9ef>without</span> time <span style=color:#66d9ef>zone</span> <span style=color:#66d9ef>DEFAULT</span> now(),
+                                      updated_at <span style=color:#66d9ef>timestamp</span> <span style=color:#66d9ef>without</span> time <span style=color:#66d9ef>zone</span> <span style=color:#66d9ef>DEFAULT</span> now()
+);
+
+
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_roles <span style=color:#66d9ef>OWNER</span> <span style=color:#66d9ef>TO</span> Carson;
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_session_myid_seq; Type: SEQUENCE; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>CREATE</span> SEQUENCE <span style=color:#66d9ef>public</span>.goadmin_session_myid_seq
+    <span style=color:#66d9ef>START</span> <span style=color:#66d9ef>WITH</span> <span style=color:#ae81ff>1</span>
+    <span style=color:#66d9ef>INCREMENT</span> <span style=color:#66d9ef>BY</span> <span style=color:#ae81ff>1</span>
+    <span style=color:#66d9ef>NO</span> <span style=color:#66d9ef>MINVALUE</span>
+    <span style=color:#66d9ef>MAXVALUE</span> <span style=color:#ae81ff>99999999</span>
+    <span style=color:#66d9ef>CACHE</span> <span style=color:#ae81ff>1</span>;
+
+
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_session_myid_seq <span style=color:#66d9ef>OWNER</span> <span style=color:#66d9ef>TO</span> Carson;
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_session; Type: TABLE; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>CREATE</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_session (
+                                        id integer <span style=color:#66d9ef>DEFAULT</span> nextval(<span style=color:#e6db74>&#39;public.goadmin_session_myid_seq&#39;</span>::regclass) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+                                        sid character varying(<span style=color:#ae81ff>50</span>) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+                                        <span style=color:#e6db74>&#34;values&#34;</span> character varying(<span style=color:#ae81ff>3000</span>) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+                                        created_at <span style=color:#66d9ef>timestamp</span> <span style=color:#66d9ef>without</span> time <span style=color:#66d9ef>zone</span> <span style=color:#66d9ef>DEFAULT</span> now(),
+                                        updated_at <span style=color:#66d9ef>timestamp</span> <span style=color:#66d9ef>without</span> time <span style=color:#66d9ef>zone</span> <span style=color:#66d9ef>DEFAULT</span> now()
+);
+
+
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_session <span style=color:#66d9ef>OWNER</span> <span style=color:#66d9ef>TO</span> Carson;
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_user_permissions; Type: TABLE; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>CREATE</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_user_permissions (
+                                                 user_id integer <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+                                                 permission_id integer <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+                                                 created_at <span style=color:#66d9ef>timestamp</span> <span style=color:#66d9ef>without</span> time <span style=color:#66d9ef>zone</span> <span style=color:#66d9ef>DEFAULT</span> now(),
+                                                 updated_at <span style=color:#66d9ef>timestamp</span> <span style=color:#66d9ef>without</span> time <span style=color:#66d9ef>zone</span> <span style=color:#66d9ef>DEFAULT</span> now()
+);
+
+
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_user_permissions <span style=color:#66d9ef>OWNER</span> <span style=color:#66d9ef>TO</span> Carson;
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_users_myid_seq; Type: SEQUENCE; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>CREATE</span> SEQUENCE <span style=color:#66d9ef>public</span>.goadmin_users_myid_seq
+    <span style=color:#66d9ef>START</span> <span style=color:#66d9ef>WITH</span> <span style=color:#ae81ff>1</span>
+    <span style=color:#66d9ef>INCREMENT</span> <span style=color:#66d9ef>BY</span> <span style=color:#ae81ff>1</span>
+    <span style=color:#66d9ef>NO</span> <span style=color:#66d9ef>MINVALUE</span>
+    <span style=color:#66d9ef>MAXVALUE</span> <span style=color:#ae81ff>99999999</span>
+    <span style=color:#66d9ef>CACHE</span> <span style=color:#ae81ff>1</span>;
+
+
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_users_myid_seq <span style=color:#66d9ef>OWNER</span> <span style=color:#66d9ef>TO</span> Carson;
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_users; Type: TABLE; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>CREATE</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_users (
+                                      id integer <span style=color:#66d9ef>DEFAULT</span> nextval(<span style=color:#e6db74>&#39;public.goadmin_users_myid_seq&#39;</span>::regclass) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+                                      username character varying(<span style=color:#ae81ff>100</span>) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+                                      password character varying(<span style=color:#ae81ff>100</span>) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+                                      name character varying(<span style=color:#ae81ff>100</span>) <span style=color:#66d9ef>NOT</span> <span style=color:#66d9ef>NULL</span>,
+                                      avatar character varying(<span style=color:#ae81ff>255</span>),
+                                      remember_token character varying(<span style=color:#ae81ff>100</span>),
+                                      created_at <span style=color:#66d9ef>timestamp</span> <span style=color:#66d9ef>without</span> time <span style=color:#66d9ef>zone</span> <span style=color:#66d9ef>DEFAULT</span> now(),
+                                      updated_at <span style=color:#66d9ef>timestamp</span> <span style=color:#66d9ef>without</span> time <span style=color:#66d9ef>zone</span> <span style=color:#66d9ef>DEFAULT</span> now()
+);
+
+
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>public</span>.goadmin_users <span style=color:#66d9ef>OWNER</span> <span style=color:#66d9ef>TO</span> Carson;
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Data for Name: goadmin_menu; Type: TABLE DATA; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>COPY</span> <span style=color:#66d9ef>public</span>.goadmin_menu (id, parent_id, <span style=color:#66d9ef>type</span>, <span style=color:#e6db74>&#34;order&#34;</span>, title, plugin_name, header, icon, uri, created_at, updated_at) <span style=color:#66d9ef>FROM</span> <span style=color:#66d9ef>stdin</span>;
+<span style=color:#ae81ff>1</span>	<span style=color:#ae81ff>0</span>	<span style=color:#ae81ff>1</span>	<span style=color:#ae81ff>2</span>	<span style=color:#66d9ef>Admin</span>		<span style=color:#960050;background-color:#1e0010>\</span>N	fa<span style=color:#f92672>-</span>tasks		<span style=color:#ae81ff>2019</span><span style=color:#f92672>-</span><span style=color:#ae81ff>09</span><span style=color:#f92672>-</span><span style=color:#ae81ff>10</span> <span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>	<span style=color:#ae81ff>2019</span><span style=color:#f92672>-</span><span style=color:#ae81ff>09</span><span style=color:#f92672>-</span><span style=color:#ae81ff>10</span> <span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>
+<span style=color:#ae81ff>2</span>	<span style=color:#ae81ff>1</span>	<span style=color:#ae81ff>1</span>	<span style=color:#ae81ff>2</span>	Users		<span style=color:#960050;background-color:#1e0010>\</span>N	fa<span style=color:#f92672>-</span>users	<span style=color:#f92672>/</span>info<span style=color:#f92672>/</span>manager	<span style=color:#ae81ff>2019</span><span style=color:#f92672>-</span><span style=color:#ae81ff>09</span><span style=color:#f92672>-</span><span style=color:#ae81ff>10</span> <span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>	<span style=color:#ae81ff>2019</span><span style=color:#f92672>-</span><span style=color:#ae81ff>09</span><span style=color:#f92672>-</span><span style=color:#ae81ff>10</span> <span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>
+<span style=color:#ae81ff>3</span>	<span style=color:#ae81ff>1</span>	<span style=color:#ae81ff>1</span>	<span style=color:#ae81ff>3</span>	Roles		<span style=color:#960050;background-color:#1e0010>\</span>N	fa<span style=color:#f92672>-</span><span style=color:#66d9ef>user</span>	<span style=color:#f92672>/</span>info<span style=color:#f92672>/</span>roles	<span style=color:#ae81ff>2019</span><span style=color:#f92672>-</span><span style=color:#ae81ff>09</span><span style=color:#f92672>-</span><span style=color:#ae81ff>10</span> <span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>	<span style=color:#ae81ff>2019</span><span style=color:#f92672>-</span><span style=color:#ae81ff>09</span><span style=color:#f92672>-</span><span style=color:#ae81ff>10</span> <span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>
+<span style=color:#ae81ff>4</span>	<span style=color:#ae81ff>1</span>	<span style=color:#ae81ff>1</span>	<span style=color:#ae81ff>4</span>	Permission		<span style=color:#960050;background-color:#1e0010>\</span>N	fa<span style=color:#f92672>-</span>ban	<span style=color:#f92672>/</span>info<span style=color:#f92672>/</span>permission	<span style=color:#ae81ff>2019</span><span style=color:#f92672>-</span><span style=color:#ae81ff>09</span><span style=color:#f92672>-</span><span style=color:#ae81ff>10</span> <span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>	<span style=color:#ae81ff>2019</span><span style=color:#f92672>-</span><span style=color:#ae81ff>09</span><span style=color:#f92672>-</span><span style=color:#ae81ff>10</span> <span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>
+<span style=color:#ae81ff>5</span>	<span style=color:#ae81ff>1</span>	<span style=color:#ae81ff>1</span>	<span style=color:#ae81ff>5</span>	Menu		<span style=color:#960050;background-color:#1e0010>\</span>N	fa<span style=color:#f92672>-</span>bars	<span style=color:#f92672>/</span>menu	<span style=color:#ae81ff>2019</span><span style=color:#f92672>-</span><span style=color:#ae81ff>09</span><span style=color:#f92672>-</span><span style=color:#ae81ff>10</span> <span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>	<span style=color:#ae81ff>2019</span><span style=color:#f92672>-</span><span style=color:#ae81ff>09</span><span style=color:#f92672>-</span><span style=color:#ae81ff>10</span> <span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>
+<span style=color:#ae81ff>6</span>	<span style=color:#ae81ff>1</span>	<span style=color:#ae81ff>1</span>	<span style=color:#ae81ff>6</span>	<span style=color:#66d9ef>Operation</span> log		<span style=color:#960050;background-color:#1e0010>\</span>N	fa<span style=color:#f92672>-</span>history	<span style=color:#f92672>/</span>info<span style=color:#f92672>/</span>op	<span style=color:#ae81ff>2019</span><span style=color:#f92672>-</span><span style=color:#ae81ff>09</span><span style=color:#f92672>-</span><span style=color:#ae81ff>10</span> <span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>	<span style=color:#ae81ff>2019</span><span style=color:#f92672>-</span><span style=color:#ae81ff>09</span><span style=color:#f92672>-</span><span style=color:#ae81ff>10</span> <span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>
+<span style=color:#ae81ff>7</span>	<span style=color:#ae81ff>0</span>	<span style=color:#ae81ff>1</span>	<span style=color:#ae81ff>1</span>	Dashboard		<span style=color:#960050;background-color:#1e0010>\</span>N	fa<span style=color:#f92672>-</span>bar<span style=color:#f92672>-</span>chart	<span style=color:#f92672>/</span>	<span style=color:#ae81ff>2019</span><span style=color:#f92672>-</span><span style=color:#ae81ff>09</span><span style=color:#f92672>-</span><span style=color:#ae81ff>10</span> <span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>	<span style=color:#ae81ff>2019</span><span style=color:#f92672>-</span><span style=color:#ae81ff>09</span><span style=color:#f92672>-</span><span style=color:#ae81ff>10</span> <span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>
+<span style=color:#960050;background-color:#1e0010>\</span>.
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Data for Name: goadmin_operation_log; Type: TABLE DATA; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>COPY</span> <span style=color:#66d9ef>public</span>.goadmin_operation_log (id, user_id, path, <span style=color:#66d9ef>method</span>, ip, <span style=color:#66d9ef>input</span>, created_at, updated_at) <span style=color:#66d9ef>FROM</span> <span style=color:#66d9ef>stdin</span>;
+<span style=color:#960050;background-color:#1e0010>\</span>.
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Data for Name: goadmin_site; Type: TABLE DATA; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>COPY</span> <span style=color:#66d9ef>public</span>.goadmin_site (id, <span style=color:#66d9ef>key</span>, value, description, <span style=color:#66d9ef>state</span>, created_at, updated_at) <span style=color:#66d9ef>FROM</span> <span style=color:#66d9ef>stdin</span>;
+<span style=color:#960050;background-color:#1e0010>\</span>.
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Data for Name: goadmin_permissions; Type: TABLE DATA; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>COPY</span> <span style=color:#66d9ef>public</span>.goadmin_permissions (id, name, slug, http_method, http_path, created_at, updated_at) <span style=color:#66d9ef>FROM</span> <span style=color:#66d9ef>stdin</span>;
+<span style=color:#ae81ff>1</span>	<span style=color:#66d9ef>All</span> permission	<span style=color:#f92672>*</span>		<span style=color:#f92672>*</span>	<span style=color:#ae81ff>2019</span><span style=color:#f92672>-</span><span style=color:#ae81ff>09</span><span style=color:#f92672>-</span><span style=color:#ae81ff>10</span> <span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>	<span style=color:#ae81ff>2019</span><span style=color:#f92672>-</span><span style=color:#ae81ff>09</span><span style=color:#f92672>-</span><span style=color:#ae81ff>10</span> <span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>
+<span style=color:#ae81ff>2</span>	Dashboard	dashboard	<span style=color:#66d9ef>GET</span>,PUT,POST,<span style=color:#66d9ef>DELETE</span>	<span style=color:#f92672>/</span>	<span style=color:#ae81ff>2019</span><span style=color:#f92672>-</span><span style=color:#ae81ff>09</span><span style=color:#f92672>-</span><span style=color:#ae81ff>10</span> <span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>	<span style=color:#ae81ff>2019</span><span style=color:#f92672>-</span><span style=color:#ae81ff>09</span><span style=color:#f92672>-</span><span style=color:#ae81ff>10</span> <span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>
+<span style=color:#960050;background-color:#1e0010>\</span>.
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Data for Name: goadmin_role_menu; Type: TABLE DATA; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>COPY</span> <span style=color:#66d9ef>public</span>.goadmin_role_menu (role_id, menu_id, created_at, updated_at) <span style=color:#66d9ef>FROM</span> <span style=color:#66d9ef>stdin</span>;
+<span style=color:#ae81ff>1</span>	<span style=color:#ae81ff>1</span>	<span style=color:#ae81ff>2019</span><span style=color:#f92672>-</span><span style=color:#ae81ff>09</span><span style=color:#f92672>-</span><span style=color:#ae81ff>10</span> <span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>	<span style=color:#ae81ff>2019</span><span style=color:#f92672>-</span><span style=color:#ae81ff>09</span><span style=color:#f92672>-</span><span style=color:#ae81ff>10</span> <span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>
+<span style=color:#ae81ff>1</span>	<span style=color:#ae81ff>7</span>	<span style=color:#ae81ff>2019</span><span style=color:#f92672>-</span><span style=color:#ae81ff>09</span><span style=color:#f92672>-</span><span style=color:#ae81ff>10</span> <span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>	<span style=color:#ae81ff>2019</span><span style=color:#f92672>-</span><span style=color:#ae81ff>09</span><span style=color:#f92672>-</span><span style=color:#ae81ff>10</span> <span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>
+<span style=color:#ae81ff>2</span>	<span style=color:#ae81ff>7</span>	<span style=color:#ae81ff>2019</span><span style=color:#f92672>-</span><span style=color:#ae81ff>09</span><span style=color:#f92672>-</span><span style=color:#ae81ff>10</span> <span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>	<span style=color:#ae81ff>2019</span><span style=color:#f92672>-</span><span style=color:#ae81ff>09</span><span style=color:#f92672>-</span><span style=color:#ae81ff>10</span> <span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>
+<span style=color:#960050;background-color:#1e0010>\</span>.
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Data for Name: goadmin_role_permissions; Type: TABLE DATA; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>COPY</span> <span style=color:#66d9ef>public</span>.goadmin_role_permissions (role_id, permission_id, created_at, updated_at) <span style=color:#66d9ef>FROM</span> <span style=color:#66d9ef>stdin</span>;
+<span style=color:#ae81ff>1</span>	<span style=color:#ae81ff>1</span>	<span style=color:#ae81ff>2019</span><span style=color:#f92672>-</span><span style=color:#ae81ff>09</span><span style=color:#f92672>-</span><span style=color:#ae81ff>10</span> <span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>	<span style=color:#ae81ff>2019</span><span style=color:#f92672>-</span><span style=color:#ae81ff>09</span><span style=color:#f92672>-</span><span style=color:#ae81ff>10</span> <span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>
+<span style=color:#ae81ff>1</span>	<span style=color:#ae81ff>2</span>	<span style=color:#ae81ff>2019</span><span style=color:#f92672>-</span><span style=color:#ae81ff>09</span><span style=color:#f92672>-</span><span style=color:#ae81ff>10</span> <span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>	<span style=color:#ae81ff>2019</span><span style=color:#f92672>-</span><span style=color:#ae81ff>09</span><span style=color:#f92672>-</span><span style=color:#ae81ff>10</span> <span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>
+<span style=color:#ae81ff>2</span>	<span style=color:#ae81ff>2</span>	<span style=color:#ae81ff>2019</span><span style=color:#f92672>-</span><span style=color:#ae81ff>09</span><span style=color:#f92672>-</span><span style=color:#ae81ff>10</span> <span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>	<span style=color:#ae81ff>2019</span><span style=color:#f92672>-</span><span style=color:#ae81ff>09</span><span style=color:#f92672>-</span><span style=color:#ae81ff>10</span> <span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>
+<span style=color:#ae81ff>0</span>	<span style=color:#ae81ff>3</span>	<span style=color:#960050;background-color:#1e0010>\</span>N	<span style=color:#960050;background-color:#1e0010>\</span>N
+<span style=color:#ae81ff>0</span>	<span style=color:#ae81ff>3</span>	<span style=color:#960050;background-color:#1e0010>\</span>N	<span style=color:#960050;background-color:#1e0010>\</span>N
+<span style=color:#ae81ff>0</span>	<span style=color:#ae81ff>3</span>	<span style=color:#960050;background-color:#1e0010>\</span>N	<span style=color:#960050;background-color:#1e0010>\</span>N
+<span style=color:#ae81ff>0</span>	<span style=color:#ae81ff>3</span>	<span style=color:#960050;background-color:#1e0010>\</span>N	<span style=color:#960050;background-color:#1e0010>\</span>N
+<span style=color:#ae81ff>0</span>	<span style=color:#ae81ff>3</span>	<span style=color:#960050;background-color:#1e0010>\</span>N	<span style=color:#960050;background-color:#1e0010>\</span>N
+<span style=color:#ae81ff>0</span>	<span style=color:#ae81ff>3</span>	<span style=color:#960050;background-color:#1e0010>\</span>N	<span style=color:#960050;background-color:#1e0010>\</span>N
+<span style=color:#ae81ff>0</span>	<span style=color:#ae81ff>3</span>	<span style=color:#960050;background-color:#1e0010>\</span>N	<span style=color:#960050;background-color:#1e0010>\</span>N
+<span style=color:#ae81ff>0</span>	<span style=color:#ae81ff>3</span>	<span style=color:#960050;background-color:#1e0010>\</span>N	<span style=color:#960050;background-color:#1e0010>\</span>N
+<span style=color:#ae81ff>0</span>	<span style=color:#ae81ff>3</span>	<span style=color:#960050;background-color:#1e0010>\</span>N	<span style=color:#960050;background-color:#1e0010>\</span>N
+<span style=color:#ae81ff>0</span>	<span style=color:#ae81ff>3</span>	<span style=color:#960050;background-color:#1e0010>\</span>N	<span style=color:#960050;background-color:#1e0010>\</span>N
+<span style=color:#ae81ff>0</span>	<span style=color:#ae81ff>3</span>	<span style=color:#960050;background-color:#1e0010>\</span>N	<span style=color:#960050;background-color:#1e0010>\</span>N
+<span style=color:#ae81ff>0</span>	<span style=color:#ae81ff>3</span>	<span style=color:#960050;background-color:#1e0010>\</span>N	<span style=color:#960050;background-color:#1e0010>\</span>N
+<span style=color:#ae81ff>0</span>	<span style=color:#ae81ff>3</span>	<span style=color:#960050;background-color:#1e0010>\</span>N	<span style=color:#960050;background-color:#1e0010>\</span>N
+<span style=color:#ae81ff>0</span>	<span style=color:#ae81ff>3</span>	<span style=color:#960050;background-color:#1e0010>\</span>N	<span style=color:#960050;background-color:#1e0010>\</span>N
+<span style=color:#ae81ff>0</span>	<span style=color:#ae81ff>3</span>	<span style=color:#960050;background-color:#1e0010>\</span>N	<span style=color:#960050;background-color:#1e0010>\</span>N
+<span style=color:#ae81ff>0</span>	<span style=color:#ae81ff>3</span>	<span style=color:#960050;background-color:#1e0010>\</span>N	<span style=color:#960050;background-color:#1e0010>\</span>N
+<span style=color:#960050;background-color:#1e0010>\</span>.
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Data for Name: goadmin_role_users; Type: TABLE DATA; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>COPY</span> <span style=color:#66d9ef>public</span>.goadmin_role_users (role_id, user_id, created_at, updated_at) <span style=color:#66d9ef>FROM</span> <span style=color:#66d9ef>stdin</span>;
+<span style=color:#ae81ff>1</span>	<span style=color:#ae81ff>1</span>	<span style=color:#ae81ff>2019</span><span style=color:#f92672>-</span><span style=color:#ae81ff>09</span><span style=color:#f92672>-</span><span style=color:#ae81ff>10</span> <span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>	<span style=color:#ae81ff>2019</span><span style=color:#f92672>-</span><span style=color:#ae81ff>09</span><span style=color:#f92672>-</span><span style=color:#ae81ff>10</span> <span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>
+<span style=color:#ae81ff>2</span>	<span style=color:#ae81ff>2</span>	<span style=color:#ae81ff>2019</span><span style=color:#f92672>-</span><span style=color:#ae81ff>09</span><span style=color:#f92672>-</span><span style=color:#ae81ff>10</span> <span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>	<span style=color:#ae81ff>2019</span><span style=color:#f92672>-</span><span style=color:#ae81ff>09</span><span style=color:#f92672>-</span><span style=color:#ae81ff>10</span> <span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>
+<span style=color:#960050;background-color:#1e0010>\</span>.
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Data for Name: goadmin_roles; Type: TABLE DATA; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>COPY</span> <span style=color:#66d9ef>public</span>.goadmin_roles (id, name, slug, created_at, updated_at) <span style=color:#66d9ef>FROM</span> <span style=color:#66d9ef>stdin</span>;
+<span style=color:#ae81ff>1</span>	Administrator	administrator	<span style=color:#ae81ff>2019</span><span style=color:#f92672>-</span><span style=color:#ae81ff>09</span><span style=color:#f92672>-</span><span style=color:#ae81ff>10</span> <span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>	<span style=color:#ae81ff>2019</span><span style=color:#f92672>-</span><span style=color:#ae81ff>09</span><span style=color:#f92672>-</span><span style=color:#ae81ff>10</span> <span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>
+<span style=color:#ae81ff>2</span>	<span style=color:#66d9ef>Operator</span>	<span style=color:#66d9ef>operator</span>	<span style=color:#ae81ff>2019</span><span style=color:#f92672>-</span><span style=color:#ae81ff>09</span><span style=color:#f92672>-</span><span style=color:#ae81ff>10</span> <span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>	<span style=color:#ae81ff>2019</span><span style=color:#f92672>-</span><span style=color:#ae81ff>09</span><span style=color:#f92672>-</span><span style=color:#ae81ff>10</span> <span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>
+<span style=color:#960050;background-color:#1e0010>\</span>.
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Data for Name: goadmin_session; Type: TABLE DATA; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>COPY</span> <span style=color:#66d9ef>public</span>.goadmin_session (id, sid, <span style=color:#e6db74>&#34;values&#34;</span>, created_at, updated_at) <span style=color:#66d9ef>FROM</span> <span style=color:#66d9ef>stdin</span>;
+<span style=color:#960050;background-color:#1e0010>\</span>.
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Data for Name: goadmin_user_permissions; Type: TABLE DATA; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>COPY</span> <span style=color:#66d9ef>public</span>.goadmin_user_permissions (user_id, permission_id, created_at, updated_at) <span style=color:#66d9ef>FROM</span> <span style=color:#66d9ef>stdin</span>;
+<span style=color:#ae81ff>1</span>	<span style=color:#ae81ff>1</span>	<span style=color:#ae81ff>2019</span><span style=color:#f92672>-</span><span style=color:#ae81ff>09</span><span style=color:#f92672>-</span><span style=color:#ae81ff>10</span> <span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>	<span style=color:#ae81ff>2019</span><span style=color:#f92672>-</span><span style=color:#ae81ff>09</span><span style=color:#f92672>-</span><span style=color:#ae81ff>10</span> <span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>
+<span style=color:#ae81ff>2</span>	<span style=color:#ae81ff>2</span>	<span style=color:#ae81ff>2019</span><span style=color:#f92672>-</span><span style=color:#ae81ff>09</span><span style=color:#f92672>-</span><span style=color:#ae81ff>10</span> <span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>	<span style=color:#ae81ff>2019</span><span style=color:#f92672>-</span><span style=color:#ae81ff>09</span><span style=color:#f92672>-</span><span style=color:#ae81ff>10</span> <span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>
+<span style=color:#ae81ff>0</span>	<span style=color:#ae81ff>1</span>	<span style=color:#960050;background-color:#1e0010>\</span>N	<span style=color:#960050;background-color:#1e0010>\</span>N
+<span style=color:#ae81ff>0</span>	<span style=color:#ae81ff>1</span>	<span style=color:#960050;background-color:#1e0010>\</span>N	<span style=color:#960050;background-color:#1e0010>\</span>N
+<span style=color:#ae81ff>0</span>	<span style=color:#ae81ff>1</span>	<span style=color:#960050;background-color:#1e0010>\</span>N	<span style=color:#960050;background-color:#1e0010>\</span>N
+<span style=color:#ae81ff>0</span>	<span style=color:#ae81ff>1</span>	<span style=color:#960050;background-color:#1e0010>\</span>N	<span style=color:#960050;background-color:#1e0010>\</span>N
+<span style=color:#ae81ff>0</span>	<span style=color:#ae81ff>1</span>	<span style=color:#960050;background-color:#1e0010>\</span>N	<span style=color:#960050;background-color:#1e0010>\</span>N
+<span style=color:#ae81ff>0</span>	<span style=color:#ae81ff>1</span>	<span style=color:#960050;background-color:#1e0010>\</span>N	<span style=color:#960050;background-color:#1e0010>\</span>N
+<span style=color:#ae81ff>0</span>	<span style=color:#ae81ff>1</span>	<span style=color:#960050;background-color:#1e0010>\</span>N	<span style=color:#960050;background-color:#1e0010>\</span>N
+<span style=color:#ae81ff>0</span>	<span style=color:#ae81ff>1</span>	<span style=color:#960050;background-color:#1e0010>\</span>N	<span style=color:#960050;background-color:#1e0010>\</span>N
+<span style=color:#ae81ff>0</span>	<span style=color:#ae81ff>1</span>	<span style=color:#960050;background-color:#1e0010>\</span>N	<span style=color:#960050;background-color:#1e0010>\</span>N
+<span style=color:#ae81ff>0</span>	<span style=color:#ae81ff>1</span>	<span style=color:#960050;background-color:#1e0010>\</span>N	<span style=color:#960050;background-color:#1e0010>\</span>N
+<span style=color:#ae81ff>0</span>	<span style=color:#ae81ff>1</span>	<span style=color:#960050;background-color:#1e0010>\</span>N	<span style=color:#960050;background-color:#1e0010>\</span>N
+<span style=color:#ae81ff>0</span>	<span style=color:#ae81ff>1</span>	<span style=color:#960050;background-color:#1e0010>\</span>N	<span style=color:#960050;background-color:#1e0010>\</span>N
+<span style=color:#ae81ff>0</span>	<span style=color:#ae81ff>1</span>	<span style=color:#960050;background-color:#1e0010>\</span>N	<span style=color:#960050;background-color:#1e0010>\</span>N
+<span style=color:#ae81ff>0</span>	<span style=color:#ae81ff>1</span>	<span style=color:#960050;background-color:#1e0010>\</span>N	<span style=color:#960050;background-color:#1e0010>\</span>N
+<span style=color:#ae81ff>0</span>	<span style=color:#ae81ff>1</span>	<span style=color:#960050;background-color:#1e0010>\</span>N	<span style=color:#960050;background-color:#1e0010>\</span>N
+<span style=color:#ae81ff>0</span>	<span style=color:#ae81ff>1</span>	<span style=color:#960050;background-color:#1e0010>\</span>N	<span style=color:#960050;background-color:#1e0010>\</span>N
+<span style=color:#960050;background-color:#1e0010>\</span>.
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Data for Name: goadmin_users; Type: TABLE DATA; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>COPY</span> <span style=color:#66d9ef>public</span>.goadmin_users (id, username, password, name, avatar, remember_token, created_at, updated_at) <span style=color:#66d9ef>FROM</span> <span style=color:#66d9ef>stdin</span>;
+<span style=color:#ae81ff>1</span>	<span style=color:#66d9ef>admin</span>	<span style=color:#960050;background-color:#1e0010>$</span><span style=color:#ae81ff>2</span>a$10$OxWYJJGTP2gi00l2x06QuOWqw5VR47MQCJ0vNKnbMYfrutij10Hwe	<span style=color:#66d9ef>admin</span>		tlNcBVK9AvfYH7WEnwB1RKvocJu8FfRy4um3DJtwdHuJy0dwFsLOgAc0xUfh	<span style=color:#ae81ff>2019</span><span style=color:#f92672>-</span><span style=color:#ae81ff>09</span><span style=color:#f92672>-</span><span style=color:#ae81ff>10</span> <span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>	<span style=color:#ae81ff>2019</span><span style=color:#f92672>-</span><span style=color:#ae81ff>09</span><span style=color:#f92672>-</span><span style=color:#ae81ff>10</span> <span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>
+<span style=color:#ae81ff>2</span>	<span style=color:#66d9ef>operator</span>	<span style=color:#960050;background-color:#1e0010>$</span><span style=color:#ae81ff>2</span>a$10$rVqkOzHjN2MdlEprRflb1eGP0oZXuSrbJLOmJagFsCd81YZm0bsh.	<span style=color:#66d9ef>Operator</span>		<span style=color:#960050;background-color:#1e0010>\</span>N	<span style=color:#ae81ff>2019</span><span style=color:#f92672>-</span><span style=color:#ae81ff>09</span><span style=color:#f92672>-</span><span style=color:#ae81ff>10</span> <span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>	<span style=color:#ae81ff>2019</span><span style=color:#f92672>-</span><span style=color:#ae81ff>09</span><span style=color:#f92672>-</span><span style=color:#ae81ff>10</span> <span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>:<span style=color:#ae81ff>00</span>
+<span style=color:#960050;background-color:#1e0010>\</span>.
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_menu_myid_seq; Type: SEQUENCE SET; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>SELECT</span> pg_catalog.setval(<span style=color:#e6db74>&#39;public.goadmin_menu_myid_seq&#39;</span>, <span style=color:#ae81ff>7</span>, <span style=color:#66d9ef>true</span>);
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_operation_log_myid_seq; Type: SEQUENCE SET; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>SELECT</span> pg_catalog.setval(<span style=color:#e6db74>&#39;public.goadmin_operation_log_myid_seq&#39;</span>, <span style=color:#ae81ff>1</span>, <span style=color:#66d9ef>true</span>);
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_permissions_myid_seq; Type: SEQUENCE SET; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>SELECT</span> pg_catalog.setval(<span style=color:#e6db74>&#39;public.goadmin_permissions_myid_seq&#39;</span>, <span style=color:#ae81ff>2</span>, <span style=color:#66d9ef>true</span>);
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_roles_myid_seq; Type: SEQUENCE SET; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>SELECT</span> pg_catalog.setval(<span style=color:#e6db74>&#39;public.goadmin_roles_myid_seq&#39;</span>, <span style=color:#ae81ff>2</span>, <span style=color:#66d9ef>true</span>);
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_site_myid_seq; Type: SEQUENCE SET; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>SELECT</span> pg_catalog.setval(<span style=color:#e6db74>&#39;public.goadmin_site_myid_seq&#39;</span>, <span style=color:#ae81ff>1</span>, <span style=color:#66d9ef>true</span>);
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_session_myid_seq; Type: SEQUENCE SET; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>SELECT</span> pg_catalog.setval(<span style=color:#e6db74>&#39;public.goadmin_session_myid_seq&#39;</span>, <span style=color:#ae81ff>1</span>, <span style=color:#66d9ef>true</span>);
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_users_myid_seq; Type: SEQUENCE SET; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>SELECT</span> pg_catalog.setval(<span style=color:#e6db74>&#39;public.goadmin_users_myid_seq&#39;</span>, <span style=color:#ae81ff>2</span>, <span style=color:#66d9ef>true</span>);
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_menu goadmin_menu_pkey; Type: CONSTRAINT; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>ONLY</span> <span style=color:#66d9ef>public</span>.goadmin_menu
+    <span style=color:#66d9ef>ADD</span> <span style=color:#66d9ef>CONSTRAINT</span> goadmin_menu_pkey <span style=color:#66d9ef>PRIMARY</span> <span style=color:#66d9ef>KEY</span> (id);
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_operation_log goadmin_operation_log_pkey; Type: CONSTRAINT; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>ONLY</span> <span style=color:#66d9ef>public</span>.goadmin_operation_log
+    <span style=color:#66d9ef>ADD</span> <span style=color:#66d9ef>CONSTRAINT</span> goadmin_operation_log_pkey <span style=color:#66d9ef>PRIMARY</span> <span style=color:#66d9ef>KEY</span> (id);
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_permissions goadmin_permissions_pkey; Type: CONSTRAINT; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>ONLY</span> <span style=color:#66d9ef>public</span>.goadmin_permissions
+    <span style=color:#66d9ef>ADD</span> <span style=color:#66d9ef>CONSTRAINT</span> goadmin_permissions_pkey <span style=color:#66d9ef>PRIMARY</span> <span style=color:#66d9ef>KEY</span> (id);
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_roles goadmin_roles_pkey; Type: CONSTRAINT; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>ONLY</span> <span style=color:#66d9ef>public</span>.goadmin_roles
+    <span style=color:#66d9ef>ADD</span> <span style=color:#66d9ef>CONSTRAINT</span> goadmin_roles_pkey <span style=color:#66d9ef>PRIMARY</span> <span style=color:#66d9ef>KEY</span> (id);
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_site goadmin_site_pkey; Type: CONSTRAINT; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>ONLY</span> <span style=color:#66d9ef>public</span>.goadmin_site
+    <span style=color:#66d9ef>ADD</span> <span style=color:#66d9ef>CONSTRAINT</span> goadmin_site_pkey <span style=color:#66d9ef>PRIMARY</span> <span style=color:#66d9ef>KEY</span> (id);
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_session goadmin_session_pkey; Type: CONSTRAINT; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>ONLY</span> <span style=color:#66d9ef>public</span>.goadmin_session
+    <span style=color:#66d9ef>ADD</span> <span style=color:#66d9ef>CONSTRAINT</span> goadmin_session_pkey <span style=color:#66d9ef>PRIMARY</span> <span style=color:#66d9ef>KEY</span> (id);
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: goadmin_users goadmin_users_pkey; Type: CONSTRAINT; Schema: public; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>ALTER</span> <span style=color:#66d9ef>TABLE</span> <span style=color:#66d9ef>ONLY</span> <span style=color:#66d9ef>public</span>.goadmin_users
+    <span style=color:#66d9ef>ADD</span> <span style=color:#66d9ef>CONSTRAINT</span> goadmin_users_pkey <span style=color:#66d9ef>PRIMARY</span> <span style=color:#66d9ef>KEY</span> (id);
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- Name: SCHEMA public; Type: ACL; Schema: -; Owner: Carson
+</span><span style=color:#75715e>--
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>REVOKE</span> <span style=color:#66d9ef>ALL</span> <span style=color:#66d9ef>ON</span> <span style=color:#66d9ef>SCHEMA</span> <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>FROM</span> <span style=color:#66d9ef>PUBLIC</span>;
+<span style=color:#66d9ef>REVOKE</span> <span style=color:#66d9ef>ALL</span> <span style=color:#66d9ef>ON</span> <span style=color:#66d9ef>SCHEMA</span> <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>FROM</span> Carson;
+<span style=color:#66d9ef>GRANT</span> <span style=color:#66d9ef>ALL</span> <span style=color:#66d9ef>ON</span> <span style=color:#66d9ef>SCHEMA</span> <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>TO</span> Carson;
+<span style=color:#66d9ef>GRANT</span> <span style=color:#66d9ef>ALL</span> <span style=color:#66d9ef>ON</span> <span style=color:#66d9ef>SCHEMA</span> <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>TO</span> <span style=color:#66d9ef>PUBLIC</span>;
+
+
+<span style=color:#75715e>--
+</span><span style=color:#75715e>-- PostgreSQL database dump complete
+</span><span style=color:#75715e>--
+</span></code></pre></div></details></p><p>基本上和官方的<a href=https://raw.githubusercontent.com/GoAdminGroup/go-admin/master/data/admin.pgsql>postgresql</a> 一樣</p><p>差別只有:</p><blockquote><p>Owner TO: <del>postgres</del> -> Carson</p></blockquote><h4 id=小節>小節</h4><p>連同我們前面講的<a href=#三個資料表>三個blog資料表</a></p><pre><code>- blog_article
+- blog_auth
+- blog_tag
+- goadmin_menu
+- goadmin_operation_log
+- goadmin_permissions
+- goadmin_role_menu
+- goadmin_role_permissions
+- goadmin_role_users
+- goadmin_roles
+- goadmin_session
+- goadmin_user_permissions
+- goadmin_users
+</code></pre><p>至此，請確保您的資料庫有以上這些資料表</p><h3 id=生成數據模型代碼>生成數據模型代碼</h3><p>建立一個您想要的專案名稱，然後cd過去，接著</p><blockquote><p><code>adm generate</code></p></blockquote><p>他會問你要的資料庫是哪一個，選擇您要的就好了</p><pre><code>? choose a driver  [Use arrows to move, type to filter, enter to select]
+  mysql
+&gt; postgresql
+  sqlite
+  mssql
+</code></pre><p>問相關的設定</p><pre><code>? choose a driver mysql
+? sql address 127.0.0.1
+? sql port (5432)
+? sql username (postgres)
+? sql password ****
+? sql schema (public)
+? sql database name carsonsite
+</code></pre><p>可以管理那些資料表</p><pre><code>? choose table to generate  [Use arrows to move, space to select, type to filter]
+&gt; [x]  [select all]  (按下space可以選擇)
+  [ ]  blog_article
+  [ ]  blog_auth
+  [ ]  blog_tag
+</code></pre><p>接著還有一些相關的設定，我們都用預設的即可</p><pre><code>? set package name main
+? set connection name default
+? set file output path (./)
+? generate permission records for tables  [Use arrows to move, type to filter, enter to select]
+&gt; yes
+</code></pre><p>完成之後的訊息:</p><pre><code>✔ generating:
+
+ 100% |████████████████████████████████████████| [0s:0s]
+
+Generate data table models success~~��
+
+# 以下這些只是告訴您可以參考一些資料，以及訪問論壇而已
+see the docs: https://book.go-admin.com
+visit forum: http://discuss.go-admin.com
+</code></pre><p>最後您可以看到這些文件被生成:</p><pre><code>.
+├── tables.go
+├── blog_article.go
+├── blog_auth.go
+└── blog_tag.go
+</code></pre><h3 id=編寫maingo>編寫main.go</h3><div class="as_fixed_table-container set_highlight-pre_mh40"><div class=as_table-container-col style=width:20%><div class=block_scroll_h-40em><p>注意本篇代碼是使用gin-gonic他配go-adm，他也有其他的配法不一定要用gin-gonic。</p><p>第6列: 請選擇適合自己的資料庫</p><p>34-41要改成自己的設定</p></div></div><div class=as_table-container-col><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1</span><span style=color:#f92672>package</span> <span style=color:#a6e22e>main</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3</span><span style=color:#f92672>import</span> ( <span style=color:#75715e>// https://golang.org/pkg/
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4</span><span style=color:#75715e></span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5</span>    <span style=color:#a6e22e>_</span> <span style=color:#e6db74>&#34;github.com/GoAdminGroup/go-admin/adapter/gin&#34;</span>              <span style=color:#75715e>// 适配器
+</span><span style=display:block;width:100%;background-color:#3c3d38><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6</span><span style=color:#75715e></span>    <span style=color:#a6e22e>_</span> <span style=color:#e6db74>&#34;github.com/GoAdminGroup/go-admin/modules/db/drivers/postgres&#34;</span> <span style=color:#75715e>// postgres 驅動  // panic: sql: unknown driver &#34;postgres&#34; (forgotten import?)
+</span></span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7</span><span style=color:#75715e></span>    <span style=color:#a6e22e>_</span> <span style=color:#e6db74>&#34;github.com/GoAdminGroup/themes/adminlte&#34;</span>                   <span style=color:#75715e>// 引入ui主题，必须引入，不然报错
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8</span><span style=color:#75715e></span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">10</span>    <span style=color:#e6db74>&#34;github.com/GoAdminGroup/go-admin/engine&#34;</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">11</span>    <span style=color:#e6db74>&#34;github.com/GoAdminGroup/go-admin/examples/datamodel&#34;</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">12</span>    <span style=color:#e6db74>&#34;github.com/GoAdminGroup/go-admin/modules/config&#34;</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">13</span>    <span style=color:#e6db74>&#34;github.com/GoAdminGroup/go-admin/modules/db&#34;</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">14</span>    <span style=color:#e6db74>&#34;github.com/GoAdminGroup/go-admin/modules/language&#34;</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">15</span>    <span style=color:#e6db74>&#34;github.com/GoAdminGroup/go-admin/template&#34;</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">16</span>    <span style=color:#e6db74>&#34;github.com/GoAdminGroup/go-admin/template/chartjs&#34;</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">17</span>    <span style=color:#e6db74>&#34;github.com/gin-gonic/gin&#34;</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">18</span>    <span style=color:#e6db74>&#34;io/ioutil&#34;</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">19</span>)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">20</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">21</span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>main</span>() {
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">22</span>    <span style=color:#a6e22e>r</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>gin</span>.<span style=color:#a6e22e>Default</span>()
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">23</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">24</span>    <span style=color:#a6e22e>gin</span>.<span style=color:#a6e22e>SetMode</span>(<span style=color:#a6e22e>gin</span>.<span style=color:#a6e22e>ReleaseMode</span>)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">25</span>    <span style=color:#a6e22e>gin</span>.<span style=color:#a6e22e>DefaultWriter</span> = <span style=color:#a6e22e>ioutil</span>.<span style=color:#a6e22e>Discard</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">26</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">27</span>    <span style=color:#a6e22e>eng</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>engine</span>.<span style=color:#a6e22e>Default</span>()
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">28</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">29</span>    <span style=color:#a6e22e>template</span>.<span style=color:#a6e22e>AddComp</span>(<span style=color:#a6e22e>chartjs</span>.<span style=color:#a6e22e>NewChart</span>())
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">30</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">31</span>    <span style=color:#66d9ef>if</span> <span style=color:#a6e22e>err</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>eng</span>.<span style=color:#a6e22e>AddConfig</span>(<span style=color:#a6e22e>config</span>.<span style=color:#a6e22e>Config</span>{
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">32</span>        <span style=color:#a6e22e>Databases</span>: <span style=color:#a6e22e>config</span>.<span style=color:#a6e22e>DatabaseList</span>{
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">33</span>            <span style=color:#e6db74>&#34;default&#34;</span>: {
+<span style=display:block;width:100%;background-color:#3c3d38><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">34</span>                <span style=color:#a6e22e>Host</span>:       <span style=color:#e6db74>&#34;127.0.0.1&#34;</span>,
+</span><span style=display:block;width:100%;background-color:#3c3d38><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">35</span>                <span style=color:#a6e22e>Port</span>:       <span style=color:#e6db74>&#34;5432&#34;</span>,
+</span><span style=display:block;width:100%;background-color:#3c3d38><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">36</span>                <span style=color:#a6e22e>User</span>:       <span style=color:#e6db74>&#34;postgres&#34;</span>,
+</span><span style=display:block;width:100%;background-color:#3c3d38><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">37</span>                <span style=color:#a6e22e>Pwd</span>:        <span style=color:#e6db74>&#34;&#34;</span>,
+</span><span style=display:block;width:100%;background-color:#3c3d38><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">38</span>                <span style=color:#a6e22e>Name</span>:       <span style=color:#e6db74>&#34;&#34;</span>, <span style=color:#75715e>// database name
+</span></span><span style=display:block;width:100%;background-color:#3c3d38><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">39</span><span style=color:#75715e></span>                <span style=color:#a6e22e>MaxIdleCon</span>: <span style=color:#ae81ff>50</span>,
+</span><span style=display:block;width:100%;background-color:#3c3d38><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">40</span>                <span style=color:#a6e22e>MaxOpenCon</span>: <span style=color:#ae81ff>150</span>,
+</span><span style=display:block;width:100%;background-color:#3c3d38><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">41</span>                <span style=color:#a6e22e>Driver</span>:     <span style=color:#a6e22e>db</span>.<span style=color:#a6e22e>DriverPostgresql</span>, <span style=color:#75715e>// db.DriverMysql,
+</span></span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">42</span><span style=color:#75715e></span>            },
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">43</span>        },
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">44</span>        <span style=color:#a6e22e>UrlPrefix</span>: <span style=color:#e6db74>&#34;admin&#34;</span>,
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">45</span>        <span style=color:#a6e22e>IndexUrl</span>:  <span style=color:#e6db74>&#34;/&#34;</span>,
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">46</span>        <span style=color:#a6e22e>Debug</span>:     <span style=color:#66d9ef>true</span>,
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">47</span>        <span style=color:#a6e22e>Language</span>:  <span style=color:#a6e22e>language</span>.<span style=color:#a6e22e>CN</span>,
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">48</span>    }).
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">49</span>        <span style=color:#a6e22e>AddGenerators</span>(<span style=color:#a6e22e>Generators</span>).
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">50</span>        <span style=color:#a6e22e>Use</span>(<span style=color:#a6e22e>r</span>); <span style=color:#a6e22e>err</span> <span style=color:#f92672>!=</span> <span style=color:#66d9ef>nil</span> {
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">51</span>        panic(<span style=color:#a6e22e>err</span>)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">52</span>    }
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">53</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">54</span>    <span style=color:#a6e22e>r</span>.<span style=color:#a6e22e>Static</span>(<span style=color:#e6db74>&#34;/uploads&#34;</span>, <span style=color:#e6db74>&#34;./uploads&#34;</span>)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">55</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">56</span>    <span style=color:#a6e22e>eng</span>.<span style=color:#a6e22e>HTML</span>(<span style=color:#e6db74>&#34;GET&#34;</span>, <span style=color:#e6db74>&#34;/admin&#34;</span>, <span style=color:#a6e22e>datamodel</span>.<span style=color:#a6e22e>GetContent</span>)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">57</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">58</span>    <span style=color:#a6e22e>_</span> = <span style=color:#a6e22e>r</span>.<span style=color:#a6e22e>Run</span>(<span style=color:#e6db74>&#34;:9033&#34;</span>)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">59</span>}
+</code></pre></div></div></div><p>寫完代碼之後</p><blockquote><p>go run .</p></blockquote><pre><code>&gt; go run .
+
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in &quot;debug&quot; mode. Switch to &quot;release&quot; mode in production.
+ - using env:   export GIN_MODE=release
+ - using code:  gin.SetMode(gin.ReleaseMode)
+
+GoAdmin is now running.
+Running in &quot;debug&quot; mode. Switch to &quot;release&quot; mode in production.
+</code></pre><p>看到GoAdmin is now running.就表示成功了</p><p>您可以開始訪問: <a href=http://localhost:9033/admin/login>http://localhost:9033/admin/login</a></p><p>預設的帳號密碼都是:<code>admin</code></p><h2 id=客製化>客製化</h2><p>如果您要訪問menu頁面，即: <a href=http://localhost:9033/admin/menu>http://localhost:9033/admin/menu</a></p><p>那麼您要編寫一個<code>tables.go</code>文件，如下:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=color:#f92672>package</span> <span style=color:#a6e22e>main</span>
+
+<span style=color:#f92672>import</span> <span style=color:#e6db74>&#34;github.com/GoAdminGroup/go-admin/plugins/admin/modules/table&#34;</span>
+
+<span style=color:#75715e>// The key of Generators is the prefix of table info url.
+</span><span style=color:#75715e>// The corresponding value is the Form and Table data.
+</span><span style=color:#75715e>//
+</span><span style=color:#75715e>// http://{{config.Domain}}:{{Port}}/{{config.Prefix}}/info/{{key}}
+</span><span style=color:#75715e>//
+</span><span style=color:#75715e>// example:
+</span><span style=color:#75715e>//
+</span><span style=color:#75715e>// &#34;blog_article&#34; =&gt; http://localhost:9033/admin/info/blog_article
+</span><span style=color:#75715e>// &#34;blog_auth&#34; =&gt; http://localhost:9033/admin/info/blog_auth
+</span><span style=color:#75715e>// &#34;blog_tag&#34; =&gt; http://localhost:9033/admin/info/blog_tag
+</span><span style=color:#75715e>//
+</span><span style=color:#75715e>// example end
+</span><span style=color:#75715e>//
+</span><span style=color:#75715e></span><span style=color:#66d9ef>var</span> <span style=color:#a6e22e>Generators</span> = <span style=color:#66d9ef>map</span>[<span style=color:#66d9ef>string</span>]<span style=color:#a6e22e>table</span>.<span style=color:#a6e22e>Generator</span>{
+    <span style=color:#e6db74>&#34;blog_article&#34;</span>: <span style=color:#a6e22e>GetBlogArticleTable</span>,
+    <span style=color:#e6db74>&#34;blog_auth&#34;</span>:    <span style=color:#a6e22e>GetBlogAuthTable</span>,
+    <span style=color:#e6db74>&#34;blog_tag&#34;</span>:     <span style=color:#a6e22e>GetBlogTagTable</span>,
+
+    <span style=color:#75715e>// generators end
+</span><span style=color:#75715e></span>}
+</code></pre></div><h2 id=參考資料>參考資料</h2><ul><li>★<a href=https://segmentfault.com/a/1190000022215579>使用GoAdmin极速搭建golang應用管理后台</a></li></ul><div class=mt3><hr></div><div class="mt6 instapaper_ignoref"></div></div><aside class="w-30-l mt6-l navbar-right large-screen-only"><nav id=TableOfContents><ul><li><a href=#前言>前言</a><ul><li><a href=#已棄用請忽略-go版本>(已棄用，請忽略) go版本</a><ul><li><a href=#多個golang安裝>多個golang安裝</a></li></ul></li></ul></li><li><a href=#go-admin是什麼>go-admin是什麼？</a></li><li><a href=#getting-started>Getting Started</a><ul><li><a href=#為您的資料庫新增一些資料表和欄位>為您的資料庫新增一些資料表和欄位</a></li><li><a href=#安裝gcchttpsenwikipediaorgwikignu_compiler_collection><a href=https://en.wikipedia.org/wiki/GNU_Compiler_Collection>安裝gcc</a></a></li><li><a href=#安裝goadmin的工具>安裝GoAdmin的工具</a></li><li><a href=#再匯入goadmin需要用到的資料表>再匯入goadmin需要用到的資料表</a><ul><li><a href=#生成資料表>生成資料表</a></li><li><a href=#已棄用請忽略-插入內容>(已棄用，請忽略) 插入內容</a><ul><li><a href=#已棄用請忽略-新建使用者>(已棄用，請忽略) 新建使用者</a></li></ul></li><li><a href=#使用psql來生成資料表和內容>使用psql來生成資料表和內容</a></li><li><a href=#小節>小節</a></li></ul></li><li><a href=#生成數據模型代碼>生成數據模型代碼</a></li><li><a href=#編寫maingo>編寫main.go</a></li></ul></li><li><a href=#客製化>客製化</a></li><li><a href=#參考資料>參考資料</a></li></ul></nav><script defer src=/js/uml/toc_markmap.js></script><div id=toc><div id=navbar class="pa3 nested-list-reset nested-copy-line-height nested-links"><a class="navbar-brand ms-2" href=# style=color:#212529>go-admin</a><nav class="navbar navbar-light"><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><a class="nav-link ms-0" href=#前言>前言</a></nav></nav><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><a class="nav-link ms-2" href=#已棄用請忽略-go版本>(已棄用，請忽略) go版本</a></nav></nav></nav><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><a class="nav-link ms-4" href=#多個golang安裝>多個golang安裝</a></nav></nav></nav></nav><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><a class="nav-link ms-0" href=#go-admin是什麼>go-admin是什麼？</a></nav></nav><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><a class="nav-link ms-0" href=#getting-started>Getting Started</a></nav></nav><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><a class="nav-link ms-2" href=#為您的資料庫新增一些資料表和欄位>為您的資料庫新增一些資料表和欄位</a></nav></nav></nav><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><a class="nav-link ms-2" href=#安裝gcchttpsenwikipediaorgwikignu_compiler_collection>安裝gcc</a></nav></nav></nav><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><a class="nav-link ms-2" href=#安裝goadmin的工具>安裝GoAdmin的工具</a></nav></nav></nav><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><a class="nav-link ms-2" href=#再匯入goadmin需要用到的資料表>再匯入goadmin需要用到的資料表</a></nav></nav></nav><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><a class="nav-link ms-4" href=#生成資料表>生成資料表</a></nav></nav></nav></nav><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><a class="nav-link ms-4" href=#已棄用請忽略-插入內容>(已棄用，請忽略) 插入內容</a></nav></nav></nav></nav><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><a class="nav-link ms-4" href=#使用psql來生成資料表和內容>使用psql來生成資料表和內容</a></nav></nav></nav></nav><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><a class="nav-link ms-4" href=#小節>小節</a></nav></nav></nav></nav><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><a class="nav-link ms-2" href=#生成數據模型代碼>生成數據模型代碼</a></nav></nav></nav><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><a class="nav-link ms-2" href=#編寫maingo>編寫main.go</a></nav></nav></nav><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><a class="nav-link ms-0" href=#客製化>客製化</a></nav></nav><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><a class="nav-link ms-0" href=#參考資料>參考資料</a></nav></nav></nav></nav></div></div></aside></article></main><div id=fastSearch><input id=searchInput tabindex=0><ul id=searchResults></ul></div><script src=/js/search/fuse/fuse.js></script><script src=/js/search/fuse/fastsearch.js></script><footer class="bg-black bottom-0 w-100 pa3" role=contentinfo><div class="flex justify-between"><a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href=https://carsonslovoka.github.io/>&copy; Carson 2020-2021</a><div></div></div></footer><script src=/dist/js/app.3fc0f988d21662902933.js></script><script src=/dist/js/utils.js></script><script src=/js/clipboard/copy-code-block.js></script></body></html>
