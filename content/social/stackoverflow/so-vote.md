@@ -43,12 +43,54 @@ next_section = ""
 [Does Sass have a switch function?] |
 [CSS - Equal Height Columns?] |
 [How to 'add watch' in Chrome developer tools?] | Ctrl+Shift+A
-[How to render/show images in HTML created on the fly with Golang and gin-gonic] |
+[How to render/show images in HTML created on the fly with Golang and gin-gonic] | ``data:image/png;base64,{{.}}``
 [How to check whether a file or directory exists?] |
 [Repository size limits for GitHub.com] | 2021年，每個庫5GB以上開始有警告(建議最好在1GB下)，最多不可超過100GB，單個檔案不可超過100MB
 [How to fix curl: (60) SSL certificate: Invalid certificate chain] | curl -k\n-k or --insecure Allow insecure server connections when using SSL
 [Seeking a way to clone the issues for github projects] | It is **not** possible to clone issues of GitHub repositories.
 [How can I delete my posted issue on GitHub?] | [Deleting an issue](https://docs.github.com/en/github/managing-your-work-on-github/deleting-an-issue)
+[Removing input background colour for Chrome autocomplete?] | 更改autocomplete的顏色
+[Where are the golang environment variables stored?] | [go env GOENV](https://stackoverflow.com/a/64021609)
+[How do I add Add text below font awesome icon Links?] |
+[Access struct property by name] |
+★[Using reflect, how do you set the value of a struct field?] |
+[Can I target all <H> tags with a single selector?] | ``:is(h1, h2, h3, h4, h5, h6) {color: red;}`` [is](https://developer.mozilla.org/en-US/docs/Web/CSS/:is)
+[How to make <details> drop down on mouse hover] |
+[SASS (not SCSS) syntax for css3 keyframe animation] |
+[How do you serve a static html file using a go web server?] |
+[How can I commit with no fast forward option (--no-ff) in SourceTree?] |
+[How can I handle http requests of different methods to / in Go?] |
+[In Go's http package, how do I get the query string on a POST request?] | ```http.Request.URL.Query()["param1"]```
+[Make a line break when requesting user input (/P) in batch?] | 可以在 /p 之前或之後使用echo
+[How to unmarshall viper config to struct with dash character] | ``mapstructure``
+[Unmarshaling nested JSON objects] |
+[Split long commands in multiple lines through Windows batch file] |
+[How to format current time using a yyyyMMddHHmmss format?] | ``fmt.Println(t.Format("20060102150405"))``
+[How to set default values in Go structs] |
+[How to gracefully shutting down a golang server?] | [go1.8 http.Shutdown](https://golang.org/pkg/net/http/#Server.Shutdown)
+[How to change the current directory in Go] |
+[Bcrypt password hashing in Golang (compatible with Node.js)?] | [![golang/crypto](https://github-readme-stats.vercel.app/api/pin/?username=golang&repo=crypto)](https://github.com/golang/crypto)
+[Adding a favicon to a static HTML page] | ```<link href="data:image/x-icon;base64,YourBase64StringHere" rel="icon" type="image/x-icon" />```
+[Range over string slice in golang template] | https://golang.org/pkg/text/template/
+[Embed javascript as base64] |
+[[How can I read a whole file into a string variable]] | ``io.ReadAll``
+[Include js file in Go template] |
+[Correct way of getting Client's IP Addresses from http.Request] |
+[Enable CORS in Golang] |
+[Difference between id and name attributes in HTML] |
+[Gorilla mux custom middleware] |
+[How to redirect to a url] | ``http.Redirect(w, r, "/login/", http.StatusSeeOther)`` http.StatusSeeOther 303 這個是關鍵！
+[Golang Gorilla mux with http.FileServer returning 404] |
+[How can I get the user's AppData folder path] |
+[Golang FileServer with custom css] |
+[Is there any way to access private fields of a struct from another package?] | ``reflect.ValueOf(*f).FieldByName("y")``
+[How to serve up a JSON response using Go?] | ``json.NewEncoder(w).Encode(goObj)``
+[Static Data Grid - 10K records with search, pagination, export options]
+[How to insert and update data in Bootstrap table?]
+[What is the difference between jQuery's mouseout() and mouseleave()?]
+[How to bind an event listener only once in pure JavaScript?]
+[How can I add an event for a one time click to a function?] | ``EventTarget.addEventListener("click", function() { }, {once : true});``
+
 
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/
@@ -78,6 +120,49 @@ next_section = ""
 [How to fix curl: (60) SSL certificate: Invalid certificate chain]: https://stackoverflow.com/a/22170951
 [Seeking a way to clone the issues for github projects]: https://stackoverflow.com/q/56437562
 [How can I delete my posted issue on GitHub?]: https://webapps.stackexchange.com/a/124784
+[Removing input background colour for Chrome autocomplete?]: https://stackoverflow.com/a/46829178
+[Where are the golang environment variables stored?]: https://stackoverflow.com/q/40825613
+[How do I add Add text below font awesome icon Links?]: https://stackoverflow.com/a/41285702
+[Access struct property by name]: https://stackoverflow.com/q/18930910
+[Using reflect, how do you set the value of a struct field?]: https://stackoverflow.com/a/6396678
+[Can I target all <H> tags with a single selector?]: https://stackoverflow.com/q/7539125
+[How to make <details> drop down on mouse hover]: https://stackoverflow.com/q/15193606
+[SASS (not SCSS) syntax for css3 keyframe animation]: https://stackoverflow.com/a/18895522
+[How do you serve a static html file using a go web server?]: https://stackoverflow.com/a/26563418
+[How can I commit with no fast forward option (--no-ff) in SourceTree?]: https://stackoverflow.com/q/23587750
+[How can I handle http requests of different methods to / in Go?]: https://stackoverflow.com/a/15253422/
+[In Go's http package, how do I get the query string on a POST request?]: https://stackoverflow.com/a/29237567
+[Make a line break when requesting user input (/P) in batch?]: https://stackoverflow.com/a/16536823
+[How to unmarshall viper config to struct with dash character]: https://stackoverflow.com/a/51228490
+[Unmarshaling nested JSON objects]: https://stackoverflow.com/a/48651916
+[Split long commands in multiple lines through Windows batch file]: https://stackoverflow.com/a/69079
+[How to format current time using a yyyyMMddHHmmss format?]: https://stackoverflow.com/a/20234207
+[How to set default values in Go structs]: https://stackoverflow.com/a/37135458
+[How to gracefully shutting down a golang server?]: https://stackoverflow.com/a/54978843
+[How to change the current directory in Go]: https://stackoverflow.com/a/46028772
+[Bcrypt password hashing in Golang (compatible with Node.js)?]: https://stackoverflow.com/a/23259804
+[Adding a favicon to a static HTML page]: https://stackoverflow.com/a/34699173
+[Range over string slice in golang template]: https://stackoverflow.com/a/54163753
+[Embed javascript as base64]: https://stackoverflow.com/a/383442
+[How can I read a whole file into a string variable]: https://stackoverflow.com/a/66804541
+[Include js file in Go template]: https://stackoverflow.com/a/28899786
+[Correct way of getting Client's IP Addresses from http.Request]: https://stackoverflow.com/a/55738279
+[Enable CORS in Golang]: https://stackoverflow.com/a/48302768
+[In Go, how can I reuse a ReadCloser?]: https://stackoverflow.com/q/33532374
+[Difference between id and name attributes in HTML]: https://stackoverflow.com/q/1397592
+[Gorilla mux custom middleware]: https://stackoverflow.com/q/26204485
+[How to redirect to a url]: https://stackoverflow.com/a/35934496
+[Golang Gorilla mux with http.FileServer returning 404]: https://stackoverflow.com/q/21234639
+[How can I get the user's AppData folder path]: https://stackoverflow.com/a/66189296
+[Golang FileServer with custom css]: https://stackoverflow.com/q/51881361
+[Is there any way to access private fields of a struct from another package?]: https://stackoverflow.com/a/17982725
+[How to serve up a JSON response using Go?]: https://stackoverflow.com/a/31622112
+[Static Data Grid - 10K records with search, pagination, export options]: https://stackoverflow.com/a/45938210
+[How to insert and update data in Bootstrap table?]: https://stackoverflow.com/a/31289326
+[What is the difference between jQuery's mouseout() and mouseleave()?]: https://stackoverflow.com/a/53408794
+[How to bind an event listener only once in pure JavaScript?]: https://stackoverflow.com/q/60498051
+[How can I add an event for a one time click to a function?]: https://stackoverflow.com/a/46291530
+
 
 {{< /table/bootstrap-table >}}
 

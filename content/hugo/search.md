@@ -4,8 +4,10 @@ date = 2020-12-25T18:42:00+08:00
 description = "教您如何在Hugo中建立搜尋"
 tags = ["hugo", "search"]
 draft = false
-toc = true
-bootstrap = true
+markmap = true
+toc_markmap = true
+body_classes = "embed-bk-img"
+article_classes = "bg-white"
 [article_image]
     src = "images/hugo/gohugoio-card.jpg"
 +++
@@ -59,10 +61,17 @@ Setup
 
     這兩個請去[github fuse release page]下載  (我是找不到在fusejs.io的哪邊有可以載:laughing:，到release page載比較快:sunglasses:)
 
-    - search.js 我是不知道為什麼要它，我是沒用到它。 它的路徑: ``Fuse-6.4.3/src/search/bitap/search.js``
-    - fuse.js 路徑: ``Fuse-6.4.3/dist/fuse.js``
+    - search.js 路徑 : ``Fuse-6.4.3/src/search/bitap/search.js``
+
+      我是不知道為什麼要它，我是沒用到它。
+
+    - fuse.js 路徑 : ``Fuse-6.4.3/dist/fuse.js``
 
 4. Add searchbox html to bottom of ``layouts/_default/baseof.html``
+
+    他把第3點取得道的兩個js放到baseof.html之中，
+
+    常理上baseof.html會對所有頁面都會有作用，如果你只想要特殊頁面有用，可以自己選擇要放到哪邊去。
 
     這裡面很簡單，主要就是搞一個input的按鍵，導入兩個js即可完成
 
@@ -80,11 +89,26 @@ Setup
 
     基本上css自己調整就可以了，自己在chrome用檢查去找到各個元素很快就知道了
 
-    值得一提的是，如果你抓官方給的CSS預設了話它會把input隱藏起來，它的觸發是用快捷鍵所觸發的
+    值得一提的是，如果你抓官方給的CSS，預設會把input隱藏起來，靠快捷鍵觸發後才會顯示
 
-    另外即便你調整css不隱藏，打上搜尋也是沒用，因為它的觸發條件用熱鍵！
+    另外即便您調整css，讓它不隱藏，之後在搜尋上打字也是沒用，因為它的觸發條件用熱鍵！
 
-    觸發之後還會去init物件，也就是Fuse物件(fuse.js)它會去抓取index.json的資料
+    熱鍵觸發之後還會去init物件，也就是Fuse物件(fuse.js)它會去抓取index.json的資料
+
+    以下是``fastsearch.js``的片段代碼內容
+    ```js {linenos=inline,hl_lines=[3,7]}
+    document.addEventListener('keydown', function(event) {
+        // CMD-/ to show / hide Search
+        if (event.metaKey && event.which === 191) {  // windows鍵 + /
+        // Load json search index if first time invoking search
+        // Means we don't load json unless searches are going to happen; keep user payload small unless needed
+            if(firstRun) {
+                loadSearch(); // loads our json data and builds fuse.js search index  // 會用到fuse.js 這會去抓取index.json的資料
+                firstRun = false; // let's never do this again
+            }
+        }
+    }
+    ```
 
     所以如果你只有改css是沒用的
 
@@ -111,20 +135,73 @@ Setup
 
     它的觸發一定要按下快捷鍵
 
-    他的預設用``event.metaKey && event.which === 191``)
+    他的預設用 {{< hotkey "Windows鍵 + /" >}} :
 
-    我自己是改成: ``event.altKey && event.which === 191``
+    > event.``metaKey`` && event.which === 191
 
-    也就是用``ALT+/``
+    我自己是改成 {{< hotkey "Alt + /" >}} :
+
+    > event.``altKey`` && event.which === 191
 
     - 關於:[event.which]
     - 關於:[KeyboardEvent.metaKey]
 
 
+## 自己用JS做
+
+我這邊提供比較簡單的方法來做
+
+基本上我們可以用
+
+> {{ range .Site.RegularPages.ByLastmod.Reverse }}
+
+👉[代碼連結](https://github.com/CarsonSlovoka/gohugo-theme-ananke/blob/f1e6c4039958c529b7ea1dfe1923b32b160a784d/layouts/custom_layout/site/navigation/site-search.html#L26-L30)
+
+來找到所有頁面
+
+接著可以把內容取出來
+
+再交由js去把結果抓出來
+
+下面我介紹兩種方法，都能實現搜尋
+
+1. simple-search: 自己刻一個搜尋欄位
+2. dataTable:
+
+   利用datatable來渲染整個搜尋結果
+
+   可以排序、分頁，擁有一個不錯看的表格！
+
+### simple-search
+
+- [html代碼連結](https://github.com/CarsonSlovoka/gohugo-theme-ananke/blob/f1e6c4039958c529b7ea1dfe1923b32b160a784d/layouts/custom_layout/site/navigation/site-search-simple.html#L20)
+- [js代碼](https://github.com/CarsonSlovoka/gohugo-theme-ananke/blob/f1e6c4039958c529b7ea1dfe1923b32b160a784d/static/js/search/simple-search.js#L165-L171)
+- [demo連結](https://carsonslovoka.github.io/site-search-simple/)
+
+
+### DataTables.js
+
+因為這種方式用到DataTables，所以我先放上DataTables的相關資訊
+
+[![DataTables.js](https://github-readme-stats.vercel.app/api/pin?username=DataTables&repo=DataTables)](https://github.com/DataTables/DataTables)
+
+[demo網址](https://datatables.net/)
+
+----
+
+以下是我Hugo中主題的運用
+
+- [site-search.html](https://github.com/CarsonSlovoka/gohugo-theme-ananke/blob/f1e6c4039958c529b7ea1dfe1923b32b160a784d/layouts/custom_layout/site/navigation/site-search.html#L20-L21)
+- [js](https://github.com/CarsonSlovoka/gohugo-theme-ananke/tree/f1e6c4039958c529b7ea1dfe1923b32b160a784d/static/js/search/dataTables)
+    - [jquery.dataTables.js](https://github.com/CarsonSlovoka/gohugo-theme-ananke/blob/f1e6c4039958c529b7ea1dfe1923b32b160a784d/static/js/search/dataTables/jquery.dataTables.js) : 這個就是dataTable的東西，我沒改
+    - [search-by-datatable.js](https://github.com/CarsonSlovoka/gohugo-theme-ananke/blob/f1e6c4039958c529b7ea1dfe1923b32b160a784d/static/js/search/dataTables/search-by-datatable.js#L39-L72)
+- [demo連結](https://carsonslovoka.github.io/site-search/)
+
+
 ## 參考資料
 
-- [5分钟给Hugo博客增加搜索功能](https://ttys3.net/post/hugo/hugo-fast-search/)
-- [为 Hugo 添加搜索功能](https://blog.humblepg.com/post/2019/06/hugo-search.html)
+- [5分钟給Hugo博客增加搜索功能](https://ttys3.net/post/hugo/hugo-fast-search/)
+- [為 Hugo 添加搜索功能](https://blog.humblepg.com/post/2019/06/hugo-search.html)
 
 
 [algolia]: https://www.algolia.com/pricing/

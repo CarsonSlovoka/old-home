@@ -1,7 +1,7 @@
 +++
 title = "bootstrap基礎教學"
 date = 2021-01-18T13:24:00+08:00
-lastmod= 2021-01-19
+lastmod= 2021-03-28
 description = "網頁排版基礎教學"
 tags = ["bootstrap"]
 markmap = true
@@ -22,6 +22,69 @@ toc_bootstrap = true
 ## SRI Hash
 
 {{<fa-btn-link "/pg_lang/web/css/fontawesome/fa_tutorial#sri-hash" >}}SRI Hash{{</fa-btn-link>}}
+
+## Forms
+
+### form-control
+
+選擇的時候可以有邊框跑出來
+
+```html
+<input type="text" class="form-control" placeholder="Your Email *" value="" autofocus />
+<input type="password" class="form-control" placeholder="Your Password *" value="" />
+```
+
+{{<raw_html>}}
+<input type="text" class="form-control" placeholder="Your Email *" value=""/>
+<input type="password" class="mt-1 form-control" placeholder="Your Password *" value="" />
+{{</raw_html>}}
+
+
+### [input-group]
+
+> 📙 在bs4是用 [form-group] 而bootstrap5已經沒有這種東西
+
+假設我們想在input前面加上一些文字或者圖標(比較常見應該是圖標)
+
+例如新增一個鎖頭的圖標，來表示輸入密碼
+
+```html
+<div class="input-group">
+  <span class="input-group-text"><i class="fa fa-key icon" style="color:#892fff;"></i></span>
+  <input type="password" class="form-control" placeholder="Your Password *" value="" />
+</div>
+```
+
+{{<raw_html>}}
+<div class="input-group">
+  <span class="input-group-text"><i class="fa fa-key icon" style="color:#892fff;"></i></span>
+  <input type="password" class="form-control" placeholder="Your Password *" value="" />
+</div>
+{{< /raw_html >}}
+
+
+input-group可以幫我們把這些東西給**綁**在一塊
+
+如果我們把``input-group``省略時，那他會呈現出以下情況
+
+{{<raw_html>}}
+<span class="input-group-text"><i class="fa fa-key icon" style="color:#892fff;"></i></span>
+<input type="password" class="form-control" placeholder="Your Password *" value="" />
+{{</raw_html>}}
+
+
+### [color-picker](https://getbootstrap.com/docs/5.0/forms/form-control/?#color)
+
+
+```html
+<label for="exampleColorInput" class="form-label">Color picker</label>
+<input type="color" class="form-control form-control-color" id="exampleColorInput" value="#00ff00" title="Choose your color">
+```
+
+{{<raw_html>}}
+<label for="exampleColorInput" class="form-label">Color picker</label>
+<input type="color" class="form-control form-control-color" id="exampleColorInput" value="#00ff00" title="Choose your color">
+{{</raw_html>}}
 
 ## Components
 
@@ -68,6 +131,69 @@ Container\n``max-width``| None (auto) | 540px | 720px | 960px | 1140px | 1320px
 Class prefix | ``.col-`` | ``.col-sm-`` | ``.col-md-`` | ``.col-lg-`` | ``.col-xl-`` | ``.col-xxl-``
 
 {{< /table/bootstrap-table>}}
+
+#### center
+
+{{< table/code-by-example >}}
+
+- ``container``: 對於不同的 @media (min-width: px) 有不同的處理方法
+- ``text-center``: 把文字在該區塊內置中
+- ``justify-content-center``: to center the children **horizontally**
+- ``align-items-center``: to center the children **vertically**
+- ``col-md-offset-3``: set an offset equal to half of the remaining size of the row. 以這個例子就是兩邊各留白3單位
+- ``mx-auto``: margin-right: auto!important; margin-left: auto!important;
+
+
+@@NEW-COL@@
+
+```html
+<section class="text-light">
+<div class="container bg-primary">
+<div class="row">
+  <div class="col-md-6 bg-success text-center">text-center</div>  <!-- text-center指的是text-align: center!important; 他只能對文字而已，所以這種置中，是以「目前此區塊的中心」當作基準 -->
+</div>
+<div class="row justify-content-center">
+  <div class="col-md-6 bg-success">justify-content-center</div>
+</div>
+<div class="row">
+  <div class="col-md-6 bg-success offset-md-3">offset-md-3</div>
+</div>
+<div class="row">
+  <div class="col-md-6 bg-success mx-auto">mx-auto</div>  <!-- mx-auto  margin-right: auto!important; margin-left: auto!important;-->
+</div>
+<div class="row justify-content-center text-center">
+  <div class="col-md-6 bg-success">justify-content-center text-center</div>
+</div>
+</div>
+</section>
+```
+
+{{< /table/code-by-example >}}
+
+成品如下
+
+{{<raw_html>}}
+<section class="text-light">
+  <div class="container bg-primary">
+    <div class="row">
+      <div class="col-md-6 bg-success text-center">text-center</div>  <!-- text-center指的是text-align: center!important; 他只能對文字而已，所以這種置中，是以「目前此區塊的中心」當作基準 -->
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-6 bg-success">justify-content-center</div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 bg-success offset-md-3">offset-md-3</div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 bg-success mx-auto">mx-auto</div>  <!-- mx-auto  margin-right: auto!important; margin-left: auto!important;-->
+    </div>
+    <div class="row justify-content-center text-center">
+      <div class="col-md-6 bg-success">justify-content-center text-center</div>
+    </div>
+  </div>
+</section>
+
+{{</raw_html>}}
 
 ### Jumbotron
 
@@ -148,5 +274,21 @@ Class prefix | ``.col-`` | ``.col-sm-`` | ``.col-md-`` | ``.col-lg-`` | ``.col-x
 
 > :orange_book: 還可參考CSS屬性的[font-size]
 
+## 範例區
+
+### [snippets](https://bootsnipp.com/)
+
+這裡面有相當多的範例，而且相當有水準，稍微修改一下就能很貼合自己的主題！
+
+在搜尋區塊打上關鍵字，就會出現相符的很多樣版供您選擇
+
+舉例搜尋用的關鍵字:
+
+- [timeline](https://bootsnipp.com/search?q=timeline):
+    - [我覺得不錯的主題](https://bootsnipp.com/snippets/QMrM5)
+
+- [Shopping](https://bootsnipp.com/search?q=shopping)
+    - [Shopping Demo](https://bootsnipp.com/snippets/xrXp9)
 
 [font-size]: https://www.w3schools.com/cssref/pr_font_font-size.asp
+[input-group]: https://getbootstrap.com/docs/5.0/forms/input-group/

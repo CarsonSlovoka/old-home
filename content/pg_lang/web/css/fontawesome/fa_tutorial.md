@@ -1,7 +1,7 @@
 +++
 title = "font-awesome基礎教學"
 date = 2021-01-14T10:39:00+08:00
-lastmod = 2021-02-25
+lastmod = 2021-02-27
 featured_image = ""
 description = "一些常用的項目"
 tags = ["fontawesome"]
@@ -13,6 +13,21 @@ toc_bootstrap = true
 [next_and_previous.link]
     next_section="/pg_lang/web/css/bootstrap/bs_tutorial"
 +++
+
+## Icons
+
+fontawesome主要就是用來取得一些漂亮的圖標的，
+
+以下這些是常用的前端圖標庫:
+
+1. [fontawesome]
+2. [fontello]
+3. [livicons]
+4. [ionicons]
+5. [material]
+6. [iconfont] (阿里巴巴)
+
+每一種都有提供CSS, JS等等幫助您快速應用，而本篇只講fontawesome
 
 ## 取得線上的CSS, JS
 
@@ -79,6 +94,8 @@ Generate Subresource Integrity (SRI) attributes
 
 ## [Emoji of Unicode](https://apps.timwhitlock.info/unicode/inspect?s=%F0%9F%93%9D)
 
+[getemoji.com](https://getemoji.com/)
+
 {{< table/bootstrap-table table-info >}}
 
 | @@w=10%@@name | @@w=40%@@Icon Desc | @@w=10%@@Code | @@w=30%@@Comment |　|
@@ -95,7 +112,9 @@ Generate Subresource Integrity (SRI) attributes
 🔖 | Bookmark
 🕮 | Book
 📚 | Books
-❗  | exclamation
+❗  | exclamation | 2757
+⚠  | Warning sign | 26A0
+🔔 | BELL\n叮嚀 | 1F514
 🌱 | Earth Day
 🌎 | World Emoji Day
 📅 | Calendar | 1F4C5
@@ -104,29 +123,38 @@ Generate Subresource Integrity (SRI) attributes
 󠁴🀄 | 中文
 💪 | enhancement
 ✍ | WRITING HAND、總結 | 270D
-📰 | NEWSPAPER、歷史文章 | 1F4F0
+📰 | NEWSPAPER、歷史文章、資料來源 | 1F4F0
 👩‍💻 | ● 👩:Woman\n●💻: Personal computer | ●1F469\n●1F4BB | 這比較特別，他是兩個碼位組合而成的圖案
 👨‍💻 | ● 👨:Man\n●💻: Personal computer | ●1F468\n●1F4BB | 組合圖案
 🎮 | Video game | 1F3A3
-🥴 | Drunk Face\nWoozy Face\nFace with Uneven Eyes and Wavy Mouth | 1F974
-😵 | DIZZY FACE | 1F635
 ✨ | SPARKLES\nFeatures | 2728
+⭐ | WHITE MEDIUM STAR | 2B50
 📦 | PACKAGE\nInstallation Guide | 1F4E6
 🌈 | RAINBOW\nOnline Examples | 1F308
 💿 | OPTICAL DISC | 1F4BF
 🎨 | ARTIST PALETTE\nDesign Specification | 1F3A8
 🖥 | DESKTOP COMPUTER | 1F5A5
 ⌨ | KEYBOARD | 2328
+🕒 | Time
 🔗 | LINK SYMBOL\nLinks | 1F517
 🗺 | WORLD MAP\nRoadmap | 1F5FA
 🤝 | Contributing | 1F91D
 💕 | TWO HEARTS\nDonation | 1F495
 ❓ | QUESTION MARK\nCommunity Support | 2753
 👍 | 讚
-👉 | Pointing Right
-👆 | Pointing Up
-😂 | Laughing
+👉 | Pointing Right | 1F449
+👆 | Pointing Up | 1F446
+👇 | Pointing Down | 1F447
+😂 | Laughing |
+😅 | Grinning Face with Sweat | 1F605
+🥴 | Drunk Face\nWoozy Face\nFace with Uneven Eyes and Wavy Mouth | 1F974
+😵 | DIZZY FACE | 1F635
+😎 | SMILING FACE WITH SUNGLASSES | 1F60E
+😁 | GRINNING FACE WITH SMILING EYES | 1F60E
+😆 | SMILING FACE WITH OPEN MOUTH AND TIGHTLY-CLOSED EYES | 1F606
 🤣 | Rolling on the Floor Laughing,
+🗑 | deprecated
+🚮 | deprecated
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 
@@ -153,9 +181,13 @@ Generate Subresource Integrity (SRI) attributes
 {{<raw_html>}}<span style="color:black;background-color:#44fcf9;">📝todo</span>{{</raw_html>}} | 代辦事項 | #44fcf9 {{< show-color "#44fcf9" >}}
 {{<raw_html>}}<span style="color:white;background-color:#0052cc;">💡proposal</span>{{</raw_html>}} | 提案 | #0052cc {{< show-color "#0052cc" >}}
 {{<raw_html>}}<span style="color:black;background-color:#cfcfcf;">🚧pending</span>{{</raw_html>}} | 待辦 | #cfcfcf {{< show-color "#cfcfcf" >}}
+{{<raw_html>}}<span style="color:red;background-color:black;">🚮deprecated</span>{{</raw_html>}} | deprecated (將來會廢棄的項目) | #000000 {{< show-color "#000000" >}}
 {{<raw_html>}}<span style="color:black;background-color:#e8e8e3;">🀄zh</span>{{</raw_html>}} | lang: 中文 | #e8e8e3 {{< show-color "#e8e8e3" >}}
 {{<raw_html>}}<span style="color:black;background-color:#e8e8e3;">en</span>{{</raw_html>}} | english | #e8e8e3 {{< show-color "#e8e8e3" >}}
-
+-- |
+{{<raw_html>}}<span style="color:black;background-color:#e8e8e3;">⏩shortcode</span>{{</raw_html>}} | Shortcode | #e8e8e3 {{< show-color "#e8e8e3" >}}
+{{<raw_html>}}<span style="color:black;background-color:#e8e8e3;">🔎search</span>{{</raw_html>}} | about search | #e8e8e3 {{< show-color "#e8e8e3" >}}
+{{<raw_html>}}<span style="color:black;background-color:#e8e8e3;">🧙tutorial</span>{{</raw_html>}} | tutorial | #e8e8e3 {{< show-color "#e8e8e3" >}}
 
 ## github中README可能可以用到的圖標
 
@@ -168,4 +200,26 @@ Generate Subresource Integrity (SRI) attributes
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 
+## [Shields.io]
+
+蒐集一些我認為比較有用到的圖例
+
+{{< table/bootstrap >}}
+
+| @@w=15%@@成品 | 說明 | 代碼 |
+| ---- | ---- | ---- |
+[![Go Playground](https://img.shields.io/badge/Go-Playground-5593c7.svg?labelColor=41c3f3&style=for-the-badge)](https://play.golang.org/p/eqjvu-vO8sr) | 可以用圖片+連結的方式來呈現\n | ``[![Go Playground](https://img.shields.io/badge/Go-Playground-5593c7.svg?labelColor=41c3f3&style=for-the-badge)](https://play.golang.org/p/eqjvu-vO8sr)``
+
+{{< /table/bootstrap >}}
+
+
+[fontawesome]: https://fontawesome.com/
+[fontello]: https://fontello.com/
+[livicons]: https://livicons.com/
+[ionicons]: https://ionicons.com/
+[material]: https://material.io/resources/icons
+[iconfont]: https://www.iconfont.cn/
+
 [emojipedia]: https://emojipedia.org/
+[Shields.io]: https://shields.io/category/social
+

@@ -6,6 +6,7 @@ tags = ["hugo"]
 t_lang = ["Go"]
 featured_image = ""
 toc_bootstrap = true
+markmap = true
 +++
 
 ## 前言
