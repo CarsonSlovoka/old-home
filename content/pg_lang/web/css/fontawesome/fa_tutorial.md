@@ -29,9 +29,15 @@ fontawesome主要就是用來取得一些漂亮的圖標的，
 
 每一種都有提供CSS, JS等等幫助您快速應用，而本篇只講fontawesome
 
-## 取得線上的CSS, JS
+## cdnjs, jsdelivr, unpkg
 
-{{<raw_html>}}<a href="https://cdnjs.com/libraries/">cdnjs.com/libraries<i class='fas fa-code fa-2x' style='color: #ff6934'"></i></i></a>{{</raw_html>}}
+取得線上的CSS, JS
+
+- {{<raw_html>}}<a href="https://cdnjs.com/libraries/">cdnjs.com/libraries<i class='fas fa-code fa-2x' style='color: #ff6934'"></i></i></a>{{</raw_html>}}
+- {{<raw_html>}}<a href="https://www.jsdelivr.com/package/npm/">tableexport.jquery.plugin<i class='fas fa-code fa-2x' style='color: #ff6934'"></i></i></a>{{</raw_html>}}
+    - 點進去下方有一個*搜尋*，輸入之後可以搜尋到npm有的項目
+- https://unpkg.com/
+    - 例如: [jspdf.umd.min.js](https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js)
 
 搜尋自己要的套件，有名的套件應該都可以找的到
 
@@ -152,6 +158,7 @@ Generate Subresource Integrity (SRI) attributes
 😎 | SMILING FACE WITH SUNGLASSES | 1F60E
 😁 | GRINNING FACE WITH SMILING EYES | 1F60E
 😆 | SMILING FACE WITH OPEN MOUTH AND TIGHTLY-CLOSED EYES | 1F606
+🤔 | Thinking Face Emoji
 🤣 | Rolling on the Floor Laughing,
 🗑 | deprecated
 🚮 | deprecated

@@ -90,7 +90,12 @@ next_section = ""
 [What is the difference between jQuery's mouseout() and mouseleave()?]
 [How to bind an event listener only once in pure JavaScript?]
 [How can I add an event for a one time click to a function?] | ``EventTarget.addEventListener("click", function() { }, {once : true});``
-
+[Including image in Wenhixin bootstrap-table] |
+[Table fixed header and scrollable body] | ``thead, tbody tr {display: table; width: 100%; table-layout: fixed;}  tbody {display: block; overflow-y: auto; table-layout: fixed; max-height: 768px;}``
+[.tableExport is not a function] | 確保載入的順序和此 [網站](https://github.com/hhurz/tableExport.jquery.plugin) 是一樣的
+[Add “contenteditable” attribute to element using Javascript?] | ``elemText.contentEditable = "true";`` or ``elemText.setAttribute("contenteditable", "true");``
+[How can I get the corresponding table header (th) from a table cell (td)?] |
+[wait till bootstrapTable is fully loaded before doing something] |
 
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/
@@ -162,7 +167,12 @@ next_section = ""
 [What is the difference between jQuery's mouseout() and mouseleave()?]: https://stackoverflow.com/a/53408794
 [How to bind an event listener only once in pure JavaScript?]: https://stackoverflow.com/q/60498051
 [How can I add an event for a one time click to a function?]: https://stackoverflow.com/a/46291530
-
+[Including image in Wenhixin bootstrap-table]: https://stackoverflow.com/q/33667836
+[Table fixed header and scrollable body]: https://stackoverflow.com/a/63412885
+[.tableExport is not a function]: https://stackoverflow.com/a/36197525
+[Add “contenteditable” attribute to element using Javascript?]: https://stackoverflow.com/q/20906895
+[How can I get the corresponding table header (th) from a table cell (td)?]: https://stackoverflow.com/a/37312707
+[wait till bootstrapTable is fully loaded before doing something]: https://stackoverflow.com/a/30336509
 
 {{< /table/bootstrap-table >}}
 
