@@ -169,9 +169,26 @@ format: 使用``${}``把變數涵蓋在內
 
 - Date().toLocaleDateString(): 轉換為2021/01/20
 
+## Function
+
+可以用箭頭函數來取代function，例如以下
+
+```js
+var id = 1
+var foo = () => {
+console.log(this.id)
+}
+
+function foo() {
+ console.log(this.id)
+}
+```
+
+
 ## 參考資料
 
 - [JavaScript Tester]
+- [1.5万字概括ES6全部特性(已更新ES2020)](https://segmentfault.com/a/1190000020678240)
 
 
 [線上測試]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce

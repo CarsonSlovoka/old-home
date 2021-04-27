@@ -3,8 +3,8 @@ title = "深入學習Hugo 1"
 date = 2020-12-07T09:43:12+08:00
 description = "本篇是在對Hugo懵懵懂懂時邊學邊做記錄下來的東西"
 tags = ["hugo"]
-t_lang = ["Go"]
-test_lang = ["Go"]
+t_lang = ["go"]
+test_lang = ["go"]
 draft = false
 toc = true
 markmap = true
@@ -635,6 +635,7 @@ https://cjting.me/2017/06/04/migrate-to-hugo-from-jekyll/
         tag = "tag"  # 這是預設hugo會給的，但是一旦您重新更動了taxonomies就要附加上去，不然等同失效
         category = "categories"  # 這是預設hugo會給的，但是一旦您重新更動了taxonomies就要附加上去，不然等同失效
         mood = "moods"
+        language = "t-lang" # 值是url的名稱以及md裡面設定的名稱 http://localhost:1313/t-lang/  # key的名稱是連結過去時顯示的標題名稱 🔗Language: go
 
 > ``mood = "moods"`` 後面的名稱是在md中所使用的也就是您在front matter中要打上mood**s**: ["happy", "Upbeat"]。
 >
@@ -672,7 +673,97 @@ categories_weight = 44
 > 如果您指定了0權重，那麼這個分類標籤永遠會排在最後一個(即便您也有使用負權重)
 > 0權重會比負權重還要後面
 
+#### Taxonomies與程式間的溝通
 
+{{< table/code-by-example "config.toml" "xxx.html" >}}
+
+```toml
+[taxonomies]
+    tag = "tags"
+    category = "categories"
+    mood = "moods"
+    lang = "t-lang"  # 強烈建議使用「-」，因為沒辦法在html中使用 # 值是url的名稱以及md裡面設定的名稱 http://localhost:1313/t-lang/  # key的名稱是顯示時候的名稱 🔗Language: go
+    language = "t_lang" # 這種比較好
+```
+
+依照以上的設定檔，您可以在HTML執行這些都是有效的
+
+- [.Site.Taxonomies.tags](https://gohugo.io/templates/taxonomy-templates/#example-list-all-site-tags)
+- .Site.Taxonomies.categories
+- .Site.Taxonomies.moods
+- .Site.Taxonomies.t_lang
+
+錯誤:
+
+- .Site.Taxonomies.t-lang : ``-``的關係導致會讀取失敗，所以不推薦用「``-``」
+
+@@NEW-COL@@
+
+```go-html-template {linenos=inline,hl_lines=[1]}
+{{ range $key, $weightedPage := .Site.Taxonomies.tags }} {{/* .Site.Taxonomies 在config.toml可以設定 [taxonomies] | 很貼心的是Hugo會幫您把這些tags按照字母順序小到大給出 */}}
+    {{ range $weightedPage.Pages }} {{/* weightedPage 是一個list, 每一個元素是一個該頁面以及權重 */}}
+      {{- /* <option value="{{ .Permalink}}">{{$key}}</option> */ -}} {{- /* .LinkTitle 這是該連結page中，此頁面的title */ -}}
+      {{if not (in $allTags $key) }}
+        <option value="{{$key}}">{{$key}}</option>
+        {{ $allTags = $allTags | append $key }}
+      {{end}}
+    {{ end }}
+{{ end }}
+```
+
+```md
++++
+title = ""
+tags = ["go"]
++++
+```
+
+> ❗❗❗ 不要使用大寫的字母在其中，例如 tags = ["reCAPTCHA", "Protocal"]
+> 這些都會導致連結失敗 http://localhost:1313/tags/reCAPTCHA
+>
+> 因為連結會改成小寫，以下的都是有效的
+>
+> - http://localhost:1313/tags/recaptcha
+> - http://localhost:1313/tags/protocal
+>
+> 因此才不建議在tags中輸入大寫字母
+
+如果您是用.Site.Taxonomies.tags，那麼得到的東西是
+
+```
+$key 就如同上面Go
+$weightedPage 是一個list, 每一個元素是一個該頁面以及權重
+```
+
+{{< /table/code-by-example >}}
+
+要注意如果您是用
+
+> {{ range $key, $val := .Site.Taxonomies }}
+
+$val:
+
+> ``map[key名稱: WeightedPage, WeightedPage, ... ]``
+
+為 map[string]List[WeightedPage] 形式的物件
+
+```
+map[go:[WeightedPage(0, "markmap教學") WeightedPage(0, "xxx")]]
+...
+map[ajax:[WeightedPage(0, "ajax lesson1") WeightedPage(0, "ajax lesson2")]]
+```
+
+> {{ range $key, $val := .Site.Taxonomies.tags }}
+
+$val:
+
+> ``[WeightedPage, WeightedPage]``
+
+```
+[WeightedPage(0, "ajax lesson1") WeightedPage(0, "ajax lesson2")]
+```
+
+為 List[WeightedPage] 形式的物件
 
 ### [Data Files Tutorial 20]
 

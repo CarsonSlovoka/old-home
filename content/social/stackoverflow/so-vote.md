@@ -96,6 +96,13 @@ next_section = ""
 [Add “contenteditable” attribute to element using Javascript?] | ``elemText.contentEditable = "true";`` or ``elemText.setAttribute("contenteditable", "true");``
 [How can I get the corresponding table header (th) from a table cell (td)?] |
 [wait till bootstrapTable is fully loaded before doing something] |
+[error parsing regexp: invalid or unsupported Perl syntax: \`(?!\`] | https://github.com/google/re2/wiki/Syntax \n
+[Negate match in RE2 syntax?] |
+[Golang: find string in file and show line number] |
+[How to negate specific word in regex?] |
+[How to filter issues on GitHub by issue id?] | ``issue: 339, 310, 2``
+[How to use Checkbox inside Select Option] | https://github.com/wenzhixin/multiple-select \n https://multiple-select.wenzhixin.net.cn/docs/en/download \n https://multiple-select.wenzhixin.net.cn/docs/en/usage
+[Converting HTML string into DOM elements?] | ``var doc = new DOMParser().parseFromString(xmlString, "text/xml");``\n``doc.firstChild.innerHTML``
 
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/
@@ -173,6 +180,13 @@ next_section = ""
 [Add “contenteditable” attribute to element using Javascript?]: https://stackoverflow.com/q/20906895
 [How can I get the corresponding table header (th) from a table cell (td)?]: https://stackoverflow.com/a/37312707
 [wait till bootstrapTable is fully loaded before doing something]: https://stackoverflow.com/a/30336509
+[error parsing regexp: invalid or unsupported Perl syntax: \`(?!\`]: https://stackoverflow.com/a/38935027
+[Negate match in RE2 syntax?]: https://stackoverflow.com/a/28197295
+[Golang: find string in file and show line number]: https://stackoverflow.com/a/37255484
+[How to negate specific word in regex?]: https://stackoverflow.com/a/1240333
+[How to filter issues on GitHub by issue id?]: https://stackoverflow.com/a/59782909
+[How to use Checkbox inside Select Option]: https://stackoverflow.com/a/25414909
+[Converting HTML string into DOM elements?]: https://stackoverflow.com/a/3104237
 
 {{< /table/bootstrap-table >}}
 

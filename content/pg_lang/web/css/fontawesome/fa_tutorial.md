@@ -158,10 +158,13 @@ Generate Subresource Integrity (SRI) attributes
 😎 | SMILING FACE WITH SUNGLASSES | 1F60E
 😁 | GRINNING FACE WITH SMILING EYES | 1F60E
 😆 | SMILING FACE WITH OPEN MOUTH AND TIGHTLY-CLOSED EYES | 1F606
+🙂 |
 🤔 | Thinking Face Emoji
 🤣 | Rolling on the Floor Laughing,
 🗑 | deprecated
 🚮 | deprecated
+☑ | | U+2611
+☐ | | U+2610
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 

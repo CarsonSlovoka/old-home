@@ -94,13 +94,13 @@ googleAnalytics = "UA-98900980-4"  # 參考一下此處:https://github.com/gohug
 [taxonomies]
   category = "categories"
   tag = "tags"
-  language = "t_lang"
+  language = "t_lang" # 值是url的名稱以及md裡面設定的名稱 http://localhost:1313/t-lang/  # key的名稱是顯示時候的名稱 🔗Language: go
   test_language = "test_lang"
 
 [menus]
   [[menus.main]]
     name = "<i class='fas fa-search'></i>"
-    url = "/site-search-simple/"
+    url = "/site-search/"
     pre = ""  # {{- .Pre -}}
     weight = 10  # 權重小的list取出時會優先，也就是最小的等同list[0]的位置，而無關寫的順序
 

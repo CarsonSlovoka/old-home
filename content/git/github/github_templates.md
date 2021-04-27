@@ -2,7 +2,7 @@
 title = "Templates"
 description="教您如何在github上刻製化樣板"
 date = 2021-02-19T16:38:10+08:00
-lastmod = 2021-03-12
+lastmod = 2021-04-24
 featured_image = ""
 draft = false
 weight = 0
@@ -66,6 +66,7 @@ Settings → (往下滑) → Features
 
 ```
 SECURITY.md  # Security中會看到的東西
+CONTRIBUTING.md # issue
 .github 📂
     - SUPPORT.md  # 發問issue時會提醒使用者
     - dependabot.yml
@@ -79,6 +80,12 @@ SECURITY.md  # Security中會看到的東西
         - feature_request.md  # 自定義的issue樣板
 
 ```
+
+#### CONTRIBUTING.md
+
+在發問issues時，右偏上的位置會出現的連結，提示您如果要做貢獻的時候該注意哪些事項
+
+{{< insert-figure "images/git/github/contributing.png" >}}
 
 #### SECURITY.md
 
@@ -145,7 +152,7 @@ updates:
 {{< /table/code-by-example >}}
 
 
-#### 📂 workflows
+#### 📂 [workflows]
 
 什麼是[workflows]? 他有點像是[circleCI](https://circleci.com/)
 
@@ -188,9 +195,10 @@ jobs:  # 可以一次放很多job
     runs-on: ${{ matrix.os }}  # 要在哪些作業系統運行，他會依次的傳遞每個項目給steps，也就是能在steps中，使用matrix.os得到目前是位於哪一個平台
     steps:
       - name: Install Go
-        uses: actions/setup-go@37335c7bb261b353407cff977110895fa0b4f7d8
-        with:
-          go-version: ${{ matrix.go-version }}
+        # Setup Go environment: https://github.com/marketplace/actions/setup-go-environment
+        uses: actions/setup-go@37335c7bb261b353407cff977110895fa0b4f7d8 # 這邊是引用其他人寫好的github action: https://github.com/actions/setup-go
+        with: # https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idstepswith
+          go-version: ${{ matrix.go-version }} # INPUT_GO-VERSION
       - name: Install Ruby
         uses: actions/setup-ruby@5f29a1cd8dfebf420691c4c9a0e832e2fae5a526
         with:
@@ -256,6 +264,10 @@ jobs:  # 可以一次放很多job
           ./hugo -s docs/
           ./hugo --renderToMemory -s docs/
 ```
+
+##### Log
+
+- https://docs.github.com/en/actions/managing-workflow-runs/using-workflow-run-logs
 
 #### 📂 ISSUE_TEMPLATE
 
@@ -368,20 +380,21 @@ contact_links:
 - [beego .github]
 - ★[一些ISSUE_TEMPLATE的參考](https://github.com/compiler-s20/discussion)
 
-## labels
+### labels
 
 請參考:
 
 - [About default labels](https://docs.github.com/en/github/managing-your-work-on-github/managing-labels#about-default-labels)
 - [搜尋標籤](https://docs.github.com/cn/github/managing-your-work-on-github/using-search-to-filter-issues-and-pull-requests)
 
-### [Search by the title, body, or comments](https://docs.github.com/en/github/searching-for-information-on-github/searching-issues-and-pull-requests#search-by-the-title-body-or-comments)
+#### [Search by the title, body, or comments](https://docs.github.com/en/github/searching-for-information-on-github/searching-issues-and-pull-requests#search-by-the-title-body-or-comments)
 
 | Qualifier | Example |
 | ---- | ---- |
 ``in:title`` | ``warning in:title`` matches issues with "warning" in their title.
 ``in:body`` | ``error in:title,body`` matches issues with "error" in their title or body.
 ``in:comments`` | ``shipit in:comments`` matches issues mentioning "shipit" in their comments.
+``issue: 3 4 5`` | 搜尋#3, #4, #5
 
 
 ## [Github主頁上的README.md](https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/managing-your-profile-readme)

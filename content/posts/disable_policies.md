@@ -2,7 +2,7 @@
 title = "URL Protocol"
 date = 2020-12-21T16:42:00+08:00
 description = "教您如何使用URL Protocol"
-tags = ["Protocol"]
+tags = ["protocol"]
 draft = false
 toc = true
 bootstrap = true

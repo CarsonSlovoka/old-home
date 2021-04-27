@@ -309,6 +309,19 @@ $("#tb_user").bootstrapTable({
 
 #### [Table Options]
 
+##### [Table Classes](https://examples.bootstrap-table.com/#options/table-classes.html)
+
+這個東西比較無關，基本上就是class的屬性而以，因為bootstrap本身就有提供table屬性，也可以去參考 [bootstrap table](https://getbootstrap.com/docs/5.0/content/tables/#variants)
+
+- table
+- table-bordered
+- table-hover
+- table-striped
+- table-dark
+- table-sm
+- table-borderless
+
+
 ##### button
 
 客製化按鈕
@@ -325,6 +338,7 @@ $("#tb_user").bootstrapTable({
 
 - data-buttons : 指的是在js中的函數名稱，他會用這個函數名稱的實作餵入資料給Table
 - data-show-button-text : 看您需不需要按鈕旁邊有文字出現
+- data-search-highlight : 搜尋後會突顯搜尋的文字 (如果有錯誤時，將不會突顯文字)
 
 
 ```js
@@ -343,14 +357,11 @@ function buttons () {
         btnAdd: {
             text: 'Add new row',
             icon: 'fa-plus',
-            event: function () {
-                alert('Do some stuff to e.g. add a new row')
-            },
             attributes: {
                 title: 'Add a new row to the table'
             },
             event: {
-                'click': () => { },
+                'click': () => {alert('Do some stuff to e.g. add a new row')},
                 'mouseenter': () => { },
                 'mouseleave': () => { }
             }
@@ -489,6 +500,109 @@ $(document).ready(function() {
 
 [出處](https://editor.datatables.net/examples/api/confirmClose)
 
+
+## 製作好看的 select multiple
+
+您可以使用預設HTML中提供的方法 {{< sup "[multiple](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_optgroup) | [tag_optgroup](https://www.w3schools.com/tags/tag_optgroup.asp) " >}} ，但是外觀不太好看。
+
+我會推薦用以下的第三方專案來解決
+
+[![wenzhixin/multiple-select](https://github-readme-stats.vercel.app/api/pin?username=wenzhixin&repo=multiple-select)](https://github.com/wenzhixin/multiple-select)
+
+### Usage
+
+可以npm或cdn都行 {{< sup "[下載](https://multiple-select.wenzhixin.net.cn/docs/en/download)" >}}
+
+- cdn
+
+    ```
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/multiple-select@1.5.2/dist/multiple-select.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://unpkg.com/multiple-select@1.5.2/dist/multiple-select.min.js"></script>
+    ```
+
+- npm
+
+    ```
+    $ npm install multiple-select
+    ```
+
+[usage](https://multiple-select.wenzhixin.net.cn/docs/en/usage)
+
+```html {linenos=inline, hl_lines=[24]}
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/multiple-select@1.5.2/dist/multiple-select.min.css">
+    <script src="https://unpkg.com/multiple-select@1.5.2/dist/multiple-select.min.js"></script>
+</head>
+
+<style>
+  .ms-choice>span {
+    position: initial; // 和某些css有衝突，所以強制更改
+    overflow: initial;
+  }
+  button.ms-choice {
+    height: 2rem;
+  }
+</style>
+
+<select id="mySelect">
+  <option value="1">January</option>
+  <option value="2">February</option>
+  <option value="3">March</option>
+</select>
+
+<script>
+    $('#mySelect').multipleSelect()
+</script>
+```
+
+可以覆寫他css的屬性
+
+24行: 注意最後一定要初始化才會成功
+
+
+也可以給於額外的[options](https://multiple-select.wenzhixin.net.cn/docs/en/options)
+
+{{<table/code-by-example>}}
+
+如果您想要一列有很多個勾選框，如下
+
+```
+item 1 ☑  item 2 ☐  item 3 ☐
+item 4 ☑  item 5 ☐  item 6 ☐
+item 7 ☐  item 8 ☑  item 98765... ☐
+...
+```
+
+@@NEW-COL@@
+
+```
+$("#selectTag").multipleSelect({
+  width: 600,
+  multiple: true,
+  multipleWidth: 160,
+  dropWidth: "728"
+})
+```
+
+- multiple : 是必須加上去才會顯示出左側的效果
+- multipleWidth : 表示每一個元素的欄寬，如果您發現您的字被省略了，例如 ``98765...`` 那就表示寬度不夠要增加才可以完整顯示
+- width : 總寬度
+- dropWidth : 我個人很推這個屬性，只調整drop時的欄位寬度，因此在不點擊的時候，可以維持按鈕小小的，當點擊後才會有比較大的下拉選單可選。
+
+
+{{</table/code-by-example>}}
+
+
+
+
+
+### 其他參考資料
+
+- [範例搭配代碼](https://www.dumbino.com/assets/multiple-select-master/docs/index.html)
 
 ## 相關連結
 - [How to add json data instead of data-url to populate the grid?](https://stackoverflow.com/a/45973096)
