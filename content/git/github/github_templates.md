@@ -127,7 +127,7 @@ Also see [Hugo's Security Model](https://gohugo.io/about/security-model/).
 
 👉 [github Docs文件](https://docs.github.com/cn/github/administering-a-repository/keeping-your-dependencies-updated-automatically)
 
-Dependabot 可以自动維护您的倉庫的依賴項。
+Dependabot 可以自動維护您的倉庫的依賴項。
 
 {{< table/code-by-example "　"  "dependabot.yml" >}}
 

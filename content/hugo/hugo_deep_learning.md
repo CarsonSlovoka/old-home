@@ -1,6 +1,7 @@
 +++
 title = "深入學習Hugo 1"
 date = 2020-12-07T09:43:12+08:00
+lastmod = 2021-04-27
 description = "本篇是在對Hugo懵懵懂懂時邊學邊做記錄下來的東西"
 tags = ["hugo"]
 t_lang = ["go"]
@@ -26,7 +27,7 @@ Hugo本身就是個: **Static Site Generator** 后面简称為 [SSG](https://jam
 - 模板也算好學
 
 
-并不是每一个网站都需要一个 Server 来动态生成内容，也不是每一个网站都需要数据库。博客系统，文档系统，企业官网等等，都是静态网站的好用例。
+并不是每一个网站都需要一个 Server 來動態生成內容，也不是每一个网站都需要数据库。博客系统，文檔系统，企业官网等等，都是靜態网站的好用例。
 
 hugo除了是SSG以外，它還是SSG中最快速的！
 
@@ -718,7 +719,9 @@ tags = ["go"]
 +++
 ```
 
-> ❗❗❗ 不要使用大寫的字母在其中，例如 tags = ["reCAPTCHA", "Protocal"]
+> ❗❗❗ 不要使用大寫的字母在其中， 例如
+> > tags = ["reCAPTCHA", "Protocal"]
+>
 > 這些都會導致連結失敗 http://localhost:1313/tags/reCAPTCHA
 >
 > 因為連結會改成小寫，以下的都是有效的

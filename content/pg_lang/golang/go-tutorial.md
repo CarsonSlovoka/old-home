@@ -622,7 +622,7 @@ func Hugo() error {
 
 > magefile.go doesn't match to target system. File will be ignored by build tool
 
-這是因為go1.16並不知值開頭的這種寫法
+這是因為go1.16不支持開頭的這種寫法
 
 ```go
 // +build mage

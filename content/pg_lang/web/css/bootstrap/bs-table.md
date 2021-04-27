@@ -311,7 +311,7 @@ $("#tb_user").bootstrapTable({
 
 ##### [Table Classes](https://examples.bootstrap-table.com/#options/table-classes.html)
 
-這個東西比較無關，基本上就是class的屬性而以，因為bootstrap本身就有提供table屬性，也可以去參考 [bootstrap table](https://getbootstrap.com/docs/5.0/content/tables/#variants)
+這個東西比較無關，基本上就是class的屬性而已，因為bootstrap本身就有提供table屬性，也可以去參考 [bootstrap table](https://getbootstrap.com/docs/5.0/content/tables/#variants)
 
 - table
 - table-bordered

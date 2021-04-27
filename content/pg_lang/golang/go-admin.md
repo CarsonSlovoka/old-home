@@ -77,7 +77,7 @@ GOROOT可以在golang的IDE設置go SDK用的
 | ------ | ----- | ----- |
 | [go-admin] | {{< github/get_info_img GoAdminGroup go-admin stars >}} | {{< github/get_info_img GoAdminGroup go-admin forks "https://www.google.com/" >}} |
 
-- 🚀 高生产效率: 10分钟内做一个好看的管理后台
+- 🚀 高生产效率: 10分钟內做一个好看的管理后台
 - 🎨 主题: 默认為adminlte，更多好看的主题正在制作中，欢迎給我们留言
 - 🔢 插件化: 提供插件使用，真正实现一个插件解决不了问题，那就两个
 - ✅ 认证: 开箱即用的[rbac认证系统](https://en.wikipedia.org/wiki/Role-based_access_control)
@@ -124,7 +124,7 @@ GOROOT可以在golang的IDE設置go SDK用的
   COMMENT ON COLUMN public.blog_article.tag_id IS '標籤ID';
   COMMENT ON COLUMN public.blog_article.title IS '文章标题';
   COMMENT ON COLUMN public.blog_article.desc IS '简述';
-  COMMENT ON COLUMN public.blog_article.content IS '内容';
+  COMMENT ON COLUMN public.blog_article.content IS '內容';
   COMMENT ON COLUMN public.blog_article.cover_image_url IS '封面图片地址';
   COMMENT ON COLUMN public.blog_article.created_on IS '新建时间';
   COMMENT ON COLUMN public.blog_article.created_by IS '创建人';
@@ -171,7 +171,7 @@ GOROOT可以在golang的IDE設置go SDK用的
   COMMENT ON COLUMN public.blog_tag.modified_on IS '修改时间';
   COMMENT ON COLUMN public.blog_tag.modified_by IS '修改人';
   COMMENT ON COLUMN public.blog_tag.deleted_on IS '删除时间';
-  COMMENT ON COLUMN public.blog_tag.state IS '状态 0为禁用、1为启用';
+  COMMENT ON COLUMN public.blog_tag.state IS '状態 0为禁用、1为启用';
   COMMENT ON TABLE public.blog_tag IS '文章标签管理';
   ```
   {{< /details >}}
