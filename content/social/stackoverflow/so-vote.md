@@ -103,6 +103,7 @@ next_section = ""
 [How to filter issues on GitHub by issue id?] | ``issue: 339, 310, 2``
 [How to use Checkbox inside Select Option] | https://github.com/wenzhixin/multiple-select \n https://multiple-select.wenzhixin.net.cn/docs/en/download \n https://multiple-select.wenzhixin.net.cn/docs/en/usage
 [Converting HTML string into DOM elements?] | ``var doc = new DOMParser().parseFromString(xmlString, "text/xml");``\n``doc.firstChild.innerHTML``
+[Add icon tray on Windows using native Golang API] |
 
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/
@@ -187,6 +188,7 @@ next_section = ""
 [How to filter issues on GitHub by issue id?]: https://stackoverflow.com/a/59782909
 [How to use Checkbox inside Select Option]: https://stackoverflow.com/a/25414909
 [Converting HTML string into DOM elements?]: https://stackoverflow.com/a/3104237
+[Add icon tray on Windows using native Golang API]: https://stackoverflow.com/q/49126294
 
 {{< /table/bootstrap-table >}}
 

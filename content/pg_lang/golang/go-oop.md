@@ -1,7 +1,7 @@
-+++ title = "Golang OOP"
++++ title = "Golang Module"
 description="教您如何管理模塊"
 date = 2021-01-22T16:57:58+08:00
-lastmod = 2021-01-22
+lastmod = 2021-04-29
 featured_image = ""
 draft = false
 weight = 0
@@ -45,9 +45,13 @@ import (
 )
 ```
 
-那麼就是抓以下這份檔案:
+如果GO111MODULE非啟用，那麼就是抓以下這份檔案:
 
 > ```%GOPATH%/src```/my_pgk_dir/sub/main_file.go
+
+如果GO111MODULE=on時是抓
+
+> %GOPATH%/pkg/mod
 
 :orange_book: 您可以有多個GOPATH，他會去抓您每一個GOPATH底下的src檔案
 
@@ -117,7 +121,7 @@ func main() {
     - go 1.5前，完全依賴GOPATH
     - [go 1.5 vendor](https://golang.org/doc/go1.5)
     - [go 1.9 dep](https://golang.org/doc/go1.9)
-    - [go 1.11  modules](https://golang.org/doc/go1.11), 簡稱mod
+    - [go 1.11 modules](https://golang.org/doc/go1.11), 簡稱mod
 
 - 第三方
 
@@ -330,6 +334,80 @@ go.sum您不需要動，go.sum是跟著go.mod的檔案，
 
 > ``go mod tidy``
 
+## [pkg.go.dev]
+
+這邊的資料是抓github的東西
+
+當您從別人的專案fork回去，其實您在 [這邊](https://pkg.go.dev/) 就可以馬上搜到該份代碼
+
+同時也意味著您已經可以在您的專案import該項目
+
+舉例:
+
+- pkg: [CarsonSlovoka/go-windows-programming](https://pkg.go.dev/github.com/CarsonSlovoka/go-windows-programming)
+- [github](https://github.com/CarsonSlovoka/go-windows-programming/tree/ff0b400)
+
+在github中如果您進行了新的commit，並且也已經送到了github上去
+
+但您會發現
+
+> go mod tidy
+
+還是沒有更新成功
+
+```
+module xxx
+
+go 1.16
+
+require (
+	github.com/CarsonSlovoka/go-windows-programming v0.0.0-20190526062745-ff0b400d8c7b
+)
+```
+
+- v0.0.0-20190526062745-ff0b400d8c7b (後面是 日期|時間 - sha1前12碼)
+
+您要通知pkg.go有更新，所以要利用``go get -u``指令
+
+> go get -u github.com/CarsonSlovoka/go-windows-programming
+
+接著您就會發現 [pkg.go.dev-go-windows-programming](https://pkg.go.dev/github.com/CarsonSlovoka/go-windows-programming?tab=versions) 已經更新了
+
+總之所有您的github專案都可以透過go get -u 去發佈到 [pkg.go.dev]
+
+然後通常他們會要求幾項東西:
+
+Details
+
+1. Valid go.mod file : 要有go.mod檔案
+2. Redistributable license : 要添加license
+3. Tagged version : 要用tag來標籤(通常是標籤在release的地方)
+4. Stable version : 至少要達到v1才算穩定
+
+## go.mod的版號
+
+您可能會看到v2, v3, ...
+
+在官方有建議兩種做法，如果您要發佈一個與前面不兼容的版本
+
+1. 直接改go.mod，在後面直接補上主版號:
+
+    ```
+    module xxx/v2
+
+    go 1.16
+
+    require (
+
+    )
+    ```
+
+2. 建立子資料夾:
+
+    建立v2的資料夾，然後複製一份到v2裡面接著改... 個人不建議這種方式
+
+
+
 ## 參考資料
 
 - [go_84pdf](https://www.openmymind.net/assets/go/go.pdf)
@@ -342,3 +420,4 @@ go.sum您不需要動，go.sum是跟著go.mod的檔案，
 [glide]: https://github.com/Masterminds/glide
 [vgo]: https://github.com/golang/go/wiki/vgo#projects-related-to-vgo
 [go mod]: https://blog.golang.org/using-go-modules
+[pkg.go.dev]: https://pkg.go.dev
