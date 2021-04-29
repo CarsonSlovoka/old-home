@@ -11,7 +11,7 @@ markmap = true
 toc_markmap = true
 toc_bootstrap = true
 [next_and_previous.link]
-  previous_page = "pg_lang/golang/go-oop"
+  previous_page = "go-mod"
   next_page = ""
   previous_section = ""
   next_section = ""
@@ -22,7 +22,7 @@ toc_bootstrap = true
 
 在閱讀前，請一定要弄懂
 
-- [go mod應用]({{< ref "pg_lang/golang/go-oop#go-mod應用httpsbloggolangorgusing-go-modules" >}})
+- [go mod應用]({{< ref "go-mod#go-mod應用httpsbloggolangorgusing-go-modules" >}})
 
 或者
 

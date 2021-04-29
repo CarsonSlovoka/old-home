@@ -10,7 +10,7 @@ toc_markmap = true
 toc_bootstrap = true
 [next_and_previous.link]
     previous_page = ""
-    next_page = "pg_lang/golang/go-oop"
+    next_page = "go-mod"
     previous_section = ""
     next_section = ""
 +++
