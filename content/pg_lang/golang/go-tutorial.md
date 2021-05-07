@@ -535,103 +535,33 @@ GOPROXY下載通常速度都比直接從VCS要快得多！
 
 [^VCS]: [version control syste](https://zh.wikipedia.org/wiki/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6)
 
-## magefile/mage
 
-因為他要跑特殊的.go專案，所以預設用-d不要做任何動作下載就好
+### Go的坑
 
-```
-go get -u -d github.com/magefile/mage
-cd %GOPATH%/src/github.com/magefile/mage 或 cd %GOPATH%/pkg/mod/github.com/magefile/mage
-go run bootstrap.go
-```
+#### Value and Reference
 
-以上的作法您可能會遇到 .git 的錯誤訊息，我不曉得這麼做關 git 什麼事
+傳值的型別有:
 
-您可以改直接抓專案的方式，我會推薦以下這種作法(至少對我來說是可行的)
+- int系列
+- float系列
+- bool
+- string
+- **array**
+- **struct**
 
-```
-git clone https://github.com/magefile/mage
-cd mage
-go run bootstrap.go
-```
+引用的型別有:
 
-### mage -init
-
-> mage -init
-
-會生成檔案
-
-> magefile.go
-
-> 📙 名稱不一定要是 magefile.go 但不建議改
-
-#### mage -h
-
-```
-mage [options] [target]
-
-Mage is a make-like command runner.  See https://magefile.org for full docs.
-
-Commands:
-  -clean    clean out old generated binaries from CACHE_DIR
-  -compile <string>
-            output a static binary to the given path
-  -h        show this help
-  -init     create a starting template if no mage files exist
-  -l        list mage targets in this directory
-  -version  show version info for the mage binary
-
-Options:
-  -d <string>
-            directory to read magefiles from (default ".")
-  -debug    turn on debug messages
-  -f        force recreation of compiled magefile
-  -goarch   sets the GOARCH for the binary created by -compile (default: current arch)
-  -gocmd <string>
-		    use the given go binary to compile the output (default: "go")
-  -goos     sets the GOOS for the binary created by -compile (default: current OS)
-  -h        show description of a target
-  -keep     keep intermediate mage files around after running
-  -t <string>
-            timeout in duration parsable format (e.g. 5m30s)
-  -v        show verbose output when running mage targets
-  -w <string>
-            working directory where magefiles will run (default -d value)
-```
-
-#### 如何使用
-
-magefile.go
-```go
-// +build mage
-
-package main
-
-// ...
-// Build hugo binary
-func Hugo() error {
-	return runWith(flagEnv(), goexe, "build", "-ldflags", ldflags, buildFlags(), "-tags", buildTags(), packageName)
-}
-```
-
-> mage -v hugo
-
-表示執行``Hugo()``的函數，指令中都用小寫
-
-#### 錯誤訊息
-
-> magefile.go doesn't match to target system. File will be ignored by build tool
-
-這是因為go1.16不支持開頭的這種寫法
-
-```go
-// +build mage
-```
-
+- pointer
+- slice
+- map
+- channel
+- func
+- **interface**
 
 ## 參考資料
 
 - https://www.mdeditor.tw/pl/2J1M/zh-tw
+- https://www.mdeditor.tw/pl/gdPL/zh-tw
 
 [vim-plug]: https://github.com/junegunn/vim-plug
 [fatih/vim-go]: https://github.com/fatih/vim-go

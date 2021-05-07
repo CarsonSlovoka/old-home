@@ -73,15 +73,15 @@ next_section = ""
 [Adding a favicon to a static HTML page] | ```<link href="data:image/x-icon;base64,YourBase64StringHere" rel="icon" type="image/x-icon" />```
 [Range over string slice in golang template] | https://golang.org/pkg/text/template/
 [Embed javascript as base64] |
-[[How can I read a whole file into a string variable]] | ``io.ReadAll``
+[How can I read a whole file into a string variable] | ``io.ReadAll``
 [Include js file in Go template] |
 [Correct way of getting Client's IP Addresses from http.Request] |
 [Enable CORS in Golang] |
-[Difference between id and name attributes in HTML] |
+[Difference between id and name attributes in HTML] | The name attribute is used when sending data in a form submission. Different controls respond differently. For example, you may have several radio buttons with different id attributes, but the same name.
 [Gorilla mux custom middleware] |
 [How to redirect to a url] | ``http.Redirect(w, r, "/login/", http.StatusSeeOther)`` http.StatusSeeOther 303 這個是關鍵！
 [Golang Gorilla mux with http.FileServer returning 404] |
-[How can I get the user's AppData folder path] |
+[How can I get the user's AppData folder path] | 🐬
 [Golang FileServer with custom css] |
 [Is there any way to access private fields of a struct from another package?] | ``reflect.ValueOf(*f).FieldByName("y")``
 [How to serve up a JSON response using Go?] | ``json.NewEncoder(w).Encode(goObj)``
@@ -104,6 +104,18 @@ next_section = ""
 [How to use Checkbox inside Select Option] | https://github.com/wenzhixin/multiple-select \n https://multiple-select.wenzhixin.net.cn/docs/en/download \n https://multiple-select.wenzhixin.net.cn/docs/en/usage
 [Converting HTML string into DOM elements?] | ``var doc = new DOMParser().parseFromString(xmlString, "text/xml");``\n``doc.firstChild.innerHTML``
 [Add icon tray on Windows using native Golang API] |
+[No data sources are configured to run this SQL] | View -> Tool Windows -> Database
+[Convert array to slice in Go] | ``myArray[:]``
+[Go HTTP Post and use Cookies] |
+[Open file dialog box in JavaScript] | ``<input type="file" id="file-input"/>`` 可以把 ``#file-input {display: none;}`` 把請``選擇檔案``隱藏起來
+★[Golang GET multipart form-data] |
+[Postman Chrome: What is the difference between form-data, x-www-form-urlencoded and raw] |
+[How to send multipart/form-data form content by ajax (no jquery)?] |
+[Need a basename function in Javascript] |
+[How can you encode a string to Base64 in JavaScript?] |
+[In Go, is there similar feature like “f-string” in Python?] |
+[In-memory file for testing] |
+[What’s the best way to reload / refresh an iframe?] |
 
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/
@@ -189,6 +201,18 @@ next_section = ""
 [How to use Checkbox inside Select Option]: https://stackoverflow.com/a/25414909
 [Converting HTML string into DOM elements?]: https://stackoverflow.com/a/3104237
 [Add icon tray on Windows using native Golang API]: https://stackoverflow.com/q/49126294
+[No data sources are configured to run this SQL]: https://stackoverflow.com/a/66470666
+[Convert array to slice in Go]: https://stackoverflow.com/a/28886764
+[Go HTTP Post and use Cookies]: https://stackoverflow.com/q/12756782
+[Open file dialog box in JavaScript]: https://stackoverflow.com/a/47094148
+[Golang GET multipart form-data]: https://stackoverflow.com/a/35687623
+[Postman Chrome: What is the difference between form-data, x-www-form-urlencoded and raw]: https://stackoverflow.com/a/55985011
+[How to send multipart/form-data form content by ajax (no jquery)?]: https://stackoverflow.com/a/5935286
+[Need a basename function in Javascript]: https://stackoverflow.com/a/62800151
+[How can you encode a string to Base64 in JavaScript?]: https://stackoverflow.com/q/246801
+[In Go, is there similar feature like “f-string” in Python?]: https://stackoverflow.com/a/59083271
+[In-memory file for testing]: https://stackoverflow.com/a/56177725
+[What’s the best way to reload / refresh an iframe?]: https://stackoverflow.com/q/86428
 
 {{< /table/bootstrap-table >}}
 

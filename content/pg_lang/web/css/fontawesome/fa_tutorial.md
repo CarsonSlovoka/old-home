@@ -149,6 +149,7 @@ Generate Subresource Integrity (SRI) attributes
 ❓ | QUESTION MARK\nCommunity Support | 2753
 👍 | 讚
 👉 | Pointing Right | 1F449
+👈 | Pointing Left
 👆 | Pointing Up | 1F446
 👇 | Pointing Down | 1F447
 😂 | Laughing |

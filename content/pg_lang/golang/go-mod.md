@@ -145,6 +145,7 @@ func main() {
    > require github.com/shomali11/util v0.0.0-20200329021417-91c54758c87b
    >
 4. ``go list -m all``:可以查看目前package用到那些相依的套件
+   - ``go list -m -u all`` : 更新所有套件
 5. ``go get``
 
     - 如果您所在的資料夾含有``go.mod`` go get下載回來的檔案是放在``%gopath%\pkg\mod\``之中
@@ -407,13 +408,141 @@ Details
     建立v2的資料夾，然後複製一份到v2裡面接著改... 個人不建議這種方式
 
 
+## GO好用的指令
+
+| Name | Desc  | Example  |
+| ---- | ----  | ---- |
+``go help <cmd>`` | 顯示幫助
+``go env <OPTIONS>`` | 可以顯示環境變數，後面可以指定要顯示什麼 | go env GOPATH GOROOT
+``go list -m -u all`` | 更新所有套件 |
+``go list -m all`` | 顯示所有套件 |
+``go get -u`` | 更新某套件
+``go get -u -d`` | 更新某套件，但不執行任何動作，只要下載就好了
+``go build -x -v`` | build並且顯示詳細資訊 |  -x: print the commands  -v: print the names of packages as they are compiled.
+
+
+## GO特殊套件安裝
+
+這些是比較難安裝的套件
+
+| Name | Desc |
+| ---- | ---- |
+[![magefile/mage](https://github-readme-stats.vercel.app/api/pin?username=magefile&repo=mage)](https://github.com/magefile/mage) |
+{{% github/st mattn go-sqlite3 %}} |
+
+
+
+### magefile/mage
+
+因為他要跑特殊的.go專案，所以預設用-d不要做任何動作下載就好
+
+```
+go get -u -d github.com/magefile/mage
+cd %GOPATH%/src/github.com/magefile/mage 或 cd %GOPATH%/pkg/mod/github.com/magefile/mage
+go run bootstrap.go
+```
+
+以上的作法您可能會遇到 .git 的錯誤訊息，我不曉得這麼做關 git 什麼事
+
+您可以改直接抓專案的方式，我會推薦以下這種作法(至少對我來說是可行的)
+
+```
+git clone https://github.com/magefile/mage
+cd mage
+go run bootstrap.go
+```
+
+#### mage -init
+
+> mage -init
+
+會生成檔案
+
+> magefile.go
+
+> 📙 名稱不一定要是 magefile.go 但不建議改
+
+#### mage -h
+
+```
+mage [options] [target]
+
+Mage is a make-like command runner.  See https://magefile.org for full docs.
+
+Commands:
+  -clean    clean out old generated binaries from CACHE_DIR
+  -compile <string>
+            output a static binary to the given path
+  -h        show this help
+  -init     create a starting template if no mage files exist
+  -l        list mage targets in this directory
+  -version  show version info for the mage binary
+
+Options:
+  -d <string>
+            directory to read magefiles from (default ".")
+  -debug    turn on debug messages
+  -f        force recreation of compiled magefile
+  -goarch   sets the GOARCH for the binary created by -compile (default: current arch)
+  -gocmd <string>
+		    use the given go binary to compile the output (default: "go")
+  -goos     sets the GOOS for the binary created by -compile (default: current OS)
+  -h        show description of a target
+  -keep     keep intermediate mage files around after running
+  -t <string>
+            timeout in duration parsable format (e.g. 5m30s)
+  -v        show verbose output when running mage targets
+  -w <string>
+            working directory where magefiles will run (default -d value)
+```
+
+#### 如何使用
+
+magefile.go
+```go
+// +build mage
+
+package main
+
+// ...
+// Build hugo binary
+func Hugo() error {
+	return runWith(flagEnv(), goexe, "build", "-ldflags", ldflags, buildFlags(), "-tags", buildTags(), packageName)
+}
+```
+
+> mage -v hugo
+
+表示執行``Hugo()``的函數，指令中都用小寫
+
+#### 錯誤訊息
+
+> magefile.go doesn't match to target system. File will be ignored by build tool
+
+這是因為go1.16不支持開頭的這種寫法
+
+```
+// +build mage
+```
+
+### mattn/go-sqlite3
+
+- ``go get -u -d`` : 先只下載
+- cd 過去 ( mod啟用的狀態下是在 ``GOPATH/pkg/mod/github.com/mattn/go-sqlite3`` )
+- ``go build -v``: 完成之後會看到套件名稱 ``github.com/mattn/go-sqlite3``
+
+一定要先這樣做，不能每一次專案都還會再重新編譯，可能光編譯就至少耗掉一分多鐘了...
+
+完成了之後在執行您的專案，應該是秒執行😎
+
+
 
 ## 參考資料
 
 - [go_84pdf](https://www.openmymind.net/assets/go/go.pdf)
 - [go interface](https://github.com/astaxie/build-web-application-with-golang/blob/master/zh-tw/02.6.md)
 - [gvm + go mod](https://medium.com/golang-%E7%AD%86%E8%A8%98/gvm-go-mod-492a54c15c41)
-- [谈谈go.sum](https://studygolang.com/articles/25658)
+- [談談go.sum](https://studygolang.com/articles/25658)
 
 [govendor]: https://github.com/kardianos/govendor
 [godep]: https://github.com/tools/godep
