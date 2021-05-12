@@ -15,7 +15,7 @@ toc_bootstrap = true
 
 ## [Editing-Help](https://stackoverflow.com/editing-help)
 
-### [Syntax highlighting for coe](https://stackoverflow.com/editing-help#syntax-highlighting)
+### [Syntax highlighting for code](https://stackoverflow.com/editing-help#syntax-highlighting)
 
 除了以上的網址參考，接下來您可能還會有疑問，
 
@@ -47,3 +47,52 @@ toc_bootstrap = true
 (有點出題目考學生，試問您？找答案還要被考試，您說能不給差評嗎😆)
 
 
+## FAQ
+
+### [Is it possible to access deleted questions?](https://meta.stackoverflow.com/a/337016/9935654)
+
+如果您聲望>=10000有辦法利用搜尋的方式找出帖子
+
+建議您如果真的想做紀念，可以把網址記起來，系統還是會永久保留您問過的問題，只是別人看不到罷了
+
+以下這個是我自己問過且刪除的帖子(當然你們沒辦法看到，這連結只對我有效)
+
+> https://stackoverflow.com/q/67431168
+
+----
+
+在您刪除的60天內，都可以在profile中找到
+
+> 點選 Answers -> 移到下面會看到 ``recently deleted answers``
+
+或者是從 Reputation 中找紀錄，如果您該帖子有被投票，也可以找到該連結
+
+
+### Share a link
+
+您可能會覺得奇怪，當您點選
+
+share他會給出一個問題的標籤，還會有一個用戶代碼，例如
+
+> https://meta.stackoverflow.com/a/337016/9935654
+
+可以得知
+
+- 問題ID: ``337016``
+- 而分享此問題的用戶是: ``9935654``
+
+為什麼要有分享此用戶的訊息呢?
+
+這是因為他們對這項目也有統計，而且有些 [獎章](https://stackoverflow.com/help/badges) 還和這個有關聯
+
+- 🥉Announcer: Share a link to a post later visited by **25** ``unique IP`` addresses
+- 🥈Booster: Share a link to a post later visited by **300** unique IP addresses
+- 🥇Publicist: Share a link to a post later visited by **1000** unique IP addresses
+
+### 已經用戶ID如何查看他的Profile?
+
+> https://stackoverflow.com/users/[userID]/
+
+例如:
+
+> https://stackoverflow.com/users/9935654/

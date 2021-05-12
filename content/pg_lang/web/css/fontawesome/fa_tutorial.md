@@ -102,6 +102,8 @@ Generate Subresource Integrity (SRI) attributes
 
 [getemoji.com](https://getemoji.com/)
 
+> 其實Unicode您也可以在這個 [網站](https://emojipedia.org/1st-place-medal/) 上就可以看見了，在比較下面的地方有一個Codepoints，可以看見UNICODE碼位
+
 {{< table/bootstrap-table table-info >}}
 
 | @@w=10%@@name | @@w=40%@@Icon Desc | @@w=10%@@Code | @@w=30%@@Comment |　|
@@ -166,6 +168,10 @@ Generate Subresource Integrity (SRI) attributes
 🚮 | deprecated
 ☑ | | U+2611
 ☐ | | U+2610
+🏆 | Trophy | 1F3C6
+🥇 | 1st Place Medal | 1F947
+🥈 | 2nd Place Medal | 1F948
+🥉 | 3rd Place Medal | 1F949
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 
