@@ -125,6 +125,7 @@ next_section = ""
 ["Uncaught SyntaxError: Cannot use import statement outside a module” when importing ECMAScript 6] | 要補上**type="module"** ``<script defer type="module" src="/static/js/file/file.js"></script>``
 [Set type for function parameters?] | https://jsdoc.app/#block-tags
 [Reading file contents on the client-side in javascript in various browsers] |
+[Push to GitHub without a password using ssh-key] |
 
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
@@ -231,6 +232,7 @@ next_section = ""
 ["Uncaught SyntaxError: Cannot use import statement outside a module” when importing ECMAScript 6]: https://stackoverflow.com/a/58679392
 [Set type for function parameters?]: https://stackoverflow.com/q/8407622/9935654
 [Reading file contents on the client-side in javascript in various browsers]: https://stackoverflow.com/a/64113219/9935654
+[Push to GitHub without a password using ssh-key]: https://stackoverflow.com/q/14762034/9935654
 
 {{< /table/bootstrap-table >}}
 
