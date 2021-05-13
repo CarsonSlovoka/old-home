@@ -1,7 +1,7 @@
 +++
 title = "Hugo教學"
 date = 2020-12-04T10:29:18+08:00
-lastmod = 2021-03-20
+lastmod = 2021-04-23
 description = "帶您快速的完成Hugo的Hello world"
 tags = ["hugo"]
 draft = false
@@ -169,6 +169,12 @@ toml(**Tom's Obvious, Minimal Language**) 很像ini檔案，但是它可以嵌�
 ### 推薦Command
 - ``hugo help``: 查看幫助
 - ``hugo server --buildDrafts --buildExpired --buildFuture --theme ananke``: 啟動Server，主題使用ananke (注意如果這邊有設定主題它會覆蓋掉 config.toml中的theme設定)
+- ``hugo --renderToMemory -s docs/`` :
+
+    如果您使用github page，通常會把文件放到docs中去，hugo 可以使用(-s {{< sup "-\-source" >}})
+
+    renderToMemory只是一個測試，不用實際把實體文件產生在硬碟上，您可以單純運行這個命令來查看是否能順利執行還是有錯誤，方便您測試
+
 
 ### 推薦flags
 

@@ -169,10 +169,182 @@ format: 使用``${}``把變數涵蓋在內
 
 - Date().toLocaleDateString(): 轉換為2021/01/20
 
+## Function
+
+可以用箭頭函數來取代function，例如以下
+
+```js
+var id = 1
+var foo = () => {
+console.log(this.id)
+}
+
+function foo() {
+ console.log(this.id)
+}
+```
+
+## [querySelector](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
+
+```js
+var el = document.querySelector("div.user-panel.main input[name='login']")
+```
+
+## async
+
+```js
+async function a(){
+  await b();
+  ...       // 等 b() 完成後才會執行
+  await c();
+  ...       // 等 c() 完成後才會執行
+  await new Promise(resolve=>{
+    ...
+  });
+  ...       // 上方的 promise 完成後才會執行
+}
+a();
+a().then(()=>{
+  ...       // 等 a() 完成後接著執行
+}).catch(err => {
+    //return false;
+});
+```
+
+
+## Promise
+
+當您拿到一個Promise的時候，代表在未來中這個 Promise 可能會有幾種狀況發生
+
+1. 承諾 被兌現 (fulfilled)
+    用 ``resolve()`` 來兌現
+
+2. 承諾 被打破 (rejected)
+
+    用 ``reject()`` 來表示失敗
+
+3. 承諾 一直沒有回應 (pending)
+
+    一直沒有回傳
+
+而根據以上三種結果，我們有分別不同的處理動作
+
+1. 承諾被兌現``resolve()``就繼續做下一下事 ``.then()``
+2. ``reject()``使用``.catch()``去承接
+3. 一直等待
+
+Promise 可以帶入一個函式，代表著要給予承諾的函式
+
+其中這個函式會被Promise傳入兩個參數(本身也是函數)，
+
+分別為:
+
+- ``fulfilled``我們通常用``resolve``命名
+- ``rejected``
+
+```js
+var a = new Promise(function(resolve, reject) {
+			// sync or async codes
+  			// if success, resolve
+  			// if fail, reject
+		});
+```
+
+### Promise 一直沒有回應 (pending)
+
+當我們並沒有成功 resolve 或是 reject 的時候，就會 pending，也就是說 .then 內的程式會一直等待，而 .catch 也不會抓到任何錯誤。
+
+```js
+var a = new Promise(function(resolve, reject) {})
+
+console.log(a) // Promise {<pending>}
+```
+
+### 其他範例
+
+```js
+const newPromise = new Promise((resolve, reject)=>{
+    setTimeout(()=>{resolve('changed')}, 3000)
+}).then((data)=>{
+    console.log(data)  // 'changed'
+    return 'last changed' // resolve本身還是可以接受回傳值，這個回傳直會繼續往下傳遞
+}).then((data)=>{
+    console.log(data)  // 'last changed'
+    throw new Error('Something failed')
+}).catch(err => {
+    console.log(err)
+})
+```
+
+```js
+async function foo() {
+  try {
+    let result = await doSomething();
+    let newResult = await doSomethingElse(result);
+    let finalResult = await doThirdThing(newResult);
+    console.log(`Got the final result: ${finalResult}`);
+  } catch(error) {
+    failureCallback(error);
+  }
+}
+```
+
+#### [Awaiting a promise to be fulfilled](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await#awaiting_a_promise_to_be_fulfilled)
+
+If a ``Promise`` is passed to an ``await`` expression,
+
+it waits for the ``Promise`` to be fulfilled and returns the ``fulfilled``{{< sup ``resolve`` >}} value.
+
+```js
+function resolveAfter2Seconds(x) {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve(x);
+    }, 2000);
+  });
+}
+
+async function f1() {
+  var x = await resolveAfter2Seconds(10); // ``Promise`` is passed to an ``await``
+  console.log(x); // 10
+}
+
+f1();
+```
+
+#### [讀取檔案內容](https://stackoverflow.com/a/67513624/9935654)
+
+```js
+export async function ReadFile(file) {
+    return await file.text()
+    /*
+    const reader = new FileReader()
+    reader.onload = (event) => {
+      return event.target.result
+    }
+    reader.readAsText(file)
+     */
+}
+
+const selectedFile = document.getElementById('uploadFile').files[0] // https://developer.mozilla.org/en-US/docs/Web/API/File/Using_files_from_web_applications
+const promise = new Promise(resolve => {
+  const fileContent = ReadFile(selectedFile) // 因為讀取是異步的，所以我們必須借用Promise來確保真的讀取完了
+  resolve(fileContent)
+})
+
+promise.then(fileContent => {
+  console.log(fileContent)
+})
+```
+
 ## 參考資料
 
+- [web.dev: promises](https://web.dev/promises/)
 - [JavaScript Tester]
-
+- [1.5万字概括ES6全部特性(已更新ES2020)](https://segmentfault.com/a/1190000020678240)
+- [JavaScript Await 與 Async](https://wcc723.github.io/javascript/2017/12/30/javascript-async-await/)
+- [使用 Promise 處理非同步](https://wcc723.github.io/javascript/2017/12/29/javascript-proimse/)
+- ★我覺得寫得很棒！ 👉 [JavaScript - Promise (2)](https://ithelp.ithome.com.tw/articles/10197529)
 
 [線上測試]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
 [JavaScript Tester]: https://www.webtoolkitonline.com/javascript-tester.html

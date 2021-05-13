@@ -10,7 +10,7 @@ toc_markmap = true
 toc_bootstrap = true
 [next_and_previous.link]
     previous_page = ""
-    next_page = "pg_lang/golang/go-oop"
+    next_page = "go-mod"
     previous_section = ""
     next_section = ""
 +++
@@ -84,6 +84,12 @@ asmfmt | ``github.com/klauspost/asmfmt@master`` | ``%userprofile%\go\bin``
 
    若沒有``go.mod``就依照正常的方式運作。
 
+   可以透過
+
+   > go env -w GO111MODULE=on
+
+   來設定
+
 @@NEW-COL@@
 
 ```
@@ -102,6 +108,8 @@ Path=...;%GOPATH%\bin
 
   - Unix: ``$HOME/go``
   - Windows``%USERPROFILE%/go``
+
+    > :exclamation: 不建議用%USERPROFILE%，在windows中有的程式會抓成 ``C:\WINDOWS\system32\config\systemprofile``
 
 以下我只談Windows的設定:
 
@@ -224,7 +232,7 @@ indent_style = tab
 #### 編譯
 
 編譯並產生執行檔，此執行檔位於當前的工作目錄中
-- go build  // compile packages and dependencies
+- go build compile packages and dependencies
 - go build -o bin/main.exe src/main/main.go
 
   > :orange_book: 所有的路徑都是``相對於您的工作路徑``，如果目錄資料夾不存在會新增。
@@ -376,9 +384,18 @@ go doc和godoc是不同的東西
 
 ## go get & go clean
 
+go get: 在GO111MODULE=on時會載到 (``pkg/mod``)
+
+> ``%GOPATH%/pkg/mod/github.com/auth/repName``
+
+而如果不使用module，則會載到 (``src``)
+
+> ``%GOPATH%/src/github.com/auth/repName``
+
 - ``go get -u -v`` golang.org/x/tools/cmd/godoc
   - ``-u`` 更新 連同 相依套件也會一併更新  (一般的go get只會抓取遺失的檔案並不會去更新，所以要更新就用-u)
   - ``-v`` 顯示詳細資訊
+  - ``-d`` The -d flag instructs get not to build or install packages
 
   範例:
     > require github.com/stretchr/testify v1.7.0
@@ -518,9 +535,33 @@ GOPROXY下載通常速度都比直接從VCS要快得多！
 
 [^VCS]: [version control syste](https://zh.wikipedia.org/wiki/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6)
 
+
+### Go的坑
+
+#### Value and Reference
+
+傳值的型別有:
+
+- int系列
+- float系列
+- bool
+- string
+- **array**
+- **struct**
+
+引用的型別有:
+
+- pointer
+- slice
+- map
+- channel
+- func
+- **interface**
+
 ## 參考資料
 
 - https://www.mdeditor.tw/pl/2J1M/zh-tw
+- https://www.mdeditor.tw/pl/gdPL/zh-tw
 
 [vim-plug]: https://github.com/junegunn/vim-plug
 [fatih/vim-go]: https://github.com/fatih/vim-go

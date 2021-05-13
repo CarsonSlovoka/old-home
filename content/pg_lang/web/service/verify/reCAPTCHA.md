@@ -6,7 +6,7 @@ lastmod = 2021-03-22
 featured_image = ""
 draft = false
 weight = 0
-tags = ["reCAPTCHA", "google"]
+tags = ["recaptcha", "google"]
 markmap = true
 toc_markmap = true
 +++

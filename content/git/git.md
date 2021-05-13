@@ -327,6 +327,50 @@ rebase比較常用在搬移，當您不想要
 
 之後master之後就會長出所有dev的東西(這邊我假設您沒有任何的conflict)
 
+## [git pull](https://git-scm.com/docs/git-pull/2.31.0)
+
+官方語法:
+
+> ``git pull [<options>] [<repository> [<refspec>…]]``
+
+所謂的repository指的是遠端(remote)分支的名稱
+
+refspec就是您的分支名稱(當然您要給sha1的數值也可以)
+
+官方部分說明如下
+
+``git pull`` is shorthand for ``git fetch`` followed by ``git merge FETCH_HEAD``.
+
+例如:
+
+> git pull remoteName develop
+
+等同執行
+
+> git fetch remoteName develop
+>
+> * branch            develop    -> FETCH_HEAD  (意思是說現在FETCH_HEAD的位子就是在此)
+
+接下來
+
+> git merge FETCH_HEAD
+
+
+FETCH_HEAD ?
+
+> 當我們使用fetch的時候會把遠端分支的內容拉回到本機端，這時候該分支並沒有任何名稱(他只會紀錄remote的名稱)，
+>
+> 那我們怎麼知道此分支的節點名稱到底是什麼？
+>
+> 其實看sha1就知道了。簡單來說FETCH_HEAD就是fetch回來分支的節點(最末節點)的sha1值
+>
+
+所以實際上您也可以
+
+> git checkout FETCH_HEAD
+
+就可以知道目前FETCH_HEAD的位子在哪裡了
+
 ## .gitignore
 
     public/

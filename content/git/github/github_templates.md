@@ -2,7 +2,7 @@
 title = "Templates"
 description="教您如何在github上刻製化樣板"
 date = 2021-02-19T16:38:10+08:00
-lastmod = 2021-03-12
+lastmod = 2021-04-29
 featured_image = ""
 draft = false
 weight = 0
@@ -65,9 +65,11 @@ Settings → (往下滑) → Features
 [結構](https://github.com/gohugoio/hugo/tree/master/.github)，如下
 
 ```
+CONTRIBUTING.md # issue
 SECURITY.md  # Security中會看到的東西
 .github 📂
     - SUPPORT.md  # 發問issue時會提醒使用者
+    - PULL_REQUEST_TEMPLATE.md  # 建立pull request時的樣板
     - dependabot.yml
     - 📂 workflows  (裡面放的就是自己建立的yml，看你有多少workflows就建立多少個，高興就好！)
         - stale.yml  # 這是一個人家寫好的bot，可以自動地把一些issues做歸類，而不靠人工處理
@@ -79,6 +81,12 @@ SECURITY.md  # Security中會看到的東西
         - feature_request.md  # 自定義的issue樣板
 
 ```
+
+#### CONTRIBUTING.md
+
+在發問issues時，右偏上的位置會出現的連結，提示您如果要做貢獻的時候該注意哪些事項
+
+{{< insert-figure "images/git/github/contributing.png" >}}
 
 #### SECURITY.md
 
@@ -116,11 +124,31 @@ Also see [Hugo's Security Model](https://gohugo.io/about/security-model/).
 
 {{< insert-figure "images/git/github/issues_support.png" >}}
 
+#### [PULL_REQUEST_TEMPLATE.md](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository)
+
+建立完之後，當有pull request的請求，就會自動帶入此樣板
+
+```md
+- [ ] **Bug fix?**
+
+- [ ] **New Feature?**
+
+**Resolve an issue?**
+<!-- Please prefix each issue number with  "Fix #"  (e.g. Fix #200)  -->
+
+**Example(s)?**
+
+<!-- Love bootstrap-table? Please consider supporting our collective:
+👉  https://opencollective.com/bootstrap-table/donate -->
+```
+
+👆 以上範例來至[bootstrap-table.PULL_REQUEST_TEMPLATE.md](https://github.com/CarsonSlovoka/bootstrap-table/blob/1fae91f/.github/PULL_REQUEST_TEMPLATE.md)
+
 #### [dependabot.yml](https://dependabot.com/docs/config-file/)
 
 👉 [github Docs文件](https://docs.github.com/cn/github/administering-a-repository/keeping-your-dependencies-updated-automatically)
 
-Dependabot 可以自动維护您的倉庫的依賴項。
+Dependabot 可以自動維护您的倉庫的依賴項。
 
 {{< table/code-by-example "　"  "dependabot.yml" >}}
 
@@ -145,7 +173,7 @@ updates:
 {{< /table/code-by-example >}}
 
 
-#### 📂 workflows
+#### 📂 [workflows]
 
 什麼是[workflows]? 他有點像是[circleCI](https://circleci.com/)
 
@@ -165,6 +193,9 @@ updates:
 
 - [hugo.workflows.test.yml]
 - [stale.yml](https://github.com/probot/stale)
+- ★[check-api.yml](https://github.com/CarsonSlovoka/bootstrap-table/blob/5991107/.github/workflows/check-api.yml)
+
+    這是我的其中一個腳本，主要是使用golang來爬取文檔的資料，檢查資料有沒有輸入錯誤。
 
 當然如果您願意可以一次建立很多workflow，反正每一個workflow都是獨立的，而且每一個都有各自的觸發程序。
 
@@ -188,9 +219,11 @@ jobs:  # 可以一次放很多job
     runs-on: ${{ matrix.os }}  # 要在哪些作業系統運行，他會依次的傳遞每個項目給steps，也就是能在steps中，使用matrix.os得到目前是位於哪一個平台
     steps:
       - name: Install Go
-        uses: actions/setup-go@37335c7bb261b353407cff977110895fa0b4f7d8
-        with:
-          go-version: ${{ matrix.go-version }}
+        # Setup Go environment: https://github.com/marketplace/actions/setup-go-environment
+        uses: actions/setup-go@37335c7bb261b353407cff977110895fa0b4f7d8 # 這邊是引用其他人寫好的github action: https://github.com/actions/setup-go
+        with: # https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idstepswith
+          go-version: ${{ matrix.go-version }} # INPUT_GO-VERSION
+        # 注意! a step cannot have both the `uses` and `run` keys  有with就不能再寫run了
       - name: Install Ruby
         uses: actions/setup-ruby@5f29a1cd8dfebf420691c4c9a0e832e2fae5a526
         with:
@@ -256,6 +289,10 @@ jobs:  # 可以一次放很多job
           ./hugo -s docs/
           ./hugo --renderToMemory -s docs/
 ```
+
+##### Log
+
+- https://docs.github.com/en/actions/managing-workflow-runs/using-workflow-run-logs
 
 #### 📂 ISSUE_TEMPLATE
 
@@ -368,20 +405,21 @@ contact_links:
 - [beego .github]
 - ★[一些ISSUE_TEMPLATE的參考](https://github.com/compiler-s20/discussion)
 
-## labels
+### labels
 
 請參考:
 
 - [About default labels](https://docs.github.com/en/github/managing-your-work-on-github/managing-labels#about-default-labels)
 - [搜尋標籤](https://docs.github.com/cn/github/managing-your-work-on-github/using-search-to-filter-issues-and-pull-requests)
 
-### [Search by the title, body, or comments](https://docs.github.com/en/github/searching-for-information-on-github/searching-issues-and-pull-requests#search-by-the-title-body-or-comments)
+#### [Search by the title, body, or comments](https://docs.github.com/en/github/searching-for-information-on-github/searching-issues-and-pull-requests#search-by-the-title-body-or-comments)
 
 | Qualifier | Example |
 | ---- | ---- |
 ``in:title`` | ``warning in:title`` matches issues with "warning" in their title.
 ``in:body`` | ``error in:title,body`` matches issues with "error" in their title or body.
 ``in:comments`` | ``shipit in:comments`` matches issues mentioning "shipit" in their comments.
+``issue: 3 4 5`` | 搜尋#3, #4, #5
 
 
 ## [Github主頁上的README.md](https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/managing-your-profile-readme)

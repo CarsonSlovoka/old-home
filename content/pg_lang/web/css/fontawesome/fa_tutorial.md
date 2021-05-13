@@ -29,9 +29,15 @@ fontawesome主要就是用來取得一些漂亮的圖標的，
 
 每一種都有提供CSS, JS等等幫助您快速應用，而本篇只講fontawesome
 
-## 取得線上的CSS, JS
+## cdnjs, jsdelivr, unpkg
 
-{{<raw_html>}}<a href="https://cdnjs.com/libraries/">cdnjs.com/libraries<i class='fas fa-code fa-2x' style='color: #ff6934'"></i></i></a>{{</raw_html>}}
+取得線上的CSS, JS
+
+- {{<raw_html>}}<a href="https://cdnjs.com/libraries/">cdnjs.com/libraries<i class='fas fa-code fa-2x' style='color: #ff6934'"></i></i></a>{{</raw_html>}}
+- {{<raw_html>}}<a href="https://www.jsdelivr.com/package/npm/">tableexport.jquery.plugin<i class='fas fa-code fa-2x' style='color: #ff6934'"></i></i></a>{{</raw_html>}}
+    - 點進去下方有一個*搜尋*，輸入之後可以搜尋到npm有的項目
+- https://unpkg.com/
+    - 例如: [jspdf.umd.min.js](https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js)
 
 搜尋自己要的套件，有名的套件應該都可以找的到
 
@@ -96,6 +102,8 @@ Generate Subresource Integrity (SRI) attributes
 
 [getemoji.com](https://getemoji.com/)
 
+> 其實Unicode您也可以在這個 [網站](https://emojipedia.org/1st-place-medal/) 上就可以看見了，在比較下面的地方有一個Codepoints，可以看見UNICODE碼位
+
 {{< table/bootstrap-table table-info >}}
 
 | @@w=10%@@name | @@w=40%@@Icon Desc | @@w=10%@@Code | @@w=30%@@Comment |　|
@@ -143,6 +151,7 @@ Generate Subresource Integrity (SRI) attributes
 ❓ | QUESTION MARK\nCommunity Support | 2753
 👍 | 讚
 👉 | Pointing Right | 1F449
+👈 | Pointing Left
 👆 | Pointing Up | 1F446
 👇 | Pointing Down | 1F447
 😂 | Laughing |
@@ -152,9 +161,17 @@ Generate Subresource Integrity (SRI) attributes
 😎 | SMILING FACE WITH SUNGLASSES | 1F60E
 😁 | GRINNING FACE WITH SMILING EYES | 1F60E
 😆 | SMILING FACE WITH OPEN MOUTH AND TIGHTLY-CLOSED EYES | 1F606
+🙂 |
+🤔 | Thinking Face Emoji
 🤣 | Rolling on the Floor Laughing,
 🗑 | deprecated
 🚮 | deprecated
+☑ | | U+2611
+☐ | | U+2610
+🏆 | Trophy | 1F3C6
+🥇 | 1st Place Medal | 1F947
+🥈 | 2nd Place Medal | 1F948
+🥉 | 3rd Place Medal | 1F949
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 

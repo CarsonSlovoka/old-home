@@ -1,7 +1,7 @@
-+++ title = "Golang OOP"
++++ title = "Golang Module"
 description="教您如何管理模塊"
 date = 2021-01-22T16:57:58+08:00
-lastmod = 2021-01-22
+lastmod = 2021-04-29
 featured_image = ""
 draft = false
 weight = 0
@@ -45,9 +45,13 @@ import (
 )
 ```
 
-那麼就是抓以下這份檔案:
+如果GO111MODULE非啟用，那麼就是抓以下這份檔案:
 
 > ```%GOPATH%/src```/my_pgk_dir/sub/main_file.go
+
+如果GO111MODULE=on時是抓
+
+> %GOPATH%/pkg/mod
 
 :orange_book: 您可以有多個GOPATH，他會去抓您每一個GOPATH底下的src檔案
 
@@ -117,7 +121,7 @@ func main() {
     - go 1.5前，完全依賴GOPATH
     - [go 1.5 vendor](https://golang.org/doc/go1.5)
     - [go 1.9 dep](https://golang.org/doc/go1.9)
-    - [go 1.11  modules](https://golang.org/doc/go1.11), 簡稱mod
+    - [go 1.11 modules](https://golang.org/doc/go1.11), 簡稱mod
 
 - 第三方
 
@@ -141,6 +145,7 @@ func main() {
    > require github.com/shomali11/util v0.0.0-20200329021417-91c54758c87b
    >
 4. ``go list -m all``:可以查看目前package用到那些相依的套件
+   - ``go list -m -u all`` : 更新所有套件
 5. ``go get``
 
     - 如果您所在的資料夾含有``go.mod`` go get下載回來的檔案是放在``%gopath%\pkg\mod\``之中
@@ -330,15 +335,218 @@ go.sum您不需要動，go.sum是跟著go.mod的檔案，
 
 > ``go mod tidy``
 
+## [pkg.go.dev]
+
+這邊的資料是抓github的東西
+
+當您從別人的專案fork回去，其實您在 [這邊](https://pkg.go.dev/) 就可以馬上搜到該份代碼
+
+同時也意味著您已經可以在您的專案import該項目
+
+舉例:
+
+- pkg: [CarsonSlovoka/go-windows-programming](https://pkg.go.dev/github.com/CarsonSlovoka/go-windows-programming)
+- [github](https://github.com/CarsonSlovoka/go-windows-programming/tree/ff0b400)
+
+在github中如果您進行了新的commit，並且也已經送到了github上去
+
+但您會發現
+
+> go mod tidy
+
+還是沒有更新成功
+
+```
+module xxx
+
+go 1.16
+
+require (
+	github.com/CarsonSlovoka/go-windows-programming v0.0.0-20190526062745-ff0b400d8c7b
+)
+```
+
+- v0.0.0-20190526062745-ff0b400d8c7b (後面是 日期|時間 - sha1前12碼)
+
+您要通知pkg.go有更新，所以要利用``go get -u``指令
+
+> go get -u github.com/CarsonSlovoka/go-windows-programming
+
+接著您就會發現 [pkg.go.dev-go-windows-programming](https://pkg.go.dev/github.com/CarsonSlovoka/go-windows-programming?tab=versions) 已經更新了
+
+總之所有您的github專案都可以透過go get -u 去發佈到 [pkg.go.dev]
+
+然後通常他們會要求幾項東西:
+
+Details
+
+1. Valid go.mod file : 要有go.mod檔案
+2. Redistributable license : 要添加license
+3. Tagged version : 要用tag來標籤(通常是標籤在release的地方)
+4. Stable version : 至少要達到v1才算穩定
+
+## go.mod的版號
+
+您可能會看到v2, v3, ...
+
+在官方有建議兩種做法，如果您要發佈一個與前面不兼容的版本
+
+1. 直接改go.mod，在後面直接補上主版號:
+
+    ```
+    module xxx/v2
+
+    go 1.16
+
+    require (
+
+    )
+    ```
+
+2. 建立子資料夾:
+
+    建立v2的資料夾，然後複製一份到v2裡面接著改... 個人不建議這種方式
+
+
+## GO好用的指令
+
+| Name | Desc  | Example  |
+| ---- | ----  | ---- |
+``go help <cmd>`` | 顯示幫助
+``go env <OPTIONS>`` | 可以顯示環境變數，後面可以指定要顯示什麼 | go env GOPATH GOROOT
+``go list -m -u all`` | 更新所有套件 |
+``go list -m all`` | 顯示所有套件 |
+``go get -u`` | 更新某套件
+``go get -u -d`` | 更新某套件，但不執行任何動作，只要下載就好了
+``go build -x -v`` | build並且顯示詳細資訊 |  -x: print the commands  -v: print the names of packages as they are compiled.
+
+
+## GO特殊套件安裝
+
+這些是比較難安裝的套件
+
+| Name | Desc |
+| ---- | ---- |
+[![magefile/mage](https://github-readme-stats.vercel.app/api/pin?username=magefile&repo=mage)](https://github.com/magefile/mage) |
+{{% github/st mattn go-sqlite3 %}} |
+
+
+
+### magefile/mage
+
+因為他要跑特殊的.go專案，所以預設用-d不要做任何動作下載就好
+
+```
+go get -u -d github.com/magefile/mage
+cd %GOPATH%/src/github.com/magefile/mage 或 cd %GOPATH%/pkg/mod/github.com/magefile/mage
+go run bootstrap.go
+```
+
+以上的作法您可能會遇到 .git 的錯誤訊息，我不曉得這麼做關 git 什麼事
+
+您可以改直接抓專案的方式，我會推薦以下這種作法(至少對我來說是可行的)
+
+```
+git clone https://github.com/magefile/mage
+cd mage
+go run bootstrap.go
+```
+
+#### mage -init
+
+> mage -init
+
+會生成檔案
+
+> magefile.go
+
+> 📙 名稱不一定要是 magefile.go 但不建議改
+
+#### mage -h
+
+```
+mage [options] [target]
+
+Mage is a make-like command runner.  See https://magefile.org for full docs.
+
+Commands:
+  -clean    clean out old generated binaries from CACHE_DIR
+  -compile <string>
+            output a static binary to the given path
+  -h        show this help
+  -init     create a starting template if no mage files exist
+  -l        list mage targets in this directory
+  -version  show version info for the mage binary
+
+Options:
+  -d <string>
+            directory to read magefiles from (default ".")
+  -debug    turn on debug messages
+  -f        force recreation of compiled magefile
+  -goarch   sets the GOARCH for the binary created by -compile (default: current arch)
+  -gocmd <string>
+		    use the given go binary to compile the output (default: "go")
+  -goos     sets the GOOS for the binary created by -compile (default: current OS)
+  -h        show description of a target
+  -keep     keep intermediate mage files around after running
+  -t <string>
+            timeout in duration parsable format (e.g. 5m30s)
+  -v        show verbose output when running mage targets
+  -w <string>
+            working directory where magefiles will run (default -d value)
+```
+
+#### 如何使用
+
+magefile.go
+```go
+// +build mage
+
+package main
+
+// ...
+// Build hugo binary
+func Hugo() error {
+	return runWith(flagEnv(), goexe, "build", "-ldflags", ldflags, buildFlags(), "-tags", buildTags(), packageName)
+}
+```
+
+> mage -v hugo
+
+表示執行``Hugo()``的函數，指令中都用小寫
+
+#### 錯誤訊息
+
+> magefile.go doesn't match to target system. File will be ignored by build tool
+
+這是因為go1.16不支持開頭的這種寫法
+
+```
+// +build mage
+```
+
+### mattn/go-sqlite3
+
+- ``go get -u -d`` : 先只下載
+- cd 過去 ( mod啟用的狀態下是在 ``GOPATH/pkg/mod/github.com/mattn/go-sqlite3`` )
+- ``go build -v``: 完成之後會看到套件名稱 ``github.com/mattn/go-sqlite3``
+
+一定要先這樣做，不能每一次專案都還會再重新編譯，可能光編譯就至少耗掉一分多鐘了...
+
+完成了之後在執行您的專案，應該是秒執行😎
+
+
+
 ## 參考資料
 
 - [go_84pdf](https://www.openmymind.net/assets/go/go.pdf)
 - [go interface](https://github.com/astaxie/build-web-application-with-golang/blob/master/zh-tw/02.6.md)
 - [gvm + go mod](https://medium.com/golang-%E7%AD%86%E8%A8%98/gvm-go-mod-492a54c15c41)
-- [谈谈go.sum](https://studygolang.com/articles/25658)
+- [談談go.sum](https://studygolang.com/articles/25658)
 
 [govendor]: https://github.com/kardianos/govendor
 [godep]: https://github.com/tools/godep
 [glide]: https://github.com/Masterminds/glide
 [vgo]: https://github.com/golang/go/wiki/vgo#projects-related-to-vgo
 [go mod]: https://blog.golang.org/using-go-modules
+[pkg.go.dev]: https://pkg.go.dev

@@ -70,3 +70,16 @@ toc_bootstrap = true
 | Name | Desc |
 | ---- | ---- |
 [![colly](https://github-readme-stats.vercel.app/api/pin?username=gocolly&repo=colly)](https://github.com/gocolly/colly) |
+
+
+## 其他github不錯的項目
+
+此區的項目可能與golang無關
+
+| Name | Desc |
+| ---- | ---- |
+{{% github/st ventoy Ventoy %}} |
+
+### 參考資料
+
+- [免費USB多重系統選單](https://walker-a.com/archives/6571) |

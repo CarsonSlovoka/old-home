@@ -9,6 +9,8 @@ weight = 0
 tags = ["service", "comment"]
 markmap = true
 toc_markmap = true
+disqus_identifier = "disqus-introduction"
+disqus_title = "Disqus介紹"
 +++
 
 ## 前言
