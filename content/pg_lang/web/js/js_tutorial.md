@@ -68,6 +68,29 @@ console.log(rest);
 // expected output: Array [30,40,50]
 ```
 
+#### [splice (insert)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
+
+語法
+> splice(start, deleteCount, item1, item2, itemN)
+
+```js
+const months = ['Jan', 'March', 'April', 'June'];
+months.splice(1, 2, 'Feb');
+```
+
+這是把Feb插入到index 1之後的結果
+> 'Jan', ``'Feb'``, 'March', 'April', 'June'
+
+而deleteCount為2所以從index 1之後的**2**個元素要刪除
+
+> 'Jan', ``'Feb'``, ~~'March', 'April'~~ 'June'
+
+得到最後結果
+
+> 'Jan', ``'Feb'``, 'June'
+
+這種效率很好，它不是重新產生新的陣列，而是在原本的陣列進行異動
+
 ### dict
 
 當變數名稱和key名稱相同的時候，可以直接放入該變數即可

@@ -127,6 +127,9 @@ next_section = ""
 [Reading file contents on the client-side in javascript in various browsers] |
 [Push to GitHub without a password using ssh-key] |
 [How to read data From *.CSV file using javascript?] |
+[Is it possible to add dynamically named properties to JavaScript object?] | ``(obj = {}, obj[field] = 123, obj)``
+[Is it possible to dynamically load Go code?] | - https://golang.org/pkg/os/exec/#example_Cmd_Run  - https://golang.org/pkg/plugin/
+[Load package dynamically (GO)] | https://mojotv.cn/go/golang-plugin-tutorial
 
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
@@ -235,6 +238,9 @@ next_section = ""
 [Reading file contents on the client-side in javascript in various browsers]: https://stackoverflow.com/a/64113219/9935654
 [Push to GitHub without a password using ssh-key]: https://stackoverflow.com/q/14762034/9935654
 [How to read data From *.CSV file using javascript?]: https://stackoverflow.com/a/7431565/9935654
+[Is it possible to add dynamically named properties to JavaScript object?]: https://stackoverflow.com/a/63235463/9935654
+[Is it possible to dynamically load Go code?]: https://stackoverflow.com/q/18237863/9935654
+[Load package dynamically (GO)] https://stackoverflow.com/q/24641296/9935654
 
 {{< /table/bootstrap-table >}}
 
