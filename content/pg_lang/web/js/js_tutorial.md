@@ -17,9 +17,17 @@ toc_bootstrap = true
   next_section = ""
 +++
 
-## [線上測試]
+## 線上測試
 
-直接在[線上測試]的範例中刪除，打上您的範例就可以線上測試了。
+### MDN Web Docs
+
+直接在[MDN Web Docs]的範例中刪除，打上您的範例就可以線上測試了。
+
+### [Plunker/plnkr](https://plnkr.co/)
+
+我覺得很棒，裡面有很多範例可以參考，也可以編輯，同時也提供線上運行。
+
+可以逛逛，有機會挖到寶😎
 
 ## Docs
 
@@ -369,7 +377,7 @@ promise.then(fileContent => {
 - [使用 Promise 處理非同步](https://wcc723.github.io/javascript/2017/12/29/javascript-proimse/)
 - ★我覺得寫得很棒！ 👉 [JavaScript - Promise (2)](https://ithelp.ithome.com.tw/articles/10197529)
 
-[線上測試]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
+[MDN Web Docs]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
 [JavaScript Tester]: https://www.webtoolkitonline.com/javascript-tester.html
 [MDN Web Docs-JavaScript]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
 [JSON.stringify()]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
