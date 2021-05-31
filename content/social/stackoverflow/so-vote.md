@@ -131,6 +131,8 @@ next_section = ""
 [Is it possible to dynamically load Go code?] | - https://golang.org/pkg/os/exec/#example_Cmd_Run  - https://golang.org/pkg/plugin/
 [Load package dynamically (GO)] | https://mojotv.cn/go/golang-plugin-tutorial
 [How do you add Bootstrap buttons in Bootstrap Table] |
+[Trim string's suffix or extension?] | ``strings.TrimSuffix(basename, filepath.Ext(basename))``
+[How can I reference a commit in an issue comment on GitHub?] |
 
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
@@ -243,6 +245,8 @@ next_section = ""
 [Is it possible to dynamically load Go code?]: https://stackoverflow.com/q/18237863/9935654
 [Load package dynamically (GO)]: https://stackoverflow.com/q/24641296/9935654
 [How do you add Bootstrap buttons in Bootstrap Table]: https://stackoverflow.com/a/39793454/9935654
+[Trim string's suffix or extension?]: https://stackoverflow.com/a/21538822/9935654
+[How can I reference a commit in an issue comment on GitHub?]: https://stackoverflow.com/q/8910271/9935654
 
 {{< /table/bootstrap-table >}}
 
