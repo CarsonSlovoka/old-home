@@ -133,6 +133,8 @@ next_section = ""
 [How do you add Bootstrap buttons in Bootstrap Table] |
 [Trim string's suffix or extension?] | ``strings.TrimSuffix(basename, filepath.Ext(basename))``
 [How can I reference a commit in an issue comment on GitHub?] |
+[How do I (succinctly) remove the first element from a slice in Go?] | queue: ``x, a = a[0], a[1:]`` stack: ``x, a = a[len(a)-1], a[:len(a)-1]`` push: ``a = append(a, x)``
+[error: template: “…” is an incomplete or empty template] |
 
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
@@ -247,6 +249,8 @@ next_section = ""
 [How do you add Bootstrap buttons in Bootstrap Table]: https://stackoverflow.com/a/39793454/9935654
 [Trim string's suffix or extension?]: https://stackoverflow.com/a/21538822/9935654
 [How can I reference a commit in an issue comment on GitHub?]: https://stackoverflow.com/q/8910271/9935654
+[How do I (succinctly) remove the first element from a slice in Go?]: https://stackoverflow.com/a/23532104/9935654
+[error: template: “…” is an incomplete or empty template]: https://stackoverflow.com/q/49043292/9935654
 
 {{< /table/bootstrap-table >}}
 

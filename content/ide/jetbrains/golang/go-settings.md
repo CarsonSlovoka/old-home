@@ -14,8 +14,8 @@ toc_bootstrap = true
 
 ## Visual studio Keymap
 
-| name | hotkey |
-| ---- | ---- |
+| name | hotkey | Desc |
+| ---- | ---- | ---- |
 | Open in terminal | {{< hotkey "Alt + C" >}}
 | Show in Explorer | {{< hotkey "Alt + W" >}}
 | Recent Files | {{< hotkey "Ctrl + E" >}}
@@ -37,6 +37,9 @@ Add to Watches | {{< hotkey "`" >}}
 Add to Watches | {{< hotkey "`" >}}
 Move Right | {{< hotkey "Alt+Right" >}} (default)
 Move Left | {{< hotkey "Alt+Left" >}} (default)
+Toggle Bookmark with Mnemonic | {{< hotkey "Ctrl+F11" >}} (default) | 會有選單讓您設置書籤編號
+Show Bookmarks | {{< hotkey "Ctrl+`" >}} (default) | 出現選單讓您選擇要到哪一個bookmark的標籤去
+Toggle Bookmark | {{< hotkey "Ctrl+K" >}}, {{< hotkey "Ctrl+K, Ctrl+K" >}} | 按一次可以新增書籤(無編號書籤)，在以新增的書籤在按一次則取消書籤
 
 {{< table/bootstrap-table >}}
 

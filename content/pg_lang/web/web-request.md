@@ -40,9 +40,8 @@ text/csv | 如果沒有互動用這個比較好
 application/pdf |
 application/msword | Word文檔格式
 application/octet-stream | 二進制流數據（如常见的文件下载） **一次只能上傳一個** 文件
-multipart/form-data | 可以上傳文件(包含二進位資料)也可以上傳表單的鍵值對，只是最後會轉成一條信息
+multipart/form-data | 表單中如果需要文件上傳，就要用這種格式。 可以上傳文件(包含二進位資料)也可以上傳表單的鍵值對，只是最後會轉成一條信息
 application/x-www-form-urlencoded | 會將表單內的數據轉成鍵值對，例如: name=golang&msg=hello  ``<0form encType="">``中默認的encType的數值，form表單數據會被編為成key/value格式上傳到伺服器（表單默認的提交格式)
-multipart/form-data | 表單中如果需要文件上傳，就要用這種格式
 text/plain |
 text/html | HTML
 

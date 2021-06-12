@@ -163,6 +163,8 @@ bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的�
 🤝 | Contributing | 1F91D
 💕 | TWO HEARTS\nDonation | 1F495
 ❓ | QUESTION MARK\nCommunity Support | 2753
+❌ |  Cross Mark | 274C
+⭕ | hollow_red_circle | 2B55
 👍 | 讚
 👉 | Pointing Right | 1F449
 👈 | Pointing Left
@@ -186,6 +188,7 @@ bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的�
 🥇 | 1st Place Medal | 1F947
 🥈 | 2nd Place Medal | 1F948
 🥉 | 3rd Place Medal | 1F949
+✍️| Writing Hand | 270D
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 
