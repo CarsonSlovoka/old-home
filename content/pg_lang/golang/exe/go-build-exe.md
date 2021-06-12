@@ -24,6 +24,13 @@ toc_bootstrap = true
 
 > ``go build -ldflags -H=windowsgui``
 
+## 更小的執行檔
+
+- s 去掉符號信息，
+- ```-w``` 去掉DWARF調試信息，得到的程序就不能用gdb調試了
+
+> ``go build -ldflags -s -w``
+
 ## 如何為您的程式加上詳細內容
 
 這邊一共會教您兩樣東西
