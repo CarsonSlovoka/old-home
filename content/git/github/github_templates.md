@@ -420,7 +420,7 @@ contact_links:
 ``in:body`` | ``error in:title,body`` matches issues with "error" in their title or body.
 ``in:comments`` | ``shipit in:comments`` matches issues mentioning "shipit" in their comments.
 ``issue: 3 4 5`` | 搜尋#3, #4, #5
-
+✨ ``error in:title,body,comments`` | matches issues with "error" in their title, body, comments.
 
 ## [Github主頁上的README.md](https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/managing-your-profile-readme)
 
