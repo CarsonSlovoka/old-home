@@ -135,6 +135,25 @@ next_section = ""
 [How can I reference a commit in an issue comment on GitHub?] |
 [How do I (succinctly) remove the first element from a slice in Go?] | queue: ``x, a = a[0], a[1:]`` stack: ``x, a = a[len(a)-1], a[:len(a)-1]`` push: ``a = append(a, x)``
 [error: template: “…” is an incomplete or empty template] |
+[fonttools convert ttf to woff2] | 使用套件 ``from fontTools.ttLib import TTFont`` 來完成，試過ttf轉woff或woff2都可以完成。 或者直接使用指令 ``python -c "from fontTools.ttLib import TTFont; f = TTFont('path/to/your/file.otf');f.flavor='woff2';f.save('path/to/your/file.woff2')"``
+[how to load m4a file in python] | ``from pydub import AudioSegment`` ``audio = AudioSegment.from_file('file.m4a')``
+[document.createElement('div') with a class] | ``myBtn.className = "btn"``
+[Append multiple items in JavaScript] | ``foo.append(bar1, bar2, bar3)``
+[Font Awesome icon in select option] |
+[text-align: right on <select> or <option>] | select之中有一個dir停靠的位置可以設定，rtl可以靠右 ``<select dir="rtl">``
+[Async/Await Class Constructor] | ``constructor() {return (async () => {this.value = await asyncFunction(); return this;})();}``
+[Why TrimLeft doesn't work as expected?] | ``strings.TrimPrefix``
+[Structs in Javascript] | ``function StaticInfo(url) { this.url = url}``
+[Is there an onSelect event or equivalent for HTML <select>?] |
+[Font-Face changing via JavaScript] | https://developer.mozilla.org/en-US/docs/Web/API/FontFace/FontFace#example , 記得最後一定要``document.fonts.add(font)``才可以，如果是iframe，則是 ``iframeNode.contentWindow.document.fonts.add(font)``
+[Are dashes allowed in javascript property names?] | key名稱如果有奇怪的符號可以用雙引號包起來 ``{"font-family": "myfont"}``
+[How to create an array containing 1…N] | ``let N=10, i=0, a=Array(N); while(i<N) a[i++]=i;``
+[Downsizing an .OTF font by removing glyphs] |
+[How to disable all div content] | ``<fieldset disabled><legend></legend><div></div></fieldset>``
+[How to add an array of values to a Set] | ``new Set([1,2,3,4])`` ``[1,2,3,4].forEach(mySet.add, mySet)``
+[Named capturing groups in JavaScript regex?] | ``const { groups: { token } } = /(?<token>[^ $]*)/.exec(auth)``
+[Can I use a regular expression in querySelectorAll?] | ``(document.querySelectorAll('div')).filter(function(el){ return el.className.match(/^foo/i);}``  ``document.querySelectorAll('div[class^="foo" i]')``
+
 
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
@@ -251,6 +270,24 @@ next_section = ""
 [How can I reference a commit in an issue comment on GitHub?]: https://stackoverflow.com/q/8910271/9935654
 [How do I (succinctly) remove the first element from a slice in Go?]: https://stackoverflow.com/a/23532104/9935654
 [error: template: “…” is an incomplete or empty template]: https://stackoverflow.com/q/49043292/9935654
+[fonttools convert ttf to woff2]: https://stackoverflow.com/a/60050616/9935654
+[how to load m4a file in python]: https://stackoverflow.com/a/52593312/9935654
+[document.createElement('div') with a class]: https://stackoverflow.com/a/55224626/9935654
+[Append multiple items in JavaScript]: https://stackoverflow.com/q/36798005/9935654
+[Font Awesome icon in select option]: https://stackoverflow.com/q/36743041/9935654
+[text-align: right on <select> or <option>]: https://stackoverflow.com/a/7920784/9935654
+[Async/Await Class Constructor]: https://stackoverflow.com/a/50885340/9935654
+[Why TrimLeft doesn't work as expected?]: https://stackoverflow.com/a/29187186/9935654
+[Structs in Javascript]: https://stackoverflow.com/q/502366/9935654
+[Is there an onSelect event or equivalent for HTML <select>?]: https://stackoverflow.com/a/59113548/9935654
+[Font-Face changing via JavaScript]: https://stackoverflow.com/a/55200528/9935654
+[Are dashes allowed in javascript property names?]: https://stackoverflow.com/a/53726180/9935654
+[How to create an array containing 1…N]: https://stackoverflow.com/a/65244270/9935654
+[Downsizing an .OTF font by removing glyphs]: https://stackoverflow.com/a/68066743/9935654
+[How to disable all div content]: https://stackoverflow.com/a/56388678/9935654
+[How to add an array of values to a Set]: https://stackoverflow.com/a/58996448/9935654
+[Named capturing groups in JavaScript regex?]: https://stackoverflow.com/a/5367407/9935654
+[Can I use a regular expression in querySelectorAll?]: https://stackoverflow.com/a/16791596/9935654
 
 {{< /table/bootstrap-table >}}
 

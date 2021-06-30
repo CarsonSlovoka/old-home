@@ -189,6 +189,9 @@ bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的�
 🥈 | 2nd Place Medal | 1F948
 🥉 | 3rd Place Medal | 1F949
 ✍️| Writing Hand | 270D
+🎵 | Muscial Note | 1F3B5
+🗛 | Decrease Font Size Symbol | 1F5DB
+
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 
