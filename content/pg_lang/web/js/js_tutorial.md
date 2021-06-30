@@ -99,7 +99,7 @@ months.splice(1, 2, 'Feb');
 
 這種效率很好，它不是重新產生新的陣列，而是在原本的陣列進行異動
 
-### dict
+### dict & Object
 
 當變數名稱和key名稱相同的時候，可以直接放入該變數即可
 
@@ -107,6 +107,13 @@ months.splice(1, 2, 'Feb');
 const [key, v] = ["Name", 123]
 const myDict = {key, v}  //  等價於 {"key": key, "v": v}
 ```
+
+#### Object.assign enumerate
+
+```js
+console.log(Object.assign({}, ["a", "b"]))
+// > Object { 0: "a", 1: "b" }
+````
 
 #### Set
 
@@ -366,6 +373,39 @@ const promise = new Promise(resolve => {
 promise.then(fileContent => {
   console.log(fileContent)
 })
+```
+
+## regex
+
+```js
+regex = new RegExp(".*", "gm")
+"test".match(regex)
+
+"test".match(/.*/gm)
+```
+
+注意以下這種寫法可能會有問題，exec會消耗掉前面的regex，所以第二次就可能會出錯
+```js
+const regex = /(\[(?<fieldName>.*): (?<valString>.*),?)\]/gm
+const filterObj = {}
+for (const curColSelectString of items) {
+    const { groups: { fieldName, valString } } = regex.exec(`${curColSelectString}`)
+    filterObj[fieldName] = valString.split(",").map(e=>e.trim())
+}
+```
+
+可以改成
+
+```js
+const { groups: { fieldName, valString } } = /(\[(?<fieldName>.*): (?<valString>.*),?)\]/gm.exec(`${curColSelectString}`)
+```
+
+### [Named capturing groups](https://stackoverflow.com/a/5367407/9935654)
+
+```js
+const auth = 'Bearer AUTHORIZATION_TOKEN'
+const { groups: { token } } = /Bearer (?<token>[^ $]*)/gm.exec(auth)
+console.log(token) // "Prints AUTHORIZATION_TOKEN"
 ```
 
 ## 參考資料
