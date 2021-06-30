@@ -86,6 +86,20 @@ Generate Subresource Integrity (SRI) attributes
 
 ### 搭配bootstrap
 
+#### [Glyphicons](https://www.w3schools.com/bootstrap/bootstrap_ref_comp_glyphs.asp)
+
+bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的用法以及可以用的圖標有哪些，這邊我舉一個例子如下
+
+```html
+<button type="button" class="btn btn-default btn-sm">
+  <span class="glyphicon glyphicon-trash"></span> Trash
+</button>
+```
+
+{{<raw_html>}}<button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-trash"></span> Trash</button>{{</raw_html>}}
+
+
+
 #### button
 
 - link: {{<raw_html>}}<button class="btn btn-primary" onclick="location.href='https://www.google.com/'" type="button"><i class="fas fa-link fa-2x"></i><br>Google</button>{{</raw_html>}}
@@ -149,6 +163,8 @@ Generate Subresource Integrity (SRI) attributes
 🤝 | Contributing | 1F91D
 💕 | TWO HEARTS\nDonation | 1F495
 ❓ | QUESTION MARK\nCommunity Support | 2753
+❌ |  Cross Mark | 274C
+⭕ | hollow_red_circle | 2B55
 👍 | 讚
 👉 | Pointing Right | 1F449
 👈 | Pointing Left
@@ -172,6 +188,10 @@ Generate Subresource Integrity (SRI) attributes
 🥇 | 1st Place Medal | 1F947
 🥈 | 2nd Place Medal | 1F948
 🥉 | 3rd Place Medal | 1F949
+✍️| Writing Hand | 270D
+🎵 | Muscial Note | 1F3B5
+🗛 | Decrease Font Size Symbol | 1F5DB
+
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 

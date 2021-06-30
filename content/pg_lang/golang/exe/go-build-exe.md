@@ -17,12 +17,25 @@ toc_bootstrap = true
   next_section = ""
 +++
 
+## ldflags
 
-## 不顯示console視窗的方法
+我建議如果要打包執行檔出去，用這個指令
 
-利用選項: ``-ldflags -H=windowsgui``
+> ``go build -ldflags "-H=windowsgui -s -w"``
 
-> ``go build -ldflags -H=windowsgui``
+### 不顯示console視窗的方法
+
+利用選項: ``-ldflags "-H=windowsgui"``
+
+> ``go build -ldflags "-H=windowsgui"``
+
+### 更小的執行檔
+
+- ``-s`` 去掉符號信息，
+- ```-w``` 去掉DWARF調試信息，得到的程序就不能用gdb調試了
+
+> ``go build -ldflags "-s -w"``
+
 
 ## 如何為您的程式加上詳細內容
 

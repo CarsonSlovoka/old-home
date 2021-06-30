@@ -14,8 +14,8 @@ toc_bootstrap = true
 
 ## Visual studio Keymap
 
-| name | hotkey |
-| ---- | ---- |
+| name | hotkey | Desc |
+| ---- | ---- | ---- |
 | Open in terminal | {{< hotkey "Alt + C" >}}
 | Show in Explorer | {{< hotkey "Alt + W" >}}
 | Recent Files | {{< hotkey "Ctrl + E" >}}
@@ -37,6 +37,17 @@ Add to Watches | {{< hotkey "`" >}}
 Add to Watches | {{< hotkey "`" >}}
 Move Right | {{< hotkey "Alt+Right" >}} (default)
 Move Left | {{< hotkey "Alt+Left" >}} (default)
+Toggle Bookmark with Mnemonic | {{< hotkey "Ctrl+F11" >}} (default) | 會有選單讓您設置書籤編號
+Show Bookmarks | {{< hotkey "Ctrl+`" >}} (default) | 出現選單讓您選擇要到哪一個bookmark的標籤去
+Toggle Bookmark | {{< hotkey "Ctrl+K" >}}, {{< hotkey "Ctrl+K, Ctrl+K" >}} | 按一次可以新增書籤(無編號書籤)，在以新增的書籤在按一次則取消書籤
+Move Caret to Code Block Start | {{< hotkey "Alt+Shift+[" >}} | 跳到括號的開端
+Move Caret to Code Block Start with Selection | {{< hotkey "Alt+Shift+[" >}} | 和上面的差別，這個會再把所選區域反白
+Move Caret to Code Block End | {{< hotkey "Alt+Shift+]" >}}
+Move Caret to Code Block End with Selection | {{< hotkey "Ctrl+Alt+Shift+]" >}}
+Fold Selection / Remove region | {{< hotkey "Ctrl + . ]" >}} | 相當好用，相當於把當前的括號顯示或隱藏
+Move Caret Backward a Paragraph | {{< hotkey F6 >}} | 往前移到整列為空白的列 (vim也有類似的指令: [shift + \[ ](https://vi.stackexchange.com/questions/10828/visual-select-from-cursor-to-next-empty-line))
+Move Caret Forward a Paragraph | {{< hotkey F8 >}} | 往後移到整列為空白的列
+
 
 {{< table/bootstrap-table >}}
 

@@ -3,7 +3,7 @@ title = "golang基礎教學"
 date = 2021-01-14T10:39:00+08:00
 lastmod = 2021-02-26
 description = "golang安裝以及基礎教學"
-tags = ["golang"]
+tags = ["golang", "go"]
 bootstrap = true
 markmap = true
 toc_markmap = true
@@ -17,7 +17,57 @@ toc_bootstrap = true
 
 ## 下載
 
+### 途徑一: choco
+
+如果您想要choco可以參考:
+
 > 請參考: [套件安裝-常用安裝項目-golang]({{< ref "/os/windows/package_manager#一些常用的安裝項目" >}})
+
+### 途徑二: 官方下載zip檔案
+
+另一個是直接從官方下載: https://golang.org/dl/
+
+選擇zip的下載即可。
+
+完畢之後看您要把解壓縮的檔案放到哪邊去，我會建議放到
+
+> %ProgramFiles%\Go\1.16.2
+
+即在%ProgramFiles%建立一個Go的資料夾，裡面可以放很多版本的Go(假設您有特殊的需求需要裝很多版本的go)
+
+同時這個路徑也是GOROOT的路徑
+
+然後新增一個GOPATH的路徑，這個路徑是屬於放自己SOURCE的地方
+
+我建議放在
+
+> %USERPROFILE%\go\1.16.2
+
+在這個資料中，要新增
+
+- bin
+- pkg
+- src
+
+等三個資料夾
+
+
+### 總結
+
+- GOPATH: ``%USERPROFILE%\go\1.16.2``
+    - bin: 建議把這個資料夾也加入到PATH的環境變數去，因為go install都會跑到這邊來，為了cmd可以直接不需要cd切換，會建議加上此路徑
+    - pkg
+    - src
+
+- GOROOT: ``%ProgramFiles%\Go\1.16.2``
+
+    這個也是golang的IDE設置go SDK的位置
+
+    - 要在您的PATH環境中告知go.exe的位置，所以要加上這個 ``%ProgramFiles%\Go\1.16.2\bin``
+
+#### 其他相關資料
+
+- [多個golang安裝]({{< ref "go-admin/#多個golang安裝" >}})
 
 ## IDE
 

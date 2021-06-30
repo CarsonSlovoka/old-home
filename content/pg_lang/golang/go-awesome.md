@@ -18,6 +18,7 @@ toc_bootstrap = true
 | Name | Desc |
 | ---- | ---- |
 [![negroni](https://github-readme-stats.vercel.app/api/pin?username=avelino&repo=awesome-go)](https://github.com/avelino/awesome-go) | 幫您整理了很多資料，您可以在裡面搜尋到特殊領域相關所推薦的套件
+[![gorgonia/gorgonia](https://github-readme-stats.vercel.app/api/pin?username=gorgonia&repo=gorgonia)](https://github.com/gorgonia/gorgonia) | 範例: [mnist](https://gorgonia.org/tutorials/mnist/#image-representation) 範例: [iris 鳶尾花](https://gorgonia.org/tutorials/iris/)
 
 
 ## net/http相關

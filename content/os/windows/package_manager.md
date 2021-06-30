@@ -140,7 +140,7 @@ choco安裝的套件如果是安裝的檔案也能在``新增移除``找到，�
 | @@w=6em@@名稱 | 安裝指令 | 安裝到哪裡去 | 描述 |
 | -------- | ---- | ---- | ---- |
 | curl     |  ``choco install curl`` |  ``%programdata%\chocolatey\lib\curl\tools`` |  驗證: curl --version\n它可以透過cmd來做一些``Get``, ``Post``等等的操作，作為測試這個工具很棒
-| neovim   | ``choco install neovim --pre``\n(意思是(pre-release) | ``C:\tools/neovim\Neovim\bin`` | 注意neovim裡面也有一個``curl``要用的時候要自己區分一下！
+| neovim   | ``choco install neovim --pre``\n(意思是(pre-release) | ``C:\tools\neovim\Neovim\bin`` | 注意neovim裡面也有一個``curl``要用的時候要自己區分一下！
 | ~~pdftk~~| ``choco install pdftk`` | ``%PROGRAMFILES(X86)%\PDFtk\``\n這個不建議安裝!
 | jre      | ``choco install javaruntime`` | ● ``%PROGRAMFILES%\Java\jre1.8.0_271``\n● ``%PROGRAMFILES(X86)%\Java\jre1.8.0_271`` | 他會裝兩個版本
 | protoc   | ``choco install protoc --pre -y``\n(y會確認執行，不會再問你)| ``%programdata%\chocolatey\lib\protoc\tools`` | [protobuf_google] [protobuf_github]
@@ -149,11 +149,13 @@ choco安裝的套件如果是安裝的檔案也能在``新增移除``找到，�
 | [sass]   | ``choco install sass -y`` | ● ``C:\tools\dart-sdk``\n● ``%programdata%\chocolatey\lib\sass\bin\sass.exe``\n他需要用到dart-sdk還有sass所以需要裝兩個東西 | 使用方法:\n● ``sass input.scss:output.css``\n● ``sass --watch input.scss:output.css --style compressed``\n加上 ``watch`` 可以監測使得檔案異動就自動更新 ``compressed`` 可以壓縮，以一行解決\n● ``sass input.scss:output.css --style compressed --no-source-map``\n不產生``.css.map``檔案\n● ``sass --help``
 | golang   | ``choco install golang -y``| ● ``C:\Go\bin\go.exe``\n● ``C:\Go\bin\gofmt.exe`` | 安裝完之後:\n● ``go version`` 確認有無安裝成功\n● ``gofmt``是用來統一程式碼格式用的東西
 [msys2](https://stackoverflow.com/a/50078531) | ``choco install msys2`` | ``C:\tools\msys64`` | 安裝go-admin可能會要求要安裝gcc所以要先安裝這個東西\n執行:\n > ``C:\tools\msys64\mysys2.exe``\n在mysys2的console中輸入:\n$ ``pacman -S gcc``\n完成之後可以在mysys2中的console\n>``gcc -v``\n但是一般的console沒用，所以不推薦！
-gcc | ``choco install mingw -y`` | ● ``C:\ProgramData\chocolatey\lib\mingw\tools\install``\n● ``C:\ProgramData\chocolatey\bin\gcc.exe`` | 完成之後可以查看版本確認有無裝成功\n>``gcc -v``
+gcc | ``choco install mingw -y`` | ● ``%programdata%\chocolatey\lib\mingw\tools\install``\n● ``%programdata%\chocolatey\bin\gcc.exe`` | 完成之後可以查看版本確認有無裝成功\n>``gcc -v``
 [docker-cli] | ``choco install docker-cli`` | ● ``%programdata%\chocolatey\lib\docker-cli\tools\docker.exe``\n● ``%programdata%\chocolatey\bin\docker.exe`` (這一個是主要的) | ● ``docker --help``\n● ``docker -v``\np.s. ❗ **不要**裝docker這個是``deprecated``的項目
 [reshack] | ``choco install reshack -y`` | ``%PROGRAMFILES(X86)%\Resource Hacker\`` | ❗安裝完畢之後請執行\n``refreshenv``\n~~來刷新環境變數~~\n結果也是沒用，自己加吧...
 [graphviz] | ``choco install graphviz -y`` | ``%programfiles%\Graphviz``\n``%programfiles%\Graphviz\bin\dot.exe``\ngraphviz may be able to be automatically uninstalled.\n安裝完之後有出現以上訊息，其表示也能夠透過「新增/移除」的程式來移除 | plantuml渲染的時候需要用到的東西: dot\n另外還需要下載[plantuml.jar](https://plantuml.com/en/download)
 [slack] | ``choco install slack -y`` | 要自己去看log\n● ``%programdata%\chocolatey\logs\chocolatey.log``\n● ``%programdata%\chocolatey\.chocolatey\slack.4.15.0``\n● ``%programfiles%\Slack\slack.exe`` | 這是一個通訊軟體 \n安裝完之後可以透過新增移除來移除(slack may be able to be automatically uninstalled.)
+[fontforge] | ``choco install fontforge`` | ``%PROGRAMFILES(X86)%\FontForgeBuilds\`` | ● 在新增移除的程式中可以找到。\n● 用這個可以抽字，把一些不必要的字拿掉，使字形檔變小
+[ffmpeg] | ``choco install ffmpeg`` |  ``%programdata%\chocolatey\lib\ffmpeg\tools\ffmpeg\bin`` | ● python的``from pydub import AudioSegment``可能需要用到。\n● 要自己加入系統變數，才可以抓地到ffmpeg.exe的路徑。
 
 [protobuf_google]: https://developers.google.com/protocol-buffers/docs/overview
 [protobuf_github]: https://github.com/protocolbuffers/protobuf
@@ -163,6 +165,8 @@ gcc | ``choco install mingw -y`` | ● ``C:\ProgramData\chocolatey\lib\mingw\too
 [reshack]: http://www.angusj.com/resourcehacker/
 [graphviz]: https://graphviz.org/download/
 [slack]: https://slack.com/
+[fontforge]: https://community.chocolatey.org/packages/fontforge
+[ffmpeg]: https://community.chocolatey.org/packages/ffmpeg
 
 {{< /table/bootstrap-table >}}
 

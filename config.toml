@@ -119,7 +119,7 @@ disqusShortname = "carson-blog"
   [[menus.main]]
     name = "教學"
     url = "/Hugo/"
-    # pre = "<img src='/images/home/hugo.png'/ style='vertical-align: middle;'>"
+    # pre = "<img src='/images/home/hugo.png'/ style='vertical-align: middle;'>" style='color:rgb(130, 201, 30)'
     pre = "<i class='fas fa-h-square' style='color: #e844a8'></i>"
     weight = 30  # 權重小的list取出時會優先，也就是最小的等同list[0]的位置，而無關寫的順序
 

@@ -74,3 +74,18 @@ end = new Date().getTime();
 ```
 document.querySelector('video').playbackRate = 4;
 ```
+
+## iframe
+
+- iframe的window (相當於能存取其script的方法，變數等等)
+    > ``iframe.contentWindow``
+
+- iframe中的document(主要用於DOM的操作)
+
+  可以用透過contentWindow得到
+    > ``iframe.contentWindow.document``
+
+  也能直接用contentDocument得到
+
+    > ``iframe.contentDocument``
+

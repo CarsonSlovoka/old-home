@@ -397,7 +397,27 @@ FETCH_HEAD ?
     > git push -\-delete origin tagname
 
 
+## git gc 垃圾清理
+
+- 文件系統檢查。它驗證數據庫中對象的連接性和有效性
+
+  > git [fsck](https://git-scm.com/docs/git-fsck) -\-unreachable
+
+```
+git reflog expire --expire-unreachable=now --all
+git gc --prune=now
+
+或者
+git reflog expire --expire=now --expire-unreachable=now --all && git gc --prune=all --aggressive
+
+# 蓋掉遠端的東西
+git push Github --force --all
+```
+
+> git -\-prune
+
 ## 👍不錯的文章推薦
 
 - [twtrubiks/Git-Tutorials](https://github.com/twtrubiks/Git-Tutorials)
 - [關於git提示“warning: LF will be replaced by CRLF”終極解答](https://www.itread01.com/content/1554530531.html)
+- [Listing and deleting Git commits that are under no branch (dangling?)](https://stackoverflow.com/q/3765234/9935654)

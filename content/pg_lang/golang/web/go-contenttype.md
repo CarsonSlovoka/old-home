@@ -189,6 +189,7 @@ Content-Type: text/plain
 - [PATCH和PUT方法的區別？](https://segmentfault.com/q/1010000005685904)
 - [POST,PUT和PATCH的区别](https://www.jianshu.com/p/bee85cf4e33a)
 - [georgehao/笔记.md](https://gist.github.com/georgehao/699d0d1ecf947f97a0bdc7e782ff2ba5)
+- 私人連結[Get <input type="file"> with golang](https://github.com/CarsonSlovoka/go-src/issues/24#issuecomment-833267264)
 
 
 [http.Request]: https://golang.org/pkg/net/http/#Request

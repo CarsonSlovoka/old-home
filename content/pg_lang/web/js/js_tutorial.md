@@ -17,9 +17,17 @@ toc_bootstrap = true
   next_section = ""
 +++
 
-## [線上測試]
+## 線上測試
 
-直接在[線上測試]的範例中刪除，打上您的範例就可以線上測試了。
+### MDN Web Docs
+
+直接在[MDN Web Docs]的範例中刪除，打上您的範例就可以線上測試了。
+
+### [Plunker/plnkr](https://plnkr.co/)
+
+我覺得很棒，裡面有很多範例可以參考，也可以編輯，同時也提供線上運行。
+
+可以逛逛，有機會挖到寶😎
 
 ## Docs
 
@@ -68,7 +76,30 @@ console.log(rest);
 // expected output: Array [30,40,50]
 ```
 
-### dict
+#### [splice (insert)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
+
+語法
+> splice(start, deleteCount, item1, item2, itemN)
+
+```js
+const months = ['Jan', 'March', 'April', 'June'];
+months.splice(1, 2, 'Feb');
+```
+
+這是把Feb插入到index 1之後的結果
+> 'Jan', ``'Feb'``, 'March', 'April', 'June'
+
+而deleteCount為2所以從index 1之後的**2**個元素要刪除
+
+> 'Jan', ``'Feb'``, ~~'March', 'April'~~ 'June'
+
+得到最後結果
+
+> 'Jan', ``'Feb'``, 'June'
+
+這種效率很好，它不是重新產生新的陣列，而是在原本的陣列進行異動
+
+### dict & Object
 
 當變數名稱和key名稱相同的時候，可以直接放入該變數即可
 
@@ -76,6 +107,13 @@ console.log(rest);
 const [key, v] = ["Name", 123]
 const myDict = {key, v}  //  等價於 {"key": key, "v": v}
 ```
+
+#### Object.assign enumerate
+
+```js
+console.log(Object.assign({}, ["a", "b"]))
+// > Object { 0: "a", 1: "b" }
+````
 
 #### Set
 
@@ -337,6 +375,39 @@ promise.then(fileContent => {
 })
 ```
 
+## regex
+
+```js
+regex = new RegExp(".*", "gm")
+"test".match(regex)
+
+"test".match(/.*/gm)
+```
+
+注意以下這種寫法可能會有問題，exec會消耗掉前面的regex，所以第二次就可能會出錯
+```js
+const regex = /(\[(?<fieldName>.*): (?<valString>.*),?)\]/gm
+const filterObj = {}
+for (const curColSelectString of items) {
+    const { groups: { fieldName, valString } } = regex.exec(`${curColSelectString}`)
+    filterObj[fieldName] = valString.split(",").map(e=>e.trim())
+}
+```
+
+可以改成
+
+```js
+const { groups: { fieldName, valString } } = /(\[(?<fieldName>.*): (?<valString>.*),?)\]/gm.exec(`${curColSelectString}`)
+```
+
+### [Named capturing groups](https://stackoverflow.com/a/5367407/9935654)
+
+```js
+const auth = 'Bearer AUTHORIZATION_TOKEN'
+const { groups: { token } } = /Bearer (?<token>[^ $]*)/gm.exec(auth)
+console.log(token) // "Prints AUTHORIZATION_TOKEN"
+```
+
 ## 參考資料
 
 - [web.dev: promises](https://web.dev/promises/)
@@ -346,7 +417,7 @@ promise.then(fileContent => {
 - [使用 Promise 處理非同步](https://wcc723.github.io/javascript/2017/12/29/javascript-proimse/)
 - ★我覺得寫得很棒！ 👉 [JavaScript - Promise (2)](https://ithelp.ithome.com.tw/articles/10197529)
 
-[線上測試]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
+[MDN Web Docs]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
 [JavaScript Tester]: https://www.webtoolkitonline.com/javascript-tester.html
 [MDN Web Docs-JavaScript]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
 [JSON.stringify()]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
