@@ -17,6 +17,29 @@ toc_bootstrap = true
   next_section = ""
 +++
 
+## [網址的意涵](https://developer.mozilla.org/en-US/docs/Web/API/Location#result)
+
+以 ``https://example.org:8080/foo/bar?q=baz#bang`` 為例
+
+| Name | Desc |
+| ---- | ---- |
+href     | https://example.org:8080/foo/bar?q=baz#bang
+origin   | https://example.org:8080
+protocol | https: (http, ftp, ...)
+host     | example.org:8080
+hostname | example.org
+port     | 8080
+pathname | /foo/bar
+search   | ?q=baz
+hash     | bang
+
+這些東西可以透過[Location](https://developer.mozilla.org/en-US/docs/Web/API/Location#result)去取得
+
+document 表示的是一個文檔對象，windows 表示一個窗口對象。
+一個窗口下面可以有很多的document對象。每個document 都有 一個URL。
+
+
+
 ## ngrok 外網代理
 
 1. 下載: [https://ngrok.com/download](https://ngrok.com/download)
