@@ -416,6 +416,59 @@ git push Github --force --all
 
 > git -\-prune
 
+## git-sparse-checkout
+
+當您的git文件很大的時候，如果我們只對某幾個資料夾或者檔案有興趣的時候，就可以這麼做
+
+```
+git init
+git sparse-checkout init
+git sparse-checkout set "YOUR_DIR_PATH"
+git remote add <REMOTE_NAME> https://github.com/AUTH/REPO.git
+git pull --depth 1 Github <SHA1_or_BRANCH_NAME>
+```
+
+- depth 可以管控你抓的節點
+- ``sparse-checkout``: 可以指定要那些文件就好
+
+### Example
+
+```
+git init
+git sparse-checkout init
+// git sparse-checkout set "chrome/common/extensions/api/"
+start .git\info\sparse-checkout   👈 open the "sparse-checkut" file
+
+/* .git\info\sparse-checkout  for example you can input the contents as below 👇
+chrome/common/extensions/api/
+!chrome/common/extensions/api/commands/     👈 ! unwanted : https://www.git-scm.com/docs/git-sparse-checkout#_full_pattern_set
+!chrome/common/extensions/api/devtools/
+chrome/common/extensions/permissions/
+*/
+
+git remote add Github https://github.com/chromium/chromium.git
+start .git\config
+
+/* .git\config
+[core]
+    repositoryformatversion = 1
+    filemode = false
+    bare = false
+    logallrefupdates = true
+    symlinks = false
+    ignorecase = true
+[extensions]
+    worktreeConfig = true
+[remote "Github"]
+    url = https://github.com/chromium/chromium.git
+    fetch = +refs/heads/*:refs/remotes/Github/*
+    partialclonefilter = blob:none  // 👈 Add this line, This is important. Otherwise, your ".git" folder is still large (about 1GB)
+*/
+git pull --depth 1 Github 2d4a97f1ed2dd875557849b4281c599a7ffaba03
+// or
+// git pull --depth 1 Github master
+```
+
 ## 👍不錯的文章推薦
 
 - [twtrubiks/Git-Tutorials](https://github.com/twtrubiks/Git-Tutorials)
