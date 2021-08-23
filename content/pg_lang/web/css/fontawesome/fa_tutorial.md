@@ -165,11 +165,11 @@ bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的�
 ❓ | QUESTION MARK\nCommunity Support | 2753
 ❌ |  Cross Mark | 274C
 ⭕ | hollow_red_circle | 2B55
-👍 | 讚
-👉 | Pointing Right | 1F449
-👈 | Pointing Left
+👍 | Thumbs Up, Yes, Like, 讚 | 1F44D
 👆 | Pointing Up | 1F446
 👇 | Pointing Down | 1F447
+👈 | Pointing Left | 1F448
+👉 | Pointing Right | 1F449
 😂 | Laughing |
 😅 | Grinning Face with Sweat | 1F605
 🥴 | Drunk Face\nWoozy Face\nFace with Uneven Eyes and Wavy Mouth | 1F974
@@ -191,7 +191,9 @@ bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的�
 ✍️| Writing Hand | 270D
 🎵 | Muscial Note | 1F3B5
 🗛 | Decrease Font Size Symbol | 1F5DB
-
+🔢 | Input Numbers | 1F522
+🔨 | Hammer | 1F528
+⚙ | Gear | 2699
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 

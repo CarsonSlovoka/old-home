@@ -22,8 +22,8 @@ next_section = ""
 
 {{< table/bootstrap-table table-info >}}
 
-| @@w=50%@@name | desc |
-| ---- | ---- |
+| @@w=50%@@name | desc | Tags |
+| ---- | ---- | ---- |
 | [Default value in Go's method]
 | [How to create new file using go script]
 [How to get the directory of the currently running file?] |
@@ -85,10 +85,10 @@ next_section = ""
 [Golang FileServer with custom css] |
 [Is there any way to access private fields of a struct from another package?] | ``reflect.ValueOf(*f).FieldByName("y")``
 [How to serve up a JSON response using Go?] | ``json.NewEncoder(w).Encode(goObj)``
-[Static Data Grid - 10K records with search, pagination, export options]
-[How to insert and update data in Bootstrap table?]
-[What is the difference between jQuery's mouseout() and mouseleave()?]
-[How to bind an event listener only once in pure JavaScript?]
+[Static Data Grid - 10K records with search, pagination, export options] |
+[How to insert and update data in Bootstrap table?] |
+[What is the difference between jQuery's mouseout() and mouseleave()?] |
+[How to bind an event listener only once in pure JavaScript?] |
 [How can I add an event for a one time click to a function?] | ``EventTarget.addEventListener("click", function() { }, {once : true});``
 [Including image in Wenhixin bootstrap-table] |
 [Table fixed header and scrollable body] | ``thead, tbody tr {display: table; width: 100%; table-layout: fixed;}  tbody {display: block; overflow-y: auto; table-layout: fixed; max-height: 768px;}``
@@ -153,8 +153,84 @@ next_section = ""
 [How to add an array of values to a Set] | ``new Set([1,2,3,4])`` ``[1,2,3,4].forEach(mySet.add, mySet)``
 [Named capturing groups in JavaScript regex?] | ``const { groups: { token } } = /(?<token>[^ $]*)/.exec(auth)``
 [Can I use a regular expression in querySelectorAll?] | ``(document.querySelectorAll('div')).filter(function(el){ return el.className.match(/^foo/i);}``  ``document.querySelectorAll('div[class^="foo" i]')``
-
-
+[How to replace DOM element in place using Javascript?] | ``targetNode.replaceWith(newNode)``
+[Replace element contents with document fragment javascript] | range.selectNodeContents(myNode), myNode.remove(), range.insertNode(frag)
+[Uncaught DOMException: Failed to read the 'cssRules' property] | ``crossorigin="anonymous"``
+[Why doesn't document.addEventListener('load', function) work in a greasemonkey script?] | ``window.addEventListener()``
+[Checking if a key exists in a JavaScript object?] | ``undefined ?? "default value"`` ``options.person?.age ?? ""`` [Optional_chaining](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
+[Regex to match string containing two (or more) words in any order and case not sensitive] | ``(?i:os|path)`` (): 一個匿名group i: 不區分大小寫 |: 或的意思  也就是他不區分大小寫得找os或者為path都行
+[Display image from http response with image content type] |
+[Requesting blob images and transforming to base64 with fetch API] |
+[Service worker registration failed. Chrome extension] | ``"minimum_chrome_version": 93,``
+[chrome.tabs.executeScript: Cannot access a chrome:// URL] | 基於安全性的考量，chrome不允許您變更他的主題內容，你可以試試其他的頁面
+[ReferenceError: “alert” is not defined] | alert並非javascript的一部分，它屬於window的Object
+[google chrome extension :: console.log() from background page?] |
+[JavaScript window.open returns null sometimes] | 因為安全性的關係，取消了直接window.open的動作，但你可以改在點擊某個按鈕後觸發，例如: ``button.onclick = () => {window.open('https://javascript.info')}``
+[JsPDF - Not allowed to navigate top frame to data URL] |
+[Tainted canvases may not be exported] | ``img.crossOrigin="anonymous"``
+[Does JavaScript have the interface type (such as Java's 'interface')?] | [Object.defineProperty](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)
+[How to check if two arrays are equal with JavaScript?] | ``JSON.stringify(a1)==JSON.stringify(a2)`` 缺點是null的比較會出問題
+[Skip arguments in a JavaScript function] | ``const {a = 10, b = 5} = {a: 3}`` [Destructuring assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+[HTML5 Canvas set z-index] | [globalcompositeoperation](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing#globalcompositeoperation) [w3school: globalcompositeoperation](https://www.w3schools.com/tags/canvas_globalcompositeoperation.asp)
+[setting background image to dynamic svg data?] | ``element.style.backgroundImage = "url(data:image/svg+xml;utf8," + svgCode + ")";``
+[Drawing a grid on canvas] | 可以先moveTo和lineTo，全部弄完了之後再使用stroke即可
+[Get width/height of SVG element] | [node.getBoundingClientRect()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect)
+[How to fill the whole canvas with specific color?] | ``ctx.fillRect(0, 0, canvas.width, canvas.height);``
+[Download data URL file] | 可以創建a來達成，[參考](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_html_download_link) 而如果有必要href還有src都可以使用dataURI
+[How to create and export svg to png/jpeg in golang] |
+[Capture HTML Canvas as gif/jpg/png/pdf?] |
+[Drawing an SVG file on a HTML5 canvas] |
+[What's the most elegant way to cap a number to a segment?] | [clamp](https://developer.mozilla.org/en-US/docs/Web/CSS/clamp())
+[Simulation background-size: cover in canvas] | [drawImageProp.js](https://gist.github.com/CarsonSlovoka/80505cd107212bf7d74939b22a7ea07a)
+[Unable to trigger chrome.browserAction.onClicked.addListener with google chrome extensions] | 在``manifest.json.action.default_popup``有新增的情況下 ``chrome.browserAction.onClicked.addListener`` 會不起作用，您直接把裏頭的內容寫在service_worker.js之中即可
+[What's the best way to query an array in javascript to get just the items from it I want?] | 全部``myArray.filter``, 單個``myArray.find``
+[Pop-Up Window, Center Screen] |  | Chrome-Extension
+[Prevent HTML5 video from being downloaded (right-click saved)?] | 如果您的server是使用Apache那麼您可以用``.htaccess``的檔案來輔助您，來限制使用者的訪問權限，當然這種事golang也可以輕鬆做到。剩下的就是把[影片鑲嵌到canvas之中](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_canvas_drawimage_video)
+[Resize image with javascript canvas (smoothly)] | ``ctx.imageSmoothingQuality = "low", "medium", "high"`` [DOC](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/imageSmoothingQuality) | js
+[What is the JavaScript version of sleep()?] | sleep: 5 sec: ``await new Promise(resolve => setTimeout(resolve, 5000))`` | js
+[ES6 import error handling] | ``import("/modules/my-module.js").then().catch()`` | js
+[What is a blob URL and why it is used?] | | js
+[How do we download a blob url video] | | ``js``, ``youtube-dl``
+[How do you remove a method from a javascript type] | ``delete myObj.prototype.foo`` | js
+[Display browser console in HTML page] | 從載 ``window.console`` 的方法即可 | js
+[Display Git diff on client side in javascript as html] | | ``git``, ``js``
+[Make AudioBufferSourceNode the audio source of an <audio> tag?] | | js
+[Convert HTML5 Canvas Sequence to a Video File] | | js
+[Switch current tab from notification in Google Chrome extension] | ``chrome.tabs.update(tabId, {highlighted: true})``  | google-chrome-extension
+[How do I delete an extension in my Chrome developer dashboard?] | | google-chrome-extension
+[JavaScript set object key by variable] | ``{ [yourKeyVariable]: someValueArray }``   | js
+[Cannot create DocumentFragment storing td, tr or th?] | 就是很奇怪td,th這類的不能這樣用。乖乖的用document.createElement再慢慢的添加到指定的節點去 | js
+[How to specify max-height css property to Screen size] | ``.scrollDiv {max-height: 100vh;overflow: auto;}`` | js
+[How to execute an arithmetic operation inside a string in Javascript?] | ``eval`` | js
+[How to sort strings in JavaScript] | ``item1.attr.localeCompare(item2.attr)`` | js
+[How to get value of selected radio button?] | ``document.querySelector(`input[type="radio"][name="algorithm"]:checked`).value;`` | js
+[Why am I getting “Failed to load extension. Invalid value for 'content_security_policy'”?] | ``"content_security_policy": {"extension_pages": "script-src 'self'; object-src 'self'"}`` | google-chrome-extension
+[Equation (expression) parser with precedence?] | 不使用eval進行四則運算 | js
+[access object property from object method in javascript] | | js
+[Sorting object property by values] | ``Object.entries(obj).sort((a, b) => a[1] - b[1])`` | js
+[What is the difference between String.slice and String.substring?] | 不要使用[substr](https://web.archive.org/web/20200704195437/https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substr) | js
+[checking for typeof error in JS] | 用 ``instanceof`` 來確認 | js
+[How to close the current extension tab?] | ``chrome.tabs.remove(tab.id, function() { });`` | google-chrome-extension
+[chrome.scripting.executeScript not working in my manifest v3 Chrome Extension] | google-chrome-extension
+[Chrome extension: How to open a link in new tab?] | ``chrome.tabs.create({ url: newURL });`` | google-chrome-extension
+[onclick or inline script isn't working in extension] | 因為CSP的關係onclick沒辦法直接在html中新增進去，但是你可以直接用JS新增onclick的動作進去 | google-chrome-extension
+[Adding JavaScript type hints for VSCode/Monaco Intellisence] | ``/** @type {WebGLRenderingContext} */`` | js
+[HTML dataset - how to put object? data-x={}] | 利用 ``JSON.parse(myString)`` | js
+[Why is 4 not an instance of Number?] | 要注意 ``instanceof Number`` 會得到false | js
+[Return positions of a regex match() in Javascript?] | ``[...str.matchAll(regexp)].forEach(match=>{})``  | js
+[what is the key code for shift+tab?] | ``e.shiftKey && e.key === 'Tab'`` | js
+[Scroll to bottom of div?] | ``objDiv.scrollTop = objDiv.scrollHeight`` | js
+[How to execute somethnig finally in Javascript swich-case statement?] | | js
+[Format JavaScript date as yyyy-mm-dd] | | js
+[querySelectorAll with multiple conditions] | 找p或者span的節點: ``document.querySelector("p, span")`` 優先找前面的(p) | js
+[Changing image size in Markdown] | ``![](./pic/pic1_50.png =100x20)``| markdown
+[indexOf method in an object array?] | 如果您的array的元素是一個object，當您想要indexOf這個object，那麼必須取得當初餵進去的那個object。不能隨意在new一個出來，即便new出來的資料結構和數值相同，也是不行 | js
+[Execute Script of Chrome extension only once] | | google-chrome-extension
+[Change text from “Submit” on input tag] | ``<input type="submit" value="...">`` type等於submit的時候會自動用瀏覽器選擇的locale來放文字，如果不想要這樣，可以給定value來指定為某文字 | js
+[Failed to execute 'createObjectURL' on 'URL':] | 使用 ``video.srcObject = mediaStream`` 不要用 ``video.src = URL.createObjectURL(mediaStream)`` 這種做法會被逐漸淘汰！ | js
+[Why is the 'ended' event not firing for this MediaStreamTrack?] | | google-chrome-extension
+[How to listen for “Stop sharing” click in Chrome DesktopCapture API] | ``stream.oninactive = () => {}`` or ``stream.getVideoTracks()[0].onended = () => {}`` | js
+[ffmpeg -i input.webm -c copy output.mp4] | ``ffmpeg -i input.webm -c copy output.mp4`` | ffmpeg
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -288,6 +364,86 @@ next_section = ""
 [How to add an array of values to a Set]: https://stackoverflow.com/a/58996448/9935654
 [Named capturing groups in JavaScript regex?]: https://stackoverflow.com/a/5367407/9935654
 [Can I use a regular expression in querySelectorAll?]: https://stackoverflow.com/a/16791596/9935654
+[How to replace DOM element in place using Javascript?]: https://stackoverflow.com/a/40444300/9935654
+[Replace element contents with document fragment javascript]: https://stackoverflow.com/a/45691867/9935654
+[Uncaught DOMException: Failed to read the 'cssRules' property]: https://stackoverflow.com/a/66067441/9935654
+[Why doesn't document.addEventListener('load', function) work in a greasemonkey script?]: https://stackoverflow.com/a/16406528/9935654
+[Checking if a key exists in a JavaScript object?]: https://stackoverflow.com/a/67091321/9935654
+[Regex to match string containing two (or more) words in any order and case not sensitive]: https://stackoverflow.com/a/53493160/9935654
+[Display image from http response with image content type]: https://stackoverflow.com/q/20784145/9935654
+[Requesting blob images and transforming to base64 with fetch API]: https://stackoverflow.com/a/50463054/9935654
+[Service worker registration failed. Chrome extension]: https://stackoverflow.com/a/66115801/9935654
+[chrome.tabs.executeScript: Cannot access a chrome:// URL]: https://stackoverflow.com/q/24600495/9935654
+[ReferenceError: “alert” is not defined]: https://stackoverflow.com/a/11258916/9935654
+[google chrome extension :: console.log() from background page?]: https://stackoverflow.com/q/3829150/9935654
+[JavaScript window.open returns null sometimes]: https://stackoverflow.com/a/67785098/9935654
+[JsPDF - Not allowed to navigate top frame to data URL]: https://stackoverflow.com/a/45789588/9935654
+[Tainted canvases may not be exported]: https://stackoverflow.com/a/45129760/9935654
+[Does JavaScript have the interface type (such as Java's 'interface')?]: https://stackoverflow.com/a/3710367/9935654
+[Is it possible to copy a canvas image to the clipboard?]: https://stackoverflow.com/a/59462270/9935654
+[How to check if two arrays are equal with JavaScript?]: https://stackoverflow.com/a/10316616/9935654
+[Skip arguments in a JavaScript function]: https://stackoverflow.com/a/68381118/9935654
+[HTML5 Canvas set z-index]: https://stackoverflow.com/a/26064753/9935654
+[setting background image to dynamic svg data?]: https://stackoverflow.com/a/25357859/9935654
+[Drawing a grid on canvas]: https://codereview.stackexchange.com/a/135207/210612
+[Get width/height of SVG element]: https://stackoverflow.com/a/24649456/9935654
+[How to fill the whole canvas with specific color?]: https://stackoverflow.com/a/27736313/9935654
+[Download data URL file]: https://stackoverflow.com/a/15832662/9935654
+[How to create and export svg to png/jpeg in golang]: https://stackoverflow.com/q/42993407/9935654
+[Capture HTML Canvas as gif/jpg/png/pdf?]: https://stackoverflow.com/a/68398009/9935654
+[Drawing an SVG file on a HTML5 canvas]: https://stackoverflow.com/a/3769883/9935654
+[What's the most elegant way to cap a number to a segment?]: https://stackoverflow.com/q/11409895/9935654
+[Simulation background-size: cover in canvas]: https://stackoverflow.com/a/68440381/9935654
+[Unable to trigger chrome.browserAction.onClicked.addListener with google chrome extensions]: https://stackoverflow.com/a/18767589/9935654
+[What's the best way to query an array in javascript to get just the items from it I want?]: https://stackoverflow.com/a/57867012/9935654
+[Pop-Up Window, Center Screen]: https://stackoverflow.com/a/68456858/9935654
+[Prevent HTML5 video from being downloaded (right-click saved)?]: https://stackoverflow.com/q/9756837/9935654
+[Play video blob into Canvas]: https://stackoverflow.com/a/61074147/9935654
+[Resize image with javascript canvas (smoothly)]: https://stackoverflow.com/q/19262141/9935654
+[What is the JavaScript version of sleep()?]: https://stackoverflow.com/a/58935320/9935654
+[ES6 import error handling]: https://stackoverflow.com/a/68472702/9935654
+[What is a blob URL and why it is used?]: https://stackoverflow.com/a/30881444/9935654
+[How do we download a blob url video]: https://stackoverflow.com/q/42901942/9935654
+[How do you remove a method from a javascript type]: https://stackoverflow.com/a/6813819/9935654
+[Display browser console in HTML page]: https://stackoverflow.com/a/68502319/9935654
+[Display Git diff on client side in javascript as html]: https://stackoverflow.com/q/28130861/9935654
+[Make AudioBufferSourceNode the audio source of an <audio> tag?]: https://stackoverflow.com/q/57302931/9935654
+[Convert HTML5 Canvas Sequence to a Video File]: https://stackoverflow.com/a/68521648/9935654
+[Switch current tab from notification in Google Chrome extension]: https://stackoverflow.com/a/7223911/9935654
+[How do I delete an extension in my Chrome developer dashboard?]: https://stackoverflow.com/q/31233063/9935654
+[JavaScript set object key by variable]: https://stackoverflow.com/q/11508463/9935654
+[Cannot create DocumentFragment storing td, tr or th?]: https://stackoverflow.com/a/43112816/9935654
+[How to specify max-height css property to Screen size]: https://stackoverflow.com/q/20488298/9935654
+[How to execute an arithmetic operation inside a string in Javascript?]: https://stackoverflow.com/q/16635104/9935654
+[How to sort strings in JavaScript]: https://stackoverflow.com/a/51169/9935654
+[How to get value of selected radio button?]: https://stackoverflow.com/a/15839451/9935654
+[Why am I getting “Failed to load extension. Invalid value for 'content_security_policy'”?]: https://stackoverflow.com/a/68395991/9935654
+[Equation (expression) parser with precedence?]: https://stackoverflow.com/a/114961/9935654
+[access object property from object method in javascript]: https://stackoverflow.com/a/68558690/9935654
+[Sorting object property by values]: https://stackoverflow.com/a/37607084/9935654
+[What is the difference between String.slice and String.substring?]: https://stackoverflow.com/q/2243824/9935654
+[checking for typeof error in JS]: https://stackoverflow.com/a/8114531/9935654
+[How to close the current extension tab?]: https://stackoverflow.com/a/8114531/9935654
+[chrome.scripting.executeScript not working in my manifest v3 Chrome Extension]: https://stackoverflow.com/q/66772626/9935654
+[Chrome extension: How to open a link in new tab?]: https://stackoverflow.com/a/16504563/9935654
+[onclick or inline script isn't working in extension]: https://stackoverflow.com/q/13591983/9935654
+[Adding JavaScript type hints for VSCode/Monaco Intellisence]: https://stackoverflow.com/a/39694501/9935654
+[HTML dataset - how to put object? data-x={}]: https://stackoverflow.com/q/58786227/9935654
+[Why is 4 not an instance of Number?]: https://stackoverflow.com/q/472418/9935654
+[Return positions of a regex match() in Javascript?]: https://stackoverflow.com/a/62824256/9935654
+[what is the key code for shift+tab?]: https://stackoverflow.com/a/49801584/9935654
+[Scroll to bottom of div?]: https://stackoverflow.com/a/270628/9935654
+[How to execute somethnig finally in Javascript swich-case statement?]: https://stackoverflow.com/a/23902149/9935654
+[Format JavaScript date as yyyy-mm-dd]: https://stackoverflow.com/a/63490548/9935654
+[querySelectorAll with multiple conditions]: https://stackoverflow.com/a/34001943/9935654
+[Changing image size in Markdown]: https://stackoverflow.com/a/21242579/9935654
+[indexOf method in an object array?]: https://stackoverflow.com/a/48701766/9935654
+[Execute Script of Chrome extension only once]: https://stackoverflow.com/q/42988533/9935654
+[Change text from “Submit” on input tag]: https://stackoverflow.com/a/14007619/9935654
+[Failed to execute 'createObjectURL' on 'URL':]: https://stackoverflow.com/a/33759534/9935654
+[Why is the 'ended' event not firing for this MediaStreamTrack?]: https://stackoverflow.com/q/55953038/9935654
+[How to listen for “Stop sharing” click in Chrome DesktopCapture API]: https://stackoverflow.com/a/57628307/9935654
+[ffmpeg -i input.webm -c copy output.mp4]: https://stackoverflow.com/a/60443156/9935654
 
 {{< /table/bootstrap-table >}}
 

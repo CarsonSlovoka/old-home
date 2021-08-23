@@ -416,7 +416,7 @@ git push Github --force --all
 
 > git -\-prune
 
-## git-sparse-checkout
+## [git-sparse-checkout](https://stackoverflow.com/a/68794769/9935654)
 
 當您的git文件很大的時候，如果我們只對某幾個資料夾或者檔案有興趣的時候，就可以這麼做
 
