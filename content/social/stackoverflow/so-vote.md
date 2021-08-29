@@ -231,6 +231,10 @@ next_section = ""
 [Why is the 'ended' event not firing for this MediaStreamTrack?] | | google-chrome-extension
 [How to listen for “Stop sharing” click in Chrome DesktopCapture API] | ``stream.oninactive = () => {}`` or ``stream.getVideoTracks()[0].onended = () => {}`` | js
 [ffmpeg -i input.webm -c copy output.mp4] | ``ffmpeg -i input.webm -c copy output.mp4`` | ffmpeg
+[Is it possible to use the MediaRecorder API with html5 video?] | | js
+[how to use ffmpeg to merge WebM audio (Opus) and MP4 video (H.264) into one MP4 file] | 如果沒有音頻要重新編碼要補上``-c:a aac`` 完整範例 ``ffmpeg -i result.webm -c copy -c:a aac output.mp4`` | ffmpeg
+[How to do something before on submit?] | 在submit的時候回傳false可以取消submit的動作 ``form.onsubmit = e => {return false }`` | js
+[How to escape HTML] | 轉譯，使其成為安全的字串，例如如果您的title為<input>...如果置換到innerHTML會得到一個按鈕，所以需要把特殊的符號轉譯。 轉譯的方法: ``new Option(str).innerHTML`` | js
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -444,6 +448,10 @@ next_section = ""
 [Why is the 'ended' event not firing for this MediaStreamTrack?]: https://stackoverflow.com/q/55953038/9935654
 [How to listen for “Stop sharing” click in Chrome DesktopCapture API]: https://stackoverflow.com/a/57628307/9935654
 [ffmpeg -i input.webm -c copy output.mp4]: https://stackoverflow.com/a/60443156/9935654
+[Is it possible to use the MediaRecorder API with html5 video?]: https://stackoverflow.com/q/52720894/9935654
+[how to use ffmpeg to merge WebM audio (Opus) and MP4 video (H.264) into one MP4 file]: https://stackoverflow.com/q/61777314/9935654
+[How to do something before on submit?]: https://stackoverflow.com/a/8053433/9935654
+[How to escape HTML]: https://stackoverflow.com/a/22706073/9935654
 
 {{< /table/bootstrap-table >}}
 

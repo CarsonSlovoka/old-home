@@ -194,6 +194,11 @@ bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的�
 🔢 | Input Numbers | 1F522
 🔨 | Hammer | 1F528
 ⚙ | Gear | 2699
+⏩ | fast right | 23E9
+📹 | Video Camera | 1F4F9
+📺 | Television | 1F4FA
+▸ | 條列式符號
+🕹️ | Joystick | 1F579
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 
