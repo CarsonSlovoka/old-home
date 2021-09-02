@@ -270,6 +270,29 @@ git config --global core.safecrlf warn
 
 ## git submodule
 
+- ``git submodule add https://github.com/username/repo.git  path/subpath/myrepo-dir``
+
+  他會新增 .gitmodules
+
+  ```
+  [submodule "path/subpath/myrepo-dir"]
+	path = path/subpath/myrepo-dir
+	url = https://github.com/username/repo.git
+  ```
+
+  以及 .git/config 新增
+
+  ```
+  [submodule "path/subpath/myrepo-dir"]
+	url = https://github.com/username/repo.git
+	active = true
+  ```
+
+- ``git add path/subpath/myrepo-dir``
+    他就會記錄當前你這個submodule當時對應該submodule的sha1是多少
+
+- ``git commit -m "[submodule] ..."``
+
 遞迴更新
 > git submodule update -\-init -\-recursive
 
@@ -396,6 +419,10 @@ FETCH_HEAD ?
 - 刪除
     > git push -\-delete origin tagname
 
+
+### remote prune
+
+> git remote prune REMOTE_NAME
 
 ## git gc 垃圾清理
 
