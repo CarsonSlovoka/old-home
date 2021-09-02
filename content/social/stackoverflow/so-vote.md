@@ -235,6 +235,15 @@ next_section = ""
 [how to use ffmpeg to merge WebM audio (Opus) and MP4 video (H.264) into one MP4 file] | 如果沒有音頻要重新編碼要補上``-c:a aac`` 完整範例 ``ffmpeg -i result.webm -c copy -c:a aac output.mp4`` | ffmpeg
 [How to do something before on submit?] | 在submit的時候回傳false可以取消submit的動作 ``form.onsubmit = e => {return false }`` | js
 [How to escape HTML] | 轉譯，使其成為安全的字串，例如如果您的title為<input>...如果置換到innerHTML會得到一個按鈕，所以需要把特殊的符號轉譯。 轉譯的方法: ``new Option(str).innerHTML`` | js
+[Chrome Extensions creating a .html page accessible by clicking browser action.] | ``chrome.tabs.create({ url: chrome.runtime.getURL("index.html")`` | google-chrome-extension
+[Include another HTML file in a HTML file] | | js
+[How to get the value from the GET parameters?] |  ``new URL(document.URL).searchParams.get("para")`` | js
+[What's the difference between HTML 'hidden' and 'aria-hidden' attributes?] | hidden只是看不到而已，但不代表他對殘障者有效。aria-hidden會整個都有效
+[Get the current URL with JavaScript?] | ``window.location.host`` ● ``window.location.host`` ● ``window.location.pathnam``  | js
+[Redirecting to a relative URL in JavaScript] | ``window.location.href = '../'; //one level up`` , ``window.location.href = '/path'; //relative to domain`` | js
+[Internationalization of HTML pages for my Google Chrome Extension] | | google-chrome-extension
+[Get File Name and Parent Folder of URL] | ``myPath.split('/').slice(-2).join('/')`` | js
+[How to dynamically change a web page's title?] | ``document.title = "This is the new page title."`` | js
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -452,6 +461,15 @@ next_section = ""
 [how to use ffmpeg to merge WebM audio (Opus) and MP4 video (H.264) into one MP4 file]: https://stackoverflow.com/q/61777314/9935654
 [How to do something before on submit?]: https://stackoverflow.com/a/8053433/9935654
 [How to escape HTML]: https://stackoverflow.com/a/22706073/9935654
+[Chrome Extensions creating a .html page accessible by clicking browser action.]: https://stackoverflow.com/a/35837065/9935654
+[Include another HTML file in a HTML file]: https://stackoverflow.com/q/8988855/9935654
+[How to get the value from the GET parameters?]: https://stackoverflow.com/a/979995/9935654
+[What's the difference between HTML 'hidden' and 'aria-hidden' attributes?]: https://stackoverflow.com/q/31107040/9935654
+[Get the current URL with JavaScript?]: https://stackoverflow.com/q/1034621/9935654
+[Redirecting to a relative URL in JavaScript]: https://stackoverflow.com/a/1655081/9935654
+[Internationalization of HTML pages for my Google Chrome Extension]:https://stackoverflow.com/q/25467009/9935654
+[Get File Name and Parent Folder of URL]: https://stackoverflow.com/a/29212194/9935654
+[How to dynamically change a web page's title?]: https://stackoverflow.com/q/413439/9935654
 
 {{< /table/bootstrap-table >}}
 

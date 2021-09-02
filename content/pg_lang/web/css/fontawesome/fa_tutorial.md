@@ -199,6 +199,13 @@ bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的�
 📺 | Television | 1F4FA
 ▸ | 條列式符號
 🕹️ | Joystick | 1F579
+✂️ | Scissors | 2702
+🔒 | Locked 安全性 | 1F512
+🔑 | Key | 1F511
+🔥 | Fire | 1F525
+📊 | Bar Chart | 1F4CA
+📈 | Chart Increasing | 1F4C8
+📉 | Chart Decreasing | 1F4C9
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 
