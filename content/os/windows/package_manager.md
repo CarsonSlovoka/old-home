@@ -53,6 +53,26 @@ Pacman是一個**軟體包管理器**，作為Arch Linux發行版的一部分。
 
 Pacman也被移植到Windows，作為基礎系統的一部分隨MSYS2分發。
 
+## npm
+
+| desc | cmd  |
+| ---- | ---- |
+update npm | ``npm install -g npm@7.21.1``
+查看已安裝過的列表 | ``npm list``
+移除 | ``npm uninstall``
+安裝 | ``npm install``
+
+### minifier
+
+#### [mishoo/UglifyJS](https://github.com/mishoo/UglifyJS)
+
+你可以3個都試試看，我最後是用第三個才成功(終端機可以啟動``uglifyjs``)
+
+- ``npm install uglify-js -g``
+- ``npm install uglify-js``
+- [npm install uglify-js -save--dev](https://stackoverflow.com/a/44193120/9935654)
+
+
 
 ## choco
 
@@ -155,7 +175,9 @@ gcc | ``choco install mingw -y`` | ● ``%programdata%\chocolatey\lib\mingw\tool
 [graphviz] | ``choco install graphviz -y`` | ``%programfiles%\Graphviz``\n``%programfiles%\Graphviz\bin\dot.exe``\ngraphviz may be able to be automatically uninstalled.\n安裝完之後有出現以上訊息，其表示也能夠透過「新增/移除」的程式來移除 | plantuml渲染的時候需要用到的東西: dot\n另外還需要下載[plantuml.jar](https://plantuml.com/en/download)
 [slack] | ``choco install slack -y`` | 要自己去看log\n● ``%programdata%\chocolatey\logs\chocolatey.log``\n● ``%programdata%\chocolatey\.chocolatey\slack.4.15.0``\n● ``%programfiles%\Slack\slack.exe`` | 這是一個通訊軟體 \n安裝完之後可以透過新增移除來移除(slack may be able to be automatically uninstalled.)
 [fontforge] | ``choco install fontforge`` | ``%PROGRAMFILES(X86)%\FontForgeBuilds\`` | ● 在新增移除的程式中可以找到。\n● 用這個可以抽字，把一些不必要的字拿掉，使字形檔變小
-[ffmpeg] | ``choco install ffmpeg`` |  ``%programdata%\chocolatey\lib\ffmpeg\tools\ffmpeg\bin`` | ● python的``from pydub import AudioSegment``可能需要用到。\n● 要自己加入系統變數，才可以抓地到ffmpeg.exe的路徑。
+[ffmpeg] | ``choco install ffmpeg -y`` |  ``%programdata%\chocolatey\lib\ffmpeg\tools\ffmpeg\bin`` | ● python的``from pydub import AudioSegment``可能需要用到。\n● 要自己加入系統變數，才可以抓地到ffmpeg.exe的路徑。
+[Inkscape] [Inkscape-tutorial] | ``choco install inkscape -y`` | ● ``%PROGRAMFILES%\Inkscape\``\n● ``%PROGRAMFILES%\Inkscape\bin\inkscape.exe`` |
+[node.js] | ``choco install nodejs -y`` | ``%PROGRAMFILES%\nodejs`` 裡面有node.exe還有npm \n安裝到哪邊去其實他沒特別寫出來可以用``gcm node.exe``去查看 |
 
 [protobuf_google]: https://developers.google.com/protocol-buffers/docs/overview
 [protobuf_github]: https://github.com/protocolbuffers/protobuf
@@ -167,6 +189,9 @@ gcc | ``choco install mingw -y`` | ● ``%programdata%\chocolatey\lib\mingw\tool
 [slack]: https://slack.com/
 [fontforge]: https://community.chocolatey.org/packages/fontforge
 [ffmpeg]: https://community.chocolatey.org/packages/ffmpeg
+[Inkscape]: https://stackoverflow.com/a/30704119/9935654
+[Inkscape-tutorial]: https://www.youtube.com/watch?v=1cZk08x_rAI
+[node.js]: https://nodejs.org/en/
 
 {{< /table/bootstrap-table >}}
 
