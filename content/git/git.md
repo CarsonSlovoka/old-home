@@ -331,6 +331,15 @@ git config --global core.safecrlf warn
 
 當然如果您善用github issues之類的東西，這可能就不是那麼的必要，畢竟issues很強大，可以搜尋又可以整合以往的commit紀錄，超讚👍
 
+## gitk
+
+| command | desc |
+| ---- | ---- |
+gitk sha1..sha2 | 查看sha1~sha2(是比較後面的结點)的结點
+gitk master..dev | 查看master到dev的结點
+git gui | 如果你出現``Local changes checked in to index but not committed``又想要查看當前的版本修改了那些就可以使用這個指令
+
+
 ## git rebase
 
 rebase我常用在整個搬移，當然rebase很強大也可以修改過去的commit紀錄，但不建議！

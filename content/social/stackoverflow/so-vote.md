@@ -244,6 +244,9 @@ next_section = ""
 [Internationalization of HTML pages for my Google Chrome Extension] | | google-chrome-extension
 [Get File Name and Parent Folder of URL] | ``myPath.split('/').slice(-2).join('/')`` | js
 [How to dynamically change a web page's title?] | ``document.title = "This is the new page title."`` | js
+[How do I convert a video to GIF using ffmpeg, with reasonable quality?] | ``ffmpeg -ss 30 -t 3 -i input.mp4 -vf "fps=10,scale=320:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0 output.gif``  ``ffmpeg -i input.mp4 -vf "fps=10,scale=320:-1:flags=lanczos" -c:v pam -f image2pipe -  convert -delay 10 - -loop 0 -layers optimize output.gif`` | ffmpeg
+[Font-awesome, input type 'submit'] | 把``<input type="submit">``改成使用``<button type="submit"><i class="fa far-... fa-2x"> button-name </i>`` 即可 | js
+[drag drop files into standard html file input] | | js
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -470,6 +473,9 @@ next_section = ""
 [Internationalization of HTML pages for my Google Chrome Extension]:https://stackoverflow.com/q/25467009/9935654
 [Get File Name and Parent Folder of URL]: https://stackoverflow.com/a/29212194/9935654
 [How to dynamically change a web page's title?]: https://stackoverflow.com/q/413439/9935654
+[How do I convert a video to GIF using ffmpeg, with reasonable quality?]: https://superuser.com/a/556031/1093221
+[Font-awesome, input type 'submit']: https://stackoverflow.com/q/11686007/9935654
+[drag drop files into standard html file input]: https://stackoverflow.com/a/38968948/9935654
 
 {{< /table/bootstrap-table >}}
 
