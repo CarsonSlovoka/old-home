@@ -247,6 +247,16 @@ next_section = ""
 [How do I convert a video to GIF using ffmpeg, with reasonable quality?] | ``ffmpeg -ss 30 -t 3 -i input.mp4 -vf "fps=10,scale=320:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0 output.gif``  ``ffmpeg -i input.mp4 -vf "fps=10,scale=320:-1:flags=lanczos" -c:v pam -f image2pipe -  convert -delay 10 - -loop 0 -layers optimize output.gif`` | ffmpeg
 [Font-awesome, input type 'submit'] | 把``<input type="submit">``改成使用``<button type="submit"><i class="fa far-... fa-2x"> button-name </i>`` 即可 | js
 [drag drop files into standard html file input] | | js
+[How can I serialize an input File object to JSON?] | | js
+[How to import a JSON file in ECMAScript 6?] | | js
+[How to load data from a CSV file in D3 v5] | d3至從v5以後d3.csv回傳的是一個``promise`` | d3.js
+[Parse Uploaded CSV file using D3.js] | | d3.js
+[How to change the style of the title attribute inside an anchor tag?] | | js
+[How to generate thumbnail images of HTML pages] | | js
+[How to use Google Chrome Thumbnails preview service?] | | google-chrome-extension
+[How to add image to canvas] | ``ctx.drawImage(new Image, 0, 0)`` | js
+[How to crop canvas.toDataURL] | | js
+[Using HTML5/Canvas/JavaScript to take in-browser screenshots] | | js
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -476,6 +486,16 @@ next_section = ""
 [How do I convert a video to GIF using ffmpeg, with reasonable quality?]: https://superuser.com/a/556031/1093221
 [Font-awesome, input type 'submit']: https://stackoverflow.com/q/11686007/9935654
 [drag drop files into standard html file input]: https://stackoverflow.com/a/38968948/9935654
+[How can I serialize an input File object to JSON?]: https://stackoverflow.com/a/29281243/9935654
+[How to import a JSON file in ECMAScript 6?]: https://stackoverflow.com/a/68593192/9935654
+[How to load data from a CSV file in D3 v5]: https://stackoverflow.com/a/49604124/9935654
+[Parse Uploaded CSV file using D3.js]: https://stackoverflow.com/q/36079390/9935654
+[How to change the style of the title attribute inside an anchor tag?]: https://stackoverflow.com/q/2011142/9935654
+[How to generate thumbnail images of HTML pages]: https://stackoverflow.com/q/16325655/9935654
+[How to use Google Chrome Thumbnails preview service?]: https://stackoverflow.com/q/8288753/9935654
+[How to add image to canvas]: https://stackoverflow.com/a/69129828/9935654
+[How to crop canvas.toDataURL]: https://stackoverflow.com/a/69129574/9935654
+[Using HTML5/Canvas/JavaScript to take in-browser screenshots]: https://stackoverflow.com/q/4912092/9935654
 
 {{< /table/bootstrap-table >}}
 

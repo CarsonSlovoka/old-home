@@ -163,6 +163,7 @@ bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的�
 🤝 | Contributing | 1F91D
 💕 | TWO HEARTS\nDonation | 1F495
 ❓ | QUESTION MARK\nCommunity Support | 2753
+⚡  | High Voltage | 26A1
 ❌ |  Cross Mark | 274C
 ⭕ | hollow_red_circle | 2B55
 👍 | Thumbs Up, Yes, Like, 讚 | 1F44D
@@ -177,7 +178,9 @@ bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的�
 😎 | SMILING FACE WITH SUNGLASSES | 1F60E
 😁 | GRINNING FACE WITH SMILING EYES | 1F60E
 😆 | SMILING FACE WITH OPEN MOUTH AND TIGHTLY-CLOSED EYES | 1F606
-🙂 |
+🙂 | Slightly Smiling Face | 1F642
+🤩 | Star-Struck | 1F929
+🥳 | Partying Face | 1F973
 🤔 | Thinking Face Emoji
 🤣 | Rolling on the Floor Laughing,
 🗑 | deprecated
