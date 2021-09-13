@@ -257,6 +257,11 @@ next_section = ""
 [How to add image to canvas] | ``ctx.drawImage(new Image, 0, 0)`` | js
 [How to crop canvas.toDataURL] | | js
 [Using HTML5/Canvas/JavaScript to take in-browser screenshots] | | js
+[Ways to see a list of all the tabs open in Chrome?] | | google-chrome-extension
+[Displaying a custom animation at the click location on Windows 10 in response to an event] | | ahk
+[Cutting the videos based on start and end time using ffmpeg] | ``ffmpeg -i input.mp4 -ss 01:19:27 -to 02:18:51 -c:v copy -c:a copy output.mp4`` | ffmpeg
+[Add audio to video using FFmpeg] | | ffmpeg
+[Python convert mp3 to wav with Pydub] | ``subprocess.call(['ffmpeg', '-i', '/input/file.mp3','/output/file.wav'])`` | ffmpeg, python
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -496,6 +501,11 @@ next_section = ""
 [How to add image to canvas]: https://stackoverflow.com/a/69129828/9935654
 [How to crop canvas.toDataURL]: https://stackoverflow.com/a/69129574/9935654
 [Using HTML5/Canvas/JavaScript to take in-browser screenshots]: https://stackoverflow.com/q/4912092/9935654
+[Ways to see a list of all the tabs open in Chrome?]: https://superuser.com/q/290758/1093221
+[Displaying a custom animation at the click location on Windows 10 in response to an event]: https://superuser.com/a/1428517/1093221
+[Cutting the videos based on start and end time using ffmpeg]: https://stackoverflow.com/a/58059148/9935654
+[Add audio to video using FFmpeg]: https://superuser.com/a/590210/1093221
+[Python convert mp3 to wav with Pydub]: https://stackoverflow.com/a/32073824/9935654
 
 {{< /table/bootstrap-table >}}
 

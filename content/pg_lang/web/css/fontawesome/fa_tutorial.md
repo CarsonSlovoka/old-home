@@ -193,6 +193,7 @@ bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的�
 🥉 | 3rd Place Medal | 1F949
 ✍️| Writing Hand | 270D
 🎵 | Muscial Note | 1F3B5
+📥 | Inbox Tray, download | 1F4E5
 🗛 | Decrease Font Size Symbol | 1F5DB
 🔢 | Input Numbers | 1F522
 🔨 | Hammer | 1F528
