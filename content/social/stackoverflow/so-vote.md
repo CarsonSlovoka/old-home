@@ -262,6 +262,17 @@ next_section = ""
 [Cutting the videos based on start and end time using ffmpeg] | ``ffmpeg -i input.mp4 -ss 01:19:27 -to 02:18:51 -c:v copy -c:a copy output.mp4`` | ffmpeg
 [Add audio to video using FFmpeg] | | ffmpeg
 [Python convert mp3 to wav with Pydub] | ``subprocess.call(['ffmpeg', '-i', '/input/file.mp3','/output/file.wav'])`` | ffmpeg, python
+[Chrome Extension Message passing: response not sent] | | google-chrome-extension
+["Cannot read property of undefined" when using chrome.tabs or other chrome API in content script] | | google-chrome-extension
+[What does "http://*/*", "https://*/*" and "<all_urls>" mean in the context of Chrome extension's permissions] | "<all_urls>" : ``matches any URL that starts with a permitted scheme (http:, https:, file:, ftp:, or chrome-extension``  | google-chrome-extension
+[How do I find out if connectNative failed or succeeded] | | google-chrome-extension
+[How can I read from standard input in the console?] | | go
+[How to print struct variables in console?] | ``fmt.Printf("%#v\n", myStruct)`` 輸出json格式 ``+v`` 會省略掉``"`` 可能更不好閱讀 | go
+[Ways to see a list of all the tabs open in Chrome?] | ``Ctrl+Shift+A`` | superuser, chrome
+[Start an external application from a Google Chrome Extension?] | [Native messaging host](https://developer.chrome.com/docs/apps/nativeMessaging/#native-messaging-host) | google-chrome-extension, chrome
+[What does the w flag mean when passed in via the ldflags option to the go command?] |  ``-s disable symbol table`` ``-w disable DWARF generation`` | go
+[robocopy transfer file and not folder] | ``robocopy c:\source_folder d:\dist_folder transfer_this.txt`` | robocopy, bat
+[Replace parent element with its contents] | ``h2.replaceWith(h2.firstChild)`` ``h2.replaceWith(...h2.childNodes)`` | js
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -506,6 +517,17 @@ next_section = ""
 [Cutting the videos based on start and end time using ffmpeg]: https://stackoverflow.com/a/58059148/9935654
 [Add audio to video using FFmpeg]: https://superuser.com/a/590210/1093221
 [Python convert mp3 to wav with Pydub]: https://stackoverflow.com/a/32073824/9935654
+[Chrome Extension Message passing: response not sent]: https://stackoverflow.com/a/20077854/9935654
+["Cannot read property of undefined" when using chrome.tabs or other chrome API in content script]: https://stackoverflow.com/q/15034859/9935654
+[What does "http://*/*", "https://*/*" and "<all_urls>" mean in the context of Chrome extension's permissions]: https://stackoverflow.com/q/16096482/9935654
+[How do I find out if connectNative failed or succeeded]: https://stackoverflow.com/a/43321860/9935654
+[How can I read from standard input in the console?]: https://stackoverflow.com/q/20895552/9935654
+[How to print struct variables in console?]: https://stackoverflow.com/a/64837458/9935654
+[Ways to see a list of all the tabs open in Chrome?]: https://superuser.com/q/290758/1093221
+[Start an external application from a Google Chrome Extension?]: https://stackoverflow.com/a/69188382/9935654
+[What does the w flag mean when passed in via the ldflags option to the go command?]: https://stackoverflow.com/q/22267189/9935654
+[robocopy transfer file and not folder]: https://serverfault.com/a/52986/834510
+[Replace parent element with its contents]: https://stackoverflow.com/q/12003458/9935654
 
 {{< /table/bootstrap-table >}}
 

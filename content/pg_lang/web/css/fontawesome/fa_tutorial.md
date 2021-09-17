@@ -88,6 +88,19 @@ Generate Subresource Integrity (SRI) attributes
 
 #### [Glyphicons](https://www.w3schools.com/bootstrap/bootstrap_ref_comp_glyphs.asp)
 
+它的圖形主要是靠css的影響所繪出
+
+但一個缺點是它的css和一般的bootstrap.css有點不同，它的是
+
+```html
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!--
+比較常用的css應該是下面這個
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+-->
+```
+
 bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的用法以及可以用的圖標有哪些，這邊我舉一個例子如下
 
 ```html
@@ -122,28 +135,29 @@ bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的�
 
 | @@w=10%@@name | @@w=40%@@Icon Desc | @@w=10%@@Code | @@w=30%@@Comment |　|
 | :----: | :---- | :----: | ---- | ---- |
-| 📝 | Memo | 1F4DD
-| 🧾 | Receipt | 1F9FE
-📂 | Open File Folder
+🌎 | World Emoji Day | 1F30E
+🌱 | Earth Day | 1F331
+🐬 | Dolphin | 1F42C
 📁 | FILE FOLDER | 1F4C1
-🗂️ | Card Index Dividers
-🖿 | Black Folder
-| 🐬 | Dolphin | 1F42C
-| 📙 | Orange book | 1F4D9
-| 📓 | Notebook
-🔖 | Bookmark
-🕮 | Book
-📚 | Books
+📂 | Open File Folder | 1F4C2
+📅 | Calendar | 1F4C5
+📙 | Orange book | 1F4D9
+📓 | Notebook | 1F4D3
+📚 | Books | 1F4DA
+📜 | Scroll, history, release note | 1F4DC
+📝 | Memo | 1F4DD
+🔖 | Bookmark | 1F516
+🕮 | Book | 1F56E
+🖿 | Black Folder | 1F5BF
+🗂️ | Card Index Dividers | 1F5C2
+🧾 | Receipt | 1F9FE
 ❗  | exclamation | 2757
 ⚠  | Warning sign | 26A0
 🔔 | BELL\n叮嚀 | 1F514
-🌱 | Earth Day
-🌎 | World Emoji Day
-📅 | Calendar | 1F4C5
-🕷️ | Spider
-🐛  | Bug
-󠁴🀄 | 中文
-💪 | enhancement
+🕷️ | Spider | 1F577
+🐛  | Bug | 1F41B
+󠁴🀄 | 中文 | 1F004
+💪 | enhancement | 1F4AA
 ✍ | WRITING HAND、總結 | 270D
 📰 | NEWSPAPER、歷史文章、資料來源 | 1F4F0
 👩‍💻 | ● 👩:Woman\n●💻: Personal computer | ●1F469\n●1F4BB | 這比較特別，他是兩個碼位組合而成的圖案
@@ -157,7 +171,7 @@ bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的�
 🎨 | ARTIST PALETTE\nDesign Specification | 1F3A8
 🖥 | DESKTOP COMPUTER | 1F5A5
 ⌨ | KEYBOARD | 2328
-🕒 | Time
+🕒 | Time | 1F552
 🔗 | LINK SYMBOL\nLinks | 1F517
 🗺 | WORLD MAP\nRoadmap | 1F5FA
 🤝 | Contributing | 1F91D
@@ -171,7 +185,7 @@ bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的�
 👇 | Pointing Down | 1F447
 👈 | Pointing Left | 1F448
 👉 | Pointing Right | 1F449
-😂 | Laughing |
+😂 | Laughing | 1F602
 😅 | Grinning Face with Sweat | 1F605
 🥴 | Drunk Face\nWoozy Face\nFace with Uneven Eyes and Wavy Mouth | 1F974
 😵 | DIZZY FACE | 1F635
