@@ -2,7 +2,7 @@
 title = "Templates"
 description="教您如何在github上刻製化樣板"
 date = 2021-02-19T16:38:10+08:00
-lastmod = 2021-04-29
+lastmod = 2021-09-17
 featured_image = ""
 draft = false
 weight = 0
@@ -424,6 +424,30 @@ contact_links:
 
 ## [Github主頁上的README.md](https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/managing-your-profile-readme)
 
+### [shields.io]
+
+有一些常用的統計，或者項目搜尋一下人家已經都弄好了，如果萬不得已可以自己生成，例如
+
+```html
+<a href="https://pypi.org/project/console-color/">
+<img src="https://img.shields.io/static/v1?&style=plastic&logo=pypi&label=App&message=console-color&color=00FFFF"/></a>
+```
+
+- style: 算是外觀{``plastic``, ``social``, ``flat-square``, ``flat``, `for-the-badge`} 基本上我覺得plastic是最好看的，比較圓滑
+- logo: 可以找一下你要的logo:{`github`, `pypi`, `go`, `javascript`, `d3.js`} 也用data-uri，例如: ``?logo=data:image/png;base64,…``
+- label: 打上你要的名稱
+- message: 你的訊息
+- 他還有一個比較酷的link: ``?link=http://left&link=http://right`` 但不適用於markdown的樣子，建議還是用a來幫忙
+
+呈現的結果如下
+
+{{<raw_html>}}
+<a href="https://pypi.org/project/console-color/" style="width:10vw">
+<img src="https://img.shields.io/static/v1?&style=plastic&logo=pypi&label=App&message=console-color&color=00FFFF"/ style="width:10vw;"></a>
+{{</raw_html>}}
+
+### Github提供的服務
+
 您可能會想，Github上有沒有像是[shields.io]提供一些圖片讓使用者顯示一些統計資料呢？
 
 答案是有的，可以利用:
@@ -470,7 +494,7 @@ contact_links:
 
 👇接下來我們就來深入探討github-readme-stats的更多用法
 
-### [github-readme-stats]
+#### [github-readme-stats]
 
 萬變不如其宗:
 
@@ -482,7 +506,7 @@ contact_links:
 
 我把我覺得實用的整理如下
 
-#### API介紹
+##### API介紹
 
 {{< table/bootstrap-table >}}
 
@@ -496,7 +520,7 @@ wakatime | | api/wakatime? | https://github-readme-stats.vercel.app/api/wakatime
 
 {{< /table/bootstrap-table >}}
 
-#### 可選項
+##### 可選項
 
 此外它有提供一些可選項，這些可選項可以搭配API來使用
 
@@ -521,7 +545,7 @@ hide_border | bool
 
 {{< /table/bootstrap-table >}}
 
-##### 適用於Top Languages Card的可選項
+###### 適用於Top Languages Card的可選項
 
 {{< table/bootstrap-table >}}
 
