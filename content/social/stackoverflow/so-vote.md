@@ -273,6 +273,8 @@ next_section = ""
 [What does the w flag mean when passed in via the ldflags option to the go command?] |  ``-s disable symbol table`` ``-w disable DWARF generation`` | go
 [robocopy transfer file and not folder] | ``robocopy c:\source_folder d:\dist_folder transfer_this.txt`` | robocopy, bat
 [Replace parent element with its contents] | ``h2.replaceWith(h2.firstChild)`` ``h2.replaceWith(...h2.childNodes)`` | js
+[How do I get all h1,h2,h3 etc elements in javascript?] | `document.querySelectorAll("h1, h2, h3, h4, h5, h6")` | js
+[Is there a JavaScript solution to generating a "table of contents" for a page?] | | js,toc
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -528,6 +530,8 @@ next_section = ""
 [What does the w flag mean when passed in via the ldflags option to the go command?]: https://stackoverflow.com/q/22267189/9935654
 [robocopy transfer file and not folder]: https://serverfault.com/a/52986/834510
 [Replace parent element with its contents]: https://stackoverflow.com/q/12003458/9935654
+[How do I get all h1,h2,h3 etc elements in javascript?]: https://stackoverflow.com/a/7065574/9935654
+[Is there a JavaScript solution to generating a "table of contents" for a page?]: https://stackoverflow.com/q/187619/9935654
 
 {{< /table/bootstrap-table >}}
 
