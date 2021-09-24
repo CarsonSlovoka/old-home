@@ -275,6 +275,10 @@ next_section = ""
 [Replace parent element with its contents] | ``h2.replaceWith(h2.firstChild)`` ``h2.replaceWith(...h2.childNodes)`` | js
 [How do I get all h1,h2,h3 etc elements in javascript?] | `document.querySelectorAll("h1, h2, h3, h4, h5, h6")` | js
 [Is there a JavaScript solution to generating a "table of contents" for a page?] | | js,toc
+[Can I use a SVG toolbar icon?] | No (2009年發問到現在仍然沒有解決) | google-chrome-extension
+[Method to convert HTML5 canvas to SVG?] | | js
+[Checking if browser is in fullscreen] | 這可以判斷是否視窗還可以再放大(不是指全螢幕模式) `if (!window.screenTop && !window.screenY) {alert('Browser is in fullscreen')}` ， 如果您再找全螢幕可以參考[Fullscreen_API](https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API)  | js
+[SVG Favicon Not Working] | favicon也可以用svg來代替 ``<link rel="icon" href="images/favicon.svg" sizes="any" type="image/svg+xml">`` | html
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -532,6 +536,10 @@ next_section = ""
 [Replace parent element with its contents]: https://stackoverflow.com/q/12003458/9935654
 [How do I get all h1,h2,h3 etc elements in javascript?]: https://stackoverflow.com/a/7065574/9935654
 [Is there a JavaScript solution to generating a "table of contents" for a page?]: https://stackoverflow.com/q/187619/9935654
+[Can I use a SVG toolbar icon?]: https://stackoverflow.com/q/53645087/9935654
+[Method to convert HTML5 canvas to SVG?]: https://stackoverflow.com/q/8571294/9935654
+[Checking if browser is in fullscreen]: https://stackoverflow.com/q/2863351/9935654
+[SVG Favicon Not Working]: https://stackoverflow.com/q/34446050/9935654
 
 {{< /table/bootstrap-table >}}
 

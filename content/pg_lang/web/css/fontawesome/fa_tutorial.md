@@ -138,11 +138,13 @@ bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的�
 🌎 | World Emoji Day | 1F30E
 🌱 | Earth Day | 1F331
 🐬 | Dolphin | 1F42C
+🐳 | Spouting Whale | 1F433
 📁 | FILE FOLDER | 1F4C1
 📂 | Open File Folder | 1F4C2
 📅 | Calendar | 1F4C5
 📙 | Orange book | 1F4D9
 📓 | Notebook | 1F4D3
+📖 | Open Book, docs | 1F4D6
 📚 | Books | 1F4DA
 📜 | Scroll, history, release note | 1F4DC
 📝 | Memo | 1F4DD
