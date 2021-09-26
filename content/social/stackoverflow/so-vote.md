@@ -279,6 +279,8 @@ next_section = ""
 [Method to convert HTML5 canvas to SVG?] | | js
 [Checking if browser is in fullscreen] | 這可以判斷是否視窗還可以再放大(不是指全螢幕模式) `if (!window.screenTop && !window.screenY) {alert('Browser is in fullscreen')}` ， 如果您再找全螢幕可以參考[Fullscreen_API](https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API)  | js
 [SVG Favicon Not Working] | favicon也可以用svg來代替 ``<link rel="icon" href="images/favicon.svg" sizes="any" type="image/svg+xml">`` | html
+[How to view file diff in git before commit] | | git
+[Where can I find the source code of gitk?] | | gitk
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -540,6 +542,8 @@ next_section = ""
 [Method to convert HTML5 canvas to SVG?]: https://stackoverflow.com/q/8571294/9935654
 [Checking if browser is in fullscreen]: https://stackoverflow.com/q/2863351/9935654
 [SVG Favicon Not Working]: https://stackoverflow.com/q/34446050/9935654
+[How to view file diff in git before commit]: https://stackoverflow.com/q/10039747/9935654
+[Where can I find the source code of gitk?]: https://stackoverflow.com/q/8738268/9935654
 
 {{< /table/bootstrap-table >}}
 

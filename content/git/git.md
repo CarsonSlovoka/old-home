@@ -340,6 +340,21 @@ gitk master..dev | 查看master到dev的结點
 git gui | 如果你出現``Local changes checked in to index but not committed``又想要查看當前的版本修改了那些就可以使用這個指令
 
 
+----
+
+- [gitk --simplify-by-decoration --all](https://stackoverflow.com/q/69049642/9935654)
+
+    所謂的simplify-by-decoration是指，假設您有很多分支，其中每個分支又個別做了好幾個修改，
+
+    例如: 您有10個分支，每個分支又個別做了10次修改，所以gitk --all看到的會至少有10*10=100個節點
+
+    而simplify-by-decoration只會顯示每個分支的最後一個修改，所以您只會看到10個節點而已
+
+
+- `gitk --all --ancestry-path sha1..`
+
+  例如 `gitk --all --ancestry-path 123456..` 表示開始的節點(祖先)為123456這個節點(你也可以用branch名稱)
+
 ## git rebase
 
 rebase我常用在整個搬移，當然rebase很強大也可以修改過去的commit紀錄，但不建議！
@@ -402,6 +417,22 @@ FETCH_HEAD ?
 > git checkout FETCH_HEAD
 
 就可以知道目前FETCH_HEAD的位子在哪裡了
+
+## git diff
+
+| Commands | Desc |
+| ---- | ---- |
+`git diff` | 只會顯示**修改**的部分
+`git diff --cached` | 顯示**新增**(例如新增檔案)的部分
+`git diff HEAD` | 顯示本次所做的所有**異動**(包含新增與修改)
+
+
+### 更多查看變動的技巧
+
+1. `git add -p` : 這個是add的時候順便查看修改的情況，查看完之後可以讓您選擇是否真的要add
+2. `git commit -v` 或者 `git commit --verbose` : 這個會在commit的同時，也顯示出修改讓您知道。
+
+
 
 ## .gitignore
 
