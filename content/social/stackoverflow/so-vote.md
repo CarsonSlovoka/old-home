@@ -281,6 +281,10 @@ next_section = ""
 [SVG Favicon Not Working] | favicon也可以用svg來代替 ``<link rel="icon" href="images/favicon.svg" sizes="any" type="image/svg+xml">`` | html
 [How to view file diff in git before commit] | | git
 [Where can I find the source code of gitk?] | | gitk
+[RGB to hex and hex to RGB] | `parseInt("ff", 16) => 255` `(0x1000000 + rgb)` | js
+[How do I check that a number is float or integer?] | `Number.isInteger(12.0)` true | js
+[Convert character to ASCII code in JavaScript] | `"ABC".charCodeAt(0) // returns 65` `String.fromCharCode(65,66,67); // returns 'ABC'` | js
+[How can I test if a letter in a string is uppercase or lowercase using JavaScript?] | | js
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -544,6 +548,10 @@ next_section = ""
 [SVG Favicon Not Working]: https://stackoverflow.com/q/34446050/9935654
 [How to view file diff in git before commit]: https://stackoverflow.com/q/10039747/9935654
 [Where can I find the source code of gitk?]: https://stackoverflow.com/q/8738268/9935654
+[RGB to hex and hex to RGB]: https://stackoverflow.com/a/69353003/9935654
+[How do I check that a number is float or integer?]: https://stackoverflow.com/a/20779354/9935654
+[Convert character to ASCII code in JavaScript]: https://stackoverflow.com/a/9539389/9935654
+[How can I test if a letter in a string is uppercase or lowercase using JavaScript?]: https://stackoverflow.com/a/36193845/9935654
 
 {{< /table/bootstrap-table >}}
 
