@@ -285,6 +285,8 @@ next_section = ""
 [How do I check that a number is float or integer?] | `Number.isInteger(12.0)` true | js
 [Convert character to ASCII code in JavaScript] | `"ABC".charCodeAt(0) // returns 65` `String.fromCharCode(65,66,67); // returns 'ABC'` | js
 [How can I test if a letter in a string is uppercase or lowercase using JavaScript?] | | js
+[How to get selected word when double-click on div, p, span?] | `window.getSelection().toString()` | js
+[Get current clipboard content?] | `const text = await navigator.clipboard.readText()` | js
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -552,6 +554,8 @@ next_section = ""
 [How do I check that a number is float or integer?]: https://stackoverflow.com/a/20779354/9935654
 [Convert character to ASCII code in JavaScript]: https://stackoverflow.com/a/9539389/9935654
 [How can I test if a letter in a string is uppercase or lowercase using JavaScript?]: https://stackoverflow.com/a/36193845/9935654
+[How to get selected word when double-click on div, p, span?]: https://stackoverflow.com/q/2281426/9935654
+[Get current clipboard content?]: https://stackoverflow.com/a/49886460/9935654
 
 {{< /table/bootstrap-table >}}
 

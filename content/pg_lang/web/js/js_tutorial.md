@@ -190,9 +190,10 @@ myArray.reduce((a,b)=>{
 }, 0)
 // 最後結果很簡單一定是4
 
-
 myArray.reduce((a, b)=>{}, []) // 初始值也可以是object，不限定只能數字
 ```
+
+> Note: reduce如果省略初始值，第一輪的a和b會設置成array的第一個和第二個元素。
 
 在瞭解後，我們看個實際例子
 
