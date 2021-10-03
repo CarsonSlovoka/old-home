@@ -287,6 +287,8 @@ next_section = ""
 [How can I test if a letter in a string is uppercase or lowercase using JavaScript?] | | js
 [How to get selected word when double-click on div, p, span?] | `window.getSelection().toString()` | js
 [Get current clipboard content?] | `const text = await navigator.clipboard.readText()` | js
+[Move mouse pointer in JavaScript] | `document.querySelector('button').focus()` | js
+[How to JsDoc a "mixed" type?] | Any型別: `@param {*}` 可選項`@param {?string}` 表示此變數為可選項 | js
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -556,6 +558,8 @@ next_section = ""
 [How can I test if a letter in a string is uppercase or lowercase using JavaScript?]: https://stackoverflow.com/a/36193845/9935654
 [How to get selected word when double-click on div, p, span?]: https://stackoverflow.com/q/2281426/9935654
 [Get current clipboard content?]: https://stackoverflow.com/a/49886460/9935654
+[Move mouse pointer in JavaScript]: https://stackoverflow.com/a/2322613/9935654
+[How to JsDoc a "mixed" type?]: https://stackoverflow.com/a/6778666/9935654
 
 {{< /table/bootstrap-table >}}
 
