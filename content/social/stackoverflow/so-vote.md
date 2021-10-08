@@ -289,6 +289,14 @@ next_section = ""
 [Get current clipboard content?] | `const text = await navigator.clipboard.readText()` | js
 [Move mouse pointer in JavaScript] | `document.querySelector('button').focus()` | js
 [How to JsDoc a "mixed" type?] | Any型別: `@param {*}` 可選項`@param {?string}` 表示此變數為可選項 | js
+[Why is document.execCommand("paste") not working in Google Chrome?] | `document.execCommand("paste")` copy和cut都有支持，paste只有ie有支持 | js
+[JavaScript get clipboard data on paste event (Cross browser)] | ` window.document.execCommand('insertText', false, "my copy data")` | js
+[JavaScript: filter() for Objects] | `Object.keys(obj).filter().reduce()` | js
+[How to add stroke/outline to transparent PNG image in JavaScript canvas] | ★使用js進行contour檢測 | js
+[Display image through html image element object] | `document.createRange().createContextualFragment(img.outerHTML)` | js
+[highlight all text in textarea] | `elem.focus()` `elem.select()` | js
+[How to exit from setInterval] | `const interval = setInterval(() => {clearInterval(interval);}, 1000)` | js
+[Can Read-Only Properties be Implemented in Pure JavaScript?] | [Object.defineProperty(obj, prop, descriptor)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#description) | js
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -560,6 +568,14 @@ next_section = ""
 [Get current clipboard content?]: https://stackoverflow.com/a/49886460/9935654
 [Move mouse pointer in JavaScript]: https://stackoverflow.com/a/2322613/9935654
 [How to JsDoc a "mixed" type?]: https://stackoverflow.com/a/6778666/9935654
+[Why is document.execCommand("paste") not working in Google Chrome?]: https://stackoverflow.com/a/53448633/9935654
+[JavaScript get clipboard data on paste event (Cross browser)]: https://stackoverflow.com/a/19269040/9935654
+[JavaScript: filter() for Objects]: https://stackoverflow.com/a/62400741/9935654
+[How to add stroke/outline to transparent PNG image in JavaScript canvas]: https://stackoverflow.com/a/24091727/9935654
+[Display image through html image element object]: https://stackoverflow.com/a/69460908/9935654
+[highlight all text in textarea]: https://stackoverflow.com/a/69474896/9935654
+[How to exit from setInterval]: https://stackoverflow.com/a/55932398/9935654
+[Can Read-Only Properties be Implemented in Pure JavaScript?]: https://stackoverflow.com/q/366047/9935654
 
 {{< /table/bootstrap-table >}}
 

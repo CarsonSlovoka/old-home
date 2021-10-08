@@ -125,6 +125,16 @@ bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的�
   </button>
   ```
 
+- btn+fontawesome+tachyons: {{<raw_html>}}<button class="btn btn-secondary"><i class="fas fa-undo hover-yellow"></i></button>{{</raw_html>}}
+
+  ```go-html-template
+  <button class="btn btn-secondary"> {{/* bootstrap */}}
+  <i class="fas fa-undo  {{/* fontawesome */}}
+  hover-yellow"></i> {{/* tachyons */}}
+  </button>
+  ```
+
+
 ## [Emoji of Unicode](https://apps.timwhitlock.info/unicode/inspect?s=%F0%9F%93%9D)
 
 [getemoji.com](https://getemoji.com/)
@@ -215,17 +225,19 @@ bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的�
 🔨 | Hammer | 1F528
 ⚙ | Gear | 2699
 ⏩ | fast right | 23E9
-📹 | Video Camera | 1F4F9
-📺 | Television | 1F4FA
 ▸ | 條列式符號
-🕹️ | Joystick | 1F579
 ✂️ | Scissors | 2702
-🔒 | Locked 安全性 | 1F512
-🔑 | Key | 1F511
-🔥 | Fire | 1F525
-📊 | Bar Chart | 1F4CA
+⬇️ | Down Arrow, Download | 2B07
 📈 | Chart Increasing | 1F4C8
 📉 | Chart Decreasing | 1F4C9
+📊 | Bar Chart | 1F4CA
+📢 | Loudspeaker, Announcement 廣播 | 1F4E2
+📹 | Video Camera | 1F4F9
+📺 | Television | 1F4FA
+🔑 | Key | 1F511
+🔒 | Locked 安全性 | 1F512
+🔥 | Fire | 1F525
+🕹️ | Joystick | 1F579
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 

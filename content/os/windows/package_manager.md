@@ -1,6 +1,7 @@
 +++
 title = "套件管理"
 date = 2021-01-11T17:43:00+08:00
+lastmod = 2021-10-04
 description = "安裝一些常用的套件"
 tags = ["choco"]
 draft = false
