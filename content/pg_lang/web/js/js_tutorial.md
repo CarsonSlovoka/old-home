@@ -143,7 +143,7 @@ Key值會自動排序，
 ```js
 my_list = ['2021-09-01', '2021-08-01', '2020-07-01']
 
-const result_dict = {]
+const result_dict = {}
 my_list.forEach(date => {
     const [yy, mm, dd] = date.split('-')
     if (result_dict[yy] === undefined) {
@@ -427,6 +427,85 @@ const auth = 'Bearer AUTHORIZATION_TOKEN'
 const { groups: { token } } = /Bearer (?<token>[^ $]*)/gm.exec(auth)
 console.log(token) // "Prints AUTHORIZATION_TOKEN"
 ```
+
+## [addEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+
+他有三種型態 (不考慮firefox)
+
+```js
+target.addEventListener(type, listener);
+target.addEventListener(type, listener, options);
+target.addEventListener(type, listener, useCapture);
+```
+
+其中listener是一個function
+
+而比較疑惑的會是`options` 以及 `useCapture`
+
+- `options`: 是一個Object。共有
+
+    ```js
+    {
+        capture = false, // 這個和useCapture是一樣的，請參考useCapture
+        once= false // 是否指運行一次
+        passive = false, // 如果是true，則這個listener將不會執行preventDefault，換言之它一定會執行預設的行為(例如你按下Enter會主動提交、按下超連結等等之類的)
+        single = AbortController() // 如果你想在某些情況有辦法取消掉這個event時，這個參數就對你有用
+    }
+    ```
+
+  預設都是false，single是一個AbortController，幹嘛用的？
+
+  用法
+
+    ```js
+    const controller = new AbortController()
+    document.addEventListener("scroll", () => {
+      // ...
+    }, {
+      signal: controller.signal,
+      once: false
+    })
+
+    if ("cond") {
+        controller.abort() // 當abort被觸發，他就會把含有他的event給取消掉 // The listener will be removed when the given AbortSignal’s abort() method is called.
+    }
+    ```
+
+  以上的範例可以想成，你可以做一個scroll的時候就顯示導欄列，但你可能會想讓這個功能是否啟用，交由使用者來決定，這時候如果使用者決定停用，你就可以讓它運行`controller.abort()`即可
+
+
+- `useCapture`
+
+    ```js
+    addEventListener("click", () => {
+    }, false)
+    ```
+
+根據[Introduced in DOM Level 2](https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-interface)
+
+你可以看到它定義PhaseType有三種
+```
+ // PhaseType
+const unsigned short      CAPTURING_PHASE                = 1;
+const unsigned short      AT_TARGET                      = 2;
+const unsigned short      BUBBLING_PHASE                 = 3;
+```
+
+這是什麼？
+
+- 從父元素 => target: 這個階段為CAPTURING_PHASE
+- 在target本身 => AT_TARGET
+- 從target => 父元素: BUBBLING_PHASE
+
+當你定義一個event，你會有一個target的元素，而這個target的元素，有可能有父元素。
+
+當子元素被觸發，父元素也會被觸發，這時候誰先執行就是看CAPTURING來決定
+
+- 當為true時執行的順序依次為父到子 (上層的結果會優先執行)
+- 反之為false，就由子到父。而這也是預設的行為。
+
+一般來說如果你的event沒有很複雜，甚至就只是單純檢查一個click等等基本上不需要管這個參數，不寫讓他為false即可
+
 
 ## 參考資料
 
