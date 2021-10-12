@@ -297,6 +297,8 @@ next_section = ""
 [highlight all text in textarea] | `elem.focus()` `elem.select()` | js
 [How to exit from setInterval] | `const interval = setInterval(() => {clearInterval(interval);}, 1000)` | js
 [Can Read-Only Properties be Implemented in Pure JavaScript?] | [Object.defineProperty(obj, prop, descriptor)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#description) | js
+[How to combine WebM and Opus to generate MP4?] | `-c:v libx264` | ffmpeg
+[Transposing a 2D-array in JavaScript] | `[matrix[i][j], matrix[j][i]] = [matrix[j][i], matrix[i][j]];` | js
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -576,6 +578,8 @@ next_section = ""
 [highlight all text in textarea]: https://stackoverflow.com/a/69474896/9935654
 [How to exit from setInterval]: https://stackoverflow.com/a/55932398/9935654
 [Can Read-Only Properties be Implemented in Pure JavaScript?]: https://stackoverflow.com/q/366047/9935654
+[How to combine WebM and Opus to generate MP4?]: https://superuser.com/a/873488/1093221
+[Transposing a 2D-array in JavaScript]: https://stackoverflow.com/a/46805290/9935654
 
 {{< /table/bootstrap-table >}}
 

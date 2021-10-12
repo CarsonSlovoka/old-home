@@ -30,6 +30,7 @@ toc_bootstrap = true
 | ---- | ---- |
 ffmpeg -i result.webm -c copy output.mp4 | 將webm轉檔成mp4 (會沒有聲音)
 ffmpeg -i result.webm -c copy -c:a aac output.mp4 | 將webm轉檔成mp4 (含聲音)
+ffmpeg -i result.webm -c copy -c:a aac `-c:v libx264` output.mp4 | 將webm轉檔成mp4 (含聲音)  可以解決錯誤: `Could not find tag for codec vp8 in stream #0, codec not currently supported in container Could not write header for output file #0 (incorrect codec parameters ?): Invalid argument Error initializing output stream 0:0 --`
 ffmpeg -i input.mp4 -i input.m4a -acodec copy -vcodec copy mix.mp4 | mp4加上m4a聲音和新的mp4，後面的copy可以大大的加快速度
 ffmpeg -i input.mp4 -s 1280x720 -c:a copy output.mp4 | 解析度轉為 1280×720
 ffmpeg -i input.mp4 -an output.mp4 | -an表示audio no，不含聲音
