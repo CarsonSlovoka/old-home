@@ -299,6 +299,10 @@ next_section = ""
 [Can Read-Only Properties be Implemented in Pure JavaScript?] | [Object.defineProperty(obj, prop, descriptor)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#description) | js
 [How to combine WebM and Opus to generate MP4?] | `-c:v libx264` | ffmpeg
 [Transposing a 2D-array in JavaScript] | `[matrix[i][j], matrix[j][i]] = [matrix[j][i], matrix[i][j]];` | js
+[Display JSON data on a page as a expandable/collapsible list] | | js
+[How can I check if an object is an array?] | `Object.prototype.toString.call(someVar) === '[object Array]')` | js
+[How to use endsWith with multiple values?] | `x instanceof Array  or x instanceof Object` `["Object", "Array"].some(type=>Object.prototype.toString.call(value).endsWith(type + "]"))` | js
+[Display JSON data on a page as a expandable/collapsible list] | | js,json
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -580,6 +584,10 @@ next_section = ""
 [Can Read-Only Properties be Implemented in Pure JavaScript?]: https://stackoverflow.com/q/366047/9935654
 [How to combine WebM and Opus to generate MP4?]: https://superuser.com/a/873488/1093221
 [Transposing a 2D-array in JavaScript]: https://stackoverflow.com/a/46805290/9935654
+[Display JSON data on a page as a expandable/collapsible list]: https://stackoverflow.com/q/32549518/9935654
+[How can I check if an object is an array?]: https://stackoverflow.com/a/4775737/9935654
+[How to use endsWith with multiple values?]: https://stackoverflow.com/a/63881247/9935654
+[Display JSON data on a page as a expandable/collapsible list]: https://stackoverflow.com/a/61554263/9935654
 
 {{< /table/bootstrap-table >}}
 
