@@ -225,7 +225,8 @@ bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的�
 🔨 | Hammer | 1F528
 ⚙ | Gear | 2699
 ⏩ | fast right | 23E9
-▸ | 條列式符號
+▸ | 條列式符號 | U+25B8
+▾ | | U+25BE
 ✂️ | Scissors | 2702
 ⬇️ | Down Arrow, Download | 2B07
 📈 | Chart Increasing | 1F4C8

@@ -303,6 +303,11 @@ next_section = ""
 [How can I check if an object is an array?] | `Object.prototype.toString.call(someVar) === '[object Array]')` | js
 [How to use endsWith with multiple values?] | `x instanceof Array  or x instanceof Object` `["Object", "Array"].some(type=>Object.prototype.toString.call(value).endsWith(type + "]"))` | js
 [Display JSON data on a page as a expandable/collapsible list] | | js,json
+[Can I use ES6's arrow function syntax with generators? (arrow notation)] | 生成函數 `function*` | ECMA, js
+[How to create an array containing 1...N] | 嘗試著用generator求解吧! | js
+[How do I make JavaScript Object using a variable String to define the class name?] | `const MyClass = eval("MyClassName")` | js
+[Check if variable holds File or Blob] | `myFile instanceof File` `myBlob instanceof Blob` | js
+[Where can I find a pre-populated json file for testing?] | http://mysafeinfo.com/api/data?list=englishmonarchs&format=json | json
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -588,6 +593,11 @@ next_section = ""
 [How can I check if an object is an array?]: https://stackoverflow.com/a/4775737/9935654
 [How to use endsWith with multiple values?]: https://stackoverflow.com/a/63881247/9935654
 [Display JSON data on a page as a expandable/collapsible list]: https://stackoverflow.com/a/61554263/9935654
+[Can I use ES6's arrow function syntax with generators? (arrow notation)]: https://stackoverflow.com/q/27661306/9935654
+[How to create an array containing 1...N]: https://stackoverflow.com/a/64565184/9935654
+[How do I make JavaScript Object using a variable String to define the class name?]: https://stackoverflow.com/q/1366127/9935654
+[Check if variable holds File or Blob]: https://stackoverflow.com/a/47542679/9935654
+[Where can I find a pre-populated json file for testing?]: http://mysafeinfo.com/api/data?list=englishmonarchs&format=json
 
 {{< /table/bootstrap-table >}}
 
