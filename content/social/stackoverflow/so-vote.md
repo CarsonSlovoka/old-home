@@ -312,6 +312,8 @@ next_section = ""
 [Call a function after leaving input field] | `addEventListener("blur", ()=>{})` 可以用來確定是否離開了input視窗 | js
 [How do you clear the focus in javascript?] | `myElem.blur()` | js
 [contenteditable change events] | | js
+[How could I pass a dynamic set of arguments to Go's command exec.Command?] | [command-line-flags](https://gobyexample.com/command-line-flags) | go
+[Is it possible to search for a particular filename on GitHub?] | 使用快捷鍵T之後再打上您的檔案 | github, searc
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -606,6 +608,8 @@ next_section = ""
 [Call a function after leaving input field]: https://stackoverflow.com/a/68428116/9935654
 [How do you clear the focus in javascript?]: https://stackoverflow.com/a/56899483/9935654
 [contenteditable change events]: https://stackoverflow.com/a/69612383/9935654
+[How could I pass a dynamic set of arguments to Go's command exec.Command?]: https://stackoverflow.com/q/22781788/9935654
+[Is it possible to search for a particular filename on GitHub?]: https://stackoverflow.com/a/61471327/9935654
 
 {{< /table/bootstrap-table >}}
 
