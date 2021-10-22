@@ -308,6 +308,10 @@ next_section = ""
 [How do I make JavaScript Object using a variable String to define the class name?] | `const MyClass = eval("MyClassName")` | js
 [Check if variable holds File or Blob] | `myFile instanceof File` `myBlob instanceof Blob` | js
 [Where can I find a pre-populated json file for testing?] | http://mysafeinfo.com/api/data?list=englishmonarchs&format=json | json
+[Add text before or after an HTML element] | [insertAdjacentHTML](https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentText) `divElem.insertAdjacentHTML("afterbegin", "&nbsp;&nbsp;")` or `divElem.insertAdjacentText("afterbegin", "&nbsp;&nbsp;")` | js
+[Call a function after leaving input field] | `addEventListener("blur", ()=>{})` 可以用來確定是否離開了input視窗 | js
+[How do you clear the focus in javascript?] | `myElem.blur()` | js
+[contenteditable change events] | | js
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -598,6 +602,10 @@ next_section = ""
 [How do I make JavaScript Object using a variable String to define the class name?]: https://stackoverflow.com/q/1366127/9935654
 [Check if variable holds File or Blob]: https://stackoverflow.com/a/47542679/9935654
 [Where can I find a pre-populated json file for testing?]: http://mysafeinfo.com/api/data?list=englishmonarchs&format=json
+[Add text before or after an HTML element]: https://stackoverflow.com/a/51290817/9935654
+[Call a function after leaving input field]: https://stackoverflow.com/a/68428116/9935654
+[How do you clear the focus in javascript?]: https://stackoverflow.com/a/56899483/9935654
+[contenteditable change events]: https://stackoverflow.com/a/69612383/9935654
 
 {{< /table/bootstrap-table >}}
 

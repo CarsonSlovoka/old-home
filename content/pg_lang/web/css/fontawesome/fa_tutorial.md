@@ -26,6 +26,7 @@ fontawesome主要就是用來取得一些漂亮的圖標的，
 4. [ionicons]
 5. [material]
 6. [iconfont] (阿里巴巴)
+7. ★★★ [thenounproject](https://thenounproject.com/) : 大推這個，可以下載svg圖形
 
 每一種都有提供CSS, JS等等幫助您快速應用，而本篇只講fontawesome
 
@@ -217,6 +218,8 @@ bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的�
 🥇 | 1st Place Medal | 1F947
 🥈 | 2nd Place Medal | 1F948
 🥉 | 3rd Place Medal | 1F949
+🏆 | Trophy | 1F3C6
+💯 | Hundred points symbol| 1F4AF
 ✍️| Writing Hand | 270D
 🎵 | Muscial Note | 1F3B5
 📥 | Inbox Tray, download | 1F4E5
