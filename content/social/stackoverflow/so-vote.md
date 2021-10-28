@@ -314,6 +314,12 @@ next_section = ""
 [contenteditable change events] | | js
 [How could I pass a dynamic set of arguments to Go's command exec.Command?] | [command-line-flags](https://gobyexample.com/command-line-flags) | go
 [Is it possible to search for a particular filename on GitHub?] | 使用快捷鍵T之後再打上您的檔案 | github, searc
+[JS how to cache a variable] | [window.localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) [window.sessionStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage) | js, cache
+[What is "export default" in JavaScript?] | 簡單來說`export default`可以讓你直接import名稱就開始用了，不需要大括號括起來 | js
+[Difference between DOMContentLoaded and load events] | `DOMContentLoaded` 不需要等待所有資源都加載完成 | js
+[Limit how many times an event listener can trigger every second] | | js
+[how to use scrollspy without using bootstrap] | | js
+
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -610,6 +616,11 @@ next_section = ""
 [contenteditable change events]: https://stackoverflow.com/a/69612383/9935654
 [How could I pass a dynamic set of arguments to Go's command exec.Command?]: https://stackoverflow.com/q/22781788/9935654
 [Is it possible to search for a particular filename on GitHub?]: https://stackoverflow.com/a/61471327/9935654
+[JS how to cache a variable]: https://stackoverflow.com/a/14266748/9935654
+[What is "export default" in JavaScript?]: https://stackoverflow.com/a/43951115/9935654
+[Difference between DOMContentLoaded and load events]: https://stackoverflow.com/q/2414750/9935654
+[Limit how many times an event listener can trigger every second]: https://stackoverflow.com/a/14667039/9935654
+[how to use scrollspy without using bootstrap]: https://stackoverflow.com/a/69749621/9935654
 
 {{< /table/bootstrap-table >}}
 
