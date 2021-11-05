@@ -319,7 +319,14 @@ next_section = ""
 [Difference between DOMContentLoaded and load events] | `DOMContentLoaded` 不需要等待所有資源都加載完成 | js
 [Limit how many times an event listener can trigger every second] | | js
 [how to use scrollspy without using bootstrap] | | js
-
+[Get the size of the screen, current web page and browser window] | `window.innerWidth` | js
+[How to fade in a HTML5 dialog?] | [-webkit-animation](https://developer.mozilla.org/en-US/docs/Web/CSS/animation) [@keyframes](https://www.w3schools.com/cssref/css3_pr_animation-keyframes.asp) | js, animation, css
+[SVG stroke-width not working] | `stroke="black" stroke-width="10"` 必須要先設定stroke，則stroke-width才會有作用 | svg
+[Show file in Windows Explorer using Go?] | | go
+[How to ask for administer privileges on Windows with Go] | | go, admin, UAC
+[What does %~d0 mean in a Windows batch file?] | | bat
+[Something like a function/method in batch files?] | | bat
+[How to check if value is in range of cells?] | `=COUNTIF(A1:B7,"d")` d是否有在A1~B7之間  | google-spreadsheet
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -621,6 +628,14 @@ next_section = ""
 [Difference between DOMContentLoaded and load events]: https://stackoverflow.com/q/2414750/9935654
 [Limit how many times an event listener can trigger every second]: https://stackoverflow.com/a/14667039/9935654
 [how to use scrollspy without using bootstrap]: https://stackoverflow.com/a/69749621/9935654
+[Get the size of the screen, current web page and browser window]: https://stackoverflow.com/a/66916515/9935654
+[How to fade in a HTML5 dialog?]: https://stackoverflow.com/a/69794684/9935654
+[SVG stroke-width not working]: https://stackoverflow.com/a/42518803/9935654
+[Show file in Windows Explorer using Go?]: https://stackoverflow.com/q/32173871/9935654
+[How to ask for administer privileges on Windows with Go]: https://stackoverflow.com/a/31561120/9935654
+[What does %~d0 mean in a Windows batch file?]: https://stackoverflow.com/a/12484802/9935654
+[Something like a function/method in batch files?]: https://stackoverflow.com/a/69850776/9935654
+[How to check if value is in range of cells?]: https://webapps.stackexchange.com/a/57027/215029
 
 {{< /table/bootstrap-table >}}
 
