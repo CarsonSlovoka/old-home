@@ -157,7 +157,7 @@ next_section = ""
 [Replace element contents with document fragment javascript] | range.selectNodeContents(myNode), myNode.remove(), range.insertNode(frag)
 [Uncaught DOMException: Failed to read the 'cssRules' property] | ``crossorigin="anonymous"``
 [Why doesn't document.addEventListener('load', function) work in a greasemonkey script?] | ``window.addEventListener()``
-[Checking if a key exists in a JavaScript object?] | ``undefined ?? "default value"`` ``options.person?.age ?? ""`` [Optional_chaining](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
+[Checking if a key exists in a JavaScript object?] | ``undefined ?? "default value"`` ``options.person?.age ?? ""`` [Optional_chaining (?.)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
 [Regex to match string containing two (or more) words in any order and case not sensitive] | ``(?i:os|path)`` (): 一個匿名group i: 不區分大小寫 |: 或的意思  也就是他不區分大小寫得找os或者為path都行
 [Display image from http response with image content type] |
 [Requesting blob images and transforming to base64 with fetch API] |
@@ -206,7 +206,7 @@ next_section = ""
 [How to get value of selected radio button?] | ``document.querySelector(`input[type="radio"][name="algorithm"]:checked`).value;`` | js
 [Why am I getting “Failed to load extension. Invalid value for 'content_security_policy'”?] | ``"content_security_policy": {"extension_pages": "script-src 'self'; object-src 'self'"}`` | google-chrome-extension
 [Equation (expression) parser with precedence?] | 不使用eval進行四則運算 | js
-[access object property from object method in javascript] | | js
+[access object property from object method in javascript] | this相關 | js
 [Sorting object property by values] | ``Object.entries(obj).sort((a, b) => a[1] - b[1])`` | js
 [What is the difference between String.slice and String.substring?] | 不要使用[substr](https://web.archive.org/web/20200704195437/https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substr) | js
 [checking for typeof error in JS] | 用 ``instanceof`` 來確認 | js
@@ -327,6 +327,15 @@ next_section = ""
 [What does %~d0 mean in a Windows batch file?] | | bat
 [Something like a function/method in batch files?] | | bat
 [How to check if value is in range of cells?] | `=COUNTIF(A1:B7,"d")` d是否有在A1~B7之間  | google-spreadsheet
+[How to clear history of text input] | `<form autocomplete="off">` 可以關閉紀錄的功能，但如果您只想要刪除某幾筆被記錄的資料，可以使用 delete或者試試shift+delete，即可刪除 | html
+[Javascript to convert Markdown/Textile to HTML (and, ideally, back to Markdown/Textile)] | 推薦用[mmd](https://github.com/p01/mmd.js) | js,markdown
+[Get the value of checked checkbox?] | `document.querySelector("#isDebugMode").checked`, `document.querySelector("#size:checked")?.value ?? defaultSize`  | js
+[html input field using regex to get rid of invalid characters for filename] | input使用pattern來控制輸入項符合檔名的規則 `pattern="[^\\/:\x22*?<>]+"` | html
+[Searching validityState for values] |  `input.validity.{valueMissing, typeMismatch, patternMismatch,...}` | js
+[HTML5 form required attribute. Set custom validation message?] | `oninvalid="this.setCustomValidity('Enter User Name Here')" oninput="this.setCustomValidity('')"` | html
+[Delay HTML5 :invalid pseudo-class until the first event 在表單有invalid的css屬性時，不要在使用者都還沒有輸入的時候就顯示驗證錯誤] | `input:not(:placeholder-shown)` | html
+[How to have multiple colors in a Windows batch file?] | | bat
+[Batch syntax highlighting] | `lang-sh` | bat
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -636,6 +645,15 @@ next_section = ""
 [What does %~d0 mean in a Windows batch file?]: https://stackoverflow.com/a/12484802/9935654
 [Something like a function/method in batch files?]: https://stackoverflow.com/a/69850776/9935654
 [How to check if value is in range of cells?]: https://webapps.stackexchange.com/a/57027/215029
+[How to clear history of text input]: https://stackoverflow.com/a/69446864/9935654
+[Javascript to convert Markdown/Textile to HTML (and, ideally, back to Markdown/Textile)]: https://stackoverflow.com/q/1319657/9935654
+[Get the value of checked checkbox?]: https://stackoverflow.com/a/69907839/9935654
+[html input field using regex to get rid of invalid characters for filename]: https://stackoverflow.com/a/34174664/9935654
+[Searching validityState for values]: https://stackoverflow.com/a/40238616/9935654
+[HTML5 form required attribute. Set custom validation message?]: https://stackoverflow.com/a/69912121/9935654
+[Delay HTML5 :invalid pseudo-class until the first event]: https://stackoverflow.com/a/48144022/9935654
+[How to have multiple colors in a Windows batch file?]: https://stackoverflow.com/a/69924820/9935654
+[Batch syntax highlighting]: https://meta.stackoverflow.com/q/299831/9935654
 
 {{< /table/bootstrap-table >}}
 
