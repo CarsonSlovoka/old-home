@@ -336,6 +336,12 @@ next_section = ""
 [Delay HTML5 :invalid pseudo-class until the first event 在表單有invalid的css屬性時，不要在使用者都還沒有輸入的時候就顯示驗證錯誤] | `input:not(:placeholder-shown)` | html
 [How to have multiple colors in a Windows batch file?] | | bat
 [Batch syntax highlighting] | `lang-sh` | bat
+[Real mouse position in canvas] | | canvas
+[.attr vs .classed in D3.js] | 第二個參數 true:表示增加該屬性, false為移除該屬性 `.classed("my-selector", true)`  | j3.js
+[how to draw svg polygon on the points of mouse click position] | | svg
+[SVG fill color transparency / alpha?] | 使用style `style="fill:rgba(255, 0, 0, .5)` 或者 `<circle  fill="#044B94" fill-opacity="0.4">` 注意fill直接放rgba是沒有用的，這種只能用style上才有作用 | svg
+[Array.from vs Array.prototype.map] | | js
+[Javascript library d3 call function] | | d3.js
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -654,6 +660,12 @@ next_section = ""
 [Delay HTML5 :invalid pseudo-class until the first event]: https://stackoverflow.com/a/48144022/9935654
 [How to have multiple colors in a Windows batch file?]: https://stackoverflow.com/a/69924820/9935654
 [Batch syntax highlighting]: https://meta.stackoverflow.com/q/299831/9935654
+[Real mouse position in canvas]: https://stackoverflow.com/a/33063222/9935654
+[.attr vs .classed in D3.js]: https://stackoverflow.com/a/44224276/9935654
+[how to draw svg polygon on the points of mouse click position]: https://stackoverflow.com/a/54176883/9935654
+[SVG fill color transparency / alpha?]: https://stackoverflow.com/a/66107433/9935654
+[Array.from vs Array.prototype.map]: https://stackoverflow.com/q/26052699/9935654
+[Javascript library d3 call function]: https://stackoverflow.com/a/63468824/9935654
 
 {{< /table/bootstrap-table >}}
 
