@@ -507,6 +507,32 @@ const unsigned short      BUBBLING_PHASE                 = 3;
 一般來說如果你的event沒有很複雜，甚至就只是單純檢查一個click等等基本上不需要管這個參數，不寫讓他為false即可
 
 
+## Element
+
+### insertAdjacentHTML
+
+| Para | Desc |
+| ---- | ---- |
+beforebegin | Before the element itself.
+afterbegin | Just inside the element, before its first child.
+beforeend | Just inside the element, after its last child.
+afterend | After the element itself.
+
+以上可以幫助您插入HTML
+
+但如果您所要插入的對象是 [fragment](https://developer.mozilla.org/en/docs/Web/API/Document/createDocumentFragment) ，那麼可以使用 [insertBefore](https://developer.mozilla.org/en-US/docs/Web/API/Node/insertBefore) 來幫忙
+
+```js
+circle.parentNode.insertBefore(frag, circle) // <text></>text><circle></circle>
+circle.parentNode.insertBefore(frag, circle.nextSibling) // <circle></circle><text></>text>
+```
+
+至於如果frag要插入在元素裡面，直接使用append即可
+
+```html
+elem.append(frag)
+```
+
 ## 參考資料
 
 - [web.dev: promises](https://web.dev/promises/)
