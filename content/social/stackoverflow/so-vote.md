@@ -342,6 +342,13 @@ next_section = ""
 [SVG fill color transparency / alpha?] | 使用style `style="fill:rgba(255, 0, 0, .5)` 或者 `<circle  fill="#044B94" fill-opacity="0.4">` 注意fill直接放rgba是沒有用的，這種只能用style上才有作用 | svg
 [Array.from vs Array.prototype.map] | | js
 [Javascript library d3 call function] | | d3.js
+[SVG: text inside rect] | | svg
+[remove last characters string batch] | 移除最後一個字符: `%myString:~0,-1%` | bat
+[Get protocol, domain, and port from URL] | `const full = location.protocol + '//' + location.host;` ``${location.protocol}//${location.host}`` | js
+[How to display images inline] | `display: inline-block` 可以讓此元素不被換行，也就是可以和前一個元素黏在一列 `<img src="favicon.svg" width="55" height="55"><h1 style="display: inline-block">...</h1>` | css
+[How do I get glyph outlines of a letter as bézier paths using JavaScript?] | [opentype.js](https://github.com/opentypejs/opentype.js) | opentype.js
+[SVG icon in PWA manifest.json - how to set it for all sizes?] | | pwa
+[apple touch icon svg support] | | svg, apple-touch-icon
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -666,6 +673,13 @@ next_section = ""
 [SVG fill color transparency / alpha?]: https://stackoverflow.com/a/66107433/9935654
 [Array.from vs Array.prototype.map]: https://stackoverflow.com/q/26052699/9935654
 [Javascript library d3 call function]: https://stackoverflow.com/a/63468824/9935654
+[SVG: text inside rect]: https://stackoverflow.com/a/57567670/9935654
+[remove last characters string batch]: https://stackoverflow.com/a/29504225/9935654
+[Get protocol, domain, and port from URL]: https://stackoverflow.com/a/6941653/9935654
+[How to display images inline]: https://stackoverflow.com/q/12394866/9935654
+[How do I get glyph outlines of a letter as bézier paths using JavaScript?]: https://stackoverflow.com/a/19057523/9935654
+[SVG icon in PWA manifest.json - how to set it for all sizes?]: https://stackoverflow.com/q/62825490/9935654
+[apple touch icon svg support]: https://stackoverflow.com/a/25079463/9935654
 
 {{< /table/bootstrap-table >}}
 
