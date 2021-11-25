@@ -453,6 +453,21 @@ git@github.com: Permission denied (publickey).
     以Github而言，您可以看到此SSH Keys的最後存取時間，可能對管理也有些幫助
 
 
+## Authorized OAuth Apps
+
+授權App可以使用Github的權限，可以在這邊進行管理
+
+> https://github.com/settings/applications
+
+例如您裝了Github iOS，就會出現在這個列表中。
+
+代表手機可以讀、寫、管理您的專案，如果不想要就要移除授權。
+
+此外常用的 [Git Credential Manager](https://git-scm.com/book/en/v2/Git-Tools-Credential-Storage) 也會需要授權
+
+> Authorize Git Credential Manager 如果移除之後就要重新授權(可以透過網頁登入git來當認證)您的代碼才可以透過git傳送上去
+
+
 ## 參考資料
 
 - [Push to GitHub without a password using ssh-key](https://stackoverflow.com/a/53915051/9935654)
