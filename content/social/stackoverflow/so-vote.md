@@ -349,6 +349,8 @@ next_section = ""
 [How do I get glyph outlines of a letter as bézier paths using JavaScript?] | [opentype.js](https://github.com/opentypejs/opentype.js) | opentype.js
 [SVG icon in PWA manifest.json - how to set it for all sizes?] | | pwa
 [apple touch icon svg support] | | svg, apple-touch-icon
+[Whether all icon sizes can be used when using SVG in PWA manifest] | | svg, pwa
+[Get the last item in an array] | 使用at方法 `array.at(-1)` 但目前safari沒有支持，[查看](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/at#browser_compatibility) | js
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -680,6 +682,8 @@ next_section = ""
 [How do I get glyph outlines of a letter as bézier paths using JavaScript?]: https://stackoverflow.com/a/19057523/9935654
 [SVG icon in PWA manifest.json - how to set it for all sizes?]: https://stackoverflow.com/q/62825490/9935654
 [apple touch icon svg support]: https://stackoverflow.com/a/25079463/9935654
+[Whether all icon sizes can be used when using SVG in PWA manifest]: https://stackoverflow.com/a/66957279/9935654
+[Get the last item in an array]: https://stackoverflow.com/a/3216041/9935654
 
 {{< /table/bootstrap-table >}}
 
