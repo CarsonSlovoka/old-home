@@ -468,6 +468,16 @@ git@github.com: Permission denied (publickey).
 > Authorize Git Credential Manager 如果移除之後就要重新授權(可以透過網頁登入git來當認證)您的代碼才可以透過git傳送上去
 
 
+## [Personal access tokens](https://github.com/settings/tokens)
+
+這個方法是使用令牌來訪問您的專案。
+
+建立完token之後，把token加在api的參數之中即可。
+
+完成之後可以做像是取得某公私有專案的中的圖片之類的事情。
+
+可以參考此[範例ref-get-github-file.html](https://github.com/CarsonSlovoka/go-src/blob/master/tutorial/web/js/github/ref-get-github-file.html)
+
 ## 參考資料
 
 - [Push to GitHub without a password using ssh-key](https://stackoverflow.com/a/53915051/9935654)
