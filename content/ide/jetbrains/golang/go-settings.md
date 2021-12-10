@@ -116,3 +116,28 @@ Enable Go Modules Integration : 這個東西指的就是go.mod
 
 
 
+## JSON設定
+
+- Settings -> Code Style -> JSON -> Wrapping and Braces
+
+  可以對Arrays, Objects進行設定
+
+  建議把Arrays改成`Wrap if long`，這樣可以將
+
+    ```json
+    {
+      "data": [
+          1,
+          2,
+          3
+      ]
+    }
+    ```
+
+    變成
+
+    ```json
+    {
+      "data": [1, 2, 3]
+    }
+    ```

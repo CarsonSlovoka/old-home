@@ -352,6 +352,9 @@ next_section = ""
 [Whether all icon sizes can be used when using SVG in PWA manifest] | | svg, pwa
 [Get the last item in an array] | 使用at方法 `array.at(-1)` 但目前safari沒有支持，[查看](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/at#browser_compatibility) | js
 [DOMException on calling navigator.clipboard.readText()] | 執行`navigator.clipboard.writeText`得到Document is not focused.的錯誤，原因可能是因為你在devTool下中斷點的關係，導致focus沒有正常運行，不建議在此語句上下中斷點，確定一下文本沒有問題即可讓他自動執行 | clipboard, js
+[How can I export GitHub issues to Excel?] | `curl -i https://api.github.com/repos/<repo-owner>/<repo-name>/issues --header "Authorization: token <token>"` | github.issue
+[How to set "aggregate column a" with setOptions] | `.setOption('applyAggregateData', true)` | google.sheets
+[How do I zip two arrays in JavaScript?] | `const zip = (a, b) => a.map((k, i) => [k, b[i]]);` [另一個版本](https://gist.github.com/renaudtertrais/25fc5a2e64fe5d0e86894094c6989e10) 解決更複雜的情況 | js
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -686,6 +689,9 @@ next_section = ""
 [Whether all icon sizes can be used when using SVG in PWA manifest]: https://stackoverflow.com/a/66957279/9935654
 [Get the last item in an array]: https://stackoverflow.com/a/3216041/9935654
 [DOMException on calling navigator.clipboard.readText()]: https://stackoverflow.com/a/61216014/9935654
+[How can I export GitHub issues to Excel?]: https://stackoverflow.com/a/45953812/9935654
+[How to set "aggregate column a" with setOptions]: https://stackoverflow.com/a/50745042/9935654
+[How do I zip two arrays in JavaScript?]: https://stackoverflow.com/a/22015930/9935654
 
 {{< /table/bootstrap-table >}}
 
