@@ -355,6 +355,16 @@ next_section = ""
 [How can I export GitHub issues to Excel?] | `curl -i https://api.github.com/repos/<repo-owner>/<repo-name>/issues --header "Authorization: token <token>"` | github.issue
 [How to set "aggregate column a" with setOptions] | `.setOption('applyAggregateData', true)` | google.sheets
 [How do I zip two arrays in JavaScript?] | `const zip = (a, b) => a.map((k, i) => [k, b[i]]);` [另一個版本](https://gist.github.com/renaudtertrais/25fc5a2e64fe5d0e86894094c6989e10) 解決更複雜的情況 | js
+[How to solve TypeError: d3.time is undefined?] | 把`d3.time.format`改成`d3.timeFormat`, `d3.time.days`改成`d3.timeDay` | d3
+[How to access new 'in-cell-image' from google apps script?] | | gas
+[D3.js: Trying to build flat calendar] | |　d3.js
+[vertical text in d3 (not rotated)] | 使用`rotate(-90)`+ | d3.js
+[Custom Google Spreadsheet/Sheets toolbar] | | gas
+[How to set Hours,minutes,seconds to Date which is in GMT] | ` date.setHours(0, 0, 0);   // Set hours, minutes and seconds` | js
+[Find the element before and after a specific element with pure javascript] | 要用`elem.nextElementSibling`不要用`elem.nextSibling` | js
+[Is it possible to alter a CSS stylesheet using JavaScript? (NOT the style of an object, but the stylesheet itself)] | `document.styleSheets[0].cssRules` | js
+[How can I choose a legible color to draw text on a bar in a d3js chart?] | 這種算法簡單但是不完美，最好用流明來決定顏色`const foreColor = d3.hsl(d3.color("steelblue")).l > 0.5 ? "#000" : "#fff"` | d3.js
+[Calculating contrasting colours in javascript] | | js
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -692,6 +702,16 @@ next_section = ""
 [How can I export GitHub issues to Excel?]: https://stackoverflow.com/a/45953812/9935654
 [How to set "aggregate column a" with setOptions]: https://stackoverflow.com/a/50745042/9935654
 [How do I zip two arrays in JavaScript?]: https://stackoverflow.com/a/22015930/9935654
+[How to solve TypeError: d3.time is undefined?]: https://stackoverflow.com/a/39370458/9935654
+[How to access new 'in-cell-image' from google apps script?]: https://stackoverflow.com/a/68156030/9935654
+[D3.js: Trying to build flat calendar]: https://stackoverflow.com/q/23417626/9935654
+[vertical text in d3 (not rotated)]: https://stackoverflow.com/a/22085843/9935654
+[Custom Google Spreadsheet/Sheets toolbar]: https://stackoverflow.com/q/22376101/9935654
+[How to set Hours,minutes,seconds to Date which is in GMT]: https://stackoverflow.com/a/40378100/9935654
+[Find the element before and after a specific element with pure javascript]: https://stackoverflow.com/a/11475290/9935654
+[Is it possible to alter a CSS stylesheet using JavaScript? (NOT the style of an object, but the stylesheet itself)]: https://stackoverflow.com/a/38133146/9935654
+[How can I choose a legible color to draw text on a bar in a d3js chart?]: https://stackoverflow.com/a/30781850/9935654
+[Calculating contrasting colours in javascript]: https://stackoverflow.com/a/70360753/9935654
 
 {{< /table/bootstrap-table >}}
 
