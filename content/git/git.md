@@ -294,7 +294,16 @@ git config --global core.safecrlf warn
 - ``git commit -m "[submodule] ..."``
 
 遞迴更新
-> git submodule update -\-init -\-recursive
+> git submodule update -\-init -\-recursive <path>
+
+`recursive`指令是指如果您的submodule中又有submodule的時候也會一併處理
+
+`path`是放資料夾的路徑名稱(不是別名)，和`.gitmodules`中的path一樣
+
+此指令其實會去clone專案回來，所以會把專案整包抓下來，當前的節點會是submodule當初新增時的節點
+
+`path`可以不打，就會對所有submodule都處理，而如果您只要某些專案而已就還是打上
+
 
 
 ## git merge
@@ -463,6 +472,10 @@ FETCH_HEAD ?
 ### remote prune
 
 > git remote prune REMOTE_NAME
+
+### remote rename
+
+> git remote rename <old> <new>
 
 ## git gc 垃圾清理
 
