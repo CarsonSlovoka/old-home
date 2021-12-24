@@ -365,6 +365,10 @@ next_section = ""
 [Is it possible to alter a CSS stylesheet using JavaScript? (NOT the style of an object, but the stylesheet itself)] | `document.styleSheets[0].cssRules` | js
 [How can I choose a legible color to draw text on a bar in a d3js chart?] | 這種算法簡單但是不完美，最好用流明來決定顏色`const foreColor = d3.hsl(d3.color("steelblue")).l > 0.5 ? "#000" : "#fff"` | d3.js
 [Calculating contrasting colours in javascript] | | js
+[Regular expression for floating point numbers] | `[+-]?([0-9]*[.])?[0-9]+` | js
+[How to center a checkbox in a table cell?] | 改善checkbox在偏上的問題 `vertical-align: middle;` | css
+[Placing border inside of div and not on its edge] | 一般的border `border: 2px solid red` 會佔空間，導致自動換行產生，這時候可以使用`outline: 2px solid red` 搭配 ` outline-offset: -2px;` 來幫忙 | css
+[create fonts subset using opentype.js getting "OTS parsing error: cmap: Failed to parse table" error] |  | opentype.js
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -712,6 +716,10 @@ next_section = ""
 [Is it possible to alter a CSS stylesheet using JavaScript? (NOT the style of an object, but the stylesheet itself)]: https://stackoverflow.com/a/38133146/9935654
 [How can I choose a legible color to draw text on a bar in a d3js chart?]: https://stackoverflow.com/a/30781850/9935654
 [Calculating contrasting colours in javascript]: https://stackoverflow.com/a/70360753/9935654
+[Regular expression for floating point numbers]: https://stackoverflow.com/a/12643073/9935654
+[How to center a checkbox in a table cell?]: https://stackoverflow.com/a/5048620/9935654
+[Placing border inside of div and not on its edge]: https://stackoverflow.com/a/52319334/9935654
+[create fonts subset using opentype.js getting "OTS parsing error: cmap: Failed to parse table" error]: https://stackoverflow.com/a/56901822/9935654
 
 {{< /table/bootstrap-table >}}
 
