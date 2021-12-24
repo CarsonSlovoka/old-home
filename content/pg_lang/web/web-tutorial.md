@@ -71,3 +71,31 @@ start python -m http.server %port_number%
 start http://localhost:%port_number%/
 ngrok http %port_number%
 ```
+
+
+## 區域連線
+
+如果您只想要區域網路可以連接到您本機，可以直接新增防火牆的規則就可以了
+
+- 開啟防火牆
+- 輸入規則
+    - 新增規則
+        - 選擇程式: 路徑最好不要用`%userprofile%`[^absPath]使用`C:\users\`代替
+    - 一般
+        - 可以選擇IPsec的安全連線 (如果真的不行就改允許連線)
+    - 通訊協定及連接埠
+        - 選TCP
+        - 埠編號: 同您程式上指定的埠編號 (建議您選，不要開放所有埠編號)
+    - 領域
+        - 本機IP位址: 表示只開放這個ip為只給外面使用
+
+            放`ipconfig /all`中給的`ipv4`位址
+        - 遠端IP位址: 哪些IP位址有權來訪問您指定的IP位址
+
+            同本機IP位址，只是這些IP改為遠端電腦的IP V4位址
+    - 進階: 好像要都勾才會生效
+        - [V] 網域
+        - [V] 私人
+        - [V] 公用
+
+[^absPath]: 不曉得為什麼，總之如果這麼做可能會失敗
