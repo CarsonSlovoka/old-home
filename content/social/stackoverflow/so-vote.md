@@ -369,6 +369,9 @@ next_section = ""
 [How to center a checkbox in a table cell?] | 改善checkbox在偏上的問題 `vertical-align: middle;` | css
 [Placing border inside of div and not on its edge] | 一般的border `border: 2px solid red` 會佔空間，導致自動換行產生，這時候可以使用`outline: 2px solid red` 搭配 ` outline-offset: -2px;` 來幫忙 | css
 [create fonts subset using opentype.js getting "OTS parsing error: cmap: Failed to parse table" error] |  | opentype.js
+[SVG - click is not a function] | `mySVGElem.dispatchEvent(new Event('click'))` | svg
+[HTML5 input type range show range value] | `<input type="range" value="24" min="1" max="100" oninput="this.nextElementSibling.value = this.value"><output>24</output>` | html
+[How to get client's IP address using JavaScript?] | `fetch('https://ipinfo.io/json')` | js,ip
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -720,6 +723,9 @@ next_section = ""
 [How to center a checkbox in a table cell?]: https://stackoverflow.com/a/5048620/9935654
 [Placing border inside of div and not on its edge]: https://stackoverflow.com/a/52319334/9935654
 [create fonts subset using opentype.js getting "OTS parsing error: cmap: Failed to parse table" error]: https://stackoverflow.com/a/56901822/9935654
+[SVG - click is not a function]: https://stackoverflow.com/a/59787804/9935654
+[HTML5 input type range show range value]: https://stackoverflow.com/a/18936328/9935654
+[How to get client's IP address using JavaScript?]: https://stackoverflow.com/a/35123097/9935654
 
 {{< /table/bootstrap-table >}}
 

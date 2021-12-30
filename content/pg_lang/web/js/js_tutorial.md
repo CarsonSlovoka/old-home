@@ -533,6 +533,14 @@ circle.parentNode.insertBefore(frag, circle.nextSibling) // <circle></circle><te
 elem.append(frag)
 ```
 
+## document.createDocumentFragment()與 document.createDocumentFragment()的差異
+
+```js
+document.createDocumentFragment() // 參數為空，純粹建立一個空的fragment
+document.createRange().createContextualFragment(`<div></div>`) // range中的createContextualFragment可以吃其他參數，讓您的fragment預設的情況底下就已經寫了一些HTMLElement進去
+```
+
+
 ## 參考資料
 
 - [web.dev: promises](https://web.dev/promises/)
