@@ -164,7 +164,42 @@ mixin本身有點像宣告的意思，而被mixin的東西都可以被include，
 - ``Strings``
 - ``Colors``: rgb, rgba, hsl, hsla
 - ``Lists``\: list
+    ```sass
+    $myList: 1 2 3 4 5
+
+    $containerList: container container-fluid container-lg container-md container-sm container-xl container-xxl
+    @each $name in $containerList
+      @debug $name
+    ```
+
+    Sass lists are immutable, it doesn't modify the original list.
+
+    ```sass
+    @use "sass:list"
+    $myList: "a" "b"
+    @debug list.append($myList, "c") // "a" "b" "c"
+    @debug $myList // "a" "b"
+    ```
+
 - ``Maps``\: 如同dict
+
+    ```sass
+    $myMap: "string" #080, "comment" #800, "variable" #60b
+    @each $name, $color in $myMap
+        @debug #{$name} // 去除"
+        @debug $color
+
+    @use "sass:map"
+    @debug map.get(("string": #080, "comment": #800, "variable": #60b), "variable") // #60b
+    ```
+
+    ```sass
+    @each $idx, $minWidth in (2:576, 3:768, 4:992, 5:1200, 6:1400)
+        @media (min-width: #{$minWidth}px)
+          .container
+            max-width: #{$minWidth}px
+    ```
+
 - ``true``\: and ``false``
 - ``null``
 - ``Function``\: 名稱中可以使用``-``
@@ -182,6 +217,7 @@ mixin本身有點像宣告的意思，而被mixin的東西都可以被include，
 
 ## 參考資料
 
+- ★[sass online editor: sassmeister](https://www.sassmeister.com/)
 - [Sass / SCSS 預處理器 - Variables 變數宣告與 !global、!default 標誌定義](https://awdr74100.github.io/2020-05-25-scss-variables/)
 
 
@@ -190,3 +226,6 @@ mixin本身有點像宣告的意思，而被mixin的東西都可以被include，
 [@function]: https://sass-lang.com/documentation/at-rules/function
 [@debug]: https://sass-lang.com/documentation/at-rules/debug
 [At-Rules]: https://sass-lang.com/documentation/at-rules
+
+
+
