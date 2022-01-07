@@ -372,6 +372,15 @@ next_section = ""
 [SVG - click is not a function] | `mySVGElem.dispatchEvent(new Event('click'))` | svg
 [HTML5 input type range show range value] | `<input type="range" value="24" min="1" max="100" oninput="this.nextElementSibling.value = this.value"><output>24</output>` | html
 [How to get client's IP address using JavaScript?] | `fetch('https://ipinfo.io/json')` | js,ip
+[Mongodb-go-driver interface conversion: interface {} is primitive.ObjectID, not primitive.ObjectID (types from different packages)] | 這是由斷言所觸發的錯誤，表示該型別為`primitive.ObjectID` 這個的原型是一個array`[12]byte` | mongodb
+[golang: return a pointer or pass a reference] | | golang
+[In mongodb-go-driver, how to marshal/unmarshal BSON in to a struct] | |
+[How to extract the hostname portion of a URL in JavaScript] | 利用`new URL("...")` 在使用URL的方法去獲得相關的網址 |
+[Calculate a percent with SCSS/SASS] | `$my_width: 4/12*1%;` | sass
+[SVG path to create triangle with rounded corners] | 補上`stroke-linejoin:round`以及`stroke`即可讓三角形的稜角比較圓滑，範例:`<polygon style="stroke-linejoin:round" stroke="#f7c9c7" fill="#f7c9c7" points="80,50 30,25 30,75" />` | svg
+[HTML5 Audio stop function] | `audio.pause(); audio.currentTime = 0;` | js
+[Html 5 audio tag custom controls?] | [video::-webkit-media-controls-panel](https://gist.github.com/afabbro/3759334#video) | html
+[javascript slowly decrease volume of audio element] | [setInterval()](https://developer.mozilla.org/en-US/docs/Web/API/setInterval) | js
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -726,6 +735,15 @@ next_section = ""
 [SVG - click is not a function]: https://stackoverflow.com/a/59787804/9935654
 [HTML5 input type range show range value]: https://stackoverflow.com/a/18936328/9935654
 [How to get client's IP address using JavaScript?]: https://stackoverflow.com/a/35123097/9935654
+[Mongodb-go-driver interface conversion: interface {} is primitive.ObjectID, not primitive.ObjectID (types from different packages)]: https://stackoverflow.com/a/55779348/9935654
+[golang: return a pointer or pass a reference]: https://stackoverflow.com/a/44827311/9935654
+[In mongodb-go-driver, how to marshal/unmarshal BSON in to a struct]: https://stackoverflow.com/q/51577388/9935654
+[How to extract the hostname portion of a URL in JavaScript]: https://stackoverflow.com/a/44272047/9935654
+[Calculate a percent with SCSS/SASS]: https://stackoverflow.com/a/61829411/9935654
+[SVG path to create triangle with rounded corners]: https://stackoverflow.com/a/46711374/9935654
+[HTML5 Audio stop function]: https://stackoverflow.com/a/14836099/9935654
+[Html 5 audio tag custom controls?]: https://stackoverflow.com/a/64012853/9935654
+[javascript slowly decrease volume of audio element]: https://stackoverflow.com/a/7942472/9935654
 
 {{< /table/bootstrap-table >}}
 
