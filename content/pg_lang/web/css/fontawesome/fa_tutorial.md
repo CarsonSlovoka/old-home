@@ -27,6 +27,7 @@ fontawesome主要就是用來取得一些漂亮的圖標的，
 5. [material]
 6. [iconfont] (阿里巴巴)
 7. ★★★ [thenounproject](https://thenounproject.com/) : 大推這個，可以下載svg圖形
+8. ★ [SVG背景圖片下載: svgbackgrounds.com](https://www.svgbackgrounds.com/)
 
 每一種都有提供CSS, JS等等幫助您快速應用，而本篇只講fontawesome
 

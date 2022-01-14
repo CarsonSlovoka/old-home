@@ -381,6 +381,7 @@ next_section = ""
 [HTML5 Audio stop function] | `audio.pause(); audio.currentTime = 0;` | js
 [Html 5 audio tag custom controls?] | [video::-webkit-media-controls-panel](https://gist.github.com/afabbro/3759334#video) | html
 [javascript slowly decrease volume of audio element] | [setInterval()](https://developer.mozilla.org/en-US/docs/Web/API/setInterval) | js
+[javascript -Dynamic pagination pure Js] | | js
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -744,6 +745,7 @@ next_section = ""
 [HTML5 Audio stop function]: https://stackoverflow.com/a/14836099/9935654
 [Html 5 audio tag custom controls?]: https://stackoverflow.com/a/64012853/9935654
 [javascript slowly decrease volume of audio element]: https://stackoverflow.com/a/7942472/9935654
+[javascript -Dynamic pagination pure Js]: https://stackoverflow.com/a/70705563/9935654
 
 {{< /table/bootstrap-table >}}
 
