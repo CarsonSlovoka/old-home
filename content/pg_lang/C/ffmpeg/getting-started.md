@@ -2,7 +2,7 @@
 title = "Getting Started"
 description="FFmpeg Getting Started"
 date = 2021-09-17T18:03:00+08:00
-lastmod = 2021-09-17
+lastmod = 2022-01-22
 featured_image = ""
 draft = false
 weight=0
@@ -47,8 +47,53 @@ ffmpeg -i video.mp4 -i audio.wav -map 0:v -map 1:a -c:v copy -shortest output.mp
 `ffmpeg -i console.mp4 -i console.mp3 -c copy -map 0:v:0 -map 1:a:0 -shortest result.mp4` | 替mp4新增音樂
 ffmpeg -ss 00:00:03 -t 10  -i input.mp4 output.gif | 從第3秒開始往後錄10秒 轉成gif
 
+## 推流 live streaming RTMP
+
+查看本機video, audio的設備資訊
+
+> ffmpeg -list_devices true -f dshow -i dummy
+
+```
+[dshow @ 00000123452234fa] DirectShow video devices (some may be both video and audio devices) // 告訴您video的裝置內容
+[dshow @ 00000123452234fa] "HD Webcam"  // 記好您的video裝置名稱
+[dshow @ 00000123452234fa]   Alternative name "@device_pnp_\\?\usb#vid_5986&pid_211c&mi_00#6&9da3735&2&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global"
+[dshow @ 00000123452234fa] DirectShow audio devices // 告訴您audio裝置內容
+[dshow @ 00000123452234fa]  "Microphone (Realtek(R) Audio)" // 記好您的audio裝置名稱
+[dshow @ 00000123452234fa]     Alternative name "@device_cm_{33D9A762-90C8-11D0-BD43-00A0C911CE86}\wave_{C19C2334-F595-4F17-B261-CDF6157B0496}"
+```
+
+如果您沒有攝像頭，那麼裝置名稱就會看到
+
+> Could not enumerate video devices (or none found).
+
+其他還可能出現的裝置
+
+```
+video="USB2.0 PC CAMERA":audio="麦克风 (USB2.0 MIC)"
+```
+
+----
+
+
+如果您有rtmp的直播協議的編碼，可以透過ffmpeg去送串流，例如
+
+
+> ffmpeg -f dshow -i video="HD Webcam":audio="Microphone (Realtek(R) Audio)" -vcodec libx264 -acodec aac -f flv "rtmp://example.com[:port]/live/test"
+
+> ffmpeg -f dshow -i video="HD Webcam":audio="Microphone (Realtek(R) Audio)" -vcodec libx264 -acodec aac -f flv "rtmp://127.0.0.1:1935/live/rfBd56ti2SMtYvSgD5xAV0YU99zampta7Z7S575KLkIZ9PYk"
+
+> ffmpeg -f video="HD Webcam" -i "0" -vcodec h264 -acodec aac -f flv rtmp://127.0.0.1:1935/live/rfBd56ti2SMtYvSgD5xAV0YU99zampta7Z7S575KLkIZ9PYk // 不要聲音
+
+
+| name | desc |
+| ---- | ---- |
+-vcodec 視頻編碼方式 | libx264
+-acodec 音頻編碼方式 | aac
+
 
 ## 參考資料
 - [ffmpeg大全](https://www.cnblogs.com/brt2/p/14006745.html)
 - [How do I convert a video to GIF using ffmpeg, with reasonable quality?](https://superuser.com/a/556031/1093221)
 - https://github.com/CarsonSlovoka/pylib/issues/3
+- [实现一个直播DEMO——RTMP推流和HTTP-FLV拉流](https://juejin.cn/post/6978882334829477918)
+- [音视频技术参考资料](https://github.com/gwuhaolin/blog/issues/5)
