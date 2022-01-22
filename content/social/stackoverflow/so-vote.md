@@ -382,6 +382,10 @@ next_section = ""
 [Html 5 audio tag custom controls?] | [video::-webkit-media-controls-panel](https://gist.github.com/afabbro/3759334#video) | html
 [javascript slowly decrease volume of audio element] | [setInterval()](https://developer.mozilla.org/en-US/docs/Web/API/setInterval) | js
 [javascript -Dynamic pagination pure Js] | | js
+[Convert a 1D array to 2D array] | `while(arr.length) newArr.push(arr.splice(0,3))` | js
+[How to handle "Uncaught (in promise) DOMException: play() failed because the user didn't interact with the document first." on Desktop with Chrome 66?] | 因為網頁policy的關係，不允許影片自動撥放，所以解決方式先用靜音，在撥放影片(只能是靜音) | js
+[Can a Windows batch file determine its own file name?] | | bat
+[Can we use google analytics for Internal website?] | | google analytics
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -746,6 +750,10 @@ next_section = ""
 [Html 5 audio tag custom controls?]: https://stackoverflow.com/a/64012853/9935654
 [javascript slowly decrease volume of audio element]: https://stackoverflow.com/a/7942472/9935654
 [javascript -Dynamic pagination pure Js]: https://stackoverflow.com/a/70705563/9935654
+[Convert a 1D array to 2D array]: https://stackoverflow.com/a/22464838/9935654
+[How to handle "Uncaught (in promise) DOMException: play() failed because the user didn't interact with the document first." on Desktop with Chrome 66?]: https://stackoverflow.com/a/68128950/9935654
+[Can a Windows batch file determine its own file name?]: https://stackoverflow.com/a/33656038/9935654
+[Can we use google analytics for Internal website?]: https://stackoverflow.com/q/25418879/9935654
 
 {{< /table/bootstrap-table >}}
 

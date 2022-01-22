@@ -15,6 +15,8 @@ toc_bootstrap = true
 
 # minifier
 
+min.js教學
+
 ## [mishoo/UglifyJS](https://github.com/mishoo/UglifyJS)
 
 ### 安裝
