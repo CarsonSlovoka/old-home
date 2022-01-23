@@ -1,7 +1,7 @@
 +++
 title = "套件管理"
 date = 2021-01-11T17:43:00+08:00
-lastmod = 2021-10-04
+lastmod = 2022-01-23
 description = "安裝一些常用的套件"
 tags = ["choco"]
 draft = false
@@ -58,10 +58,37 @@ Pacman也被移植到Windows，作為基礎系統的一部分隨MSYS2分發。
 
 | desc | cmd  |
 | ---- | ---- |
+初始化 | `npm init`
 update npm | ``npm install -g npm@7.21.1``
 查看已安裝過的列表 | ``npm list``
 移除 | ``npm uninstall``
 安裝 | ``npm install``
+
+----
+
+### npm init
+
+這個指令會產生出一個`package.json`的檔案
+
+```json
+{
+  "name": "",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
+```
+
+一定要有這一個`package.json`檔案
+
+在`npm install`時，才會把套件裝在
+
+> `node_modules`這個資料夾(和`package.json`相同的資料夾內生成)
 
 ### minifier
 
@@ -73,7 +100,46 @@ update npm | ``npm install -g npm@7.21.1``
 - ``npm install uglify-js``
 - [npm install uglify-js -save--dev](https://stackoverflow.com/a/44193120/9935654)
 
+    如果出現以下錯誤
 
+    > no such file or directory, open '.../package.json'
+
+    執行`npm init`產生出package.json檔案
+
+    再執行: `npm install uglify-js -save--dev` 它就會開始下載
+
+    完成之後您的資料夾會出現
+
+    `node_modules`
+
+    裡面就可以找到您安裝的套件`uglify-js`
+
+    例如
+
+    ```
+    🧾 package.json
+    📂 node_modules
+        - 📂 .bin (相關的執行檔會放在這邊，這個位置要加入系統路徑)
+            - uglifyjs
+            - uglifyjs.cmd
+        - 📁 uglify-js (您安裝的套件名稱
+    ```
+
+    當我們執行`uglifyjs`實際上就是執行上述的`uglifyjs.cmd`
+
+    ----
+
+    我會建議您在此資料夾
+
+    > %PROGRAMFILES%\nodejs\node_modules\npm
+
+    運行`npm install uglify-js -save--dev`
+
+    再把
+
+    > %PROGRAMFILES%\nodejs\node_modules\npm\node_modules\.bin
+
+    加到系統的工作路徑之中，統一管理所有npm的套件
 
 ## choco
 
