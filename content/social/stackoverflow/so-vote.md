@@ -386,6 +386,7 @@ next_section = ""
 [How to handle "Uncaught (in promise) DOMException: play() failed because the user didn't interact with the document first." on Desktop with Chrome 66?] | 因為網頁policy的關係，不允許影片自動撥放，所以解決方式先用靜音，在撥放影片(只能是靜音) | js
 [Can a Windows batch file determine its own file name?] | | bat
 [Can we use google analytics for Internal website?] | | google analytics
+[Batch File; List files in directory, only filenames?] | `for /f tokens^=* %%i in ('where /r .\src\app\urls\static\js *.min.js') do echo %%i` | bat
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -754,6 +755,7 @@ next_section = ""
 [How to handle "Uncaught (in promise) DOMException: play() failed because the user didn't interact with the document first." on Desktop with Chrome 66?]: https://stackoverflow.com/a/68128950/9935654
 [Can a Windows batch file determine its own file name?]: https://stackoverflow.com/a/33656038/9935654
 [Can we use google analytics for Internal website?]: https://stackoverflow.com/q/25418879/9935654
+[Batch File; List files in directory, only filenames?]: https://stackoverflow.com/a/59436956/9935654
 
 {{< /table/bootstrap-table >}}
 
