@@ -387,6 +387,7 @@ next_section = ""
 [Can a Windows batch file determine its own file name?] | | bat
 [Can we use google analytics for Internal website?] | | google analytics
 [Batch File; List files in directory, only filenames?] | `for /f tokens^=* %%i in ('where /r .\src\app\urls\static\js *.min.js') do echo %%i` | bat
+[Golang https certificate error: remote error: tls: unknown certificate authority] | | tls, ssl
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -756,6 +757,7 @@ next_section = ""
 [Can a Windows batch file determine its own file name?]: https://stackoverflow.com/a/33656038/9935654
 [Can we use google analytics for Internal website?]: https://stackoverflow.com/q/25418879/9935654
 [Batch File; List files in directory, only filenames?]: https://stackoverflow.com/a/59436956/9935654
+[Golang https certificate error: remote error: tls: unknown certificate authority]: https://stackoverflow.com/q/49064937/9935654
 
 {{< /table/bootstrap-table >}}
 

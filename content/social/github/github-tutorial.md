@@ -2,7 +2,7 @@
 title = "Github Tutorial"
 description="Github基礎教學"
 date = 2021-05-12T10:06:44+08:00
-lastmod = 2021-05-12
+lastmod = 2022-01-25
 featured_image = ""
 draft = false
 weight = 0
@@ -14,6 +14,8 @@ toc_bootstrap = true
 
 
 ## SSH Token
+
+SSH是一種用於登入和共享資料的網路技術
 
 [About SSH](https://docs.github.com/en/github/authenticating-to-github/about-ssh)
 
