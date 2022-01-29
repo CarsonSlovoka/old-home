@@ -242,7 +242,7 @@ gcc | ``choco install mingw -y`` | ● ``%programdata%\chocolatey\lib\mingw\tool
 [graphviz] | ``choco install graphviz -y`` | ``%programfiles%\Graphviz``\n``%programfiles%\Graphviz\bin\dot.exe``\ngraphviz may be able to be automatically uninstalled.\n安裝完之後有出現以上訊息，其表示也能夠透過「新增/移除」的程式來移除 | plantuml渲染的時候需要用到的東西: dot\n另外還需要下載[plantuml.jar](https://plantuml.com/en/download)
 [slack] | ``choco install slack -y`` | 要自己去看log\n● ``%programdata%\chocolatey\logs\chocolatey.log``\n● ``%programdata%\chocolatey\.chocolatey\slack.4.15.0``\n● ``%programfiles%\Slack\slack.exe`` | 這是一個通訊軟體 \n安裝完之後可以透過新增移除來移除(slack may be able to be automatically uninstalled.)
 [fontforge] | ``choco install fontforge`` | ``%PROGRAMFILES(X86)%\FontForgeBuilds\`` | ● 在新增移除的程式中可以找到。\n● 用這個可以抽字，把一些不必要的字拿掉，使字形檔變小
-[ffmpeg] | ``choco install ffmpeg -y`` |  ``%programdata%\chocolatey\lib\ffmpeg\tools\ffmpeg\bin`` | ● python的``from pydub import AudioSegment``可能需要用到。\n● 要自己加入系統變數，才可以抓地到ffmpeg.exe的路徑。
+[ffmpeg] | ``choco install ffmpeg -y`` |  ``%programdata%\chocolatey\lib\ffmpeg\tools\ffmpeg\bin`` | ● python的``from pydub import AudioSegment``可能需要用到。\n● 要自己加入系統變數，才可以抓地到ffmpeg.exe的路徑。\n●您也可以到ffmpeg的release中下載 [ffmpeg-master-latest-win64-gpl.zip](https://github.com/BtbN/FFmpeg-Builds/releases)
 [Inkscape] [Inkscape-tutorial] | ``choco install inkscape -y`` | ● ``%PROGRAMFILES%\Inkscape\``\n● ``%PROGRAMFILES%\Inkscape\bin\inkscape.exe`` |
 [node.js] | ``choco install nodejs -y`` | ``%PROGRAMFILES%\nodejs`` 裡面有node.exe還有npm \n安裝到哪邊去其實他沒特別寫出來可以用``gcm node.exe``去查看 |
 

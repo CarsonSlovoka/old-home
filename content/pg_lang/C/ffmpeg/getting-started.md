@@ -2,7 +2,7 @@
 title = "Getting Started"
 description="FFmpeg Getting Started"
 date = 2021-09-17T18:03:00+08:00
-lastmod = 2022-01-22
+lastmod = 2022-01-29
 featured_image = ""
 draft = false
 weight=0
@@ -38,7 +38,7 @@ ffmpeg -i input.mp4 -vn output.mp3 | -vn表示video no,不含影像，只保留�
 ffmpeg -i input.mp4 -filter:v "crop=640:480:200:150" output.mp4 | 從位置250,150的地方，擷取寬640高480，轉成新的mp4檔案
 ffmpeg -i input.mp4 -t 10 output.avi | 我們以秒具體說明時間。此外，以 hh.mm.ss 格式具體說明時間也是可以的。
 ffmpeg -i audio.mp3 -ss 00:01:54 -to 00:06:53 -c copy output.mp3 |  剪輯區間類的聲音
-fmpeg -i input.mp4 -i subtitle.srt -map 0 -map 1 -c copy -c:v libx264 -crf 23 -preset veryfast output.mp | 添加字幕
+fmpeg -i input.mp4 -i subtitle.srt -map 0 -map 1 -c copy -c:v libx264 -crf 23 -preset veryfast output.mp4 | 添加字幕
 ffmpeg -i input.mp4 -vf "setpts=0.5*PTS" output.mp4 | 影片撥放速度改為2倍(0.5)
 ffmpeg -i input.mp4 -vf "setpts=4.0*PTS" output.mp4 | 影片撥放速度比原本慢4倍
 ffmpeg -i input.mp4  output.gif  | 轉成gif
@@ -46,6 +46,22 @@ ffmpeg -i input.mp4 -ss 01:19:27 -to 02:18:51 -c:v copy -c:a copy output.mp4 | �
 ffmpeg -i video.mp4 -i audio.wav -map 0:v -map 1:a -c:v copy -shortest output.mp4 |
 `ffmpeg -i console.mp4 -i console.mp3 -c copy -map 0:v:0 -map 1:a:0 -shortest result.mp4` | 替mp4新增音樂
 ffmpeg -ss 00:00:03 -t 10  -i input.mp4 output.gif | 從第3秒開始往後錄10秒 轉成gif
+
+----
+
+```
+ffmpeg -i input.mp4 -i input.mp3 -c copy -map 0:v:0 -map 1:a:0 result.mp4
+```
+
+```
+輸入源1(下標index 0) console.mp4 (軌道1)
+輸入源2(index 1) console.mp3 (軌道1)
+
+-c copy 複製到
+-map 對應設定
+0:v:0 表示選擇第一個輸入源，v表示video，最後的0表示輸出軌道的下標值，也就是0等於輸出的第一個軌道
+1:a:0 表示選擇第二個輸入源，a表示audio，把結果放到輸出的第一個軌道
+```
 
 ## 推流 live streaming RTMP
 
