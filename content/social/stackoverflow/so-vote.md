@@ -388,6 +388,17 @@ next_section = ""
 [Can we use google analytics for Internal website?] | | google analytics
 [Batch File; List files in directory, only filenames?] | `for /f tokens^=* %%i in ('where /r .\src\app\urls\static\js *.min.js') do echo %%i` | bat
 [Golang https certificate error: remote error: tls: unknown certificate authority] | | tls, ssl
+[what's the proper file extension or abbr. for golang's text/template?] | `.gohtml` | go
+[ffmpeg - replace audio in video] | `ffmpeg -i v.mp4 -i a.wav -c:v copy -map 0:v:0 -map 1:a:0 new.mp4` | ffmpeg
+[Extracting substrings in Go] | `myString[len(myString)-2:]` | go
+[Showing custom 404 error page with standard http package] | 新增其他的handler，執行該handler即可 | go
+[Set content of iframe] | `document.querySelector("iframe").src =  "data:text/html;charset=utf-8," + escape(htmlString)` | iframe
+[iframe background image] | `<iframe class="bg-repeat-cover bg-bermuda-circle-orange"></iframe>` | iframe
+[Run both HTTP and HTTPS in same program] | | go, tls, https
+[Using named matches from Go regex] | | go, regex
+[Convert string to integer type in Go?] | | go
+[Defining Independent FlagSets in GoLang] | | go, flag
+[Generating the SHA hash of a string using golang] | | go, sha
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -758,6 +769,17 @@ next_section = ""
 [Can we use google analytics for Internal website?]: https://stackoverflow.com/q/25418879/9935654
 [Batch File; List files in directory, only filenames?]: https://stackoverflow.com/a/59436956/9935654
 [Golang https certificate error: remote error: tls: unknown certificate authority]: https://stackoverflow.com/q/49064937/9935654
+[what's the proper file extension or abbr. for golang's text/template?]: https://stackoverflow.com/a/58416975/9935654
+[ffmpeg - replace audio in video]: https://superuser.com/a/1137613/1093221
+[Extracting substrings in Go]: https://stackoverflow.com/a/12313812/9935654
+[Showing custom 404 error page with standard http package]: https://stackoverflow.com/a/10001309/9935654
+[Set content of iframe]: https://stackoverflow.com/a/8322025/9935654
+[iframe background image]: https://stackoverflow.com/a/1695619/9935654
+[Run both HTTP and HTTPS in same program]: https://stackoverflow.com/q/26090301/9935654
+[Using named matches from Go regex]: https://stackoverflow.com/a/20751656/9935654
+[Convert string to integer type in Go?]: https://stackoverflow.com/a/47317150/9935654
+[Defining Independent FlagSets in GoLang]: https://stackoverflow.com/a/24510031/9935654
+[Generating the SHA hash of a string using golang]: https://stackoverflow.com/q/10701874/9935654
 
 {{< /table/bootstrap-table >}}
 
