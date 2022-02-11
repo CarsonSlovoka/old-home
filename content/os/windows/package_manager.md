@@ -245,6 +245,7 @@ gcc | ``choco install mingw -y`` | ● ``%programdata%\chocolatey\lib\mingw\tool
 [ffmpeg] | ``choco install ffmpeg -y`` |  ``%programdata%\chocolatey\lib\ffmpeg\tools\ffmpeg\bin`` | ● python的``from pydub import AudioSegment``可能需要用到。\n● 要自己加入系統變數，才可以抓地到ffmpeg.exe的路徑。\n●您也可以到ffmpeg的release中下載 [ffmpeg-master-latest-win64-gpl.zip](https://github.com/BtbN/FFmpeg-Builds/releases)
 [Inkscape] [Inkscape-tutorial] | ``choco install inkscape -y`` | ● ``%PROGRAMFILES%\Inkscape\``\n● ``%PROGRAMFILES%\Inkscape\bin\inkscape.exe`` |
 [node.js] | ``choco install nodejs -y`` | ``%PROGRAMFILES%\nodejs`` 裡面有node.exe還有npm \n安裝到哪邊去其實他沒特別寫出來可以用``gcm node.exe``去查看 |
+[make] | `choco install make` | `%programdata%\chocolatey\bin`
 
 [protobuf_google]: https://developers.google.com/protocol-buffers/docs/overview
 [protobuf_github]: https://github.com/protocolbuffers/protobuf
@@ -259,6 +260,7 @@ gcc | ``choco install mingw -y`` | ● ``%programdata%\chocolatey\lib\mingw\tool
 [Inkscape]: https://stackoverflow.com/a/30704119/9935654
 [Inkscape-tutorial]: https://www.youtube.com/watch?v=1cZk08x_rAI
 [node.js]: https://nodejs.org/en/
+[make]: https://community.chocolatey.org/packages/make
 
 {{< /table/bootstrap-table >}}
 
@@ -278,3 +280,4 @@ gcc | ``choco install mingw -y`` | ● ``%programdata%\chocolatey\lib\mingw\tool
 [ctags]: https://en.wikipedia.org/wiki/Ctags#:~:text=Ctags%20is%20a%20programming%20tool,so%20on%20may%20be%20indexed.
 [gcm]: https://superuser.com/a/1605156/1093221
 [Homebrew]: https://brew.sh/
+

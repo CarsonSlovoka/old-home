@@ -399,6 +399,9 @@ next_section = ""
 [Convert string to integer type in Go?] | | go
 [Defining Independent FlagSets in GoLang] | | go, flag
 [Generating the SHA hash of a string using golang] | | go, sha
+[Golang flag: Ignore missing flag and parse multiple duplicate flags] | | go, flag
+[How to run a makefile in Windows?] | `choco install make` | makefile
+[Command line to remove an environment variable from the OS level configuration] | `REG delete HKCU\Environment /F /V MyVar` | batch
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -780,6 +783,9 @@ next_section = ""
 [Convert string to integer type in Go?]: https://stackoverflow.com/a/47317150/9935654
 [Defining Independent FlagSets in GoLang]: https://stackoverflow.com/a/24510031/9935654
 [Generating the SHA hash of a string using golang]: https://stackoverflow.com/q/10701874/9935654
+[Golang flag: Ignore missing flag and parse multiple duplicate flags]: https://stackoverflow.com/q/45487377/9935654
+[How to run a makefile in Windows?]: https://stackoverflow.com/a/57042516/9935654
+[Command line to remove an environment variable from the OS level configuration]: https://stackoverflow.com/a/13222794/9935654
 
 {{< /table/bootstrap-table >}}
 
