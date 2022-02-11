@@ -20,6 +20,8 @@ toc_bootstrap = true
 
 ## [Selectors]
 
+- [★demo合集(大全)](https://www.w3schools.com/cssref/trysel.asp?selector=h1,%20p): 點擊各別的項目就會為您展示該selector的結果
+
 - [p ~ ul] : 和ul同層往前找可以找到p就為此ul設置屬性
 - [div + p] : div之後(和div同層)首次出現的p元素
 - [div > p] : p的父節點是div

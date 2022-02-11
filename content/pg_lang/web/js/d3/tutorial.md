@@ -1,22 +1,25 @@
 +++
 title = "基礎教學"
-date = 2020-12-31T10:09:00+08:00
 description = "d3.js基礎教學"
+date = 2020-09-22T14:15:00+08:00
+lastmod = 2021-09-22
+featured_image = ""
 tags = ["html", "d3.js", "js"]
 draft = false
-toc = true
-bootstrap = true
+weight=0
+markmap = true
+toc_markmap = true
+toc_bootstrap = true
 +++
 
-## d3.js是什麼?
+## [What is a sprite sheet?](https://www.youtube.com/watch?v=crrFUYabm6E)
 
-> D3 可以幫助你使用 HTML, CSS, SVG 以及 Canvas 來展示資料。
-> D3 遵循現有的 Web 標準，可以不需要其他任何框架獨立執行在現代瀏覽器中，
-> 它結合強大的視覺化元件來驅動 DOM 操作。
+簡單來說，他準備一張表，存放很多項目，來解省空間
 
-## 範例展示
+- MEMORY = COLOR_DEPTH * WIDTH * HEIGHT
 
-:point_right: [d3-js畫朗]
+    例如rgba，4通道全彩則color depth=32(bit) (每一通道一位全彩，該通道可以有0~255的選擇，所以佔了8個**bit**)
 
+    如果長寬都是140pixel，所需要的記憶體就是
 
-[d3-js畫朗]: https://github.com/d3/d3/wiki/Gallery
+    140*140*4(32bit=4byte) =  78400 byte 約 78KB

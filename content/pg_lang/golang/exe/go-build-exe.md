@@ -19,6 +19,12 @@ toc_bootstrap = true
 
 ## ldflags
 
+輸入
+
+> [go tool link](https://stackoverflow.com/a/47967258/9935654)
+
+可以查到ldflags的訊息(例如``-s``, ``-w``)
+
 我建議如果要打包執行檔出去，用這個指令
 
 > ``go build -ldflags "-H=windowsgui -s -w"``

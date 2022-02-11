@@ -59,5 +59,22 @@ test.bat "12345"
 - start會建立一個新的視窗，不會共享變量
 - call還是在原視窗，且共享變量
 
+## set與setX有何差別 (環境變數 env)
 
+- `setx 變數名 "變數值"` 會存在使用者變數之中)
+- `set 變數名=變數值`    終端機關閉就結束了
 
+```reg
+:: 暫時清空，只是變成空字串而已
+set MyVar=
+
+:: 把機碼刪除，可以清空HKCU，也就是使用者變數的資料
+REG delete HKCU\Environment /F /V MyVar
+
+:: 清除指定的系統變數
+REG delete "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /F /V MyVar
+```
+
+## 參考資料
+
+- [Command line to remove an environment variable from the OS level configuration](https://stackoverflow.com/a/13222794/9935654)

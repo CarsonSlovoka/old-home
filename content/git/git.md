@@ -270,8 +270,40 @@ git config --global core.safecrlf warn
 
 ## git submodule
 
+- ``git submodule add https://github.com/username/repo.git  path/subpath/myrepo-dir``
+
+  他會新增 .gitmodules
+
+  ```
+  [submodule "path/subpath/myrepo-dir"]
+	path = path/subpath/myrepo-dir
+	url = https://github.com/username/repo.git
+  ```
+
+  以及 .git/config 新增
+
+  ```
+  [submodule "path/subpath/myrepo-dir"]
+	url = https://github.com/username/repo.git
+	active = true
+  ```
+
+- ``git add path/subpath/myrepo-dir``
+    他就會記錄當前你這個submodule當時對應該submodule的sha1是多少
+
+- ``git commit -m "[submodule] ..."``
+
 遞迴更新
-> git submodule update -\-init -\-recursive
+> git submodule update -\-init -\-recursive <path>
+
+`recursive`指令是指如果您的submodule中又有submodule的時候也會一併處理
+
+`path`是放資料夾的路徑名稱(不是別名)，和`.gitmodules`中的path一樣
+
+此指令其實會去clone專案回來，所以會把專案整包抓下來，當前的節點會是submodule當初新增時的節點
+
+`path`可以不打，就會對所有submodule都處理，而如果您只要某些專案而已就還是打上
+
 
 
 ## git merge
@@ -307,6 +339,30 @@ git config --global core.safecrlf warn
 我的習慣是如果有一個時期的更改，可能都和某些事項有關，那麼我會希望最後併起來的時候，會有一個總結，也就是耳朵；耳朵內的東西就是和該事物都有關的commit
 
 當然如果您善用github issues之類的東西，這可能就不是那麼的必要，畢竟issues很強大，可以搜尋又可以整合以往的commit紀錄，超讚👍
+
+## gitk
+
+| command | desc |
+| ---- | ---- |
+gitk sha1..sha2 | 查看sha1~sha2(是比較後面的结點)的结點
+gitk master..dev | 查看master到dev的结點
+git gui | 如果你出現``Local changes checked in to index but not committed``又想要查看當前的版本修改了那些就可以使用這個指令
+
+
+----
+
+- [gitk --simplify-by-decoration --all](https://stackoverflow.com/q/69049642/9935654)
+
+    所謂的simplify-by-decoration是指，假設您有很多分支，其中每個分支又個別做了好幾個修改，
+
+    例如: 您有10個分支，每個分支又個別做了10次修改，所以gitk --all看到的會至少有10*10=100個節點
+
+    而simplify-by-decoration只會顯示每個分支的最後一個修改，所以您只會看到10個節點而已
+
+
+- `gitk --all --ancestry-path sha1..`
+
+  例如 `gitk --all --ancestry-path 123456..` 表示開始的節點(祖先)為123456這個節點(你也可以用branch名稱)
 
 ## git rebase
 
@@ -371,6 +427,22 @@ FETCH_HEAD ?
 
 就可以知道目前FETCH_HEAD的位子在哪裡了
 
+## git diff
+
+| Commands | Desc |
+| ---- | ---- |
+`git diff` | 只會顯示**修改**的部分
+`git diff --cached` | 顯示**新增**(例如新增檔案)的部分
+`git diff HEAD` | 顯示本次所做的所有**異動**(包含新增與修改)
+
+
+### 更多查看變動的技巧
+
+1. `git add -p` : 這個是add的時候順便查看修改的情況，查看完之後可以讓您選擇是否真的要add
+2. `git commit -v` 或者 `git commit --verbose` : 這個會在commit的同時，也顯示出修改讓您知道。
+
+
+
 ## .gitignore
 
     public/
@@ -397,6 +469,14 @@ FETCH_HEAD ?
     > git push -\-delete origin tagname
 
 
+### remote prune
+
+> git remote prune REMOTE_NAME
+
+### remote rename
+
+> git remote rename <old> <new>
+
 ## git gc 垃圾清理
 
 - 文件系統檢查。它驗證數據庫中對象的連接性和有效性
@@ -415,6 +495,59 @@ git push Github --force --all
 ```
 
 > git -\-prune
+
+## [git-sparse-checkout](https://stackoverflow.com/a/68794769/9935654)
+
+當您的git文件很大的時候，如果我們只對某幾個資料夾或者檔案有興趣的時候，就可以這麼做
+
+```
+git init
+git sparse-checkout init
+git sparse-checkout set "YOUR_DIR_PATH"
+git remote add <REMOTE_NAME> https://github.com/AUTH/REPO.git
+git pull --depth 1 Github <SHA1_or_BRANCH_NAME>
+```
+
+- depth 可以管控你抓的節點
+- ``sparse-checkout``: 可以指定要那些文件就好
+
+### Example
+
+```
+git init
+git sparse-checkout init
+// git sparse-checkout set "chrome/common/extensions/api/"
+start .git\info\sparse-checkout   👈 open the "sparse-checkut" file
+
+/* .git\info\sparse-checkout  for example you can input the contents as below 👇
+chrome/common/extensions/api/
+!chrome/common/extensions/api/commands/     👈 ! unwanted : https://www.git-scm.com/docs/git-sparse-checkout#_full_pattern_set
+!chrome/common/extensions/api/devtools/
+chrome/common/extensions/permissions/
+*/
+
+git remote add Github https://github.com/chromium/chromium.git
+start .git\config
+
+/* .git\config
+[core]
+    repositoryformatversion = 1
+    filemode = false
+    bare = false
+    logallrefupdates = true
+    symlinks = false
+    ignorecase = true
+[extensions]
+    worktreeConfig = true
+[remote "Github"]
+    url = https://github.com/chromium/chromium.git
+    fetch = +refs/heads/*:refs/remotes/Github/*
+    partialclonefilter = blob:none  // 👈 Add this line, This is important. Otherwise, your ".git" folder is still large (about 1GB)
+*/
+git pull --depth 1 Github 2d4a97f1ed2dd875557849b4281c599a7ffaba03
+// or
+// git pull --depth 1 Github master
+```
 
 ## 👍不錯的文章推薦
 

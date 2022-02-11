@@ -1,7 +1,7 @@
 +++
 title = "golang基礎教學"
 date = 2021-01-14T10:39:00+08:00
-lastmod = 2021-02-26
+lastmod = 2021-09-17
 description = "golang安裝以及基礎教學"
 tags = ["golang", "go"]
 bootstrap = true
@@ -27,7 +27,7 @@ toc_bootstrap = true
 
 另一個是直接從官方下載: https://golang.org/dl/
 
-選擇zip的下載即可。
+選擇zip (Kind: **Archive**)的下載即可。(不要選Kind: Source，這個沒有bin的資料夾)
 
 完畢之後看您要把解壓縮的檔案放到哪邊去，我會建議放到
 
@@ -55,7 +55,7 @@ toc_bootstrap = true
 ### 總結
 
 - GOPATH: ``%USERPROFILE%\go\1.16.2``
-    - bin: 建議把這個資料夾也加入到PATH的環境變數去，因為go install都會跑到這邊來，為了cmd可以直接不需要cd切換，會建議加上此路徑
+    - bin: **建議把這個資料夾也加入**到PATH的環境變數去，因為go install都會跑到這邊來，為了cmd可以直接不需要cd切換，會建議加上此路徑
     - pkg
     - src
 
@@ -64,6 +64,11 @@ toc_bootstrap = true
     這個也是golang的IDE設置go SDK的位置
 
     - 要在您的PATH環境中告知go.exe的位置，所以要加上這個 ``%ProgramFiles%\Go\1.16.2\bin``
+
+> 🔔
+> 如果將來您想要升級golang的版本，可以只下載新版的Go，
+>
+> 接著改GO**ROOT**，GOPATH照舊即可。
 
 #### 其他相關資料
 

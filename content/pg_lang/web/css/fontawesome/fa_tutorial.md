@@ -26,6 +26,8 @@ fontawesome主要就是用來取得一些漂亮的圖標的，
 4. [ionicons]
 5. [material]
 6. [iconfont] (阿里巴巴)
+7. ★★★ [thenounproject](https://thenounproject.com/) : 大推這個，可以下載svg圖形
+8. ★ [SVG背景圖片下載: svgbackgrounds.com](https://www.svgbackgrounds.com/)
 
 每一種都有提供CSS, JS等等幫助您快速應用，而本篇只講fontawesome
 
@@ -88,6 +90,19 @@ Generate Subresource Integrity (SRI) attributes
 
 #### [Glyphicons](https://www.w3schools.com/bootstrap/bootstrap_ref_comp_glyphs.asp)
 
+它的圖形主要是靠css的影響所繪出
+
+但一個缺點是它的css和一般的bootstrap.css有點不同，它的是
+
+```html
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!--
+比較常用的css應該是下面這個
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+-->
+```
+
 bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的用法以及可以用的圖標有哪些，這邊我舉一個例子如下
 
 ```html
@@ -112,6 +127,16 @@ bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的�
   </button>
   ```
 
+- btn+fontawesome+tachyons: {{<raw_html>}}<button class="btn btn-secondary"><i class="fas fa-undo hover-yellow"></i></button>{{</raw_html>}}
+
+  ```go-html-template
+  <button class="btn btn-secondary"> {{/* bootstrap */}}
+  <i class="fas fa-undo  {{/* fontawesome */}}
+  hover-yellow"></i> {{/* tachyons */}}
+  </button>
+  ```
+
+
 ## [Emoji of Unicode](https://apps.timwhitlock.info/unicode/inspect?s=%F0%9F%93%9D)
 
 [getemoji.com](https://getemoji.com/)
@@ -122,28 +147,31 @@ bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的�
 
 | @@w=10%@@name | @@w=40%@@Icon Desc | @@w=10%@@Code | @@w=30%@@Comment |　|
 | :----: | :---- | :----: | ---- | ---- |
-| 📝 | Memo | 1F4DD
-| 🧾 | Receipt | 1F9FE
-📂 | Open File Folder
+🌎 | World Emoji Day | 1F30E
+🌱 | Earth Day | 1F331
+🐬 | Dolphin | 1F42C
+🐳 | Spouting Whale | 1F433
 📁 | FILE FOLDER | 1F4C1
-🗂️ | Card Index Dividers
-🖿 | Black Folder
-| 🐬 | Dolphin | 1F42C
-| 📙 | Orange book | 1F4D9
-| 📓 | Notebook
-🔖 | Bookmark
-🕮 | Book
-📚 | Books
+📂 | Open File Folder | 1F4C2
+📅 | Calendar | 1F4C5
+📙 | Orange book | 1F4D9
+📓 | Notebook | 1F4D3
+📖 | Open Book, docs | 1F4D6
+📚 | Books | 1F4DA
+📜 | Scroll, history, release note | 1F4DC
+📝 | Memo | 1F4DD
+🔖 | Bookmark | 1F516
+🕮 | Book | 1F56E
+🖿 | Black Folder | 1F5BF
+🗂️ | Card Index Dividers | 1F5C2
+🧾 | Receipt | 1F9FE
 ❗  | exclamation | 2757
 ⚠  | Warning sign | 26A0
 🔔 | BELL\n叮嚀 | 1F514
-🌱 | Earth Day
-🌎 | World Emoji Day
-📅 | Calendar | 1F4C5
-🕷️ | Spider
-🐛  | Bug
-󠁴🀄 | 中文
-💪 | enhancement
+🕷️ | Spider | 1F577
+🐛  | Bug | 1F41B
+󠁴🀄 | 中文 | 1F004
+💪 | enhancement | 1F4AA
 ✍ | WRITING HAND、總結 | 270D
 📰 | NEWSPAPER、歷史文章、資料來源 | 1F4F0
 👩‍💻 | ● 👩:Woman\n●💻: Personal computer | ●1F469\n●1F4BB | 這比較特別，他是兩個碼位組合而成的圖案
@@ -157,27 +185,30 @@ bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的�
 🎨 | ARTIST PALETTE\nDesign Specification | 1F3A8
 🖥 | DESKTOP COMPUTER | 1F5A5
 ⌨ | KEYBOARD | 2328
-🕒 | Time
+🕒 | Time | 1F552
 🔗 | LINK SYMBOL\nLinks | 1F517
 🗺 | WORLD MAP\nRoadmap | 1F5FA
 🤝 | Contributing | 1F91D
 💕 | TWO HEARTS\nDonation | 1F495
 ❓ | QUESTION MARK\nCommunity Support | 2753
+⚡  | High Voltage | 26A1
 ❌ |  Cross Mark | 274C
 ⭕ | hollow_red_circle | 2B55
-👍 | 讚
-👉 | Pointing Right | 1F449
-👈 | Pointing Left
+👍 | Thumbs Up, Yes, Like, 讚 | 1F44D
 👆 | Pointing Up | 1F446
 👇 | Pointing Down | 1F447
-😂 | Laughing |
+👈 | Pointing Left | 1F448
+👉 | Pointing Right | 1F449
+😂 | Laughing | 1F602
 😅 | Grinning Face with Sweat | 1F605
 🥴 | Drunk Face\nWoozy Face\nFace with Uneven Eyes and Wavy Mouth | 1F974
 😵 | DIZZY FACE | 1F635
 😎 | SMILING FACE WITH SUNGLASSES | 1F60E
 😁 | GRINNING FACE WITH SMILING EYES | 1F60E
 😆 | SMILING FACE WITH OPEN MOUTH AND TIGHTLY-CLOSED EYES | 1F606
-🙂 |
+🙂 | Slightly Smiling Face | 1F642
+🤩 | Star-Struck | 1F929
+🥳 | Partying Face | 1F973
 🤔 | Thinking Face Emoji
 🤣 | Rolling on the Floor Laughing,
 🗑 | deprecated
@@ -188,10 +219,30 @@ bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的�
 🥇 | 1st Place Medal | 1F947
 🥈 | 2nd Place Medal | 1F948
 🥉 | 3rd Place Medal | 1F949
+🏆 | Trophy | 1F3C6
+💯 | Hundred points symbol| 1F4AF
 ✍️| Writing Hand | 270D
 🎵 | Muscial Note | 1F3B5
+📥 | Inbox Tray, download | 1F4E5
 🗛 | Decrease Font Size Symbol | 1F5DB
-
+🔢 | Input Numbers | 1F522
+🔨 | Hammer | 1F528
+⚙ | Gear | 2699
+⏩ | fast right | 23E9
+▸ | 條列式符號 | U+25B8
+▾ | | U+25BE
+✂️ | Scissors | 2702
+⬇️ | Down Arrow, Download | 2B07
+📈 | Chart Increasing | 1F4C8
+📉 | Chart Decreasing | 1F4C9
+📊 | Bar Chart | 1F4CA
+📢 | Loudspeaker, Announcement 廣播 | 1F4E2
+📹 | Video Camera | 1F4F9
+📺 | Television | 1F4FA
+🔑 | Key | 1F511
+🔒 | Locked 安全性 | 1F512
+🔥 | Fire | 1F525
+🕹️ | Joystick | 1F579
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 

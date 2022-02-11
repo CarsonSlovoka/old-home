@@ -16,8 +16,9 @@ toc_bootstrap = true
 
 | 專案 | 簡介 |
 | ----          |    ----      |
-[![DataTables.js](https://github-readme-stats.vercel.app/api/pin?username=kon9chunkit&repo=GitHub-Chinese-Top-Charts)](https://github.com/kon9chunkit/GitHub-Chinese-Top-Charts) |
-
+[![Gihub中文排行榜](https://github-readme-stats.vercel.app/api/pin?username=kon9chunkit&repo=GitHub-Chinese-Top-Charts)](https://github.com/kon9chunkit/GitHub-Chinese-Top-Charts) |
+[![bootstrap-table](https://github-readme-stats.vercel.app/api/pin?username=wenzhixin&repo=bootstrap-table)](https://github.com/wenzhixin/bootstrap-table) |
+[![tachyons](https://github-readme-stats.vercel.app/api/pin?username=tachyons-css&repo=tachyons)](https://github.com/tachyons-css/tachyons) | 強無敵的CSS可以彌補bootstrap的不足
 
 ## 人
 

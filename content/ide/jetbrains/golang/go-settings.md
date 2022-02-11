@@ -47,7 +47,7 @@ Move Caret to Code Block End with Selection | {{< hotkey "Ctrl+Alt+Shift+]" >}}
 Fold Selection / Remove region | {{< hotkey "Ctrl + . ]" >}} | 相當好用，相當於把當前的括號顯示或隱藏
 Move Caret Backward a Paragraph | {{< hotkey F6 >}} | 往前移到整列為空白的列 (vim也有類似的指令: [shift + \[ ](https://vi.stackexchange.com/questions/10828/visual-select-from-cursor-to-next-empty-line))
 Move Caret Forward a Paragraph | {{< hotkey F8 >}} | 往後移到整列為空白的列
-
+Open source in new window | {{< hotkey "Shift+F4" >}} (default) |
 
 {{< table/bootstrap-table >}}
 
@@ -116,3 +116,28 @@ Enable Go Modules Integration : 這個東西指的就是go.mod
 
 
 
+## JSON設定
+
+- Settings -> Code Style -> JSON -> Wrapping and Braces
+
+  可以對Arrays, Objects進行設定
+
+  建議把Arrays改成`Wrap if long`，這樣可以將
+
+    ```json
+    {
+      "data": [
+          1,
+          2,
+          3
+      ]
+    }
+    ```
+
+    變成
+
+    ```json
+    {
+      "data": [1, 2, 3]
+    }
+    ```

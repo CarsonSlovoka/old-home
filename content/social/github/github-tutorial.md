@@ -2,7 +2,7 @@
 title = "Github Tutorial"
 description="Github基礎教學"
 date = 2021-05-12T10:06:44+08:00
-lastmod = 2021-05-12
+lastmod = 2022-01-25
 featured_image = ""
 draft = false
 weight = 0
@@ -14,6 +14,8 @@ toc_bootstrap = true
 
 
 ## SSH Token
+
+SSH是一種用於登入和共享資料的網路技術
 
 [About SSH](https://docs.github.com/en/github/authenticating-to-github/about-ssh)
 
@@ -452,6 +454,31 @@ git@github.com: Permission denied (publickey).
 
     以Github而言，您可以看到此SSH Keys的最後存取時間，可能對管理也有些幫助
 
+
+## Authorized OAuth Apps
+
+授權App可以使用Github的權限，可以在這邊進行管理
+
+> https://github.com/settings/applications
+
+例如您裝了Github iOS，就會出現在這個列表中。
+
+代表手機可以讀、寫、管理您的專案，如果不想要就要移除授權。
+
+此外常用的 [Git Credential Manager](https://git-scm.com/book/en/v2/Git-Tools-Credential-Storage) 也會需要授權
+
+> Authorize Git Credential Manager 如果移除之後就要重新授權(可以透過網頁登入git來當認證)您的代碼才可以透過git傳送上去
+
+
+## [Personal access tokens](https://github.com/settings/tokens)
+
+這個方法是使用令牌來訪問您的專案。
+
+建立完token之後，把token加在api的參數之中即可。
+
+完成之後可以做像是取得某公私有專案的中的圖片之類的事情。
+
+可以參考此[範例ref-get-github-file.html](https://github.com/CarsonSlovoka/go-src/blob/master/tutorial/web/js/github/ref-get-github-file.html)
 
 ## 參考資料
 
