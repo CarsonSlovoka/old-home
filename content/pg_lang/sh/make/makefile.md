@@ -1,7 +1,7 @@
 +++
 title = "Makefile教學"
 date = 2022-02-11T17:28:00+08:00
-lastmod = 2022-02-11
+lastmod = 2022-02-13
 description = "Makefile快速入門"
 tags = ["makefile"]
 bootstrap = true
@@ -27,8 +27,7 @@ toc_bootstrap = true
 您也可以參考:
 > [How to run a makefile in Windows?](https://stackoverflow.com/a/57042516/9935654)
 
-
-### IDE: [jetbrains/goland](https://www.jetbrains.com/go/)
+### [IDE:jetbrains/goland](https://www.jetbrains.com/go/)
 
 我自己是用這個IDE開發，
 
@@ -49,10 +48,44 @@ toc_bootstrap = true
 
 做這個動作只是讓您可以直接用IDE來運行。如果您只需要突顯不打算靠IDE運行，則可以不管它
 
+## GNU程式打包標準
+
+> - https://ftp.gnu.org/old-gnu/Manuals/make-3.79.1/html_chapter/make_14.html#SEC121
+> - https://ftp.gnu.org/old-gnu/Manuals/make-3.79.1/html_chapter/make_9.html#SEC85
+
+以上是GNU[^GNU]程式建議該有的流程，您可以參考類似的模式去建立Label，所產生的項目就比較容易被大眾接受。
+
+
+## 命令
+
+> `Usage: make [options] [target]`
+
+
+> If you do not use the `-f' or `--file' flag, the default is to try `GNUmakefile`, `makefile`, and `Makefile`
+
+`-f`指令可以指定文件名，預設會用`GNUmakefile`, `makefile`, `Makefile`下去找尋，所以這些文件名都是建議的。
+
+而如果您是用`GNUmakefile`，當然也建議您的LICENSE是GNU，不然就還是用makefile等相關就好了。
+
+```
+-n
+--just-print
+--dry-run
+--recon
+```
+
+可以顯示那些命令將被執行
+
+----
+
+其他的命令可以直接查看幫助
+
+`make -h`
+
 ## makefile內文
 
 - 縮排建議用: `Tab`
-- 如果不想要打印出cmd，要在命令前面加上`@`
+- 如果不想要打印出cmd，要在命令前面加上`@`  (可以直接用make `-s` -s表示silent: Don't echo recipes.)
 
 ### 取得變量 Variable:
 
@@ -64,11 +97,19 @@ ${myVar}
 
 ### 賦值
 
-使用`:=`和`=`都可以，
+有四種方法`=`,`?=`,`:=`,`+=`
 
-但他們還是有些微差異
+```
+immediate = deferred
+immediate ?= deferred
+immediate := immediate
+immediate += deferred or immediate
+```
 
-`:=` 可以想成是copy value
+
+#### `:=`
+
+靜止: static。永不改變。 可以想成是copy value
 
 ```Makefile
 x := foo
@@ -79,7 +120,9 @@ x := later
 # y foo bar
 ```
 
-`=` 想像成，此值的來源要參考其位址
+#### `=`
+
+遞迴: 以最後的為準。 或者可以想像成，此值的來源要參考其位址
 
 ```Makefile
 x = foo
@@ -88,6 +131,36 @@ x = later
 
 # x later
 # y later bar
+```
+
+
+#### `+=`
+
+附加
+
++= 看成和 = 類似只是還有+的成分在裡頭
+
+```
+x += foo
+y += $(x) bar
+x += later
+
+# x foo later
+# y foo later bar
+```
+
+
+#### `?=`
+
+條件: 若變數有定義就用該定義，沒有了話就使用該值
+
+```
+x ?= foo        // 因為一開始x沒有定義，所以x就會直接被設定成foo
+y ?= $(x) bar   // 由於x已經有定義，所以就維持原樣foo，因此y= foo bar
+x ?= later      // x已經有定義了，所以就用原本定義的，不改變。
+
+# x foo
+# y foo bar
 ```
 
 ### 範例
@@ -128,9 +201,78 @@ end:
 	@go env GOOS GOARCH
 
 ```
+#### wildcard
+
+```
+files := $(wildcard ./*.txt ./**/*.go */**/*.py))
+```
+
+包含:
+- 表示選擇當前資料夾內的txt(首層而已)
+- 首層內的下一層資料含有go的所有檔案
+- 找尋所有資料夾(含子資料夾)的py檔案
+
+#### Foreach
+
+> `$(foreach var,list,text)`
+
+```makefile
+#宣告dirs是一個array，第一個元素為`.` 第二個元素為`pkg` 用來表示目錄
+dirs := . pkg
+# curDir是解析$(dirs)之後所得到的產物，後面的text又吃一個函數，這個函數可吃正規式
+files := $(foreach curDir, $(dirs), $(wildcard $(curDir)/*))
+
+main:
+	echo $(files)
+
+#   列出所有pkg/* 以及/*.go的檔案
+	echo $(wildcard pkg/* ./*.go)
+```
+
+#### call
+
+> `$(call variable,param,param,...)`
+
+注意有`,`不是用空格
+
+```
+myFunc = \
+	echo $(1)  && \
+ 	echo ${2}  && \
+ 	echo. \
+
+test:
+	$(call myFunc, Hello, world)
+```
+
+----
+
+[刪除檔案](https://stackoverflow.com/a/71100371/9935654)
+```
+files := $(wildcard ./*.txt ./**/*.go */**/*.js )
+
+showFileFunc = echo "$(abspath ${1})\${2}"
+delFileFunc = del "$(abspath ${1})\${2}"
+cmdSEP = &
+targetDisplay:
+$(foreach curFile, ${files}, ${call showFileFunc,${dir $(curFile)},${notdir $(curFile)}} ${cmdSEP})
+targetDelete:
+$(foreach curFile, ${files}, ${call delFileFunc,${dir $(curFile)},${notdir $(curFile)}} ${cmdSEP})
+```
+
+
 
 ## 參考資料:
 
 - [Creating a Golang Makefile](https://earthly.dev/blog/golang-makefile/)
-- [Makefile大補丸](https://ftp.gnu.org/old-gnu/Manuals/make-3.79.1/html_chapter/make_6.html)
+- [Makefile大補丸](https://ftp.gnu.org/old-gnu/Manuals/make-3.79.1/html_chapter/)
+    > 可以從1看到make_19.html
+
+    - [Conditional: if else](https://ftp.gnu.org/old-gnu/Manuals/make-3.79.1/html_chapter/make_7.html)
+    - [func (含內建函數)](https://ftp.gnu.org/old-gnu/Manuals/make-3.79.1/html_chapter/make_8.html)
+
+
 - [Wiki/Make](https://zh.wikipedia.org/wiki/Make)
+
+
+[^GNU]: https://zh.wikipedia.org/wiki/GNU%E8%A8%88%E5%8A%83
