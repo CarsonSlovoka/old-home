@@ -1,0 +1,397 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge,chrome=1"><title>speed coding challenge | Carson Blog</title><meta name=viewport content="width=device-width,minimum-scale=1"><meta name=description content="JS 線上競賽speed coding challenge"><meta name=generator content="Hugo 0.81.0"><meta name=ROBOTS content="INDEX, FOLLOW"><link href=/css/markmap.css rel=stylesheet><script src=https://d3js.org/d3.v6.min.js></script><script src=/js/uml/markmap-view@0.2.0.js></script><script defer src=/js/uml/markmap.js></script><link href=/dist/css/search-fuse.css rel=stylesheet><link rel=stylesheet type=text/css href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin=anonymous><script defer src=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/js/all.min.js integrity="sha512-UwcC/iaz5ziHX7V6LjSKaXgCuRRqbTp1QHpbOJ4l1nw2/boCfZ2KlFIqBUA/uRVF0onbREnY9do8rM/uT/ilqw==" crossorigin=anonymous></script><link rel=stylesheet href=/css/google-fonts.css><link rel=stylesheet href=/css/embed-bk-img.css><link href=/dist/css/app.4fc0b62e4b82c997bb0041217cd6b979.css rel=stylesheet><link href=/dist/css/navbar.css rel=stylesheet><link href=/dist/css/card_post.css rel=stylesheet><link href=/dist/css/utils.css rel=stylesheet><link href=/dist/sass/main_sass.css rel=stylesheet><link href=https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css rel=stylesheet integrity=sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1 crossorigin=anonymous><script src=https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js integrity=sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW crossorigin=anonymous></script><link rel="shortcut icon" href=/images/tab_icon.jpg type=image/x-icon><meta property="og:title" content="speed coding challenge"><meta property="og:description" content="JS 線上競賽speed coding challenge"><meta property="og:type" content="article"><meta property="og:url" content="https://carsonslovoka.github.io/pg_lang/web/js/speed-coding-challenge/"><meta property="article:section" content="pg_lang"><meta property="article:published_time" content="2021-09-29T11:10:00+08:00"><meta property="article:modified_time" content="2021-09-29T00:00:00+08:00"><meta itemprop=name content="speed coding challenge"><meta itemprop=description content="JS 線上競賽speed coding challenge"><meta itemprop=datePublished content="2021-09-29T11:10:00+08:00"><meta itemprop=dateModified content="2021-09-29T00:00:00+08:00"><meta itemprop=wordCount content="2533"><meta itemprop=keywords content="js,challenge,"><meta name=twitter:card content="summary"><meta name=twitter:title content="speed coding challenge"><meta name=twitter:description content="JS 線上競賽speed coding challenge"><script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-98900980-4','auto'),ga('send','pageview'))</script><script async src=https://www.google-analytics.com/analytics.js></script></head><body data-bs-spy=scroll data-bs-target=#navbar class="ma0 bg-near-white google-noto-sans-tc"><header><div class=bg-black><nav class="pv3 ph3 ph4-ns" role=navigation><div class="flex-l justify-between items-center center"><a href=/ class="f3 fw2 hover-white no-underline white-90 dib"><i class="zoom-in fas fa-home fa-3x" style=color:#ffc34d></i></a><div class="flex-l items-center"><ul class="pl0 mr3"><li class="zoom-in list f5 f4-ns fw4 dib pr3"><a class="hover-white no-underline white-90" href=/site-search/ title><i class="fas fa-search"></i></a></li><li class="zoom-in list f5 f4-ns fw4 dib pr3"><a class="hover-white no-underline white-90" href=/pages-timeline/ title><i class="fas fa-code-branch"></i></a></li><li class="zoom-in list f5 f4-ns fw4 dib pr3"><i class="fas fa-sitemap" style=color:#b1e844></i><a class="hover-white no-underline white-90" href=/site-markmap/ title=地圖>地圖</a></li><li class="zoom-in list f5 f4-ns fw4 dib pr3"><i class="fas fa-h-square" style=color:#e844a8></i><a class="hover-white no-underline white-90" href=/hugo/ title=教學>教學</a></li></ul></div></div></nav></div></header><main class=pb7 role=main><article class="flex-l flex-wrap justify-between mw8 center ph3"><header class="mt4 w-100"><aside class="instapaper_ignoref b helvetica tracked">JS</aside><div id=sharing class=mt3><a href="https://www.facebook.com/sharer.php?u=https://carsonslovoka.github.io/pg_lang/web/js/speed-coding-challenge/" class="facebook no-underline" aria-label="share on Facebook"><svg height="32" style="enable-background:new 0 0 67 67" viewBox="0 0 67 67" width="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M28.765 50.32h6.744V33.998h4.499l.596-5.624h-5.095l.007-2.816c0-1.466.14-2.253 2.244-2.253h2.812V17.68h-4.5c-5.405.0-7.307 2.729-7.307 7.317v3.377h-3.369v5.625h3.369V50.32zM33 64C16.432 64 3 50.569 3 34S16.432 4 33 4s30 13.431 30 30S49.568 64 33 64z" style="fill-rule:evenodd;clip-rule:evenodd"/></svg></a><a href="https://twitter.com/share?url=https://carsonslovoka.github.io/pg_lang/web/js/speed-coding-challenge/&text=speed%20coding%20challenge" class="twitter no-underline" aria-label="share on Twitter"><svg height="32" style="enable-background:new 0 0 67 67" viewBox="0 0 67 67" width="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167 22.283c-2.619.953-4.274 3.411-4.086 6.101l.063 1.038-1.048-.127c-3.813-.487-7.145-2.139-9.974-4.915l-1.383-1.377-.356 1.017c-.754 2.267-.272 4.661 1.299 6.271.838.89.649 1.017-.796.487-.503-.169-.943-.296-.985-.233-.146.149.356 2.076.754 2.839.545 1.06 1.655 2.097 2.871 2.712l1.027.487-1.215.021c-1.173.0-1.215.021-1.089.467.419 1.377 2.074 2.839 3.918 3.475l1.299.444-1.131.678c-1.676.976-3.646 1.526-5.616 1.568C19.775 43.256 19 43.341 19 43.405c0 .211 2.557 1.397 4.044 1.864 4.463 1.377 9.765.783 13.746-1.568 2.829-1.673 5.657-5 6.978-8.221.713-1.716 1.425-4.851 1.425-6.354.0-.975.063-1.102 1.236-2.267.692-.678 1.341-1.419 1.467-1.631.21-.403.188-.403-.88-.043-1.781.636-2.033.551-1.152-.402.649-.678 1.425-1.907 1.425-2.267.0-.063-.314.042-.671.233-.377.212-1.215.53-1.844.72l-1.131.361-1.027-.7c-.566-.381-1.361-.805-1.781-.932C39.766 21.902 38.131 21.944 37.167 22.283zM33 64C16.432 64 3 50.569 3 34S16.432 4 33 4s30 13.431 30 30S49.568 64 33 64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:"/></svg></a><a href="https://www.linkedin.com/shareArticle?mini=true&url=https://carsonslovoka.github.io/pg_lang/web/js/speed-coding-challenge/&title=speed%20coding%20challenge" class="linkedin no-underline" aria-label="share on LinkedIn"><svg height="32" style="enable-background:new 0 0 65 65" viewBox="0 0 65 65" width="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M50.837 48.137V36.425c0-6.275-3.35-9.195-7.816-9.195-3.604.0-5.219 1.983-6.119 3.374V27.71h-6.79c.09 1.917.0 20.427.0 20.427h6.79V36.729c0-.609.044-1.219.224-1.655.49-1.22 1.607-2.483 3.482-2.483 2.458.0 3.44 1.873 3.44 4.618v10.929H50.837zM22.959 24.922c2.367.0 3.842-1.57 3.842-3.531-.044-2.003-1.475-3.528-3.797-3.528s-3.841 1.524-3.841 3.528c0 1.961 1.474 3.531 3.753 3.531H22.959zM34 64C17.432 64 4 50.568 4 34 4 17.431 17.432 4 34 4s30 13.431 30 30c0 16.568-13.432 30-30 30zM26.354 48.137V27.71h-6.789v20.427h6.789z" style="fill-rule:evenodd;clip-rule:evenodd;fill:"/></svg></a></div><h1 class="f1 athelas mt3 mb1">speed coding challenge</h1><time class="f6 mv4 dib tracked" datetime=2021-09-29T11:10:00+08:00>September 29, 2021</time></header><div class="nested-copy-line-height lh-copy google-noto-sans-tc f4 nested-links nested-img mid-gray
+w-80-l"><h2 id=speed-coding-challenge>Speed Coding Challenge</h2><p>類似</p><ul><li><a href=https://leetcode.com/>LeetCode</a></li><li><a href=https://www.lintcode.com/>LintCode</a></li><li><a href=https://hihocoder.com/>hihoCoder</a></li></ul><p>等等的網站，只是這個網站目前只接受javascript</p><p>基本上我覺得這些網站都蠻無聊的，你要找工作，人家要求你刷題在用的。</p><p>面試基本上要靠這種網站來評價一個人的素質，說實在我覺得很悲哀，</p><p>但這確實是一種方法(雖然不是最好)</p><p>好比不讀書未必就是笨，可能就是不想唸而已，不代表什麼，</p><p>以統計學來說，去名門貴校選材總比大海撈針的結果要好。</p><p>高手應該不屑刷題，頂多是抱持玩玩的心態&mldr;</p><p>那你如果能不刷題，就能行雲流水的解題，那才叫真的人材</p><h2 id=題庫>題庫</h2><p>我覺得這個網站，大多數的問題都很直白，使用者很容易只看數字的部分就能推敲出大概要問什麼。</p><p>但也有少數的題目出得不妥</p><ol><li>問羅馬數字的轉換(沒用過的人根本不曉得規則，題目的說明也說得不多)</li></ol><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#a6e22e>box</span> <span style=color:#f92672>=</span> {}
+
+<span style=color:#75715e>/**
+</span><span style=color:#75715e> * convert that HEX color code to RGB and return it as an array [R, G, B].
+</span><span style=color:#75715e> * */</span>
+<span style=color:#a6e22e>box</span>.<span style=color:#a6e22e>hexToRGB</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>x</span>) =&gt; {
+    <span style=color:#75715e>// x is a string
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// return an array
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// ex. x=&#34;#FFFFFF&#34;, you shuld return [255, 255, 255].
+</span><span style=color:#75715e></span>
+    <span style=color:#75715e>// const R = parseInt(x.slice(1, 3), 16) // 即把FF轉為255
+</span><span style=color:#75715e></span>
+    <span style=color:#75715e>// Number(255).toString(16) // &#34;ff&#34;
+</span><span style=color:#75715e></span>
+    <span style=color:#66d9ef>return</span> [parseInt(<span style=color:#a6e22e>x</span>.<span style=color:#a6e22e>slice</span>(<span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>3</span>), <span style=color:#ae81ff>16</span>), parseInt(<span style=color:#a6e22e>x</span>.<span style=color:#a6e22e>slice</span>(<span style=color:#ae81ff>3</span>, <span style=color:#ae81ff>5</span>), <span style=color:#ae81ff>16</span>), parseInt(<span style=color:#a6e22e>x</span>.<span style=color:#a6e22e>slice</span>(<span style=color:#ae81ff>5</span>, <span style=color:#ae81ff>7</span>), <span style=color:#ae81ff>16</span>)]
+}
+
+<span style=color:#a6e22e>box</span>.<span style=color:#a6e22e>rgbToHex</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>r</span>, <span style=color:#a6e22e>g</span>, <span style=color:#a6e22e>b</span>) =&gt; {
+    <span style=color:#75715e>// R: 11111111 (每個顏色都用8個bit來表示)
+</span><span style=color:#75715e></span>
+    <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>rgb</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>r</span> <span style=color:#f92672>&lt;&lt;</span> <span style=color:#ae81ff>16</span>) <span style=color:#f92672>|</span> (<span style=color:#a6e22e>g</span> <span style=color:#f92672>&lt;&lt;</span> <span style=color:#ae81ff>8</span>) <span style=color:#f92672>|</span> <span style=color:#a6e22e>b</span>
+    <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>rgb</span>) <span style=color:#75715e>// &gt; 16715784
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// return &#39;#&#39; + (rgb).toString(16) // &#34;#80c0&#34;
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// return &#39;#&#39; + (0x000000 + rgb).toString(16)
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// return &#39;#&#39; + (0x1000000 + rgb).toString(16).slice(1)
+</span><span style=color:#75715e></span>    <span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#39;#&#39;</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>rgb</span>.<span style=color:#a6e22e>toString</span>(<span style=color:#ae81ff>16</span>).<span style=color:#a6e22e>padStart</span>(<span style=color:#ae81ff>6</span>, <span style=color:#ae81ff>0</span>)
+}
+<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>box</span>.<span style=color:#a6e22e>rgbToHex</span>(<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>128</span>, <span style=color:#ae81ff>192</span>))
+</code></pre></div><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#a6e22e>box</span>.<span style=color:#a6e22e>multiplierCount</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>x</span>, <span style=color:#a6e22e>y</span>) =&gt; {
+    <span style=color:#75715e>// x and y are numbers
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// return a number
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// (ex. x=10, y=5, you should return 2)
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// (ex. x=11, y=2, you should return 5)
+</span><span style=color:#75715e></span>    <span style=color:#66d9ef>return</span> Math.<span style=color:#a6e22e>floor</span>(<span style=color:#a6e22e>x</span> <span style=color:#f92672>/</span> <span style=color:#a6e22e>y</span>)
+}
+</code></pre></div><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#a6e22e>box</span>.<span style=color:#a6e22e>removeAllSpaces</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>x</span>) =&gt; {
+    <span style=color:#75715e>// x is a string
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// return a string
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// (ex. x=&#34;   Test   String! &#34;, you should return &#34;TestString!&#34;)
+</span><span style=color:#75715e></span>    <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>x</span>.<span style=color:#a6e22e>replaceAll</span>(<span style=color:#e6db74>&#34; &#34;</span>, <span style=color:#e6db74>&#34;&#34;</span>)
+}
+</code></pre></div><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#75715e>/**
+</span><span style=color:#75715e> If x is not a prime, then we can find &#34;a&#34; and &#34;b&#34; such that
+</span><span style=color:#75715e> a**2 &lt;= x &lt;= b**2 , where a,b ∈ N+
+</span><span style=color:#75715e> =&gt; a &lt;= sqrt(x) &lt;= b
+</span><span style=color:#75715e> So check until the sqrt(x) its upper bound is enough.
+</span><span style=color:#75715e> * */</span>
+<span style=color:#a6e22e>box</span>.<span style=color:#a6e22e>isPrime</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>x</span>) =&gt; {
+    <span style=color:#75715e>// x is a number
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// return boolean
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// ex. x=11, you should return true because 11 is a prime number
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// 質數: 在大於1的正整數中，將該數字做質因數分解，其因數只有1和本身
+</span><span style=color:#75715e></span>
+    <span style=color:#75715e>/* 解一，無腦，也沒考遇特殊情況 (1, 浮點數, 字串)
+</span><span style=color:#75715e>    for (const divisor=2; divisor &lt; x; divisor++) {
+</span><span style=color:#75715e>        if (x % divisor === 0 ) {
+</span><span style=color:#75715e>            return false
+</span><span style=color:#75715e>        }
+</span><span style=color:#75715e>    }
+</span><span style=color:#75715e>    return true
+</span><span style=color:#75715e>     */</span>
+
+    <span style=color:#66d9ef>if</span> (<span style=color:#f92672>!</span>Number.<span style=color:#a6e22e>isInteger</span>(<span style=color:#a6e22e>x</span>)) <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span>
+
+    <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>x</span> <span style=color:#f92672>&gt;</span> <span style=color:#ae81ff>2</span> <span style=color:#f92672>&amp;&amp;</span> <span style=color:#a6e22e>x</span> <span style=color:#f92672>%</span> <span style=color:#ae81ff>2</span> <span style=color:#f92672>===</span> <span style=color:#ae81ff>0</span>) <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span>
+
+    <span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>divisor</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>3</span>; <span style=color:#a6e22e>divisor</span> <span style=color:#f92672>&lt;=</span> Math.<span style=color:#a6e22e>sqrt</span>(<span style=color:#a6e22e>x</span>); <span style=color:#f92672>++</span><span style=color:#a6e22e>divisor</span>) {
+        <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>x</span> <span style=color:#f92672>%</span> <span style=color:#a6e22e>divisor</span> <span style=color:#f92672>===</span> <span style=color:#ae81ff>0</span>) <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span>
+    }
+    <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>x</span> <span style=color:#f92672>&gt;</span> <span style=color:#ae81ff>1</span>
+}
+</code></pre></div><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#75715e>/**
+</span><span style=color:#75715e> * Given x is a string representing a Roman numeral,
+</span><span style=color:#75715e> * convert Roman numerals to numbers.
+</span><span style=color:#75715e> * Roman numerals are represented by seven different symbols: I, V, X, L, C, D, and M.
+</span><span style=color:#75715e> * */</span>
+<span style=color:#a6e22e>box</span>.<span style=color:#a6e22e>romanToInt</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>x</span> =&gt; {
+    <span style=color:#75715e>// x is a string; roman numeral
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// return a number
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// (ex. x=&#34;IV&#34;, you should return 4)
+</span><span style=color:#75715e></span>    <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>romanMap</span> <span style=color:#f92672>=</span> {
+        <span style=color:#a6e22e>I</span><span style=color:#f92672>:</span> <span style=color:#ae81ff>1</span>,
+        <span style=color:#a6e22e>V</span><span style=color:#f92672>:</span> <span style=color:#ae81ff>5</span>,
+        <span style=color:#a6e22e>X</span><span style=color:#f92672>:</span> <span style=color:#ae81ff>10</span>,
+        <span style=color:#a6e22e>L</span><span style=color:#f92672>:</span> <span style=color:#ae81ff>50</span>,
+        <span style=color:#a6e22e>C</span><span style=color:#f92672>:</span> <span style=color:#ae81ff>100</span>,
+        <span style=color:#a6e22e>D</span><span style=color:#f92672>:</span> <span style=color:#ae81ff>500</span>,
+        <span style=color:#a6e22e>M</span><span style=color:#f92672>:</span> <span style=color:#ae81ff>1000</span>,
+    }
+
+    <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>arr</span> <span style=color:#f92672>=</span> [...<span style=color:#a6e22e>x</span>]
+
+    <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>x</span>.<span style=color:#a6e22e>length</span> <span style=color:#f92672>===</span> <span style=color:#ae81ff>0</span>) {
+        <span style=color:#66d9ef>return</span> <span style=color:#ae81ff>0</span>
+    }
+
+    <span style=color:#66d9ef>if</span> (<span style=color:#f92672>!</span><span style=color:#a6e22e>arr</span>.<span style=color:#a6e22e>every</span>(<span style=color:#a6e22e>e</span> =&gt; Object.<span style=color:#a6e22e>keys</span>(<span style=color:#a6e22e>romanMap</span>).<span style=color:#a6e22e>includes</span>(<span style=color:#a6e22e>e</span>))) {
+        <span style=color:#66d9ef>throw</span> <span style=color:#66d9ef>new</span> Error(<span style=color:#e6db74>&#34;Invalid roman string&#34;</span>)
+    }
+
+    <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>x</span>.<span style=color:#a6e22e>length</span> <span style=color:#f92672>===</span> <span style=color:#ae81ff>1</span>) {
+        <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>romanMap</span>[<span style=color:#a6e22e>x</span>]
+    }
+
+    <span style=color:#66d9ef>if</span> ((<span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Set</span>(<span style=color:#a6e22e>arr</span>)).<span style=color:#a6e22e>size</span> <span style=color:#f92672>===</span> <span style=color:#ae81ff>1</span>) { <span style=color:#75715e>// a number repeat over 4 times.
+</span><span style=color:#75715e></span>        <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>arrLen</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>arr</span>.<span style=color:#a6e22e>length</span>
+        <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>arrLen</span> <span style=color:#f92672>&gt;=</span> <span style=color:#ae81ff>4</span>) {
+            <span style=color:#75715e>// Variant forms
+</span><span style=color:#75715e></span>            <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>arrLen</span> <span style=color:#f92672>===</span> <span style=color:#ae81ff>4</span> <span style=color:#f92672>&amp;&amp;</span> <span style=color:#a6e22e>x</span> <span style=color:#f92672>===</span> <span style=color:#e6db74>&#34;IIII&#34;</span>) {
+                <span style=color:#66d9ef>return</span> <span style=color:#ae81ff>4</span>
+            }
+            <span style=color:#66d9ef>switch</span> (<span style=color:#a6e22e>x</span>) {
+                <span style=color:#66d9ef>case</span> <span style=color:#e6db74>&#34;IIIII&#34;</span><span style=color:#f92672>:</span>
+                    <span style=color:#66d9ef>return</span> <span style=color:#ae81ff>5</span>
+                <span style=color:#66d9ef>case</span> <span style=color:#e6db74>&#34;XXXXX&#34;</span><span style=color:#f92672>:</span>
+                    <span style=color:#66d9ef>return</span> <span style=color:#ae81ff>50</span>
+                <span style=color:#66d9ef>case</span> <span style=color:#e6db74>&#34;IIIIII&#34;</span><span style=color:#f92672>:</span>
+                    <span style=color:#66d9ef>return</span> <span style=color:#ae81ff>6</span>
+                <span style=color:#66d9ef>case</span> <span style=color:#e6db74>&#34;XXXXXX&#34;</span><span style=color:#f92672>:</span>
+                    <span style=color:#66d9ef>return</span> <span style=color:#ae81ff>60</span>
+            }
+            <span style=color:#66d9ef>throw</span> <span style=color:#66d9ef>new</span> Error(<span style=color:#e6db74>`You can&#39;t repeat the same character over three times.`</span>)
+        }
+        <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>romanMap</span>[<span style=color:#a6e22e>arr</span>[<span style=color:#ae81ff>0</span>]] <span style=color:#f92672>*</span> <span style=color:#a6e22e>arr</span>.<span style=color:#a6e22e>length</span>
+    }
+
+    <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>rNum</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>romanMap</span>[<span style=color:#a6e22e>arr</span>[<span style=color:#a6e22e>arr</span>.<span style=color:#a6e22e>length</span> <span style=color:#f92672>-</span> <span style=color:#ae81ff>1</span>]]
+    <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>sum</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>rNum</span>
+    <span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>i</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>arr</span>.<span style=color:#a6e22e>length</span> <span style=color:#f92672>-</span> <span style=color:#ae81ff>2</span>; <span style=color:#a6e22e>i</span> <span style=color:#f92672>&gt;=</span> <span style=color:#ae81ff>0</span>; <span style=color:#f92672>--</span><span style=color:#a6e22e>i</span>) {
+        <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>lNum</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>romanMap</span>[<span style=color:#a6e22e>arr</span>[<span style=color:#a6e22e>i</span>]]
+        <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>lNum</span> <span style=color:#f92672>&gt;=</span> <span style=color:#a6e22e>rNum</span>) {
+            <span style=color:#a6e22e>sum</span> <span style=color:#f92672>+=</span> <span style=color:#a6e22e>lNum</span>
+        } <span style=color:#66d9ef>else</span> {
+            <span style=color:#a6e22e>sum</span> <span style=color:#f92672>-=</span> <span style=color:#a6e22e>lNum</span>
+        }
+        <span style=color:#a6e22e>rNum</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>lNum</span>
+    }
+    <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>sum</span>
+}
+<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>box</span>.<span style=color:#a6e22e>romanToInt</span>(<span style=color:#e6db74>&#34;XIV&#34;</span>))  <span style=color:#75715e>// 14
+</span><span style=color:#75715e></span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>box</span>.<span style=color:#a6e22e>romanToInt</span>(<span style=color:#e6db74>&#34;MCDXXXVII&#34;</span>)) <span style=color:#75715e>// 1437
+</span><span style=color:#75715e></span><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>box</span>.<span style=color:#a6e22e>romanToInt</span>(<span style=color:#e6db74>&#34;CXCIX&#34;</span>)) <span style=color:#75715e>// 199
+</span></code></pre></div><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#75715e>/**
+</span><span style=color:#75715e> Given password is a string, which consists of mixed characters (a-z, A-Z, 0-9), and x is an integer,
+</span><span style=color:#75715e> hash the password by shifting every character by given x positions and reverse to lowercase/uppercase.
+</span><span style=color:#75715e>
+</span><span style=color:#75715e> x 是要增加的數值
+</span><span style=color:#75715e>
+</span><span style=color:#75715e> 解題技巧: https://stackoverflow.com/a/9539389/9935654
+</span><span style=color:#75715e> * */</span>
+<span style=color:#a6e22e>box</span>.<span style=color:#a6e22e>hashPassword</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>password</span>, <span style=color:#a6e22e>x</span>) =&gt; {
+    <span style=color:#75715e>// password is a string, x is a number
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// return a string
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// (ex. password = &#39;ab1By&#39;, x = 3 so you should return &#34;DE4eB&#34;)
+</span><span style=color:#75715e></span>
+    <span style=color:#75715e>// 提示:
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// &#34;ABC&#34;.charCodeAt(0) // returns 65
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// String.fromCharCode(65,66,67); // returns &#39;ABC&#39;
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// ch = ch.charCodeAt() &gt;= 65 &amp;&amp; ch.charCodeAt() &lt;= 90 ? ch.toLowerCase() : ch.toUpperCase() // 大變小、小變大(寫)
+</span><span style=color:#75715e></span>
+    <span style=color:#75715e>/* 這樣寫有個問題 y 最後會轉成 &#34;|&#34; 題目的規則是y+3的過程是 z a b (再把b變大寫) 才變成最後的B
+</span><span style=color:#75715e>    return [...password].map(ch =&gt; {
+</span><span style=color:#75715e>        ch = String.fromCharCode((ch.charCodeAt(0) + x)) // 先轉成ascii的數字再相加之後再轉回來ascii的字串
+</span><span style=color:#75715e>        return ch.charCodeAt() &gt;= 65 &amp;&amp; ch.charCodeAt() &lt;= 90 ? ch.toLowerCase() : ch.toUpperCase()
+</span><span style=color:#75715e>    }).join(&#34;&#34;)
+</span><span style=color:#75715e>     */</span>
+
+    <span style=color:#75715e>/*
+</span><span style=color:#75715e>    [1, 2, 3, 4, 5] 初始index=0
+</span><span style=color:#75715e>    模擬在位子3 往後移 2 的情況 =&gt; 位子3是4往1個是最後再往後一個要回到開始所以是回到位置1。 3+2=&gt;5
+</span><span style=color:#75715e>    (x+3) % len(5)  = 0 因此用這種取法可以快速得到，最後是哪一個位子
+</span><span style=color:#75715e>    測試: 2+6
+</span><span style=color:#75715e>    (2+6)%5=3 =&gt; 4 正確
+</span><span style=color:#75715e>     */</span>
+
+    <span style=color:#75715e>// 循環有一個技巧，利用%就可以達到了，%原本Array的長度，如果該index小於，那不會有事，如果等於剛好就會跑到第一個元素去
+</span><span style=color:#75715e></span>    <span style=color:#66d9ef>return</span> [...<span style=color:#a6e22e>password</span>].<span style=color:#a6e22e>map</span>(<span style=color:#a6e22e>ch</span> =&gt; {
+        <span style=color:#66d9ef>if</span> (<span style=color:#f92672>!</span>isNaN(Number(<span style=color:#a6e22e>ch</span>))) {
+            <span style=color:#75715e>// return Number(ch) + x // 只能0~9所以如果超過就要循環
+</span><span style=color:#75715e></span>            <span style=color:#66d9ef>return</span> (Number(<span style=color:#a6e22e>ch</span>) <span style=color:#f92672>+</span> <span style=color:#a6e22e>x</span>) <span style=color:#f92672>%</span> <span style=color:#ae81ff>10</span>
+        }
+        <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>asciiUppercaseArray</span> <span style=color:#f92672>=</span> Array.<span style=color:#a6e22e>from</span>([...Array(<span style=color:#ae81ff>26</span>).<span style=color:#a6e22e>keys</span>()], <span style=color:#a6e22e>x</span> =&gt; <span style=color:#a6e22e>x</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>65</span>)
+        <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>curIndex</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>asciiUppercaseArray</span>.<span style=color:#a6e22e>indexOf</span>(<span style=color:#a6e22e>ch</span>.<span style=color:#a6e22e>toUpperCase</span>().<span style=color:#a6e22e>charCodeAt</span>())
+        <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>newIndex</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>curIndex</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>x</span>) <span style=color:#f92672>%</span> <span style=color:#ae81ff>26</span>
+        <span style=color:#66d9ef>switch</span> (<span style=color:#a6e22e>ch</span>.<span style=color:#a6e22e>charCodeAt</span>(<span style=color:#ae81ff>0</span>) <span style=color:#f92672>&gt;=</span> <span style=color:#ae81ff>65</span> <span style=color:#f92672>&amp;&amp;</span> <span style=color:#a6e22e>ch</span>.<span style=color:#a6e22e>charCodeAt</span>(<span style=color:#ae81ff>0</span>) <span style=color:#f92672>&lt;=</span> <span style=color:#ae81ff>90</span>) {
+            <span style=color:#66d9ef>case</span> <span style=color:#66d9ef>true</span><span style=color:#f92672>:</span> <span style=color:#75715e>// convert it from uppercase to lowercase
+</span><span style=color:#75715e></span>                <span style=color:#66d9ef>return</span> String.<span style=color:#a6e22e>fromCharCode</span>(<span style=color:#a6e22e>newIndex</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>97</span>) <span style=color:#75715e>// ascii 97 = a
+</span><span style=color:#75715e></span>            <span style=color:#66d9ef>case</span> <span style=color:#66d9ef>false</span><span style=color:#f92672>:</span>
+                <span style=color:#66d9ef>return</span> String.<span style=color:#a6e22e>fromCharCode</span>(<span style=color:#a6e22e>newIndex</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>65</span>) <span style=color:#75715e>// ascii 65 = A
+</span><span style=color:#75715e></span>        }
+    }).<span style=color:#a6e22e>join</span>(<span style=color:#e6db74>&#34;&#34;</span>)
+}
+<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>box</span>.<span style=color:#a6e22e>hashPassword</span>(<span style=color:#e6db74>&#34;ab1By&#34;</span>, <span style=color:#ae81ff>3</span>))
+<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>box</span>.<span style=color:#a6e22e>hashPassword</span>(<span style=color:#e6db74>&#34;H4sh3D&#34;</span>, <span style=color:#ae81ff>101</span>)) <span style=color:#75715e>// expected: &#34;e5PE4a&#34;
+</span></code></pre></div><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#75715e>/**
+</span><span style=color:#75715e> *
+</span><span style=color:#75715e> * Given x is a string,
+</span><span style=color:#75715e> * find the average of ASCII codes of all characters and round to the closest integer, then return the character representing that ASCII code.
+</span><span style=color:#75715e> *
+</span><span style=color:#75715e> * 提示:
+</span><span style=color:#75715e> [...x] 可以改成 Array.from代替。
+</span><span style=color:#75715e> Array.from(&#39;foo&#39;) // [&#34;f&#34;, &#34;o&#34;, &#34;o&#34;]
+</span><span style=color:#75715e> Array.from([1, 2, 3], x=&gt;x+x) // [2, 4, 6] // 它可以接一個函數，類似map的效果
+</span><span style=color:#75715e> * */</span>
+<span style=color:#a6e22e>box</span>.<span style=color:#a6e22e>averageAsciiChar</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>x</span> =&gt; {
+    <span style=color:#75715e>// x is a string
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// return a character
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// (ex. x=&#34;Hello World!&#34;, you should return &#34;Z&#34;)
+</span><span style=color:#75715e></span>
+    <span style=color:#75715e>// 解法: 把各個字符轉成ascii的數值相加之後取平均
+</span><span style=color:#75715e></span>    <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>asciiIndex</span> <span style=color:#f92672>=</span> Math.<span style=color:#a6e22e>round</span>(
+        [...<span style=color:#a6e22e>x</span>].<span style=color:#a6e22e>reduce</span>((<span style=color:#a6e22e>a</span>, <span style=color:#a6e22e>b</span>) =&gt; {
+            <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>a</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>b</span>.<span style=color:#a6e22e>charCodeAt</span>()
+        }, <span style=color:#ae81ff>0</span>) <span style=color:#f92672>/</span> <span style=color:#a6e22e>x</span>.<span style=color:#a6e22e>length</span>)
+    <span style=color:#66d9ef>return</span> String.<span style=color:#a6e22e>fromCharCode</span>(<span style=color:#a6e22e>asciiIndex</span>)
+}
+</code></pre></div><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#75715e>/**
+</span><span style=color:#75715e> * find the first unique character in x
+</span><span style=color:#75715e> * Return false if there isn&#39;t a unique characcter in x.
+</span><span style=color:#75715e> * */</span>
+<span style=color:#a6e22e>box</span>.<span style=color:#a6e22e>firstUniqueChar</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>x</span> =&gt; {
+    <span style=color:#75715e>// x is a string
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// return a string
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// (ex. x=&#34;toptal&#34;, you should return &#34;o&#34; because &#34;t&#34; appeared twice)
+</span><span style=color:#75715e></span>
+    <span style=color:#75715e>/* 這種解法有問題
+</span><span style=color:#75715e>    const arr = [...x]
+</span><span style=color:#75715e>    for (let i = 0; i &lt; arr.length; ++i) {
+</span><span style=color:#75715e>        if (arr.filter(ch =&gt; ch === ch).length &gt; 1) {
+</span><span style=color:#75715e>            return i + 1 &lt; arr.length ? arr[i + 1] : false
+</span><span style=color:#75715e>        }
+</span><span style=color:#75715e>    }
+</span><span style=color:#75715e>    // firstUniqueChar(&#34;aabcbd&#34;) = &#34;a&#34; expected: &#34;c&#34;
+</span><span style=color:#75715e>    // firstUniqueChar(&#34;hello&#34;) = &#34;e&#34; expected: &#34;h&#34;
+</span><span style=color:#75715e>    // firstUniqueChar(&#34;aabcbd&#34;) = &#34;a&#34; expected: &#34;c&#34;
+</span><span style=color:#75715e>    // firstUniqueChar(&#34;holloh&#34;) = &#34;o&#34; expected: false
+</span><span style=color:#75715e>     */</span>
+
+
+    <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>counter</span> <span style=color:#f92672>=</span> {}
+    <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>set</span> <span style=color:#f92672>=</span> [...<span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Set</span>(<span style=color:#a6e22e>x</span>)]
+    <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>arr</span> <span style=color:#f92672>=</span> [...<span style=color:#a6e22e>x</span>]
+    <span style=color:#a6e22e>set</span>.<span style=color:#a6e22e>forEach</span>(<span style=color:#a6e22e>ch</span> =&gt;
+        <span style=color:#a6e22e>counter</span>[<span style=color:#a6e22e>ch</span>] <span style=color:#f92672>=</span> <span style=color:#a6e22e>arr</span>.<span style=color:#a6e22e>filter</span>(<span style=color:#a6e22e>e</span> =&gt; <span style=color:#a6e22e>e</span> <span style=color:#f92672>===</span> <span style=color:#a6e22e>ch</span>).<span style=color:#a6e22e>length</span>
+    )
+    <span style=color:#66d9ef>if</span> (Object.<span style=color:#a6e22e>values</span>(<span style=color:#a6e22e>counter</span>).<span style=color:#a6e22e>every</span>(<span style=color:#a6e22e>val</span> =&gt; <span style=color:#a6e22e>val</span> <span style=color:#f92672>&gt;</span> <span style=color:#ae81ff>1</span>)) {
+        <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span>
+    }
+    <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>oneArr</span> <span style=color:#f92672>=</span> Object.<span style=color:#a6e22e>entries</span>(<span style=color:#a6e22e>counter</span>).<span style=color:#a6e22e>map</span>(([<span style=color:#a6e22e>key</span>, <span style=color:#a6e22e>val</span>]) =&gt; {
+        <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>val</span> <span style=color:#f92672>===</span> <span style=color:#ae81ff>1</span> <span style=color:#f92672>?</span> <span style=color:#a6e22e>key</span> <span style=color:#f92672>:</span> <span style=color:#66d9ef>undefined</span>
+    }).<span style=color:#a6e22e>filter</span>(<span style=color:#a6e22e>e</span> =&gt; <span style=color:#a6e22e>e</span> <span style=color:#f92672>!==</span> <span style=color:#66d9ef>undefined</span>)
+    <span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>ch</span> <span style=color:#66d9ef>of</span> <span style=color:#a6e22e>arr</span>) {
+        <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>oneArr</span>.<span style=color:#a6e22e>includes</span>(<span style=color:#a6e22e>ch</span>))
+            <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>ch</span>
+    }
+    <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span>
+}
+<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>box</span>.<span style=color:#a6e22e>firstUniqueChar</span>(<span style=color:#e6db74>&#34;toptal&#34;</span>))
+<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>box</span>.<span style=color:#a6e22e>firstUniqueChar</span>(<span style=color:#e6db74>&#34;aabcbd&#34;</span>))
+<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>box</span>.<span style=color:#a6e22e>firstUniqueChar</span>(<span style=color:#e6db74>&#34;hello&#34;</span>))
+<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>box</span>.<span style=color:#a6e22e>firstUniqueChar</span>(<span style=color:#e6db74>&#34;aabcbd&#34;</span>))
+<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>box</span>.<span style=color:#a6e22e>firstUniqueChar</span>(<span style=color:#e6db74>&#34;holloh&#34;</span>))
+</code></pre></div><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#a6e22e>box</span>.<span style=color:#a6e22e>twoArrayAvg</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>x</span>, <span style=color:#a6e22e>y</span>) =&gt; {
+    <span style=color:#75715e>// x and y are arrays of numbers
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// return a number
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// (ex. x=[1,2,3],  y=[4,5,6], you should return 3.5)
+</span><span style=color:#75715e></span>
+    <span style=color:#a6e22e>avg</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>arr</span>) =&gt; <span style=color:#a6e22e>arr</span>.<span style=color:#a6e22e>reduce</span>((<span style=color:#a6e22e>a</span>, <span style=color:#a6e22e>b</span>) =&gt; <span style=color:#a6e22e>a</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>b</span>) <span style=color:#f92672>/</span> <span style=color:#a6e22e>arr</span>.<span style=color:#a6e22e>length</span>
+    <span style=color:#66d9ef>return</span> (<span style=color:#a6e22e>avg</span>(<span style=color:#a6e22e>x</span>) <span style=color:#f92672>+</span> <span style=color:#a6e22e>avg</span>(<span style=color:#a6e22e>y</span>)) <span style=color:#f92672>/</span> <span style=color:#ae81ff>2</span>
+
+    <span style=color:#75715e>// // avg(x.concat(y)) // array合併之後再取平均
+</span><span style=color:#75715e></span>}
+</code></pre></div><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js>
+<span style=color:#75715e>/**
+</span><span style=color:#75715e> * How many instances of string x are contained in y
+</span><span style=color:#75715e> * */</span>
+<span style=color:#a6e22e>box</span>.<span style=color:#a6e22e>charCountInString</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>x</span>, <span style=color:#a6e22e>y</span>) =&gt; {
+    <span style=color:#75715e>// x is a string of 1 character
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// y is a string
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// return a number
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// (ex. x=&#39;$&#39;, y=&#34;$he$llo$$$wo$rld&#34;, should return 6),
+</span><span style=color:#75715e></span>    <span style=color:#66d9ef>return</span> [...<span style=color:#a6e22e>y</span>].<span style=color:#a6e22e>filter</span>(<span style=color:#a6e22e>e</span> =&gt; <span style=color:#a6e22e>e</span> <span style=color:#f92672>===</span> <span style=color:#a6e22e>x</span>).<span style=color:#a6e22e>length</span>
+}
+</code></pre></div><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#a6e22e>box</span>.<span style=color:#a6e22e>countUniqueNumbers</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>x</span>) =&gt; {
+    <span style=color:#75715e>// x is an array of numbers
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// return a number
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// (ex. x=[1,2,2,2,3,4,20,3] you should return 5 as we have 1,2,3,4,20)
+</span><span style=color:#75715e></span>    <span style=color:#66d9ef>return</span> [...<span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Set</span>(<span style=color:#a6e22e>x</span>)].<span style=color:#a6e22e>length</span>
+}
+</code></pre></div><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#75715e>/**
+</span><span style=color:#75715e> * 物品出現次數和排序
+</span><span style=color:#75715e> * 給定一個arr，先把他按造字符的大小排序(由小到大)，之後計算各別的字元出現了幾次
+</span><span style=color:#75715e> * */</span>
+<span style=color:#a6e22e>box</span>.<span style=color:#a6e22e>numberRepresentation</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>arr</span>) =&gt; {
+    <span style=color:#75715e>// arr is an array
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// return a number
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// (ex. arr=[b,a,a,a,c,b,a] you should return 421 where 4 represents &#39;a&#39; occurences, 2 for &#39;b&#39;, etc..)
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// [a,a,a,a,b,b,c] // 4a 2b 1c =&gt; 421
+</span><span style=color:#75715e></span>
+    <span style=color:#75715e>// const arr = [&#34;b&#34;, &#34;a&#34;, &#34;a&#34;, &#34;a&#34;, &#34;c&#34;, &#34;b&#34;, &#34;a&#34;]
+</span><span style=color:#75715e></span>
+    <span style=color:#75715e>/* 解一: 先計算各個字符出現了幾次，之後排序再印出打案
+</span><span style=color:#75715e>    const alphaSet = {}
+</span><span style=color:#75715e>    arr.forEach(e =&gt; {
+</span><span style=color:#75715e>        alphaSet[e] = alphaSet[e] === undefined ? 1 : alphaSet[e] + 1
+</span><span style=color:#75715e>    })
+</span><span style=color:#75715e>    const result = []
+</span><span style=color:#75715e>    for (const key of Object.keys(alphaSet).sort()) {
+</span><span style=color:#75715e>        result.push(alphaSet[key])
+</span><span style=color:#75715e>    }
+</span><span style=color:#75715e>    return Number(result.join(&#34;&#34;))
+</span><span style=color:#75715e>     */</span>
+
+    <span style=color:#75715e>// 解二，先排序, 4a 2b 1c=&gt; 4*10^2 + 2*10^1 + 1*10^0 = 421
+</span><span style=color:#75715e></span>    <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>set</span> <span style=color:#f92672>=</span> [...<span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Set</span>(<span style=color:#a6e22e>arr</span>.<span style=color:#a6e22e>sort</span>())]
+    <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>ratio</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>set</span>.<span style=color:#a6e22e>length</span> <span style=color:#f92672>-</span> <span style=color:#ae81ff>1</span>
+    <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>answer</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>
+    <span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>ch</span> <span style=color:#66d9ef>of</span> <span style=color:#a6e22e>set</span>) {
+        <span style=color:#a6e22e>answer</span> <span style=color:#f92672>+=</span> <span style=color:#a6e22e>arr</span>.<span style=color:#a6e22e>filter</span>(<span style=color:#a6e22e>e</span> =&gt; <span style=color:#a6e22e>e</span> <span style=color:#f92672>===</span> <span style=color:#a6e22e>ch</span>).<span style=color:#a6e22e>length</span> <span style=color:#f92672>*</span> Math.<span style=color:#a6e22e>pow</span>(<span style=color:#ae81ff>10</span>, <span style=color:#a6e22e>ratio</span><span style=color:#f92672>--</span>)
+    }
+    <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>answer</span>
+}
+</code></pre></div><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#75715e>/**
+</span><span style=color:#75715e> * 特定物品的價值
+</span><span style=color:#75715e> * */</span>
+<span style=color:#a6e22e>box</span>.<span style=color:#a6e22e>numberOfCircles</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>x</span>) =&gt; {
+    <span style=color:#75715e>// x is a number
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// return a number
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// 出現6, 9, 0 得一分 8得2分
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// (ex. x=1908, you should return 4)
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// (ex. x=9 you should return 1)
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// x = 1908
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// y = Array.from(x.toString()) // 輸出 Array [&#34;1&#34;, &#34;9&#34;, &#34;0&#34;, &#34;8&#34;]
+</span><span style=color:#75715e></span>
+    <span style=color:#66d9ef>return</span> [...<span style=color:#a6e22e>x</span>.<span style=color:#a6e22e>toString</span>()].<span style=color:#a6e22e>reduce</span>((<span style=color:#a6e22e>a</span>, <span style=color:#a6e22e>b</span>) =&gt; {
+        <span style=color:#a6e22e>b</span> <span style=color:#f92672>=</span> parseInt(<span style=color:#a6e22e>b</span>, <span style=color:#ae81ff>10</span>) <span style=color:#75715e>// 10近位
+</span><span style=color:#75715e></span>        <span style=color:#66d9ef>if</span> ([<span style=color:#ae81ff>6</span>, <span style=color:#ae81ff>9</span>, <span style=color:#ae81ff>0</span>].<span style=color:#a6e22e>includes</span>(<span style=color:#a6e22e>b</span>)) {
+            <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>a</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>
+        }
+        <span style=color:#66d9ef>if</span> ([<span style=color:#ae81ff>8</span>].<span style=color:#a6e22e>includes</span>(<span style=color:#a6e22e>b</span>)) {
+            <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>a</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>2</span>
+        }
+        <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>a</span>
+    }, <span style=color:#ae81ff>0</span>)
+}
+
+<span style=color:#a6e22e>box</span>.<span style=color:#a6e22e>numberOfCircles</span>(<span style=color:#ae81ff>1908</span>) <span style=color:#75715e>// 4
+</span><span style=color:#75715e></span><span style=color:#a6e22e>box</span>.<span style=color:#a6e22e>numberOfCircles</span>(<span style=color:#ae81ff>9</span>) <span style=color:#75715e>// 1
+</span></code></pre></div><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#75715e>/**
+</span><span style=color:#75715e> * 反轉
+</span><span style=color:#75715e> * 提示: 字串的字符塞到Array去，可以使用[...myString]=&gt; [...&#34;He&#34;] =&gt; [&#34;H&#34;, &#34;e&#34;]
+</span><span style=color:#75715e> * */</span>
+<span style=color:#a6e22e>box</span>.<span style=color:#a6e22e>reverseString</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>x</span>) =&gt; {
+    <span style=color:#75715e>// x is a string
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// return a string
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// (ex. x=&#34;Hello from Toptal&#34;, you should return &#34;latpoT morf olleH&#34;)
+</span><span style=color:#75715e></span>
+    <span style=color:#75715e>/* 解一: 先拆分，後反轉
+</span><span style=color:#75715e>    const arr = x.split(&#34; &#34;)
+</span><span style=color:#75715e>    const resultArr = arr.map(e =&gt; [...e].reverse().join(&#34;&#34;))
+</span><span style=color:#75715e>    return resultArr.reverse().join(&#34; &#34;)
+</span><span style=color:#75715e>     */</span>
+
+    <span style=color:#75715e>// 解二，直接順著做
+</span><span style=color:#75715e></span>    <span style=color:#66d9ef>return</span> [...<span style=color:#a6e22e>x</span>].<span style=color:#a6e22e>reverse</span>().<span style=color:#a6e22e>join</span>(<span style=color:#e6db74>&#34;&#34;</span>)
+}
+<span style=color:#a6e22e>box</span>.<span style=color:#a6e22e>reverseString</span>(<span style=color:#e6db74>&#34;Hello from Toptal&#34;</span>) <span style=color:#75715e>// &#34;latpoT morf olleH&#34;
+</span></code></pre></div><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#a6e22e>box</span>.<span style=color:#a6e22e>matchingType</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>x</span>, <span style=color:#a6e22e>y</span>) =&gt; {
+    <span style=color:#75715e>// x and y are random types
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// return boolean
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// (ex. x = 7 and y = &#34;Toptal&#34;, should return false),
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// (ex. x = 10 and y = 100, should return true),
+</span><span style=color:#75715e></span>    <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>typeof</span> <span style=color:#a6e22e>x</span> <span style=color:#f92672>===</span> <span style=color:#66d9ef>typeof</span> <span style=color:#a6e22e>y</span>
+}
+</code></pre></div><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#75715e>/**
+</span><span style=color:#75715e> *  find the average of x and if tit is not a whole number, round it up.
+</span><span style=color:#75715e> * */</span>
+<span style=color:#a6e22e>box</span>.<span style=color:#a6e22e>findAverage</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>x</span> =&gt; {
+    <span style=color:#75715e>// x is an array of numbers
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// return a number
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// (ex. x=[1,2,3,4] then you should return 4 because the average is 3.25)
+</span><span style=color:#75715e></span>    <span style=color:#66d9ef>return</span> Math.<span style=color:#a6e22e>ceil</span>(<span style=color:#a6e22e>x</span>.<span style=color:#a6e22e>reduce</span>((<span style=color:#a6e22e>a</span>, <span style=color:#a6e22e>b</span>) =&gt; <span style=color:#a6e22e>a</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>b</span>) <span style=color:#f92672>/</span> <span style=color:#a6e22e>x</span>.<span style=color:#a6e22e>length</span>)
+}
+</code></pre></div><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#a6e22e>box</span>.<span style=color:#a6e22e>squareRoot</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>x</span> =&gt; {
+    <span style=color:#75715e>// x is a number
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// return a number
+</span><span style=color:#75715e></span>    <span style=color:#66d9ef>return</span> Math.<span style=color:#a6e22e>sqrt</span>(<span style=color:#a6e22e>x</span>)
+}
+</code></pre></div><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#a6e22e>box</span>.<span style=color:#a6e22e>cube</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>x</span> =&gt; {
+<span style=color:#75715e>// x is a number
+</span><span style=color:#75715e>// return x cubed
+</span><span style=color:#75715e>// (ex. x=3, return 27)
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// return Math.pow(x, 3)
+</span><span style=color:#75715e></span>    <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>x</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>x</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>x</span>
+}
+</code></pre></div><div class=mt3><hr></div><div class=mt4><ul class=pa0><li class=list><a href=/tags/js class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">js</a></li><li class=list><a href=/tags/challenge class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">challenge</a></li></ul></div><div class="mt6 instapaper_ignoref"><div id=disqus_thread></div><script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//carson-blog.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div></div><aside class="w-30-l mt6-l navbar-right large-screen-only"><nav id=TableOfContents><ul><li><a href=#speed-coding-challenge>Speed Coding Challenge</a></li><li><a href=#題庫>題庫</a></li></ul></nav><script defer src=/js/uml/toc_markmap.js></script><div id=toc><div id=navbar class="pa3 nested-list-reset nested-copy-line-height nested-links"><a class="navbar-brand ms-2" href=# style=color:#212529>speed coding challenge</a><nav class="navbar navbar-light"><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><a class="nav-link ms-0" href=#speed-coding-challenge>Speed Coding Challenge</a></nav></nav><nav class="nav nav-pills flex-column"><nav class="nav nav-pills flex-column"><a class="nav-link ms-0" href=#題庫>題庫</a></nav></nav></nav></nav></div><div class="pa3 nested-list-reset nested-copy-line-height nested-links"><p class="f5 b mb3 ms-2">相關內容</p><ul class="pa0 list"><li class="mb2 ms-2"><a href=/pg_lang/web/js/minifier/>Minifier</a></li><li class="mb2 ms-2"><a href=/pg_lang/web/js/js-mod/>Javascript module</a></li><li class="mb2 ms-2"><a href=/pg_lang/web/js/js_web_api/>Web API</a></li><li class="mb2 ms-2"><a href=/pg_lang/web/js/js_tutorial/>JS tutorial</a></li><li class="mb2 ms-2"><a href=/pg_lang/web/js/d3/tutorial/>基礎教學</a></li></ul></div></div></aside></article></main><div id=fastSearch><input id=searchInput tabindex=0><ul id=searchResults></ul></div><script src=/js/search/fuse/fuse.js></script><script src=/js/search/fuse/fastsearch.js></script><footer class="bg-black bottom-0 w-100 pa3" role=contentinfo><div class="flex justify-between"><a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href=https://carsonslovoka.github.io/>&copy; Carson 2020-2022</a><div></div></div></footer><script src=/dist/js/app.3fc0f988d21662902933.js></script><script src=/dist/js/utils.js></script><script src=/js/clipboard/copy-code-block.js></script></body></html>
