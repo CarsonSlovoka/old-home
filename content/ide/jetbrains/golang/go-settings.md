@@ -2,7 +2,7 @@
 title = "Golang Settings"
 description="Keymap, Editor,..."
 date = 2021-01-22T13:25:01+08:00
-lastmod = 2021-04-06
+lastmod = 2022-02-18
 featured_image = ""
 draft = false
 weight = 0
@@ -141,3 +141,28 @@ Enable Go Modules Integration : 這個東西指的就是go.mod
       "data": [1, 2, 3]
     }
     ```
+
+## Markdown MMD
+
+MMD(MultiMarkdown). It supports more export-formats and implements some added features currently not available with plain Markdown syntax.
+
+### [Mermaid](https://github.com/mermaid-js/mermaid)
+
+[IDE設定](https://www.jetbrains.com/help/idea/markdown.html#diagrams)
+
+```
+Languages & Frameworks
+    -> Markdown.
+        -> Enable either Mermaid or PlantUML under Markdown extensions.
+```
+
+> 其他參考連結
+> - https://www.jetbrains.com/go/guide/tips/mermaid-js-support-in-markdown/
+
+
+```mermaid
+pie title Pets adopted by volunteers
+    "Dogs" : 386
+    "Cats" : 85
+    "Rats" : 15
+```

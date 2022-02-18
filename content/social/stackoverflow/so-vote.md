@@ -403,6 +403,9 @@ next_section = ""
 [How to run a makefile in Windows?] | `choco install make` | makefile
 [Command line to remove an environment variable from the OS level configuration] | `REG delete HKCU\Environment /F /V MyVar` | batch
 [How to write loop in a Makefile?] | | makefile
+[Docker cannot start on Windows] | | docker
+[How do I uninstall a Chocolatey package and all its dependencies?] | | choco
+[How can I clear the terminal screen in Go?] | | go
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -788,6 +791,10 @@ next_section = ""
 [How to run a makefile in Windows?]: https://stackoverflow.com/a/57042516/9935654
 [Command line to remove an environment variable from the OS level configuration]: https://stackoverflow.com/a/13222794/9935654
 [How to write loop in a Makefile?]: https://stackoverflow.com/a/71100371/9935654
+[Docker cannot start on Windows]: https://stackoverflow.com/q/40459280/9935654
+[How do I uninstall a Chocolatey package and all its dependencies?]: https://stackoverflow.com/q/39628638/9935654
+[How can I clear the terminal screen in Go?]: https://stackoverflow.com/a/22896706/9935654
+
 
 {{< /table/bootstrap-table >}}
 
