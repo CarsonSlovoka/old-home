@@ -406,6 +406,9 @@ next_section = ""
 [Docker cannot start on Windows] | | docker
 [How do I uninstall a Chocolatey package and all its dependencies?] | | choco
 [How can I clear the terminal screen in Go?] | | go
+[How to delete border spacing in table] | `table { border-collapse: collapse; }` | css
+[Why is contenteditable not a style?] | `read-write-plaintext-only` | css
+[Get the ID of an element where the class contains a given string] | 使用`[attr~=value]`就能代表屬性中有此值就能套用 [MDN參考](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors#syntax) | css
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -794,7 +797,9 @@ next_section = ""
 [Docker cannot start on Windows]: https://stackoverflow.com/q/40459280/9935654
 [How do I uninstall a Chocolatey package and all its dependencies?]: https://stackoverflow.com/q/39628638/9935654
 [How can I clear the terminal screen in Go?]: https://stackoverflow.com/a/22896706/9935654
-
+[How to delete border spacing in table]: https://stackoverflow.com/a/9947064/9935654
+[Why is contenteditable not a style?]: https://stackoverflow.com/a/29227434/9935654
+[Get the ID of an element where the class contains a given string]: https://stackoverflow.com/a/37191256/9935654
 
 {{< /table/bootstrap-table >}}
 
