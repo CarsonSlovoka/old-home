@@ -160,6 +160,19 @@ Languages & Frameworks
 > - https://www.jetbrains.com/go/guide/tips/mermaid-js-support-in-markdown/
 
 
+它會自動幫你下載，但是下載的版本可能是舊版的，導致有些語法會有問題，建議您可以把它替換掉
+
+替換方法，來到此工作目錄
+
+```
+%userprofile%\AppData\Local\JetBrains\GoLand2020.3\download-cache\mermaid\mermaid
+```
+
+把mermaid.js替換掉即可，可以到此[下載mermaid.js](https://cdn.jsdelivr.net/npm/mermaid/dist/)
+
+您可以載min.js，再把它更名就好了
+
+
 ```mermaid
 pie title Pets adopted by volunteers
     "Dogs" : 386

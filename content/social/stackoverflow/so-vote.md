@@ -409,6 +409,7 @@ next_section = ""
 [How to delete border spacing in table] | `table { border-collapse: collapse; }` | css
 [Why is contenteditable not a style?] | `read-write-plaintext-only` | css
 [Get the ID of an element where the class contains a given string] | 使用`[attr~=value]`就能代表屬性中有此值就能套用 [MDN參考](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors#syntax) | css
+[colspan not working] | td.col**S**pan 是大寫 | js
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -800,6 +801,7 @@ next_section = ""
 [How to delete border spacing in table]: https://stackoverflow.com/a/9947064/9935654
 [Why is contenteditable not a style?]: https://stackoverflow.com/a/29227434/9935654
 [Get the ID of an element where the class contains a given string]: https://stackoverflow.com/a/37191256/9935654
+[colspan not working]: https://stackoverflow.com/q/4504253/9935654
 
 {{< /table/bootstrap-table >}}
 
