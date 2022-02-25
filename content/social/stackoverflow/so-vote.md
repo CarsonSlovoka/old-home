@@ -410,6 +410,11 @@ next_section = ""
 [Why is contenteditable not a style?] | `read-write-plaintext-only` | css
 [Get the ID of an element where the class contains a given string] | 使用`[attr~=value]`就能代表屬性中有此值就能套用 [MDN參考](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors#syntax) | css
 [colspan not working] | td.col**S**pan 是大寫 | js
+[Get protocol, domain, and port from URL] | [new URL().{hostname, port, search, pathname, protocol}](https://developer.mozilla.org/en-US/docs/Web/API/URL) | js
+[Adding options to select with javascript] | `selectElement.add(new Option(text, value, defaultSelected, selected))` | js
+[fade in and out on simple css tooltip] | | css
+[CSS Variables and String concatenation] | 很遺憾這樣用還是不行 `.myCls:after  {--title: attr(title); content: "🔔" + var(--title)}` | css
+[Can I use HTML tags in the options for select elements?] | 目前不行，要自己用div搭配js來做。 | html
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -802,6 +807,11 @@ next_section = ""
 [Why is contenteditable not a style?]: https://stackoverflow.com/a/29227434/9935654
 [Get the ID of an element where the class contains a given string]: https://stackoverflow.com/a/37191256/9935654
 [colspan not working]: https://stackoverflow.com/q/4504253/9935654
+[Get protocol, domain, and port from URL]: https://stackoverflow.com/a/26434126/9935654
+[Adding options to select with javascript]: https://stackoverflow.com/a/55897321/9935654
+[fade in and out on simple css tooltip]: https://stackoverflow.com/a/21138554/9935654
+[CSS Variables and String concatenation]: https://stackoverflow.com/a/70575193/9935654
+[Can I use HTML tags in the options for select elements?]: https://stackoverflow.com/q/11237807/9935654
 
 {{< /table/bootstrap-table >}}
 
