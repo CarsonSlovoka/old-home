@@ -243,6 +243,7 @@ bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的�
 🔒 | Locked 安全性 | 1F512
 🔥 | Fire | 1F525
 🕹️ | Joystick | 1F579
+🚚 | Delivery Truck | 1F69A
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 
