@@ -418,6 +418,7 @@ next_section = ""
 [http://timestamp.verisign.com/scripts/timstamp.dll not available] | `http://timestamp.digicert.com` | signtool
 [How can I set the default value for an HTML <select> element?] | `<option value="" selected disabled hidden>` disabled不能再選，hidden看不到 | html
 [Can I use a :before or :after pseudo-element on an input field?] | input沒辦法加上before或者after | html
+[How can I see the size of a GitHub repository before cloning it?] | https://github.com/settings/repositories | github
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -818,6 +819,7 @@ next_section = ""
 [http://timestamp.verisign.com/scripts/timstamp.dll not available]: https://stackoverflow.com/a/9714864/9935654
 [How can I set the default value for an HTML <select> element?]: https://stackoverflow.com/a/30525521/9935654
 [Can I use a :before or :after pseudo-element on an input field?]: https://stackoverflow.com/a/4660434/9935654
+[How can I see the size of a GitHub repository before cloning it?]: https://stackoverflow.com/a/66180640/9935654
 
 {{< /table/bootstrap-table >}}
 
