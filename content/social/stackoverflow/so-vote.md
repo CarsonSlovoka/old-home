@@ -415,6 +415,9 @@ next_section = ""
 [fade in and out on simple css tooltip] | | css
 [CSS Variables and String concatenation] | 很遺憾這樣用還是不行 `.myCls:after  {--title: attr(title); content: "🔔" + var(--title)}` | css
 [Can I use HTML tags in the options for select elements?] | 目前不行，要自己用div搭配js來做。 | html
+[http://timestamp.verisign.com/scripts/timstamp.dll not available] | `http://timestamp.digicert.com` | signtool
+[How can I set the default value for an HTML <select> element?] | `<option value="" selected disabled hidden>` disabled不能再選，hidden看不到 | html
+[Can I use a :before or :after pseudo-element on an input field?] | input沒辦法加上before或者after | html
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -812,6 +815,9 @@ next_section = ""
 [fade in and out on simple css tooltip]: https://stackoverflow.com/a/21138554/9935654
 [CSS Variables and String concatenation]: https://stackoverflow.com/a/70575193/9935654
 [Can I use HTML tags in the options for select elements?]: https://stackoverflow.com/q/11237807/9935654
+[http://timestamp.verisign.com/scripts/timstamp.dll not available]: https://stackoverflow.com/a/9714864/9935654
+[How can I set the default value for an HTML <select> element?]: https://stackoverflow.com/a/30525521/9935654
+[Can I use a :before or :after pseudo-element on an input field?]: https://stackoverflow.com/a/4660434/9935654
 
 {{< /table/bootstrap-table >}}
 
