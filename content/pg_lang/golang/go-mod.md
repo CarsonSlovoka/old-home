@@ -1,7 +1,7 @@
 +++ title = "Golang Module"
 description="教您如何管理模塊"
 date = 2021-01-22T16:57:58+08:00
-lastmod = 2021-04-29
+lastmod = 2022-03-01
 featured_image = ""
 draft = false
 weight = 0
@@ -45,7 +45,7 @@ import (
 )
 ```
 
-如果GO111MODULE非啟用，那麼就是抓以下這份檔案:
+如果GO111MODULE(之所以有3個1，是因為module是go1.11版本開始使用的)非啟用，那麼就是抓以下這份檔案:
 
 > ```%GOPATH%/src```/my_pgk_dir/sub/main_file.go
 
@@ -85,6 +85,17 @@ func main() {
     myf.Sqrt(5) // 所以這裡可以用myf就可以抓到該檔案了
 }
 ```
+
+在GO1.13開始，GO111MODULE的預設為`auto`，條件如下
+
+- true: 以下任一條件均可
+
+    - 存在go.mod
+    - 儲存庫位於GOPATH之**外**
+
+- false:
+    - 位於GOPATH之中且go.mod不存在
+
 
 #### 如何取得第三方套件
 
@@ -136,14 +147,28 @@ func main() {
 
 #### [go mod應用](https://blog.golang.org/using-go-modules)
 
-1. go mod init ``github.com/username/my_project_name``
+1. go mod init `github.com/username/my_project_name`
+   這個指令會生成出一份`go.mod`的檔案，內容就寫
+
+    ```
+    module github.com/username/my_project_name
+    ```
+
+    當然你不一定要用`github/username`等作為開頭，
+
+    反正他的意思就是這個東西就代表你的package，當您底下又新增了很多package
+
+    他就認此名稱，例如 `import "xxx/myPkg"` 只要xxx和go.mod的module相符就會從go.mod的資料夾開始抓
+
+    通常我們都會把專案丟到github上去，所以才用github.com開頭
+
 2. cd 到含有go.mod的資料夾中
 3. ``go {install, test, build, mod download}`` 四擇一
 
    完成之後會產生相對應的require文件，例如
 
    > require github.com/shomali11/util v0.0.0-20200329021417-91c54758c87b
-   >
+
 4. ``go list -m all``:可以查看目前package用到那些相依的套件
    - ``go list -m -u all`` : 更新所有套件
 5. ``go get``

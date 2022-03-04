@@ -189,12 +189,15 @@ update npm | ``npm install -g npm@7.21.1``
 
 如果您不清楚指令，可以用: ``choco -?`` 這一招幫您解所有東西，例如:
 
-    choco -?
-    choco upgrade -?
-    choco upgrade all
-    choco install -?
-    choco uninstall -?
-    choco list -?
+```
+choco -?
+choco upgrade -?
+choco upgrade all
+choco install -?
+choco uninstall -?
+    > choco uninstall docker -x   // -x 可以移除所有相關套件
+choco list -?
+```
 
 choco install 通常都會跟您說去網上的哪裡(``from``)下載，以及把下載包放到哪裡 (``Completed download of %localappdata%/Temp/chocolatey/pdftk/2.02/pdf....win-setup.exe (3.52MB)``
 

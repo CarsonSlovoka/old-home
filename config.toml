@@ -1,6 +1,6 @@
 # 注意！ toml有順序性，要先寫個別的元素之後才能寫object(dict)的內容，如果把個別的元素安插在object(dict)之中會沒有作用
 
-baseURL = "https://carsonslovoka.github.io/"  # "http://example.org/"  "/"  "http://localhost:8000/"  <-- 如果要放到本機可以用localhost配合python http.server即可
+baseURL = "https://carsonslovoka.github.io/old-home/"  # "http://example.org/"  "/"  "http://localhost:8000/"  <-- 如果要放到本機可以用localhost配合python http.server即可
 title = "Carson Blog"
 copyright = "Carson 2020-"
 # themesDir = "themes"
