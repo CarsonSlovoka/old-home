@@ -61,6 +61,15 @@ disqusShortname = "carson-blog"
       body = "google-noto-sans-tc"
       content = "google-noto-sans-tc"  # 文章內容
 
+  [params.myMenu]
+    [[params.myMenu.item]]
+      leadText= "✨"
+      title="Test"
+
+    [[params.myMenu.item]]
+      leadText= "🕷️"
+      title="Debug"
+
 [markup]  # 這是針對markdown要怎麼處理的配置
   # Hugo Markdown Support: https://www.markdownguide.org/tools/hugo/#hugo-markdown-support
   # 完整的配置請參考: https://gohugo.io/getting-started/configuration-markup/
