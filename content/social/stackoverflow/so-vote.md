@@ -420,6 +420,8 @@ next_section = ""
 [Can I use a :before or :after pseudo-element on an input field?] | input沒辦法加上before或者after | html
 [How can I see the size of a GitHub repository before cloning it?] | https://github.com/settings/repositories | github
 [Encode URL in JavaScript?] | `escape()` will not encode: `@*/+`  `encodeURI()` will not encode: `~!@#$&*()=:/,;?+'` encodeURIComponent() will not encode: `~!*()'` | js
+[How do I revert my changes to a git submodule?] | `git submodule update --init` 取消submodule的異動，還原到當時候的狀態 | git
+[Setting HTTP headers] | `http.ResponseWriter.Header().Set("Content-Type", "text/html; charset=utf-8")` | go, http
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -822,6 +824,8 @@ next_section = ""
 [Can I use a :before or :after pseudo-element on an input field?]: https://stackoverflow.com/a/4660434/9935654
 [How can I see the size of a GitHub repository before cloning it?]: https://stackoverflow.com/a/66180640/9935654
 [Encode URL in JavaScript?]: https://stackoverflow.com/a/332897/9935654
+[How do I revert my changes to a git submodule?]: https://stackoverflow.com/a/59255586/9935654
+[Setting HTTP headers]: https://stackoverflow.com/a/28754802/9935654
 
 {{< /table/bootstrap-table >}}
 
