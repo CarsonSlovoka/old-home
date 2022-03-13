@@ -422,6 +422,8 @@ next_section = ""
 [Encode URL in JavaScript?] | `escape()` will not encode: `@*/+`  `encodeURI()` will not encode: `~!@#$&*()=:/,;?+'` encodeURIComponent() will not encode: `~!*()'` | js
 [How do I revert my changes to a git submodule?] | `git submodule update --init` 取消submodule的異動，還原到當時候的狀態 | git
 [Setting HTTP headers] | `http.ResponseWriter.Header().Set("Content-Type", "text/html; charset=utf-8")` | go, http
+[How to disable right-click context-menu in JavaScript] | `document.body.oncontextmenu = () => false` | js
+[Mouse position inside autoscaled SVG] | 這種方法可以把滑鼠點擊的位子轉換到其svg相對的座標 `loc=svg.createSVGPoint(); loc.x, loc.y` | js
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -826,6 +828,8 @@ next_section = ""
 [Encode URL in JavaScript?]: https://stackoverflow.com/a/332897/9935654
 [How do I revert my changes to a git submodule?]: https://stackoverflow.com/a/59255586/9935654
 [Setting HTTP headers]: https://stackoverflow.com/a/28754802/9935654
+[How to disable right-click context-menu in JavaScript]: https://stackoverflow.com/a/16987577/9935654
+[Mouse position inside autoscaled SVG]: https://stackoverflow.com/a/10298843/9935654
 
 {{< /table/bootstrap-table >}}
 

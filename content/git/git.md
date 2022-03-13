@@ -305,6 +305,12 @@ git config --global core.safecrlf warn
 `path`可以不打，就會對所有submodule都處理，而如果您只要某些專案而已就還是打上
 
 
+> `git submodule update --init` : 指的是回到當時候提交這個submodule時的節點
+>
+> 例如您提交了一個submodule是在十年前sha1-id假設是`0123456...`，並且之後無再提交任何東西，現在這個分支已經又改了很多，
+>
+> 那麼您使用這個命令就是回到十年前的`0123456...`這個節點
+
 
 ## git merge
 
