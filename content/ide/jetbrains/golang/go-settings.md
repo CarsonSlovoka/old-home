@@ -118,11 +118,19 @@ Enable Go Modules Integration : 這個東西指的就是go.mod
 
 go 1.18在一些原始的套件中，有的會使用
 
-[go:buile ignore](https://github.com/golang/go/blob/f229e70/src/math/rand/gen_cooked.go#L5-L12)
+[go:build ignore](https://github.com/golang/go/blob/f229e70/src/math/rand/gen_cooked.go#L5-L12)
 
 而如果您的jetbrains.IDE版本過舊，就會認為這個也是一個main，又由於main包的資料夾只能有一個，它就抱錯了，
 
 升級您的IDE可以解決此問題。
+
+### Table結尾少了分隔符
+
+jetbrains/IDE 可以把Table自動貼齊，不過我覺得沒什麼意義，
+
+md應該要隨處可用，不想以後被IDE綁住，
+
+所以建議把相關的警告全部拿掉。
 
 ## JSON設定
 
