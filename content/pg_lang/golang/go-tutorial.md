@@ -59,11 +59,10 @@ toc_bootstrap = true
     - pkg
     - src
 
-- GOROOT: ``%ProgramFiles%\Go\1.16.2``
+- GOROOT:
 
-    這個也是golang的IDE設置go SDK的位置
-
-    - 要在您的PATH環境中告知go.exe的位置，所以要加上這個 ``%ProgramFiles%\Go\1.16.2\bin``
+    1. [goland](https://www.jetbrains.com/go/) 的IDE設置go SDK的位置: `%ProgramFiles%\Go\1.16.2`
+    2. 在您的PATH環境中變數，告知`go.exe`的所在的資料夾: ``%ProgramFiles%\Go\1.16.2\bin``
 
 > 🔔
 > 如果將來您想要升級golang的版本，可以只下載新版的Go，

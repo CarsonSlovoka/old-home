@@ -2,7 +2,7 @@
 title = "Golang Settings"
 description="Keymap, Editor,..."
 date = 2021-01-22T13:25:01+08:00
-lastmod = 2022-02-18
+lastmod = 2022-03-17
 featured_image = ""
 draft = false
 weight = 0
@@ -48,6 +48,7 @@ Fold Selection / Remove region | {{< hotkey "Ctrl + . ]" >}} | 相當好用，�
 Move Caret Backward a Paragraph | {{< hotkey F6 >}} | 往前移到整列為空白的列 (vim也有類似的指令: [shift + \[ ](https://vi.stackexchange.com/questions/10828/visual-select-from-cursor-to-next-empty-line))
 Move Caret Forward a Paragraph | {{< hotkey F8 >}} | 往後移到整列為空白的列
 Open source in new window | {{< hotkey "Shift+F4" >}} (default) |
+Reformat Code | {{< hotkey "Ctrl+Alt+Enter" >}} | 很好用，gitignore準備好，可以用這個取代go fmt |
 
 {{< table/bootstrap-table >}}
 
@@ -64,7 +65,7 @@ Change font size with\n``Ctrl+Mouse Wheel`` | ☑ | 可以用滾輪來改變font
 
 ``Editor → General``:
 
-  ☑ Change font size with ``Ctrl+Mouse Wheel``
+☑ Change font size with ``Ctrl+Mouse Wheel``
 
 ## Editor
 
@@ -99,7 +100,6 @@ Settings > Project Structure
             + Add Content Root  (點選這個新增上去，也可以達到相同的效果
 ```
 
-
 ### IDE一直沒辦法讀取到正確的Module
 
 ```
@@ -114,7 +114,15 @@ Enable Go Modules Integration : 這個東西指的就是go.mod
 
 其實我覺得要自動開啟了，新人我想都對go.mod略知一二，預設不開啟只是給人添麻煩而已。
 
+### [Multiple packages in directory](https://intellij-support.jetbrains.com/hc/en-us/community/posts/4415202334098-Goland-2020-2-not-ignoring-go-build-tags)
 
+go 1.18在一些原始的套件中，有的會使用
+
+[go:buile ignore](https://github.com/golang/go/blob/f229e70/src/math/rand/gen_cooked.go#L5-L12)
+
+而如果您的jetbrains.IDE版本過舊，就會認為這個也是一個main，又由於main包的資料夾只能有一個，它就抱錯了，
+
+升級您的IDE可以解決此問題。
 
 ## JSON設定
 
@@ -134,7 +142,7 @@ Enable Go Modules Integration : 這個東西指的就是go.mod
     }
     ```
 
-    變成
+  變成
 
     ```json
     {
@@ -172,6 +180,14 @@ Languages & Frameworks
 
 您可以載min.js，再把它更名就好了
 
+```
+pie title Pets adopted by volunteers
+    "Dogs" : 386
+    "Cats" : 85
+    "Rats" : 15
+```
+
+成果如下
 
 ```mermaid
 pie title Pets adopted by volunteers

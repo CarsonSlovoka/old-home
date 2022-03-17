@@ -424,6 +424,7 @@ next_section = ""
 [Setting HTTP headers] | `http.ResponseWriter.Header().Set("Content-Type", "text/html; charset=utf-8")` | go, http
 [How to disable right-click context-menu in JavaScript] | `document.body.oncontextmenu = () => false` | js
 [Mouse position inside autoscaled SVG] | 這種方法可以把滑鼠點擊的位子轉換到其svg相對的座標 `loc=svg.createSVGPoint(); loc.x, loc.y` | js
+[Golang run on Windows without deal with the Firewall] | change `http.ListenAndServe(":3000", r)` to `http.ListenAndServe("127.0.0.1:3000", r)` | go, firewall
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -830,6 +831,7 @@ next_section = ""
 [Setting HTTP headers]: https://stackoverflow.com/a/28754802/9935654
 [How to disable right-click context-menu in JavaScript]: https://stackoverflow.com/a/16987577/9935654
 [Mouse position inside autoscaled SVG]: https://stackoverflow.com/a/10298843/9935654
+[Golang run on Windows without deal with the Firewall]: https://stackoverflow.com/a/66486551/9935654
 
 {{< /table/bootstrap-table >}}
 
