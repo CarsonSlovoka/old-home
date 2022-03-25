@@ -425,6 +425,9 @@ next_section = ""
 [How to disable right-click context-menu in JavaScript] | `document.body.oncontextmenu = () => false` | js
 [Mouse position inside autoscaled SVG] | 這種方法可以把滑鼠點擊的位子轉換到其svg相對的座標 `loc=svg.createSVGPoint(); loc.x, loc.y` | js
 [Golang run on Windows without deal with the Firewall] | change `http.ListenAndServe(":3000", r)` to `http.ListenAndServe("127.0.0.1:3000", r)` | go, firewall
+[Hide titlebar on window hover in electron?] | 隱藏標題欄位 `new BrowserWindow({frame: false})` | electron
+[How can I find all public comments for a Github user?] | `involves:<username>` | github
+[Installing font and making Windows aware] | `AddFontResourceW` `SendMessage(HWND_BROADCAST, WM_FONTCHANGE, 0, 0)` | winapi
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -832,6 +835,9 @@ next_section = ""
 [How to disable right-click context-menu in JavaScript]: https://stackoverflow.com/a/16987577/9935654
 [Mouse position inside autoscaled SVG]: https://stackoverflow.com/a/10298843/9935654
 [Golang run on Windows without deal with the Firewall]: https://stackoverflow.com/a/66486551/9935654
+[Hide titlebar on window hover in electron?]: https://stackoverflow.com/a/50584474/9935654
+[How can I find all public comments for a Github user?]: https://stackoverflow.com/a/69700347/9935654
+[Installing font and making Windows aware]: https://stackoverflow.com/a/59112398/9935654
 
 {{< /table/bootstrap-table >}}
 
