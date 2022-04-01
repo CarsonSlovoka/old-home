@@ -428,6 +428,14 @@ next_section = ""
 [Hide titlebar on window hover in electron?] | 隱藏標題欄位 `new BrowserWindow({frame: false})` | electron
 [How can I find all public comments for a Github user?] | `involves:<username>` | github
 [Installing font and making Windows aware] | `AddFontResourceW` `SendMessage(HWND_BROADCAST, WM_FONTCHANGE, 0, 0)` | winapi
+[What is the correct format specifier to print error object in Go: %s or %v?] | | go
+[Why error messages shouldn't end with a punctuation mark in Go?] | | go
+[Deleting content of file without deleting the file in Golang] | `os.Truncate("/path/to/your/file/crop.csv", 0)` | go
+[How do I move a frameless window in Electron without using -webkit-app-region] | `-webkit-app-region: drag;`, `-webkit-app-region: no-drag;` | electron
+[How to hide pin to taskbar for an electron app] | | electron
+[Anyway in Electron to remove the windows taskbar preview from my app?] | | electron
+[How to run test cases in a specified file?] | `go test xxx_test.go -run "^TestDemo" -v`, `go test packageName` | go
+[Encode / decode URLs] | `url.Parse("http://www.example.com")` | go
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -838,6 +846,14 @@ next_section = ""
 [Hide titlebar on window hover in electron?]: https://stackoverflow.com/a/50584474/9935654
 [How can I find all public comments for a Github user?]: https://stackoverflow.com/a/69700347/9935654
 [Installing font and making Windows aware]: https://stackoverflow.com/a/59112398/9935654
+[What is the correct format specifier to print error object in Go: %s or %v?]: https://stackoverflow.com/q/43887776/9935654
+[Why error messages shouldn't end with a punctuation mark in Go?]: https://stackoverflow.com/a/68793833/9935654
+[Deleting content of file without deleting the file in Golang]: https://stackoverflow.com/a/67090003/9935654
+[How do I move a frameless window in Electron without using -webkit-app-region]: https://stackoverflow.com/a/53322904/9935654
+[How to hide pin to taskbar for an electron app]: https://stackoverflow.com/q/54296178/9935654
+[Anyway in Electron to remove the windows taskbar preview from my app?]: https://stackoverflow.com/a/69068737/9935654
+[How to run test cases in a specified file?]: https://stackoverflow.com/q/16935965/9935654
+[Encode / decode URLs]: https://stackoverflow.com/a/13826910/9935654
 
 {{< /table/bootstrap-table >}}
 
