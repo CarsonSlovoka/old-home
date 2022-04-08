@@ -196,9 +196,9 @@ next_section = ""
 [Display Git diff on client side in javascript as html] | | ``git``, ``js``
 [Make AudioBufferSourceNode the audio source of an <audio> tag?] | | js
 [Convert HTML5 Canvas Sequence to a Video File] | | js
-[Switch current tab from notification in Google Chrome extension] | ``chrome.tabs.update(tabId, {highlighted: true})``  | google-chrome-extension
+[Switch current tab from notification in Google Chrome extension] | ``chrome.tabs.update(tabId, {highlighted: true})`` | google-chrome-extension
 [How do I delete an extension in my Chrome developer dashboard?] | | google-chrome-extension
-[JavaScript set object key by variable] | ``{ [yourKeyVariable]: someValueArray }``   | js
+[JavaScript set object key by variable] | ``{ [yourKeyVariable]: someValueArray }``  | js
 [Cannot create DocumentFragment storing td, tr or th?] | 就是很奇怪td,th這類的不能這樣用。乖乖的用document.createElement再慢慢的添加到指定的節點去 | js
 [How to specify max-height css property to Screen size] | ``.scrollDiv {max-height: 100vh;overflow: auto;}`` | js
 [How to execute an arithmetic operation inside a string in Javascript?] | ``eval`` | js
@@ -217,7 +217,7 @@ next_section = ""
 [Adding JavaScript type hints for VSCode/Monaco Intellisence] | ``/** @type {WebGLRenderingContext} */`` | js
 [HTML dataset - how to put object? data-x={}] | 利用 ``JSON.parse(myString)`` | js
 [Why is 4 not an instance of Number?] | 要注意 ``instanceof Number`` 會得到false | js
-[Return positions of a regex match() in Javascript?] | ``[...str.matchAll(regexp)].forEach(match=>{})``  | js
+[Return positions of a regex match() in Javascript?] | ``[...str.matchAll(regexp)].forEach(match=>{})`` | js
 [what is the key code for shift+tab?] | ``e.shiftKey && e.key === 'Tab'`` | js
 [Scroll to bottom of div?] | ``objDiv.scrollTop = objDiv.scrollHeight`` | js
 [How to execute somethnig finally in Javascript swich-case statement?] | | js
@@ -239,7 +239,7 @@ next_section = ""
 [Include another HTML file in a HTML file] | | js
 [How to get the value from the GET parameters?] |  ``new URL(document.URL).searchParams.get("para")`` | js
 [What's the difference between HTML 'hidden' and 'aria-hidden' attributes?] | hidden只是看不到而已，但不代表他對殘障者有效。aria-hidden會整個都有效
-[Get the current URL with JavaScript?] | ``window.location.host`` ● ``window.location.host`` ● ``window.location.pathnam``  | js
+[Get the current URL with JavaScript?] | ``window.location.host`` ● ``window.location.host`` ● ``window.location.pathnam`` | js
 [Redirecting to a relative URL in JavaScript] | ``window.location.href = '../'; //one level up`` , ``window.location.href = '/path'; //relative to domain`` | js
 [Internationalization of HTML pages for my Google Chrome Extension] | | google-chrome-extension
 [Get File Name and Parent Folder of URL] | ``myPath.split('/').slice(-2).join('/')`` | js
@@ -264,7 +264,7 @@ next_section = ""
 [Python convert mp3 to wav with Pydub] | ``subprocess.call(['ffmpeg', '-i', '/input/file.mp3','/output/file.wav'])`` | ffmpeg, python
 [Chrome Extension Message passing: response not sent] | | google-chrome-extension
 ["Cannot read property of undefined" when using chrome.tabs or other chrome API in content script] | | google-chrome-extension
-[What does "http://*/*", "https://*/*" and "<all_urls>" mean in the context of Chrome extension's permissions] | "<all_urls>" : ``matches any URL that starts with a permitted scheme (http:, https:, file:, ftp:, or chrome-extension``  | google-chrome-extension
+[What does "http://*/*", "https://*/*" and "<all_urls>" mean in the context of Chrome extension's permissions] | "<all_urls>" : ``matches any URL that starts with a permitted scheme (http:, https:, file:, ftp:, or chrome-extension`` | google-chrome-extension
 [How do I find out if connectNative failed or succeeded] | | google-chrome-extension
 [How can I read from standard input in the console?] | | go
 [How to print struct variables in console?] | ``fmt.Printf("%#v\n", myStruct)`` 輸出json格式 ``+v`` 會省略掉``"`` 可能更不好閱讀 | go
@@ -277,7 +277,7 @@ next_section = ""
 [Is there a JavaScript solution to generating a "table of contents" for a page?] | | js,toc
 [Can I use a SVG toolbar icon?] | No (2009年發問到現在仍然沒有解決) | google-chrome-extension
 [Method to convert HTML5 canvas to SVG?] | | js
-[Checking if browser is in fullscreen] | 這可以判斷是否視窗還可以再放大(不是指全螢幕模式) `if (!window.screenTop && !window.screenY) {alert('Browser is in fullscreen')}` ， 如果您再找全螢幕可以參考[Fullscreen_API](https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API)  | js
+[Checking if browser is in fullscreen] | 這可以判斷是否視窗還可以再放大(不是指全螢幕模式) `if (!window.screenTop && !window.screenY) {alert('Browser is in fullscreen')}` ， 如果您再找全螢幕可以參考[Fullscreen_API](https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API) | js
 [SVG Favicon Not Working] | favicon也可以用svg來代替 ``<link rel="icon" href="images/favicon.svg" sizes="any" type="image/svg+xml">`` | html
 [How to view file diff in git before commit] | | git
 [Where can I find the source code of gitk?] | | gitk
@@ -326,10 +326,10 @@ next_section = ""
 [How to ask for administer privileges on Windows with Go] | | go, admin, UAC
 [What does %~d0 mean in a Windows batch file?] | | bat
 [Something like a function/method in batch files?] | | bat
-[How to check if value is in range of cells?] | `=COUNTIF(A1:B7,"d")` d是否有在A1~B7之間  | google-spreadsheet
+[How to check if value is in range of cells?] | `=COUNTIF(A1:B7,"d")` d是否有在A1~B7之間 | google-spreadsheet
 [How to clear history of text input] | `<form autocomplete="off">` 可以關閉紀錄的功能，但如果您只想要刪除某幾筆被記錄的資料，可以使用 delete或者試試shift+delete，即可刪除 | html
 [Javascript to convert Markdown/Textile to HTML (and, ideally, back to Markdown/Textile)] | 推薦用[mmd](https://github.com/p01/mmd.js) | js,markdown
-[Get the value of checked checkbox?] | `document.querySelector("#isDebugMode").checked`, `document.querySelector("#size:checked")?.value ?? defaultSize`  | js
+[Get the value of checked checkbox?] | `document.querySelector("#isDebugMode").checked`, `document.querySelector("#size:checked")?.value ?? defaultSize` | js
 [html input field using regex to get rid of invalid characters for filename] | input使用pattern來控制輸入項符合檔名的規則 `pattern="[^\\/:\x22*?<>]+"` | html
 [Searching validityState for values] |  `input.validity.{valueMissing, typeMismatch, patternMismatch,...}` | js
 [HTML5 form required attribute. Set custom validation message?] | `oninvalid="this.setCustomValidity('Enter User Name Here')" oninput="this.setCustomValidity('')"` | html
@@ -337,7 +337,7 @@ next_section = ""
 [How to have multiple colors in a Windows batch file?] | | bat
 [Batch syntax highlighting] | `lang-sh` | bat
 [Real mouse position in canvas] | | canvas
-[.attr vs .classed in D3.js] | 第二個參數 true:表示增加該屬性, false為移除該屬性 `.classed("my-selector", true)`  | j3.js
+[.attr vs .classed in D3.js] | 第二個參數 true:表示增加該屬性, false為移除該屬性 `.classed("my-selector", true)` | j3.js
 [how to draw svg polygon on the points of mouse click position] | | svg
 [SVG fill color transparency / alpha?] | 使用style `style="fill:rgba(255, 0, 0, .5)` 或者 `<circle  fill="#044B94" fill-opacity="0.4">` 注意fill直接放rgba是沒有用的，這種只能用style上才有作用 | svg
 [Array.from vs Array.prototype.map] | | js
@@ -436,6 +436,13 @@ next_section = ""
 [Anyway in Electron to remove the windows taskbar preview from my app?] | | electron
 [How to run test cases in a specified file?] | `go test xxx_test.go -run "^TestDemo" -v`, `go test packageName` | go
 [Encode / decode URLs] | `url.Parse("http://www.example.com")` | go
+[Golang print string as an array of bytes] | `%v` 可以把個別的byte字元印出來, `%x`印出16進位 | go
+[MD5 is 128 bits but why is it 32 characters?] | 所謂32字元指的是32個nibble (4 bits, 00-FF), 換句話說MD5共有32*4=128 bits, 他會等於16bytes 因為每一個bytes有8bits | md5
+[How to convert byte array to string in Go] | `myString := string(myBytes[:])` | go
+[Convert array to slice in Go] | `arr[:]  // arr is an array; arr[:] is the slice of all elements` | go
+[How to get a MD5 hash from a string in Golang?] | 使用`%x` 或者 `hex.EncodeToString()` | go
+[Is there no XOR operator for booleans in golang?] | `X xor Y -> (X or Y) && !(X & Y)` , 如果是boolean可以直接用`boolA != boolB`, 在go中xor運算可以用`^`來表示 | go
+[How to use crypto/rc4] | 不能用相同的cipher來解，又另外新增一個 | | go, rc4
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -854,6 +861,13 @@ next_section = ""
 [Anyway in Electron to remove the windows taskbar preview from my app?]: https://stackoverflow.com/a/69068737/9935654
 [How to run test cases in a specified file?]: https://stackoverflow.com/q/16935965/9935654
 [Encode / decode URLs]: https://stackoverflow.com/a/13826910/9935654
+[Golang print string as an array of bytes]: https://stackoverflow.com/q/55959990/9935654
+[MD5 is 128 bits but why is it 32 characters?]: https://stackoverflow.com/a/57881578/9935654
+[How to convert byte array to string in Go]: https://stackoverflow.com/a/40673073/9935654
+[Convert array to slice in Go]: https://stackoverflow.com/a/41425823/9935654
+[How to get a MD5 hash from a string in Golang?]: https://stackoverflow.com/a/27942646/9935654
+[Is there no XOR operator for booleans in golang?]: https://stackoverflow.com/a/23025720/9935654
+[How to use crypto/rc4]: https://stackoverflow.com/a/63578677/9935654
 
 {{< /table/bootstrap-table >}}
 
