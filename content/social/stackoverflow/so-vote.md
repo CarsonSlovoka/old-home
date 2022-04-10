@@ -868,6 +868,7 @@ next_section = ""
 [How to get a MD5 hash from a string in Golang?]: https://stackoverflow.com/a/27942646/9935654
 [Is there no XOR operator for booleans in golang?]: https://stackoverflow.com/a/23025720/9935654
 [How to use crypto/rc4]: https://stackoverflow.com/a/63578677/9935654
+[Insert a value in a slice at a given index]: https://stackoverflow.com/q/46128016/9935654
 
 {{< /table/bootstrap-table >}}
 
