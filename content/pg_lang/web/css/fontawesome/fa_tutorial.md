@@ -147,6 +147,20 @@ bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的�
 
 | @@w=10%@@name | @@w=40%@@Icon Desc | @@w=10%@@Code | @@w=30%@@Comment |　|
 | :----: | :---- | :----: | ---- | ---- |
+⌨ | KEYBOARD | 2328
+☑ | | U+2611
+☐ | | U+2610
+⚠  | Warning sign | 26A0
+⚡  | High Voltage | 26A1
+✍ | WRITING HAND、總結 | 270D
+✍️| Writing Hand | 270D
+✨ | SPARKLES\nFeatures | 2728
+❌ |  Cross Mark | 274C
+❓ | QUESTION MARK\nCommunity Support | 2753
+❗  | exclamation | 2757
+❤️ | red heart | 2764
+⭐ | WHITE MEDIUM STAR | 2B50
+⭕ | hollow_red_circle | 2B55
 🌎 | World Emoji Day | 1F30E
 🌱 | Earth Day | 1F331
 🐬 | Dolphin | 1F42C
@@ -165,35 +179,26 @@ bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的�
 🖿 | Black Folder | 1F5BF
 🗂️ | Card Index Dividers | 1F5C2
 🧾 | Receipt | 1F9FE
-❗  | exclamation | 2757
-⚠  | Warning sign | 26A0
 🔔 | BELL\n叮嚀 | 1F514
 🕷️ | Spider | 1F577
 🐛  | Bug | 1F41B
 󠁴🀄 | 中文 | 1F004
+🌈 | RAINBOW\nOnline Examples | 1F308
 💪 | enhancement | 1F4AA
-✍ | WRITING HAND、總結 | 270D
 📰 | NEWSPAPER、歷史文章、資料來源 | 1F4F0
 👩‍💻 | ● 👩:Woman\n●💻: Personal computer | ●1F469\n●1F4BB | 這比較特別，他是兩個碼位組合而成的圖案
 👨‍💻 | ● 👨:Man\n●💻: Personal computer | ●1F468\n●1F4BB | 組合圖案
+👷 | 工人\nConstruction Worker | 1F477
 🎮 | Video game | 1F3A3
-✨ | SPARKLES\nFeatures | 2728
-⭐ | WHITE MEDIUM STAR | 2B50
 📦 | PACKAGE\nInstallation Guide | 1F4E6
-🌈 | RAINBOW\nOnline Examples | 1F308
 💿 | OPTICAL DISC | 1F4BF
 🎨 | ARTIST PALETTE\nDesign Specification | 1F3A8
 🖥 | DESKTOP COMPUTER | 1F5A5
-⌨ | KEYBOARD | 2328
 🕒 | Time | 1F552
 🔗 | LINK SYMBOL\nLinks | 1F517
 🗺 | WORLD MAP\nRoadmap | 1F5FA
 🤝 | Contributing | 1F91D
 💕 | TWO HEARTS\nDonation | 1F495
-❓ | QUESTION MARK\nCommunity Support | 2753
-⚡  | High Voltage | 26A1
-❌ |  Cross Mark | 274C
-⭕ | hollow_red_circle | 2B55
 👍 | Thumbs Up, Yes, Like, 讚 | 1F44D
 👆 | Pointing Up | 1F446
 👇 | Pointing Down | 1F447
@@ -201,7 +206,7 @@ bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的�
 👉 | Pointing Right | 1F449
 😂 | Laughing | 1F602
 😅 | Grinning Face with Sweat | 1F605
-🥴 | Drunk Face\nWoozy Face\nFace with Uneven Eyes and Wavy Mouth | 1F974
+😡 | Enraged Face | 1F621
 😵 | DIZZY FACE | 1F635
 😎 | SMILING FACE WITH SUNGLASSES | 1F60E
 😁 | GRINNING FACE WITH SMILING EYES | 1F60E
@@ -209,19 +214,16 @@ bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的�
 🙂 | Slightly Smiling Face | 1F642
 🤩 | Star-Struck | 1F929
 🥳 | Partying Face | 1F973
+🥴 | Drunk Face\nWoozy Face\nFace with Uneven Eyes and Wavy Mouth | 1F974
 🤔 | Thinking Face Emoji
 🤣 | Rolling on the Floor Laughing,
 🗑 | deprecated
 🚮 | deprecated
-☑ | | U+2611
-☐ | | U+2610
 🏆 | Trophy | 1F3C6
 🥇 | 1st Place Medal | 1F947
 🥈 | 2nd Place Medal | 1F948
 🥉 | 3rd Place Medal | 1F949
-🏆 | Trophy | 1F3C6
 💯 | Hundred points symbol| 1F4AF
-✍️| Writing Hand | 270D
 🎵 | Muscial Note | 1F3B5
 📥 | Inbox Tray, download | 1F4E5
 🗛 | Decrease Font Size Symbol | 1F5DB
@@ -233,6 +235,9 @@ bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的�
 ▾ | | U+25BE
 ✂️ | Scissors | 2702
 ⬇️ | Down Arrow, Download | 2B07
+🌶️ | Hot Pepper | 1F336
+🍣 | Sushi | 1F363
+👑 | Crown |  1F451
 📈 | Chart Increasing | 1F4C8
 📉 | Chart Decreasing | 1F4C9
 📊 | Bar Chart | 1F4CA
@@ -244,6 +249,8 @@ bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的�
 🔥 | Fire | 1F525
 🕹️ | Joystick | 1F579
 🚚 | Delivery Truck | 1F69A
+🧄 | Garlic | 1F9C4
+
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 
