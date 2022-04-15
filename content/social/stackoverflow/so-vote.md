@@ -30,7 +30,7 @@ next_section = ""
 [How to add new methods to an existing type in Go?] |
 [Rendering template.HTML directly into templates] |
 [Stop goroutine execution on timeout] |
-[What is the idiomatic Go equivalent of C's ternary operator?] |
+[What is the idiomatic Go equivalent of C's ternary operator?] | `c := map[bool]int{true: 1, false: 0} [5 > 4]` | go, ternary-operator
 ★[Golang Gin-Gonic Split Routes into Multiple Files]\n- ``%userprofile%\AppData\Local\Temp\___go_build_*.exe``\n- ``%userprofile%\AppData\Local\Temp\___TestDemo*.exe`` |
 [Go programs hanging on Windows 10 avast shut up] |
 [(Go) How to use toml files?] |
@@ -443,6 +443,16 @@ next_section = ""
 [How to get a MD5 hash from a string in Golang?] | 使用`%x` 或者 `hex.EncodeToString()` | go
 [Is there no XOR operator for booleans in golang?] | `X xor Y -> (X or Y) && !(X & Y)` , 如果是boolean可以直接用`boolA != boolB`, 在go中xor運算可以用`^`來表示 | go
 [How to use crypto/rc4] | 不能用相同的cipher來解，又另外新增一個 | | go, rc4
+[How to write a struct as binary data to a file in golang?] | `f, err := os.Create("my.bin")` `err = binary.Write(f, binary.LittleEndian, data)` | go
+[How to assign string to bytes array] | `name [4]byte` `copy(name[:], []byte("_typ"))` | go
+[How to test panics?] |
+[How do I compare strings in GoLang?] | 字串比較可能會有陷阱，從stdIn來的可能會多出`\n` | go
+[How to find the type of an object in Go?] | `reflect.TypeOf(myVar).String()` | go
+[How do I truncate and completely rewrite a file without having leading zeros?] | 1.清除資料 `f.Truncate(0)` 2.把指標的位子指到開始去`f.Seek(0,0)` | go
+[Check if a process exists in go way] | `tasklist /?` | go, process
+[How to compare Go errors] | | go
+[Go XML Marshalling and the Root Element] | 如何自定義xml的根結點名稱 | go, xml
+[What is most idiomatic way to create an iterator in Go?] | | go, iterator
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -869,6 +879,16 @@ next_section = ""
 [Is there no XOR operator for booleans in golang?]: https://stackoverflow.com/a/23025720/9935654
 [How to use crypto/rc4]: https://stackoverflow.com/a/63578677/9935654
 [Insert a value in a slice at a given index]: https://stackoverflow.com/q/46128016/9935654
+[How to write a struct as binary data to a file in golang?]: https://stackoverflow.com/a/60541927/9935654
+[How to assign string to bytes array]: https://stackoverflow.com/a/39294665/9935654
+[How to test panics?]: https://stackoverflow.com/a/62028796/9935654
+[How do I compare strings in GoLang?]: https://stackoverflow.com/a/34383753/9935654
+[How to find the type of an object in Go?]: https://stackoverflow.com/a/20170564/9935654
+[How do I truncate and completely rewrite a file without having leading zeros?]: https://stackoverflow.com/a/44416790/9935654
+[Check if a process exists in go way]: https://stackoverflow.com/q/15204162/9935654
+[How to compare Go errors]: https://stackoverflow.com/a/61097650/9935654
+[Go XML Marshalling and the Root Element]: https://stackoverflow.com/q/12398925/9935654
+[What is most idiomatic way to create an iterator in Go?]: https://stackoverflow.com/q/14000534/9935654
 
 {{< /table/bootstrap-table >}}
 
