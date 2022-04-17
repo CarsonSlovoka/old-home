@@ -24,8 +24,8 @@ next_section = ""
 
 | @@w=50%@@name | desc | Tags |
 | ---- | ---- | ---- |
-| [Default value in Go's method]
-| [How to create new file using go script]
+[Default value in Go's method]
+[How to create new file using go script]
 [How to get the directory of the currently running file?] |
 [How to add new methods to an existing type in Go?] |
 [Rendering template.HTML directly into templates] |
@@ -453,6 +453,8 @@ next_section = ""
 [How to compare Go errors] | | go
 [Go XML Marshalling and the Root Element] | 如何自定義xml的根結點名稱 | go, xml
 [What is most idiomatic way to create an iterator in Go?] | | go, iterator
+[Detect windows version in Go] | `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion` | go, regedit
+[How can I efficiently download a large file using Go?] | | go, download
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -889,6 +891,8 @@ next_section = ""
 [How to compare Go errors]: https://stackoverflow.com/a/61097650/9935654
 [Go XML Marshalling and the Root Element]: https://stackoverflow.com/q/12398925/9935654
 [What is most idiomatic way to create an iterator in Go?]: https://stackoverflow.com/q/14000534/9935654
+[Detect windows version in Go]: https://stackoverflow.com/a/44376544/9935654
+[How can I efficiently download a large file using Go?]: https://stackoverflow.com/a/33853856/9935654
 
 {{< /table/bootstrap-table >}}
 
