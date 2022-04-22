@@ -159,6 +159,8 @@ bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的�
 ❓ | QUESTION MARK\nCommunity Support | 2753
 ❗  | exclamation | 2757
 ❤️ | red heart | 2764
+➕ | Plus| U+2795
+➖ | Plus| U+2796
 ⭐ | WHITE MEDIUM STAR | 2B50
 ⭕ | hollow_red_circle | 2B55
 🌎 | World Emoji Day | 1F30E

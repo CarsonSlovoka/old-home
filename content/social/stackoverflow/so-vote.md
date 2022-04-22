@@ -131,7 +131,7 @@ next_section = ""
 [Is it possible to dynamically load Go code?] | - https://golang.org/pkg/os/exec/#example_Cmd_Run  - https://golang.org/pkg/plugin/
 [Load package dynamically (GO)] | https://mojotv.cn/go/golang-plugin-tutorial
 [How do you add Bootstrap buttons in Bootstrap Table] |
-[Trim string's suffix or extension?] | ``strings.TrimSuffix(basename, filepath.Ext(basename))``
+[Trim string's suffix or extension?] | 可讀性比較高，但速度稍慢 `strings.TrimSuffix(basename, filepath.Ext(basename))` | go
 [How can I reference a commit in an issue comment on GitHub?] |
 [How do I (succinctly) remove the first element from a slice in Go?] | queue: ``x, a = a[0], a[1:]`` stack: ``x, a = a[len(a)-1], a[:len(a)-1]`` push: ``a = append(a, x)``
 [error: template: “…” is an incomplete or empty template] |
@@ -455,6 +455,11 @@ next_section = ""
 [What is most idiomatic way to create an iterator in Go?] | | go, iterator
 [Detect windows version in Go] | `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion` | go, regedit
 [How can I efficiently download a large file using Go?] | | go, download
+[Build excluding test modules] | 會自動所有`_test.go`的文件，此外go.mod只是用來管理相關性與實際編譯無關(也就是如果您的go.mod有很多包，該包只在測試文件中所使用，go build時，也不會包含這些包進去) | go-build
+[How to ignore a .go file in a module?] | `// +build exclude` | go, build
+[Why do I see an "Electron Security Warning" after updating my Electron project to the latest version?] | `process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = 'true';` | go, electron
+[How do you clear a slice in Go?] | set to `nil` | go, slice
+[what is this bullet point <li> not showing up with circles?] | | css, html-lists
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -893,6 +898,11 @@ next_section = ""
 [What is most idiomatic way to create an iterator in Go?]: https://stackoverflow.com/q/14000534/9935654
 [Detect windows version in Go]: https://stackoverflow.com/a/44376544/9935654
 [How can I efficiently download a large file using Go?]: https://stackoverflow.com/a/33853856/9935654
+[Build excluding test modules]: https://stackoverflow.com/q/65844499/9935654
+[How to ignore a .go file in a module?]: https://stackoverflow.com/a/67650835/9935654
+[Why do I see an "Electron Security Warning" after updating my Electron project to the latest version?]: https://stackoverflow.com/a/65107317/9935654
+[How do you clear a slice in Go?]: https://stackoverflow.com/a/16973160/9935654
+[what is this bullet point <li> not showing up with circles?]: https://stackoverflow.com/a/5491287/9935654
 
 {{< /table/bootstrap-table >}}
 
