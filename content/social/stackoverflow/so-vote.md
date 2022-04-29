@@ -460,6 +460,15 @@ next_section = ""
 [Why do I see an "Electron Security Warning" after updating my Electron project to the latest version?] | `process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = 'true';` | go, electron
 [How do you clear a slice in Go?] | set to `nil` | go, slice
 [what is this bullet point <li> not showing up with circles?] | | css, html-lists
+[Is there a method to generate a UUID with go language] | | go, uuid
+[Go Golang to serve a specific html file] | `http.ServeFile(w, r, filePath)` | go, http
+[What does go build build? (go build vs. go install)] | | go, build
+[Cannot use type assertion on type parameter] | | go, generics
+[If I fork someone else's private Github repo into my account, is it going to appear in my account as a public repo?] | | github, git
+[How to get the current timestamp in other timezones in Golang?] | | go, time
+[How to update hour, min, sec in golang time?] | `time.Now().UTC().Truncate(24*time.Hour)` | go, time
+[Generating random numbers over a range in Go] | `rand.Seed(time.Now().UnixNano())` `rand.Intn(max - min) + min`  | go, rand
+[Subtracting time.Duration from time in Go] | 減一天 `now.AddDate(0, -1, 0)`  少10分鐘`now.Add(time.Duration(-10) * time.Minute)` | go, datetime
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -903,6 +912,15 @@ next_section = ""
 [Why do I see an "Electron Security Warning" after updating my Electron project to the latest version?]: https://stackoverflow.com/a/65107317/9935654
 [How do you clear a slice in Go?]: https://stackoverflow.com/a/16973160/9935654
 [what is this bullet point <li> not showing up with circles?]: https://stackoverflow.com/a/5491287/9935654
+[Is there a method to generate a UUID with go language]: https://stackoverflow.com/a/25736155/9935654
+[Go Golang to serve a specific html file]: https://stackoverflow.com/a/25945832/9935654
+[What does go build build? (go build vs. go install)]: https://stackoverflow.com/a/30612612/9935654
+[Cannot use type assertion on type parameter]: https://stackoverflow.com/a/71588125/9935654
+[If I fork someone else's private Github repo into my account, is it going to appear in my account as a public repo?]: https://stackoverflow.com/a/68246412/9935654
+[How to get the current timestamp in other timezones in Golang?]: https://stackoverflow.com/a/42136791/9935654
+[How to update hour, min, sec in golang time?]: https://stackoverflow.com/a/67743086/9935654
+[Generating random numbers over a range in Go]: https://stackoverflow.com/a/23577092/9935654
+[Subtracting time.Duration from time in Go]: https://stackoverflow.com/q/26285735/9935654
 
 {{< /table/bootstrap-table >}}
 
