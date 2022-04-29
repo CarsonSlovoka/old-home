@@ -410,6 +410,53 @@ Details
 3. Tagged version : 要用tag來標籤(通常是標籤在release的地方)
 4. Stable version : 至少要達到v1才算穩定
 
+----
+
+如果還是有問題，可以試試看`go get -u -v -f all`
+
+或者
+
+> `go list -m github.com/CarsonSlovoka/go-pkg/v2@v2.0.0`
+
+預設的`GOPROXY=proxy.golang.org`
+
+來通知代理有更新。
+
+若仍然不行...
+
+還有一種可能就是一開始推送的tag名稱不正確，例如您原始的pkg為
+
+> CarsonSlovoka/go-pkg/v2
+然後也新增了一個tag給他，例如v2.0.0
+
+接著才發現打錯改回
+
+> github.com/CarsonSlovoka/go-pkg/v2
+也把Github的v2.0.0重新刪除，並且上傳正確的v2.0.0
+
+但這麼做，好像還是舊的，唯一的解決辦法就是在修改，總之建立新的sha1，並且重新上傳一個新的tag給他，例如v2.0.1都行
+
+如果又不行
+
+請再看看是否打錯字，例如您可能會看到以下訊息
+
+```
+module declares its path as: github.com/CarsonSlovoka/go-pkg/v2
+        but was required as: github.com/Carsonslovoka/go-pkg/v2
+```
+
+然後覺得，阿不是兩個都一樣，搞什麼啊...實際上真的是有差異，不然就不會顯示
+
+```
+module declares its path as: github.com/CarsonSlovoka/go-pkg/v2
+        but was required as: github.com/Carsonslovoka/go-pkg/v2
+                                              ^-- 大小寫不同！
+```
+
+相關連結
+
+- [How to fix parsing go.mod module declares its path as "x" but was required as "y"](https://stackoverflow.com/q/61311436/9935654)
+
 ## go.mod的版號
 
 您可能會看到v2, v3, ...
