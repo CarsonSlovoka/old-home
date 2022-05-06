@@ -469,6 +469,10 @@ next_section = ""
 [How to update hour, min, sec in golang time?] | `time.Now().UTC().Truncate(24*time.Hour)` | go, time
 [Generating random numbers over a range in Go] | `rand.Seed(time.Now().UnixNano())` `rand.Intn(max - min) + min`  | go, rand
 [Subtracting time.Duration from time in Go] | 減一天 `now.AddDate(0, -1, 0)`  少10分鐘`now.Add(time.Duration(-10) * time.Minute)` | go, datetime
+[How to use next available port in http.ListenAndServe] | `http.ListenAndServe(":0", nil)` | go, http, port
+[How to search for an element in a golang slice] | | go, slice
+[How to delete an element from a Slice in Golang] |
+[Restricting to Single Instance of Executable with Golang] | 使用[kernel32.dll.CreateMutexW](https://docs.microsoft.com/en-us/windows/win32/api/synchapi/nf-synchapi-createmutexw) | go, windows, mutex
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -921,6 +925,10 @@ next_section = ""
 [How to update hour, min, sec in golang time?]: https://stackoverflow.com/a/67743086/9935654
 [Generating random numbers over a range in Go]: https://stackoverflow.com/a/23577092/9935654
 [Subtracting time.Duration from time in Go]: https://stackoverflow.com/q/26285735/9935654
+[How to use next available port in http.ListenAndServe]: https://stackoverflow.com/q/43424787/9935654
+[How to search for an element in a golang slice]: https://stackoverflow.com/a/38654444/9935654
+[How to delete an element from a Slice in Golang]: https://stackoverflow.com/q/37334119/9935654
+[Restricting to Single Instance of Executable with Golang]: https://stackoverflow.com/a/39547857/9935654
 
 {{< /table/bootstrap-table >}}
 
