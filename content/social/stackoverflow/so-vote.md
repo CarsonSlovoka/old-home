@@ -473,6 +473,8 @@ next_section = ""
 [How to search for an element in a golang slice] | | go, slice
 [How to delete an element from a Slice in Golang] |
 [Restricting to Single Instance of Executable with Golang] | 使用[kernel32.dll.CreateMutexW](https://docs.microsoft.com/en-us/windows/win32/api/synchapi/nf-synchapi-createmutexw) | go, windows, mutex
+[Where does iTunes save iOS updates?] | itunes下載的更新檔會存放在此位置(win10) `%userprofile%\AppData\Local\Packages\AppleInc.iTunes_nzyj5cx40ttqa\LocalCache\Roaming\Apple Computer\iTunes\iPhone Software Updates` | iphone, itunes
+[Win32Api - Window Name Property] | [GetWindowText](https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-getwindowtextw) | winApi
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -929,6 +931,8 @@ next_section = ""
 [How to search for an element in a golang slice]: https://stackoverflow.com/a/38654444/9935654
 [How to delete an element from a Slice in Golang]: https://stackoverflow.com/q/37334119/9935654
 [Restricting to Single Instance of Executable with Golang]: https://stackoverflow.com/a/39547857/9935654
+[Where does iTunes save iOS updates?]: https://apple.stackexchange.com/a/49406/403361
+[Win32Api - Window Name Property]: https://stackoverflow.com/a/1523830/9935654
 
 {{< /table/bootstrap-table >}}
 
