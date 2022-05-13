@@ -475,6 +475,17 @@ next_section = ""
 [Restricting to Single Instance of Executable with Golang] | 使用[kernel32.dll.CreateMutexW](https://docs.microsoft.com/en-us/windows/win32/api/synchapi/nf-synchapi-createmutexw) | go, windows, mutex
 [Where does iTunes save iOS updates?] | itunes下載的更新檔會存放在此位置(win10) `%userprofile%\AppData\Local\Packages\AppleInc.iTunes_nzyj5cx40ttqa\LocalCache\Roaming\Apple Computer\iTunes\iPhone Software Updates` | iphone, itunes
 [Win32Api - Window Name Property] | [GetWindowText](https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-getwindowtextw) | winApi
+[Function type cannot have type parameters] | `type Iterator[T any] interface {}` | go, generics
+[Generic Structs with Go] | `type Model[T any] struct { Data []T }` `func (m *Model[T]) Push(item T) {}` | go, generics
+[Call a Struct and its Method by name in Go?] | `reflect.ValueOf(any).MethodByName(name).Call(inputs)` | go, go-reflect
+[Go failing - expected 'package', found 'EOF'] | 只要再存檔一次就可以了 (您也可以先做fmt之後再保存) | go, eof
+[What's the difference between *uint and uintptr in Golang?] | | go, pointers
+[is it possible to call overridden method from parent struct in Golang?] | | go, inheritance, oop, overriding
+[Sizeof struct in Go] | | go, struct, size
+[How to hide command prompt window when using Exec in Golang?] | | go, windows, command-line, system-cals
+[Golang get system language] | go, internationalization
+[How to delete self (executable file) in Windows?] | | go, exe
+[get_video_info YouTube endpoint suddenly returning 404 not found] | | youtube, youtube-api
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -933,6 +944,17 @@ next_section = ""
 [Restricting to Single Instance of Executable with Golang]: https://stackoverflow.com/a/39547857/9935654
 [Where does iTunes save iOS updates?]: https://apple.stackexchange.com/a/49406/403361
 [Win32Api - Window Name Property]: https://stackoverflow.com/a/1523830/9935654
+[Function type cannot have type parameters]: https://stackoverflow.com/q/64189810/9935654
+[Generic Structs with Go]: https://stackoverflow.com/a/68166643/9935654
+[Call a Struct and its Method by name in Go?]: https://stackoverflow.com/a/19721562/9935654
+[Go failing - expected 'package', found 'EOF']: https://stackoverflow.com/a/58057305/9935654
+[What's the difference between *uint and uintptr in Golang?]: https://stackoverflow.com/a/59042719/9935654
+[is it possible to call overridden method from parent struct in Golang?]: https://stackoverflow.com/a/44796464/9935654
+[Sizeof struct in Go]: https://stackoverflow.com/q/2113751/9935654
+[How to hide command prompt window when using Exec in Golang?]: https://stackoverflow.com/q/42500570/9935654
+[Golang get system language]: https://stackoverflow.com/a/64560642/9935654
+[How to delete self (executable file) in Windows?]: https://stackoverflow.com/a/49146931/9935654
+[get_video_info YouTube endpoint suddenly returning 404 not found]: https://stackoverflow.com/q/67615278/9935654
 
 {{< /table/bootstrap-table >}}
 
