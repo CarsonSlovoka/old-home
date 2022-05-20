@@ -1,7 +1,7 @@
 +++
 title = "font-awesome基礎教學"
 date = 2021-01-14T10:39:00+08:00
-lastmod = 2021-02-27
+lastmod = 2022-05-20
 featured_image = ""
 description = "一些常用的項目"
 tags = ["fontawesome"]
@@ -28,6 +28,7 @@ fontawesome主要就是用來取得一些漂亮的圖標的，
 6. [iconfont] (阿里巴巴)
 7. ★★★ [thenounproject](https://thenounproject.com/) : 大推這個，可以下載svg圖形
 8. ★ [SVG背景圖片下載: svgbackgrounds.com](https://www.svgbackgrounds.com/)
+9. ★ [svgrepo](https://www.svgrepo.com/svg/128399/left-arrow)
 
 每一種都有提供CSS, JS等等幫助您快速應用，而本篇只講fontawesome
 
@@ -147,10 +148,18 @@ bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的�
 
 | @@w=10%@@name | @@w=40%@@Icon Desc | @@w=10%@@Code | @@w=30%@@Comment |　|
 | :----: | :---- | :----: | ---- | ---- |
+← | LEFTWARDS ARROW | 2190 | 在html上可以打這些`&#8592;`, `&larr;`, `&#x2190;`也能出現
+↑ | Up Arrow | 2191 | `&#8593;`, `&uarr;`, `&#x2191;`
+→ | Right Arrow | 2192 | `&#8594;`, `&rarr;`, `&#x2192;`
+↓ | Down Arrow | 2193 | `&#8595;`, `&darr;`, `&#x2193;`
 ⌨ | KEYBOARD | 2328
 ☑ | | U+2611
 ☐ | | U+2610
-⚠  | Warning sign | 26A0
+♠️ | Spade Suit | 2660
+♣️ | Club Suit | 2663
+♥️ | Heart Suit | 2665
+♦️ | Diamond Suit | 2666
+⚠  | Warning sign, Heads up! | 26A0
 ⚡  | High Voltage | 26A1
 ✍ | WRITING HAND、總結 | 270D
 ✍️| Writing Hand | 270D
@@ -186,6 +195,7 @@ bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的�
 🐛  | Bug | 1F41B
 󠁴🀄 | 中文 | 1F004
 🌈 | RAINBOW\nOnline Examples | 1F308
+💡 | Light Bulb, Fun fact: | 1F4A1
 💪 | enhancement | 1F4AA
 📰 | NEWSPAPER、歷史文章、資料來源 | 1F4F0
 👩‍💻 | ● 👩:Woman\n●💻: Personal computer | ●1F469\n●1F4BB | 這比較特別，他是兩個碼位組合而成的圖案
