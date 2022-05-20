@@ -486,6 +486,11 @@ next_section = ""
 [Golang get system language] | go, internationalization
 [How to delete self (executable file) in Windows?] | | go, exe
 [get_video_info YouTube endpoint suddenly returning 404 not found] | | youtube, youtube-api
+[How to handle i18n in Go?] | | go, i18n
+[What does !default in a css property value mean?] | 這是sass特有的產物，當編譯到此變數時，如果該變數還是`null`或者沒有定義，就會使用當前`!default`的數值來設定它，否則就使用已經編譯的變數當成此數值 | sass
+[Using uppercase, dashes or underscores when naming css selectors] |
+[How can I define a struct field in my interface as a type constraint (type T has no field or method)?] | 為什麼沒辦法直接用泛型來存取成員內容 (日後可能會實現1.20之後了...) | go, generics, field
+[calling functions + setTimeout instead of setInterval] | `(function myFunc(arg1, {}){ setTimeout(myFunc(), 100, arg1, {}})(arg1, {}))` | javascript, interval, timeout
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -955,6 +960,11 @@ next_section = ""
 [Golang get system language]: https://stackoverflow.com/a/64560642/9935654
 [How to delete self (executable file) in Windows?]: https://stackoverflow.com/a/49146931/9935654
 [get_video_info YouTube endpoint suddenly returning 404 not found]: https://stackoverflow.com/q/67615278/9935654
+[How to handle i18n in Go?]: https://stackoverflow.com/q/7585362/9935654
+[What does !default in a css property value mean?]: https://stackoverflow.com/a/60601751/9935654
+[Using uppercase, dashes or underscores when naming css selectors]: https://stackoverflow.com/q/2345264/9935654
+[How can I define a struct field in my interface as a type constraint (type T has no field or method)?]: https://stackoverflow.com/q/70358216/9935654
+[calling functions + setTimeout instead of setInterval]: https://gist.github.com/sagarsane/3688474
 
 {{< /table/bootstrap-table >}}
 
