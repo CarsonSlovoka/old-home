@@ -491,6 +491,9 @@ next_section = ""
 [Using uppercase, dashes or underscores when naming css selectors] |
 [How can I define a struct field in my interface as a type constraint (type T has no field or method)?] | 為什麼沒辦法直接用泛型來存取成員內容 (日後可能會實現1.20之後了...) | go, generics, field
 [calling functions + setTimeout instead of setInterval] | `(function myFunc(arg1, {}){ setTimeout(myFunc(), 100, arg1, {}})(arg1, {}))` | javascript, interval, timeout
+[Regex not operator] | [^abc] not `a` or `b` or `c` | | regex, operators
+[What do 'lazy' and 'greedy' mean in the context of regular expressions?] | 所謂lazy就是指在quantifier最後再補上一個`?`讓它只要一旦找到就停止
+[Are HTTP cookies port specific?] | | cookies, http
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -965,6 +968,9 @@ next_section = ""
 [Using uppercase, dashes or underscores when naming css selectors]: https://stackoverflow.com/q/2345264/9935654
 [How can I define a struct field in my interface as a type constraint (type T has no field or method)?]: https://stackoverflow.com/q/70358216/9935654
 [calling functions + setTimeout instead of setInterval]: https://gist.github.com/sagarsane/3688474
+[Regex not operator]: https://stackoverflow.com/a/7317087/9935654
+[What do 'lazy' and 'greedy' mean in the context of regular expressions?]: https://stackoverflow.com/a/34806154/9935654
+[Are HTTP cookies port specific?]: https://stackoverflow.com/q/1612177/9935654
 
 {{< /table/bootstrap-table >}}
 

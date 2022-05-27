@@ -52,7 +52,6 @@ Generate Subresource Integrity (SRI) attributes
 
 > https://www.srihash.org/ 可以幫助您產生，把資源的連結貼上去即可
 
-
 ## [免費版本常用的icon](https://fontawesome.com/icons/)
 
 - 下載: {{<raw_html>}}<a href=""><i class="fas fa-download fa-2x"></i></a>{{</raw_html>}}
@@ -114,8 +113,6 @@ bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的�
 
 {{<raw_html>}}<button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-trash"></span> Trash</button>{{</raw_html>}}
 
-
-
 #### button
 
 - link: {{<raw_html>}}<button class="btn btn-primary" onclick="location.href='https://www.google.com/'" type="button"><i class="fas fa-link fa-2x"></i><br>Google</button>{{</raw_html>}}
@@ -136,7 +133,6 @@ bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的�
   hover-yellow"></i> {{/* tachyons */}}
   </button>
   ```
-
 
 ## [Emoji of Unicode](https://apps.timwhitlock.info/unicode/inspect?s=%F0%9F%93%9D)
 
@@ -223,10 +219,15 @@ bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的�
 😎 | SMILING FACE WITH SUNGLASSES | 1F60E
 😁 | GRINNING FACE WITH SMILING EYES | 1F60E
 😆 | SMILING FACE WITH OPEN MOUTH AND TIGHTLY-CLOSED EYES | 1F606
+😊 | Smiling Face with Smiling Eyes | 1F60A
 🙂 | Slightly Smiling Face | 1F642
+🙌 | Raising Hands, hooray, 萬歲 | 1F64C
+🙏 | Folded Hands, 拜託 | 1F64F
+🚀 | Rocket | 1F680
 🤩 | Star-Struck | 1F929
 🥳 | Partying Face | 1F973
 🥴 | Drunk Face\nWoozy Face\nFace with Uneven Eyes and Wavy Mouth | 1F974
+🥺 | Pleading Face 🙏, 拜託 | 1F97A
 🤔 | Thinking Face Emoji
 🤣 | Rolling on the Floor Laughing,
 🗑 | deprecated
@@ -263,7 +264,6 @@ bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的�
 🚚 | Delivery Truck | 1F69A
 🧄 | Garlic | 1F9C4
 
-
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 
 {{< /table/bootstrap-table >}}
@@ -274,7 +274,6 @@ bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的�
 - [How can I create a text box for a note in markdown?](https://stackoverflow.com/a/65930459/9935654)
 
 ## 在.github文件夾中可能有用的圖標
-
 
 | Unicode字元 | Desc | 建議bg顏色  |
 | ---- | ---- | ---- |
