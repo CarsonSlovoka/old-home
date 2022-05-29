@@ -186,6 +186,7 @@ update npm | ``npm install -g npm@7.21.1``
 
 - ``choco upgrade chocolatey``: [更新chocolate](https://chocolatey.org/docs/commandsupgrade)的應用程序
 - ``cup all`` 等同 ``choco upgrade all``: 可以更新所有套件
+- `choco install virtualbox --version 4.3.26` 安裝特定的版本
 
 如果您不清楚指令，可以用: ``choco -?`` 這一招幫您解所有東西，例如:
 
@@ -239,7 +240,7 @@ choco安裝的套件如果是安裝的檔案也能在``新增移除``找到，�
 | [sass]   | ``choco install sass -y`` | ● ``C:\tools\dart-sdk``\n● ``%programdata%\chocolatey\lib\sass\bin\sass.exe``\n他需要用到dart-sdk還有sass所以需要裝兩個東西 | 使用方法:\n● ``sass input.scss:output.css``\n● ``sass --watch input.scss:output.css --style compressed``\n加上 ``watch`` 可以監測使得檔案異動就自動更新 ``compressed`` 可以壓縮，以一行解決\n● ``sass input.scss:output.css --style compressed --no-source-map``\n不產生``.css.map``檔案\n● ``sass --help``
 | golang   | ``choco install golang -y``| ● ``C:\Go\bin\go.exe``\n● ``C:\Go\bin\gofmt.exe`` | 安裝完之後:\n● ``go version`` 確認有無安裝成功\n● ``gofmt``是用來統一程式碼格式用的東西
 [msys2](https://stackoverflow.com/a/50078531) | ``choco install msys2`` | ``C:\tools\msys64`` | 安裝go-admin可能會要求要安裝gcc所以要先安裝這個東西\n執行:\n > ``C:\tools\msys64\mysys2.exe``\n在mysys2的console中輸入:\n$ ``pacman -S gcc``\n完成之後可以在mysys2中的console\n>``gcc -v``\n但是一般的console沒用，所以不推薦！
-gcc | ``choco install mingw -y`` | ● ``%programdata%\chocolatey\lib\mingw\tools\install``\n● ``%programdata%\chocolatey\bin\gcc.exe`` | 完成之後可以查看版本確認有無裝成功\n>``gcc -v``
+gcc | ``choco install mingw -y`` | ● ``%programdata%\chocolatey\lib\mingw\tools\install``(這個資料夾不重要)\n● ``%programdata%\chocolatey\bin\gcc.exe``(g++.exe也在這) | 完成之後可以查看版本確認有無裝成功\n>``gcc -v``
 [docker-cli] | ``choco install docker-cli`` | ● ``%programdata%\chocolatey\lib\docker-cli\tools\docker.exe``\n● ``%programdata%\chocolatey\bin\docker.exe`` (這一個是主要的) | ● ``docker --help``\n● ``docker -v``\np.s. ❗ **不要**裝docker這個是``deprecated``的項目
 [reshack] | ``choco install reshack -y`` | ``%PROGRAMFILES(X86)%\Resource Hacker\`` | ❗安裝完畢之後請執行\n``refreshenv``\n~~來刷新環境變數~~\n結果也是沒用，自己加吧...
 [graphviz] | ``choco install graphviz -y`` | ``%programfiles%\Graphviz``\n``%programfiles%\Graphviz\bin\dot.exe``\ngraphviz may be able to be automatically uninstalled.\n安裝完之後有出現以上訊息，其表示也能夠透過「新增/移除」的程式來移除 | plantuml渲染的時候需要用到的東西: dot\n另外還需要下載[plantuml.jar](https://plantuml.com/en/download)

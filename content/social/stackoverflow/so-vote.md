@@ -494,6 +494,10 @@ next_section = ""
 [Regex not operator] | [^abc] not `a` or `b` or `c` | | regex, operators
 [What do 'lazy' and 'greedy' mean in the context of regular expressions?] | 所謂lazy就是指在quantifier最後再補上一個`?`讓它只要一旦找到就停止
 [Are HTTP cookies port specific?] | | cookies, http
+[Control the mouse and keyboard Golang?] | [robotgo] | go, mouse
+[How do I downgrade a Chocolatey package?] | `choco install virtualbox --version 4.3.26 --force` | chocolatey
+[mingw-w64 threads: posix vs win32] | | windows, gcc, pthreads, mingw
+[What is difference between sjlj vs dwarf vs seh?] | | c++, compiler-construction, mingw, cpu-architecture, mingw-w64
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -971,6 +975,10 @@ next_section = ""
 [Regex not operator]: https://stackoverflow.com/a/7317087/9935654
 [What do 'lazy' and 'greedy' mean in the context of regular expressions?]: https://stackoverflow.com/a/34806154/9935654
 [Are HTTP cookies port specific?]: https://stackoverflow.com/q/1612177/9935654
+[Control the mouse and keyboard Golang?]: https://stackoverflow.com/a/39971132/9935654
+[How do I downgrade a Chocolatey package?]: https://stackoverflow.com/a/31256031/9935654
+[mingw-w64 threads: posix vs win32]: https://stackoverflow.com/q/17242516/9935654
+[What is difference between sjlj vs dwarf vs seh?]: https://stackoverflow.com/q/15670169/9935654
 
 {{< /table/bootstrap-table >}}
 
