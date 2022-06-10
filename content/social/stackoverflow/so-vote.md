@@ -498,6 +498,12 @@ next_section = ""
 [How do I downgrade a Chocolatey package?] | `choco install virtualbox --version 4.3.26 --force` | chocolatey
 [mingw-w64 threads: posix vs win32] | | windows, gcc, pthreads, mingw
 [What is difference between sjlj vs dwarf vs seh?] | | c++, compiler-construction, mingw, cpu-architecture, mingw-w64
+[Go template name] | `new(template.Template).Parse()` | go, go-templates
+[Is there some elegant way to pause and resume any other goroutine?] | | go, channel, goroutine
+[Different ways to pass channels as arguments in function] | 當參數不特別用箭號，代表此參數有可能是讀取或者寫入該channel，因此使用箭號是比較好的方式 | concurrency, go, channel
+[Why isn't MessageBox TopMost?] | 如果預設是top most就會發生阻塞，使用者一定要回覆才可以繼續 | messagebox, topmost
+[How to replicate do while in go?] | 使用`for{ if break}` 來代替do-while | for-loop, go, while-loop
+[IP Address Mismatch on signing into Heroku CLI] |
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -979,6 +985,12 @@ next_section = ""
 [How do I downgrade a Chocolatey package?]: https://stackoverflow.com/a/31256031/9935654
 [mingw-w64 threads: posix vs win32]: https://stackoverflow.com/q/17242516/9935654
 [What is difference between sjlj vs dwarf vs seh?]: https://stackoverflow.com/q/15670169/9935654
+[Go template name]: https://stackoverflow.com/q/41176355/9935654
+[Is there some elegant way to pause and resume any other goroutine?]: https://stackoverflow.com/a/16102304/9935654
+[Different ways to pass channels as arguments in function]: https://stackoverflow.com/a/35759603/9935654
+[Why isn't MessageBox TopMost?]: https://stackoverflow.com/a/16105626/9935654
+[How to replicate do while in go?]: https://stackoverflow.com/a/42085121/9935654
+[IP Address Mismatch on signing into Heroku CLI]: https://stackoverflow.com/a/70632778/9935654
 
 {{< /table/bootstrap-table >}}
 

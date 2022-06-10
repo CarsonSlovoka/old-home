@@ -224,6 +224,7 @@ bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的�
 🙌 | Raising Hands, hooray, 萬歲 | 1F64C
 🙏 | Folded Hands, 拜託 | 1F64F
 🚀 | Rocket | 1F680
+🚨 | Police Car Light | 1F6A8
 🤩 | Star-Struck | 1F929
 🥳 | Partying Face | 1F973
 🥴 | Drunk Face\nWoozy Face\nFace with Uneven Eyes and Wavy Mouth | 1F974
