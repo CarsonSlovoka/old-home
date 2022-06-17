@@ -504,6 +504,9 @@ next_section = ""
 [Why isn't MessageBox TopMost?] | 如果預設是top most就會發生阻塞，使用者一定要回覆才可以繼續 | messagebox, topmost
 [How to replicate do while in go?] | 使用`for{ if break}` 來代替do-while | for-loop, go, while-loop
 [IP Address Mismatch on signing into Heroku CLI] |
+[Is there a minimum sleep for free heroku dyno?] | | heroku
+[What does bash -s do?] | -s 的使用時機通常是 `curl -L https://chef.io/chef/install.sh | bash -s -- -P abc` 代表直接讀取install.sh並且可以接受位置參數，其中的`--`表示後面的所有東西{`-P`, `abc`}都是參數，而不是指令的可選項，這個例子中傳入給install.sh中有兩個參數`$1: -P`, `$2: abc` | bash, ubuntu, terminal
+[Delete all messages from a channel using Discord] | | go, discord
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -991,6 +994,9 @@ next_section = ""
 [Why isn't MessageBox TopMost?]: https://stackoverflow.com/a/16105626/9935654
 [How to replicate do while in go?]: https://stackoverflow.com/a/42085121/9935654
 [IP Address Mismatch on signing into Heroku CLI]: https://stackoverflow.com/a/70632778/9935654
+[Is there a minimum sleep for free heroku dyno?]: https://stackoverflow.com/a/38942674/9935654
+[What does bash -s do?]: https://stackoverflow.com/a/51854728/9935654
+[Delete all messages from a channel using Discord]: https://stackoverflow.com/a/66147861/9935654
 
 {{< /table/bootstrap-table >}}
 
