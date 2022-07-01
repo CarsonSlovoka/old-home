@@ -509,6 +509,7 @@ next_section = ""
 [Delete all messages from a channel using Discord] | | go, discord
 [How do I reverse a slice in go?] | | go, slice
 [Cancelling a net.Listener via Context in Golang] | | go, tcp
+[In Go, how do I capture stdout of a function into a string?] | | go, stdout
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -1001,6 +1002,7 @@ next_section = ""
 [Delete all messages from a channel using Discord]: https://stackoverflow.com/a/66147861/9935654
 [How do I reverse a slice in go?]: https://stackoverflow.com/a/71904070/9935654
 [Cancelling a net.Listener via Context in Golang]: https://stackoverflow.com/a/66755998/9935654
+[In Go, how do I capture stdout of a function into a string?]: https://stackoverflow.com/a/29339052/9935654
 
 {{< /table/bootstrap-table >}}
 
