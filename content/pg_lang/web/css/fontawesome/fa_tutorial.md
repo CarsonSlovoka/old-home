@@ -197,6 +197,7 @@ bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的�
 👩‍💻 | ● 👩:Woman\n●💻: Personal computer | ●1F469\n●1F4BB | 這比較特別，他是兩個碼位組合而成的圖案
 👨‍💻 | ● 👨:Man\n●💻: Personal computer | ●1F468\n●1F4BB | 組合圖案
 👷 | 工人\nConstruction Worker | 1F477
+🎉 | Party Popper、慶祝 | 1F389
 🎮 | Video game | 1F3A3
 📦 | PACKAGE\nInstallation Guide | 1F4E6
 💿 | OPTICAL DISC | 1F4BF

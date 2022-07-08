@@ -510,6 +510,13 @@ next_section = ""
 [How do I reverse a slice in go?] | | go, slice
 [Cancelling a net.Listener via Context in Golang] | | go, tcp
 [In Go, how do I capture stdout of a function into a string?] | | go, stdout
+[Using a for-loop or sleeping to wait for short intervals of time] | | performance, for-loop
+[How to set environment variables that last] | | go, environment-variables
+[How to use SVG as PWA icon?] | | svg, progressive-web-apps
+[PWA on Github pages] | | github-pages, progressive-web-apps
+[What are Go example functions?] | https://go.dev/blog/examples | go, testing
+[Golang tests in sub-directory] | `go test ./...` 會自動測所有東西  | go, unit-testing
+[Running actions in another directory] | 在default統一設定工作路徑即可 | github, github-actions
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -1003,6 +1010,13 @@ next_section = ""
 [How do I reverse a slice in go?]: https://stackoverflow.com/a/71904070/9935654
 [Cancelling a net.Listener via Context in Golang]: https://stackoverflow.com/a/66755998/9935654
 [In Go, how do I capture stdout of a function into a string?]: https://stackoverflow.com/a/29339052/9935654
+[Using a for-loop or sleeping to wait for short intervals of time]: https://codereview.stackexchange.com/a/42508/210612
+[How to set environment variables that last]: https://stackoverflow.com/q/24938877/9935654
+[How to use SVG as PWA icon?]: https://stackoverflow.com/a/64428233/9935654
+[PWA on Github pages]: https://stackoverflow.com/q/46228604/9935654
+[What are Go example functions?]: https://stackoverflow.com/a/29141725/9935654
+[Golang tests in sub-directory]: https://stackoverflow.com/a/21725603/9935654
+[Running actions in another directory]: https://stackoverflow.com/a/70290016/9935654
 
 {{< /table/bootstrap-table >}}
 
