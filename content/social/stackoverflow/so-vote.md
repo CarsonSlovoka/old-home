@@ -517,6 +517,10 @@ next_section = ""
 [What are Go example functions?] | https://go.dev/blog/examples | go, testing
 [Golang tests in sub-directory] | `go test ./...` 會自動測所有東西  | go, unit-testing
 [Running actions in another directory] | 在default統一設定工作路徑即可 | github, github-actions
+[How use update function of mongo-go-driver using struct] | | go, mongodb, driver, crud
+[Why am I getting ImportError: No module named pip ' right after installing pip?] | 要編輯pth檔案，補上`Lib\site-packages` | python, windows, pip
+[easy way to unzip file with golang] | | go, zip, unzip
+[Reading a file line by line in Go] | | go, file, parsing, line
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -1017,6 +1021,10 @@ next_section = ""
 [What are Go example functions?]: https://stackoverflow.com/a/29141725/9935654
 [Golang tests in sub-directory]: https://stackoverflow.com/a/21725603/9935654
 [Running actions in another directory]: https://stackoverflow.com/a/70290016/9935654
+[How use update function of mongo-go-driver using struct]: https://stackoverflow.com/a/59424834/9935654
+[Why am I getting ImportError: No module named pip ' right after installing pip?]: https://stackoverflow.com/a/60829519/9935654
+[easy way to unzip file with golang]: https://stackoverflow.com/a/65618964/9935654
+[Reading a file line by line in Go]: https://stackoverflow.com/a/16615559/9935654
 
 {{< /table/bootstrap-table >}}
 
