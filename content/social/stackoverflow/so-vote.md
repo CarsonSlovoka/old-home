@@ -24,14 +24,14 @@ next_section = ""
 
 | @@w=50%@@name | desc | Tags |
 | ---- | ---- | ---- |
-[Default value in Go's method]
-[How to create new file using go script]
+[Default value in Go's method] |
+[How to create new file using go script] |
 [How to get the directory of the currently running file?] |
 [How to add new methods to an existing type in Go?] |
 [Rendering template.HTML directly into templates] |
 [Stop goroutine execution on timeout] |
 [What is the idiomatic Go equivalent of C's ternary operator?] | `c := map[bool]int{true: 1, false: 0} [5 > 4]` | go, ternary-operator
-★[Golang Gin-Gonic Split Routes into Multiple Files]\n- ``%userprofile%\AppData\Local\Temp\___go_build_*.exe``\n- ``%userprofile%\AppData\Local\Temp\___TestDemo*.exe`` |
+★[Golang Gin-Gonic Split Routes into Multiple Files] | \n- ``%userprofile%\AppData\Local\Temp\___go_build_*.exe``\n- ``%userprofile%\AppData\Local\Temp\___TestDemo*.exe`` |
 [Go programs hanging on Windows 10 avast shut up] |
 [(Go) How to use toml files?] |
 [How to access struct fields in a template] |
@@ -521,6 +521,10 @@ next_section = ""
 [Why am I getting ImportError: No module named pip ' right after installing pip?] | 要編輯pth檔案，補上`Lib\site-packages` | python, windows, pip
 [easy way to unzip file with golang] | | go, zip, unzip
 [Reading a file line by line in Go] | | go, file, parsing, line
+[context - WithDeadline() vs WithTimeout()] | | go, channel, goroutine
+[Select arrow style change] | `-webkit-appearance: none;` 可以取消掉預設的select右方的小三角形 | css, select
+[7-Zip command to create and extract a password-protected ZIP file on Windows?] | | windows, 7zip, encryption
+[default select option as blank] | ` <option disabled selected value> -- select an option -- </option>` | html
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -1025,6 +1029,10 @@ next_section = ""
 [Why am I getting ImportError: No module named pip ' right after installing pip?]: https://stackoverflow.com/a/60829519/9935654
 [easy way to unzip file with golang]: https://stackoverflow.com/a/65618964/9935654
 [Reading a file line by line in Go]: https://stackoverflow.com/a/16615559/9935654
+[context - WithDeadline() vs WithTimeout()]: https://stackoverflow.com/a/64327057/9935654
+[Select arrow style change]: https://stackoverflow.com/q/14218307/9935654
+[7-Zip command to create and extract a password-protected ZIP file on Windows?]: https://stackoverflow.com/a/28160425/9935654
+[default select option as blank]: https://stackoverflow.com/a/23638053/9935654
 
 {{< /table/bootstrap-table >}}
 
