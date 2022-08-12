@@ -525,6 +525,7 @@ next_section = ""
 [Select arrow style change] | `-webkit-appearance: none;` 可以取消掉預設的select右方的小三角形 | css, select
 [7-Zip command to create and extract a password-protected ZIP file on Windows?] | | windows, 7zip, encryption
 [default select option as blank] | ` <option disabled selected value> -- select an option -- </option>` | html
+[Win32 resource file multiple translations] | `VALUE "Translation", 0x407, 1252, 0x409, 1252...` | resources
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -1033,6 +1034,7 @@ next_section = ""
 [Select arrow style change]: https://stackoverflow.com/q/14218307/9935654
 [7-Zip command to create and extract a password-protected ZIP file on Windows?]: https://stackoverflow.com/a/28160425/9935654
 [default select option as blank]: https://stackoverflow.com/a/23638053/9935654
+[Win32 resource file multiple translations]: https://stackoverflow.com/a/14223964/9935654
 
 {{< /table/bootstrap-table >}}
 
