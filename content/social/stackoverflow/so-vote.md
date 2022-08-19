@@ -526,6 +526,10 @@ next_section = ""
 [7-Zip command to create and extract a password-protected ZIP file on Windows?] | | windows, 7zip, encryption
 [default select option as blank] | ` <option disabled selected value> -- select an option -- </option>` | html
 [Win32 resource file multiple translations] | `VALUE "Translation", 0x407, 1252, 0x409, 1252...` | resources
+[How to suppress "error TS2533: Object is possibly 'null' or 'undefined'"?] | `document.querySelector("...")!.innerHTML` | typescript
+[Human readable javascripts in chrome developer tools] | `在source的頁籤，點選大{}`
+[Download a single folder or directory from a GitHub repo] | 使用 `.` 打開編輯器，之後再檔案總管右鍵可以選擇下載 | github
+
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -1035,6 +1039,10 @@ next_section = ""
 [7-Zip command to create and extract a password-protected ZIP file on Windows?]: https://stackoverflow.com/a/28160425/9935654
 [default select option as blank]: https://stackoverflow.com/a/23638053/9935654
 [Win32 resource file multiple translations]: https://stackoverflow.com/a/14223964/9935654
+[How to suppress "error TS2533: Object is possibly 'null' or 'undefined'"?]: https://stackoverflow.com/a/40350534/9935654
+[Human readable javascripts in chrome developer tools]: https://stackoverflow.com/a/6318092/9935654
+[Download a single folder or directory from a GitHub repo]: https://stackoverflow.com/a/70729494/9935654
+
 
 {{< /table/bootstrap-table >}}
 
