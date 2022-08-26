@@ -529,7 +529,10 @@ next_section = ""
 [How to suppress "error TS2533: Object is possibly 'null' or 'undefined'"?] | `document.querySelector("...")!.innerHTML` | typescript
 [Human readable javascripts in chrome developer tools] | `在source的頁籤，點選大{}`
 [Download a single folder or directory from a GitHub repo] | 使用 `.` 打開編輯器，之後再檔案總管右鍵可以選擇下載 | github
-
+[Is the Heroku Git Repo Public?] | 是私有的，除非給于權限，否則只有作者有辦法取得到程式碼(git指令獲得), 但站點都是公開的，除了部屬到私有站例外 | heroku
+[Can `tesseract-ocr` put the result to STDOUT?] | `tesseract input.jpg stdout` | tesseract
+[Slice chunking in Go] | `for chunkSize < len(items) { items, chunks = items[chunkSize:], append(chunks, items[0:chunkSize:chunkSize])}` | go, chunking, slice
+[Comments in .gitignore?] | `git help gitignore`。使用`#`可以註解 | git, comments, gitignore
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -538,7 +541,7 @@ next_section = ""
 [How to add new methods to an existing type in Go?]: https://stackoverflow.com/a/28800807/9935654
 [Rendering template.HTML directly into templates]: https://stackoverflow.com/a/21435808/9935654
 [Stop goroutine execution on timeout]: https://stackoverflow.com/a/50579561/9935654
-[What is the idiomatic Go equivalent of C's ternary operator?]: https://stackoverflow.com/a/34636594/9935654
+[What is the idiomatic Go equivalent of C's ternary operator?]: https://stackoverflow.com/a/59375088/9935654
 [Golang Gin-Gonic Split Routes into Multiple Files]: https://stackoverflow.com/q/42967235/9935654
 [How do I list the public methods of a package in golang]: https://stackoverflow.com/q/41629293/9935654
 [Go programs hanging on Windows 10 avast shut up]: https://stackoverflow.com/a/34057027/9935654
@@ -1042,6 +1045,10 @@ next_section = ""
 [How to suppress "error TS2533: Object is possibly 'null' or 'undefined'"?]: https://stackoverflow.com/a/40350534/9935654
 [Human readable javascripts in chrome developer tools]: https://stackoverflow.com/a/6318092/9935654
 [Download a single folder or directory from a GitHub repo]: https://stackoverflow.com/a/70729494/9935654
+[Is the Heroku Git Repo Public?]: https://stackoverflow.com/a/35535704/9935654
+[Can `tesseract-ocr` put the result to STDOUT?]: https://stackoverflow.com/a/39756374/9935654
+[Slice chunking in Go]: https://stackoverflow.com/a/72408490/9935654
+[Comments in .gitignore?]: https://stackoverflow.com/a/8865895/9935654
 
 
 {{< /table/bootstrap-table >}}
