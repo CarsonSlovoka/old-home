@@ -533,6 +533,7 @@ next_section = ""
 [Can `tesseract-ocr` put the result to STDOUT?] | `tesseract input.jpg stdout` | tesseract
 [Slice chunking in Go] | `for chunkSize < len(items) { items, chunks = items[chunkSize:], append(chunks, items[0:chunkSize:chunkSize])}` | go, chunking, slice
 [Comments in .gitignore?] | `git help gitignore`。使用`#`可以註解 | git, comments, gitignore
+[Go lang's equivalent of charCode() method of JavaScript] | [fmt.Println(strconv.FormatUint(uint64([]rune("𪷂")[0]), 16))](https://go.dev/play/p/SeFqptGCxGm) | go, unicode
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -1049,6 +1050,7 @@ next_section = ""
 [Can `tesseract-ocr` put the result to STDOUT?]: https://stackoverflow.com/a/39756374/9935654
 [Slice chunking in Go]: https://stackoverflow.com/a/72408490/9935654
 [Comments in .gitignore?]: https://stackoverflow.com/a/8865895/9935654
+[Go lang's equivalent of charCode() method of JavaScript]: https://stackoverflow.com/a/31239411/9935654
 
 
 {{< /table/bootstrap-table >}}
