@@ -536,6 +536,9 @@ next_section = ""
 [Go lang's equivalent of charCode() method of JavaScript] | [fmt.Println(strconv.FormatUint(uint64([]rune("𪷂")[0]), 16))](https://go.dev/play/p/SeFqptGCxGm) | go, unicode
 [How to insert double and float values to sqlite?] | 使用`REAL` | sqlite
 [How to remove a user from a MongoDB database] | `db.dropUser("guest")` | mongodb
+[How to import DateTimeFormatOptions in] |
+[How to add a link inside an svg circle] | `<a href="..." target="_blank"><circle></circle></a>` | svg, hyperlink
+[How to declare Return Types for Functions in TypeScript] | `functionName() : ReturnType { ... }` | typescript
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -1055,6 +1058,9 @@ next_section = ""
 [Go lang's equivalent of charCode() method of JavaScript]: https://stackoverflow.com/a/31239411/9935654
 [How to insert double and float values to sqlite?]: https://stackoverflow.com/a/32225351/9935654
 [How to remove a user from a MongoDB database]: https://stackoverflow.com/a/35342421/9935654
+[How to import DateTimeFormatOptions in]: https://stackoverflow.com/q/71757346/9935654
+[How to add a link inside an svg circle]: https://stackoverflow.com/a/34968169/9935654
+[How to declare Return Types for Functions in TypeScript]: https://stackoverflow.com/a/48051433/9935654
 
 {{< /table/bootstrap-table >}}
 
