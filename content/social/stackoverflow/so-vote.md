@@ -539,6 +539,9 @@ next_section = ""
 [How to import DateTimeFormatOptions in] |
 [How to add a link inside an svg circle] | `<a href="..." target="_blank"><circle></circle></a>` | svg, hyperlink
 [How to declare Return Types for Functions in TypeScript] | `functionName() : ReturnType { ... }` | typescript
+[Is there a "previous sibling" selector?] | `previous:has(+ next) {}` | css, css-selectors, siblings
+[TypeScript 2.8.3 Type must have a Symbol.iterator method that returns an iterator] | tsconfig新增: `dom.iterable`
+[Property 'files' does not exist on type 'EventTarget' error in typescript] | | typescript
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -1061,6 +1064,9 @@ next_section = ""
 [How to import DateTimeFormatOptions in]: https://stackoverflow.com/q/71757346/9935654
 [How to add a link inside an svg circle]: https://stackoverflow.com/a/34968169/9935654
 [How to declare Return Types for Functions in TypeScript]: https://stackoverflow.com/a/48051433/9935654
+[Is there a "previous sibling" selector?]: https://stackoverflow.com/a/15503444/9935654
+[TypeScript 2.8.3 Type must have a Symbol.iterator method that returns an iterator]: https://stackoverflow.com/q/50234481/9935654
+[Property 'files' does not exist on type 'EventTarget' error in typescript]: https://stackoverflow.com/q/43176560/9935654
 
 {{< /table/bootstrap-table >}}
 
