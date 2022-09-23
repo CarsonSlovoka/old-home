@@ -542,6 +542,13 @@ next_section = ""
 [Is there a "previous sibling" selector?] | `previous:has(+ next) {}` | css, css-selectors, siblings
 [TypeScript 2.8.3 Type must have a Symbol.iterator method that returns an iterator] | tsconfig新增: `dom.iterable`
 [Property 'files' does not exist on type 'EventTarget' error in typescript] | | typescript
+[How to convert javascript unicode notation code to utf-8?] |
+[Any better way to check endianness in Go] | | go, endianness
+[Default value for typescript type alias] | | typescript, types, type-alias
+[Define a list of optional keys for Typescript Record] | `const nameRecords: Partial<Record<"en" _ "ja", NameRecord>> = {}` 如此`{}`裡面的內容可以省略，不設定也行 | typescript, typescript-typings
+[Declaring abstract method in TypeScript] | 使用abstract關鍵字 | typescript
+[Is it possible to compile a single TypeScript file to an output path using the tsc command?] | `tsc --out final.js app.ts` | typescript, tsc
+[Golang converting from rune to string] | https://go.dev/play/p/3Lzw91QbS_F | go, string, rune, unicode
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -1067,6 +1074,13 @@ next_section = ""
 [Is there a "previous sibling" selector?]: https://stackoverflow.com/a/15503444/9935654
 [TypeScript 2.8.3 Type must have a Symbol.iterator method that returns an iterator]: https://stackoverflow.com/q/50234481/9935654
 [Property 'files' does not exist on type 'EventTarget' error in typescript]: https://stackoverflow.com/q/43176560/9935654
+[How to convert javascript unicode notation code to utf-8?]: https://stackoverflow.com/q/10576905/9935654
+[Any better way to check endianness in Go]: https://stackoverflow.com/a/53286786/9935654
+[Default value for typescript type alias]: https://stackoverflow.com/a/61862414/9935654
+[Define a list of optional keys for Typescript Record]: https://stackoverflow.com/a/65703747/9935654
+[Declaring abstract method in TypeScript]: https://stackoverflow.com/a/13335645/9935654
+[Is it possible to compile a single TypeScript file to an output path using the tsc command?]: https://stackoverflow.com/q/13507576/9935654
+[Golang converting from rune to string]: https://stackoverflow.com/q/39245610/9935654
 
 {{< /table/bootstrap-table >}}
 
