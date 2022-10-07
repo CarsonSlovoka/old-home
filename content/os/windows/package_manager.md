@@ -250,6 +250,7 @@ gcc | ``choco install mingw -y`` | ● ``%programdata%\chocolatey\lib\mingw\tool
 [Inkscape] [Inkscape-tutorial] | ``choco install inkscape -y`` | ● ``%PROGRAMFILES%\Inkscape\``\n● ``%PROGRAMFILES%\Inkscape\bin\inkscape.exe`` |
 [node.js] | ``choco install nodejs -y`` | ``%PROGRAMFILES%\nodejs`` 裡面有node.exe還有npm \n安裝到哪邊去其實他沒特別寫出來可以用``gcm node.exe``去查看 |
 [make] | `choco install make` | `%programdata%\chocolatey\bin`
+[deno] <sup>1.26.0</sup> | `choco install -y` | `C:\ProgramData\chocolatey\lib\deno` | `deno -help`
 
 [protobuf_google]: https://developers.google.com/protocol-buffers/docs/overview
 [protobuf_github]: https://github.com/protocolbuffers/protobuf
@@ -265,6 +266,7 @@ gcc | ``choco install mingw -y`` | ● ``%programdata%\chocolatey\lib\mingw\tool
 [Inkscape-tutorial]: https://www.youtube.com/watch?v=1cZk08x_rAI
 [node.js]: https://nodejs.org/en/
 [make]: https://community.chocolatey.org/packages/make
+[deno]: https://community.chocolatey.org/packages/deno
 
 {{< /table/bootstrap-table >}}
 
