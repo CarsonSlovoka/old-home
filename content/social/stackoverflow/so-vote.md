@@ -549,6 +549,13 @@ next_section = ""
 [Declaring abstract method in TypeScript] | 使用abstract關鍵字 | typescript
 [Is it possible to compile a single TypeScript file to an output path using the tsc command?] | `tsc --out final.js app.ts` | typescript, tsc
 [Golang converting from rune to string] | https://go.dev/play/p/3Lzw91QbS_F | go, string, rune, unicode
+[batch/bat to copy folder and content at once] | `robocopy [source] [destination] /E` | windows, copy, directory
+[How can I use an ES6 import in Node.js?] | `require('http')` => `import * as Http from 'http'` | node.js, es6-modules
+[Possible to merge or nest ES6 imports?] | 可以創建一個index.js，然後`export * from ""`把各個項目填入 | javascript, import, mergem, ecmascript-6
+[How to make uglify and grunt index all imports and generate one single file] | `rollup --format es --input main.js -o bundle.js` | javascript, import, ecmascript-6
+[Typescript - Cannot find module 'http' on Visual Studio Code] | `npm install @types/node` | typescript, node.js
+[How to change node.js debug port?] | `node --inspect=7000 app.js` `node --inspect=127.0.0.1:7000 app.js` | node.js, debugging
+[How to get GET (query string) variables in Express.js on Node.js?] | `const query = url.parse(request.url, true).query;` | node.js, query-string
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -1081,6 +1088,13 @@ next_section = ""
 [Declaring abstract method in TypeScript]: https://stackoverflow.com/a/13335645/9935654
 [Is it possible to compile a single TypeScript file to an output path using the tsc command?]: https://stackoverflow.com/q/13507576/9935654
 [Golang converting from rune to string]: https://stackoverflow.com/q/39245610/9935654
+[batch/bat to copy folder and content at once]: https://stackoverflow.com/a/42070127/9935654
+[How can I use an ES6 import in Node.js?]: https://stackoverflow.com/a/56350495/9935654
+[Possible to merge or nest ES6 imports?]: https://stackoverflow.com/a/45483727/9935654
+[How to make uglify and grunt index all imports and generate one single file]: https://stackoverflow.com/a/74015620/9935654
+[Typescript - Cannot find module 'http' on Visual Studio Code]: https://stackoverflow.com/a/43461390/9935654
+[How to change node.js debug port?]: https://stackoverflow.com/a/18911247/9935654
+[How to get GET (query string) variables in Express.js on Node.js?]: https://stackoverflow.com/a/66628260/9935654
 
 {{< /table/bootstrap-table >}}
 
