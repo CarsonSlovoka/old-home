@@ -556,6 +556,13 @@ next_section = ""
 [Typescript - Cannot find module 'http' on Visual Studio Code] | `npm install @types/node` | typescript, node.js
 [How to change node.js debug port?] | `node --inspect=7000 app.js` `node --inspect=127.0.0.1:7000 app.js` | node.js, debugging
 [How to get GET (query string) variables in Express.js on Node.js?] | `const query = url.parse(request.url, true).query;` | node.js, query-string
+[FindResource returns NULL when trying to load a font from resources] | 使用MFC添加字型資源: 1. 開始.rc2檔案，新增 IDF_XXX FONT "C:\\xxx\\my.ttf" 2. 於Resource.h新增該IDF_XXX的數值 3. 建置記得選得對的架構(x64) | winapi, embedded-resource
+[LoadLibrary always return NULL] | 有可能您建置的應用程式的架構不相符，例如32要在64上跑就會出現問題，請確保它們的架構是一致的 | winapi, loadlibrary
+[golang: winapi call with struct parameter] | | winapi, windows
+[Any tool/software in windows for viewing ELF file format?] | | windows, assembly, elf
+[Simple way to copy a file] | | winapi
+[Is it possible to open a Windows Explorer window from PowerShell?] | `Invoke-Expression "explorer '/select,%userprofile%\.gitconfig'"` | powershell, explorer
+[Save HBITMAP to *.bmp file using only Win32] | | winapi, hbitmap
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -1095,6 +1102,13 @@ next_section = ""
 [Typescript - Cannot find module 'http' on Visual Studio Code]: https://stackoverflow.com/a/43461390/9935654
 [How to change node.js debug port?]: https://stackoverflow.com/a/18911247/9935654
 [How to get GET (query string) variables in Express.js on Node.js?]: https://stackoverflow.com/a/66628260/9935654
+[LoadLibrary always return NULL]: https://stackoverflow.com/a/22684362/9935654
+[FindResource returns NULL when trying to load a font from resources]: https://stackoverflow.com/q/46473835/9935654
+[golang: winapi call with struct parameter]: https://stackoverflow.com/q/39961171/9935654
+[Any tool/software in windows for viewing ELF file format?]: https://stackoverflow.com/q/2221806/9935654
+[Simple way to copy a file]: https://stackoverflow.com/a/42364225/9935654
+[Is it possible to open a Windows Explorer window from PowerShell?]: https://stackoverflow.com/a/12162855/9935654
+[Save HBITMAP to *.bmp file using only Win32]: https://stackoverflow.com/q/24720451/9935654
 
 {{< /table/bootstrap-table >}}
 
