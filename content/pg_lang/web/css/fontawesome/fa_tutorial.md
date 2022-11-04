@@ -266,6 +266,9 @@ bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的�
 🕹️ | Joystick | 1F579
 🚚 | Delivery Truck | 1F69A
 🧄 | Garlic | 1F9C4
+🇹 | | 1F1F9
+🇼 | | 1F1FC
+🇹🇼 | Taiwan flag | 由1F1F9和1F1FC組成
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 

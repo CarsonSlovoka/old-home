@@ -563,6 +563,11 @@ next_section = ""
 [Simple way to copy a file] | | winapi
 [Is it possible to open a Windows Explorer window from PowerShell?] | `Invoke-Expression "explorer '/select,%userprofile%\.gitconfig'"` | powershell, explorer
 [Save HBITMAP to *.bmp file using only Win32] | | winapi, hbitmap
+[In Go, how can I convert a struct to a byte array?] | `(*(*[sz]byte)(unsafe.Pointer(&structValue)))[:]` | struct, go, byte, array
+[How to append data on a file in win32] | | winapi, file
+[golang: convert uint32 (or any built-in type) to byte (to be written in a file)] | `binary.LittleEndian.PutUint32(outputBytes, myUint32Val)` | arrays, go, byte, unsafe
+[panic: SetUint using value obtained using unexported field] | 結構小寫的時候會導致: `SetUint using value obtained using unexported field` 不要用小寫名稱 | arrays, go
+[Save HICON as a png] | | |
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -1109,6 +1114,11 @@ next_section = ""
 [Simple way to copy a file]: https://stackoverflow.com/a/42364225/9935654
 [Is it possible to open a Windows Explorer window from PowerShell?]: https://stackoverflow.com/a/12162855/9935654
 [Save HBITMAP to *.bmp file using only Win32]: https://stackoverflow.com/q/24720451/9935654
+[In Go, how can I convert a struct to a byte array?]: https://stackoverflow.com/a/56272984/9935654
+[How to append data on a file in win32]: https://stackoverflow.com/q/43529314/9935654
+[golang: convert uint32 (or any built-in type) to byte (to be written in a file)]: https://stackoverflow.com/a/29062148/9935654
+[panic: SetUint using value obtained using unexported field]: https://stackoverflow.com/a/53295797/9935654
+[Save HICON as a png]: https://stackoverflow.com/a/22885412/9935654
 
 {{< /table/bootstrap-table >}}
 
