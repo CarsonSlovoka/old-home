@@ -568,6 +568,10 @@ next_section = ""
 [golang: convert uint32 (or any built-in type) to byte (to be written in a file)] | `binary.LittleEndian.PutUint32(outputBytes, myUint32Val)` | arrays, go, byte, unsafe
 [panic: SetUint using value obtained using unexported field] | 結構小寫的時候會導致: `SetUint using value obtained using unexported field` 不要用小寫名稱 | arrays, go
 [Save HICON as a png] | | |
+[Does anyone have a FileSystemWatcher-like class in C++/WinAPI?] | | |
+[Load window icon dynamically] | | | winapi, icons
+[C++ CreateWindowEx returns NULL] | | | winapi
+[Why does len() returned a signed value?] | 先轉uintptr再轉過去，例如 `int16(uintptr(len(myObj)))` | go, array, variable-length
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -1119,6 +1123,10 @@ next_section = ""
 [golang: convert uint32 (or any built-in type) to byte (to be written in a file)]: https://stackoverflow.com/a/29062148/9935654
 [panic: SetUint using value obtained using unexported field]: https://stackoverflow.com/a/53295797/9935654
 [Save HICON as a png]: https://stackoverflow.com/a/22885412/9935654
+[Does anyone have a FileSystemWatcher-like class in C++/WinAPI?]: https://stackoverflow.com/q/2107275/9935654
+[Load window icon dynamically]: https://stackoverflow.com/a/13187774/9935654
+[C++ CreateWindowEx returns NULL]: https://stackoverflow.com/q/13661912/9935654
+[Why does len() returned a signed value?]: https://stackoverflow.com/a/58308166/9935654
 
 {{< /table/bootstrap-table >}}
 
