@@ -572,6 +572,9 @@ next_section = ""
 [Load window icon dynamically] | | | winapi, icons
 [C++ CreateWindowEx returns NULL] | | | winapi
 [Why does len() returned a signed value?] | 先轉uintptr再轉過去，例如 `int16(uintptr(len(myObj)))` | go, array, variable-length
+[Loading icons with transparency to tray menu of application] | | |
+[Setting WH_KEYBOARD hook fails with error 1428] | 如果要安裝全局鉤子(HOOK)，請用含有`LL`的型態，例如`WH_KEYBOARD_LL`，否則會遇到`Cannot set nonlocal hook without a module handle.`的錯誤 | winapi
+[Best way to suspend low level hook (winapi)] | 1. Unhook 2. 跳過, 不要呼叫CallNextHookEx | winapi, hook
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -1127,6 +1130,9 @@ next_section = ""
 [Load window icon dynamically]: https://stackoverflow.com/a/13187774/9935654
 [C++ CreateWindowEx returns NULL]: https://stackoverflow.com/q/13661912/9935654
 [Why does len() returned a signed value?]: https://stackoverflow.com/a/58308166/9935654
+[Loading icons with transparency to tray menu of application]: https://stackoverflow.com/q/45117329/9935654
+[Setting WH_KEYBOARD hook fails with error 1428]: https://stackoverflow.com/a/20903216/9935654
+[Best way to suspend low level hook (winapi)]: https://stackoverflow.com/a/21362830/9935654
 
 {{< /table/bootstrap-table >}}
 
