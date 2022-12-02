@@ -579,6 +579,12 @@ next_section = ""
 [SendInput wrong Parameter] | SendInput wrong Parameter: `The parameter is incorrect.` 可能是最後一個參數大小傳錯了，他不是指整個的大小，而是單一大小 | winapi, sendinput
 [Passing a string into SendInput() (C++)] | | winapi, sendinput
 [change volume win32 c++] | | winapi, volume
+[addEventListener on custom object] | | addEventListener
+[Use requestAnimationFrame in a class] | 使用arrow function來取代 |
+[How do you set focus to the HTML5 canvas element?] | `document.querySelector("canvas").focus()` | canvas, focus, javascript
+[How to fetch (using Fetch API) only headers in Javascript, not the whole content?] | `fetch(url, {method: 'HEAD'})` | html5-audio
+[Check if image exists on server using JavaScript?] | `fetch(url, {method: 'HEAD'})` | javascript
+[Intellij Idea warning - "Promise returned is ignored" with aysnc/await] | 回傳值如果是Promise要不是使用await去接收，不然就是用then(或catch)得到最後的結果。如果都不處理就會有警告跑出來 | typescript, es6-promise
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -1141,6 +1147,12 @@ next_section = ""
 [SendInput wrong Parameter]: https://stackoverflow.com/a/50874976/9935654
 [Passing a string into SendInput() (C++)]: https://stackoverflow.com/a/49503707/9935654
 [change volume win32 c++]: https://stackoverflow.com/q/699603/9935654
+[addEventListener on custom object]: https://stackoverflow.com/a/74611093/9935654
+[Use requestAnimationFrame in a class]: https://stackoverflow.com/a/28909471/9935654
+[How do you set focus to the HTML5 canvas element?]: https://stackoverflow.com/q/56771/9935654
+[How to fetch (using Fetch API) only headers in Javascript, not the whole content?]: https://stackoverflow.com/a/47241400/9935654
+[Check if image exists on server using JavaScript?]: https://stackoverflow.com/q/18837735/9935654
+[Intellij Idea warning - "Promise returned is ignored" with aysnc/await]: https://stackoverflow.com/a/56796334/9935654
 
 {{< /table/bootstrap-table >}}
 
