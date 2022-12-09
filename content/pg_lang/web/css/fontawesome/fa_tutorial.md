@@ -171,6 +171,8 @@ bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的�
 ⭕ | hollow_red_circle | 2B55
 🌎 | World Emoji Day | 1F30E
 🌱 | Earth Day | 1F331
+🐌 | Snail | 1F40C
+🐢 | Turtle | 1F422
 🐬 | Dolphin | 1F42C
 🐳 | Spouting Whale | 1F433
 📁 | FILE FOLDER | 1F4C1

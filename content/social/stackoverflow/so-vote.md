@@ -198,7 +198,7 @@ next_section = ""
 [Convert HTML5 Canvas Sequence to a Video File] | | js
 [Switch current tab from notification in Google Chrome extension] | ``chrome.tabs.update(tabId, {highlighted: true})`` | google-chrome-extension
 [How do I delete an extension in my Chrome developer dashboard?] | | google-chrome-extension
-[JavaScript set object key by variable] | ``{ [yourKeyVariable]: someValueArray }``  | js
+[JavaScript set object key by variable] | ``{ [yourKeyVariable]: someValueArray }`` | js
 [Cannot create DocumentFragment storing td, tr or th?] | 就是很奇怪td,th這類的不能這樣用。乖乖的用document.createElement再慢慢的添加到指定的節點去 | js
 [How to specify max-height css property to Screen size] | ``.scrollDiv {max-height: 100vh;overflow: auto;}`` | js
 [How to execute an arithmetic operation inside a string in Javascript?] | ``eval`` | js
@@ -467,7 +467,7 @@ next_section = ""
 [If I fork someone else's private Github repo into my account, is it going to appear in my account as a public repo?] | | github, git
 [How to get the current timestamp in other timezones in Golang?] | | go, time
 [How to update hour, min, sec in golang time?] | `time.Now().UTC().Truncate(24*time.Hour)` | go, time
-[Generating random numbers over a range in Go] | `rand.Seed(time.Now().UnixNano())` `rand.Intn(max - min) + min`  | go, rand
+[Generating random numbers over a range in Go] | `rand.Seed(time.Now().UnixNano())` `rand.Intn(max - min) + min` | go, rand
 [Subtracting time.Duration from time in Go] | 減一天 `now.AddDate(0, -1, 0)`  少10分鐘`now.Add(time.Duration(-10) * time.Minute)` | go, datetime
 [How to use next available port in http.ListenAndServe] | `http.ListenAndServe(":0", nil)` | go, http, port
 [How to search for an element in a golang slice] | | go, slice
@@ -585,6 +585,15 @@ next_section = ""
 [How to fetch (using Fetch API) only headers in Javascript, not the whole content?] | `fetch(url, {method: 'HEAD'})` | html5-audio
 [Check if image exists on server using JavaScript?] | `fetch(url, {method: 'HEAD'})` | javascript
 [Intellij Idea warning - "Promise returned is ignored" with aysnc/await] | 回傳值如果是Promise要不是使用await去接收，不然就是用then(或catch)得到最後的結果。如果都不處理就會有警告跑出來 | typescript, es6-promise
+[TypeScript, bind multiple params to same type] | `function add<T extends string>(x: T: y:T):T` | typescript, generics
+[How can you find the height of text on an HTML canvas?] | `ctx.measureText(text).fontBoundingBoxAscent + Descent`, `actualBoundingBoxAscent` | javascript, canvas
+[Calling anonymous function in HTML] | `<button onclick="(()=>{})()"></button>` | html, annotations, javascript
+[How to get a list of the name of every open window?] | EnumWindows | winapi
+[Screen Capture Specific Window] | 沒辦法直接用hdc去畫，但我們可以直接利用整個desktopWindow，在把我們有興趣的hwnd的rect抓出來，在投射出來即可 | winapi, gdi
+[win32: check if window is minimized] | [IsIconic](https://learn.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-isiconic?redirectedfrom=MSDN) | winapi
+[What does __declspec(uuid(" ComObjectGUID ")) expand to?] |
+[What is __declspec and when do I need to use it?] |
+[Call COM object method from Go without CGo] |
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -1153,6 +1162,15 @@ next_section = ""
 [How to fetch (using Fetch API) only headers in Javascript, not the whole content?]: https://stackoverflow.com/a/47241400/9935654
 [Check if image exists on server using JavaScript?]: https://stackoverflow.com/q/18837735/9935654
 [Intellij Idea warning - "Promise returned is ignored" with aysnc/await]: https://stackoverflow.com/a/56796334/9935654
+[TypeScript, bind multiple params to same type]: https://stackoverflow.com/a/40723883/9935654
+[How can you find the height of text on an HTML canvas?]: https://stackoverflow.com/a/45789011/9935654
+[Calling anonymous function in HTML]: https://stackoverflow.com/a/74687122/9935654
+[How to get a list of the name of every open window?]: https://stackoverflow.com/a/55548074/9935654
+[Screen Capture Specific Window]: https://stackoverflow.com/a/74740589/9935654
+[win32: check if window is minimized]: https://stackoverflow.com/a/4309305/9935654
+[What does __declspec(uuid(" ComObjectGUID ")) expand to?]: https://stackoverflow.com/q/6219941/9935654
+[What is __declspec and when do I need to use it?]: https://stackoverflow.com/q/2284610/9935654
+[Call COM object method from Go without CGo]: https://stackoverflow.com/q/39162054/9935654
 
 {{< /table/bootstrap-table >}}
 
