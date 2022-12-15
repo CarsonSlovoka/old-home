@@ -594,6 +594,7 @@ next_section = ""
 [What does __declspec(uuid(" ComObjectGUID ")) expand to?] |
 [What is __declspec and when do I need to use it?] |
 [Call COM object method from Go without CGo] |
+[How to compare if two structs, slices or maps are equal?] | | go, go-reflect
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -1171,6 +1172,7 @@ next_section = ""
 [What does __declspec(uuid(" ComObjectGUID ")) expand to?]: https://stackoverflow.com/q/6219941/9935654
 [What is __declspec and when do I need to use it?]: https://stackoverflow.com/q/2284610/9935654
 [Call COM object method from Go without CGo]: https://stackoverflow.com/q/39162054/9935654
+[How to compare if two structs, slices or maps are equal?]: https://stackoverflow.com/q/24534072/9935654
 
 {{< /table/bootstrap-table >}}
 
