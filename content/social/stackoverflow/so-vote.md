@@ -595,6 +595,8 @@ next_section = ""
 [What is __declspec and when do I need to use it?] |
 [Call COM object method from Go without CGo] |
 [How to compare if two structs, slices or maps are equal?] | | go, go-reflect
+[How to kill processes by name? (Win32 API)] | CreateToolhelp32Snapshot, OpenProcess, TerminateProcess, CloseHandle | winapi
+[What is the equivalent to WinAPI in Linux and macOS?] | Linux API, Cocoa API
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -1173,6 +1175,8 @@ next_section = ""
 [What is __declspec and when do I need to use it?]: https://stackoverflow.com/q/2284610/9935654
 [Call COM object method from Go without CGo]: https://stackoverflow.com/q/39162054/9935654
 [How to compare if two structs, slices or maps are equal?]: https://stackoverflow.com/q/24534072/9935654
+[How to kill processes by name? (Win32 API)]: https://stackoverflow.com/a/7956651/9935654
+[What is the equivalent to WinAPI in Linux and macOS?]: https://stackoverflow.com/a/57451665/9935654
 
 {{< /table/bootstrap-table >}}
 
