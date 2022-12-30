@@ -188,6 +188,7 @@ bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的�
 🕮 | Book | 1F56E
 🖿 | Black Folder | 1F5BF
 🗂️ | Card Index Dividers | 1F5C2
+🧙 | Mage | 1F9D9
 🧾 | Receipt | 1F9FE
 🔔 | BELL\n叮嚀 | 1F514
 🕷️ | Spider | 1F577
