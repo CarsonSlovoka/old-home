@@ -597,6 +597,10 @@ next_section = ""
 [How to compare if two structs, slices or maps are equal?] | | go, go-reflect
 [How to kill processes by name? (Win32 API)] | CreateToolhelp32Snapshot, OpenProcess, TerminateProcess, CloseHandle | winapi
 [What is the equivalent to WinAPI in Linux and macOS?] | Linux API, Cocoa API
+[Unknown compiler options include & exclude] | include, exclude不是compilerOptions的子項目 | typescript
+[exclude subdirectories in tsconfig.json] | | typescript
+[Why does the WinAPI use an int (32 bits) for the BOOL type?] | 以前的C沒有bool的型別，所以屬於歷史包袱 | winapi
+[how to implement macros in Go?] | 可以使用const，或者使用code generation。 如果macro誕生，go的代碼可能會變得更難讀(很多炫技會出現) | go, macros
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -1177,6 +1181,10 @@ next_section = ""
 [How to compare if two structs, slices or maps are equal?]: https://stackoverflow.com/q/24534072/9935654
 [How to kill processes by name? (Win32 API)]: https://stackoverflow.com/a/7956651/9935654
 [What is the equivalent to WinAPI in Linux and macOS?]: https://stackoverflow.com/a/57451665/9935654
+[Unknown compiler options include & exclude]: https://stackoverflow.com/a/56966602/9935654
+[exclude subdirectories in tsconfig.json]: https://stackoverflow.com/q/35647862/9935654
+[Why does the WinAPI use an int (32 bits) for the BOOL type?]: https://stackoverflow.com/q/11129601/9935654
+[how to implement macros in Go?]: https://stackoverflow.com/a/49530118/9935654
 
 {{< /table/bootstrap-table >}}
 
