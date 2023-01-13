@@ -601,6 +601,8 @@ next_section = ""
 [exclude subdirectories in tsconfig.json] | | typescript
 [Why does the WinAPI use an int (32 bits) for the BOOL type?] | 以前的C沒有bool的型別，所以屬於歷史包袱 | winapi
 [how to implement macros in Go?] | 可以使用const，或者使用code generation。 如果macro誕生，go的代碼可能會變得更難讀(很多炫技會出現) | go, macros
+[NOTIFY ICON Click Win32 Api in c++] | 不建議使用`NOTIFYICONDATA.GuidItem`會有很多問題，可能會導致NIM_ADD失敗(這種方式會直接去寫註冊檔，應用程式路徑似乎也會一併影響，因此對於debug的程式名稱會一直異動也不適合用這個 | winapi, notifyIcon
+[How to unmarshal an escaped JSON string] | 對於那些會自動補上`\`可能會導致go使用`json.Unmarshal`發生問題，這時候要先用`strconv.Unquote`把反斜線刪除即可 | go, json
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -1185,6 +1187,8 @@ next_section = ""
 [exclude subdirectories in tsconfig.json]: https://stackoverflow.com/q/35647862/9935654
 [Why does the WinAPI use an int (32 bits) for the BOOL type?]: https://stackoverflow.com/q/11129601/9935654
 [how to implement macros in Go?]: https://stackoverflow.com/a/49530118/9935654
+[NOTIFY ICON Click Win32 Api in c++]: https://stackoverflow.com/a/38808559/9935654
+[How to unmarshal an escaped JSON string]: https://stackoverflow.com/a/16847249/9935654
 
 {{< /table/bootstrap-table >}}
 
