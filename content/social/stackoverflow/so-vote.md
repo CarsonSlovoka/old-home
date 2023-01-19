@@ -603,6 +603,12 @@ next_section = ""
 [how to implement macros in Go?] | 可以使用const，或者使用code generation。 如果macro誕生，go的代碼可能會變得更難讀(很多炫技會出現) | go, macros
 [NOTIFY ICON Click Win32 Api in c++] | 不建議使用`NOTIFYICONDATA.GuidItem`會有很多問題，可能會導致NIM_ADD失敗(這種方式會直接去寫註冊檔，應用程式路徑似乎也會一併影響，因此對於debug的程式名稱會一直異動也不適合用這個 | winapi, notifyIcon
 [How to unmarshal an escaped JSON string] | 對於那些會自動補上`\`可能會導致go使用`json.Unmarshal`發生問題，這時候要先用`strconv.Unquote`把反斜線刪除即可 | go, json
+[How to catch and deal with "WebSocket is already in CLOSING or CLOSED state" in Node] | `new WebSocket().readyState === ws.OPEN` | javascript, websocket
+[Refused to display in a frame because it set 'X-Frame-Options' to 'SAMEORIGIN'] | 可以試試看最後面補上`&output=embed`或者`'&embedded=true`| iframe
+[Overcoming "Display forbidden by X-Frame-Options"] | | iframe
+[How to set 'X-Frame-Options' on iframe?] | https://github.com/MicrosoftEdge/WebView2Feedback/issues/1243 | iframe
+[What is the maximum length of a URL in different browsers?] | 建議用2000左右 | url
+
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -1189,6 +1195,11 @@ next_section = ""
 [how to implement macros in Go?]: https://stackoverflow.com/a/49530118/9935654
 [NOTIFY ICON Click Win32 Api in c++]: https://stackoverflow.com/a/38808559/9935654
 [How to unmarshal an escaped JSON string]: https://stackoverflow.com/a/16847249/9935654
+[How to catch and deal with "WebSocket is already in CLOSING or CLOSED state" in Node]: https://stackoverflow.com/a/54061045/9935654
+[Refused to display in a frame because it set 'X-Frame-Options' to 'SAMEORIGIN']: https://stackoverflow.com/a/20534612/9935654
+[Overcoming "Display forbidden by X-Frame-Options"]: https://stackoverflow.com/q/6666423/9935654
+[How to set 'X-Frame-Options' on iframe?]: https://stackoverflow.com/a/27359037/9935654
+[What is the maximum length of a URL in different browsers?]: https://stackoverflow.com/q/417142/9935654
 
 {{< /table/bootstrap-table >}}
 
