@@ -169,8 +169,12 @@ MMD(MultiMarkdown). It supports more export-formats and implements some added fe
 ```
 Languages & Frameworks
     -> Markdown.
-        -> Enable either Mermaid or PlantUML under Markdown extensions.
+        -> [V] Enable either Mermaid or PlantUML under Markdown extensions.
 ```
+
+> 上面的選項一定要打勾，如果沒安裝會自己去下載，即便你拿下載好的檔案放到指定資料夾也不行
+>
+> 如果下載失敗，請檢查防火牆，是否有阻擋到連線
 
 > 其他參考連結
 > - https://www.jetbrains.com/go/guide/tips/mermaid-js-support-in-markdown/
@@ -180,9 +184,24 @@ Languages & Frameworks
 
 替換方法，來到此工作目錄
 
+```yaml
+%userprofile%\AppData\Local\JetBrains\GoLand2020.3\download-cache\mermaid\mermaid\mermaid.js
+%LOCALAPPDATA%\JetBrains\GoLand2020.3\download-cache\mermaid\mermaid\mermaid.js # 同上
+%LOCALAPPDATA%\JetBrains\GoLand2022.1\markdown\download\mermaidlanguageextension\mermaid # 不同版本所存放的位置可能不同，不一定都是在download-cache裡
 ```
-%userprofile%\AppData\Local\JetBrains\GoLand2020.3\download-cache\mermaid\mermaid
+
+如果您在以上的路徑都找不到mermaid.js不曉得要怎麼置換掉，我建議直接到goland資料夾，查找，例如:
+```yaml
+cd %LOCALAPPDATA%\JetBrains\GoLand2022.1
+dir /s mermaid.js # 理論上這個指令會找到，因為您一定要先讓checkbox打勾，打勾之後會自動下載預設版本，再把這個版本置換成新的即可
 ```
+
+
+> 補充: 其實[jetbrains常碰到的資料夾路徑](https://intellij-support.jetbrains.com/hc/en-us/articles/206544519-Directories-used-by-the-IDE-to-store-settings-caches-plugins-and-logs)
+> - Configuration (idea.config.path): `%APPDATA%\JetBrains\IntelliJIdea2022.2`
+> - Plugins (idea.plugins.path): `%APPDATA%\JetBrains\IntelliJIdea2022.2\plugins`
+> - System (idea.system.path): `%LOCALAPPDATA%\JetBrains\IntelliJIdea2022.2`
+> - Logs (idea.log.path): `%LOCALAPPDATA%\JetBrains\IntelliJIdea2022.2\log`
 
 把mermaid.js替換掉即可，可以到此[下載mermaid.js](https://cdn.jsdelivr.net/npm/mermaid/dist/)
 
@@ -197,9 +216,38 @@ pie title Pets adopted by volunteers
 
 成果如下
 
+pie
 ```mermaid
 pie title Pets adopted by volunteers
     "Dogs" : 386
     "Cats" : 85
     "Rats" : 15
+```
+
+C4Context
+```mermaid
+C4Context
+title System Context diagram for Internet Banking System
+Person(customerA, "Banking Customer A", "A customer of the bank, with personal bank accounts.")
+Person(customerB, "Banking Customer B")
+Person_Ext(customerC, "Banking Customer C")
+System(SystemAA, "Internet Banking System", "Allows customers to view information about their bank accounts, and make payments.")
+Person(customerD, "Banking Customer D", "A customer of the bank, <br/> with personal bank accounts.")
+Enterprise_Boundary(b1, "BankBoundary") {
+  SystemDb_Ext(SystemE, "Mainframe Banking System", "Stores all of the core banking information about customers, accounts, transactions, etc.")
+  System_Boundary(b2, "BankBoundary2") {
+    System(SystemA, "Banking System A")
+    System(SystemB, "Banking System B", "A system of the bank, with personal bank accounts.")
+  }
+  System_Ext(SystemC, "E-mail system", "The internal Microsoft Exchange e-mail system.")
+  SystemDb(SystemD, "Banking System D Database", "A system of the bank, with personal bank accounts.")
+  Boundary(b3, "BankBoundary3", "boundary") {
+    SystemQueue(SystemF, "Banking System F Queue", "A system of the bank, with personal bank accounts.")
+    SystemQueue_Ext(SystemG, "Banking System G Queue", "A system of the bank, with personal bank accounts.")
+  }
+}
+BiRel(customerA, SystemAA, "Uses")
+BiRel(SystemAA, SystemE, "Uses")
+Rel(SystemAA, SystemC, "Sends e-mails", "SMTP")
+Rel(SystemC, customerA, "Sends e-mails to")
 ```
