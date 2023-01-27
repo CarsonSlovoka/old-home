@@ -52,6 +52,42 @@ document 表示的是一個文檔對象，windows 表示一個窗口對象。
     Web Interface     http://127.0.0.1:8080    <-- 這個可以用來管理查看整個請求的狀況
     ```
 
+----
+
+ngrok已經不在提供給沒有註冊的帳號使用，必須註冊帳號之後才能用
+
+註冊好帳號登入之後
+
+它會自動根據您的OS，提供給您zip檔案下載
+
+完成之後解壓縮該zip檔案，之後使用您的token進行連接
+
+token可以進入到`Your AuthToken`進行修改.
+
+取得token之後執行命令
+
+> ngrok config add-authtoken 2KoRvRwnNKlqdZHWDfsX01dP93z_4hFtrS6XusYzo3tmu3PoL
+(以上的token已經無效，僅當作範例說明而已)
+
+即可完成設定，其中他會告訴您設定檔存放在哪裡，例如:
+
+> AuthToken saved to configuration file: `%localAppdata%/ngrok/ngrok.yml`
+
+其中ngrok.yml的內容如下:
+
+```yaml
+version: "2"
+authtoken: 2KoRvRwnNKlqdZHWDfsX01dP93z_4hFtrS6XusYzo3tmu3PoL # token已經無效，僅當作範例說明而已
+```
+
+----
+
+之後使用以下指令，即可連線(port可以自己更改)
+
+```
+ngrok http 80
+```
+
 ### 額外命令
 
 - Install your auth token: ``ngrok authtoken <YOUR_AUTHTOKEN>``
