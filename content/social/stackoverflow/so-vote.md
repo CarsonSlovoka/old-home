@@ -608,6 +608,12 @@ next_section = ""
 [Overcoming "Display forbidden by X-Frame-Options"] | | iframe
 [How to set 'X-Frame-Options' on iframe?] | https://github.com/MicrosoftEdge/WebView2Feedback/issues/1243 | iframe
 [What is the maximum length of a URL in different browsers?] | 建議用2000左右 | url
+[ES6: import module from URL] | | javascript, ecmascript-6, es6-modules, es6-module-loader
+[How to link files directly from Github (raw.github.com)] | 建立一個github page來導入，raw(blob)沒有辦法做到，他的回傳是`Content-Type: text/plain`，而非`text/javascript` | github, es6-modules
+[How to test a local bot?] | ngrok | localhost
+[Closed channel vs nil channel] | | go, channel
+[Detecting a mobile browser] | navigator.userAgent | javascript, userAgent
+[How to generate a stream of *unique* random numbers in Go using the standard library] | | go, random
 
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
@@ -1200,6 +1206,12 @@ next_section = ""
 [Overcoming "Display forbidden by X-Frame-Options"]: https://stackoverflow.com/q/6666423/9935654
 [How to set 'X-Frame-Options' on iframe?]: https://stackoverflow.com/a/27359037/9935654
 [What is the maximum length of a URL in different browsers?]: https://stackoverflow.com/q/417142/9935654
+[ES6: import module from URL]: https://stackoverflow.com/q/34607252/9935654
+[How to link files directly from Github (raw.github.com)]: https://stackoverflow.com/a/50598749/9935654
+[How to test a local bot?]: https://stackoverflow.com/q/37573932/9935654
+[Closed channel vs nil channel]: https://stackoverflow.com/a/43616486/9935654
+[Detecting a mobile browser]: https://stackoverflow.com/a/13819253/9935654
+[How to generate a stream of *unique* random numbers in Go using the standard library]: https://stackoverflow.com/a/59198083/9935654
 
 {{< /table/bootstrap-table >}}
 
