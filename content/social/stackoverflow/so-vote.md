@@ -614,6 +614,11 @@ next_section = ""
 [Closed channel vs nil channel] | | go, channel
 [Detecting a mobile browser] | navigator.userAgent | javascript, userAgent
 [How to generate a stream of *unique* random numbers in Go using the standard library] | | go, random
+[How to open the default web browser in Windows in C?] | `ShellExecute(NULL, "open", "http://url", NULL, NULL, SW_SHOWNORMAL)` | C, windows, winapi
+[how to get return value of an exe called by ShellExecute] | 使用ShellExecuteEx, GetExitCodeProcess | winapi, shellExecute
+[Pretty printing XML with javascript] | | javascript, xml, pretty-print
+[How can I merge two maps in go?] | | go, dictionary, union
+[function for converting a struct to map in Golang] | 利用json.Marshal把obj轉成[]byte再餵入json.Unmarshal輸出使用map[string]any即可達成 | go, dictionary
 
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
@@ -1212,6 +1217,11 @@ next_section = ""
 [Closed channel vs nil channel]: https://stackoverflow.com/a/43616486/9935654
 [Detecting a mobile browser]: https://stackoverflow.com/a/13819253/9935654
 [How to generate a stream of *unique* random numbers in Go using the standard library]: https://stackoverflow.com/a/59198083/9935654
+[How to open the default web browser in Windows in C?]: https://stackoverflow.com/a/3037117/9935654
+[how to get return value of an exe called by ShellExecute]: https://stackoverflow.com/a/10896836/9935654
+[Pretty printing XML with javascript]: https://stackoverflow.com/a/47317538/9935654
+[How can I merge two maps in go?]: https://stackoverflow.com/a/71652767/9935654
+[function for converting a struct to map in Golang]: https://stackoverflow.com/a/42849112/9935654
 
 {{< /table/bootstrap-table >}}
 
