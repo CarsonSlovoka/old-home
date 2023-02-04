@@ -169,54 +169,60 @@ bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的�
 ➖ | Plus| U+2796
 ⭐ | WHITE MEDIUM STAR | 2B50
 ⭕ | hollow_red_circle | 2B55
+󠁴🀄 | 中文 | 1F004
+🌈 | RAINBOW\nOnline Examples | 1F308
+🎉 | Party Popper、慶祝 | 1F389
+🎮 | Video game | 1F3A3
+🎨 | ARTIST PALETTE\nDesign Specification | 1F3A8
 🌎 | World Emoji Day | 1F30E
 🌱 | Earth Day | 1F331
 🐌 | Snail | 1F40C
+🐛  | Bug | 1F41B
 🐢 | Turtle | 1F422
 🐬 | Dolphin | 1F42C
 🐳 | Spouting Whale | 1F433
-📁 | FILE FOLDER | 1F4C1
-📂 | Open File Folder | 1F4C2
-📅 | Calendar | 1F4C5
-📙 | Orange book | 1F4D9
-📓 | Notebook | 1F4D3
-📖 | Open Book, docs | 1F4D6
-📚 | Books | 1F4DA
-📜 | Scroll, history, release note | 1F4DC
-📝 | Memo | 1F4DD
-🔖 | Bookmark | 1F516
-🕮 | Book | 1F56E
-🖿 | Black Folder | 1F5BF
-🗂️ | Card Index Dividers | 1F5C2
-🧙 | Mage | 1F9D9
-🧾 | Receipt | 1F9FE
-🔔 | BELL\n叮嚀 | 1F514
-🕷️ | Spider | 1F577
-🐛  | Bug | 1F41B
-󠁴🀄 | 中文 | 1F004
-🌈 | RAINBOW\nOnline Examples | 1F308
-💡 | Light Bulb, Fun fact: | 1F4A1
-💪 | enhancement | 1F4AA
-📰 | NEWSPAPER、歷史文章、資料來源 | 1F4F0
-👩‍💻 | ● 👩:Woman\n●💻: Personal computer | ●1F469\n●1F4BB | 這比較特別，他是兩個碼位組合而成的圖案
-👨‍💻 | ● 👨:Man\n●💻: Personal computer | ●1F468\n●1F4BB | 組合圖案
-👷 | 工人\nConstruction Worker | 1F477
-🎉 | Party Popper、慶祝 | 1F389
-🎮 | Video game | 1F3A3
-📦 | PACKAGE\nInstallation Guide | 1F4E6
-💿 | OPTICAL DISC | 1F4BF
-🎨 | ARTIST PALETTE\nDesign Specification | 1F3A8
-🖥 | DESKTOP COMPUTER | 1F5A5
-🕒 | Time | 1F552
-🔗 | LINK SYMBOL\nLinks | 1F517
-🗺 | WORLD MAP\nRoadmap | 1F5FA
-🤝 | Contributing | 1F91D
-💕 | TWO HEARTS\nDonation | 1F495
-👍 | Thumbs Up, Yes, Like, 讚 | 1F44D
 👆 | Pointing Up | 1F446
 👇 | Pointing Down | 1F447
 👈 | Pointing Left | 1F448
 👉 | Pointing Right | 1F449
+👑 | Crown |  1F451
+💡 | Light Bulb, Fun fact: | 1F4A1
+💪 | enhancement | 1F4AA
+💯 | Hundred points symbol| 1F4AF
+📁 | FILE FOLDER | 1F4C1
+📂 | Open File Folder | 1F4C2
+📓 | Notebook | 1F4D3
+📅 | Calendar | 1F4C5
+📖 | Open Book, docs | 1F4D6
+📈 | Chart Increasing | 1F4C8
+📉 | Chart Decreasing | 1F4C9
+📊 | Bar Chart | 1F4CA
+📙 | Orange book | 1F4D9
+📚 | Books | 1F4DA
+📜 | Scroll, history, release note | 1F4DC
+📝 | Memo | 1F4DD
+📢 | Loudspeaker, Announcement 廣播 | 1F4E2
+📥 | Inbox Tray, download | 1F4E5
+📰 | NEWSPAPER、歷史文章、資料來源 | 1F4F0
+📹 | Video Camera | 1F4F9
+📺 | Television | 1F4FA
+👩‍💻 | ● 👩:Woman\n●💻: Personal computer | ●1F469\n●1F4BB | 這比較特別，他是兩個碼位組合而成的圖案
+👨‍💻 | ● 👨:Man\n●💻: Personal computer | ●1F468\n●1F4BB | 組合圖案
+👷 | 工人\nConstruction Worker | 1F477
+📦 | PACKAGE\nInstallation Guide | 1F4E6
+💿 | OPTICAL DISC | 1F4BF
+💕 | TWO HEARTS\nDonation | 1F495
+👍 | Thumbs Up, Yes, Like, 讚 | 1F44D
+🔔 | BELL\n叮嚀 | 1F514
+🔖 | Bookmark | 1F516
+🕒 | Time | 1F552
+🕮 | Book | 1F56E
+🕷️ | Spider | 1F577
+🖥 | DESKTOP COMPUTER | 1F5A5
+🖿 | Black Folder | 1F5BF
+🗂️ | Card Index Dividers | 1F5C2
+🔗 | LINK SYMBOL\nLinks | 1F517
+🗺 | WORLD MAP\nRoadmap | 1F5FA
 😂 | Laughing | 1F602
 😅 | Grinning Face with Sweat | 1F605
 😡 | Enraged Face | 1F621
@@ -230,6 +236,7 @@ bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的�
 🙏 | Folded Hands, 拜託 | 1F64F
 🚀 | Rocket | 1F680
 🚨 | Police Car Light | 1F6A8
+🤝 | Contributing | 1F91D
 🤩 | Star-Struck | 1F929
 🥳 | Partying Face | 1F973
 🥴 | Drunk Face\nWoozy Face\nFace with Uneven Eyes and Wavy Mouth | 1F974
@@ -242,9 +249,11 @@ bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的�
 🥇 | 1st Place Medal | 1F947
 🥈 | 2nd Place Medal | 1F948
 🥉 | 3rd Place Medal | 1F949
-💯 | Hundred points symbol| 1F4AF
+🧄 | Garlic | 1F9C4
+🧙 | Mage | 1F9D9
+🧧 | Red Envelope\n紅包 | 1F9E7
+🧾 | Receipt | 1F9FE
 🎵 | Muscial Note | 1F3B5
-📥 | Inbox Tray, download | 1F4E5
 🗛 | Decrease Font Size Symbol | 1F5DB
 🔢 | Input Numbers | 1F522
 🔨 | Hammer | 1F528
@@ -256,19 +265,11 @@ bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的�
 ⬇️ | Down Arrow, Download | 2B07
 🌶️ | Hot Pepper | 1F336
 🍣 | Sushi | 1F363
-👑 | Crown |  1F451
-📈 | Chart Increasing | 1F4C8
-📉 | Chart Decreasing | 1F4C9
-📊 | Bar Chart | 1F4CA
-📢 | Loudspeaker, Announcement 廣播 | 1F4E2
-📹 | Video Camera | 1F4F9
-📺 | Television | 1F4FA
 🔑 | Key | 1F511
 🔒 | Locked 安全性 | 1F512
 🔥 | Fire | 1F525
 🕹️ | Joystick | 1F579
 🚚 | Delivery Truck | 1F69A
-🧄 | Garlic | 1F9C4
 🇹 | | 1F1F9
 🇼 | | 1F1FC
 🇹🇼 | Taiwan flag | 由1F1F9和1F1FC組成
