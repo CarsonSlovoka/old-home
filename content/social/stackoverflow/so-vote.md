@@ -619,6 +619,11 @@ next_section = ""
 [Pretty printing XML with javascript] | | javascript, xml, pretty-print
 [How can I merge two maps in go?] | | go, dictionary, union
 [function for converting a struct to map in Golang] | 利用json.Marshal把obj轉成[]byte再餵入json.Unmarshal輸出使用map[string]any即可達成 | go, dictionary
+[POST data using the Content-Type multipart/form-data] | | curl, go, file-upload, multipart
+[How to get last-accessed date and time of file in Go?] | | go, last-modified
+[How to avoid very large files] | 一定要補上`http.MaxBytesReader(w, r.Body, MaxAllowedSize)`, 只有`r.ParseMultipartForm(MaxAllowedSize)`還是無效 | go
+[From io.Reader to string in Go] | `io.ReadAll(reader)` | go
+[Read Exif Metadata with Go] | |
 
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
@@ -1222,6 +1227,11 @@ next_section = ""
 [Pretty printing XML with javascript]: https://stackoverflow.com/a/47317538/9935654
 [How can I merge two maps in go?]: https://stackoverflow.com/a/71652767/9935654
 [function for converting a struct to map in Golang]: https://stackoverflow.com/a/42849112/9935654
+[POST data using the Content-Type multipart/form-data]: https://stackoverflow.com/a/20397167/9935654
+[How to get last-accessed date and time of file in Go?]: https://stackoverflow.com/a/55303743/9935654
+[How to avoid very large files]: https://stackoverflow.com/q/73423917/9935654
+[From io.Reader to string in Go]: https://stackoverflow.com/a/9650373/9935654
+[Read Exif Metadata with Go]: https://stackoverflow.com/a/60500680/9935654
 
 {{< /table/bootstrap-table >}}
 

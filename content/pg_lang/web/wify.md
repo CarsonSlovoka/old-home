@@ -20,7 +20,7 @@ Wi-Fi | 是泛指所有符合Wi-Fi認證的無線**設備**，你也可以看做
 Wifly | 是提供Wi-Fi上網的一項**服務**，你也可以看做是能Wi-Fi上網的地方。
 
 
-## 取得Wifly密碼
+## 取得Wi-Fi密碼
 
 ```
 netsh wlan show profiles # 顯示所有使用者資訊
