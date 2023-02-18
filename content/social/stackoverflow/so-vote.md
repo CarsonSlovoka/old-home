@@ -624,6 +624,16 @@ next_section = ""
 [How to avoid very large files] | 一定要補上`http.MaxBytesReader(w, r.Body, MaxAllowedSize)`, 只有`r.ParseMultipartForm(MaxAllowedSize)`還是無效 | go
 [From io.Reader to string in Go] | `io.ReadAll(reader)` | go
 [Read Exif Metadata with Go] | |
+[Go doing a GET request and building the Querystring] | `request.URL.Query().Set("key", val)`
+[Validating Google sign in ID token in Go] | | go, google-app-engine
+[Google sign in website Error : Permission denied to generate login hint for target domain] | 使用`http://localhost:xxxx`而不是`http:127.0.0.1:xxxx` | google-oauth, google-signin, authentication
+[Google: Permission denied to generate login hint for target domain NOT on localhost] | | google-signin
+[Google API authentication: Not valid origin for the client] | |
+[The given origin is not allowed for the given client ID (GSI)] | 記得是使用`http://localhost:xxxx`來測試，同時`http://localhost`, `http://localhost:xxxx`這兩個都要是google cloud的設定補上
+[How can I verify a Google authentication API access token?] | `https://oauth2.googleapis.com/tokeninfo?id_token=XYZ123`
+[Use golang to get RSA key the same way openssl genrsa] |
+[Win32: Is it possible to show the window but to hide it from taskbar?] |
+[Unable to attach event to an element in contextual fragment] | 使用DOMParser，不要使用fragment來處理(fragment會自動觸發一些項目，例如像嘗試去GET某些項目) `new DOMParser().parseFromString("<div>hello world</div>" , 'text/html')` | javascript, dom
 
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
@@ -1232,6 +1242,16 @@ next_section = ""
 [How to avoid very large files]: https://stackoverflow.com/q/73423917/9935654
 [From io.Reader to string in Go]: https://stackoverflow.com/a/9650373/9935654
 [Read Exif Metadata with Go]: https://stackoverflow.com/a/60500680/9935654
+[Go doing a GET request and building the Querystring]: https://stackoverflow.com/a/49955992/9935654
+[Validating Google sign in ID token in Go]: https://stackoverflow.com/q/36716117/9935654
+[Google sign in website Error : Permission denied to generate login hint for target domain]: https://stackoverflow.com/a/32211878/9935654
+[Google: Permission denied to generate login hint for target domain NOT on localhost]: https://stackoverflow.com/a/48456350/9935654
+[Google API authentication: Not valid origin for the client]: https://stackoverflow.com/q/42566296/9935654
+[The given origin is not allowed for the given client ID (GSI)]: https://stackoverflow.com/q/68438293/9935654
+[How can I verify a Google authentication API access token?]: https://stackoverflow.com/q/359472/9935654
+[Use golang to get RSA key the same way openssl genrsa]: https://stackoverflow.com/a/64105068/9935654
+[Win32: Is it possible to show the window but to hide it from taskbar?]: https://stackoverflow.com/q/33538264/9935654
+[Unable to attach event to an element in contextual fragment]: https://stackoverflow.com/a/49473948/9935654
 
 {{< /table/bootstrap-table >}}
 
