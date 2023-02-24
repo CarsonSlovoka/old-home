@@ -634,6 +634,7 @@ next_section = ""
 [Use golang to get RSA key the same way openssl genrsa] |
 [Win32: Is it possible to show the window but to hide it from taskbar?] |
 [Unable to attach event to an element in contextual fragment] | 使用DOMParser，不要使用fragment來處理(fragment會自動觸發一些項目，例如像嘗試去GET某些項目) `new DOMParser().parseFromString("<div>hello world</div>" , 'text/html')` | javascript, dom
+[Decoding JWT in Google Apps Script] | `Utilities.newBlob(Utilities.base64Decode(body)).getDataAsString()` | google-apps-script, jwt
 
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
@@ -1252,6 +1253,7 @@ next_section = ""
 [Use golang to get RSA key the same way openssl genrsa]: https://stackoverflow.com/a/64105068/9935654
 [Win32: Is it possible to show the window but to hide it from taskbar?]: https://stackoverflow.com/q/33538264/9935654
 [Unable to attach event to an element in contextual fragment]: https://stackoverflow.com/a/49473948/9935654
+[Decoding JWT in Google Apps Script]: https://stackoverflow.com/q/63975006/9935654
 
 {{< /table/bootstrap-table >}}
 
