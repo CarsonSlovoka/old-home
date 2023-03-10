@@ -57,7 +57,7 @@ Reformat Code | {{< hotkey "Ctrl+Alt+Enter" >}} | 很好用，gitignore準備好
 Add leading space to comments | ☑ | 可以在打完註解``//``自動多一個空白
 Insert Paired brackets\n(), [], {}, <> | ☐  | 我是不喜歡這種設定，很愚蠢，每次打完還要再用方向鍵不能連著打 | Editor > General > Smart Keys
 Insert pair quote | ☐  | 同上 | Editor > General > Smart Keys
-Change font size with\n``Ctrl+Mouse Wheel`` | ☑ | 可以用滾輪來改變font-size
+Change font size with\n``Ctrl+Mouse Wheel`` | ☑ | 可以用滾輪來改變font-size (記得選擇all editors)
 
 {{< /table/bootstrap-table >}}
 
