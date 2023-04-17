@@ -69,6 +69,10 @@ Change font size with\n``Ctrl+Mouse Wheel`` | ☑ | 可以用滾輪來改變font
 
 ## Editor
 
+### File Types
+
+- gohtml樣板設定: `Settings\Editor\File Types` 選擇Go template files可以自定義讓某些附檔名也用got templates files的方式來解析，一般而言是`*.gohtml`
+
 ### Font
 
 - Font: ``JetBrains Mono`` (或 ``Fira Code Retina``
