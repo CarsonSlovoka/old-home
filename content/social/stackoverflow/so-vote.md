@@ -637,6 +637,7 @@ next_section = ""
 [Decoding JWT in Google Apps Script] | `Utilities.newBlob(Utilities.base64Decode(body)).getDataAsString()` | google-apps-script, jwt
 [How to solve "error: Microsoft Visual C++ 14.0 or greater is required" when installing Python packages?] | 需要安裝[Microsoft C++ Build Tools](https://visualstudio.microsoft.com/zh-hant/visual-cpp-build-tools/) | afdko, python
 [powershell unable to find type Windows.UI.Notification] | [Generating Windows 10 Notifications With PowerShell](https://den.dev/blog/powershell-windows-notification/) | powershell
+[What are the numbers in Tesseract box file?] | | tesseract, box
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -1257,6 +1258,7 @@ next_section = ""
 [Decoding JWT in Google Apps Script]: https://stackoverflow.com/q/63975006/9935654
 [How to solve "error: Microsoft Visual C++ 14.0 or greater is required" when installing Python packages?]: https://stackoverflow.com/a/64262038/9935654
 [powershell unable to find type Windows.UI.Notification]: https://stackoverflow.com/q/65680941/9935654
+[What are the numbers in Tesseract box file?]: https://stackoverflow.com/a/53384065/9935654
 
 {{< /table/bootstrap-table >}}
 
