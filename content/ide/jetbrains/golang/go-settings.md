@@ -14,6 +14,91 @@ toc_bootstrap = true
 
 ## Visual studio Keymap
 
+keymap的保存位址
+
+> %AppData%\JetBrains\<product>\keymaps\<keymapName>.xml
+>
+> 例如:
+>
+> %AppData%\JetBrains\GoLand2022.1\keymaps\VisualStudioCopy.xml
+
+```xml
+<keymap version="1" name="Visual Studio copy" parent="Visual Studio">
+  <action id="Arrangement.Rule.Edit" />
+  <action id="BookmarksView.Rename" />
+  <action id="CodeCleanup" />
+  <action id="Console.TableResult.EditValue">
+    <keyboard-shortcut first-keystroke="enter" />
+    <keyboard-shortcut first-keystroke="alt enter" />
+  </action>
+  <action id="ContextHelp" />
+  <action id="EditorBackwardParagraph">
+    <keyboard-shortcut first-keystroke="f6" />
+  </action>
+  <action id="EditorForwardParagraph">
+    <keyboard-shortcut first-keystroke="f8" />
+  </action>
+  <action id="EditorSelectWord">
+    <keyboard-shortcut first-keystroke="shift alt equals" />
+    <keyboard-shortcut first-keystroke="ctrl alt right" />
+  </action>
+  <action id="EditorToggleUseSoftWraps" />
+  <action id="GotoDeclaration">
+    <keyboard-shortcut first-keystroke="shift f2" />
+  </action>
+  <action id="InsertLiveTemplate">
+    <keyboard-shortcut first-keystroke="ctrl k" second-keystroke="x" />
+    <keyboard-shortcut first-keystroke="ctrl k" second-keystroke="ctrl x" />
+  </action>
+  <action id="MoveTabDown">
+    <keyboard-shortcut first-keystroke="ctrl w" second-keystroke="down" />
+  </action>
+  <action id="MoveTabRight">
+    <keyboard-shortcut first-keystroke="ctrl w" second-keystroke="right" />
+  </action>
+  <action id="RecentFiles">
+    <keyboard-shortcut first-keystroke="ctrl e" />
+  </action>
+  <action id="RevealIn">
+    <keyboard-shortcut first-keystroke="alt w" />
+  </action>
+  <action id="SilentCodeCleanup" />
+  <action id="SmartSelect">
+    <keyboard-shortcut first-keystroke="shift alt equals" />
+    <keyboard-shortcut first-keystroke="ctrl alt right" />
+  </action>
+  <action id="SplitHorizontally">
+    <keyboard-shortcut first-keystroke="ctrl w" second-keystroke="s" />
+  </action>
+  <action id="SplitVertically">
+    <keyboard-shortcut first-keystroke="ctrl w" second-keystroke="v" />
+  </action>
+  <action id="SurroundWithLiveTemplate">
+    <keyboard-shortcut first-keystroke="ctrl k" second-keystroke="s" />
+    <keyboard-shortcut first-keystroke="ctrl k" second-keystroke="ctrl s" />
+  </action>
+  <action id="SwitcherIterateItems" />
+  <action id="SwitcherRecentEditedChangedToggleCheckBox" />
+  <action id="Table-startEditing" />
+  <action id="TableResult.GrowSelection">
+    <keyboard-shortcut first-keystroke="shift alt equals" />
+    <keyboard-shortcut first-keystroke="ctrl alt right" />
+  </action>
+  <action id="Terminal.OpenInTerminal">
+    <keyboard-shortcut first-keystroke="alt c" />
+  </action>
+  <action id="Tree-startEditing" />
+  <action id="TypeHierarchy" />
+  <action id="TypeHierarchyBase.BaseOnThisType" />
+  <action id="Unscramble" />
+  <action id="UsageFiltering.WriteAccess" />
+  <action id="XDebugger.EditWatch" />
+  <action id="XDebugger.SetValue" />
+</keymap>
+```
+
+----
+
 | name | hotkey | Desc |
 | ---- | ---- | ---- |
 | Open in terminal | {{< hotkey "Alt + C" >}}
