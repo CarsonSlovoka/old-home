@@ -644,7 +644,7 @@ next_section = ""
 [Setting Windows PowerShell environment variables] | `[Environment]::SetEnvironmentVariable("Path", $env:Path, [System.EnvironmentVariableTarget]::Machine)` | powershell, env
 [Powershell alias not being set from script] | 要補上`-Scope Global`才會使的Description可以被看見
 [Why are scripted cmdlets listed as functions?] | cmdlet指令應該與powershell一般函數是差不多的，不需要太糾結於Get-Command的CommandType是Function還是Cmdlet | powershell, powershell-cmdlet
-[Import-StartLayout doesn't change anything] | `Import-StartLayout` 只會影響默認的設定
+[Import-StartLayout doesn't change anything] | `Import-StartLayout` 只會影響默認的設定 | powershell
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
