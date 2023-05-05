@@ -643,6 +643,8 @@ next_section = ""
 [What is the idiomatic way to slice an array relative to both of its ends?] | | arrays, powershell, slice
 [Setting Windows PowerShell environment variables] | `[Environment]::SetEnvironmentVariable("Path", $env:Path, [System.EnvironmentVariableTarget]::Machine)` | powershell, env
 [Powershell alias not being set from script] | 要補上`-Scope Global`才會使的Description可以被看見
+[Why are scripted cmdlets listed as functions?] | cmdlet指令應該與powershell一般函數是差不多的，不需要太糾結於Get-Command的CommandType是Function還是Cmdlet | powershell, powershell-cmdlet
+[Import-StartLayout doesn't change anything] | `Import-StartLayout` 只會影響默認的設定
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -1269,6 +1271,8 @@ next_section = ""
 [What is the idiomatic way to slice an array relative to both of its ends?]: https://stackoverflow.com/q/28460208/9935654
 [Setting Windows PowerShell environment variables]: https://stackoverflow.com/a/2571200/9935654
 [Powershell alias not being set from script]: https://stackoverflow.com/a/42157836/9935654
+[Why are scripted cmdlets listed as functions?]: https://stackoverflow.com/q/18469012/9935654
+[Import-StartLayout doesn't change anything]: https://superuser.com/q/1117136/1093221
 
 {{< /table/bootstrap-table >}}
 
