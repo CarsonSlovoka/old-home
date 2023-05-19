@@ -97,35 +97,6 @@ toc_bootstrap = true
     </keymap>
     ```
 
-- filetypes: `%AppData%\JetBrains\GoLand2022.1\keymaps\powershell.xml`
-
-    ```xml
-    <filetype binary="false" default_extension="ps1" description="powershell" name="powershell">
-      <highlighting>
-        <options>
-          <option name="LINE_COMMENT" value="#" />
-          <option name="COMMENT_START" value="&lt;#" />
-          <option name="COMMENT_END" value="#&gt;" />
-          <option name="HEX_PREFIX" value="" />
-          <option name="NUM_POSTFIXES" value="" />
-          <option name="HAS_BRACES" value="true" />
-          <option name="HAS_BRACKETS" value="true" />
-          <option name="HAS_PARENS" value="true" />
-          <option name="HAS_STRING_ESCAPES" value="true" />
-        </options>
-        <keywords keywords="$;@;break;continue;else;end;function;if;param;range;return" ignore_case="false" />
-        <keywords2 />
-        <keywords3 />
-        <keywords4 />
-      </highlighting>
-      <extensionMap>
-        <mapping ext="ps1" />
-        <mapping ext="psd1" />
-        <mapping ext="psm1" />
-      </extensionMap>
-    </filetype>
-    ```
-
 ----
 
 | name | hotkey | Desc |
@@ -185,7 +156,38 @@ Change font size with\n``Ctrl+Mouse Wheel`` | ☑ | 可以用滾輪來改變font
 
 ### File Types
 
+路徑: `%AppData%\JetBrains\GoLand2022.1\keymaps\`
+
 - gohtml樣板設定: `Settings\Editor\File Types` 選擇Go template files可以自定義讓某些附檔名也用got templates files的方式來解析，一般而言是`*.gohtml`
+
+`%AppData%\JetBrains\GoLand2022.1\keymaps\powershell.xml`範例:
+
+```xml
+<filetype binary="false" default_extension="ps1" description="powershell" name="powershell">
+  <highlighting>
+    <options>
+      <option name="LINE_COMMENT" value="#" />
+      <option name="COMMENT_START" value="&lt;#" />
+      <option name="COMMENT_END" value="#&gt;" />
+      <option name="HEX_PREFIX" value="" />
+      <option name="NUM_POSTFIXES" value="" />
+      <option name="HAS_BRACES" value="true" />
+      <option name="HAS_BRACKETS" value="true" />
+      <option name="HAS_PARENS" value="true" />
+      <option name="HAS_STRING_ESCAPES" value="true" />
+    </options>
+    <keywords keywords="$;$IsWindows;$VerbosePreference;$false;$null;$true;-Alias;-Function;-Variable;@;CmdletBinding;Export-ModuleMember;Parameter;Set-Alias;begin;break;catch;continue;else;elseif;end;foreach;function;if;param;process;range;return;try" ignore_case="false" />
+    <keywords2 />
+    <keywords3 />
+    <keywords4 />
+  </highlighting>
+  <extensionMap>
+    <mapping ext="ps1" />
+    <mapping ext="psd1" />
+    <mapping ext="psm1" />
+  </extensionMap>
+</filetype>
+```
 
 ### Font
 
