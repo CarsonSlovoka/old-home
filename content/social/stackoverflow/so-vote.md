@@ -648,6 +648,10 @@ next_section = ""
 [[bool]$backup = $true # $True, $False, 1, 0] | | bool, powershell
 [How remove \n from lines] | `strings.TrimRight("", "\r\n")` | go, line
 [How to get the Parent's parent directory in Powershell?] | | powershell, scripting, path
+[How to use Invoke-RestMethod to upload jpg] | | powershell, file-upload
+[What is the boundary in multipart/form-data?] | | http, forms
+[Configure Windows PowerShell to display only the current folder name in the shell prompt] | | powershell
+[Using PowerShell to write a file in UTF-8 without the BOM] | | powershell
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -1279,6 +1283,10 @@ next_section = ""
 [\[bool\]$backup = $true # $True, $False, 1, 0]: https://stackoverflow.com/q/24649019/9935654
 [How remove \n from lines]: https://stackoverflow.com/a/44449581/9935654
 [How to get the Parent's parent directory in Powershell?]: https://stackoverflow.com/a/76285943/9935654
+[How to use Invoke-RestMethod to upload jpg]: https://stackoverflow.com/q/42395638/9935654
+[What is the boundary in multipart/form-data?]: https://stackoverflow.com/a/20321259/9935654
+[Configure Windows PowerShell to display only the current folder name in the shell prompt]: https://superuser.com/a/1785486/1093221
+[Using PowerShell to write a file in UTF-8 without the BOM]: https://stackoverflow.com/a/55077592/9935654
 
 {{< /table/bootstrap-table >}}
 
