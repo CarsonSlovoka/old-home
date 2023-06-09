@@ -652,6 +652,16 @@ next_section = ""
 [What is the boundary in multipart/form-data?] | | http, forms
 [Configure Windows PowerShell to display only the current folder name in the shell prompt] | | powershell
 [Using PowerShell to write a file in UTF-8 without the BOM] | | powershell
+[Powershell unable to find type \[System.Windows.Forms.KeyEventHandler\]] | | powershell
+[Where can I see deno downloaded packages?] | `deno info` | deno
+[Node.js' __dirname & __filename equivalent in Deno] | `path.dirname(path.fromFileUrl(import.meta.url))` | deno, path
+[How to add a simple text label to an image in Go?] | | image, go, fonts, draw
+[Best way to call an asynchronous function within map?] | `Promise.all` | javascript, asynchronous
+[Get actual Font name of TTF file from Command Line] | | powershell, fonts
+[Looping through a hash, or using an array in PowerShell] | `$myHashtable.GetEnumerator()` | powershell, hashtable, dictionary
+[PowerShell Syntax Highlighting] | `lang-default` | powershell
+[How to convert decimal to hexadecimal variable?] | `"{0:X}" -f <number or variable>` | powershell
+[How to display Unicode character names and their hexadecimal codes with PowerShell?] | `[System.BitConverter]::ToUint32($utf32bytes)` 但是BitConverter不支援5.1 | Powershell, emoji, unicode, surrogate-pairs
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -1287,6 +1297,16 @@ next_section = ""
 [What is the boundary in multipart/form-data?]: https://stackoverflow.com/a/20321259/9935654
 [Configure Windows PowerShell to display only the current folder name in the shell prompt]: https://superuser.com/a/1785486/1093221
 [Using PowerShell to write a file in UTF-8 without the BOM]: https://stackoverflow.com/a/55077592/9935654
+[Powershell unable to find type \[System.Windows.Forms.KeyEventHandler\]]: https://stackoverflow.com/a/27792262/9935654
+[Where can I see deno downloaded packages?]: https://stackoverflow.com/q/61799309/9935654
+[Node.js' __dirname & __filename equivalent in Deno]: https://stackoverflow.com/a/61829368/9935654
+[How to add a simple text label to an image in Go?]: https://stackoverflow.com/q/38299930/9935654
+[Best way to call an asynchronous function within map?]: https://stackoverflow.com/a/48273841/9935654
+[Get actual Font name of TTF file from Command Line]: https://superuser.com/a/1787977/1093221
+[Looping through a hash, or using an array in PowerShell]: https://stackoverflow.com/a/16175967/9935654
+[PowerShell Syntax Highlighting]: https://meta.stackoverflow.com/q/408345/9935654
+[How to convert decimal to hexadecimal variable?]: https://stackoverflow.com/a/57999927/9935654
+[How to display Unicode character names and their hexadecimal codes with PowerShell?]: https://stackoverflow.com/a/65752442/9935654
 
 {{< /table/bootstrap-table >}}
 
