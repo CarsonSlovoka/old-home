@@ -251,6 +251,7 @@ gcc | ``choco install mingw -y`` | ● ``%programdata%\chocolatey\lib\mingw\tool
 [node.js] | ``choco install nodejs -y`` | ``%PROGRAMFILES%\nodejs`` 裡面有node.exe還有npm \n安裝到哪邊去其實他沒特別寫出來可以用``gcm node.exe``去查看 |
 [make] | `choco install make` | `%programdata%\chocolatey\bin`
 [deno] <sup>1.26.0</sup> | `choco install -y` | `C:\ProgramData\chocolatey\lib\deno` | `deno -help`
+lcov | choco install lcov | `%programdata%\chocolatey\lib\lcov\tools\bin\genhtml`\n`C:\Strawberry\perl\bin\perl.exe`\n | `perl %GENHTML% -o coverage\html lcov.info` 這個可以用在deno的測試覆蓋率生成出用HTML來檢視的報告
 
 [protobuf_google]: https://developers.google.com/protocol-buffers/docs/overview
 [protobuf_github]: https://github.com/protocolbuffers/protobuf
