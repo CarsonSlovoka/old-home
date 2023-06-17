@@ -662,6 +662,13 @@ next_section = ""
 [PowerShell Syntax Highlighting] | `lang-default` | powershell
 [How to convert decimal to hexadecimal variable?] | `"{0:X}" -f <number or variable>` | powershell
 [How to display Unicode character names and their hexadecimal codes with PowerShell?] | `[System.BitConverter]::ToUint32($utf32bytes)` 但是BitConverter不支援5.1 | Powershell, emoji, unicode, surrogate-pairs
+[deno relative path issue] | | typescript, deno
+[How do I create an HTML table with a fixed/frozen left column and a scrollable body?] | | html-table, css
+[how to provide the date as filename using javascript?] | `new Date().toJSON().slice(0,10)` | filename, javascript
+[How to get current working directory using vba?] | | vba
+[Convert object array to hash map, indexed by an attribute value of the Object] | `array.reduce((acc, curValue), {})` | javascript, arrays, hashmap
+[How to view code coverage as html for Flutter in Windows?] | `perl.exe myGenhtml.perl MyInput.lcov -o myOutputDirPath` | lcov, code-coverage
+
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -1307,6 +1314,12 @@ next_section = ""
 [PowerShell Syntax Highlighting]: https://meta.stackoverflow.com/q/408345/9935654
 [How to convert decimal to hexadecimal variable?]: https://stackoverflow.com/a/57999927/9935654
 [How to display Unicode character names and their hexadecimal codes with PowerShell?]: https://stackoverflow.com/a/65752442/9935654
+[deno relative path issue]: https://stackoverflow.com/a/71073700/9935654
+[How do I create an HTML table with a fixed/frozen left column and a scrollable body?]: https://stackoverflow.com/a/73257929/9935654
+[how to provide the date as filename using javascript?]: https://stackoverflow.com/a/55509019/9935654
+[How to get current working directory using vba?]: https://stackoverflow.com/a/19824472/9935654
+[Convert object array to hash map, indexed by an attribute value of the Object]: https://stackoverflow.com/a/26265095/9935654
+[How to view code coverage as html for Flutter in Windows?]: https://stackoverflow.com/a/76495431/9935654
 
 {{< /table/bootstrap-table >}}
 
