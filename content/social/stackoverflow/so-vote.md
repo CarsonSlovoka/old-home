@@ -668,6 +668,7 @@ next_section = ""
 [How to get current working directory using vba?] | | vba
 [Convert object array to hash map, indexed by an attribute value of the Object] | `array.reduce((acc, curValue), {})` | javascript, arrays, hashmap
 [How to view code coverage as html for Flutter in Windows?] | `perl.exe myGenhtml.perl MyInput.lcov -o myOutputDirPath` | lcov, code-coverage
+[Javascript - Copy string to clipboard as text/html] | | clipboard, javascript
 
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
@@ -1320,6 +1321,7 @@ next_section = ""
 [How to get current working directory using vba?]: https://stackoverflow.com/a/19824472/9935654
 [Convert object array to hash map, indexed by an attribute value of the Object]: https://stackoverflow.com/a/26265095/9935654
 [How to view code coverage as html for Flutter in Windows?]: https://stackoverflow.com/a/76495431/9935654
+[Javascript - Copy string to clipboard as text/html]: https://stackoverflow.com/a/74216984/9935654
 
 {{< /table/bootstrap-table >}}
 
