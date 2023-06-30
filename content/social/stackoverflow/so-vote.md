@@ -515,7 +515,7 @@ next_section = ""
 [How to use SVG as PWA icon?] | | svg, progressive-web-apps
 [PWA on Github pages] | | github-pages, progressive-web-apps
 [What are Go example functions?] | https://go.dev/blog/examples | go, testing
-[Golang tests in sub-directory] | `go test ./...` 會自動測所有東西  | go, unit-testing
+[Golang tests in sub-directory] | `go test ./...` 會自動測所有東西 | go, unit-testing
 [Running actions in another directory] | 在default統一設定工作路徑即可 | github, github-actions
 [How use update function of mongo-go-driver using struct] | | go, mongodb, driver, crud
 [Why am I getting ImportError: No module named pip ' right after installing pip?] | 要編輯pth檔案，補上`Lib\site-packages` | python, windows, pip
@@ -669,6 +669,9 @@ next_section = ""
 [Convert object array to hash map, indexed by an attribute value of the Object] | `array.reduce((acc, curValue), {})` | javascript, arrays, hashmap
 [How to view code coverage as html for Flutter in Windows?] | `perl.exe myGenhtml.perl MyInput.lcov -o myOutputDirPath` | lcov, code-coverage
 [Javascript - Copy string to clipboard as text/html] | | clipboard, javascript
+[Powershell 7 Byte encoding an image file] | `$b64 = [convert]::ToBase64String((Get-Content $image_path -AsByteStream -Raw))` | powershell, encoding
+[powershell max/first/aggregate functions] |　`(2,1,3 ｜ Measure -Max).Maximum` | powershell, math, max, min
+
 
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
@@ -1322,6 +1325,8 @@ next_section = ""
 [Convert object array to hash map, indexed by an attribute value of the Object]: https://stackoverflow.com/a/26265095/9935654
 [How to view code coverage as html for Flutter in Windows?]: https://stackoverflow.com/a/76495431/9935654
 [Javascript - Copy string to clipboard as text/html]: https://stackoverflow.com/a/74216984/9935654
+[Powershell 7 Byte encoding an image file]: https://stackoverflow.com/a/63782608/9935654
+[powershell max/first/aggregate functions]: https://stackoverflow.com/a/19170783/9935654
 
 {{< /table/bootstrap-table >}}
 
