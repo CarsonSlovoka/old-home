@@ -91,7 +91,14 @@ ngrok http 80
 ### 額外命令
 
 - Install your auth token: ``ngrok authtoken <YOUR_AUTHTOKEN>``
-- Password protecting your tunnel: ``ngrok http -auth="username:password" 8080``
+- Password protecting your tunnel: `ngrok http --basic-auth="username:password" 8080`
+- Password protecting your tunnel: `ngrok http http://localhost:8080 --basic-auth="username:password"`
+- Password protecting your tunnel: `ngrok http https://localhost:8080 --basic-auth="username:password"`
+
+> 密碼長度要8~127，不能太短，不然會報錯！
+>
+> 如果報錯可能參數因為版本更新而有做修改，例如以前是`-auth`，從V3.3.1改為`--basic-auth`
+
 
 ### 參考資料
 
