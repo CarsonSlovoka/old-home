@@ -671,7 +671,8 @@ next_section = ""
 [Javascript - Copy string to clipboard as text/html] | | clipboard, javascript
 [Powershell 7 Byte encoding an image file] | `$b64 = [convert]::ToBase64String((Get-Content $image_path -AsByteStream -Raw))` | powershell, encoding
 [powershell max/first/aggregate functions] |　`(2,1,3 ｜ Measure -Max).Maximum` | powershell, math, max, min
-
+[[How to find a desktop window (by window name) in Windows 8.1 Update 2 OS, using the Win32 API FindWindow() in PowerShell environment?]] | findwindow | powershell
+[Does Go have standard Err variables?] | `var ErrSomethingBad = errors.New("some string")` | go, error
 
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
@@ -1327,6 +1328,8 @@ next_section = ""
 [Javascript - Copy string to clipboard as text/html]: https://stackoverflow.com/a/74216984/9935654
 [Powershell 7 Byte encoding an image file]: https://stackoverflow.com/a/63782608/9935654
 [powershell max/first/aggregate functions]: https://stackoverflow.com/a/19170783/9935654
+[How to find a desktop window (by window name) in Windows 8.1 Update 2 OS, using the Win32 API FindWindow() in PowerShell environment?]: https://stackoverflow.com/a/76628227/9935654
+[Does Go have standard Err variables?]: https://stackoverflow.com/a/30178766/9935654
 
 {{< /table/bootstrap-table >}}
 
