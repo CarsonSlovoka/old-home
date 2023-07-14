@@ -673,7 +673,14 @@ next_section = ""
 [powershell max/first/aggregate functions] |　`(2,1,3 ｜ Measure -Max).Maximum` | powershell, math, max, min
 [[How to find a desktop window (by window name) in Windows 8.1 Update 2 OS, using the Win32 API FindWindow() in PowerShell environment?]] | findwindow | powershell
 [Does Go have standard Err variables?] | `var ErrSomethingBad = errors.New("some string")` | go, error
-
+[To use local font in HTML using font face] |
+[Save Image from clipboard using PowerShell] | `(Get-Clipboard -format image).save("c:\temp\temp.jpg")` | powershell, clipboard
+[Windows Clipboard History - How to view the history from PowerShell] | | powershell, clipboard
+[How to capture global keystrokes with PowerShell?] | | powershell, hotkeys
+[KeyDown event listener seems to not work when button items are added to WinForm] | `$form.Add_KeyDown` | powershell
+[Unable to find type \[Windows.Markup.XamlReader\]] | `Add-Type -Assembly PresentationFramework` | powershell
+[Formatting PowerShell Get-Date inside string] | `"{0:yyyy-MM-dd hh:mm:ss}" -f (get-date)` | powershell, formatting, datetime
+[Add padding to HTML text input field] | `padding-left: 10px;` | html, css, input
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -1330,6 +1337,14 @@ next_section = ""
 [powershell max/first/aggregate functions]: https://stackoverflow.com/a/19170783/9935654
 [How to find a desktop window (by window name) in Windows 8.1 Update 2 OS, using the Win32 API FindWindow() in PowerShell environment?]: https://stackoverflow.com/a/76628227/9935654
 [Does Go have standard Err variables?]: https://stackoverflow.com/a/30178766/9935654
+[To use local font in HTML using font face]: https://stackoverflow.com/a/38086507/9935654
+[Save Image from clipboard using PowerShell]: https://stackoverflow.com/a/55226209/9935654
+[Windows Clipboard History - How to view the history from PowerShell]: https://stackoverflow.com/q/72095565/9935654
+[KeyDown event listener seems to not work when button items are added to WinForm]: https://stackoverflow.com/q/39458086/9935654
+[How to capture global keystrokes with PowerShell?]: https://stackoverflow.com/a/54237188/9935654
+[Unable to find type \[Windows.Markup.XamlReader\]]: https://stackoverflow.com/a/70370986/9935654
+[Formatting PowerShell Get-Date inside string]: https://stackoverflow.com/a/10026285/9935654
+[Add padding to HTML text input field]: https://stackoverflow.com/a/6586429/9935654
 
 {{< /table/bootstrap-table >}}
 

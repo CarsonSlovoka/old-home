@@ -42,7 +42,7 @@ fmpeg -i input.mp4 -i subtitle.srt -map 0 -map 1 -c copy -c:v libx264 -crf 23 -p
 ffmpeg -i input.mp4 -vf "setpts=0.5*PTS" output.mp4 | 影片撥放速度改為2倍(0.5)
 ffmpeg -i input.mp4 -vf "setpts=4.0*PTS" output.mp4 | 影片撥放速度比原本慢4倍
 ffmpeg -i input.mp4  output.gif  | 轉成gif
-ffmpeg -i input.mp4 -ss 01:19:27 -to 02:18:51 -c:v copy -c:a copy output.mp4 | 剪輯影片
+ffmpeg -i input.mp4 -ss 01:19:27 -to 02:18:51 -c:v copy -c:a copy output.mp4 | 剪輯影片, -c:v copy的v指的是video, -c:a copy的a指的是audio。意思是影片+音效都要複製
 ffmpeg -i video.mp4 -i audio.wav -map 0:v -map 1:a -c:v copy -shortest output.mp4 |
 `ffmpeg -i console.mp4 -i console.mp3 -c copy -map 0:v:0 -map 1:a:0 -shortest result.mp4` | 替mp4新增音樂
 ffmpeg -ss 00:00:03 -t 10  -i input.mp4 output.gif | 從第3秒開始往後錄10秒 轉成gif
