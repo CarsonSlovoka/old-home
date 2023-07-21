@@ -681,6 +681,8 @@ next_section = ""
 [Unable to find type \[Windows.Markup.XamlReader\]] | `Add-Type -Assembly PresentationFramework` | powershell
 [Formatting PowerShell Get-Date inside string] | `"{0:yyyy-MM-dd hh:mm:ss}" -f (get-date)` | powershell, formatting, datetime
 [Add padding to HTML text input field] | `padding-left: 10px;` | html, css, input
+[Waiting for image to load in JavaScript] | `Promise.all(imageUrls.map(loadImage)).then(images => {` | javascript, image, load, wait
+[Reading Image in Go] | image.Decode如果發生unknown format，可能是缺少import相關內容: `_ "image/jpeg" _ "image/png"` | go, image
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -1345,6 +1347,8 @@ next_section = ""
 [Unable to find type \[Windows.Markup.XamlReader\]]: https://stackoverflow.com/a/70370986/9935654
 [Formatting PowerShell Get-Date inside string]: https://stackoverflow.com/a/10026285/9935654
 [Add padding to HTML text input field]: https://stackoverflow.com/a/6586429/9935654
+[Waiting for image to load in JavaScript]: https://stackoverflow.com/a/66180709/9935654
+[Reading Image in Go]: https://stackoverflow.com/q/49594259/9935654
 
 {{< /table/bootstrap-table >}}
 
