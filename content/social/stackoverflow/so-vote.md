@@ -683,6 +683,9 @@ next_section = ""
 [Add padding to HTML text input field] | `padding-left: 10px;` | html, css, input
 [Waiting for image to load in JavaScript] | `Promise.all(imageUrls.map(loadImage)).then(images => {` | javascript, image, load, wait
 [Reading Image in Go] | image.Decode如果發生unknown format，可能是缺少import相關內容: `_ "image/jpeg" _ "image/png"` | go, image
+[How do I blur a particular area of an image in HTML?] | |
+[Is it possible to have multiple masks with clip-path?] | [clipPath](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/clipPath) | svg, clip-path
+[Add SVG to HTML and handle events] | |
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -1349,6 +1352,9 @@ next_section = ""
 [Add padding to HTML text input field]: https://stackoverflow.com/a/6586429/9935654
 [Waiting for image to load in JavaScript]: https://stackoverflow.com/a/66180709/9935654
 [Reading Image in Go]: https://stackoverflow.com/q/49594259/9935654
+[How do I blur a particular area of an image in HTML?]: https://stackoverflow.com/a/50541483/9935654
+[Is it possible to have multiple masks with clip-path?]: https://stackoverflow.com/a/45624565/9935654
+[Add SVG to HTML and handle events]: https://stackoverflow.com/a/39013460/9935654
 
 {{< /table/bootstrap-table >}}
 
