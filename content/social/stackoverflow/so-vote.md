@@ -686,6 +686,7 @@ next_section = ""
 [How do I blur a particular area of an image in HTML?] | |
 [Is it possible to have multiple masks with clip-path?] | [clipPath](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/clipPath) | svg, clip-path
 [Add SVG to HTML and handle events] | |
+[Where is docker image location in Windows 10?] | | docker, docker-for-windows
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -1355,6 +1356,7 @@ next_section = ""
 [How do I blur a particular area of an image in HTML?]: https://stackoverflow.com/a/50541483/9935654
 [Is it possible to have multiple masks with clip-path?]: https://stackoverflow.com/a/45624565/9935654
 [Add SVG to HTML and handle events]: https://stackoverflow.com/a/39013460/9935654
+[Where is docker image location in Windows 10?]: https://stackoverflow.com/q/42250222/9935654
 
 {{< /table/bootstrap-table >}}
 
