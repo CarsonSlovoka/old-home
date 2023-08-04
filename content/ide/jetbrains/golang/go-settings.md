@@ -102,7 +102,8 @@ toc_bootstrap = true
 | name | hotkey | Desc |
 | ---- | ---- | ---- |
 | Open in terminal | {{< hotkey "Alt + C" >}}
-| Show in Explorer | {{< hotkey "Alt + W" >}}
+| Hide terminal | {{< hotkey "Shift + ESC" >}} (default)
+| Show in Explorer | {{< hotkey "Alt + W" >}} | 在2023.2他會改成`Show in File Manager`
 | Recent Files | {{< hotkey "Ctrl + E" >}}
 | Go to Declaration or Usages | {{< hotkey "Shift + F12" >}}
 | {{< auto-id "Reformat Code" >}} | {{< hotkey "Ctrl + Alt + Enter" >}}
@@ -110,7 +111,7 @@ toc_bootstrap = true
 | Split Down  | {{< hotkey "Ctrl+W, S" >}}
 | Split and Move Down  | {{< hotkey "Ctrl+W, Down" >}}
 | Split and Move Right |  {{< hotkey "Ctrl+W, Right" >}}
-| Close | {{< hotkey "Ctrl+W, C" >}}
+| Close Tab | {{< hotkey "Ctrl+W, C" >}}
 | UnSplit | {{< hotkey "Ctrl+W, U" >}}
 Goto Previous Splitter | {{< hotkey "Ctrl+W, H" >}}
 Goto Next Splitter | {{< hotkey "Ctrl+W, L" >}}
@@ -134,6 +135,8 @@ Move Caret Backward a Paragraph | {{< hotkey F6 >}} | 往前移到整列為空�
 Move Caret Forward a Paragraph | {{< hotkey F8 >}} | 往後移到整列為空白的列
 Open source in new window | {{< hotkey "Shift+F4" >}} (default) |
 Reformat Code | {{< hotkey "Ctrl+Alt+Enter" >}} | 很好用，gitignore準備好，可以用這個取代go fmt |
+★ Toggle Zen mode | {{< hotkey "Ctrl+Alt+Z" >}} | 2023.2版本新增的功能，切換專注模式
+Project | {{< hotkey "Ctrl+Alt+L >}}  (default) | 開啟右側的專案總管
 
 {{< table/bootstrap-table >}}
 
@@ -145,6 +148,13 @@ Insert pair quote | ☐  | 同上 | Editor > General > Smart Keys
 Change font size with\n``Ctrl+Mouse Wheel`` | ☑ | 可以用滾輪來改變font-size (記得選擇all editors)
 
 {{< /table/bootstrap-table >}}
+
+## View -> Appearance
+
+- ☐ Main Menu as Separate Toolbar (沒什麼用，佔版面空間)
+- Navigation Bar
+  - ☑ Top (不要放到status bar，在zen mode切換的時候，可能會看不到)
+
 
 ## 使用滑鼠滾輪來改變font-size
 
