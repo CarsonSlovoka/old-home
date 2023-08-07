@@ -135,8 +135,11 @@ Move Caret Backward a Paragraph | {{< hotkey F6 >}} | 往前移到整列為空�
 Move Caret Forward a Paragraph | {{< hotkey F8 >}} | 往後移到整列為空白的列
 Open source in new window | {{< hotkey "Shift+F4" >}} (default) |
 Reformat Code | {{< hotkey "Ctrl+Alt+Enter" >}} | 很好用，gitignore準備好，可以用這個取代go fmt |
-★ Toggle Zen mode | {{< hotkey "Ctrl+Alt+Z" >}} | 2023.2版本新增的功能，切換專注模式
-Project | {{< hotkey "Ctrl+Alt+L >}}  (default) | 開啟右側的專案總管
+★ Toggle Zen mode | {{< hotkey "Ctrl+Alt+Z" >}} | 2023.2版本新增的功能，切換禪(專注)模式
+Project | {{< hotkey "Ctrl+Alt+L" >}}  (default) | 開啟右側的專案總管
+Structure | {{< hotkey "Ctrl+Alt+F" >}}  (default) | 開啟右側的專案總管
+Terminal | {{< hotkey "Ctrl+Alt+1" >}}  (default) | 顯示或隱藏Terminal視窗
+Hide Terminal | {{< hotkey "Shift+Escape" >}} (default) | 隱藏Terminal視窗
 
 {{< table/bootstrap-table >}}
 
@@ -152,9 +155,9 @@ Change font size with\n``Ctrl+Mouse Wheel`` | ☑ | 可以用滾輪來改變font
 ## View -> Appearance
 
 - ☐ Main Menu as Separate Toolbar (沒什麼用，佔版面空間)
-- Navigation Bar
+- Navigation Bar (個人覺得這個很好用，例如您點一個檔案，你可以看到他檔案的詳細路徑，也能瞬間切換稻子目錄或者直接開啟某目錄)
   - ☑ Top (不要放到status bar，在zen mode切換的時候，可能會看不到)
-
+- Zoom IDE (Current: 110%)...
 
 ## 使用滑鼠滾輪來改變font-size
 
