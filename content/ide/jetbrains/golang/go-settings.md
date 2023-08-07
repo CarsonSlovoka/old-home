@@ -139,6 +139,7 @@ Reformat Code | {{< hotkey "Ctrl+Alt+Enter" >}} | 很好用，gitignore準備好
 Project | {{< hotkey "Ctrl+Alt+L" >}}  (default) | 開啟右側的專案總管
 Structure | {{< hotkey "Ctrl+Alt+F" >}}  (default) | 開啟右側的專案總管
 Terminal | {{< hotkey "Ctrl+Alt+1" >}}  (default) | 顯示或隱藏Terminal視窗
+Git | {{< hotkey "Alt+9" >}} (default) | 類似`gitk --all`的功能
 Hide Terminal | {{< hotkey "Shift+Escape" >}} (default) | 隱藏Terminal視窗
 
 {{< table/bootstrap-table >}}
