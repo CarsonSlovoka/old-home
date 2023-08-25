@@ -687,6 +687,11 @@ next_section = ""
 [Is it possible to have multiple masks with clip-path?] | [clipPath](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/clipPath) | svg, clip-path
 [Add SVG to HTML and handle events] | |
 [Where is docker image location in Windows 10?] | | docker, docker-for-windows
+[Determine the OS version, Linux and Windows from Powershell] | `$IsLinux`, `$IsMacOS`, `$IsWindows` | powershell, linux, windows, operation-system
+[Use ffmpeg to add text subtitles] | 請下載[VLC撥放器](https://www.videolan.org/vlc/download-windows.html) 之後開啟字幕的軌道即可
+[Does HTML5 Video support srt textTrack?] | 如果SRT不是很複雜，只要在SRT內容前面補上`WEBVTT`即可正常呈現 | webvtt, srt, subtitle
+[How to create a <style> tag with Javascript?] | `const style = document.createElement("style"); style.textContent = "h1 { background-color: red; }";document.head.appendChild(style)` | html, css, javascript
+[How to add external JS scripts to VueJS Components?] | `document.head.append` | javascript, vue.js
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -1357,6 +1362,11 @@ next_section = ""
 [Is it possible to have multiple masks with clip-path?]: https://stackoverflow.com/a/45624565/9935654
 [Add SVG to HTML and handle events]: https://stackoverflow.com/a/39013460/9935654
 [Where is docker image location in Windows 10?]: https://stackoverflow.com/q/42250222/9935654
+[Determine the OS version, Linux and Windows from Powershell]: https://stackoverflow.com/a/54645671/9935654
+[Use ffmpeg to add text subtitles]: https://stackoverflow.com/q/8672809/9935654
+[Does HTML5 Video support srt textTrack?]: https://stackoverflow.com/a/76911371/9935654
+[How to create a <style> tag with Javascript?]: https://stackoverflow.com/a/69515103/9935654
+[How to add external JS scripts to VueJS Components?]: https://stackoverflow.com/a/70470491/9935654
 
 {{< /table/bootstrap-table >}}
 

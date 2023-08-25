@@ -38,7 +38,8 @@ ffmpeg -i input.mp4 -vn output.mp3 | -vn表示video no,不含影像，只保留�
 ffmpeg -i input.mp4 -filter:v "crop=640:480:200:150" output.mp4 | 從位置250,150的地方，擷取寬640高480，轉成新的mp4檔案
 ffmpeg -i input.mp4 -t 10 output.avi | 我們以秒具體說明時間。此外，以 hh.mm.ss 格式具體說明時間也是可以的。
 ffmpeg -i audio.mp3 -ss 00:01:54 -to 00:06:53 -c copy output.mp3 |  剪輯區間類的聲音
-fmpeg -i input.mp4 -i subtitle.srt -map 0 -map 1 -c copy -c:v libx264 -crf 23 -preset veryfast output.mp4 | 添加字幕
+ffmpeg -i input.mp4 -i subtitle.srt -map 0 -map 1 -c copy -c:v libx264 -crf 23 -preset veryfast output.mp4 | 添加字幕
+ffmpeg -i my.mp4 -i my.srt -c copy -c:s mov_text output.mp4 | 添加字幕 (這個指令比較短), 請使用[VLC](https://www.videolan.org/vlc/download-windows.html)撥放軟體來撥放(開啟字幕軌道後即可看到成果)，建議字幕從1秒開始設定起，避免開頭字幕看不到
 ffmpeg -i input.mp4 -vf "setpts=0.5*PTS" output.mp4 | 影片撥放速度改為2倍(0.5)
 ffmpeg -i input.mp4 -vf "setpts=4.0*PTS" output.mp4 | 影片撥放速度比原本慢4倍
 ffmpeg -i input.mp4  output.gif  | 轉成gif
@@ -46,6 +47,7 @@ ffmpeg -i input.mp4 -ss 01:19:27 -to 02:18:51 -c:v copy -c:a copy output.mp4 | �
 ffmpeg -i video.mp4 -i audio.wav -map 0:v -map 1:a -c:v copy -shortest output.mp4 |
 `ffmpeg -i console.mp4 -i console.mp3 -c copy -map 0:v:0 -map 1:a:0 -shortest result.mp4` | 替mp4新增音樂
 ffmpeg -ss 00:00:03 -t 10  -i input.mp4 output.gif | 從第3秒開始往後錄10秒 轉成gif
+ffmpeg -i input.gif output.mp4 | 將gif轉成mp4(可以利用chrome瀏覽器撥放，但是一般電腦內建的撥放軟體可能會無法撥放)
 
 ----
 
@@ -108,6 +110,7 @@ video="USB2.0 PC CAMERA":audio="麦克风 (USB2.0 MIC)"
 
 
 ## 參考資料
+- [FFmpeg Filters Documentation](https://ffmpeg.org/ffmpeg-filters.html)
 - [ffmpeg大全](https://www.cnblogs.com/brt2/p/14006745.html)
 - [How do I convert a video to GIF using ffmpeg, with reasonable quality?](https://superuser.com/a/556031/1093221)
 - https://github.com/CarsonSlovoka/pylib/issues/3
