@@ -23,6 +23,14 @@ toc_bootstrap = true
 
 > https://www.mongodb.com/
 
+> 如果您是用google登入
+>
+> 想要換或重設密碼，可以到以下連結
+>
+> https://account.mongodb.com/account/reset/password
+>
+> 輸入完email之後到信箱點擊郵件，會引導您到修改密碼的頁面
+
 ## 建立第一個資料庫
 
 mongodb的世界觀長這樣
@@ -83,6 +91,12 @@ mongodb的世界觀長這樣
             log.Fatal(err)
         }
         ```
+
+> 其中的username, password與登入mongoDB的帳號密碼無關，都就是指是誰可以訪問資料庫
+>
+> 它可以在Database Access(`https://cloud.mongodb.com/v2/88888888888888888888888#/security/database/users`)裡面新增使用者，以及該使用者可以有哪些權限訪問該資料庫
+>
+> (將以上的一堆8改成您自己的識別碼即可訪問到Database Access的連結)
 
 ## [MongoDB Drivers]
 
