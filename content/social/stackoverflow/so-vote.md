@@ -690,8 +690,11 @@ next_section = ""
 [Determine the OS version, Linux and Windows from Powershell] | `$IsLinux`, `$IsMacOS`, `$IsWindows` | powershell, linux, windows, operation-system
 [Use ffmpeg to add text subtitles] | 請下載[VLC撥放器](https://www.videolan.org/vlc/download-windows.html) 之後開啟字幕的軌道即可
 [Does HTML5 Video support srt textTrack?] | 如果SRT不是很複雜，只要在SRT內容前面補上`WEBVTT`即可正常呈現 | webvtt, srt, subtitle
-[How to create a <style> tag with Javascript?] | `const style = document.createElement("style"); style.textContent = "h1 { background-color: red; }";document.head.appendChild(style)` | html, css, javascript
+[How to create a \<style\> tag with Javascript?] | `const style = document.createElement("style"); style.textContent = "h1 { background-color: red; }";document.head.appendChild(style)` | html, css, javascript
 [How to add external JS scripts to VueJS Components?] | `document.head.append` | javascript, vue.js
+[How to convert \[4\]uint8 into uint32 in Go?] | `binary.BigEndian.Uint32(u8)` or `binary.LittleEndian.Uint32(u8)` | go, type-conversion
+[How to enter a multi-line command] | 使用[grave accent](https://en.wikipedia.org/wiki/Grave_accent)(\`) 就可以將很長的指令換行寫 | powershell
+[Add double quotes to variable to escape space] | `'"{0}"' -f $FilePath` | powershell
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -1365,8 +1368,11 @@ next_section = ""
 [Determine the OS version, Linux and Windows from Powershell]: https://stackoverflow.com/a/54645671/9935654
 [Use ffmpeg to add text subtitles]: https://stackoverflow.com/q/8672809/9935654
 [Does HTML5 Video support srt textTrack?]: https://stackoverflow.com/a/76911371/9935654
-[How to create a <style> tag with Javascript?]: https://stackoverflow.com/a/69515103/9935654
+[How to create a \<style\> tag with Javascript?]: https://stackoverflow.com/a/69515103/9935654
 [How to add external JS scripts to VueJS Components?]: https://stackoverflow.com/a/70470491/9935654
+[How to convert \[4\]uint8 into uint32 in Go?]: https://stackoverflow.com/a/7380354/9935654
+[How to enter a multi-line command]: https://stackoverflow.com/a/3235993/9935654
+[Add double quotes to variable to escape space]: https://stackoverflow.com/a/35309729/9935654
 
 {{< /table/bootstrap-table >}}
 
