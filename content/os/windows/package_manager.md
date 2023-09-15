@@ -98,6 +98,7 @@ update npm | ``npm install -g npm@7.21.1``
 
 - ``npm install uglify-js -g``
 - ``npm install uglify-js``
+- `npm install uglify-js -save--dev -g`
 - [npm install uglify-js -save--dev](https://stackoverflow.com/a/44193120/9935654)
 
     如果出現以下錯誤

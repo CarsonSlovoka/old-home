@@ -695,6 +695,9 @@ next_section = ""
 [How to convert \[4\]uint8 into uint32 in Go?] | `binary.BigEndian.Uint32(u8)` or `binary.LittleEndian.Uint32(u8)` | go, type-conversion
 [How to enter a multi-line command] | 使用[grave accent](https://en.wikipedia.org/wiki/Grave_accent)(\`) 就可以將很長的指令換行寫 | powershell
 [Add double quotes to variable to escape space] | `'"{0}"' -f $FilePath` | powershell
+[Read/Parse Binary files with Powershell] | | parsing, powershell, binary
+[Write bytes to a file natively in PowerShell] | Get-Content可以透過-ReadCount一次讀取幾行或全部(設定成0)來改善, Set-Content不要使用管道的方式，用-Value把值給他就可以變快 | powrshell
+[How to get the captured groups from Select-String?] | 當您使用完`-match` 有自動產生一個 `$Matches` 變數來記錄匹配的內容 | powershell, regex
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -1373,6 +1376,9 @@ next_section = ""
 [How to convert \[4\]uint8 into uint32 in Go?]: https://stackoverflow.com/a/7380354/9935654
 [How to enter a multi-line command]: https://stackoverflow.com/a/3235993/9935654
 [Add double quotes to variable to escape space]: https://stackoverflow.com/a/35309729/9935654
+[Read/Parse Binary files with Powershell]: https://stackoverflow.com/q/10672092/9935654
+[Write bytes to a file natively in PowerShell]: https://stackoverflow.com/a/77095342/9935654
+[How to get the captured groups from Select-String?]: https://stackoverflow.com/a/59900840/9935654
 
 {{< /table/bootstrap-table >}}
 
