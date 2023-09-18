@@ -460,6 +460,10 @@ FETCH_HEAD ?
 
 ## [git tag](https://git-scm.com/docs/git-tag)
 
+```
+git tag <tag_name> <commit_sha1>
+```
+
 | Options | Desc. | Example |
 | ---- | ---- | ---- |
 -f -\-force | Replace an existing tag with the given name (instead of failing) |
