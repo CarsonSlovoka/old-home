@@ -92,11 +92,28 @@ mongodb的世界觀長這樣
         }
         ```
 
-> 其中的username, password與登入mongoDB的帳號密碼無關，都就是指是誰可以訪問資料庫
+> 其中的username, password與登入mongoDB的帳號密碼無關，是指誰可以訪問資料庫
 >
 > 它可以在Database Access(`https://cloud.mongodb.com/v2/88888888888888888888888#/security/database/users`)裡面新增使用者，以及該使用者可以有哪些權限訪問該資料庫
 >
 > (將以上的一堆8改成您自己的識別碼即可訪問到Database Access的連結)
+
+連接也可以透過shell的方式來訪問資料庫，只要有安裝mongosh即可，如果沒有安裝可以靠它的引導去安裝
+
+以下為使用powershell連線的範例
+
+```yaml
+# 驗證mongosh.exe可以被抓到
+if ( (gcm mongosh.exe -ErrorAction SilentlyContinue).Path -eq $null ) {
+  Write-Error '請確認您有安裝mongosh'
+  return
+}
+
+$clusterName = Read-Host -Prompt "請輸入cluster的名稱"
+$username = Read-Host -Prompt "請輸入Username(區分大小寫)"
+Start-Process mongosh ("mongodb+srv://{0}.jkj8c.mongodb.net/ --apiVersion 1 --username {1}" -f $clusterName, $username) `
+    -NoNewWindow -Wait # NoNewWindow可以直接在powershell之中開啟不會有新視窗跑出來，要加上Wait才會干擾(等待mongosh結束)
+```
 
 ## [MongoDB Drivers]
 
@@ -203,6 +220,20 @@ fmt.Printf("Inserted %v documents into episode collection!\n", len(episodeResult
 ## MongoDB設定
 
 - 帳單資訊: [Organizations](https://cloud.mongodb.com/v2#/preferences/organizations) 選擇您的組織，點進去之後有一個**Billing**，就可以設定
+
+## Multi-Factor Authentication (MFA)
+
+在[Security](https://account.mongodb.com/account/profile/security))
+
+可以增加多重驗證來增加帳戶的安全性
+
+其中SMS會要求輸入手機號碼
+
+它的格式，以台灣而言是
+
+```
++886-9xx-xxx-xxx
+```
 
 
 ## 其他參考
