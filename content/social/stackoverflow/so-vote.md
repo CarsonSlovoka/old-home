@@ -698,6 +698,13 @@ next_section = ""
 [Read/Parse Binary files with Powershell] | | parsing, powershell, binary
 [Write bytes to a file natively in PowerShell] | Get-Content可以透過-ReadCount一次讀取幾行或全部(設定成0)來改善, Set-Content不要使用管道的方式，用-Value把值給他就可以變快 | powrshell
 [How to get the captured groups from Select-String?] | 當您使用完`-match` 有自動產生一個 `$Matches` 變數來記錄匹配的內容 | powershell, regex
+[flip svg coordinate system] | |
+[CSS Variables (custom properties) in Pseudo-element "content" Property] | 使用[CSS Counters](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) `counter-reset: myVar1 var(--value, 1) myVarN var(--xxx);  content: counter(myVar1)` | css, pseudo-element, css-variables
+[How to use the mouse wheel to zoom on an SVG using the viewBox] | `svg.onwheel`之後調整`viewbox`，取得滑鼠座標可以用`new DOMPoint(event.clientX, event.clientY).matrixTransform(svg.getScreenCTM().inverse())` | javascript, svg, zooming, viewbox
+[YES/NO - is there a way to improve mouse dragging with pure SVG tools?] | 在`onmousedown`之中註冊`mousemove`, `mouseup`的事件，在mouseup之中撤銷註冊的`mousemove`和`mouseup`事件 | svg, drag, mouse
+[How to change CSS :root color variables in JavaScript] | `document.querySelector(':root')` | javascript, html, css
+[Why don't :before and :after pseudo elements work with `img` elements?] | img屬於[replaced element](https://stackoverflow.com/a/6949190/9935654)而偽元素只能適用在`non-replaced elements` | css, pseudo-element, css-content
+[Is there a CSS parent selector?] | 可以使用[has](https://developer.mozilla.org/docs/Web/CSS/:has)來幫忙，例如`span:has(img)::after` | css, css-selectors
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -1379,6 +1386,13 @@ next_section = ""
 [Read/Parse Binary files with Powershell]: https://stackoverflow.com/q/10672092/9935654
 [Write bytes to a file natively in PowerShell]: https://stackoverflow.com/a/77095342/9935654
 [How to get the captured groups from Select-String?]: https://stackoverflow.com/a/59900840/9935654
+[flip svg coordinate system]: https://stackoverflow.com/a/77139308/9935654
+[CSS Variables (custom properties) in Pseudo-element "content" Property]: https://stackoverflow.com/a/40179718/9935654
+[How to use the mouse wheel to zoom on an SVG using the viewBox]: https://stackoverflow.com/a/76150885/9935654
+[YES/NO - is there a way to improve mouse dragging with pure SVG tools?]: https://stackoverflow.com/a/41518545/9935654
+[How to change CSS :root color variables in JavaScript]: https://stackoverflow.com/a/72209411/9935654
+[Why don't :before and :after pseudo elements work with `img` elements?]: https://stackoverflow.com/a/7396482/9935654
+[Is there a CSS parent selector?]: https://stackoverflow.com/a/1014958/9935654
 
 {{< /table/bootstrap-table >}}
 
