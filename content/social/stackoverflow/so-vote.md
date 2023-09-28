@@ -705,6 +705,9 @@ next_section = ""
 [How to change CSS :root color variables in JavaScript] | `document.querySelector(':root')` | javascript, html, css
 [Why don't :before and :after pseudo elements work with `img` elements?] | img屬於[replaced element](https://stackoverflow.com/a/6949190/9935654)而偽元素只能適用在`non-replaced elements` | css, pseudo-element, css-content
 [Is there a CSS parent selector?] | 可以使用[has](https://developer.mozilla.org/docs/Web/CSS/:has)來幫忙，例如`span:has(img)::after` | css, css-selectors
+[Error: discord.errors.NotFound: 404 Not Found (error code: 10062): Unknown interaction discord.py when sending a gif in embed] | 如果你在debug的模式，隔太久就會視為消息傳送失敗，就會出現此訊息 | discord
+[PowerShell's Clear-History doesn't clear history] | `Remove-Item (Get-PSReadlineOption).HistorySavePath` | powershell, history
+[Getting the previous month's first date from current date in JavaScript] | 直接用Month去-1會有問題，如果它的Date是Date(2023, 10, 0)那麼是2023/10/31將Month-1之後是2023/10/1，所以在做之前我們先要把Date都設定為1
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -1393,6 +1396,9 @@ next_section = ""
 [How to change CSS :root color variables in JavaScript]: https://stackoverflow.com/a/72209411/9935654
 [Why don't :before and :after pseudo elements work with `img` elements?]: https://stackoverflow.com/a/7396482/9935654
 [Is there a CSS parent selector?]: https://stackoverflow.com/a/1014958/9935654
+[Error: discord.errors.NotFound: 404 Not Found (error code: 10062): Unknown interaction discord.py when sending a gif in embed]: https://stackoverflow.com/a/73366762/9935654
+[PowerShell's Clear-History doesn't clear history]: https://stackoverflow.com/a/77177676/9935654
+[Getting the previous month's first date from current date in JavaScript]: https://stackoverflow.com/a/59407143/9935654
 
 {{< /table/bootstrap-table >}}
 
