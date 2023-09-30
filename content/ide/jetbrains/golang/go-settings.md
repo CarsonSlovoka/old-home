@@ -138,7 +138,7 @@ Reformat Code | {{< hotkey "Ctrl+Alt+Enter" >}} | 很好用，gitignore準備好
 ★ Toggle Zen mode | {{< hotkey "Ctrl+Alt+Z" >}} | 2023.2版本新增的功能，切換禪(專注)模式
 Project | {{< hotkey "Ctrl+Alt+L" >}}  (default) | 開啟右側的專案總管
 Structure | {{< hotkey "Ctrl+Alt+F" >}}  (default) | 開啟右側的專案總管
-Terminal | {{< hotkey "Ctrl+Alt+1" >}}  (default) | 顯示或隱藏Terminal視窗
+Terminal | {{< hotkey "Alt+6" >}} | 顯示或隱藏Terminal視窗
 Git | {{< hotkey "Alt+9" >}} (default) | 類似`gitk --all`的功能
 Hide Terminal | {{< hotkey "Shift+Escape" >}} (default) | 隱藏Terminal視窗
 
@@ -153,7 +153,15 @@ Change font size with\n``Ctrl+Mouse Wheel`` | ☑ | 可以用滾輪來改變font
 
 {{< /table/bootstrap-table >}}
 
-## View -> Appearance
+## Appearance & Behavior
+
+[New UI](https://www.jetbrains.com/go/new-ui/) (2023.2版本才有)
+```
+☑ Enable new UI
+```
+
+
+## View -> Appearance (不是在設定選單，而是外層的選單)
 
 - ☐ Main Menu as Separate Toolbar (沒什麼用，佔版面空間)
 - Navigation Bar (個人覺得這個很好用，例如您點一個檔案，你可以看到他檔案的詳細路徑，也能瞬間切換稻子目錄或者直接開啟某目錄)
