@@ -708,6 +708,12 @@ next_section = ""
 [Error: discord.errors.NotFound: 404 Not Found (error code: 10062): Unknown interaction discord.py when sending a gif in embed] | 如果你在debug的模式，隔太久就會視為消息傳送失敗，就會出現此訊息 | discord
 [PowerShell's Clear-History doesn't clear history] | `Remove-Item (Get-PSReadlineOption).HistorySavePath` | powershell, history
 [Getting the previous month's first date from current date in JavaScript] | 直接用Month去-1會有問題，如果它的Date是Date(2023, 10, 0)那麼是2023/10/31將Month-1之後是2023/10/1，所以在做之前我們先要把Date都設定為1
+[matchMedia().addListener marked as deprecated, addEventListener equivalent?] |  `window.matchMedia('(max-width: 768px)').addEventListener("change", e=>{if(e.match){}})` | javascript, addeventlistener, matchmedia
+[What’s the point of using the HTML5 <time> tag?] | | html, time, datetime
+[Do not have permission to use setFormula Google appScript] | | google-apps-script, google-sheets, google-sheets-formula, custom-function
+[OpenCV converts HSL to RGB] | | opencv, rg, hsl
+[Using ffmpeg to create looping apng] | `ffmpeg -ss 16:43 -i ./10.mkv -plays 10 -t 1 -vf "setpts=PTS-STARTPTS, crop=1200:800, hqdn3d=1.5:1.5:6:6, scale=600:400"  10-file-2.apng` | apng, ffmpeg
+[Difference between Uint8Array and Uint8ClampedArray] | 大同小異，差別在於溢位的處理 | javascript, arrays, memory-management, clamp
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -1399,6 +1405,12 @@ next_section = ""
 [Error: discord.errors.NotFound: 404 Not Found (error code: 10062): Unknown interaction discord.py when sending a gif in embed]: https://stackoverflow.com/a/73366762/9935654
 [PowerShell's Clear-History doesn't clear history]: https://stackoverflow.com/a/77177676/9935654
 [Getting the previous month's first date from current date in JavaScript]: https://stackoverflow.com/a/59407143/9935654
+[matchMedia().addListener marked as deprecated, addEventListener equivalent?]: https://stackoverflow.com/a/56466334/9935654
+[What’s the point of using the HTML5 <time> tag?]: https://stackoverflow.com/a/6852884/9935654
+[Do not have permission to use setFormula Google appScript]: https://stackoverflow.com/a/56861752/9935654
+[OpenCV converts HSL to RGB]: https://stackoverflow.com/a/66921048/9935654
+[Using ffmpeg to create looping apng]: https://stackoverflow.com/a/43797017/9935654
+[Difference between Uint8Array and Uint8ClampedArray]: https://stackoverflow.com/a/21820040/9935654
 
 {{< /table/bootstrap-table >}}
 
