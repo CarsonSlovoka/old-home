@@ -253,6 +253,8 @@ gcc | ``choco install mingw -y`` | ● ``%programdata%\chocolatey\lib\mingw\tool
 [make] | `choco install make` | `%programdata%\chocolatey\bin`
 [deno] <sup>1.26.0</sup> | `choco install -y` | `C:\ProgramData\chocolatey\lib\deno` | `deno -help`
 lcov | choco install lcov | `%programdata%\chocolatey\lib\lcov\tools\bin\genhtml`\n`C:\Strawberry\perl\bin\perl.exe`\n | `perl %GENHTML% -o coverage\html lcov.info` 這個可以用在deno的測試覆蓋率生成出用HTML來檢視的報告
+[protoc](https://github.com/protocolbuffers/protobuf/releases) | `choco install protoc` | `%programdata%\chocolatey\lib\protoc\tools`\n`%ProgramData%\chocolatey\bin\protoc.exe` | 可以取得protoc.exe，這是一個 Protocol Buffers 的编译器的編譯器
+
 
 [protobuf_google]: https://developers.google.com/protocol-buffers/docs/overview
 [protobuf_github]: https://github.com/protocolbuffers/protobuf
