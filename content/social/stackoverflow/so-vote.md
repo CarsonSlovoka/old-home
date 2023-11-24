@@ -713,7 +713,13 @@ next_section = ""
 [Do not have permission to use setFormula Google appScript] | | google-apps-script, google-sheets, google-sheets-formula, custom-function
 [OpenCV converts HSL to RGB] | | opencv, rg, hsl
 [Using ffmpeg to create looping apng] | `ffmpeg -ss 16:43 -i ./10.mkv -plays 10 -t 1 -vf "setpts=PTS-STARTPTS, crop=1200:800, hqdn3d=1.5:1.5:6:6, scale=600:400"  10-file-2.apng` | apng, ffmpeg
-[Difference between Uint8Array and Uint8ClampedArray] | 大同小異，差別在於溢位的處理 | javascript, arrays, memory-management, clamp
+[Difference between Uint8Array and Uint8ClampedArray] | 大同小異，差別在於溢位的處理, 有Clamped的版本，下溢用的是該型別的最小值(無Clamped的版本用取mod的方法求得)，上溢用的是該型別的最大值(無Clamped的版本直接截斷多出來的高位部分) | javascript, arrays, memory-management, clamp
+[Linear Regression in Javascript] | | javascript, statistics, linear-regression
+[Getting HTML form values] | `new FormData(e.target).get("myName")` | javascript, html, form
+[Can I compare variable types with .(type) in Golang?] | `fmt.Sprintf("%T", a) == fmt.Sprintf("%T", b)` 等同用 `reflect.TypeOf(a) == reflect.TypeOf(b)}` | go, types
+[How to pad a number with zeros when printing?] | `fmt.Printf("\|%06d\|%6d\|\n", 12, 345)` | go
+[Constant struct in Go] | 不支援
+
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -1411,6 +1417,11 @@ next_section = ""
 [OpenCV converts HSL to RGB]: https://stackoverflow.com/a/66921048/9935654
 [Using ffmpeg to create looping apng]: https://stackoverflow.com/a/43797017/9935654
 [Difference between Uint8Array and Uint8ClampedArray]: https://stackoverflow.com/a/21820040/9935654
+[Linear Regression in Javascript]: https://stackoverflow.com/a/31566791/9935654
+[Getting HTML form values]: https://stackoverflow.com/a/61954584/9935654
+[Can I compare variable types with .(type) in Golang?]: https://stackoverflow.com/a/65422200/9935654
+[How to pad a number with zeros when printing?]: https://stackoverflow.com/a/25637441/9935654
+[Constant struct in Go]: https://stackoverflow.com/q/43368604/9935654
 
 {{< /table/bootstrap-table >}}
 
