@@ -719,7 +719,9 @@ next_section = ""
 [Can I compare variable types with .(type) in Golang?] | `fmt.Sprintf("%T", a) == fmt.Sprintf("%T", b)` 等同用 `reflect.TypeOf(a) == reflect.TypeOf(b)}` | go, types
 [How to pad a number with zeros when printing?] | `fmt.Printf("\|%06d\|%6d\|\n", 12, 345)` | go
 [Constant struct in Go] | 不支援
-
+[What is checkSumAdjustment in TTF/OTF head table used for?] | 請參考[Calculating Checksums](https://learn.microsoft.com/en-us/typography/opentype/spec/otff#calculating-checksums) | truetype, specifications, opentype
+[Could not load library cudnn_cnn_infer64_8.dll. Error code 126] | | cudnn, tensorflow, python
+[Proper way for casting uint16 to int16 in Go] | 不能直接指派，要先宣告一個uint16的變數，再宣告另一個int16的變數，指派給它 | go, bit-manipulation, uint16
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -1422,6 +1424,9 @@ next_section = ""
 [Can I compare variable types with .(type) in Golang?]: https://stackoverflow.com/a/65422200/9935654
 [How to pad a number with zeros when printing?]: https://stackoverflow.com/a/25637441/9935654
 [Constant struct in Go]: https://stackoverflow.com/q/43368604/9935654
+[What is checkSumAdjustment in TTF/OTF head table used for?]: https://stackoverflow.com/a/76918913/9935654
+[Could not load library cudnn_cnn_infer64_8.dll. Error code 126]: https://stackoverflow.com/a/70476089/9935654
+[Proper way for casting uint16 to int16 in Go]: https://stackoverflow.com/a/48023533/9935654
 
 {{< /table/bootstrap-table >}}
 
