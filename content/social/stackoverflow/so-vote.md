@@ -722,6 +722,7 @@ next_section = ""
 [What is checkSumAdjustment in TTF/OTF head table used for?] | 請參考[Calculating Checksums](https://learn.microsoft.com/en-us/typography/opentype/spec/otff#calculating-checksums) | truetype, specifications, opentype
 [Could not load library cudnn_cnn_infer64_8.dll. Error code 126] | | cudnn, tensorflow, python
 [Proper way for casting uint16 to int16 in Go] | 不能直接指派，要先宣告一個uint16的變數，再宣告另一個int16的變數，指派給它 | go, bit-manipulation, uint16
+[Go, encoding/xml: How can I marshal self-closing elements?] | | go, xml
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -1427,6 +1428,7 @@ next_section = ""
 [What is checkSumAdjustment in TTF/OTF head table used for?]: https://stackoverflow.com/a/76918913/9935654
 [Could not load library cudnn_cnn_infer64_8.dll. Error code 126]: https://stackoverflow.com/a/70476089/9935654
 [Proper way for casting uint16 to int16 in Go]: https://stackoverflow.com/a/48023533/9935654
+[Go, encoding/xml: How can I marshal self-closing elements?]: https://stackoverflow.com/q/38118100/9935654
 
 {{< /table/bootstrap-table >}}
 
