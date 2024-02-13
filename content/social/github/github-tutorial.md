@@ -2,7 +2,7 @@
 title = "Github Tutorial"
 description="Github基礎教學"
 date = 2021-05-12T10:06:44+08:00
-lastmod = 2022-01-25
+lastmod = 2024-02-13
 featured_image = ""
 draft = false
 weight = 0
@@ -28,6 +28,11 @@ SSH是一種用於登入和共享資料的網路技術
 如果您確定您沒有生成過，那這小節可以直接跳過(實際上這小節也只是檢查有沒有生成過而已)
 
 1. Open Git Bash. (您安裝好git之後就會有這一個應用程式(搜尋找一下就可以發現git bash這個終端機)
+
+   > ls ((gcm git).Path | Split-Path | Split-Path)
+
+    使用完以上指令應該就能看到`git-bast.exe`簡單來說它的路徑在`%ProgramFiles%\Git`
+
 2. ``ls -al ~/.ssh``
 
     如果您的ssh已經存在，造裡說這段指令打完之後會list出一些東西出來
@@ -103,7 +108,7 @@ usage: ssh-keygen [-q] [-a rounds] [-b bits] [-C comment] [-f output_keyfile]
     - ``-t`` 總共有這些東西可以用 ``[-t dsa | ecdsa | ecdsa-sk | ed25519 | ed25519-sk | rsa]``
 
         看您想用哪一種算法去生成而已
-    - ``-C`` Comment 註解而已
+    - ``-C`` Comment 註解而已 (在您最後生成的`.pub`內文的最後面，會看到您輸入的註解內容)
 
     成功之後會出現以下訊息
 
@@ -119,6 +124,11 @@ usage: ssh-keygen [-q] [-a rounds] [-b bits] [-C comment] [-f output_keyfile]
 
     > Created directory '/c/Users/xxx/.ssh'.
 
+    如果你想指定路徑，可以這樣做:
+
+    ```yaml
+    /c/Users/User/.ssh/test_xxx # 相當於存在 %userprofile%/.ssh 這個目錄之中，建議檔名用預設的，不然遠端認證的時候會失敗
+    ```
 3. ``Enter passphrase (empty for no passphrase)``:
 
     就是密碼，如果有人拿到了SSH，如果您沒有密碼，他持有您的SSH那麼他就真的可以通過驗證不會受到任何阻擋，
@@ -317,8 +327,6 @@ $ ssh-keygen -p -f ~/.ssh/id_ed25519
 
     總之此指令完畢之後您會得到一個``PID``
 
-
-
 2. 將您的私鑰檔案告訴給ssh-agent: ``ssh-add ~/.ssh/id_ed25519``
 
     ```
@@ -359,9 +367,15 @@ Github提供兩種遠端認證模式
 
 以下只討論第二種
 
+首先在你的github專案的<kbd>Code</kbd>按鈕，有一個SSH的選項可以選，就可以複製該SSH資訊
+```
+git remote add Github git@github.com:UserName/xxxRepository.git
+```
+
 當remote建立完畢之後，當您fetch,pull諸如此類會與server有關都要經過認證，就會出現類似下面的訊息
 
-```
+```yaml
+# 一開始如果都沒驗證過，它會詢問你是否要建立
 The authenticity of host 'github.com (IP ADDRESS)' can't be established.
 RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
 Are you sure you want to continue connecting (yes/no)?
@@ -374,6 +388,8 @@ Are you sure you want to continue connecting (yes/no)?
 之後他會建立一個文件在
 
 > ~/.ssh/known_hosts
+>
+> 如果失敗，可能是你的檔案名稱不對，例如用ed25519，那檔案名稱應該是`id_ed25519`與`ed25519_pub`，總之我的情況是檔名變成 ssh-keygen 預設生成的檔名就可以成功
 
 紀錄的內容:
 
@@ -383,7 +399,7 @@ github.com ssh-rsa xxx...basssddse64==
 
 簡單來說因為您已經在github上面做了 [設定](https://docs.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account) ，把公鑰提供出去
 
-這時候他就會運用這個資訊把它存在``known_hosts``這個檔案之中
+這時候他就會運用這個資訊把它存在``known_hosts``這個檔案之中(檔案在此目錄之中: `%userprofile%/.ssh` )
 
 並且會夾帶一個隨機訊息，會需要用您的私鑰去解鎖server傳送過來的隨機訊息，再把這個訊息回傳給server，如果server判別正確，就會認同您的操作
 
@@ -391,6 +407,19 @@ github.com ssh-rsa xxx...basssddse64==
 
 > Enter passphrase for key '/c/Users/xxx/.ssh/id_ed25519'
 
+當您有提供passphrase，的時候，每次操作的時候都必須輸入密碼才行
+
+密碼輸入通過之後，就可以正式存取
+
+當你在[server的ssh keys](https://github.com/settings/keys)管理中，把該key刪除之後
+
+再次嘗試存取就會遇到以下錯誤:
+
+```
+Please make sure you have the correct access rights
+and the repository exists.
+error: Could not fetch xxx
+```
 
 ### [Testing your SSH connection](https://docs.github.com/en/github/authenticating-to-github/testing-your-ssh-connection)
 
