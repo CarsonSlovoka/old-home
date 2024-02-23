@@ -724,6 +724,8 @@ next_section = ""
 [Proper way for casting uint16 to int16 in Go] | 不能直接指派，要先宣告一個uint16的變數，再宣告另一個int16的變數，指派給它 | go, bit-manipulation, uint16
 [Go, encoding/xml: How can I marshal self-closing elements?] | | go, xml
 [Convert float64 to byte array] | `binary.Write(&buf, binary.BigEndian, f)` | go, type-conversion
+[image.Decode() unknown format] | | go, image
+[WebP encoder/decoder in go] | | go, image, webp
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -1431,6 +1433,8 @@ next_section = ""
 [Proper way for casting uint16 to int16 in Go]: https://stackoverflow.com/a/48023533/9935654
 [Go, encoding/xml: How can I marshal self-closing elements?]: https://stackoverflow.com/q/38118100/9935654
 [Convert float64 to byte array]: https://stackoverflow.com/a/43693916/9935654
+[image.Decode() unknown format]: https://stackoverflow.com/a/62846368/9935654
+[WebP encoder/decoder in go]: https://stackoverflow.com/q/8340751/9935654
 
 {{< /table/bootstrap-table >}}
 
