@@ -726,6 +726,8 @@ next_section = ""
 [Convert float64 to byte array] | `binary.Write(&buf, binary.BigEndian, f)` | go, type-conversion
 [image.Decode() unknown format] | | go, image
 [WebP encoder/decoder in go] | | go, image, webp
+[What is a "stale" git branch?] | git沒有stale這種東西，這個是github上面自己有的內容，如果該分支[超過3個月都沒有動靜](https://github.com/labstack/echo/branches/stale)，那麼[就會自動變成stale](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-branches-in-your-repository/viewing-branches-in-your-repository) | git, github
+
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -1435,6 +1437,7 @@ next_section = ""
 [Convert float64 to byte array]: https://stackoverflow.com/a/43693916/9935654
 [image.Decode() unknown format]: https://stackoverflow.com/a/62846368/9935654
 [WebP encoder/decoder in go]: https://stackoverflow.com/q/8340751/9935654
+[What is a "stale" git branch?]: https://stackoverflow.com/a/29112561/9935654
 
 {{< /table/bootstrap-table >}}
 
