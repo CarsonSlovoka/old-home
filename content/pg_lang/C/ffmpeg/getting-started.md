@@ -44,7 +44,8 @@ ffmpeg -i input.mp4 -vf "setpts=0.5*PTS" output.mp4 | 影片撥放速度改為2�
 ffmpeg -i input.mp4 -vf "setpts=4.0*PTS" output.mp4 | 影片撥放速度比原本慢4倍
 ffmpeg -i input.mp4  output.gif  | 轉成gif
 ffmpeg -i input.mp4 -ss 01:19:27 -to 02:18:51 -c:v copy -c:a copy output.mp4 | 剪輯影片, -c:v copy的v指的是video, -c:a copy的a指的是audio。意思是影片+音效都要複製
-ffmpeg -i input.mp3 -ss 00:00:01 -to 00:04:54 -c:a copy output.mp3 | mp3剪輯
+ffmpeg -i input.mp3 -ss 00:00:01 -to 00:04:54 -c:a copy output.mp3 | mp3剪輯 (不能混用，例如input.mp3 output.m4a是錯的)
+ffmpeg -i input.m4a -ss 00:00:01 -to 00:04:54 -c:a copy output.m4a | m4a剪輯
 ffmpeg -i "concat:file1.mp3|file2.mp3" -acodec copy output.mp3 | 多個mp3檔案合併成一個
 ffmpeg -i video.mp4 -i audio.wav -map 0:v -map 1:a -c:v copy -shortest output.mp4 |
 `ffmpeg -i console.mp4 -i console.mp3 -c copy -map 0:v:0 -map 1:a:0 -shortest result.mp4` | 替mp4新增音樂
