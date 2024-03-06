@@ -231,7 +231,7 @@ choco安裝的套件如果是安裝的檔案也能在``新增移除``找到，�
 
 | @@w=6em@@名稱 | 安裝指令 | 安裝到哪裡去 | 描述 |
 | -------- | ---- | ---- | ---- |
-| curl     |  ``choco install curl`` |  ``%programdata%\chocolatey\lib\curl\tools`` |  驗證: curl --version\n它可以透過cmd來做一些``Get``, ``Post``等等的操作，作為測試這個工具很棒
+| curl     |  ``choco install curl`` |  ``%programdata%\chocolatey\lib\curl\tools`` |  驗證: curl --version\n它可以透過cmd來做一些``Get``, ``Post``等等的操作，作為測試這個工具很棒。[ 注意在2017/12/19, curl已經成為windows的預設元件](https://curl.se/windows/microsoft.html)，所以不需要在透過額外的動作去取得
 | neovim   | ``choco install neovim --pre``\n(意思是(pre-release) | ``C:\tools\neovim\Neovim\bin`` | 注意neovim裡面也有一個``curl``要用的時候要自己區分一下！
 | ~~pdftk~~| ``choco install pdftk`` | ``%PROGRAMFILES(X86)%\PDFtk\``\n這個不建議安裝!
 | jre      | ``choco install javaruntime`` | ● ``%PROGRAMFILES%\Java\jre1.8.0_271``\n● ``%PROGRAMFILES(X86)%\Java\jre1.8.0_271`` | 他會裝兩個版本
