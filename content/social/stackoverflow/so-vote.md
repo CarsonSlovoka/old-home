@@ -730,6 +730,7 @@ next_section = ""
 [Most idiomatic way to select elements from an array in Golang?] | `slices.DeleteFunc` | go, slices, arrays
 [color input with transparency] | 使用prompt,dataset即可辦到 | html, css, colors, alpha
 [What are passive event listeners?] | 不需要用到事件中如果不需要用到e.preventDefault()就加上passive: true | javascript, dom-events, event-listener
+[How to create an array containing 1...N] | `_.range(1,N+1)` | jsBench.me, javascript
 
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
@@ -1444,6 +1445,7 @@ next_section = ""
 [Most idiomatic way to select elements from an array in Golang?]: https://stackoverflow.com/a/78185810/9935654
 [color input with transparency]: https://stackoverflow.com/a/78229662/9935654
 [What are passive event listeners?]: https://stackoverflow.com/a/78265405/9935654
+[How to create an array containing 1...N]: https://stackoverflow.com/a/65244361/9935654
 
 {{< /table/bootstrap-table >}}
 
