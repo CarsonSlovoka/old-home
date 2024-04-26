@@ -731,7 +731,11 @@ next_section = ""
 [color input with transparency] | 使用prompt,dataset即可辦到 | html, css, colors, alpha
 [What are passive event listeners?] | 不需要用到事件中如果不需要用到e.preventDefault()就加上passive: true | javascript, dom-events, event-listener
 [How to create an array containing 1...N] | `_.range(1,N+1)` | jsBench.me, javascript
-
+[How to type pinyin text with tone marks in Windows?] | | windows, pinyin
+[UTF-8 range table in Go] | [unicode.In](https://pkg.go.dev/unicode#In) | go, unicode, utf-8
+[Return default value for generic type] | `var result T` | go, generics, null
+[How to get all selected values of a multiple select box?] | `[...select.options].filter(option => option.selected).map(option => option.value)` | javascript, html, html-select
+[How can I get a channel ID from YouTube?] | 造訪頻道>簡介, 移動到最底下有一個分享頻道，裡面就可以取得到channelID | youtube, youtube-api
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -1446,6 +1450,11 @@ next_section = ""
 [color input with transparency]: https://stackoverflow.com/a/78229662/9935654
 [What are passive event listeners?]: https://stackoverflow.com/a/78265405/9935654
 [How to create an array containing 1...N]: https://stackoverflow.com/a/65244361/9935654
+[How to type pinyin text with tone marks in Windows?]: https://superuser.com/q/27743/1093221
+[UTF-8 range table in Go]: https://stackoverflow.com/a/68263839/9935654
+[Return default value for generic type]: https://stackoverflow.com/a/70586169/9935654
+[How to get all selected values of a multiple select box?]: https://stackoverflow.com/a/39363742/9935654
+[How can I get a channel ID from YouTube?]: https://stackoverflow.com/a/76285153/9935654
 
 {{< /table/bootstrap-table >}}
 
