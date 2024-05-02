@@ -68,6 +68,28 @@ ffmpeg -i input.mp4 -i input.mp3 -c copy -map 0:v:0 -map 1:a:0 result.mp4
 1:a:0 表示選擇第二個輸入源，a表示audio，把結果放到輸出的第一個軌道
 ```
 
+拖曳變數名稱
+
+```shell
+@echo off
+:: d is drive
+:: p is path
+:: n is name
+:: x is extension, and
+:: fn is filename with extension
+:: https://stackoverflow.com/a/60623900/9935654
+echo input:
+echo %~dpfn1
+:: C:\...\my.mkv
+output:
+echo output:
+echo %fn1.mp3
+:: my.mp3
+ffmpeg -i %~dpfn1 %fn1.mp3
+echo done
+pause > nul
+```
+
 ## 推流 live streaming RTMP
 
 查看本機video, audio的設備資訊
