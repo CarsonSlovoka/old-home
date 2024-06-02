@@ -35,7 +35,7 @@ toc_bootstrap = true
 
 以下這個是我的設定(使用者設定檔: ``--global``):
 
-```toml
+```yaml
 [user]
 	name =
 [user]
@@ -191,11 +191,13 @@ toc_bootstrap = true
 
 很少會用到這個，但是像您remote的項目就會在這邊，一般您看到的東西應該會類似這個
 
-> ``git config --local --edit``
+```yaml
+git config --local --edit # 編輯 .git/config 檔案
+```
 
-(*如果您已經在含有``.git``的資料夾內，可以省略掉``--local``*)
+> 如果您已經在含有`.git`的資料夾內，可以省略掉`--local`
 
-```toml
+```yaml
 [core]
 	repositoryformatversion = 0
 	filemode = false
@@ -210,7 +212,6 @@ toc_bootstrap = true
 [remote "Online"]
 	url = https://username@bitbucket.org/proj-name/repository.git
 	fetch = +refs/heads/*:refs/remotes/Online/*
-
 ```
 
 ## autocrlf
@@ -221,9 +222,9 @@ toc_bootstrap = true
 
 他詢問您要如何設定autocrlf，有三種可以選擇
 
-1. Checkout Windows-style(``CRLF``),  commit Unix-style line endings: autocrlf = true
-2. Checkout as-is, commit Unix-style line endings(``LF``): autocrlf = input
-3. Checkout as-is, commit as-is: autocrlf = false
+1. Checkout Windows-style(``CRLF``),  commit Unix-style line endings: `autocrlf = true`: 推薦windows系統用，因為checkout時會把代碼都變成crlf;提交的時候一律用lf，如此能讓儲存空間少一點紀錄
+2. Checkout as-is, commit Unix-style line endings(``LF``): `autocrlf = input`: 推薦Unix系統用, checkout的時候，依據原本的內容是什麼就是什麼，而提交的時候一律都改成lf
+3. Checkout as-is, commit as-is: `autocrlf = false`: 不做任何調整，是什麼就是什麼
 
 選1或2都會在commit的時候自動把換行符號轉為LF，這是有好處的畢竟LF比CRLF少一個字。
 
@@ -249,6 +250,21 @@ toc_bootstrap = true
 {{< insert-figure "images/git/notepad_info.png" "" "50%" "50%" >}}
 
 所以我才會說即便您在windows，直接把editconfig的設定改成``end_of_line = lf``比較乾脆，反正commit用LF本來就是趨勢。
+
+
+```
+╔═══════════════╦══════════════╦══════════════╦══════════════╗
+║ core.autocrlf ║     false    ║     input    ║     true     ║
+╠═══════════════╬══════════════╬══════════════╬══════════════╣
+║               ║ LF   => LF   ║ LF   => LF   ║ LF   => CRLF ║
+║ git checkout  ║ CR   => CR   ║ CR   => CR   ║ CR   => CR   ║
+║               ║ CRLF => CRLF ║ CRLF => CRLF ║ CRLF => CRLF ║
+╠═══════════════╬══════════════╬══════════════╬══════════════╣
+║               ║ LF   => LF   ║ LF   => LF   ║ LF   => LF   ║
+║ git commit    ║ CR   => CR   ║ CR   => CR   ║ CR   => CR   ║
+║               ║ CRLF => CRLF ║ CRLF => LF   ║ CRLF => LF   ║
+╚═══════════════╩══════════════╩══════════════╩══════════════╝
+```
 
 ### safecrlf
 
