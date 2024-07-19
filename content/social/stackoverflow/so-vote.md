@@ -739,6 +739,7 @@ next_section = ""
 [How to change page results with YouTube Data API v3] | 它的`nextPageToken`或者`prevPageToken`的數值是放在query中的`pageToken`，當pageToken指定為該數值時就可以訪問到該頁面 | api, youtube, youtube-api
 [Tools for building a Graph/Node based user interface in a webapp] |
 [Creating map with empty values] | `struct{}` | go, go-map
+[The idiomatic way to implement generators (yield) in Golang for recursive functions] | `generate() <-chan int` | go, yield, generator
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -1462,6 +1463,7 @@ next_section = ""
 [How to change page results with YouTube Data API v3]: https://stackoverflow.com/a/55240055/9935654
 [Tools for building a Graph/Node based user interface in a webapp]: https://stackoverflow.com/a/78611659/9935654
 [Creating map with empty values]: https://stackoverflow.com/q/52231115/9935654
+[The idiomatic way to implement generators (yield) in Golang for recursive functions]: https://stackoverflow.com/a/34466755/9935654
 
 {{< /table/bootstrap-table >}}
 
