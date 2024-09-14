@@ -14,6 +14,10 @@ toc_bootstrap = true
     next_section="/pg_lang/web/css/bootstrap/bs_tutorial"
 +++
 
+## unicode表情符號
+
+- [EmojiSources.txt](https://www.unicode.org/Public/15.1.0/ucd/emoji/emoji-data.txt)
+
 ## Icons
 
 fontawesome主要就是用來取得一些漂亮的圖標的，
