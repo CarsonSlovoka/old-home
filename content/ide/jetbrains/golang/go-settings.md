@@ -1,5 +1,5 @@
 +++
-title = "Golang Settings"
+title = "Goland Settings"
 description="Keymap, Editor,..."
 date = 2021-01-22T13:25:01+08:00
 lastmod = 2022-03-17
@@ -12,9 +12,68 @@ toc_markmap = true
 toc_bootstrap = true
 +++
 
+## ☆ [External Tool](https://www.jetbrains.com/help/go/settings-tools-external-tools.html)
+
+GoLand 提供了 External Tools 功能，可以配置執行自定義命令（如執行 .sh 檔案），並將其綁定到快捷鍵。
+
+![external_tools](img/external_tools.webp)
+
+```
+$FileDir$：當前文件所在的目錄
+$FilePath$：當前文件的完整路徑
+$ProjectFileDir$：專案根目錄
+$ProjectDir$：專案所在的目錄
+$ModuleFileDir$：當前模組所在的目錄
+```
+
+### 存放位置
+
+```bash
+# "External Tools.xml" 位置
+xdg-open ~/.config/JetBrains/GoLand2024.2/tools/External\ Tools.xml
+```
+
+### External Tools.xml
+
+> 用這種模試啟動，它會載入`/etc/profile`
+
+```xml
+<toolSet name="External Tools">
+    <tool name="gitk --all" description="執行gitk --all" showInMainMenu="false" showInEditor="false" showInProject="false" showInSearchPopup="false" disabled="false" useConsole="false" showConsoleOnStdOut="false" showConsoleOnStdErr="false" synchronizeAfterRun="false">
+        <exec>
+            <option name="COMMAND" value="gitk" />
+            <option name="PARAMETERS" value="--all" />
+            <option name="WORKING_DIRECTORY" value="$FileDir$" />
+        </exec>
+    </tool>
+    <tool name="cis.sh 11 &lt;f&gt;" description="screenshot and convert to webp" showInMainMenu="false" showInEditor="false" showInProject="false" showInSearchPopup="false" disabled="false" useConsole="true" showConsoleOnStdOut="false" showConsoleOnStdErr="false" synchronizeAfterRun="false">
+        <exec>
+            <option name="COMMAND" value="/bin/bash" />
+            <option name="PARAMETERS" value="-l -c &quot;read -rp 'filename' filename; cis.sh 11 $filename&quot;" />
+            <option name="WORKING_DIRECTORY" value="$FileDir$" />
+        </exec>
+    </tool>
+    <tool name="cis.sh &lt;q&gt; &lt;f&gt;" description="screenshot and convert to webp" showInMainMenu="false" showInEditor="false" showInProject="false" showInSearchPopup="false" disabled="false" useConsole="true" showConsoleOnStdOut="false" showConsoleOnStdErr="false" synchronizeAfterRun="false">
+        <exec>
+            <option name="COMMAND" value="/bin/bash" />
+            <option name="PARAMETERS" value="-l -c &quot;read -rp 'quality' quality; read -rp 'filename' filename; cis.sh $quality $filename&quot;" />
+            <option name="WORKING_DIRECTORY" value="$FileDir$" />
+        </exec>
+    </tool>
+    <tool name="xdg-open" description="打開當前目錄" showInMainMenu="false" showInEditor="false" showInProject="false" showInSearchPopup="false" disabled="false" useConsole="false" showConsoleOnStdOut="false" showConsoleOnStdErr="false" synchronizeAfterRun="false">
+        <exec>
+            <option name="COMMAND" value="xdg-open" />
+            <option name="PARAMETERS" value="." />
+            <option name="WORKING_DIRECTORY" value="$FileDir$" />
+        </exec>
+    </tool>
+</toolSet>
+```
+
+
 ## Visual studio Keymap
 
-### - keymap的保存位址
+### keymap的保存位置
 
 Windows
 
