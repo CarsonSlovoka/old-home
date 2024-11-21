@@ -94,6 +94,10 @@ xdg-open ~/.config/JetBrains/GoLand2024.2/keymaps/carson.xml
 ```xml
 <!-- 不確認name是否要和檔案名稱相同，另外parent最好也要選擇已經存在的來繼承 -->
 <keymap version="1" name="carson" parent="Visual Studio">
+  <action id="$Redo">
+    <keyboard-shortcut first-keystroke="shift ctrl z" />
+    <keyboard-shortcut first-keystroke="ctrl u" />
+  </action>
   <action id="Arrangement.Rule.Edit" />
   <action id="BookmarksView.Rename" />
   <action id="CodeCleanup" />
@@ -102,6 +106,10 @@ xdg-open ~/.config/JetBrains/GoLand2024.2/keymaps/carson.xml
     <keyboard-shortcut first-keystroke="alt enter" />
   </action>
   <action id="ContextHelp" />
+  <action id="Docker.RemoteServers.EditServerConfig" />
+  <action id="Editor Redo">
+    <keyboard-shortcut first-keystroke="ctrl u" />
+  </action>
   <action id="EditorBackwardParagraph">
     <keyboard-shortcut first-keystroke="f6" />
   </action>
@@ -112,10 +120,16 @@ xdg-open ~/.config/JetBrains/GoLand2024.2/keymaps/carson.xml
     <keyboard-shortcut first-keystroke="shift alt equals" />
     <keyboard-shortcut first-keystroke="ctrl alt right" />
   </action>
+  <action id="EditorStartNewLineBefore" />
   <action id="EditorToggleUseSoftWraps" />
+  <action id="ExternalToolsGroup">
+    <keyboard-shortcut first-keystroke="shift f5" />
+  </action>
   <action id="GotoDeclaration">
     <keyboard-shortcut first-keystroke="shift f2" />
   </action>
+  <action id="GotoSuperMethod" />
+  <action id="Graph.ApplyCurrentLayout" />
   <action id="InsertLiveTemplate">
     <keyboard-shortcut first-keystroke="ctrl k" second-keystroke="x" />
     <keyboard-shortcut first-keystroke="ctrl k" second-keystroke="ctrl x" />
@@ -126,12 +140,22 @@ xdg-open ~/.config/JetBrains/GoLand2024.2/keymaps/carson.xml
   <action id="MoveTabRight">
     <keyboard-shortcut first-keystroke="ctrl w" second-keystroke="right" />
   </action>
+  <action id="QuickActionPopup" />
   <action id="RecentFiles">
     <keyboard-shortcut first-keystroke="ctrl e" />
+  </action>
+  <action id="ReformatCode">
+    <keyboard-shortcut first-keystroke="ctrl alt l" />
+    <keyboard-shortcut first-keystroke="ctrl alt enter" />
+  </action>
+  <action id="Replace">
+    <keyboard-shortcut first-keystroke="ctrl r" />
+    <keyboard-shortcut first-keystroke="ctrl h" />
   </action>
   <action id="RevealIn">
     <keyboard-shortcut first-keystroke="alt w" />
   </action>
+  <action id="RunDashboard.EditConfiguration" />
   <action id="SilentCodeCleanup" />
   <action id="SmartSelect">
     <keyboard-shortcut first-keystroke="shift alt equals" />
@@ -163,7 +187,9 @@ xdg-open ~/.config/JetBrains/GoLand2024.2/keymaps/carson.xml
   <action id="Unscramble" />
   <action id="UsageFiltering.WriteAccess" />
   <action id="XDebugger.EditWatch" />
+  <action id="XDebugger.JumpToTypeSource" />
   <action id="XDebugger.SetValue" />
+  <action id="org.intellij.plugins.markdown.ui.actions.styling.InsertImageAction" />
 </keymap>
 ```
 
