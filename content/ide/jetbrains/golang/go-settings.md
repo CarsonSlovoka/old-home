@@ -204,6 +204,7 @@ Fold Selection / Remove region | {{< hotkey "Ctrl + . ]" >}} | 相當好用，�
 Move Caret Backward a Paragraph | {{< hotkey F6 >}} | 往前移到整列為空白的列 (vim也有類似的指令: [shift + \[ ](https://vi.stackexchange.com/questions/10828/visual-select-from-cursor-to-next-empty-line))
 Move Caret Forward a Paragraph | {{< hotkey F8 >}} | 往後移到整列為空白的列
 Open source in new window | {{< hotkey "Shift+F4" >}} (default) |
+Open Tab in New Window | {{< hotkey "Shift+F4" >}} 同上 (keymap好像不會記錄，就用ui加入吧) |
 Reformat Code | {{< hotkey "Ctrl+Alt+Enter" >}} | 很好用，gitignore準備好，可以用這個取代go fmt |
 ★ Toggle Zen mode | {{< hotkey "Ctrl+Alt+Z" >}} | 2023.2版本新增的功能，切換禪(專注)模式
 Project | {{< hotkey "Ctrl+Alt+L" >}}  (default) | 開啟右側的專案總管
