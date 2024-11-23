@@ -33,12 +33,19 @@ $ModuleFileDir$：當前模組所在的目錄
 xdg-open ~/.config/JetBrains/GoLand2024.2/tools/External\ Tools.xml
 ```
 
+> 檔案名稱不一定要是`External Tools.xml`，可以給多個檔案，只要每一個檔案裡面的格式符合就可以
+
+![external_tools_xml](img/external_tools_xml.webp)
+
+(以上圖而言，就餵入了三個檔案)
+
 ### External Tools.xml
 
 > 用這種模試啟動，它會載入`/etc/profile`
 
+git.xml
 ```xml
-<toolSet name="External Tools">
+<toolSet name="git"> <!-- 不一定要和檔案名稱相同，只是ui上顯示的名稱罷了 -->
     <tool name="gitk --all" description="執行gitk --all" showInMainMenu="false" showInEditor="false" showInProject="false" showInSearchPopup="false" disabled="false" useConsole="false" showConsoleOnStdOut="false" showConsoleOnStdErr="false" synchronizeAfterRun="false">
         <exec>
             <option name="COMMAND" value="gitk" />
@@ -46,6 +53,13 @@ xdg-open ~/.config/JetBrains/GoLand2024.2/tools/External\ Tools.xml
             <option name="WORKING_DIRECTORY" value="$FileDir$" />
         </exec>
     </tool>
+</toolSet>
+```
+
+img.xml
+
+```xml
+<toolSet name="img">
     <tool name="cis.sh 11 &lt;f&gt;" description="screenshot and convert to webp" showInMainMenu="false" showInEditor="false" showInProject="false" showInSearchPopup="false" disabled="false" useConsole="true" showConsoleOnStdOut="false" showConsoleOnStdErr="false" synchronizeAfterRun="false">
         <exec>
             <option name="COMMAND" value="/bin/bash" />
@@ -60,6 +74,19 @@ xdg-open ~/.config/JetBrains/GoLand2024.2/tools/External\ Tools.xml
             <option name="WORKING_DIRECTORY" value="$FileDir$" />
         </exec>
     </tool>
+    <tool name="xdg-open" description="打開當前目錄" showInMainMenu="false" showInEditor="false" showInProject="false" showInSearchPopup="false" disabled="false" useConsole="false" showConsoleOnStdOut="false" showConsoleOnStdErr="false" synchronizeAfterRun="false">
+        <exec>
+            <option name="COMMAND" value="xdg-open" />
+            <option name="PARAMETERS" value="." />
+            <option name="WORKING_DIRECTORY" value="$FileDir$" />
+        </exec>
+    </tool>
+</toolSet>
+```
+
+explorer.xml
+```xml
+<toolSet name="explorer">
     <tool name="xdg-open" description="打開當前目錄" showInMainMenu="false" showInEditor="false" showInProject="false" showInSearchPopup="false" disabled="false" useConsole="false" showConsoleOnStdOut="false" showConsoleOnStdErr="false" synchronizeAfterRun="false">
         <exec>
             <option name="COMMAND" value="xdg-open" />
@@ -92,7 +119,9 @@ xdg-open ~/.config/JetBrains/GoLand2024.2/keymaps/carson.xml
 ### keymap (carson.xml)
 
 ```xml
-<!-- 不確認name是否要和檔案名稱相同，另外parent最好也要選擇已經存在的來繼承 -->
+<!-- 檔案名稱與name無關，name只是在ui上會顯示的名稱，另外parent最好也要選擇已經存在的來繼承
+parent="Default for GNOME"
+-->
 <keymap version="1" name="carson" parent="Visual Studio">
   <action id="$Redo">
     <keyboard-shortcut first-keystroke="shift ctrl z" />
