@@ -162,6 +162,7 @@ bootstrap有提供一些glyphs可以用，您可以至連結參考到更多的�
 ⚠  | Warning sign, Heads up! | 26A0
 ⚡  | High Voltage | 26A1
 ⛔ | No Entry, error | 26D4
+✅ | WHITE HEAVY CHECK MARK  | 2705
 ✍ | WRITING HAND、總結 | 270D
 ✍️| Writing Hand | 270D
 ✨ | SPARKLES\nFeatures | 2728
