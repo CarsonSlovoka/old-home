@@ -740,6 +740,9 @@ next_section = ""
 [Tools for building a Graph/Node based user interface in a webapp] |
 [Creating map with empty values] | `struct{}` | go, go-map
 [The idiomatic way to implement generators (yield) in Golang for recursive functions] | `generate() <-chan int` | go, yield, generator
+[How to parse non standard time format from json] | 需要自定義struct然後實作兩個方法[MarshalJSON](https://pkg.go.dev/encoding/json#Marshaler), [UnmarshalJSON](https://pkg.go.dev/encoding/json#Unmarshaler) | json, time, go
+[git remote add with other SSH port] | `git remote add origin ssh://alice@192.0.0.1:2222/xxx/.../qoo.git` | git, ssh, port
+
 
 [Default value in Go's method]: https://stackoverflow.com/a/23650312/9935654
 [How to create new file using go script]: https://stackoverflow.com/a/46749116/9935654
@@ -1464,6 +1467,8 @@ next_section = ""
 [Tools for building a Graph/Node based user interface in a webapp]: https://stackoverflow.com/a/78611659/9935654
 [Creating map with empty values]: https://stackoverflow.com/q/52231115/9935654
 [The idiomatic way to implement generators (yield) in Golang for recursive functions]: https://stackoverflow.com/a/34466755/9935654
+[How to parse non standard time format from json]: https://stackoverflow.com/a/45304122/9935654
+[git remote add with other SSH port]: https://stackoverflow.com/a/3596272/9935654
 
 {{< /table/bootstrap-table >}}
 
